@@ -7,6 +7,10 @@ import ArtformTextbook.Ch01.Meaning
 import ArtformTextbook.Ch03.Defs.Canvas
 import ArtformTextbook.Ch03.Statements.Growth
 import ArtformTextbook.Ch03.Growth
+import ArtformTextbook.Ch03.Recognition
+import ArtformTextbook.Ch03.Metric
+import ArtformTextbook.Ch03.Cube
+import ArtformTextbook.Ch03.Measure
 import ArtformTextbook.Ch04.Statements
 import ArtformTextbook.Ch04.Counting
 import ArtformTextbook.Ch04.Memory

@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 51 |
-| planned | 52 |
+| stated | 61 |
+| planned | 42 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -25,21 +25,21 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` | awaits review |
 | 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | stated | `Artform.Statement.artformNotTopos` / `Artform.artformNotTopos` | awaits review |
 | 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` / `Artform.rodLaws` | awaits review |
-| 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | planned |  |  |
-| 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | planned |  |  |
-| 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | planned |  |  |
-| 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | planned |  |  |
-| 3.25 | Averaged invariant metric | `nolabel:03-pattern-geometry:averaged-invariant-metric` | B | B5 | planned |  |  |
-| 3.26 | Perpendicularity from symmetry | `nolabel:03-pattern-geometry:perpendicularity-from-symmetry` | B | B5 | planned |  |  |
+| 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | stated | `Artform.Statement.cubeAssembly` / `Artform.cubeAssembly` | awaits review |
+| 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | stated | `Artform.Statement.sharedPositivePattern` / `Artform.sharedPositivePattern` | awaits review |
+| 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | stated | `Artform.Statement.partialProfileIso` / `Artform.partialProfileIso` | awaits review |
+| 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | stated | `Artform.Statement.atomImageOccurrence` / `Artform.atomImageOccurrence` | awaits review |
+| 3.25 | Averaged invariant metric | `nolabel:03-pattern-geometry:averaged-invariant-metric` | B | B5 | stated | `Artform.Statement.averagedInvariantMetric` / `Artform.averagedInvariantMetric` | awaits review |
+| 3.26 | Perpendicularity from symmetry | `nolabel:03-pattern-geometry:perpendicularity-from-symmetry` | B | B5 | stated | `Artform.Statement.perpendicularityFromSymmetry` / `Artform.perpendicularityFromSymmetry` | awaits review |
 | 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | stated | `Artform.Statement.commutingProposals` / `Artform.commutingProposals` | awaits review |
 | 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | stated | `Artform.Statement.growthStabilization` / `Artform.growthStabilization` | awaits review |
 | 3.32 | Fair closure | `prop:fair-closure` | B | B5 | stated | `Artform.Statement.fairClosure` / `Artform.fairClosure` | awaits review |
 | 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | stated | `Artform.Statement.growthSymmetry` / `Artform.growthSymmetry` | awaits review |
-| 3.37 | Finite Fubini–Tonelli | `nolabel:03-pattern-geometry:finite-fubini-tonelli` | A | B5 | planned |  |  |
-| 3.39 | Monotone convergence | `nolabel:03-pattern-geometry:monotone-convergence` | A | B5 | planned |  |  |
-| 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | planned |  |  |
+| 3.37 | Finite Fubini–Tonelli | `nolabel:03-pattern-geometry:finite-fubini-tonelli` | A | B5 | stated | `Artform.Statement.finiteFubiniTonelli` / `Artform.finiteFubiniTonelli` | awaits review |
+| 3.39 | Monotone convergence | `nolabel:03-pattern-geometry:monotone-convergence` | A | B5 | stated | `Artform.Statement.monotoneConvergence` / `Artform.monotoneConvergence` | awaits review |
+| 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | stated | `Artform.Statement.invariantMeasureOrbits` / `Artform.invariantMeasureOrbits` | awaits review |
 | 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | planned |  |  |
-| 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | planned |  |  |
+| 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | stated | `Artform.Statement.referenceMarkingPullback` / `Artform.referenceMarkingPullback` | awaits review |
 | 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` / `Artform.countLaw` | awaits review |
 | 4.4 | Exit-level closure | `prob:markov` | C | B5 | stated | `Artform.Statement.exitLevelClosure` / `Artform.exitLevelClosure` | awaits review |
 | 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | stated | `Artform.Statement.historyExtension` / `Artform.historyExtension` | awaits review |
@@ -133,7 +133,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 1.8 | Finite cyclarchy | `def:time-cyclarchy` | planned |  |
 | 1.9 | Interpretation witness | `def:intwit-book` | defined | `Artform.IntProfile`, `Artform.IntWit`, `Artform.PointedInt`, `Artform.Sem` |
 | 1.11 | Finite cell pattern | `def:finite-cell-pattern` | planned |  |
-| 1.12 | Geometric form and its instances | `def:geometric-form-book` | planned |  |
+| 1.12 | Geometric form and its instances | `def:geometric-form-book` | defined | `Artform.IncidenceCanvas.IsInstance` |
 | 1.13 | Artform frame and instance | `def:frame-instance` | planned |  |
 | 1.15 | Category | `def:category-book` | mathlib | Mathlib CategoryTheory.Category |
 | 1.17 | Subcategory | `def:subcategory-book` | planned |  |
@@ -155,33 +155,33 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 2.7 | Slots, phases and checkpoints | `def:slots-phases` | planned |  |
 | 2.8 | Control tapestry | `def:control-tapestry` | planned |  |
 | 2.9 | Trajectory; trace | `def:trajectory-trace` | planned |  |
-| 3.1 | Finite cellular canvas | `def:canvas` | defined | `Artform.Canvas` |
-| 3.2 | Position presentation | `def:position-presentation` | planned |  |
+| 3.1 | Finite cellular canvas | `def:canvas` | defined | `Artform.Canvas`, `Artform.IncidenceCanvas` |
+| 3.2 | Position presentation | `def:position-presentation` | defined | `Artform.PositionPresentation` |
 | 3.5 | Geometric part and construction records | `def:geometric-records-book` | planned |  |
-| 3.6 | Recognition profile | `def:recognition-profile` | planned |  |
-| 3.7 | Recognition pattern | `def:recognition-pattern-book` | planned |  |
-| 3.8 | Strong occurrence | `def:strong-occurrence` | planned |  |
-| 3.9 | Positive reduct, positive template, positive instantiation | `def:positive-feature-template-book` | planned |  |
-| 3.10 | Partial positive comparison | `def:partial-positive-comparison` | planned |  |
-| 3.13 | Group | `def:group` | planned |  |
-| 3.14 | Abelian | `nolabel:03-pattern-geometry:abelian` | planned |  |
-| 3.15 | Cyclic group | `nolabel:03-pattern-geometry:cyclic-group` | planned |  |
-| 3.16 | Dihedral group | `nolabel:03-pattern-geometry:dihedral-group` | planned |  |
-| 3.17 | Homomorphism, kernel, isomorphism | `def:homomorphism` | planned |  |
-| 3.18 | Conjugacy class | `def:conjugacy` | planned |  |
-| 3.19 | Continuous groups named in this book | `def:continuous-groups` | planned |  |
-| 3.20 | Automorphism group | `nolabel:03-pattern-geometry:automorphism-group` | planned |  |
-| 3.21 | Template symmetry, atom image, positive occurrence | `def:positive-occurrence-book` | planned |  |
+| 3.6 | Recognition profile | `def:recognition-profile` | defined | `Artform.RecognitionProfile` |
+| 3.7 | Recognition pattern | `def:recognition-pattern-book` | defined | `Artform.ProfiledState` |
+| 3.8 | Strong occurrence | `def:strong-occurrence` | defined | `Artform.IsStrongOccurrence`, `Artform.Occurrence` |
+| 3.9 | Positive reduct, positive template, positive instantiation | `def:positive-feature-template-book` | defined | `Artform.Instantiation`, `Artform.IsInstantiation`, `Artform.PositiveTemplate`, `Artform.ProfiledState.posReduct` |
+| 3.10 | Partial positive comparison | `def:partial-positive-comparison` | defined | `Artform.IsPartialComparison`, `Artform.PartialComparison`, `Artform.creditedAtoms` |
+| 3.13 | Group | `def:group` | mathlib | Mathlib Group |
+| 3.14 | Abelian | `nolabel:03-pattern-geometry:abelian` | mathlib | Mathlib CommGroup |
+| 3.15 | Cyclic group | `nolabel:03-pattern-geometry:cyclic-group` | mathlib | Mathlib ZMod n, Multiplicative (ZMod n), IsCyclic |
+| 3.16 | Dihedral group | `nolabel:03-pattern-geometry:dihedral-group` | mathlib | Mathlib DihedralGroup n |
+| 3.17 | Homomorphism, kernel, isomorphism | `def:homomorphism` | mathlib | Mathlib MonoidHom, MonoidHom.ker, MulEquiv |
+| 3.18 | Conjugacy class | `def:conjugacy` | mathlib | Mathlib ConjClasses |
+| 3.19 | Continuous groups named in this book | `def:continuous-groups` | mathlib | Mathlib Matrix.unitaryGroup, Matrix.specialUnitaryGroup, Circle |
+| 3.20 | Automorphism group | `nolabel:03-pattern-geometry:automorphism-group` | defined | `Artform.Aut` |
+| 3.21 | Template symmetry, atom image, positive occurrence | `def:positive-occurrence-book` | defined | `Artform.Instantiation.atomImage`, `Artform.PositiveOccurrence`, `Artform.PositiveTemplate.posAut` |
 | 3.23 | Component inventory and degree | `def:pattern-degree-book` | planned |  |
 | 3.24 | Atom support and atom-disjoint recurrence | `def:atom-disjoint-recurrence-book` | planned |  |
 | 3.28 | Policy | `def:policy` | defined | `Artform.Policy` |
 | 3.30 | Cadence fairness; application fairness | `def:fairness` | defined | `Artform.Execution.ApplicationFair`, `Artform.Execution.CadenceFair` |
 | 3.31 | Bounded windowed progress | `def:windowed-progress` | defined | `Artform.Execution.WindowedProgress` |
-| 3.34 | Sigma-algebra | `nolabel:03-pattern-geometry:sigma-algebra` | planned |  |
-| 3.35 | Measure | `nolabel:03-pattern-geometry:measure` | planned |  |
-| 3.36 | Measurable map | `nolabel:03-pattern-geometry:measurable-map` | planned |  |
-| 3.38 | Measurability | `nolabel:03-pattern-geometry:measurability` | planned |  |
-| 3.41 | Weighted cellular content | `nolabel:03-pattern-geometry:weighted-cellular-content` | planned |  |
+| 3.34 | Sigma-algebra | `nolabel:03-pattern-geometry:sigma-algebra` | mathlib | Mathlib MeasurableSpace |
+| 3.35 | Measure | `nolabel:03-pattern-geometry:measure` | mathlib | Mathlib MeasureTheory.Measure |
+| 3.36 | Measurable map | `nolabel:03-pattern-geometry:measurable-map` | mathlib | Mathlib Measurable |
+| 3.38 | Measurability | `nolabel:03-pattern-geometry:measurability` | mathlib | Mathlib Measurable |
+| 3.41 | Weighted cellular content | `nolabel:03-pattern-geometry:weighted-cellular-content` | defined | `Artform.cellularContent` |
 | 4.1 | Events available to a finite report | `nolabel:03-reports:events-available-to-a-finite-report` | planned |  |
 | 4.3 | Conditioning on a positive-mass event | `nolabel:05-conditioning:conditioning-on-a-positive-mass-event` | mathlib | Mathlib ProbabilityTheory.cond |
 | 5.1 | Deterministic law; tick; run | `def:tick` | defined | `Artform.DetLaw` |
