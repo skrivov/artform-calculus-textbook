@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 15 |
-| planned | 88 |
+| stated | 18 |
+| planned | 85 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -22,7 +22,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | planned |  |  |
 | 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | planned |  |  |
 | 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | planned |  |  |
-| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` | awaits review; no proof yet |
+| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` | awaits review |
 | 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | planned |  |  |
 | 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` | awaits review; no proof yet |
 | 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | planned |  |  |
@@ -31,7 +31,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | planned |  |  |
 | 3.25 | Averaged invariant metric | `nolabel:03-pattern-geometry:averaged-invariant-metric` | B | B5 | planned |  |  |
 | 3.26 | Perpendicularity from symmetry | `nolabel:03-pattern-geometry:perpendicularity-from-symmetry` | B | B5 | planned |  |  |
-| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | planned |  |  |
+| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | stated | `Artform.Statement.commutingProposals` | awaits review; no proof yet |
 | 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | planned |  |  |
 | 3.32 | Fair closure | `prop:fair-closure` | B | B5 | planned |  |  |
 | 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | planned |  |  |
@@ -44,10 +44,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 4.4 | Exit-level closure | `prob:markov` | C | B5 | planned |  |  |
 | 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | planned |  |  |
 | 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` | awaits review; no proof yet |
-| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` | awaits review; no proof yet |
-| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` | awaits review; no proof yet |
-| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | planned |  |  |
-| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | planned |  |  |
+| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` / `Artform.noether` | awaits review |
+| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` | awaits review |
+| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` | awaits review; no proof yet |
+| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | stated | `Artform.Statement.lawDecides` | awaits review; no proof yet |
 | 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | planned |  |  |
 | 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | planned |  |  |
 | 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | planned |  |  |
@@ -82,7 +82,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 10.2 | Triality | `prop:mp-triality` | C | B6 | planned |  |  |
 | 11.2 | The two write families | `prop:mt-writes` | A | B6 | planned |  |  |
 | 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | planned |  |  |
-| 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` | awaits review; no proof yet |
+| 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` / `Artform.mtAverage` | awaits review |
 | 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | planned |  |  |
 | 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | planned |  |  |
 | 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | planned |  |  |
@@ -150,8 +150,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 2.2 | Legal duet state | `def:legal-state` | planned |  |
 | 2.3 | Contract | `def:contract` | planned |  |
 | 2.4 | Symmetry of a dance | `def:dance-symmetry` | planned |  |
-| 2.5 | Process profile; enabled application | `def:process-profile` | planned |  |
-| 2.6 | Compatibility; batch | `def:batch` | planned |  |
+| 2.5 | Process profile; enabled application | `def:process-profile` | defined | `Artform.EnabledApp`, `Artform.ProcessProfile` |
+| 2.6 | Compatibility; batch | `def:batch` | defined | `Artform.Batch`, `Artform.EnabledApp.Compatible` |
 | 2.7 | Slots, phases and checkpoints | `def:slots-phases` | planned |  |
 | 2.8 | Control tapestry | `def:control-tapestry` | planned |  |
 | 2.9 | Trajectory; trace | `def:trajectory-trace` | planned |  |
@@ -188,8 +188,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.2 | Local law; halo | `def:local-law` | planned |  |
 | 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | defined | `Artform.DetLaw.Conserved`, `Artform.DetLaw.IsSymmetry` |
 | 5.5 | Affine law; tally; pairing | `def:affine-law` | defined | `Artform.AffineLaw`, `Artform.AffineLaw.Keeps`, `Artform.Pairing`, `Artform.Pairing.Perfect`, `Artform.Tally` |
-| 5.9 | Law; move; legal state | `def:law` | planned |  |
-| 5.10 | Realizer; run | `def:realizer` | planned |  |
+| 5.9 | Law; move; legal state | `def:law` | defined | `Artform.Law` |
+| 5.10 | Realizer; run | `def:realizer` | defined | `Artform.DetRealizer`, `Artform.RelRealizer`, `Artform.Run`, `Artform.StochRealizer` |
 | 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | planned |  |
 | 5.14 | Five kinds of equation | `def:equation-roles` | planned |  |
 | 5.15 | Right torsor | `def:torsor` | planned |  |

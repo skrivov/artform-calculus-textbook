@@ -40,7 +40,8 @@ This repository holds Lean proofs of the numbered statements of the textbook
    `python3 scripts/status.py --approve <key>`, run only on the author's
    instruction.
 6. Every proved statement has a non-vacuity example on the book's running
-   example, in the chapter's `Examples.lean`.
+   example: an `example` showing that the statement's hypotheses can be met,
+   in a section `Non-vacuity` at the end of its proof file.
 7. Before every commit, run the four commands below, with `~/.elan/bin` on
    `PATH`. Write commit messages in the imperative.
 
