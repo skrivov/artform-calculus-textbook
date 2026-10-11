@@ -70,6 +70,8 @@ import ArtformTextbook.Ch13.Square
 import ArtformTextbook.Ch13.Census
 import ArtformTextbook.Ch13.Statements.Transfer
 import ArtformTextbook.Ch13.Transfer
+import ArtformTextbook.Ch13.Statements.ThirdOrder
+import ArtformTextbook.Ch13.ThirdOrder
 
 /-!
 # *Artform Calculus* in Lean
