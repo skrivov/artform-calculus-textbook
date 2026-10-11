@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 72 |
-| planned | 31 |
+| stated | 80 |
+| planned | 23 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -84,16 +84,16 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | stated | `Artform.Statement.mtBlocks` / `Artform.mtBlocks` | awaits review |
 | 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` / `Artform.mtAverage` | awaits review |
 | 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | stated | `Artform.Statement.mtConvolution` / `Artform.mtConvolution` | awaits review |
-| 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | planned |  |  |
+| 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | stated | `Artform.Statement.mtNativeReads` / `Artform.mtNativeReads` | awaits review |
 | 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | stated | `Artform.Statement.mtOrderWitness` / `Artform.mtOrderWitness` | awaits review |
 | 11.12 | Second quantization is a homomorphism | `prop:mt-gamma` | C | B6 | stated | `Artform.Statement.mtGamma` / `Artform.mtGamma` | awaits review |
-| 11.14 | Colourless states are the invariants of one vertex | `prop:mt-gauge-fix` | C | B6 | planned |  |  |
-| 11.15 | Census of colourless states | `thm:mt-census` | C | B6 | planned |  |  |
-| 11.16 | The hop is covariant | `prop:mt-hop-covariant` | C | B6 | planned |  |  |
-| 11.17 | The coin's coefficients are minors | `prop:mt-minors` | C | B6 | planned |  |  |
-| 11.18 | The tick preserves the colourless sector | `thm:mt-tick-gauss` | C | B6 | planned |  |  |
-| 11.19 | Link moments | `prop:mt-moments` | C | B6 | planned |  |  |
-| 11.20 | The there-and-back tally | `thm:mt-there-and-back` | C | B6 | planned |  |  |
+| 11.14 | Colourless states are the invariants of one vertex | `prop:mt-gauge-fix` | C | B6 | stated | `Artform.Statement.mtGaugeFix` / `Artform.mtGaugeFix` | awaits review |
+| 11.15 | Census of colourless states | `thm:mt-census` | C | B6 | stated | `Artform.Statement.mtCensus` / `Artform.mtCensus` | awaits review |
+| 11.16 | The hop is covariant | `prop:mt-hop-covariant` | C | B6 | stated | `Artform.Statement.mtHopCovariant` / `Artform.mtHopCovariant` | awaits review |
+| 11.17 | The coin's coefficients are minors | `prop:mt-minors` | C | B6 | stated | `Artform.Statement.mtMinors` / `Artform.mtMinors` | awaits review |
+| 11.18 | The tick preserves the colourless sector | `thm:mt-tick-gauss` | C | B6 | stated | `Artform.Statement.mtTickGauss` / `Artform.mtTickGauss` | awaits review |
+| 11.19 | Link moments | `prop:mt-moments` | C | B6 | stated | `Artform.Statement.mtMoments` / `Artform.mtMoments` | awaits review |
+| 11.20 | The there-and-back tally | `thm:mt-there-and-back` | C | B6 | stated | `Artform.Statement.mtThereAndBack` / `Artform.mtThereAndBack` | awaits review |
 | 12.1 | The eight invariants of a vertex with two slots | `prop:mm-two-slot-invariants` | D | B7 | planned |  |  |
 | 12.2 | Every extra state is located in one average | `thm:mm-census-moments` | C | B7 | planned |  |  |
 | 12.3 | The pair is bound more tightly than the quartet | `prop:mm-diquark` | D | B7 | planned |  |  |
@@ -208,12 +208,12 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.41 | No-signalling halo | `def:no-signalling` | defined | `Artform.DetRealizer.NoSignalling`, `Artform.RelRealizer.NoSignalling`, `Artform.ScriptTable.NoSignalling`, `Artform.StochRealizer.NoSignalling` |
 | 5.43 | Count; weave; strand | `def:weave` | defined | `Artform.Count`, `Artform.Count.N`, `Artform.Weave` |
 | 6.8 | Temporal links | `def:temporal-links` | defined | `Artform.TemporalLinks`, `Artform.extendedTick`, `Artform.gaugeLinks`, `Artform.gaugeStates` |
-| 7.1 | Native coefficient ring | `qr:ring` | planned |  |
+| 7.1 | Native coefficient ring | `qr:ring` | defined | `Artform.Exact.R8`, `Artform.Exact.R8C` |
 | 7.2 | Coherent composition | `qr:coherent-composition` | planned |  |
 | 11.1 | Left and right writes | `def:mt-writes` | defined | `Artform.leftWrite`, `Artform.rightWrite` |
 | 11.3 | Block of an irreducible representation | `def:mt-block` | defined | `Artform.block` |
-| 11.7 | Electric response and electric read | `def:mt-response` | planned |  |
-| 11.9 | Declared electric energy | `def:mt-energy` | planned |  |
+| 11.7 | Electric response and electric read | `def:mt-response` | defined | `Artform.IsElectricResponse`, `Artform.electricKernel`, `Artform.electricRead` |
+| 11.9 | Declared electric energy | `def:mt-energy` | defined | `Artform.IsEnergyTable`, `Artform.electricEnergy` |
 | 11.10 | Sign rule | `def:mt-sign-rule` | defined | `Artform.Fock.annihilation`, `Artform.Fock.creation` |
-| 11.13 | Colourless states of one edge | `def:mt-colourless` | planned |  |
+| 11.13 | Colourless states of one edge | `def:mt-colourless` | defined | `Artform.Edge.colourless`, `Artform.Edge.zeroFlux` |
 | 12.11 | The group C_3× A_5 and its triplet | `def:mm-centre` | defined | `Artform.C3A5`, `Artform.C3A5.triplet` |

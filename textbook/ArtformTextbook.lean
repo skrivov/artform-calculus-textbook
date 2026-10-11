@@ -48,6 +48,12 @@ import ArtformTextbook.Ch11.Statements
 import ArtformTextbook.Ch11.Tables
 import ArtformTextbook.Ch11.Blocks
 import ArtformTextbook.Ch11.Occupation
+import ArtformTextbook.Ch11.Colourless
+import ArtformTextbook.Ch11.Tick
+import ArtformTextbook.Ch11.Moments
+import ArtformTextbook.Ch11.Minors
+import ArtformTextbook.Ch11.ThereAndBack
+import ArtformTextbook.Ch11.NativeReads
 import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements
 import ArtformTextbook.Ch12.Icosahedron
