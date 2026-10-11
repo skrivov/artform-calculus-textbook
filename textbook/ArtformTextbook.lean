@@ -1,4 +1,11 @@
 import ArtformTextbook.Meta.Book
+import ArtformTextbook.Ch01.Statements
+import ArtformTextbook.Ch03.Defs.Canvas
+import ArtformTextbook.Ch04.Statements
+import ArtformTextbook.Ch05.Statements
+import ArtformTextbook.Ch06.Statements
+import ArtformTextbook.Ch11.Statements
+import ArtformTextbook.Ch12.Statements
 
 /-!
 # *Artform Calculus* in Lean

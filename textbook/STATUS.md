@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 0 |
-| planned | 103 |
+| stated | 15 |
+| planned | 88 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -17,14 +17,14 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 
 | No. | Title | Label | Tier | Batch | Status | Lean | Notes |
 |---|---|---|---|---|---|---|---|
-| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | planned |  |  |
+| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` | awaits review; no proof yet |
 | 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | planned |  |  |
 | 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | planned |  |  |
 | 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | planned |  |  |
 | 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | planned |  |  |
-| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | planned |  |  |
+| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` | awaits review; no proof yet |
 | 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | planned |  |  |
-| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | planned |  |  |
+| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` | awaits review; no proof yet |
 | 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | planned |  |  |
 | 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | planned |  |  |
 | 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | planned |  |  |
@@ -40,33 +40,33 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | planned |  |  |
 | 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | planned |  |  |
 | 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | planned |  |  |
-| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | planned |  |  |
+| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` | awaits review; no proof yet |
 | 4.4 | Exit-level closure | `prob:markov` | C | B5 | planned |  |  |
 | 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | planned |  |  |
-| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | planned |  |  |
-| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | planned |  |  |
-| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | planned |  |  |
+| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` | awaits review; no proof yet |
+| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` | awaits review; no proof yet |
+| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` | awaits review; no proof yet |
 | 5.8 | The current of a tally | `prop:tally-current` | B | B1 | planned |  |  |
 | 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | planned |  |  |
 | 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | planned |  |  |
 | 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | planned |  |  |
 | 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | planned |  |  |
-| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | planned |  |  |
-| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | planned |  |  |
+| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` | awaits review; no proof yet |
+| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` | awaits review; no proof yet |
 | 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | planned |  |  |
 | 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | planned |  |  |
 | 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | planned |  |  |
 | 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | planned |  |  |
-| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | planned |  |  |
-| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | planned |  |  |
+| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` | awaits review; no proof yet |
+| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` | awaits review; no proof yet |
 | 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | planned |  |  |
 | 5.42 | What a strung run fixes ◊ | `prop:run-fixes` | B | B2 | planned |  |  |
-| 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | planned |  |  |
+| 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | stated | `Artform.Statement.hall` | awaits review; no proof yet |
 | 5.45 | A kept count is woven ◊ | `thm:woven` | B | B2 | planned |  |  |
 | 5.46 | Symmetries of a slot tapestry ◊ | `prop:slot-symmetry` | B | B2 | planned |  |  |
 | 5.47 | Symmetry of what may happen ◊ | `thm:curie` | B | B2 | planned |  |  |
 | 5.48 | Breaking needs a choice ◊ | `prop:breaking` | B | B2 | planned |  |  |
-| 6.1 | Reversibility | `thm:reversible` | B | P | planned |  |  |
+| 6.1 | Reversibility | `thm:reversible` | B | P | stated | `Artform.Statement.reversible` | awaits review; no proof yet |
 | 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | planned |  |  |
 | 6.3 | Gauge covariance of the Maxwell tick | `thm:maxwell-covariant` | B | B3 | planned |  |  |
 | 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | planned |  |  |
@@ -82,7 +82,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 10.2 | Triality | `prop:mp-triality` | C | B6 | planned |  |  |
 | 11.2 | The two write families | `prop:mt-writes` | A | B6 | planned |  |  |
 | 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | planned |  |  |
-| 11.5 | Averaging counts | `prop:mt-average` | C | P | planned |  |  |
+| 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` | awaits review; no proof yet |
 | 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | planned |  |  |
 | 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | planned |  |  |
 | 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | planned |  |  |
@@ -101,7 +101,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | planned |  |  |
 | 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | planned |  |  |
 | 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | planned |  |  |
-| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | planned |  |  |
+| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` | awaits review; no proof yet |
 | 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | planned |  |  |
 | 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | planned |  |  |
 | 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | planned |  |  |
@@ -126,7 +126,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | No. | Definition | Label | Status | Lean |
 |---|---|---|---|---|
 | 1.1 | Finite form | `nolabel:01-foundations:finite-form` | planned |  |
-| 1.2 | Perfect alignment | `nolabel:01-foundations:perfect-alignment` | planned |  |
+| 1.2 | Perfect alignment | `nolabel:01-foundations:perfect-alignment` | defined | `Artform.Align` |
 | 1.5 | Rectangular tapestry | `def:time-rectangular` | planned |  |
 | 1.6 | Occurrence history | `def:time-history` | planned |  |
 | 1.7 | Tick realization | `def:time-ticks` | planned |  |
@@ -145,7 +145,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 1.24 | Pullback | `def:pullback-book` | planned |  |
 | 1.25 | Pushout | `def:pushout-book` | planned |  |
 | 1.26 | Adjunction | `def:adjunction-book` | planned |  |
-| 1.28 | Subobject classifier and topos | `def:topos-book` | planned |  |
+| 1.28 | Subobject classifier and topos | `def:topos-book` | defined | `Artform.IsTopos` |
 | 2.1 | Stage frame | `def:stage` | planned |  |
 | 2.2 | Legal duet state | `def:legal-state` | planned |  |
 | 2.3 | Contract | `def:contract` | planned |  |
@@ -155,7 +155,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 2.7 | Slots, phases and checkpoints | `def:slots-phases` | planned |  |
 | 2.8 | Control tapestry | `def:control-tapestry` | planned |  |
 | 2.9 | Trajectory; trace | `def:trajectory-trace` | planned |  |
-| 3.1 | Finite cellular canvas | `def:canvas` | planned |  |
+| 3.1 | Finite cellular canvas | `def:canvas` | defined | `Artform.Canvas` |
 | 3.2 | Position presentation | `def:position-presentation` | planned |  |
 | 3.5 | Geometric part and construction records | `def:geometric-records-book` | planned |  |
 | 3.6 | Recognition profile | `def:recognition-profile` | planned |  |
@@ -184,10 +184,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.41 | Weighted cellular content | `nolabel:03-pattern-geometry:weighted-cellular-content` | planned |  |
 | 4.1 | Events available to a finite report | `nolabel:03-reports:events-available-to-a-finite-report` | planned |  |
 | 4.3 | Conditioning on a positive-mass event | `nolabel:05-conditioning:conditioning-on-a-positive-mass-event` | planned |  |
-| 5.1 | Deterministic law; tick; run | `def:tick` | planned |  |
+| 5.1 | Deterministic law; tick; run | `def:tick` | defined | `Artform.DetLaw` |
 | 5.2 | Local law; halo | `def:local-law` | planned |  |
-| 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | planned |  |
-| 5.5 | Affine law; tally; pairing | `def:affine-law` | planned |  |
+| 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | defined | `Artform.DetLaw.Conserved`, `Artform.DetLaw.IsSymmetry` |
+| 5.5 | Affine law; tally; pairing | `def:affine-law` | defined | `Artform.AffineLaw`, `Artform.AffineLaw.Keeps`, `Artform.Pairing`, `Artform.Pairing.Perfect`, `Artform.Tally` |
 | 5.9 | Law; move; legal state | `def:law` | planned |  |
 | 5.10 | Realizer; run | `def:realizer` | planned |  |
 | 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | planned |  |
@@ -195,11 +195,11 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.15 | Right torsor | `def:torsor` | planned |  |
 | 5.17 | Localization | `def:localization` | planned |  |
 | 5.18 | Connection | `def:connection-general` | planned |  |
-| 5.19 | Trivialization and link table | `def:trivialization` | planned |  |
-| 5.21 | Gauge group and gauge orbit | `def:gauge-group` | planned |  |
+| 5.19 | Trivialization and link table | `def:trivialization` | defined | `Artform.Skeleton.LinkTable` |
+| 5.21 | Gauge group and gauge orbit | `def:gauge-group` | defined | `Artform.Skeleton.gaugeAct` |
 | 5.24 | Class function and Wilson loop | `def:wilson` | planned |  |
 | 5.25 | Face curvature | `def:curvature-general` | planned |  |
-| 5.26 | Three kinds of triviality | `def:flatness` | planned |  |
+| 5.26 | Three kinds of triviality | `def:flatness` | defined | `Artform.Skeleton.LoopFlat`, `Artform.Skeleton.PureGauge` |
 | 5.30 | Matter field and covariant transport | `def:matter` | planned |  |
 | 5.31 | Invariant vertex coupling | `def:intertwiner` | planned |  |
 | 5.32 | Gauss constraint | `def:gauss` | planned |  |
