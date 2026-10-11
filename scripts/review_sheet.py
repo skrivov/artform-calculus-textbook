@@ -19,6 +19,7 @@ committed. The author's decisions are recorded with
 import argparse
 import datetime
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -26,7 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "textbook" / "tutorial" / "tools"))
 import status  # noqa: E402
-from glyphs import literate, unmapped  # noqa: E402
+from glyphs import GLYPHS, literate, unmapped  # noqa: E402
 
 ROOT = status.ROOT
 REVIEW = ROOT / "textbook" / "review"
@@ -89,9 +90,13 @@ review hashes: text \lc{%(text_hash)s}, term \lc{%(term_hash)s}
 
 
 def escape(s):
+    """Plain text for LaTeX: special characters escaped, and every non-ASCII
+    character set with the glyph table the listings use."""
     out = []
     for ch in s:
-        if ch in "\\":
+        if ch in GLYPHS:
+            out.append(GLYPHS[ch])
+        elif ch in "\\":
             out.append(r"\textbackslash{}")
         elif ch in "{}$&#_%":
             out.append("\\" + ch)
@@ -134,15 +139,23 @@ def main():
 
     lean_texts = []
     items = []
+    definitions = {}
     for r in chosen:
         st = report[0][r["key"]]
         e = entries[r["key"]]
         book = inventory[r["key"]]["statement"] if inventory and r["key"] in inventory else \
             r"\emph{(the inventory has no text for this statement)}"
+        # A removed \label can leave a blank line inside a display, which LaTeX
+        # reads as a paragraph break; statements need no blank lines.
+        book = re.sub(r"\n[ \t]*\n", "\n", book)
+        names = st.get("surfaceNames", [])
+        for name, text in zip(names, st["surface"]):
+            definitions[name] = text
         surface = ""
-        if st["surface"]:
-            surface = "\n\\subsection*{The definitions it unfolds to}\n" + "".join(
-                "\\begin{lstlisting}[style=lean]\n%s\n\\end{lstlisting}\n" % s for s in st["surface"])
+        if names:
+            surface = ("\n\\subsection*{The definitions it unfolds to}\n"
+                       "In the section Definitions at the start: " +
+                       ", ".join("\\lc{%s}" % escape(nm) for nm in names) + ".\n")
         lean_texts += [st["text"], *st["surface"]]
         items.append(ITEM % {
             "number": r["number"], "title": r["title"], "key": escape(r["key"]),
@@ -160,6 +173,13 @@ def main():
     count = f"{len(items)} statement" + ("s" if len(items) != 1 else "")
     tex = PREAMBLE % {"literate": literate(lean_texts), "date": args.date,
                       "count": count, "edition": edition_name}
+    if definitions:
+        tex += ("\n\\clearpage\n\\section{Definitions}\n"
+                "Every definition of the library that the statements below unfold to, "
+                "once each. A statement's review covers the definitions it names.\n")
+        for name in sorted(definitions):
+            tex += ("\\subsection*{\\lc{%s}}\n\\begin{lstlisting}[style=lean]\n%s\n"
+                    "\\end{lstlisting}\n" % (escape(name), definitions[name]))
     tex += "".join(items) + "\n\\end{document}\n"
 
     REVIEW.mkdir(parents=True, exist_ok=True)
