@@ -13,6 +13,7 @@ import ArtformTextbook.Ch05.Hall
 import ArtformTextbook.Ch05.Stokes
 import ArtformTextbook.Ch05.Reversal
 import ArtformTextbook.Ch05.Orbits
+import ArtformTextbook.Ch05.Holonomy
 import ArtformTextbook.Ch06.Statements
 import ArtformTextbook.Ch06.Reversible
 import ArtformTextbook.Ch11.Statements

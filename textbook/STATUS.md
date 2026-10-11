@@ -51,8 +51,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | planned |  |  |
 | 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | planned |  |  |
 | 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | planned |  |  |
-| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` | awaits review; no proof yet |
-| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` | awaits review; no proof yet |
+| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` / `Artform.holonomyDescent` | awaits review |
+| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` / `Artform.pureGauge` | awaits review |
 | 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | planned |  |  |
 | 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | planned |  |  |
 | 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | planned |  |  |

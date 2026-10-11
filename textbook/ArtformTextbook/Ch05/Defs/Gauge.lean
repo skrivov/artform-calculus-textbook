@@ -55,9 +55,9 @@ variable {X} {G : Type*} [Group G]
 
 /-- The holonomy of a path, `Hol_U(γ) = U_{e_k} ⋯ U_{e₁}`
 (equation (5.12) of the book, `eq:path-holonomy`). -/
-def hol (U : X.LinkTable G) : {u v : X.V} → X.Path u v → G
-  | _, _, .nil _ => 1
-  | _, _, .cons e p => U e * hol U p
+def hol (U : X.LinkTable G) {u : X.V} : {v : X.V} → X.Path u v → G
+  | _, .nil _ => 1
+  | _, .cons e p => U e * hol U p
 
 /-- The gauge action on link tables, `U^h_e = h_{t(e)} U_e h_{s(e)}⁻¹`
 (`eq:gauge-action`). It keeps the reversal law. -/
