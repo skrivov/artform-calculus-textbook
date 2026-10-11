@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 18 |
-| planned | 85 |
+| stated | 22 |
+| planned | 81 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -19,11 +19,11 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|---|---|---|---|---|---|
 | 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` / `Artform.rodAlignmentUnique` | awaits review |
 | 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | planned |  |  |
-| 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | planned |  |  |
-| 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | planned |  |  |
-| 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | planned |  |  |
+| 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | stated | `Artform.Statement.artformCategory` / `Artform.artformCategory` | awaits review |
+| 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | stated | `Artform.Statement.semanticQuotient` / `Artform.semanticQuotient` | awaits review |
+| 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | stated | `Artform.Statement.adjoints` / `Artform.adjoints` | awaits review |
 | 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` | awaits review |
-| 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | planned |  |  |
+| 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | stated | `Artform.Statement.artformNotTopos` / `Artform.artformNotTopos` | awaits review |
 | 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` / `Artform.rodLaws` | awaits review |
 | 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | planned |  |  |
 | 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | planned |  |  |
@@ -135,17 +135,17 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 1.11 | Finite cell pattern | `def:finite-cell-pattern` | planned |  |
 | 1.12 | Geometric form and its instances | `def:geometric-form-book` | planned |  |
 | 1.13 | Artform frame and instance | `def:frame-instance` | planned |  |
-| 1.15 | Category | `def:category-book` | planned |  |
+| 1.15 | Category | `def:category-book` | mathlib | Mathlib CategoryTheory.Category |
 | 1.17 | Subcategory | `def:subcategory-book` | planned |  |
-| 1.18 | Functor | `def:functor-book` | planned |  |
-| 1.20 | Natural transformation | `def:natural-transformation-book` | planned |  |
-| 1.21 | Product | `def:product-book` | planned |  |
-| 1.22 | Coproduct | `def:coproduct-book` | planned |  |
-| 1.23 | Exponential | `def:exponential-book` | planned |  |
-| 1.24 | Pullback | `def:pullback-book` | planned |  |
-| 1.25 | Pushout | `def:pushout-book` | planned |  |
-| 1.26 | Adjunction | `def:adjunction-book` | planned |  |
-| 1.28 | Subobject classifier and topos | `def:topos-book` | defined | `Artform.IsTopos` |
+| 1.18 | Functor | `def:functor-book` | mathlib | Mathlib CategoryTheory.Functor |
+| 1.20 | Natural transformation | `def:natural-transformation-book` | mathlib | Mathlib CategoryTheory.NatTrans |
+| 1.21 | Product | `def:product-book` | mathlib | Mathlib Limits.prod (HasBinaryProducts, prod.lift) |
+| 1.22 | Coproduct | `def:coproduct-book` | mathlib | Mathlib Limits.coprod |
+| 1.23 | Exponential | `def:exponential-book` | defined | `Artform.HasExponentials` |
+| 1.24 | Pullback | `def:pullback-book` | mathlib | Mathlib IsPullback |
+| 1.25 | Pushout | `def:pushout-book` | mathlib | Mathlib IsPushout |
+| 1.26 | Adjunction | `def:adjunction-book` | mathlib | Mathlib CategoryTheory.Adjunction |
+| 1.28 | Subobject classifier and topos | `def:topos-book` | defined | `Artform.IsSubobjectClassifier`, `Artform.IsTopos` |
 | 2.1 | Stage frame | `def:stage` | planned |  |
 | 2.2 | Legal duet state | `def:legal-state` | planned |  |
 | 2.3 | Contract | `def:contract` | planned |  |

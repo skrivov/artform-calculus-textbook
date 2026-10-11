@@ -22,6 +22,7 @@ variable {C : Type u} [Category.{v} C]
 /-- **Definition 1.28** (subobject classifier). An arrow `true : 1 ⟶ Ω` from a
 terminal object is a subobject classifier when every monomorphism `m : S ⟶ X`
 is the pullback of `true` along exactly one arrow `χ : X ⟶ Ω`. -/
+@[book "def:topos-book"]
 def IsSubobjectClassifier {one : C} (hone : IsTerminal one) (Ω : C) (tru : one ⟶ Ω) : Prop :=
   ∀ ⦃S X : C⦄ (m : S ⟶ X), Mono m → ∃! χ : X ⟶ Ω, IsPullback m (hone.from S) χ tru
 
@@ -29,6 +30,7 @@ def IsSubobjectClassifier {one : C} (hone : IsTerminal one) (Ω : C) (tru : one 
 every pair `A`, `B` has an object `E` (written `B^A`) with an evaluation
 `ev : E × A ⟶ B` such that every `h : Z × A ⟶ B` is `ev ∘ (λh × 1_A)` for
 exactly one `λh : Z ⟶ E`. -/
+@[book "def:exponential-book"]
 def HasExponentials (C : Type u) [Category.{v} C] [HasBinaryProducts C] : Prop :=
   ∀ A B : C, ∃ (E : C) (ev : E ⨯ A ⟶ B),
     ∀ (Z : C) (h : Z ⨯ A ⟶ B), ∃! g : Z ⟶ E, prod.map g (𝟙 A) ≫ ev = h

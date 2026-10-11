@@ -2,6 +2,7 @@ import ArtformTextbook.Meta.Book
 import ArtformTextbook.Ch01.Statements
 import ArtformTextbook.Ch01.Topos
 import ArtformTextbook.Ch01.Rods
+import ArtformTextbook.Ch01.Cafe
 import ArtformTextbook.Ch03.Defs.Canvas
 import ArtformTextbook.Ch03.Statements.Growth
 import ArtformTextbook.Ch04.Statements
