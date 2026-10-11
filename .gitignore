@@ -5,18 +5,18 @@
 # Review sheets (generated PDFs)
 /textbook/review/sheet-*
 # The guide's LaTeX by-products and generated listings
-/textbook/tutorial/tex/generated/snippets/
-/textbook/tutorial/tex/generated/status.tex
-/textbook/tutorial/tex/*.aux
-/textbook/tutorial/tex/*.log
-/textbook/tutorial/tex/*.toc
-/textbook/tutorial/tex/*.out
-/textbook/tutorial/tex/*.bbl
-/textbook/tutorial/tex/*.blg
-/textbook/tutorial/tex/*.fbk
-/textbook/tutorial/tex/*.pdf
-/textbook/tutorial/tex/console.txt
-/textbook/tutorial/tex/bibtex.txt
+/tutorial/tex/generated/snippets/
+/tutorial/tex/generated/status.tex
+/tutorial/tex/*.aux
+/tutorial/tex/*.log
+/tutorial/tex/*.toc
+/tutorial/tex/*.out
+/tutorial/tex/*.bbl
+/tutorial/tex/*.blg
+/tutorial/tex/*.fbk
+/tutorial/tex/*.pdf
+/tutorial/tex/console.txt
+/tutorial/tex/bibtex.txt
 # Python caches
 __pycache__/
 # The type-theory paper's LaTeX by-products

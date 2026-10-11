@@ -20,7 +20,7 @@ def load(name, path):
 
 
 status = load("status", ROOT / "scripts/status.py")
-GUIDE_TOOLS = ROOT / "textbook/tutorial/tools"
+GUIDE_TOOLS = ROOT / "tutorial/tools"
 with patch.object(sys, "path", [str(GUIDE_TOOLS), *sys.path]):
     listings = load("extract_listings", GUIDE_TOOLS / "extract_listings.py")
 
@@ -117,10 +117,11 @@ class GuideFreshnessTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             textbook = root / "textbook"
-            tutorial = textbook / "tutorial"
+            tutorial = root / "tutorial"
             tex = tutorial / "tex"
             snippets = tex / "snippets"
             snippets.mkdir(parents=True)
+            textbook.mkdir()
             (root / "scripts").mkdir()
             (textbook / "edition.toml").write_text('inventory = "inventory.json"\n')
             sources = [textbook / "manifest.toml", textbook / "inventory.json",

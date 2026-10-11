@@ -1,17 +1,11 @@
 # The textbook in Lean
 
 This folder holds the Lean statements and proofs of the numbered statements
-of *Artform Calculus*, and the guide *Lean through Artform Calculus*.
+of *Artform Calculus*. The tutorial that teaches how to read them is in
+[`../tutorial/`](../tutorial/README.md).
 
-- `lean-through-artform-calculus.pdf`: the guide. Part I teaches the basics
-  of Lean; Part II writes the constructions of Chapter 1 of the book in Lean;
-  Part III presents this repository and reads four of its statements closely.
-- `tutorial/`: the guide's Lean files (`LeanBasics.lean`,
-  `ArtformChapter1.lean` and `RepositoryTour.lean`, checked on every build),
-  copies of the first two without the checks for an editor (`play/`), the
-  LaTeX sources (`tex/`) and `build.sh`. Part III also quotes the library's
-  own files, between `-- ANCHOR:` comments.
-- `ArtformTextbook/`: the library.
+- `ArtformTextbook/`: the library. Part III of the tutorial quotes some of its
+  files, between `-- ANCHOR:` comments.
   - `Meta/Book.lean` defines the attribute `@[book "label"]`, which ties a
     Lean declaration to the statement or definition of the book with that
     label.
@@ -35,7 +29,7 @@ of *Artform Calculus*, and the guide *Lean through Artform Calculus*.
 - `PILOT.md`: what the first 15 statements cost, and the order and
   decisions that follow from them.
 
-Each chapter will get a folder `ArtformTextbook/ChNN/` with:
+Each chapter has a folder `ArtformTextbook/ChNN/` with:
 - `Defs/`: the book's definitions;
 - `Statements.lean`, or `Statements/` when a chapter has several topics: the
   statements, as propositions;

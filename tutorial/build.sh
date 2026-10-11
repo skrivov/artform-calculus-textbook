@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build the guide "Lean through Artform Calculus".
-#   bash textbook/tutorial/build.sh [--png]
+#   bash tutorial/build.sh [--png]
 # 1. Lean checks the guide's files (lake build Tutorial). Every answer of
 #    Lean that the guide quotes is pinned there with #guard_msgs.
 # 2. tools/extract_listings.py cuts the printed listings from those files and
@@ -10,14 +10,14 @@
 #    style (tex/book/). The book's numbers come from
 #    tex/generated/book-labels-<n>.tex, which is appended to the .aux
 #    before each pass.
-# 4. On success the PDF is copied to textbook/lean-through-artform-calculus.pdf,
+# 4. On success the PDF is copied to tutorial/lean-through-artform-calculus.pdf,
 #    and the hash of every input is stored in tex/generated/inputs.sha256.
 #    extract_listings.py --check compares that hash with the current sources.
 # It fails on a LaTeX error, an overfull box or an undefined reference.
 # --png also writes one PNG per page to build/guide-pages/.
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
-ROOT=$(cd "$HERE/../.." && pwd)
+ROOT=$(cd "$HERE/.." && pwd)
 export PATH="$HOME/.elan/bin:$PATH"
 
 cd "$ROOT"
@@ -48,9 +48,9 @@ if [ "$errors" != 0 ] || [ "$overfull" != 0 ] || [ "$undefined" != 0 ]; then
   exit 1
 fi
 
-cp $N.pdf "$ROOT/textbook/lean-through-artform-calculus.pdf"
+cp $N.pdf "$ROOT/tutorial/lean-through-artform-calculus.pdf"
 python3 -B "$HERE/tools/extract_listings.py" --hash > generated/inputs.sha256
-echo "wrote textbook/lean-through-artform-calculus.pdf ($pages pages)"
+echo "wrote tutorial/lean-through-artform-calculus.pdf ($pages pages)"
 
 if [ "${1:-}" = "--png" ]; then
   mkdir -p "$ROOT/build/guide-pages"

@@ -17,7 +17,7 @@ leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.m
 # pinned with #guard_msgs, so building this library checks the guide.
 [[lean_lib]]
 name = "Tutorial"
-srcDir = "textbook/tutorial"
+srcDir = "tutorial"
 roots = ["LeanBasics", "ArtformChapter1", "RepositoryTour"]
 
 # The role discipline of the type-theory paper (type-theory/paper/): the five

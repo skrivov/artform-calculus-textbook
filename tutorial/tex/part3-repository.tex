@@ -1,6 +1,6 @@
 % Part III of the guide "Lean through Artform Calculus": the textbook's
 % theorems in Lean. Listings are cut from ../RepositoryTour.lean and from the
-% library under ../../ArtformTextbook by ../tools/extract_listings.py, and the
+% library under ../../textbook/ArtformTextbook by ../tools/extract_listings.py, and the
 % book's statements are quoted from the inventory of the edition the
 % repository follows. Written 2026-10-11 (Phase 5.1 of the repository's plan).
 \chapter*{Part III. The textbook's theorems in Lean}
@@ -8,7 +8,9 @@
 
 The repository that holds this guide also writes the numbered statements of
 the book in Lean. Most have proofs that Lean checks; the status table records
-what is complete. Part~II wrote the
+what is complete. The folder \lc{type-theory} holds a paper on the
+role-based type theory the book uses, \emph{Five Roles for Artforms}, with a
+Lean library that checks the paper's first part. Part~II wrote the
 constructions of Chapter~1 in core Lean, in one file. The repository's
 library is written with Mathlib, Lean's library of mathematics, and follows
 the whole book. This part says what the repository proves and how to build

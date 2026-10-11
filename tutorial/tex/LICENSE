@@ -1,12 +1,12 @@
 Copyright 2026 Sergey Krivov.
 
 The guide "Lean through Artform Calculus" -- the PDF
-textbook/lean-through-artform-calculus.pdf and the LaTeX sources in this
+tutorial/lean-through-artform-calculus.pdf and the LaTeX sources in this
 folder, including the book's style files in book/ -- is licensed under the
 Creative Commons Attribution 4.0 International License (CC BY 4.0). You may
 share and adapt it, provided you give appropriate credit:
 https://creativecommons.org/licenses/by/4.0/
 
-The guide's Lean files, in textbook/tutorial/, are code. Like the rest of the
+The guide's Lean files, in tutorial/, are code. Like the rest of the
 repository's code, they are licensed under the Apache License 2.0 (the file
 LICENSE at the repository's root).

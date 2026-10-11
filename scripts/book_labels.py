@@ -13,8 +13,8 @@ for example
   python3 scripts/book_labels.py \\
       ../textbook/artform-calculus-and-applications.aux 52 "29 September 2026"
 
-It writes textbook/tutorial/tex/generated/book-labels-<n>.tex, removes the
-files of other editions, and writes textbook/tutorial/tex/generated/book-edition.tex.
+It writes tutorial/tex/generated/book-labels-<n>.tex, removes the
+files of other editions, and writes tutorial/tex/generated/book-edition.tex.
 It fails if a cited label is not in the .aux.
 """
 import re
@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TEX = ROOT / "textbook" / "tutorial" / "tex"
+TEX = ROOT / "tutorial" / "tex"
 GENERATED = TEX / "generated"
 REF = re.compile(r"\\(?:ref|cref|Cref|pageref|autoref|nameref)\{([^}]+)\}")
 LABEL = re.compile(r"\\label\{([^}]+)\}")

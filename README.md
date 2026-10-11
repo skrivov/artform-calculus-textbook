@@ -1,12 +1,20 @@
 # Artform Calculus: proofs in Lean
 
-Lean 4 proofs of the theorems of the textbook *Artform Calculus*, and a guide
-to reading them.
+This repository accompanies the textbook *Artform Calculus*. It holds three
+things.
 
-**Start here:** [Lean through Artform Calculus](textbook/lean-through-artform-calculus.pdf)
-(PDF). It teaches Lean from the beginning, writes the constructions of
-Chapter 1 of the book in Lean, and then presents this repository, reading
-four of its statements closely.
+- **The textbook's theorems in Lean** ([`textbook/`](textbook/README.md)): a
+  Lean statement of each numbered theorem, proposition, lemma and corollary of
+  the book, with proofs that Lean's kernel checks.
+- **The Lean tutorial** ([`tutorial/`](tutorial/README.md)):
+  [*Lean through Artform Calculus*](tutorial/lean-through-artform-calculus.pdf)
+  (PDF). It teaches Lean from the beginning, writes the constructions of
+  Chapter 1 of the book in Lean, and then presents this repository, reading
+  four of its statements closely. Start here.
+- **The type theory of the five roles** ([`type-theory/`](type-theory/README.md)):
+  the paper [*Five Roles for Artforms*](type-theory/paper/role-stratified-artform-type-theory.pdf),
+  on the role-based type theory the book uses, and the Lean library
+  `ArtformRoles` that checks its first part.
 
 **Work in progress.** The [independent review of 11 October 2026](textbook/review/audit-2026-10-11.md)
 records a verdict for every numbered statement. Six existing translations
@@ -57,22 +65,27 @@ Publication checks run locally; GitHub Actions is disabled for this repository.
     python3 scripts/status.py --check
     python3 scripts/check_tree.py --identity
     python3 -m unittest discover -s scripts/tests
-    python3 textbook/tutorial/tools/extract_listings.py --check
+    python3 tutorial/tools/extract_listings.py --check
+
+The tutorial's PDF is rebuilt with `bash tutorial/build.sh`, and the paper's
+with `latexmk -pdf` in `type-theory/paper/`.
 
 ## Layout
 
 - `textbook/`: the textbook's definitions, statements and proofs, in the Lean
-  library `ArtformTextbook`, with the status table; and the guide, whose Lean
-  files and LaTeX sources are in `textbook/tutorial/`.
+  library `ArtformTextbook`; the manifest and the status table; the inventory
+  of the book's statements; the independent review; and the findings.
+- `tutorial/`: the tutorial *Lean through Artform Calculus*: its PDF, its
+  LaTeX sources, and its Lean files, the library `Tutorial`.
 - `type-theory/`: the paper *Five Roles for Artforms*, which asks whether the
   book's five roles are the right ones, and the Lean library `ArtformRoles`
-  that checks its first part ([type-theory/README.md](type-theory/README.md)).
+  that checks its first part.
 - `scripts/`: the status report and local publication checks.
 
 ## Licence
 
-Lean code and scripts: Apache-2.0 ([LICENSE](LICENSE)). The guide and its
-LaTeX sources: CC BY 4.0 ([textbook/tutorial/tex/LICENSE](textbook/tutorial/tex/LICENSE)).
+Lean code and scripts: Apache-2.0 ([LICENSE](LICENSE)). The tutorial and its
+LaTeX sources: CC BY 4.0 ([tutorial/tex/LICENSE](tutorial/tex/LICENSE)).
 The book's statement texts, quoted in `textbook/inventory/`: CC BY 4.0.
 The type-theory paper and its LaTeX sources: CC BY 4.0
 ([type-theory/paper/LICENSE](type-theory/paper/LICENSE)).

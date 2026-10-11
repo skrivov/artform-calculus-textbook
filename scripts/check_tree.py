@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 LIBRARY = "textbook/ArtformTextbook/"
-GUIDE_PDF = "textbook/lean-through-artform-calculus.pdf"
+GUIDE_PDF = "tutorial/lean-through-artform-calculus.pdf"
 LIMIT = 5 * 1024 * 1024
 FORBIDDEN = ("sorry", "admit", "native_decide", "implemented_by", "extern",
              "unsafe", "debug.skipKernelTC")

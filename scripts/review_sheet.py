@@ -26,13 +26,13 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "textbook" / "tutorial" / "tools"))
+sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "tutorial" / "tools"))
 import status  # noqa: E402
 from glyphs import GLYPHS, literate, unmapped  # noqa: E402
 
 ROOT = status.ROOT
 REVIEW = ROOT / "textbook" / "review"
-BOOK_STYLE = ROOT / "textbook" / "tutorial" / "tex" / "book"
+BOOK_STYLE = ROOT / "tutorial" / "tex" / "book"
 DEFAULT_AUX = ROOT.parent / "textbook" / "artform-calculus-and-applications.aux"
 WAITING = ("awaits review", "changed since review", "the book's text changed since review")
 
@@ -177,7 +177,7 @@ def main():
     missing = unmapped(lean_texts)
     if missing:
         sys.exit("no glyph for: " + " ".join(missing) +
-                 " (add them to textbook/tutorial/tools/glyphs.py)")
+                 " (add them to tutorial/tools/glyphs.py)")
     edition_name = (f"{status.ordinal(edition['number'])} edition" if edition else "current edition")
     count = f"{len(items)} statement" + ("s" if len(items) != 1 else "")
     tex = PREAMBLE % {"literate": literate(lean_texts), "date": args.date,
