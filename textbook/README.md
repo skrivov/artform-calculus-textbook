@@ -27,9 +27,12 @@ of *Artform Calculus*, and the guide *Lean through Artform Calculus*.
 - `review/`: the author's review log. Review sheets
   (`scripts/review_sheet.py`) are written here but not committed.
 - `FINDINGS.md`: errors or gaps found in the book while formalizing it.
+- `PILOT.md`: what the first 15 statements cost, and the order and
+  decisions that follow from them.
 
 Each chapter will get a folder `ArtformTextbook/ChNN/` with:
 - `Defs/`: the book's definitions;
-- `Statements.lean`: the statements, as propositions;
+- `Statements.lean`, or `Statements/` when a chapter has several topics: the
+  statements, as propositions;
 - the proofs;
 - `Examples.lean`: the book's running examples.

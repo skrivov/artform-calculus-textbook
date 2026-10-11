@@ -297,7 +297,8 @@ lean_proof = ""
 reviewed = ""
 review_text_sha256 = ""
 review_term_sha256 = ""
-fidelity = ""
+fidelity = """
+Enabled applications and compatibility are Definitions 2.5 and 2.6. Compatibility is read as the book's proof and Section 3.5 use it: the write footprints are disjoint, and making either change leaves every position the other reads unchanged. Making a change writes the proposal on its write footprint and keeps every other position. The more permissive conditions mentioned after Definition 2.6 (equal writes, commuting updates proved explicitly) are not covered."""
 
 [[statement]]
 key = "thm:growth-stabilization"
@@ -586,7 +587,8 @@ lean_proof = ""
 reviewed = ""
 review_text_sha256 = ""
 review_term_sha256 = ""
-fidelity = ""
+fidelity = """
+Tables are functions C -> ZMod n on a finite set of cells C, for every n (n = 0, the integers, included). M is an additive bijection of the tables, and M_vu is read off M at the table with a single 1 at u, so that M(p)(v) = sum over u of M_vu p(u). 'Keeps the tally' means T(F(p)) = T(p) for every table p, and 'at every tick' is stated for every table p. 'The current runs from u to v' is read as J_u->v(p) being nonzero for some p, and 'the update of v reads u' as M_vu being nonzero, which for an affine law is exactly when F(p)(v) depends on p(u). 'It reads the cell u alone' means that J_u->v(p) depends only on p(u)."""
 
 [[statement]]
 key = "prop:law-decides"
@@ -605,7 +607,8 @@ lean_proof = ""
 reviewed = ""
 review_text_sha256 = ""
 review_term_sha256 = ""
-fidelity = ""
+fidelity = """
+Laws, realizers and runs are Definitions 5.9 and 5.10. The moves are process profiles, and a batch the law allows is a batch of enabled applications of its moves. A run over n ticks is a sequence of n + 1 legal states, each step applying a batch that the realizer selects, allows, or gives positive weight, together with the batches made (the trace). An invariant is any condition J on tables. The hypothesis is required only at legal states, which is where a law allows batches; this makes the statement slightly stronger. 'Every run keeps the invariant' means that if the first state satisfies J, every state of the run does."""
 
 [[statement]]
 key = "thm:well-posed"

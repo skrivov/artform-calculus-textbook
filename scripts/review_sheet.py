@@ -154,8 +154,8 @@ def main():
         surface = ""
         if names:
             surface = ("\n\\subsection*{The definitions it unfolds to}\n"
-                       "In the section Definitions at the start: " +
-                       ", ".join("\\lc{%s}" % escape(nm) for nm in names) + ".\n")
+                       "{\\raggedright In the section Definitions at the start: " +
+                       ", ".join("\\lc{%s}" % escape(nm) for nm in names) + ".\\par}\n")
         lean_texts += [st["text"], *st["surface"]]
         items.append(ITEM % {
             "number": r["number"], "title": r["title"], "key": escape(r["key"]),
