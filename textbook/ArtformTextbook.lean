@@ -11,6 +11,8 @@ import ArtformTextbook.Ch03.Recognition
 import ArtformTextbook.Ch03.Metric
 import ArtformTextbook.Ch03.Cube
 import ArtformTextbook.Ch03.Measure
+import ArtformTextbook.Ch03.Statements.Receipts
+import ArtformTextbook.Ch03.Receipts
 import ArtformTextbook.Ch04.Statements
 import ArtformTextbook.Ch04.Counting
 import ArtformTextbook.Ch04.Memory

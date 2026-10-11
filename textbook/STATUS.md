@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 100 |
-| planned | 3 |
+| stated | 101 |
+| planned | 2 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -38,7 +38,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.37 | Finite Fubini–Tonelli | `nolabel:03-pattern-geometry:finite-fubini-tonelli` | A | B5 | stated | `Artform.Statement.finiteFubiniTonelli` / `Artform.finiteFubiniTonelli` | awaits review |
 | 3.39 | Monotone convergence | `nolabel:03-pattern-geometry:monotone-convergence` | A | B5 | stated | `Artform.Statement.monotoneConvergence` / `Artform.monotoneConvergence` | awaits review |
 | 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | stated | `Artform.Statement.invariantMeasureOrbits` / `Artform.invariantMeasureOrbits` | awaits review |
-| 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | planned |  |  |
+| 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | stated | `Artform.Statement.metricFeatureReceipts` / `Artform.metricFeatureReceipts` | awaits review |
 | 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | stated | `Artform.Statement.referenceMarkingPullback` / `Artform.referenceMarkingPullback` | awaits review |
 | 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` / `Artform.countLaw` | awaits review |
 | 4.4 | Exit-level closure | `prob:markov` | C | B5 | stated | `Artform.Statement.exitLevelClosure` / `Artform.exitLevelClosure` | awaits review |
