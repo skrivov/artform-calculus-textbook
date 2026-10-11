@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 80 |
-| planned | 23 |
+| stated | 87 |
+| planned | 16 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -109,17 +109,17 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | stated | `Artform.Statement.s1080Tensor` / `Artform.s1080Tensor` | awaits review |
 | 12.15 | Agreement with SU(3) at two slots | `thm:mm-s1080-agreement` | E | B8 | planned |  |  |
 | 12.16 | Every loop closes | `thm:mm-loop` | B | B7 | stated | `Artform.Statement.mmLoop` / `Artform.mmLoop` | awaits review |
-| 13.1 | Colourless states of a path | `prop:ml-path` | C | B7 | planned |  |  |
-| 13.2 | The string | `thm:ml-string` | C | B7 | planned |  |  |
-| 13.3 | The screening number | `prop:ml-screening` | D | B7 | planned |  |  |
-| 13.4 | Where the string and screened levels cross | `prop:ml-breaking` | D | B7 | planned |  |  |
-| 13.5 | Colourless states of the empty square | `prop:ml-square-states` | D | B7 | planned |  |  |
-| 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | planned |  |  |
+| 13.1 | Colourless states of a path | `prop:ml-path` | C | B7 | stated | `Artform.Statement.mlPath` / `Artform.mlPath` | awaits review |
+| 13.2 | The string | `thm:ml-string` | C | B7 | stated | `Artform.Statement.mlString` / `Artform.mlString` | awaits review |
+| 13.3 | The screening number | `prop:ml-screening` | D | B7 | stated | `Artform.Statement.mlScreening` / `Artform.mlScreening` | awaits review |
+| 13.4 | Where the string and screened levels cross | `prop:ml-breaking` | D | B7 | stated | `Artform.Statement.mlBreaking` / `Artform.mlBreaking` | awaits review |
+| 13.5 | Colourless states of the empty square | `prop:ml-square-states` | D | B7 | stated | `Artform.Statement.mlSquareStates` / `Artform.mlSquareStates` | awaits review |
+| 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | stated | `Artform.Statement.mlSquareMatrix` / `Artform.mlSquareMatrix` | awaits review |
 | 13.7 | The square to third order | `thm:ml-square-series` | E | B8 | planned |  |  |
 | 13.8 | The third-order transfer | `thm:ml-transfer` | E | B8 | planned |  |  |
 | 13.9 | What the transfer does | `thm:ml-transfer-values` | D | B7 | planned |  |  |
 | 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | planned |  |  |
-| 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | planned |  |  |
+| 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | stated | `Artform.Statement.mlCanvasCensus` / `Artform.mlCanvasCensus` | awaits review |
 
 ## Definitions
 

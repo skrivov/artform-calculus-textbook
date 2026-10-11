@@ -58,6 +58,12 @@ import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements
 import ArtformTextbook.Ch12.Icosahedron
 import ArtformTextbook.Ch12.Groups
+import ArtformTextbook.Ch13.Statements.String
+import ArtformTextbook.Ch13.Statements.Square
+import ArtformTextbook.Ch13.Statements.Census
+import ArtformTextbook.Ch13.String
+import ArtformTextbook.Ch13.Square
+import ArtformTextbook.Ch13.Census
 
 /-!
 # *Artform Calculus* in Lean
