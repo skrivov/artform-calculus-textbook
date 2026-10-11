@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 25 |
-| planned | 78 |
+| stated | 29 |
+| planned | 74 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -31,10 +31,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | planned |  |  |
 | 3.25 | Averaged invariant metric | `nolabel:03-pattern-geometry:averaged-invariant-metric` | B | B5 | planned |  |  |
 | 3.26 | Perpendicularity from symmetry | `nolabel:03-pattern-geometry:perpendicularity-from-symmetry` | B | B5 | planned |  |  |
-| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | stated | `Artform.Statement.commutingProposals` | awaits review; no proof yet |
-| 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | planned |  |  |
-| 3.32 | Fair closure | `prop:fair-closure` | B | B5 | planned |  |  |
-| 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | planned |  |  |
+| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | stated | `Artform.Statement.commutingProposals` / `Artform.commutingProposals` | awaits review |
+| 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | stated | `Artform.Statement.growthStabilization` / `Artform.growthStabilization` | awaits review |
+| 3.32 | Fair closure | `prop:fair-closure` | B | B5 | stated | `Artform.Statement.fairClosure` / `Artform.fairClosure` | awaits review |
+| 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | stated | `Artform.Statement.growthSymmetry` / `Artform.growthSymmetry` | awaits review |
 | 3.37 | Finite Fubini–Tonelli | `nolabel:03-pattern-geometry:finite-fubini-tonelli` | A | B5 | planned |  |  |
 | 3.39 | Monotone convergence | `nolabel:03-pattern-geometry:monotone-convergence` | A | B5 | planned |  |  |
 | 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | planned |  |  |
@@ -46,9 +46,9 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` / `Artform.orbitCriterion` | awaits review |
 | 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` / `Artform.noether` | awaits review |
 | 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` | awaits review |
-| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` | awaits review; no proof yet |
-| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | stated | `Artform.Statement.lawDecides` | awaits review; no proof yet |
-| 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | planned |  |  |
+| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` / `Artform.tallyCurrent` | awaits review |
+| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | stated | `Artform.Statement.lawDecides` / `Artform.lawDecides` | awaits review |
+| 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | stated | `Artform.Statement.finiteWellPosedness` / `Artform.finiteWellPosedness` | awaits review |
 | 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | planned |  |  |
 | 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | planned |  |  |
 | 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` / `Artform.holonomyDescent` | awaits review |
@@ -174,9 +174,9 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.21 | Template symmetry, atom image, positive occurrence | `def:positive-occurrence-book` | planned |  |
 | 3.23 | Component inventory and degree | `def:pattern-degree-book` | planned |  |
 | 3.24 | Atom support and atom-disjoint recurrence | `def:atom-disjoint-recurrence-book` | planned |  |
-| 3.28 | Policy | `def:policy` | planned |  |
-| 3.30 | Cadence fairness; application fairness | `def:fairness` | planned |  |
-| 3.31 | Bounded windowed progress | `def:windowed-progress` | planned |  |
+| 3.28 | Policy | `def:policy` | defined | `Artform.Policy` |
+| 3.30 | Cadence fairness; application fairness | `def:fairness` | defined | `Artform.Execution.ApplicationFair`, `Artform.Execution.CadenceFair` |
+| 3.31 | Bounded windowed progress | `def:windowed-progress` | defined | `Artform.Execution.WindowedProgress` |
 | 3.34 | Sigma-algebra | `nolabel:03-pattern-geometry:sigma-algebra` | planned |  |
 | 3.35 | Measure | `nolabel:03-pattern-geometry:measure` | planned |  |
 | 3.36 | Measurable map | `nolabel:03-pattern-geometry:measurable-map` | planned |  |
@@ -189,8 +189,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | defined | `Artform.DetLaw.Conserved`, `Artform.DetLaw.IsSymmetry` |
 | 5.5 | Affine law; tally; pairing | `def:affine-law` | defined | `Artform.AffineLaw`, `Artform.AffineLaw.Keeps`, `Artform.Pairing`, `Artform.Pairing.Perfect`, `Artform.Tally` |
 | 5.9 | Law; move; legal state | `def:law` | defined | `Artform.Law` |
-| 5.10 | Realizer; run | `def:realizer` | defined | `Artform.DetRealizer`, `Artform.RelRealizer`, `Artform.Run`, `Artform.StochRealizer` |
-| 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | planned |  |
+| 5.10 | Realizer; run | `def:realizer` | defined | `Artform.DetRealizer`, `Artform.LawInSteps.DetRealizer`, `Artform.RelRealizer`, `Artform.Run`, `Artform.StochRealizer` |
+| 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | defined | `Artform.CheckedInvariant`, `Artform.LawInSteps`, `Artform.LawInSteps.DetRealizer.WellPosed`, `Artform.Score` |
 | 5.14 | Five kinds of equation | `def:equation-roles` | planned |  |
 | 5.15 | Right torsor | `def:torsor` | planned |  |
 | 5.17 | Localization | `def:localization` | planned |  |

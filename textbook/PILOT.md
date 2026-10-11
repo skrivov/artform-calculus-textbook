@@ -15,7 +15,7 @@ taught. It replaces the provisional costs of the plan.
     seconds.
 - None has been reviewed by the author yet, so `STATUS.md` lists all 15 as
   stated. `scripts/review_sheet.py` writes their review sheet.
-- The pilot found no error in the book; `FINDINGS.md` is empty. Two
+- The pilot itself found no error in the book. Two
   statements needed a choice of reading, which the decisions below
   describe.
 
@@ -103,10 +103,16 @@ share definitions, several at once:
   if the author wants the multiplicity itself.
 - **Compatibility (3.27 and every batch).** Two enabled applications are
   compatible when their write footprints are disjoint and neither changes a
-  position the other reads. This is the reading of Section 3.5 and of the
+  position the other reads. This is the reading of Section 3.8 and of the
   proof of 3.27. The more permissive conditions mentioned after
   Definition 2.6 are not covered.
 - **Laws in steps (5.13).** A law in steps checks each invariant only at its
   checkpoints, while Definition 5.9 asks every move to lead to a legal state.
-  The batch that formalizes 5.13 chooses a reading and records it in the
-  fidelity note of 5.13.
+  The Lean statement reads legality at the boundaries of the slots: a move
+  of the open step leads from a state legal at one boundary to a state legal
+  at the next. This is how the book's proof uses it, and a law of Section 5.4
+  is the case in which every invariant is checked at every boundary.
+- **Pending work (3.30, 3.32).** With work pending from its first offer,
+  Proposition 3.32 fails on a natural reading of Definition 3.30
+  (`FINDINGS.md`, F1). The Lean statement counts pending work from the step
+  at which it is enabled.

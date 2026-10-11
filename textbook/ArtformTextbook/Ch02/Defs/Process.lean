@@ -3,7 +3,7 @@ import Mathlib.Order.Disjoint
 import ArtformTextbook.Meta.Book
 
 /-!
-# Process profiles, enabled applications and batches (Section 2.3)
+# Process profiles, enabled applications and batches (Section 2.5)
 
 A frame presents its positions and the type of values allowed at each; a
 table gives every position a value. A process profile is one kind of change
