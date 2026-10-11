@@ -22,7 +22,8 @@ GLYPHS = {
     "⨆": r"$\bigsqcup$", "⨅": r"$\sqcap$", "⊔": r"$\sqcup$", "⊓": r"$\sqcap$",
     "∫": r"$\int$", "∞": r"$\infty$", "√": r"$\surd$", "∂": r"$\partial$",
     "≫": r"$\gg$", "⟶": r"$\longrightarrow$", "⥤": r"$\Rightarrow$",
-    "⊣": r"$\dashv$", "⋙": r"$\ggg$",
+    "⊣": r"$\dashv$", "⋙": r"$\ggg$", "⋃": r"$\bigcup$", "⋂": r"$\bigcap$",
+    "⟦": r"$[\![$", "⟧": r"$]\!]$",
     "⋯": r"{\color{ArtGray}$\cdots$}", "…": r"$\ldots$", "▸": r"$\blacktriangleright$",
     "⟨": r"$\langle$", "⟩": r"$\rangle$", "‹": r"$\langle$", "›": r"$\rangle$",
     "⌊": r"$\lfloor$", "⌋": r"$\rfloor$", "⌈": r"$\lceil$", "⌉": r"$\rceil$",
@@ -33,6 +34,7 @@ GLYPHS = {
     "²": r"$^2$", "³": r"$^3$", "⁻": r"$^-$", "¹": r"$^1$", "⁰": r"$^0$",
     "ᵀ": r"$^{\mathsf T}$", "ᶜ": r"$^{c}$", "ᵒ": r"$^{o}$", "ᵖ": r"$^{p}$",
     "ˢ": r"$^{s}$", "ᴴ": r"$^{H}$", "ᵐ": r"$^{m}$", "ᵃ": r"$^{a}$",
+    "ˣ": r"$^{\times}$", "ᶠ": r"$^{f}$",
     # subscripts
     "₀": r"$_0$", "₁": r"$_1$", "₂": r"$_2$", "₃": r"$_3$", "₄": r"$_4$",
     "₅": r"$_5$", "₆": r"$_6$", "₇": r"$_7$", "₈": r"$_8$", "₉": r"$_9$",
