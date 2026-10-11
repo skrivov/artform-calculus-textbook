@@ -256,7 +256,11 @@ def write_book_statements(out: Path) -> int:
 
 def inputs_hash(snippets: Path) -> str:
     """One hash of everything the PDF is made from: the snippets, the guide's
-    LaTeX, its bibliography, the book's style files and numbers."""
+    LaTeX, its bibliography, the book's style files and numbers, and the
+    sources of its generated status appendix. That appendix is not committed,
+    so hash its tracked inputs rather than a possibly missing or stale copy.
+    CI checks the manifest against the current Lean report separately.
+    """
     files = sorted(snippets.glob("*")) + sorted(TEX.glob("*.tex")) + \
         sorted(TEX.glob("*.bib")) + sorted((TEX / "book").glob("*.tex")) + \
         sorted((TEX / "generated").glob("book-*.tex"))
@@ -264,6 +268,12 @@ def inputs_hash(snippets: Path) -> str:
     for f in files:
         rel = f.name if f.parent == snippets else str(f.relative_to(TEX))
         h.update(rel.encode() + b"\0" + f.read_bytes() + b"\0")
+    textbook = TUTORIAL.parent
+    edition = tomllib.loads((textbook / "edition.toml").read_text(encoding="utf-8"))
+    status_inputs = [textbook / "manifest.toml", textbook / "edition.toml",
+                     textbook / edition["inventory"], textbook.parent / "scripts" / "status.py"]
+    for f in status_inputs:
+        h.update(str(f.relative_to(textbook.parent)).encode() + b"\0" + f.read_bytes() + b"\0")
     return h.hexdigest()
 
 

@@ -8,11 +8,13 @@ to reading them.
 Chapter 1 of the book in Lean, and then presents this repository, reading
 four of its statements closely.
 
-**Work in progress.** Most of the book's numbered statements are written in
-Lean, each with a proof that Lean checks. None has been reviewed yet, so the table
-below lists them as *stated*: a statement becomes *proved* only when an
-independent review has checked its Lean form against the book. Errors and gaps found in the
-book while formalizing it are recorded in
+**Work in progress.** The [independent review of 11 October 2026](textbook/review/audit-2026-10-11.md)
+records a verdict for every numbered statement. Six existing translations
+need revision, two approved translations still need proofs, and two statements
+remain planned. The two *partial* approvals cover only the scope recorded in
+their fidelity notes. A statement becomes *proved* only when its translation
+has passed review against the book and Lean has checked its proof. Errors and
+gaps found in the book while formalizing it are recorded in
 [`textbook/FINDINGS.md`](textbook/FINDINGS.md).
 
 ## What will be proved
@@ -26,9 +28,9 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 <!-- status:begin -->
 | Status | Statements |
 |---|---|
-| proved | 0 |
-| partial | 0 |
-| stated | 101 |
+| proved | 91 |
+| partial | 2 |
+| stated | 8 |
 | planned | 2 |
 | informal | 0 |
 | **total** | **103** |

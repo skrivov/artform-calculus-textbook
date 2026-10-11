@@ -12,6 +12,7 @@
 \documentclass[12pt,openany]{memoir}
 \input{artform-notation}
 \input{style}
+\hypersetup{pdftitle={Lean through Artform Calculus}}
 \usepackage{listings}
 \input{generated/book-edition}
 \newcommand{\leandir}{generated/snippets}
@@ -36,11 +37,11 @@
   columns=flexible}
 \input{\leandir/sizes.tex}
 % A listing of at most 6 printed lines is kept on one page; a longer one
-% starts only where 4 of its lines fit, and may break, as running code does.
+% may break between lines without a separate page-space reservation.
 \makeatletter
 \newcommand{\leanlisting}[1]{%
   \ifnum\csname leanlines@#1\endcsname>6
-    \Needspace{4\baselineskip}%
+    \par
     \lstinputlisting[style=lean]{\leandir/#1.lean}%
   \else
     \par\vspace{7pt}\noindent\begin{minipage}{\linewidth}%
@@ -67,12 +68,15 @@
 \lstnewenvironment{shellcommands}{\lstset{basicstyle=\ttfamily\fontsize{8.6}{10.4}\selectfont,
   columns=fixed,basewidth=0.5em,keepspaces=true,frame=leftline,framerule=1.2pt,
   rulecolor=\color{ArtGray},framesep=6pt,xleftmargin=9pt,aboveskip=7pt,belowskip=7pt}}{}
-\newtcolorbox{bookquote}[2]{enhanced,breakable,colback=white,colframe=ArtNavy!45,
+% All five quotations fit on one page. Keep each box together: breakable
+% boxes containing lists can overprint the following listing in this style.
+\newtcolorbox{bookquote}[2]{enhanced,colback=white,colframe=ArtNavy!45,
   boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
   title={#1\quad #2},fonttitle=\bfseries\small,coltitle=ArtNavy,colbacktitle=ArtNavy!8,
   before skip=8pt,after skip=8pt}
 \input{\leandir/book-statements.tex}
-\newcommand{\bookstatement}[1]{\csname bookstmt@#1\endcsname}
+\newcommand{\bookstatement}[1]{\par\noindent\begin{minipage}{\linewidth}%
+  \csname bookstmt@#1\endcsname\end{minipage}\par}
 \newcommand{\leanversion}{4.34.1}
 \IfFileExists{generated/status.tex}{\input{generated/status}}{%
   \def\statustotal{??}\def\statustable{\emph{(no status table: run build.sh)}}}
@@ -91,7 +95,8 @@
 proofs are checked by the computer. Part~II writes the constructions of
 Chapter~1 of \emph{Artform Calculus} in Lean. Part~III introduces the
 repository that holds this guide, where the book's numbered statements are
-written in Lean with Mathlib and proved, and reads four of them closely.
+written in Lean with Mathlib, with their proof and review status recorded,
+and reads four of them closely.
 References such as Section~1.4, Figure~1.9 or Definition~1.5 point into the
 book; their numbers are those of its \bookedition. Every listing is cut from
 files that Lean~\leanversion{} accepts as a whole: two files in core Lean for

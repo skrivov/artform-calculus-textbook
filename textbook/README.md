@@ -27,7 +27,9 @@ of *Artform Calculus*, and the guide *Lean through Artform Calculus*.
   computation, E research or modelling) and the batch it belongs to.
 - `STATUS.md`: the status table, generated from the manifest by
   `scripts/status.py`.
-- `review/`: the review log. Review sheets
+- `review/`: the independent audit and the approval log. The
+  [11 October 2026 audit](review/audit-2026-10-11.md) gives a verdict for all
+  103 statements and explains the six returned translations. Review sheets
   (`scripts/review_sheet.py`) are written here but not committed.
 - `FINDINGS.md`: errors or gaps found in the book while formalizing it.
 - `PILOT.md`: what the first 15 statements cost, and the order and

@@ -6,8 +6,9 @@
 \chapter*{Part III. The textbook's theorems in Lean}
 \addcontentsline{toc}{chapter}{Part III. The textbook's theorems in Lean}
 
-The repository that holds this guide also holds the numbered statements of
-the book in Lean, with proofs that Lean checks. Part~II wrote the
+The repository that holds this guide also writes the numbered statements of
+the book in Lean. Most have proofs that Lean checks; the status table records
+what is complete. Part~II wrote the
 constructions of Chapter~1 in core Lean, in one file. The repository's
 library is written with Mathlib, Lean's library of mathematics, and follows
 the whole book. This part says what the repository proves and how to build
@@ -24,7 +25,7 @@ one of five states:
 \begin{itemize}[leftmargin=1.4em]
 \item \emph{planned}: no Lean statement has been written yet;
 \item \emph{stated}: a Lean statement has been written, and it waits for review
-  against the book, or for a proof;
+  against the book, for a revision after review, or for a proof;
 \item \emph{proved}: an independent review has approved the Lean
   statement, and Lean has checked a proof of it;
 \item \emph{partial}: as proved, for a narrower statement, with the reason
@@ -34,27 +35,35 @@ one of five states:
 \end{itemize}
 
 A statement is proved in this sense when three things hold. The library has
-a Lean proposition tied to the statement's label in the book. The author has
+a Lean proposition tied to the statement's label in the book. An independent
+AI reviewer has
 read that proposition beside the book and approved it as saying what the
 book says. And Lean has checked a proof of it that uses no axiom beyond
 the three that the last section of this part describes.
 
 Lean checks the third point, and only the third: that the proof proves the
 Lean proposition. It cannot check the second, which compares a text in
-mathematical English with a text in Lean. Three things help the author, and
+mathematical English with a text in Lean. Three things help the reviewer, and
 any reader, to judge it. Every Lean statement has a \emph{fidelity note},
 which lists each way it reads the book: a hypothesis made explicit, a case
-generalized, a choice between two readings. Every proof file ends with an
-example on the book's running example in which the hypotheses hold, so that
-no statement is true merely because its hypotheses cannot be met. And an
-approval records two hashes, of the statement's text and of its exact
-terms. If the statement, or any definition it uses, changes later, the
-statement goes back for review.
+generalized, a choice between two readings. Non-vacuity examples exhibit
+inputs on which the hypotheses hold. And an approval records hashes of the
+Lean text and exact terms, the inventoried book text, and the fidelity notes.
+If these change later, the statement goes back for review.
 
 When this guide was built, \statuscount{proved} statements were proved,
-\statuscount{stated} were stated and \statuscount{planned} were planned.
+\statuscount{partial} were partial, \statuscount{stated} were stated and
+\statuscount{planned} were planned.
 The appendix lists all of them. The file \lc{textbook/STATUS.md} of the
 repository is always current.
+
+The review of 11 October 2026 returned six translations for revision:
+3.32, 5.44, 6.3, 6.11, 13.8 and 13.9. Their proofs check, but their Lean
+forms do not yet cover the book's full claims. Statements 12.2 and 13.10
+have approved translations and still need proofs; 12.15 and 13.7 still need
+translations. The two partial approvals, 3.43 and 7.4, cover only the scope
+recorded in their fidelity notes. The review and its reasons are in
+\lc{textbook/review/audit-2026-10-11.md}.
 
 \section*{Getting and building it}
 \addcontentsline{toc}{section}{Getting and building it}
@@ -117,7 +126,7 @@ proves the polynomial identity that is left.
 \paragraph{The integers modulo $n$.}
 \li!ZMod n! is the integers modulo $n$, with their addition and
 multiplication. The toy electrodynamics of Chapter~6 counts modulo~$8$:
-there $5+4$ is $1$, and $3-5$ is $6$. \li!ZMod n! is finite, so \li!decide!
+there $5+4$ is $1$, and $3-5$ is $6$. For positive $n$, \li!ZMod n! is finite, so \li!decide!
 checks a statement for all its values. Eight equal steps bring every value
 back, and a number modulo~$3$, the values of the square's law
 (\cref{fig:law-square}), is $0$, $1$ or~$2$:
@@ -176,7 +185,7 @@ label:
 The statement of Noether's theorem is
 \lc{Artform.\allowbreak Statement.\allowbreak noether}, a proposition, and
 its proof is the theorem \lc{Artform.\allowbreak noether}, whose type is
-that proposition. Keeping the two apart lets the author review the
+that proposition. Keeping the two apart lets the reviewer judge the
 statement without reading the proof, and lets a proof be replaced without
 touching what it proves.
 
@@ -435,11 +444,13 @@ library use \li!decide +kernel! instead, which the kernel itself checks, on
 data that a script computes beforehand. The sixty rotations of the
 icosahedron (\cref{prop:mm-icosahedron}) are checked so.
 
-An approval records two hashes. The first is of the text the author read:
+An approval records three review hashes. The first is of the text the reviewer read:
 the statement, and the definitions it uses, as Lean prints them. The second
-is of their exact terms, as Lean stores them. If either changes, because a
-definition was edited or Lean prints it differently, the statement is no
-longer proved and goes back to the author.
+is of their exact terms, as Lean stores them. The third records the book's
+inventoried text and the fidelity notes, including whether the approval is
+partial. A change to any of these sends the statement back for review.
+The book's inventory does not record dependencies between its definitions
+and statements, so a change to its text conservatively reopens every review.
 
 GitHub runs the same commands on every change:
 \begin{itemize}[leftmargin=1.4em]
@@ -449,10 +460,10 @@ GitHub runs the same commands on every change:
 \item \lc{scripts/Report.lean} lists every declaration tied to the book, and
   \lc{scripts/status.py --check} checks that each proof proves exactly its
   statement and that the status table is current;
-\item \lc{scripts/check\_tree.py} checks that no file contains \li!sorry! or
-  another forbidden word;
+\item \lc{scripts/check\_tree.py} checks that no library source uses \li!sorry!
+  or another forbidden construct;
 \item the guide's own check fails if this PDF is not built from the current
-  sources.
+  sources, including the inputs to its generated status appendix.
 \end{itemize}
 Each release also runs \lc{leanchecker}, a second checker, separate from the
 one that compiled the library, which reads every declaration again from the

@@ -34,7 +34,7 @@ writes the guide's statement table; --date YYYY-MM-DD, for --approve.
 
 The script edits only one-line fields of the manifest: status, lean_statement,
 lean_proof, lean, book_sha256, reviewed, review_text_sha256 and
-review_term_sha256.
+review_term_sha256, review_context_sha256 and review_return (cleared on approval).
 """
 import argparse
 import datetime
@@ -65,13 +65,34 @@ def sha(text):
 
 
 def text_hash(statement):
-    """The hash of what the author reads: the statement and its definitions."""
+    """The hash of what the reviewer reads: the statement and its definitions."""
     return sha("\n\n".join([statement["text"], *statement["surface"]]))
 
 
 def term_hash(statement):
     """The hash of the exact Lean terms of the same declarations."""
     return sha("\n\n".join(statement["terms"]))
+
+
+def context_hash(entry, definitions, inventory):
+    """Bind approval to the book and the declared scope of its translation.
+
+    Lean dependencies alone cannot detect a changed book definition or a new
+    fidelity qualification. Conservatively include every inventoried book
+    item and every definition's fidelity note; the inventory does not record
+    which book definitions a statement uses. Ignore locations and numbering.
+    """
+    context = {
+        "book": {key: {field: item.get(field, "")
+                       for field in ("kind", "title", "statement")}
+                 for key, item in (inventory or {}).items()},
+        "definitions": {e["key"]: {field: e.get(field, "")
+                                  for field in ("fidelity", "planned_home")}
+                        for e in definitions},
+        "fidelity": entry.get("fidelity", ""),
+        "partial": entry.get("status") == "partial",
+    }
+    return sha(json.dumps(context, sort_keys=True, ensure_ascii=False))
 
 
 def slug(s):
@@ -225,16 +246,17 @@ def evaluate(st_entries, def_entries, inventory, report):
         st = lean_st.get(key)
         good = [p for p in proofs.get(key, [])
                 if st and p["proves"] == st["decl"] and not set(p["axioms"]) - ALLOWED_AXIOMS]
-        notes = []
+        notes = ["returned: " + e["review_return"]] if e.get("review_return") else []
         if recorded == "informal":
             status = "informal"
         elif st is None:
             status = "planned"
         else:
-            ok = True
+            ok = not e.get("review_return")
             if not e.get("reviewed"):
                 ok = False
-                notes.append("awaits review")
+                if not e.get("review_return"):
+                    notes.append("awaits review")
             else:
                 if (e.get("review_text_sha256") != text_hash(st)
                         or e.get("review_term_sha256") != term_hash(st)):
@@ -243,6 +265,9 @@ def evaluate(st_entries, def_entries, inventory, report):
                 if book and e.get("book_sha256") != book["statement_sha256"]:
                     ok = False
                     notes.append("the book's text changed since review")
+                if e.get("review_context_sha256") != context_hash(e, def_entries, inventory):
+                    ok = False
+                    notes.append("the book or fidelity context changed since review")
             if not good:
                 ok = False
                 notes.append("no proof yet" if not proofs.get(key) else "no valid proof")
@@ -389,6 +414,9 @@ def render_tex(results):
 
 def approve(keys, date, report, inventory):
     text = MANIFEST.read_text(encoding="utf-8")
+    manifest = tomllib.loads(text)
+    entries = {e["key"]: e for e in manifest.get("statement", [])}
+    definitions = manifest.get("definition", [])
     lean_st = report[0]
     log = []
     for key in keys:
@@ -396,13 +424,22 @@ def approve(keys, date, report, inventory):
         if st is None:
             sys.exit(f"{key}: no Lean statement carries this label")
         fields = {"reviewed": date, "review_text_sha256": text_hash(st),
-                  "review_term_sha256": term_hash(st)}
+                  "review_term_sha256": term_hash(st),
+                  "review_context_sha256": context_hash(entries[key], definitions, inventory)}
+        if entries[key].get("review_return"):
+            fields["review_return"] = ""
         if inventory and key in inventory:
             fields["book_sha256"] = inventory[key]["statement_sha256"]
         text = set_fields(text, "statement", key, fields)
         log.append(f"- {date}: `{key}` approved as `{st['decl']}` "
-                   f"(text {fields['review_text_sha256'][:12]}, term {fields['review_term_sha256'][:12]})")
-    tomllib.loads(text)
+                   f"(text {fields['review_text_sha256'][:12]}, "
+                   f"term {fields['review_term_sha256'][:12]}, "
+                   f"context {fields['review_context_sha256'][:12]})")
+    candidate = tomllib.loads(text)
+    problems = evaluate(candidate.get("statement", []), candidate.get("definition", []),
+                        inventory, report)[2]
+    if problems:
+        sys.exit("approval not recorded:\n" + "\n".join(problems))
     MANIFEST.write_text(text, encoding="utf-8")
     REVIEW_LOG.parent.mkdir(parents=True, exist_ok=True)
     old = REVIEW_LOG.read_text(encoding="utf-8") if REVIEW_LOG.exists() else (
@@ -461,6 +498,10 @@ def main():
 
     if not (args.write or args.approve):
         # --tex alone writes the guide's table and nothing else.
+        if problems:
+            for p in problems:
+                print(f"problem: {p}")
+            return 1
         args.tex.parent.mkdir(parents=True, exist_ok=True)
         args.tex.write_text(outputs[args.tex], encoding="utf-8")
         print(summary)

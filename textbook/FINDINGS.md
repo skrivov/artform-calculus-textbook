@@ -5,6 +5,11 @@ statement, what fails, a counterexample or the missing step, and a proposed
 correction. The book is corrected through its own release process. A Lean
 statement is never weakened to make a proof go through.
 
+The [independent review of 11 October 2026](review/audit-2026-10-11.md)
+confirms F1 with its stated ambiguity, and confirms F2–F4 within the scopes
+given below. Translations 3.32 and 6.3 were returned for revision; their
+checked proofs do not count as proofs of the unchanged book's full claims.
+
 ## F1. Pending work and Proposition 3.32 (Fair closure)
 
 *Found 2026-10-11, while proving Proposition 3.32 (`prop:fair-closure`)
@@ -45,7 +50,7 @@ phase that enabled work needs, application fairness concerns work whose
 phase keeps opening, and the proof uses both, as written.
 
 **In the repository.** The Lean statement of 3.32 uses the corrected
-reading, as its fidelity note says, and awaits review.
+reading, as its fidelity note says. The review returned it against edition 52.
 
 ## F2. Moves that keep the invariants only together (Definition 5.9 and the Maxwell law)
 
