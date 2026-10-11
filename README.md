@@ -9,9 +9,9 @@ Chapter 1 of the book in Lean, and then presents this repository, reading
 four of its statements closely.
 
 **Work in progress.** Most of the book's numbered statements are written in
-Lean, each with a proof that Lean checks. None has been reviewed by the author
-yet, so the table below lists them as *stated*: a statement becomes *proved*
-only when the author has approved its Lean form. Errors and gaps found in the
+Lean, each with a proof that Lean checks. None has been reviewed yet, so the table
+below lists them as *stated*: a statement becomes *proved* only when an
+independent review has checked its Lean form against the book. Errors and gaps found in the
 book while formalizing it are recorded in
 [`textbook/FINDINGS.md`](textbook/FINDINGS.md).
 
@@ -19,7 +19,7 @@ book while formalizing it are recorded in
 
 Every numbered theorem, proposition, lemma and corollary of *Artform
 Calculus* that [`textbook/STATUS.md`](textbook/STATUS.md) marks **proved**
-has a Lean statement, which the author reviewed against the book. It also has
+has a Lean statement, which an independent review checked against the book. It also has
 a proof that Lean's kernel checks using only the axioms `propext`,
 `Classical.choice` and `Quot.sound`.
 

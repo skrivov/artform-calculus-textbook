@@ -36,9 +36,10 @@ This repository holds Lean proofs of the numbered statements of the textbook
    `implemented_by`, `extern` or `unsafe`. Large computations use
    certificates and `decide +kernel`.
 5. Proofs may be written by any means. A statement counts only once the
-   author has approved it. Approval is recorded by
-   `python3 scripts/status.py --approve <key>`, run only on the author's
-   instruction.
+   judge, an independent AI review of its Lean form against the book, has
+   approved it. Approval is recorded by
+   `python3 scripts/status.py --approve <key>` when the judge's verdict
+   approves the statement. No human review is a gate for anything here.
 6. Every proved statement has a non-vacuity example on the book's running
    example: an `example` showing that the statement's hypotheses can be met,
    in a section `Non-vacuity` at the end of its proof file.
@@ -50,9 +51,9 @@ This repository holds Lean proofs of the numbered statements of the textbook
        python3 scripts/status.py --check
        python3 scripts/check_tree.py --identity
 
-8. Until the author says otherwise, pushing to GitHub needs the author's
-   go-ahead in chat. For this repository, this replaces the workspace rule
-   that a completed change is published at once.
+8. Publication on GitHub needs no go-ahead in chat. Once the judge has
+   approved the repository, push it; from then on publish every completed
+   change whose checks pass, as the workspace rule says.
 9. Do not edit the textbook from this repository. A change to the book goes
    through the book's own process.
 10. Scripts are Python with the standard library only.

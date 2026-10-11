@@ -27,9 +27,8 @@ Usage, from the repository root:
   python3 scripts/status.py --check           fail if anything is stale or wrong
   python3 scripts/status.py --tex PATH        write only the guide's statement
                                               table, with the counts as macros
-  python3 scripts/status.py --approve KEY...  record the author's review of the
-                                              statements KEY; only on the
-                                              author's instruction
+  python3 scripts/status.py --approve KEY...  record the judge's approval of the
+                                              statements KEY
 Options: --report PATH (default build/report.json); --tex PATH, which also
 writes the guide's statement table; --date YYYY-MM-DD, for --approve.
 

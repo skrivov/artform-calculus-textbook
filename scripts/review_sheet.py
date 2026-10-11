@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""A review sheet: the statements that await the author's review, as a PDF.
+"""A review sheet: the statements that await review, as a PDF.
 
 For each statement the sheet sets side by side:
 - the book's statement, typeset with the book's own macros;
@@ -14,7 +14,7 @@ For each statement the sheet sets side by side:
 Without keys the sheet holds every statement whose status is stated because
 it awaits review, has changed since review, or whose text in the book has
 changed. It writes textbook/review/<NAME>.tex and .pdf, by default
-sheet-<date>; neither is committed. The author's decisions are recorded with
+sheet-<date>; neither is committed. The judge's decisions are recorded with
 `python3 scripts/status.py --approve KEY...`.
 """
 import argparse

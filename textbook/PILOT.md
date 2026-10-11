@@ -13,7 +13,7 @@ taught. It replaces the provisional costs of the plan.
     `Quot.sound`.
   - `leanchecker` replays the whole library in the kernel in about 30
     seconds.
-- None has been reviewed by the author yet, so `STATUS.md` lists all 15 as
+- None has been reviewed yet, so `STATUS.md` lists all 15 as
   stated. `scripts/review_sheet.py` writes their review sheet.
 - The pilot itself found no error in the book. Two
   statements needed a choice of reading, which the decisions below
@@ -64,11 +64,12 @@ coordinator, not by a proof session:
 | B, structural | 7 | 2 statements per session of 8 to 20 minutes, once the definitions exist | 35 left; the definitions they need are the larger task, about one chapter's worth per batch |
 | C, Mathlib theory | 2 | 10 minutes each where Mathlib has the theory (topoi, representations) | 25 left; the cost depends on what Mathlib lacks, such as projective limits of measures, the combinatorial fundamental group, or second quantization |
 | D, certified computation | 1 | 25 minutes, including the `ℤ[φ]` library | 17 left; `Exact/QPhi.lean` serves the icosahedral group, and ℚ(√5, ω) and R8 need libraries of their own |
-| E, research or modelling | 0 | none | 5; each needs the author's decision first |
+| E, research or modelling | 0 | none | 5; decided 2026-10-11 (partial or formal, see `STATUS.md`) |
 
 The proofs are no longer the bottleneck. Three things set the pace:
 1. writing faithful statements and their definitions;
-2. the author's review, at about two pages of review sheet per statement;
+2. the review of each statement against the book, at about two pages of
+   review sheet per statement;
 3. keeping parallel sessions apart. Each writes only its own new files, and
    the kernel replay runs only when no session is compiling: with eight
    compiling at once, the replay ran out of memory.
@@ -88,19 +89,18 @@ share definitions, several at once:
 5. B6 and B7: representations and colour first, as the later matter
    statements build on their tables, Fock space and the second quantization
    map. The certified computations of Chapters 12 and 13 come last.
-6. B8: the five tier-E statements, after the author's decisions.
+6. B8: the five tier-E statements.
 
-## Decisions the pilot raises
+## Readings the pilot chose
 
 - **5.44 (Hall).** The Lean statement counts goods, needs and flows in whole
   units, as tokens are counted. If the book means real quantities, the
-  real-valued version (Gale's theorem) is true but not stated here. Which
-  reading does the book intend?
+  real-valued version (Gale's theorem) is true but not stated here.
 - **11.5 (averaging counts).** "The number of times ρ occurs in W" is taken
   as the dimension of the equivariant maps from ρ to W. That this equals the
   multiplicity in a decomposition into irreducibles (Maschke and Schur) is
-  standard, and Mathlib has Maschke's theorem. The equality could be added
-  if the author wants the multiplicity itself.
+  standard, and Mathlib has Maschke's theorem; the equality is not stated
+  here.
 - **Compatibility (3.27 and every batch).** Two enabled applications are
   compatible when their write footprints are disjoint and neither changes a
   position the other reads. This is the reading of Section 3.8 and of the

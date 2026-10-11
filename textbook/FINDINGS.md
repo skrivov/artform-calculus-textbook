@@ -45,7 +45,7 @@ phase that enabled work needs, application fairness concerns work whose
 phase keeps opening, and the proof uses both, as written.
 
 **In the repository.** The Lean statement of 3.32 uses the corrected
-reading, as its fidelity note says, and awaits the author's review.
+reading, as its fidelity note says, and awaits review.
 
 ## F2. Moves that keep the invariants only together (Definition 5.9 and the Maxwell law)
 
