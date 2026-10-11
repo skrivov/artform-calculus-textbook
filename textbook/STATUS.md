@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 87 |
-| planned | 16 |
+| stated | 88 |
+| planned | 15 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -77,7 +77,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 6.10 | Gauge covariance of a hop | `prop:hop-covariance` | B | B3 | stated | `Artform.Statement.hopCovariance` / `Artform.hopCovariance` | awaits review |
 | 6.11 | What the two steps force | `prop:maxwell-shape` | B | B3 | stated | `Artform.Statement.maxwellShape` / `Artform.maxwellShape` | awaits review |
 | 7.3 | A kept count is woven: coherent laws | `cor:qr-woven` | B | B6 | stated | `Artform.Statement.qrWoven` / `Artform.qrWoven` | awaits review |
-| 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | planned |  |  |
+| 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | stated | `Artform.Statement.selectedLaw` / `Artform.selectedLaw` | awaits review |
 | 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | stated | `Artform.Statement.mpEpsilon` / `Artform.mpEpsilon` | awaits review |
 | 10.2 | Triality | `prop:mp-triality` | C | B6 | stated | `Artform.Statement.mpTriality` / `Artform.mpTriality` | awaits review |
 | 11.2 | The two write families | `prop:mt-writes` | A | B6 | stated | `Artform.Statement.mtWrites` / `Artform.mtWrites` | awaits review |

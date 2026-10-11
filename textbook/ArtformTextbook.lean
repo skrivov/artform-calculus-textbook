@@ -43,6 +43,8 @@ import ArtformTextbook.Ch06.Temporal
 import ArtformTextbook.Ch06.Hop
 import ArtformTextbook.Ch06.Shape
 import ArtformTextbook.Ch07.Woven
+import ArtformTextbook.Ch07.Statements.NativeLaw
+import ArtformTextbook.Ch07.NativeLaw
 import ArtformTextbook.Ch10.Colour
 import ArtformTextbook.Ch11.Statements
 import ArtformTextbook.Ch11.Tables
