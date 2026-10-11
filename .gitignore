@@ -1,0 +1,6 @@
+# Lake's build output and Mathlib's files
+/.lake/
+# Reports written by the checks
+/build/
+# Review sheets (generated PDFs)
+/textbook/review/*.pdf

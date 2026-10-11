@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use these proofs or the guide, please cite them as below."
+title: "Artform Calculus: proofs in Lean"
+type: software
+authors:
+  - family-names: Krivov
+    given-names: Sergey
+repository-code: "https://github.com/skrivov/artform-calculus-proofs"
+license: Apache-2.0

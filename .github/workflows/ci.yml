@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Fetches Mathlib's compiled files, builds, and audits the axioms of
+      # every declaration in namespace Artform.
+      - uses: leanprover/lean-action@v1
+        with:
+          build-args: "--wfail"
+          axiom-audit: true
+          axiom-audit-root: "Artform"
+      - name: Status report
+        run: |
+          mkdir -p build
+          lake env lean --run scripts/Report.lean > build/report.json
+          python3 scripts/status.py --check
+      - name: Files
+        run: python3 scripts/check_tree.py

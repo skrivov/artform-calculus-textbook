@@ -1,0 +1,14 @@
+name = "artform-calculus-proofs"
+defaultTargets = ["ArtformTextbook"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.34.1"
+
+# The textbook's definitions, statements and proofs.  The options are the
+# ones `lake new … math` writes, and they apply to this library only.
+[[lean_lib]]
+name = "ArtformTextbook"
+srcDir = "textbook"
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }

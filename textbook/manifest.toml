@@ -1,0 +1,12 @@
+# The textbook's numbered statements and definitions, one entry each, keyed by
+# the book's \label. Empty until the book's inventory is added.
+#
+# [[statement]] fields: key, number, kind, title, optional, source,
+#   book_sha256, tier, batch, needs, status, lean_statement, lean_proof,
+#   reviewed, review_text_sha256, review_term_sha256, fidelity
+# [[definition]] fields: key, number, title, optional, source, book_sha256,
+#   planned_home, first_needed, status, lean, reviewed, fidelity
+#
+# scripts/status.py --write fills in status, lean_statement, lean_proof and
+# lean, and book_sha256 while an entry is unreviewed; --approve fills in the
+# review fields. Everything else is edited by hand.
