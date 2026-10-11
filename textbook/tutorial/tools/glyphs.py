@@ -22,6 +22,7 @@ GLYPHS = {
     "⨆": r"$\bigsqcup$", "⨅": r"$\sqcap$", "⊔": r"$\sqcup$", "⊓": r"$\sqcap$",
     "∫": r"$\int$", "∞": r"$\infty$", "√": r"$\surd$", "∂": r"$\partial$",
     "≫": r"$\gg$", "⟶": r"$\longrightarrow$", "⥤": r"$\Rightarrow$",
+    "⊣": r"$\dashv$", "⋙": r"$\ggg$",
     "⋯": r"{\color{ArtGray}$\cdots$}", "…": r"$\ldots$", "▸": r"$\blacktriangleright$",
     "⟨": r"$\langle$", "⟩": r"$\rangle$", "‹": r"$\langle$", "›": r"$\rangle$",
     "⌊": r"$\lfloor$", "⌋": r"$\rfloor$", "⌈": r"$\lceil$", "⌉": r"$\rceil$",
@@ -41,7 +42,8 @@ GLYPHS = {
     # letters
     "ℕ": r"$\mathbb{N}$", "ℤ": r"$\mathbb{Z}$", "ℚ": r"$\mathbb{Q}$",
     "ℝ": r"$\mathbb{R}$", "ℂ": r"$\mathbb{C}$", "𝟙": r"$\mathbf{1}$",
-    "ℓ": r"$\ell$", "ℏ": r"$\hbar$",
+    "ℓ": r"$\ell$", "ℏ": r"$\hbar$", "𝒰": r"$\mathcal{U}$", "𝒯": r"$\mathcal{T}$",
+    "𝒞": r"$\mathcal{C}$", "𝒜": r"$\mathcal{A}$", "𝒢": r"$\mathcal{G}$", "𝓢": r"$\mathcal{S}$",
     "α": r"$\alpha$", "β": r"$\beta$", "γ": r"$\gamma$", "δ": r"$\delta$",
     "ε": r"$\varepsilon$", "ζ": r"$\zeta$", "η": r"$\eta$", "θ": r"$\theta$",
     "ϑ": r"$\vartheta$", "ι": r"$\iota$", "κ": r"$\kappa$", "λ": r"$\lambda$",

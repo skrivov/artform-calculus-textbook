@@ -9,11 +9,12 @@ For each statement the sheet sets side by side:
 - a box to approve or return it.
 
   python3 scripts/review_sheet.py [KEY ...] [--report PATH] [--book-aux PATH]
+                                   [--name NAME]
 
 Without keys the sheet holds every statement whose status is stated because
 it awaits review, has changed since review, or whose text in the book has
-changed. It writes textbook/review/sheet-<date>.tex and .pdf; neither is
-committed. The author's decisions are recorded with
+changed. It writes textbook/review/<NAME>.tex and .pdf, by default
+sheet-<date>; neither is committed. The author's decisions are recorded with
 `python3 scripts/status.py --approve KEY...`.
 """
 import argparse
@@ -115,6 +116,7 @@ def main():
     ap.add_argument("--report", type=Path, default=ROOT / "build" / "report.json")
     ap.add_argument("--book-aux", type=Path, default=DEFAULT_AUX)
     ap.add_argument("--date", default=datetime.date.today().isoformat())
+    ap.add_argument("--name", help="the file name, without extension")
     args = ap.parse_args()
 
     report = status.load_report(args.report)
@@ -183,7 +185,7 @@ def main():
     tex += "".join(items) + "\n\\end{document}\n"
 
     REVIEW.mkdir(parents=True, exist_ok=True)
-    name = f"sheet-{args.date}"
+    name = args.name or f"sheet-{args.date}"
     (REVIEW / f"{name}.tex").write_text(tex, encoding="utf-8")
     labels = []
     if args.book_aux.exists():
