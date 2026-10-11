@@ -12,7 +12,7 @@
 #    before each pass.
 # 4. On success the PDF is copied to textbook/lean-through-artform-calculus.pdf,
 #    and the hash of every input is stored in tex/generated/inputs.sha256.
-#    CI compares that hash with the sources (extract_listings.py --check).
+#    extract_listings.py --check compares that hash with the current sources.
 # It fails on a LaTeX error, an overfull box or an undefined reference.
 # --png also writes one PNG per page to build/guide-pages/.
 set -euo pipefail

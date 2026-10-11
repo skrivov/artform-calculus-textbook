@@ -49,12 +49,22 @@ You need [elan](https://github.com/leanprover/elan) and git.
     lake exe cache get      # Mathlib's compiled files: a few GB
     lake build
 
+Publication checks run locally; GitHub Actions is disabled for this repository.
+
+    lake build --wfail
+    mkdir -p build
+    lake env lean --run scripts/Report.lean > build/report.json
+    python3 scripts/status.py --check
+    python3 scripts/check_tree.py --identity
+    python3 -m unittest discover -s scripts/tests
+    python3 textbook/tutorial/tools/extract_listings.py --check
+
 ## Layout
 
 - `textbook/`: the textbook's definitions, statements and proofs, in the Lean
   library `ArtformTextbook`, with the status table; and the guide, whose Lean
   files and LaTeX sources are in `textbook/tutorial/`.
-- `scripts/`: the status report and the checks that CI runs.
+- `scripts/`: the status report and local publication checks.
 
 ## Licence
 

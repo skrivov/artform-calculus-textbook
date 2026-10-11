@@ -259,7 +259,7 @@ def inputs_hash(snippets: Path) -> str:
     LaTeX, its bibliography, the book's style files and numbers, and the
     sources of its generated status appendix. That appendix is not committed,
     so hash its tracked inputs rather than a possibly missing or stale copy.
-    CI checks the manifest against the current Lean report separately.
+    status.py checks the manifest against the current Lean report separately.
     """
     files = sorted(snippets.glob("*")) + sorted(TEX.glob("*.tex")) + \
         sorted(TEX.glob("*.bib")) + sorted((TEX / "book").glob("*.tex")) + \
