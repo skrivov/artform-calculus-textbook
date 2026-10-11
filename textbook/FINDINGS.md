@@ -111,3 +111,29 @@ extend Definitions 2.6 and 5.10 to such simultaneous steps.
 
 **In the repository.** The example of Proposition 5.36 writes each turn as
 a single move. The proposition itself does not depend on this.
+
+## F4. The empty batch and the walker's mirror (minor)
+
+*Found 2026-10-11, while proving Proposition 5.48 (`prop:breaking`). 52nd
+edition, the remark after Proposition 5.48.*
+
+**What the book says.** "The walker at v0 is fixed by the mirror through v0
+and v2, which exchanges its two moves. No batch is fixed by the mirror, so
+no deterministic realizer commutes with it." Earlier, the walker is at v1 or
+v3 after one tick.
+
+**What fails.** A batch is a finite family of compatible enabled
+applications (Definition 2.6). The empty family is one, and a realizer may
+select it: Definition 3.28 lets a policy choose the empty batch, and
+Definition 5.12 asks a well-posed realizer for a nonempty batch only where
+the score demands one. The empty batch is fixed by the mirror, so the
+realizer that never moves commutes with it. In general, both sides of
+5.48(ii) then hold for every law.
+
+**Proposed correction.** Say "no nonempty batch is fixed by the mirror", or
+state that the walker's realizers move at every tick, for example by a score
+that allows no empty batch.
+
+**In the repository.** Laws allow the empty batch, as Definitions 2.6, 3.28
+and 5.12 read. Propositions 5.47 and 5.48 are proved as printed, and their
+fidelity notes point here.

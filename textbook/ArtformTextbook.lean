@@ -32,6 +32,7 @@ import ArtformTextbook.Ch05.FlatClassification
 import ArtformTextbook.Ch05.FiveTicks
 import ArtformTextbook.Ch05.ClosedWindow
 import ArtformTextbook.Ch05.GaugeRuns
+import ArtformTextbook.Ch05.Patterns
 import ArtformTextbook.Ch06.Statements
 import ArtformTextbook.Ch06.Reversible
 import ArtformTextbook.Ch06.Statements.Maxwell
@@ -41,6 +42,7 @@ import ArtformTextbook.Ch06.Gauss
 import ArtformTextbook.Ch06.Temporal
 import ArtformTextbook.Ch06.Hop
 import ArtformTextbook.Ch06.Shape
+import ArtformTextbook.Ch07.Woven
 import ArtformTextbook.Ch10.Colour
 import ArtformTextbook.Ch11.Statements
 import ArtformTextbook.Ch11.Tables
