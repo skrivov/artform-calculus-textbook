@@ -29,6 +29,7 @@ starts, the last ending where the first starts. -/
 def IsClosedWalk {V E : Type*} (src tgt : E → V) (w : List (E × Bool)) : Prop :=
   w ≠ [] ∧ List.IsChain (fun a b => stepEnd src tgt a = stepStart src tgt b) (w ++ w.take 1)
 
+-- ANCHOR: lcanvas
 /-- **Definition 3.1** (finite cellular canvas), in dimension two, with its
 stored orientation. The cells are the vertices `C₀`, the edges `C₁` and the
 faces `C₂`. An edge is stored with a direction, from its source to its target,
@@ -59,6 +60,7 @@ structure Canvas where
   boundary : F → List (E × Bool)
   /-- Every boundary cycle is closed. -/
   closed : ∀ f, IsClosedWalk src tgt (boundary f)
+-- ANCHOR_END: lcanvas
 
 attribute [instance] Canvas.fintypeV Canvas.fintypeE Canvas.fintypeF
   Canvas.decEqV Canvas.decEqE Canvas.decEqF
@@ -67,18 +69,22 @@ namespace Canvas
 
 variable (K : Canvas)
 
+-- ANCHOR: linc
 /-- How the boundary of face `f` reads edge `e`: the number of times it runs
 along `e`, less the number of times it runs against it. This is the entry
 `(D₁)_{e,f}` of the book's face-to-edge incidence matrix. -/
 def inc (e : K.E) (f : K.F) : ℤ :=
-  ((K.boundary f).map fun st => if st.1 = e then (if st.2 then 1 else -1) else 0).sum
+  ((K.boundary f).map fun st =>
+    if st.1 = e then (if st.2 then 1 else -1) else 0).sum
 
 /-- Each face read anticlockwise, as on a canvas drawn in the plane: no face
 crosses an edge twice, and two different faces that share an edge read it in
 opposite directions. -/
 structure Anticlockwise : Prop where
   nodup : ∀ f, ((K.boundary f).map Prod.fst).Nodup
-  opposite : ∀ e f g b c, f ≠ g → (e, b) ∈ K.boundary f → (e, c) ∈ K.boundary g → b ≠ c
+  opposite : ∀ e f g b c, f ≠ g →
+    (e, b) ∈ K.boundary f → (e, c) ∈ K.boundary g → b ≠ c
+-- ANCHOR_END: linc
 
 end Canvas
 

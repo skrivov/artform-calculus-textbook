@@ -3,7 +3,9 @@
 #   bash textbook/tutorial/build.sh [--png]
 # 1. Lean checks the guide's files (lake build Tutorial). Every answer of
 #    Lean that the guide quotes is pinned there with #guard_msgs.
-# 2. tools/extract_listings.py cuts the printed listings from those files.
+# 2. tools/extract_listings.py cuts the printed listings from those files and
+#    from the library, and scripts/status.py writes the appendix, the status
+#    of every statement (tex/generated/status.tex, not committed).
 # 3. pdflatex runs three passes, with bibtex after the first, in the book's
 #    style (tex/book/). The book's numbers come from
 #    tex/generated/book-labels-<n>.tex, which is appended to the .aux
@@ -21,6 +23,9 @@ export PATH="$HOME/.elan/bin:$PATH"
 cd "$ROOT"
 lake build --wfail Tutorial
 python3 -B "$HERE/tools/extract_listings.py"
+mkdir -p build
+lake env lean --run scripts/Report.lean > build/report.json
+python3 -B scripts/status.py --tex "$HERE/tex/generated/status.tex"
 
 cd "$HERE/tex"
 N=guide

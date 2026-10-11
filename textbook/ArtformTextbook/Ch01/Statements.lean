@@ -22,6 +22,7 @@ def rodAlignmentUnique : Prop :=
   ∀ (P Q : Type) [Fintype P] [Fintype Q] [LinearOrder P] [LinearOrder Q]
     (α β : Align P Q), α = β
 
+-- ANCHOR: lrodlaws
 /-- **Proposition 1.31** (the laws of a rod). For every rod `X` the order on
 `cells(X)` is a linear order: no cell comes before itself; if `a` comes before
 `b` and `b` before `c`, then `a` comes before `c`; and of two different cells
@@ -32,6 +33,7 @@ def rodLaws : Prop :=
     (∀ a : X.cells, ¬ X.before a a) ∧
     (∀ a b c : X.cells, X.before a b → X.before b c → X.before a c) ∧
     (∀ a b : X.cells, a ≠ b → X.before a b ∨ X.before b a)
+-- ANCHOR_END: lrodlaws
 
 /-- **Proposition 1.29** (sets form a topos). `FinSet` and `Set` are topoi,
 with `Ω = {0,1}` and `true(*) = 1`. `Set` is Lean's category of types, whose

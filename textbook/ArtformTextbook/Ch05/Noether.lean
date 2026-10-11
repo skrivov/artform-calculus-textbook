@@ -45,7 +45,8 @@ theorem noether : Statement.noether := by
       change T (L.M p + L.b) = T p at h
       rwa [map_add, hTb, add_zero] at h
     refine ⟨hPerf T, fun w hw => ⟨?_, by rw [hw, hTb]⟩⟩
-    -- `⟨M(w), M(p)⟩ = ⟨w, p⟩ = T(p) = T(M(p))`, and `M(p)` runs through every table.
+    -- `⟨M(w), M(p)⟩ = ⟨w, p⟩ = T(p) = T(M(p))`, and `M(p)` runs through every
+    -- table.
     have hMw : P (L.M w) = T := AddMonoidHom.ext fun q => by
       rw [← L.M.apply_symm_apply q, hP, hw, hTM]
     exact (huniq _ hMw).trans (huniq _ hw).symm

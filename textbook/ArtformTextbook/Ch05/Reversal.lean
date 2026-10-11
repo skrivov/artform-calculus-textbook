@@ -9,6 +9,7 @@ permutations of the states, where `f * g` is `f ∘ g`.
 
 namespace Artform
 
+-- ANCHOR: lreversalproof
 /-- **Proposition 5.39** (reversing a tick of two steps). Let a tick be
 `F = S₁ ∘ S₀`, and let an involution `R` of the states undo each step:
 `R ∘ S₀ ∘ R = S₀⁻¹` and `R ∘ S₁ ∘ R = S₁⁻¹`. Then `I₀ = R ∘ S₀` and
@@ -45,6 +46,7 @@ theorem twoStepReversal : Statement.twoStepReversal := by
     calc S₁ * R * (S₁ * S₀) * (S₁ * R) = (S₁ * R * S₁) * S₀ * S₁ * R := by
           simp only [mul_assoc]
       _ = (S₁ * S₀)⁻¹ := by rw [k₁, hF]
+-- ANCHOR_END: lreversalproof
 
 /-! ## Non-vacuity -/
 

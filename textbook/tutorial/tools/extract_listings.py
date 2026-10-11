@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
 """Cut the printed Lean listings of the guide "Lean through Artform Calculus"
-out of the files Lean checks: LeanBasics.lean (Part I) and
-ArtformChapter1.lean (Part II), in textbook/tutorial/.
+out of the files Lean checks: LeanBasics.lean (Part I), ArtformChapter1.lean
+(Part II) and RepositoryTour.lean (Part III), in textbook/tutorial/, and the
+library's own files under textbook/ArtformTextbook/ (Part III), where the
+anchors are plain comments and docstrings are left out of the listing.
 
   -- ANCHOR: name ... -- ANCHOR_END: name   one listing -> tex/generated/snippets/name.lean
   ... -- HIDE                               a line Lean needs and the page omits
   ... -- PROOF  ...  -- QED                  a routine part, printed as gray dots
   /-- info: x -/ #guard_msgs in              Lean's one-line answer, printed as a
                                              comment `-- x` after the next line
-  /-- info: ... -/  (several lines)          printed as "Lean replies" (name.info)
+  /-- info: ... -/  (several lines or        printed as "Lean replies" (name.info),
+  messages, or one line too long to follow   one message per line
+  the code)
   /-- error: ... -/                          printed as "Lean refuses it" (name.msg)
+
+A statement of the book quoted by \\bookstatement{label} in the guide's LaTeX
+is written to snippets/book-statements.tex, as a macro, from the inventory of
+the edition the repository follows (textbook/edition.toml), so that the quote
+is the book's text, number and title.
 
 Blank lines inside a listing are dropped: declarations are told apart by
 their keyword at the margin. Also writes snippets/literate.tex (one glyph per
@@ -26,7 +35,9 @@ cites a listing that does not exist.
                                               then not built from these sources
 """
 import hashlib
+import json
 import re
+import tomllib
 import sys
 import tempfile
 from pathlib import Path
@@ -34,10 +45,13 @@ from pathlib import Path
 TUTORIAL = Path(__file__).resolve().parent.parent
 TEX = TUTORIAL / "tex"
 SOURCES = [TUTORIAL / "LeanBasics.lean",
-           TUTORIAL / "ArtformChapter1.lean"]
+           TUTORIAL / "ArtformChapter1.lean",
+           TUTORIAL / "RepositoryTour.lean"]
+LIBRARY = TUTORIAL.parent / "ArtformTextbook"
 OUT = TEX / "generated" / "snippets"
 DRAFTS = [TEX / "part1-basics.tex",
-          TEX / "part2-chapter1.tex"]
+          TEX / "part2-chapter1.tex",
+          TEX / "part3-repository.tex"]
 STORED = TEX / "generated" / "inputs.sha256"
 WIDTH = 76      # printed characters per code line
 
@@ -59,21 +73,36 @@ def elide(line: str) -> str:
     return head + " := " + ELIDED
 
 
-def listing(lines, i, name):
+def messages(raw):
+    """The kind and the text of a #guard_msgs block; several messages, which
+    Lean separates by a line ---, are joined one per line."""
+    parts = raw.split("\n---\n")
+    kind = parts[0].partition(":")[0]
+    texts = [p.partition(":")[2].strip("\n").lstrip(" ") for p in parts]
+    return kind, "\n".join(texts)
+
+
+def listing(lines, i, name, library=False):
     """Read one anchor from line i; return its printed lines, each with the
-    one-line answer that belongs to it, its messages, and the next index."""
+    one-line answer that belongs to it, its messages, and the next index.
+    In a library file a docstring is a comment for the reader of the file, and
+    the listing leaves it out."""
     body, info, error = [], None, None
     pending = None                      # a one-line answer for the next line
-    while not lines[i].startswith(f"-- ANCHOR_END: {name}"):
+    while not lines[i].lstrip().startswith(f"-- ANCHOR_END: {name}"):
         ln = lines[i]
+        if library and ln.lstrip().startswith(("/--", "/-!")):
+            while not lines[i].rstrip().endswith("-/"):
+                i += 1
+            i += 1
+            continue
         if ln.startswith("/--"):
             j = i
             while not lines[j].rstrip().endswith("-/"):
                 j += 1
             raw = "\n".join(lines[i:j + 1])[3:-2].strip()
             assert lines[j + 1].startswith("#guard_msgs"), name
-            kind, _, text = raw.partition(":")
-            text = text.strip("\n").lstrip(" ")
+            kind, text = messages(raw)
             if kind == "info" and "\n" not in text:
                 pending = text
             elif kind == "info":
@@ -91,10 +120,19 @@ def listing(lines, i, name):
                 i += 1
             i += 1
             continue
+        if pending is not None and len(ln.rstrip()) + 5 + len(pending) > WIDTH:
+            info, pending = pending, None   # too long to follow the code
         body.append((ln.rstrip(), pending))
         pending = None
         i += 1
     return body, info, error, i + 1
+
+
+def dedent(body):
+    """Remove the indentation that every printed line of a listing shares."""
+    widths = [len(code) - len(code.lstrip()) for code, _ in body if code.strip()]
+    cut = min(widths, default=0)
+    return [(code[cut:], ans) for code, ans in body]
 
 
 def render(body):
@@ -111,47 +149,64 @@ def render(body):
     return out
 
 
+def library_sources():
+    """The library's files that hold an anchor, in a fixed order."""
+    return [f for f in sorted(LIBRARY.rglob("*.lean"))
+            if "-- ANCHOR: " in f.read_text(encoding="utf-8")]
+
+
 def extract(out: Path, quiet: bool = False) -> int:
-    texts = [src.read_text(encoding="utf-8") for src in SOURCES]
-    missing = unmapped(texts)
-    if missing:
-        print("no glyph for:", " ".join(missing))
-        return 1
+    sources = [(src, False) for src in SOURCES] + [(src, True) for src in library_sources()]
     out.mkdir(parents=True, exist_ok=True)
     for old in out.glob("*"):
         old.unlink()
 
-    names, sizes = [], {}
-    for text in texts:
-        lines = text.split("\n")
+    names, sizes, written = [], {}, []
+    for src, library in sources:
+        lines = src.read_text(encoding="utf-8").split("\n")
         i = 0
         while i < len(lines):
-            m = re.match(r"-- ANCHOR: (\S+)$", lines[i])
+            m = re.match(r"\s*-- ANCHOR: (\S+)$", lines[i])
             if not m:
                 i += 1
                 continue
             name = m.group(1)
             assert name not in names, f"duplicate listing {name}"
             names.append(name)
-            body, info, error, i = listing(lines, i + 1, name)
+            body, info, error, i = listing(lines, i + 1, name, library)
+            if library:
+                body = dedent(body)
             printed = render(body)
             long = [ln for ln in printed if len(ln) > WIDTH]
             if long:
                 print(f"{name}: {len(long)} line(s) over {WIDTH} characters")
             sizes[name] = len(printed)
-            (out / f"{name}.lean").write_text("\n".join(printed) + "\n", encoding="utf-8")
+            files = [(f"{name}.lean", "\n".join(printed))]
             if info is not None:
-                (out / f"{name}.info").write_text(info + "\n", encoding="utf-8")
+                files.append((f"{name}.info", info))
             if error is not None:
-                (out / f"{name}.msg").write_text(error + "\n", encoding="utf-8")
+                files.append((f"{name}.msg", error))
+            for fname, text in files:
+                (out / fname).write_text(text + "\n", encoding="utf-8")
+                written.append(text)
+    # Inline code in the text (\li!...!) is printed with the same glyphs.
+    for d in DRAFTS:
+        written += re.findall(r"\\li!([^!]*)!", d.read_text(encoding="utf-8"))
+    missing = unmapped(written)
+    if missing:
+        print("no glyph for:", " ".join(missing))
+        return 1
 
     (out / "sizes.tex").write_text(
         "% generated: printed lines per listing\n" + "".join(
             "\\expandafter\\def\\csname leanlines@%s\\endcsname{%d}\n" % kv
             for kv in sizes.items()), encoding="utf-8")
     (out / "literate.tex").write_text(
-        "% generated by tools/extract_listings.py\n" + literate(texts),
+        "% generated by tools/extract_listings.py\n" + literate(written),
         encoding="utf-8")
+
+    if write_book_statements(out):
+        return 1
 
     cited = set()
     for d in DRAFTS:
@@ -166,6 +221,36 @@ def extract(out: Path, quiet: bool = False) -> int:
     if absent:
         print("cited but absent:", ", ".join(absent))
         return 1
+    return 0
+
+
+def write_book_statements(out: Path) -> int:
+    """Write each statement of the book that the guide quotes."""
+    wanted = set()
+    for d in DRAFTS:
+        wanted |= set(re.findall(r"\\bookstatement\{([^}]+)\}", d.read_text(encoding="utf-8")))
+    out_file = out / "book-statements.tex"
+    if not wanted:
+        out_file.write_text("% generated by tools/extract_listings.py: no quotes\n",
+                            encoding="utf-8")
+        return 0
+    textbook = TUTORIAL.parent
+    edition = tomllib.loads((textbook / "edition.toml").read_text(encoding="utf-8"))
+    inventory = json.loads((textbook / edition["inventory"]).read_text(encoding="utf-8"))
+    items = {it["label"]: it for it in inventory if it.get("label")}
+    missing = sorted(wanted - set(items))
+    if missing:
+        print("not in the inventory:", ", ".join(missing))
+        return 1
+    defs = ["% generated by tools/extract_listings.py: the statements the guide quotes"]
+    for label in sorted(wanted):
+        it = items[label]
+        # A removed \label can leave a blank line inside a display.
+        text = re.sub(r"\n[ \t]*\n", "\n", it["statement"].strip())
+        defs.append("\\expandafter\\def\\csname bookstmt@%s\\endcsname{%%\n"
+                    "\\begin{bookquote}{%s %s}{%s}\n%s\n\\end{bookquote}}"
+                    % (label, it["kind"].capitalize(), it["number"], it["title"], text))
+    out_file.write_text("\n".join(defs) + "\n", encoding="utf-8")
     return 0
 
 

@@ -331,6 +331,36 @@ $g\circ f:\Script(A,C)$ & \lc{Script.comp}\\
 The file also counts the eight symmetries of the square of
 \cref{sec:shape-type-book} from its incidence.
 
+\section*{The same constructions in the library}
+\addcontentsline{toc}{section}{The same constructions in the library}
+
+Part~III presents the repository's library, which writes the book in Lean
+with Mathlib. Several constructions of this part appear there, some in a
+different form. The names of the library are in the namespace \lc{Artform}.
+
+{\small
+\renewcommand{\arraystretch}{1.1}
+\begin{xltabular}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.27\textwidth} >{\raggedright\arraybackslash}p{.33\textwidth} >{\raggedright\arraybackslash}X@{}}
+\toprule
+This part & The library & Difference\\ \midrule
+\endhead
+\lc{Listed} & Mathlib's \lc{Fintype} & Mathlib's class of finite types\\
+\lc{OrderedForm}, \lc{cells}, \lc{before} & \lc{OrderedForm}, \lc{OrderedForm.\allowbreak cells}, \lc{OrderedForm.\allowbreak before} & two rules, as in \cref{sec:rules-rods}; the order is defined by cases, not by position\\
+\lc{pos\_inj}, \lc{linear} & \lc{rodLaws} & \cref{prop:rod-laws}\\
+\lc{Align} & \lc{Align} & an order-preserving bijection of finite linear orders\\
+\lc{TimeForm}, \lc{CycleTime} & \lc{TimeForm}, \lc{CycleTime} & \\
+\lc{RectTapestry} & \lc{RectTapestry} & the support is a parameter\\
+\lc{Laying}, \lc{layRec}, \lc{layDiv} & \lc{Laying}, \lc{layRec}, \lc{layDiv} & \\
+\lc{covering}, \lc{grouping} & \lc{CoveringEq}, \lc{GroupingEq} & \\
+\lc{period}, \lc{spectrum} & \lc{RectTapestry.\allowbreak leastPeriod}, \lc{RectTapestry.\allowbreak tempSpec} & \\
+\lc{Profile}, \lc{IntWit}, \lc{Sem}, \lc{PointedInt} & \lc{IntProfile}, \lc{IntWit}, \lc{Sem}, \lc{PointedInt} & \cref{def:intwit-book}\\
+\lc{Palette}, \lc{P}, \lc{Crec}, \lc{Cdiv}, \lc{wRec}, \lc{wDiv} & \lc{TemporalPalette}, \lc{tetractys}, \lc{Crec}, \lc{Cdiv}, \lc{wRec}, \lc{wDiv} & \cref{prop:tetractys-intwits} is proved\\
+\lc{Canvas} & \lc{Canvas} & dimension two, with a stored orientation (\cref{def:canvas})\\
+\lc{State}, \lc{Frame} & \lc{Presentation}, \lc{Presentation.\allowbreak Table} & \\
+\lc{Script}, \lc{Script.comp} & \lc{ArtSyn} & Mathlib's free category on the declared operations\\
+\bottomrule
+\end{xltabular}}
+
 % LIT-1E | sec:lean-view
 \begin{literatureconnection}
 Lean~4 is described by de~Moura and Ullrich. Its type theory goes back to

@@ -17,7 +17,7 @@ jobs:
           axiom-audit: true
           axiom-audit-root: "Artform"
           leanchecker: true
-          leanchecker-args: "ArtformTextbook LeanBasics ArtformChapter1"
+          leanchecker-args: "ArtformTextbook LeanBasics ArtformChapter1 RepositoryTour"
         env:
           LEAN_NUM_THREADS: "1"   # lean-action's advice for leanchecker with Mathlib
       - name: Status report

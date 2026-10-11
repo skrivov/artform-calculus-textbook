@@ -11,6 +11,7 @@ the frame's positions and values.
 
 namespace Artform
 
+-- ANCHOR: ldetlaw
 /-- **Definition 5.1** (deterministic law; tick; run). A deterministic law on
 a frame gives each state the state that follows it; the map that does so is
 the law's tick. -/
@@ -36,6 +37,7 @@ def IsSymmetry (s : S → S) : Prop := ∀ x, L.tick (s x) = s (L.tick x)
 `q(F(x)) = q(x)` for every state `x`. -/
 @[book "def:law-symmetry"]
 def Conserved {V : Type*} (q : S → V) : Prop := ∀ x, q (L.tick x) = q x
+-- ANCHOR_END: ldetlaw
 
 /-- The orbit of a state: `{x, F(x), F²(x), …}` (Section 5.2). -/
 def orbit (x : S) : Set S := Set.range (L.run x)

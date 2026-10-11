@@ -1,6 +1,9 @@
 % "Lean through Artform Calculus", the guide of the repository
-% artform-calculus-proofs. Part I is the basics of Lean (part1-basics.tex) and
-% Part II is Chapter 1 of the book in Lean (part2-chapter1.tex).
+% artform-calculus-proofs. Part I is the basics of Lean (part1-basics.tex),
+% Part II is Chapter 1 of the book in Lean (part2-chapter1.tex), and Part III
+% is the textbook's theorems in Lean (part3-repository.tex). The appendix is
+% generated/status.tex, written by scripts/status.py --tex when the guide is
+% built.
 % References such as Section 1.4 point into the book. build.sh resolves them
 % through generated/book-labels-<n>.tex, the numbers of the edition the
 % repository follows, and finds the book's style files in book/ through
@@ -59,22 +62,41 @@
   \end{minipage}\par\vspace{7pt}}
 \newcommand{\li}{\lstinline[style=leaninline]}
 \newcommand{\lc}[1]{{\ttfamily\small #1}}
+% Part III: commands typed in a terminal, and a statement quoted from the book
+% (\bookstatement{label}, written to the snippets by the extractor).
+\lstnewenvironment{shellcommands}{\lstset{basicstyle=\ttfamily\fontsize{8.6}{10.4}\selectfont,
+  columns=fixed,basewidth=0.5em,keepspaces=true,frame=leftline,framerule=1.2pt,
+  rulecolor=\color{ArtGray},framesep=6pt,xleftmargin=9pt,aboveskip=7pt,belowskip=7pt}}{}
+\newtcolorbox{bookquote}[2]{enhanced,breakable,colback=white,colframe=ArtNavy!45,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={#1\quad #2},fonttitle=\bfseries\small,coltitle=ArtNavy,colbacktitle=ArtNavy!8,
+  before skip=8pt,after skip=8pt}
+\input{\leandir/book-statements.tex}
+\newcommand{\bookstatement}[1]{\csname bookstmt@#1\endcsname}
+\newcommand{\leanversion}{4.34.1}
+\IfFileExists{generated/status.tex}{\input{generated/status}}{%
+  \def\statustotal{??}\def\statustable{\emph{(no status table: run build.sh)}}}
+\newcommand{\statuscount}[1]{\ifcsname statuscount@#1\endcsname\csname statuscount@#1\endcsname\else ??\fi}
 \renewcommand{\thetable}{\arabic{table}}
 \begin{document}
 \pagestyle{plain}
 \begin{center}
 {\Huge\bfseries\color{ArtNavy} Lean through Artform Calculus\par}
 \medskip
-{\large An introduction to Lean, read beside Chapter~1 of the book\par}
+{\large An introduction to Lean, and to the book's theorems in Lean\par}
 \end{center}
 \bigskip
 
 \noindent Part~I explains the basics of Lean, a programming language in which
 proofs are checked by the computer. Part~II writes the constructions of
-Chapter~1 of \emph{Artform Calculus} in Lean. References such as
-Section~1.4, Figure~1.9 or Definition~1.5 point into the book; their numbers
-are those of its \bookedition. Every listing is cut from two Lean files,
-which Lean~4.34.1 accepts as a whole.
+Chapter~1 of \emph{Artform Calculus} in Lean. Part~III introduces the
+repository that holds this guide, where the book's numbered statements are
+written in Lean with Mathlib and proved, and reads four of them closely.
+References such as Section~1.4, Figure~1.9 or Definition~1.5 point into the
+book; their numbers are those of its \bookedition. Every listing is cut from
+files that Lean~\leanversion{} accepts as a whole: two files in core Lean for
+Parts~I and~II, and for Part~III a file that imports the repository's
+library, and the library itself.
 
 \begingroup
 \setlength{\parskip}{0pt}
@@ -85,6 +107,18 @@ which Lean~4.34.1 accepts as a whole.
 \input{part1-basics}
 \clearpage
 \input{part2-chapter1}
+\clearpage
+\input{part3-repository}
+\clearpage
+\chapter*{Appendix. The book's statements in the repository}
+\addcontentsline{toc}{chapter}{Appendix. The book's statements in the repository}
+Every numbered statement of the book, with the Lean name of its proof, or of
+its statement while it has no proof, and its status when this guide was
+built. The names are in the namespace \li!Artform!, which is left out. The
+file \lc{textbook/STATUS.md} of the repository is always current.
+\medskip
+
+{\small\statustable}
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}

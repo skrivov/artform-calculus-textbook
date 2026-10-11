@@ -1,0 +1,475 @@
+% Part III of the guide "Lean through Artform Calculus": the textbook's
+% theorems in Lean. Listings are cut from ../RepositoryTour.lean and from the
+% library under ../../ArtformTextbook by ../tools/extract_listings.py, and the
+% book's statements are quoted from the inventory of the edition the
+% repository follows. Written 2026-10-11 (Phase 5.1 of the repository's plan).
+\chapter*{Part III. The textbook's theorems in Lean}
+\addcontentsline{toc}{chapter}{Part III. The textbook's theorems in Lean}
+
+The repository that holds this guide also holds the numbered statements of
+the book in Lean, with proofs that Lean checks. Part~II wrote the
+constructions of Chapter~1 in core Lean, in one file. The repository's
+library is written with Mathlib, Lean's library of mathematics, and follows
+the whole book. This part says what the repository proves and how to build
+it, introduces the parts of Mathlib that the library uses, and shows how a
+statement of the book is written in Lean. It then reads four statements
+closely, from the book's words to their proofs, and ends with the checks the
+repository makes on itself.
+
+\section*{What the repository proves}
+\addcontentsline{toc}{section}{What the repository proves}
+
+The repository gives each of the book's \statustotal{} numbered statements
+one of five states:
+\begin{itemize}[leftmargin=1.4em]
+\item \emph{planned}: no Lean statement has been written yet;
+\item \emph{stated}: a Lean statement has been written, and it waits for the
+  author's review, or for a proof;
+\item \emph{proved}: the author has approved the Lean statement, and Lean
+  has checked a proof of it;
+\item \emph{partial}: as proved, for a narrower statement, with the reason
+  recorded;
+\item \emph{informal}: not to be written in Lean, by decision, with the
+  reason recorded.
+\end{itemize}
+
+A statement is proved in this sense when three things hold. The library has
+a Lean proposition tied to the statement's label in the book. The author has
+read that proposition beside the book and approved it as saying what the
+book says. And Lean has checked a proof of it that uses no axiom beyond
+the three that the last section of this part describes.
+
+Lean checks the third point, and only the third: that the proof proves the
+Lean proposition. It cannot check the second, which compares a text in
+mathematical English with a text in Lean. Three things help the author, and
+any reader, to judge it. Every Lean statement has a \emph{fidelity note},
+which lists each way it reads the book: a hypothesis made explicit, a case
+generalized, a choice between two readings. Every proof file ends with an
+example on the book's running example in which the hypotheses hold, so that
+no statement is true merely because its hypotheses cannot be met. And an
+approval records two hashes, of the statement's text and of its exact
+terms. If the statement, or any definition it uses, changes later, the
+statement goes back for review.
+
+When this guide was built, \statuscount{proved} statements were proved,
+\statuscount{stated} were stated and \statuscount{planned} were planned.
+The appendix lists all of them. The file \lc{textbook/STATUS.md} of the
+repository is always current.
+
+\section*{Getting and building it}
+\addcontentsline{toc}{section}{Getting and building it}
+
+The repository is on GitHub. To build it, install VS~Code and its Lean~4
+extension, as in Part~I. The extension also installs \lc{elan}, which
+installs the version of Lean that a project asks for, and \lc{lake},
+Lean's build tool. Then, in a terminal:
+\begin{shellcommands}
+git clone https://github.com/skrivov/artform-calculus-proofs
+cd artform-calculus-proofs
+lake exe cache get
+lake build
+\end{shellcommands}
+The first two lines copy the repository and enter it. The file
+\lc{lean-toolchain} names the version of Lean, \leanversion, and \lc{elan}
+installs it the first time \lc{lake} runs. \lc{lake exe cache get} fetches
+Mathlib and downloads its compiled files, about 450\,MB, instead of
+compiling Mathlib, which would take hours. Unpacked, they take about 8\,GB.
+\lc{lake build} then compiles the library itself in a few minutes. It
+prints a line for each file, and an error for a file that Lean refuses.
+
+In VS~Code, open the folder of the repository. The extension checks each
+file as it is opened and shows Lean's answers in the infoview, as in
+Part~I. The Lean playground in the browser has Mathlib but not this
+library, so the files of the repository cannot be tried there. The files
+of Parts~I and~II can.
+
+\section*{From core Lean to Mathlib}
+\addcontentsline{toc}{section}{From core Lean to Mathlib}
+
+Parts~I and~II used Lean's core language alone. The library uses Mathlib, a
+library of mathematics written in Lean and kept by its community
+\cite{Mathlib2020}. It has the integers modulo~$n$, finite sums, groups,
+linear maps, measures and categories, each with its theorems. A file asks
+for a part of Mathlib with \li!import!. The listings of this section are cut
+from the file \lc{RepositoryTour.lean}, which imports the whole library. As
+in Parts~I and~II, Lean checks every answer they show.
+
+\paragraph{Finite types.}
+Part~II gave each finite type a list of its values, the class \li!Listed!,
+so that \li!decide! could run through them. Mathlib's class for the same
+purpose is \li!Fintype!, and \li!Fintype.card! counts the values. The
+library gives the cells of every rod an instance of it, so a glued rod can
+be counted:
+\leanlisting{tfintype}
+The last line is the check of Part~I on squares and remainders. \li!decide!
+works as it did there, with Mathlib's instances.
+
+\paragraph{Finite sums.}
+A \li!Finset! is a finite set of values of a type, and
+\li!∑ k ∈ s, f k! is the sum of \li!f! over the set \li!s!.
+\li!Finset.range 5! is $\{0,1,2,3,4\}$, so the first sum counts the ten
+points of the tetractys again. The last example proves Gauss's formula of
+Part~I for Mathlib's sums. \li!Finset.sum_range_succ! is a theorem of
+Mathlib that splits off the last term of a sum over a range, and \li!ring!
+proves the polynomial identity that is left.
+\leanlisting{tsums}
+
+\paragraph{The integers modulo $n$.}
+\li!ZMod n! is the integers modulo $n$, with their addition and
+multiplication. The toy electrodynamics of Chapter~6 counts modulo~$8$:
+there $5+4$ is $1$, and $3-5$ is $6$. \li!ZMod n! is finite, so \li!decide!
+checks a statement for all its values. Eight equal steps bring every value
+back, and a number modulo~$3$, the values of the square's law
+(\cref{fig:law-square}), is $0$, $1$ or~$2$:
+\leanlisting{tzmod}
+
+\paragraph{Permutations.}
+A bijection of a type to itself is a permutation, \li!Equiv.Perm!.
+Permutations form a group, written as a product, and \li!f * g! is
+$f\circ g$: first $g$, then $f$, as the last line checks by computation.
+\li!finRotate 4! moves each of the numbers $0,1,2$ on by one and $3$ to~$0$,
+as the tick of the square moves each value one corner on. Its fourth power
+is the identity and its square is not:
+\leanlisting{tperm}
+
+\paragraph{Additive maps.}
+A tally of Chapter~5 is additive: $T(p+q)=T(p)+T(q)$. Mathlib's type of
+additive maps from \li!A! to \li!B! is \li!A →+ B!: a function together with
+the proof that it is additive. A theorem about all additive maps, such as
+\li!map_add!, then applies to every tally. The library writes the law of the
+square and its total~$T$ this way. The tick moves each value one corner on,
+and the total of $(1,2,0,1)$ is $4$, which is $1$ modulo~$3$:
+\leanlisting{ttally}
+
+\paragraph{Finding a theorem.}
+Mathlib has about 180\,000 theorems, and the first question
+in a proof is often whether the step needed is one of them. \li!exact?!
+searches the theorems in scope for one that closes the goal, and prints the
+call it found:
+\leanlisting{texact}
+\leanreply{texact}
+Loogle (\url{https://loogle.lean-lang.org}) searches Mathlib by name and by
+the shape of a statement. The documentation of Mathlib
+(\url{https://leanprover-community.github.io/mathlib4_docs}) lists every
+definition and theorem, with its source.
+
+\section*{How the book is written in Lean}
+\addcontentsline{toc}{section}{How the book is written in Lean}
+
+The library has three kinds of declaration:
+\begin{itemize}[leftmargin=1.4em]
+\item A definition of the book is a definition of Lean in the namespace
+  \li!Artform!: a structure, an inductive type or a function. The rods of
+  Chapter~1 are one, the canvas of \cref{def:canvas} another.
+\item A statement of the book is a definition of a proposition,
+  \li!def … : Prop!, in the namespace \li!Artform.Statement!. It says what
+  the book says, and proves nothing.
+\item Its proof is a theorem whose type is exactly that proposition.
+\end{itemize}
+The attribute \li!@[book "label"]! ties a declaration to the statement or
+definition of the book that carries that label. Labels are used, not
+numbers, because the numbers change between editions of the book and the
+labels do not. The command \li!#book! lists the declarations tied to a
+label:
+\leanlisting{tbook}
+\leanreply{tbook}
+The statement of Noether's theorem is
+\lc{Artform.\allowbreak Statement.\allowbreak noether}, a proposition, and
+its proof is the theorem \lc{Artform.\allowbreak noether}, whose type is
+that proposition. Keeping the two apart lets the author review the
+statement without reading the proof, and lets a proof be replaced without
+touching what it proves.
+
+Each chapter of the book has a folder of the library, \lc{Ch01} to
+\lc{Ch13}. Its \lc{Defs} folder holds the chapter's definitions,
+\lc{Statements.lean} or the \lc{Statements} folder its statements, and the
+other files their proofs. The file \lc{textbook/manifest.toml} gives every
+statement and definition of the book its Lean names, its status and its
+fidelity note. \lc{textbook/STATUS.md} and the appendix of this guide are
+made from it.
+
+\section*{Four statements read closely}
+\addcontentsline{toc}{section}{Four statements read closely}
+
+The four statements below come from Chapters~1 and~5 of the book. Each is
+shown as the book prints it and as the library states it, with a table that
+reads one into the other, then with its proof or the outline of its proof,
+and with its fidelity note. In the library's listings the documentation
+comments are left out; the files in the repository have them.
+
+\subsection*{The laws of a rod}
+
+Part~II built rods by three rules, substitution being the third, and ordered
+their cells by position. The library follows \cref{sec:rules-rods}, which
+builds rods by two rules and defines their order by cases:
+\leanlisting{lrods}
+\li!cells! is the elimination rule of \cref{sec:rules-rods} written as a
+definition by cases. A cell of $R_n$ is a number below $n$, and a cell of
+$\glue(P,Q)$ is a tag with a cell of the rod that the tag names.
+\li!before! says, case by case, when one cell comes before another: in
+$R_n$ by the order of the numbers, and in $\glue(P,Q)$ every cell tagged $L$
+before every cell tagged $R$, and two cells with one tag as in $P$ or
+in~$Q$. The attribute \li!@[reducible]! lets Lean see through \li!cells!,
+so that Mathlib's instances for \li!Fin n! serve the cells of~$R_n$.
+
+\bookstatement{prop:rod-laws}
+\leanlisting{lrodlaws}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.42\textwidth} >{\raggedright\arraybackslash}p{.54\textwidth}@{}}
+\toprule
+Book & Lean\\ \midrule
+$\cells(X)$ & \li!X.cells!\\
+$a$ comes before $b$ & \li!X.before a b!\\
+no cell comes before itself & \li!¬ X.before a a!\\
+of two different cells one comes before the other & \li!X.before a b ∨ X.before b a!, when \li!a ≠ b!\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The proof follows the book's, by induction over the two rules:
+\leanlisting{lrodlawsproof}
+\li!induction X with! splits the goal into the two rules. For a glued rod it
+supplies the three laws for $P$ and for $Q$, which \li!obtain! takes apart
+into \li!irrP!, \li!transP!, \li!totP! and the same for~$Q$.
+\li!refine ⟨?_, ?_, ?_⟩! leaves one goal for each law. Each
+\li!rintro ⟨_ | _, a⟩! introduces a cell and splits it by its tag, so that
+each law becomes one goal for each combination of tags: two for the first
+law, eight for the second and four for the third. Cells with one tag use the
+laws of $P$ or of $Q$. A cell tagged $L$ comes before a cell tagged $R$ by
+\li!trivial!, and the remaining cases have \li!False! as a hypothesis, which
+\li!elim! turns into any goal.
+
+\emph{Fidelity note.} Rods are built by the two rules of
+\cref{sec:rules-rods}, and their cells and order by its computation rules.
+
+\subsection*{Reversing a tick of two steps}
+
+\bookstatement{prop:two-step-reversal}
+The states are any type \li!S!, and the two steps and the involution are
+permutations of it, so that $S_0^{-1}$ and $S_1^{-1}$ exist. In the group of
+permutations \li!f * g! is $f\circ g$:
+\leanlisting{lreversal}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.44\textwidth} >{\raggedright\arraybackslash}p{.52\textwidth}@{}}
+\toprule
+Book & Lean\\ \midrule
+$F=S_1\circ S_0$ & \li!S₁ * S₀!\\
+$R$ is an involution & \li!R * R = 1!\\
+$R\circ S_0\circ R=S_0^{-1}$ & \li!R * S₀ * R = S₀⁻¹!\\
+$I_0=R\circ S_0$, $I_1=S_1\circ R$ & \li!R * S₀!, \li!S₁ * R!\\
+$I_0$ is an involution & \li!(R * S₀) * (R * S₀) = 1!\\
+$I_0\circ F\circ I_0=F^{-1}=I_1\circ F\circ I_1$ & the last two lines\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The proof is the book's chain of rewrites:
+\leanlisting{lreversalproof}
+\li!intro! names the three hypotheses \li!hR!, \li!h₀! and \li!h₁!. The proof
+first derives $S_0\circ R\circ S_0=R$ from \li!h₀!, and the same for $S_1$
+(\li!k₀! and \li!k₁!). It uses two theorems of Mathlib about groups: an
+element whose product with $x$ is $1$ is the inverse of $x$, and an
+involution is its own inverse. \li!hF! then computes
+$F^{-1}=R\circ S_0\circ S_1\circ R$. Each of the four claims is a
+\li!calc!, a chain of equations, each with its reason: \li!rw [h₀]! rewrites
+with an equation, and \li!simp only [mul_assoc]! regroups a product, which
+the book does without saying so. The proof file ends with an example in
+which the hypotheses hold and $R$ is not the identity: the two shears of
+\cref{sec:reversible-shears} on $\mathbb Z/8\times\mathbb Z/8$, with the flip
+$R(p,q)=(-p,q)$.
+
+\emph{Fidelity note.} The two steps and the involution are permutations of
+an arbitrary type of states.
+
+\subsection*{Noether's theorem, and the square}
+
+An affine law (\cref{def:affine-law}) acts on the tables of a set of cells
+\li!C!, with values in \li!ZMod n!:
+\leanlisting{laffine}
+\li!M! is an additive bijection, \li!≃+! in Mathlib, and \li!b! is the
+source. \li!toDetLaw! reads the affine law as a deterministic law
+(\cref{def:tick}), whose symmetries and conserved readings are those of
+\cref{def:law-symmetry}:
+\leanlisting{ldetlaw}
+Tallies, pairings and keeping a pairing are written with additive maps:
+\leanlisting{ltally}
+A pairing sends a table to a tally, so that \li!P w! is the tally
+$T_w=\langle w,\cdot\rangle$ and \li!P w p! is $\langle w,p\rangle$.
+
+\bookstatement{thm:noether}
+\leanlisting{lnoether}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.36\textwidth} >{\raggedright\arraybackslash}p{.60\textwidth}@{}}
+\toprule
+Book & Lean\\ \midrule
+$F(p)$ & \li!L.tick p!\\
+$F$ keeps the pairing & \li!L.Keeps P!\\
+adding $w$ to every state is a symmetry & \li!L.toDetLaw.IsSymmetry (· + w)!\\
+$T_w(F(p))=T_w(p)+\langle w,b\rangle$ & \li!P w (L.tick p) = P w p + P w L.b!\\
+$T_w$ is conserved & \li!L.toDetLaw.Conserved (P w)!\\
+$T_w$ for exactly one table $w$ & \li|∃! w, P w = T|\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\li!(· + w)! is the function $p\mapsto p+w$. The proof follows the book's.
+For part~1, $\langle w,M(p)\rangle=\langle M(w),M(p)\rangle=\langle
+w,p\rangle$. For part~2, a conserved tally has $T(b)=T(F(0))=T(0)=0$, so $M$
+keeps it; the pairing is perfect, so $T=T_w$ for one $w$, and $M$ fixes that
+$w$.
+
+The law of the square moves each value one corner on, modulo~$3$:
+\leanlisting{lsquare}
+\li!squareShift! is the additive bijection $p\mapsto(i\mapsto p(i-1))$,
+with its inverse and the proofs that the two undo each other.
+\li!squareLaw! has source $0$, and \li!squareTotal! is the total of the four
+values, with the proof that it is additive.
+
+\bookstatement{cor:noether-square}
+\leanlisting{lnoethersquare}
+The first line says that the fixed tables are exactly the constant ones, and
+\li!2 • squareTotal! is $2T$. The proof applies Theorem~5.6 to the square:
+the tick keeps the pairing $\sum_ip(v_i)q(v_i)$, that pairing is perfect,
+and a fixed table is constant. Its last step uses that a number modulo~$3$
+is $0$, $1$ or $2$, which \li!decide! checks, as in the listing on \li!ZMod!
+above.
+
+\emph{Fidelity notes.} Theorem~5.6 is stated for every $n$. The case $n=0$,
+in which \li!ZMod 0! is the integers, is included, so the Lean statement is
+slightly more general than the book's. In Corollary~5.7 the corners are
+\li!Fin 4!, numbered anticlockwise, and ``the three constant ones'' is
+stated as: the fixed tables are exactly the constant tables.
+
+\subsection*{Discrete Stokes on a canvas}
+
+Chapters~5 and~6 use canvases of dimension two with a stored orientation.
+The library writes \cref{def:canvas} for that case:
+\leanlisting{lcanvas}
+A canvas has finite types of vertices, edges and faces, whose values can be
+compared. The six fields in square brackets say so, and Lean finds them by
+itself. Each edge has a source and a target. Each face has its boundary
+cycle, with the proof that it is closed. The cycle is a list of edges, each
+marked \li!true! when the cycle runs along the edge's stored direction and
+\li!false! when it runs against it. How a face reads an edge, and when the
+faces are read anticlockwise, are defined from the cycles:
+\leanlisting{linc}
+\li!inc e f! counts the times the boundary of \li!f! runs along \li!e!, less
+the times it runs against it: an entry of the book's incidence matrix. A
+canvas is anticlockwise when no face runs along an edge twice, and two
+different faces that share an edge read it in opposite directions, as faces
+drawn in the plane and read anticlockwise do. The operators of
+\cref{sec:difference-operators} follow, for a canvas \li!K! and values in a
+commutative ring \li!R!:
+\leanlisting{lcalculus}
+
+\bookstatement{prop:discrete-stokes}
+\leanlisting{lstokes}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.48\textwidth} >{\raggedright\arraybackslash}p{.48\textwidth}@{}}
+\toprule
+Book & Lean\\ \midrule
+$\curl D=0$, $\divg\curl^*=0$ & \li!K.curl (K.diff φ) = 0!, \li!K.div (K.curlStar B) = 0!\\
+each face read anticlockwise & \li!K.Anticlockwise →!\\
+the edges on exactly one face of $S$ & \li!(S.filter …).card = 1!\\
+each read as that face reads it & \li!∑ f ∈ S, K.inc e f!\\
+the edges with exactly one end in $U$, read leaving $U$ & source in \li!U! and target outside, less the reverse\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The proof of each part is a lemma of \lc{Ch05/Stokes.lean}, and the theorem
+collects them:
+\leanlisting{lstokesproof}
+$\curl D=0$ telescopes: round a closed cycle, the differences
+$\varphi(\text{end})-\varphi(\text{start})$ of its steps add up to zero.
+Summation by parts exchanges two finite sums, and $\divg\curl^*=0$ follows
+from it. Stokes exchanges the sums too, and then uses that the canvas is
+anticlockwise: an edge on two faces of $S$ is read by them in opposite
+directions, so its two terms cancel. The two squares of
+\cref{sec:two-squares} are an anticlockwise canvas, which \li!decide!
+checks:
+\leanlisting{ltwosquares}
+\lc{![0, 1, 2, 3, 1, 4, 5]} is the function on \li!Fin 7! with those values.
+The vertices $v_0,\ldots,v_5$ are \li!0! to \li!5!, the edges
+$e_1,\ldots,e_7$ are \li!0! to \li!6!, and the right face runs against the
+shared edge $e_2$.
+
+\emph{Fidelity note.} The book asks, for the whole proposition, that the
+faces be read anticlockwise. Only Stokes uses it, and the Lean statement
+assumes it there alone, which makes the other three parts stronger. For an
+edge on exactly one face of $S$, the sum $\sum_{f\in S}\operatorname{inc}(e,f)$
+has one term that is not zero, and it is how that face reads the edge.
+
+\section*{How the repository checks itself}
+\addcontentsline{toc}{section}{How the repository checks itself}
+
+\li!#print axioms! lists the axioms a theorem depends on, through every
+theorem it uses:
+\leanlisting{taxioms}
+\leanreply{taxioms}
+These three are the axioms of Mathlib's mathematics. \li!propext! says that
+two propositions that imply each other are equal. \li!Quot.sound! says that
+a quotient identifies the values that its relation relates; the principle
+\li!funext! of Part~II follows from it. \li!Classical.choice! picks a value
+of any type that has one, which gives proof by contradiction. Every theorem
+of the library uses at most these three, and a check run on every change
+lists the axioms of every theorem and fails on any other.
+
+Lean has a faster way to decide a statement, \li!native_decide!, which runs
+compiled code instead of the kernel's own computation. Its result is trusted
+only as far as the compiler is, and Lean records that trust as an extra
+axiom of the theorem, so the check rejects it. The large computations of the
+library use \li!decide +kernel! instead, which the kernel itself checks, on
+data that a script computes beforehand. The sixty rotations of the
+icosahedron (\cref{prop:mm-icosahedron}) are checked so.
+
+An approval records two hashes. The first is of the text the author read:
+the statement, and the definitions it uses, as Lean prints them. The second
+is of their exact terms, as Lean stores them. If either changes, because a
+definition was edited or Lean prints it differently, the statement is no
+longer proved and goes back to the author.
+
+GitHub runs the same commands on every change:
+\begin{itemize}[leftmargin=1.4em]
+\item \lc{lake build --wfail} compiles the library and the files of this
+  guide, and fails on any warning; the axioms of every theorem are then
+  checked;
+\item \lc{scripts/Report.lean} lists every declaration tied to the book, and
+  \lc{scripts/status.py --check} checks that each proof proves exactly its
+  statement and that the status table is current;
+\item \lc{scripts/check\_tree.py} checks that no file contains \li!sorry! or
+  another forbidden word;
+\item the guide's own check fails if this PDF is not built from the current
+  sources.
+\end{itemize}
+Each release also runs \lc{leanchecker}, a second checker, separate from the
+one that compiled the library, which reads every declaration again from the
+compiled files.
+
+\section*{Following a proof, and reporting a problem}
+\addcontentsline{toc}{section}{Following a proof, and reporting a problem}
+
+To follow a proof, open its file in VS~Code and put the cursor after a
+tactic. The infoview shows the goal at that point, with its hypotheses.
+Holding the control key (on a Mac, the command key) and clicking a name opens
+its definition, in the library or in Mathlib, and hovering over a name shows
+its type and documentation.
+
+A Lean statement may seem to say less or more than the book, or the book may
+seem wrong. The file \lc{textbook/FINDINGS.md} records what has been found
+so far, and an issue on the repository's GitHub page reports something new.
+A statement is never weakened to make a proof go through. One that cannot be
+proved as the book prints it stays unproved, with the reason recorded, until
+the book is corrected.

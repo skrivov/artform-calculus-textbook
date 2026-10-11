@@ -32,6 +32,7 @@ theorem rodAlignmentUnique : Statement.rodAlignmentUnique := by
   -- `P` is finite, so well-founded, and has at most one order isomorphism to `Q`.
   exact Subtype.ext (congrArg DFunLike.coe (Subsingleton.elim (e α) (e β)))
 
+-- ANCHOR: lrodlawsproof
 /-- **Proposition 1.31** (the laws of a rod). For every rod `X` the order on
 `cells(X)` is a linear order: no cell comes before itself; if `a` comes before
 `b` and `b` before `c`, then `a` comes before `c`; and of two different cells
@@ -42,7 +43,9 @@ of the numbers below `n`; in `glue(P, Q)` two cells with different tags stand
 theorem rodLaws : Statement.rodLaws := by
   intro X
   induction X with
-  | rod n => exact ⟨fun a => lt_irrefl a, fun _ _ _ => lt_trans, fun _ _ => lt_or_gt_of_ne⟩
+  | rod n =>
+    exact ⟨fun a => lt_irrefl a, fun _ _ _ => lt_trans,
+      fun _ _ => lt_or_gt_of_ne⟩
   | glue P Q ihP ihQ =>
     obtain ⟨irrP, transP, totP⟩ := ihP
     obtain ⟨irrQ, transQ, totQ⟩ := ihQ
@@ -64,6 +67,7 @@ theorem rodLaws : Statement.rodLaws := by
       · exact Or.inl trivial
       · exact Or.inr trivial
       · exact totQ a b fun h => hab (h ▸ rfl)
+-- ANCHOR_END: lrodlawsproof
 
 /-! ## Non-vacuity
 

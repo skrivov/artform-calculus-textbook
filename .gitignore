@@ -6,6 +6,7 @@
 /textbook/review/sheet-*
 # The guide's LaTeX by-products and generated listings
 /textbook/tutorial/tex/generated/snippets/
+/textbook/tutorial/tex/generated/status.tex
 /textbook/tutorial/tex/*.aux
 /textbook/tutorial/tex/*.log
 /textbook/tutorial/tex/*.toc

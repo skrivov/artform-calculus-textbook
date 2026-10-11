@@ -216,6 +216,7 @@ private theorem stokes (hK : K.Anticlockwise) (S : Finset K.F) (A : K.E → R) :
 
 end Canvas
 
+-- ANCHOR: lstokesproof
 /-- **Proposition 5.38** (discrete Stokes and divergence theorems). On every
 canvas, `curl D = 0` and `div curl* = 0`; on an anticlockwise canvas, the curls
 over a set of faces add up to the sum round its boundary (Stokes); the
@@ -223,10 +224,13 @@ divergences over a set of vertices add up to the flux out of it; and `D`,
 `-div` and `curl`, `curl*` are adjoint pairs (summation by parts). -/
 @[book "prop:discrete-stokes"]
 theorem discreteStokes : Statement.discreteStokes := fun K _ _ =>
-  ⟨K.curl_diff, K.div_curlStar, K.stokes, K.sum_div, K.sum_diff_mul, K.sum_curl_mul⟩
+  ⟨K.curl_diff, K.div_curlStar, K.stokes, K.sum_div, K.sum_diff_mul,
+    K.sum_curl_mul⟩
+-- ANCHOR_END: lstokesproof
 
 /-! ## Non-vacuity -/
 
+-- ANCHOR: ltwosquares
 /-- The book's two squares `K = SquareGrid(2,1)` of Section 5.5 are an
 anticlockwise canvas, so part 2 applies to them. The vertices `v₀, …, v₅` are
 `0, …, 5`, the faces `f_L, f_R` are `0, 1`, and the edges `e₁, …, e₇` are
@@ -242,5 +246,6 @@ example : Canvas.Anticlockwise
         [(4, true), (5, true), (6, true), (1, false)]]
       closed := by unfold IsClosedWalk; decide } :=
   ⟨by decide, by decide⟩
+-- ANCHOR_END: ltwosquares
 
 end Artform

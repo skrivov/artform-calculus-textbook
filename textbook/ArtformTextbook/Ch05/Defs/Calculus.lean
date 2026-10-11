@@ -16,6 +16,7 @@ open scoped BigOperators
 
 variable (K : Canvas) {R : Type*} [CommRing R]
 
+-- ANCHOR: lcalculus
 /-- The difference `Dφ(u → v) = φ(v) − φ(u)` along each edge, `d₀ = D₀ᵀ`. -/
 def diff (φ : K.V → R) : K.E → R := fun e => φ (K.tgt e) - φ (K.src e)
 
@@ -31,5 +32,6 @@ def div (E : K.E → R) : K.V → R := fun v =>
 /-- The adjoint curl, which sends a face value to its boundary links with the
 boundary signs, `curl* = D₁`. -/
 def curlStar (B : K.F → R) : K.E → R := fun e => ∑ f, (K.inc e f : R) * B f
+-- ANCHOR_END: lcalculus
 
 end Artform.Canvas

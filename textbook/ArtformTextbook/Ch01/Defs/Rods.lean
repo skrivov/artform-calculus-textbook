@@ -12,6 +12,7 @@ writes those rules in Lean, and Definition 1.2 (perfect alignment).
 
 namespace Artform
 
+-- ANCHOR: lrods
 /-- The two tags of an ordered gluing (Section 1.2): `L` for the left part,
 `R` for the right. -/
 inductive Tag where
@@ -47,6 +48,7 @@ def before : (X : OrderedForm) → X.cells → X.cells → Prop
   | glue _ _, ⟨.L, _⟩, ⟨.R, _⟩ => True
   | glue _ _, ⟨.R, _⟩, ⟨.L, _⟩ => False
   | glue _ Q, ⟨.R, q⟩, ⟨.R, q'⟩ => Q.before q q'
+-- ANCHOR_END: lrods
 
 end OrderedForm
 

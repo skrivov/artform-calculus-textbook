@@ -34,6 +34,7 @@ def orbitCriterion : Prop :=
       ((∃ (V : Type) (q : S → V), L.Conserved q ∧ ∃ x, q x ≠ q (s x)) ↔
         ∃ x, s '' L.orbit x ≠ L.orbit x))
 
+-- ANCHOR: lnoether
 /-- **Theorem 5.6** (Noether's theorem for affine laws). Let an affine law
 `F(p) = M(p) + b` keep a pairing `⟨ , ⟩`.
 1. For every table `w` with `M(w) = w`, adding `w` to every state is a
@@ -44,14 +45,17 @@ def orbitCriterion : Prop :=
    table `w`, and that `w` has `M(w) = w` and `⟨w, b⟩ = 0`. -/
 @[book "thm:noether"]
 def noether : Prop :=
-  ∀ (C : Type) [Fintype C] (n : ℕ) (L : AffineLaw C n) (P : Pairing C n), L.Keeps P →
+  ∀ (C : Type) [Fintype C] (n : ℕ) (L : AffineLaw C n) (P : Pairing C n),
+    L.Keeps P →
     (∀ w, L.M w = w →
       L.toDetLaw.IsSymmetry (· + w) ∧
       (∀ p, P w (L.tick p) = P w p + P w L.b) ∧
       (P w L.b = 0 → L.toDetLaw.Conserved (P w))) ∧
     (P.Perfect → ∀ T : Tally C n, L.toDetLaw.Conserved T →
       (∃! w, P w = T) ∧ ∀ w, P w = T → L.M w = w ∧ P w L.b = 0)
+-- ANCHOR_END: lnoether
 
+-- ANCHOR: lnoethersquare
 /-- **Corollary 5.7** (Noether's theorem on the square). For the law of the
 square and the pairing `⟨p, q⟩ = Σᵢ p(vᵢ) q(vᵢ)`, the tables fixed by the tick
 are the three constant ones; adding the same number at every corner is a
@@ -60,12 +64,14 @@ symmetry; the tally paired with adding `1` at every corner is the total
 every conserved tally is `0`, `T` or `2T`. -/
 @[book "cor:noether-square"]
 def noetherSquare : Prop :=
-  {w | squareLaw.tick w = w} = Set.range (fun c : ZMod 3 => fun _ : Fin 4 => c) ∧
+  {w | squareLaw.tick w = w} =
+    Set.range (fun c : ZMod 3 => fun _ : Fin 4 => c) ∧
   (∀ c : ZMod 3, squareLaw.toDetLaw.IsSymmetry (· + fun _ => c)) ∧
   dotPairing (Fin 4) 3 (fun _ => 1) = squareTotal ∧
   squareLaw.toDetLaw.Conserved squareTotal ∧
   ∀ T : Tally (Fin 4) 3, squareLaw.toDetLaw.Conserved T →
     T = 0 ∨ T = squareTotal ∨ T = 2 • squareTotal
+-- ANCHOR_END: lnoethersquare
 
 /-- **Theorem 5.23** (holonomy descent). Under the substitution
 `U^h_e = h_{t(e)} U_e h_{s(e)}⁻¹`, the holonomy of a path from `v₀` to `v_k`
@@ -90,6 +96,7 @@ def pureGauge : Prop :=
   ∀ (X : Skeleton) (G : Type) [Group G] (U : X.LinkTable G),
     X.Connected → (Skeleton.PureGauge U ↔ Skeleton.LoopFlat U)
 
+-- ANCHOR: lstokes
 /-- **Proposition 5.38** (discrete Stokes and divergence theorems). Let the
 canvas carry its stored orientation, each face read anticlockwise.
 1. `curl D = 0` and `div curl* = 0`.
@@ -111,16 +118,21 @@ def discreteStokes : Prop :=
     (∀ B : K.F → R, K.div (K.curlStar B) = 0) ∧
     (K.Anticlockwise → ∀ (S : Finset K.F) (A : K.E → R),
       ∑ f ∈ S, K.curl A f =
-        ∑ e ∈ Finset.univ.filter
-            (fun e => (S.filter fun f => e ∈ (K.boundary f).map Prod.fst).card = 1),
+        ∑ e ∈ Finset.univ.filter (fun e =>
+            (S.filter fun f => e ∈ (K.boundary f).map Prod.fst).card = 1),
           (∑ f ∈ S, (K.inc e f : R)) * A e) ∧
     (∀ (U : Finset K.V) (E : K.E → R),
       ∑ v ∈ U, K.div E v =
         ∑ e ∈ Finset.univ.filter (fun e => K.src e ∈ U ∧ K.tgt e ∉ U), E e -
-        ∑ e ∈ Finset.univ.filter (fun e => K.tgt e ∈ U ∧ K.src e ∉ U), E e) ∧
-    (∀ (φ : K.V → R) (E : K.E → R), ∑ e, K.diff φ e * E e = -∑ v, φ v * K.div E v) ∧
-    (∀ (A : K.E → R) (B : K.F → R), ∑ f, K.curl A f * B f = ∑ e, A e * K.curlStar B e)
+          ∑ e ∈ Finset.univ.filter (fun e => K.tgt e ∈ U ∧ K.src e ∉ U),
+            E e) ∧
+    (∀ (φ : K.V → R) (E : K.E → R),
+      ∑ e, K.diff φ e * E e = -∑ v, φ v * K.div E v) ∧
+    (∀ (A : K.E → R) (B : K.F → R),
+      ∑ f, K.curl A f * B f = ∑ e, A e * K.curlStar B e)
+-- ANCHOR_END: lstokes
 
+-- ANCHOR: lreversal
 /-- **Proposition 5.39** (reversing a tick of two steps). Let a tick be
 `F = S₁ ∘ S₀`, and let an involution `R` of the states undo each step:
 `R ∘ S₀ ∘ R = S₀⁻¹` and `R ∘ S₁ ∘ R = S₁⁻¹`. Then `I₀ = R ∘ S₀` and
@@ -133,6 +145,7 @@ def twoStepReversal : Prop :=
       (R * S₀) * (R * S₀) = 1 ∧ (S₁ * R) * (S₁ * R) = 1 ∧
       (R * S₀) * (S₁ * S₀) * (R * S₀) = (S₁ * S₀)⁻¹ ∧
       (S₁ * R) * (S₁ * S₀) * (S₁ * R) = (S₁ * S₀)⁻¹
+-- ANCHOR_END: lreversal
 
 open Classical in
 /-- **Theorem 5.44** (Hall; supplies and demands). Let finitely many stores

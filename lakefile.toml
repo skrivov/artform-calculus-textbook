@@ -18,4 +18,4 @@ leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.m
 [[lean_lib]]
 name = "Tutorial"
 srcDir = "textbook/tutorial"
-roots = ["LeanBasics", "ArtformChapter1"]
+roots = ["LeanBasics", "ArtformChapter1", "RepositoryTour"]
