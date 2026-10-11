@@ -19,3 +19,11 @@
 /textbook/tutorial/tex/bibtex.txt
 # Python caches
 __pycache__/
+# The type-theory paper's LaTeX by-products
+/type-theory/paper/*.aux
+/type-theory/paper/*.log
+/type-theory/paper/*.out
+/type-theory/paper/*.toc
+/type-theory/paper/*.fls
+/type-theory/paper/*.fdb_latexmk
+/type-theory/paper/*.synctex.gz

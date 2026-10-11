@@ -1,5 +1,5 @@
 name = "artform-calculus-textbook"
-defaultTargets = ["ArtformTextbook", "Tutorial"]
+defaultTargets = ["ArtformTextbook", "Tutorial", "ArtformRoles"]
 
 [[require]]
 name = "mathlib"
@@ -19,3 +19,10 @@ leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.m
 name = "Tutorial"
 srcDir = "textbook/tutorial"
 roots = ["LeanBasics", "ArtformChapter1", "RepositoryTour"]
+
+# The role discipline of the type-theory paper (type-theory/paper/): the five
+# roles, the dependency policy, constructions and histories.
+[[lean_lib]]
+name = "ArtformRoles"
+srcDir = "type-theory"
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }

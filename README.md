@@ -64,6 +64,9 @@ Publication checks run locally; GitHub Actions is disabled for this repository.
 - `textbook/`: the textbook's definitions, statements and proofs, in the Lean
   library `ArtformTextbook`, with the status table; and the guide, whose Lean
   files and LaTeX sources are in `textbook/tutorial/`.
+- `type-theory/`: the paper *Five Roles for Artforms*, which asks whether the
+  book's five roles are the right ones, and the Lean library `ArtformRoles`
+  that checks its first part ([type-theory/README.md](type-theory/README.md)).
 - `scripts/`: the status report and local publication checks.
 
 ## Licence
@@ -71,3 +74,5 @@ Publication checks run locally; GitHub Actions is disabled for this repository.
 Lean code and scripts: Apache-2.0 ([LICENSE](LICENSE)). The guide and its
 LaTeX sources: CC BY 4.0 ([textbook/tutorial/tex/LICENSE](textbook/tutorial/tex/LICENSE)).
 The book's statement texts, quoted in `textbook/inventory/`: CC BY 4.0.
+The type-theory paper and its LaTeX sources: CC BY 4.0
+([type-theory/paper/LICENSE](type-theory/paper/LICENSE)).
