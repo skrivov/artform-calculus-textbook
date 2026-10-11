@@ -8,6 +8,8 @@ import ArtformTextbook.Ch03.Defs.Canvas
 import ArtformTextbook.Ch03.Statements.Growth
 import ArtformTextbook.Ch04.Statements
 import ArtformTextbook.Ch04.Counting
+import ArtformTextbook.Ch04.Memory
+import ArtformTextbook.Ch04.Continuation
 import ArtformTextbook.Ch05.Statements
 import ArtformTextbook.Ch05.Statements.Laws
 import ArtformTextbook.Ch05.Noether

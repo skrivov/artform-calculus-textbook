@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 23 |
-| planned | 80 |
+| stated | 25 |
+| planned | 78 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -41,8 +41,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | planned |  |  |
 | 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | planned |  |  |
 | 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` / `Artform.countLaw` | awaits review |
-| 4.4 | Exit-level closure | `prob:markov` | C | B5 | planned |  |  |
-| 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | planned |  |  |
+| 4.4 | Exit-level closure | `prob:markov` | C | B5 | stated | `Artform.Statement.exitLevelClosure` / `Artform.exitLevelClosure` | awaits review |
+| 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | stated | `Artform.Statement.historyExtension` / `Artform.historyExtension` | awaits review |
 | 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` / `Artform.orbitCriterion` | awaits review |
 | 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` / `Artform.noether` | awaits review |
 | 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` | awaits review |
@@ -183,7 +183,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.38 | Measurability | `nolabel:03-pattern-geometry:measurability` | planned |  |
 | 3.41 | Weighted cellular content | `nolabel:03-pattern-geometry:weighted-cellular-content` | planned |  |
 | 4.1 | Events available to a finite report | `nolabel:03-reports:events-available-to-a-finite-report` | planned |  |
-| 4.3 | Conditioning on a positive-mass event | `nolabel:05-conditioning:conditioning-on-a-positive-mass-event` | planned |  |
+| 4.3 | Conditioning on a positive-mass event | `nolabel:05-conditioning:conditioning-on-a-positive-mass-event` | mathlib | Mathlib ProbabilityTheory.cond |
 | 5.1 | Deterministic law; tick; run | `def:tick` | defined | `Artform.DetLaw` |
 | 5.2 | Local law; halo | `def:local-law` | planned |  |
 | 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | defined | `Artform.DetLaw.Conserved`, `Artform.DetLaw.IsSymmetry` |
