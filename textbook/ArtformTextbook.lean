@@ -29,6 +29,13 @@ import ArtformTextbook.Ch05.FiveTicks
 import ArtformTextbook.Ch05.ClosedWindow
 import ArtformTextbook.Ch06.Statements
 import ArtformTextbook.Ch06.Reversible
+import ArtformTextbook.Ch06.Statements.Maxwell
+import ArtformTextbook.Ch06.TimeReversal
+import ArtformTextbook.Ch06.Covariance
+import ArtformTextbook.Ch06.Gauss
+import ArtformTextbook.Ch06.Temporal
+import ArtformTextbook.Ch06.Hop
+import ArtformTextbook.Ch06.Shape
 import ArtformTextbook.Ch11.Statements
 import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements

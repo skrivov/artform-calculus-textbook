@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 35 |
-| planned | 68 |
+| stated | 44 |
+| planned | 59 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -67,15 +67,15 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.47 | Symmetry of what may happen ◊ | `thm:curie` | B | B2 | planned |  |  |
 | 5.48 | Breaking needs a choice ◊ | `prop:breaking` | B | B2 | planned |  |  |
 | 6.1 | Reversibility | `thm:reversible` | B | P | stated | `Artform.Statement.reversible` / `Artform.reversible` | awaits review |
-| 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | planned |  |  |
-| 6.3 | Gauge covariance of the Maxwell tick | `thm:maxwell-covariant` | B | B3 | planned |  |  |
-| 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | planned |  |  |
-| 6.5 | The Maxwell shears keep the canonical pairing | `lem:maxwell-pairing` | B | B3 | planned |  |  |
-| 6.6 | Gauss's law from the tally of gauge symmetry | `cor:gauss-noether` | B | B3 | planned |  |  |
-| 6.7 | A gauge change that varies from tick to tick | `prop:gauge-defect` | B | B3 | planned |  |  |
-| 6.9 | Temporal links | `thm:temporal-links` | B | B3 | planned |  |  |
-| 6.10 | Gauge covariance of a hop | `prop:hop-covariance` | B | B3 | planned |  |  |
-| 6.11 | What the two steps force | `prop:maxwell-shape` | B | B3 | planned |  |  |
+| 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | stated | `Artform.Statement.maxwellReversal` / `Artform.maxwellReversal` | awaits review |
+| 6.3 | Gauge covariance of the Maxwell tick | `thm:maxwell-covariant` | B | B3 | stated | `Artform.Statement.maxwellCovariant` / `Artform.maxwellCovariant` | awaits review |
+| 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | stated | `Artform.Statement.gaussPreserved` / `Artform.gaussPreserved` | awaits review |
+| 6.5 | The Maxwell shears keep the canonical pairing | `lem:maxwell-pairing` | B | B3 | stated | `Artform.Statement.maxwellPairing` / `Artform.maxwellPairing` | awaits review |
+| 6.6 | Gauss's law from the tally of gauge symmetry | `cor:gauss-noether` | B | B3 | stated | `Artform.Statement.gaussNoether` / `Artform.gaussNoether` | awaits review |
+| 6.7 | A gauge change that varies from tick to tick | `prop:gauge-defect` | B | B3 | stated | `Artform.Statement.gaugeDefect` / `Artform.gaugeDefect` | awaits review |
+| 6.9 | Temporal links | `thm:temporal-links` | B | B3 | stated | `Artform.Statement.temporalLinks` / `Artform.temporalLinks` | awaits review |
+| 6.10 | Gauge covariance of a hop | `prop:hop-covariance` | B | B3 | stated | `Artform.Statement.hopCovariance` / `Artform.hopCovariance` | awaits review |
+| 6.11 | What the two steps force | `prop:maxwell-shape` | B | B3 | stated | `Artform.Statement.maxwellShape` / `Artform.maxwellShape` | awaits review |
 | 7.3 | A kept count is woven: coherent laws | `cor:qr-woven` | B | B6 | planned |  |  |
 | 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | planned |  |  |
 | 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | planned |  |  |
@@ -204,10 +204,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.31 | Invariant vertex coupling | `def:intertwiner` | planned |  |
 | 5.32 | Gauss constraint | `def:gauss` | planned |  |
 | 5.33 | Gauge-safe profile | `def:gauge-safe` | planned |  |
-| 5.35 | Gauge-covariant law and realizer | `def:gauge-covariant-law` | planned |  |
+| 5.35 | Gauge-covariant law and realizer | `def:gauge-covariant-law` | defined | `Artform.DetRealizer.GaugeCovariant`, `Artform.GaugeAction`, `Artform.GaugeAction.CovariantInvariants`, `Artform.GaugeAction.CovariantLaw`, `Artform.GaugeAction.CovariantMove`, `Artform.Law.GaugeCovariant`, `Artform.LawInSteps.DetRealizer.GaugeCovariant`, `Artform.LawInSteps.GaugeCovariant`, `Artform.RelRealizer.GaugeCovariant`, `Artform.StochRealizer.GaugeCovariant` |
 | 5.41 | No-signalling halo | `def:no-signalling` | planned |  |
 | 5.43 | Count; weave; strand | `def:weave` | planned |  |
-| 6.8 | Temporal links | `def:temporal-links` | planned |  |
+| 6.8 | Temporal links | `def:temporal-links` | defined | `Artform.TemporalLinks`, `Artform.extendedTick`, `Artform.gaugeLinks`, `Artform.gaugeStates` |
 | 7.1 | Native coefficient ring | `qr:ring` | planned |  |
 | 7.2 | Coherent composition | `qr:coherent-composition` | planned |  |
 | 11.1 | Left and right writes | `def:mt-writes` | planned |  |

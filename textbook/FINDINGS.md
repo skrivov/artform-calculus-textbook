@@ -46,3 +46,38 @@ phase keeps opening, and the proof uses both, as written.
 
 **In the repository.** The Lean statement of 3.32 uses the corrected
 reading, as its fidelity note says, and awaits the author's review.
+
+## F2. Moves that keep the invariants only together (Definition 5.9 and the Maxwell law)
+
+*Found 2026-10-11, while proving Theorem 6.3 (`thm:maxwell-covariant`) with
+Definitions 5.9 (`def:law`) and 5.12 (`def:law-steps`). 52nd edition,
+Sections 5.4 and 6.3.*
+
+**What the book says.** Definition 5.9: "At each legal state the law lists
+finitely many moves: the changes it allows there, each leading to a legal
+state." Section 6.3 writes the Maxwell law in the terms of Definition 5.12.
+Its moves are the kick and the Faraday move at each link and the charge
+update at each site, the score is K then M, and the invariant is
+div E = rho at the macro-tick checkpoints. The realizer's evidence that
+every batch keeps the invariant is Theorem 6.4.
+
+**What fails.** A kick at one link changes E there, and with it div E at
+both ends of the link. The invariant holds again only after every kick and
+every charge update of the phase. So a single move made at a legal state
+does not lead to a legal state, as Definition 5.9 asks.
+
+Checking the invariant only at the macro-tick checkpoints does not help.
+The kick phase ends at an unchecked boundary, where every state counts as
+legal. A single Faraday move made there must then lead to a state that is
+legal at the next checkpoint. From a state reached by one kick, it does
+not.
+
+**Proposed correction.** In Definition 5.9, ask it of batches rather than
+of single moves: "Every batch the law allows at a legal state leads to a
+legal state." Alternatively, drop the clause and leave invariance to the
+realizer's evidence of Definition 5.10, which Section 6.3 already cites.
+
+**In the repository.** The library's `Law` (Definition 5.9) and
+`LawInSteps` (Definition 5.12) keep the clause as printed, for single moves,
+so the Maxwell law cannot be written as either of them. Theorem 6.3 gives
+the law by its parts. Theorem 5.13's proof does not use the clause.
