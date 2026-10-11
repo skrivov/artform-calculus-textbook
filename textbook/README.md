@@ -11,8 +11,8 @@ of *Artform Calculus*. The tutorial that teaches how to read them is in
     label.
   - It also defines the command `#book "label"`, which lists those
     declarations.
-- `edition.toml`: the edition of the book this folder follows (the 52nd).
-- `inventory/edition-52.json`: the book's 103 numbered statements and 92
+- `edition.toml`: the edition of the book this folder follows (the 54th).
+- `inventory/edition-54.json`: the book's 103 numbered statements and 92
   definitions as the book prints them, with a hash of each statement
   (`scripts/book_inventory.py`).
 - `manifest.toml`: one entry per statement and definition, with its Lean

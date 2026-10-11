@@ -1,9 +1,10 @@
 # The book's style files
 
-Copied unchanged from the textbook *Artform Calculus*, 52nd edition
-(`chain-of-pairs-2026-09-29`), so that the guide builds in the book's style
-without the book's sources. Do not edit them here; copy them again when the
-repository follows a new edition.
+Copied unchanged from the textbook *Artform Calculus*, 54th edition
+(`lean-repository-2026-10-11`; the four files are the same as in the 52nd),
+so that the guide builds in the book's style without the book's sources. Do
+not edit them here; copy them again when the repository follows a new
+edition.
 
 | File | sha256 |
 |---|---|

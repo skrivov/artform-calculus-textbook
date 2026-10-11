@@ -19,7 +19,7 @@ for each allowed `d`-cell type `T`. For a finite cellular region `X`,
 `Cont_d(X) = Σ_{c ∈ X_d} w_{type(c)}`, where `X_d` is the set of its `d`-cell identities. Here
 the region is a finite set `X` of cells of a canvas `K`, each cell has a type, and the weights
 are nonnegative reals. -/
-@[book "nolabel:03-pattern-geometry:weighted-cellular-content"]
+@[book "def:weighted-cellular-content"]
 def cellularContent (K : IncidenceCanvas) {T : Type} (type : K.Cell → T) (w : T → ℝ≥0) (d : ℕ)
     (X : Finset K.Cell) : ℝ≥0 :=
   ∑ c ∈ X.filter (fun c => K.dim c = d), w (type c)

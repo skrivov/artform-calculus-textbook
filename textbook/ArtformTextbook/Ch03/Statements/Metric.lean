@@ -13,7 +13,7 @@ namespace Artform.Statement
 vector space `V`, and let `⟨-,-⟩₀` be a positive-definite inner product on `V`. The averaged form
 `⟨u, v⟩_G = (1/|G|) Σ_{g ∈ G} ⟨g u, g v⟩₀` is a positive-definite inner product and is
 `G`-invariant: `⟨h u, h v⟩_G = ⟨u, v⟩_G` for every `h ∈ G`. -/
-@[book "nolabel:03-pattern-geometry:averaged-invariant-metric"]
+@[book "thm:averaged-invariant-metric"]
 def averagedInvariantMetric : Prop :=
   ∀ (G : Type) [Group G] [Fintype G] (V : Type) [AddCommGroup V] [Module ℝ V]
     (ρ : Representation ℝ G V) (B₀ : LinearMap.BilinForm ℝ V), IsInnerProduct B₀ →
@@ -23,7 +23,7 @@ def averagedInvariantMetric : Prop :=
 /-- **Proposition 3.26** (perpendicularity from symmetry). Let a group `G` act linearly on a real
 vector space. For a `G`-invariant inner product, the `+1` and `-1` eigenspaces of a reflection
 `s ∈ G` are perpendicular. The book's group is finite; Lean states it for every group. -/
-@[book "nolabel:03-pattern-geometry:perpendicularity-from-symmetry"]
+@[book "prop:perpendicularity-from-symmetry"]
 def perpendicularityFromSymmetry : Prop :=
   ∀ (G : Type) [Group G] (V : Type) [AddCommGroup V] [Module ℝ V]
     (ρ : Representation ℝ G V) (B : LinearMap.BilinForm ℝ V), IsInnerProduct B →

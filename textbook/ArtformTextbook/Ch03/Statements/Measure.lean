@@ -21,7 +21,7 @@ For real-valued `h`, the same holds whenever the finite weighted sum of `|h|` is
 The weights of the first part are taken in `[0, ∞]` and those of the second in `ℝ`. For finitely
 many real values the weighted sum of `|h|` is always finite, so the second part has no
 hypothesis. -/
-@[book "nolabel:03-pattern-geometry:finite-fubini-tonelli"]
+@[book "prop:finite-fubini-tonelli"]
 def finiteFubiniTonelli : Prop :=
   (∀ (X Y : Type) [Fintype X] [Fintype Y] (w : X → ℝ≥0∞) (v : Y → ℝ≥0∞) (h : X × Y → ℝ≥0∞),
     ∑ p : X × Y, h p * w p.1 * v p.2 = ∑ x, w x * ∑ y, h (x, y) * v y ∧
@@ -36,7 +36,7 @@ def finiteFubiniTonelli : Prop :=
 The functions are real-valued and measurable in the sense of Definition 3.38; the integral of a
 nonnegative function is the supremum of the integrals of simple functions below it, Mathlib's
 `∫⁻`, applied to the function read in `[0, ∞]`. The sequence is indexed from `0`. -/
-@[book "nolabel:03-pattern-geometry:monotone-convergence"]
+@[book "thm:monotone-convergence"]
 def monotoneConvergence : Prop :=
   ∀ (Ω : Type) [MeasurableSpace Ω] (μ : MeasureTheory.Measure Ω) (f : ℕ → Ω → ℝ) (F : Ω → ℝ),
     0 ≤ f 0 → (∀ n, f n ≤ f (n + 1)) → (∀ n, Measurable (f n)) →

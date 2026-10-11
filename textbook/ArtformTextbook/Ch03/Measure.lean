@@ -37,12 +37,12 @@ private theorem sum_prod_weights {R : Type*} [CommSemiring R] {X Y : Type*} [Fin
 
 /-- **Proposition 3.37** (finite Fubini–Tonelli): row-first and column-first evaluation of a
 finite weighted double sum agree. -/
-@[book "nolabel:03-pattern-geometry:finite-fubini-tonelli"]
+@[book "prop:finite-fubini-tonelli"]
 theorem finiteFubiniTonelli : Statement.finiteFubiniTonelli :=
   ⟨fun _ _ _ _ w v h => sum_prod_weights w v h, fun _ _ _ _ w v h => sum_prod_weights w v h⟩
 
 /-- **Theorem 3.39** (monotone convergence). -/
-@[book "nolabel:03-pattern-geometry:monotone-convergence"]
+@[book "thm:monotone-convergence"]
 theorem monotoneConvergence : Statement.monotoneConvergence := by
   intro Ω _ μ f F _ hmono hmeas hlim
   exact lintegral_tendsto_of_tendsto_of_monotone

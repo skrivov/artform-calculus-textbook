@@ -339,7 +339,7 @@ end Occurrence
 
 /-- **Definition 3.20** (automorphism group). For a pattern `X` and profile `R`, the
 automorphism group `Aut_R(X)` is the group of invertible members of `Occurrence_R(X, X)`. -/
-@[book "nolabel:03-pattern-geometry:automorphism-group"]
+@[book "def:automorphism-group"]
 abbrev Aut (X : ProfiledState R) : Type := (Occurrence X X)ˣ
 
 /-! ## Positive templates and their instantiations -/

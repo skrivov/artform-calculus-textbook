@@ -57,7 +57,7 @@ rods is an order-preserving bijection between their cells. Here a rod is given
 by its type of cells with a linear order; order-preserving is read as
 monotone, which for a bijection between linear orders is the same as strictly
 monotone. -/
-@[book "nolabel:01-foundations:perfect-alignment"]
+@[book "def:perfect-alignment"]
 def Align (P Q : Type*) [LinearOrder P] [LinearOrder Q] : Type _ :=
   { α : P → Q // Function.Bijective α ∧ Monotone α }
 

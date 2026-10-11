@@ -20,7 +20,7 @@ theorem averagedForm_apply {G V : Type*} [Monoid G] [Fintype G] [AddCommGroup V]
 
 /-- **Theorem 3.25** (averaged invariant metric). The averaged form is a positive-definite inner
 product and is `G`-invariant. -/
-@[book "nolabel:03-pattern-geometry:averaged-invariant-metric"]
+@[book "thm:averaged-invariant-metric"]
 theorem averagedInvariantMetric : Statement.averagedInvariantMetric := by
   intro G _ _ V _ _ ρ B₀ ⟨hsymm, hpos⟩
   refine ⟨⟨⟨fun u v => ?_⟩, fun v hv => ?_⟩, fun h u v => ?_⟩
@@ -44,7 +44,7 @@ theorem averagedInvariantMetric : Statement.averagedInvariantMetric := by
 
 /-- **Proposition 3.26** (perpendicularity from symmetry). For a `G`-invariant inner product, the
 `+1` and `-1` eigenspaces of a reflection are perpendicular. -/
-@[book "nolabel:03-pattern-geometry:perpendicularity-from-symmetry"]
+@[book "prop:perpendicularity-from-symmetry"]
 theorem perpendicularityFromSymmetry : Statement.perpendicularityFromSymmetry := by
   intro G _ V _ _ ρ B _ hinv s _ u hu v hv
   rw [Module.End.mem_eigenspace_iff, one_smul] at hu

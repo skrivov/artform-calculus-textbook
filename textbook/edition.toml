@@ -1,7 +1,7 @@
 # The edition of the textbook this folder follows.
-name = "chain-of-pairs-2026-09-29"
-number = 52
-date = 2026-09-29
-pages = 1050
-pdf_sha256 = "85fc9729365468a1e8d489d588ebeee1ceb6092e82b8812b7ab0d2f208810ded"
-inventory = "inventory/edition-52.json"
+name = "lean-repository-2026-10-11"
+number = 54
+date = 2026-10-11
+pages = 1053
+pdf_sha256 = "b73b4d3488f88e3dfb90f075f1ee13b092a72e74a9b0b34be183960c62d8be1b"
+inventory = "inventory/edition-54.json"

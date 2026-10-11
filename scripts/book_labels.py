@@ -11,7 +11,7 @@ guide's note. Run it locally whenever the repository follows a new edition:
 
 for example
   python3 scripts/book_labels.py \\
-      ../textbook/artform-calculus-and-applications.aux 52 "29 September 2026"
+      ../textbook/artform-calculus-and-applications.aux 54 "11 October 2026"
 
 It writes tutorial/tex/generated/book-labels-<n>.tex, removes the
 files of other editions, and writes tutorial/tex/generated/book-edition.tex.
