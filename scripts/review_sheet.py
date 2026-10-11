@@ -110,6 +110,13 @@ def escape(s):
     return "".join(out)
 
 
+def breakable(name):
+    """A Lean name for LaTeX that may break after a dot and between the words
+    of a camel-case name, as instance names are long."""
+    parts = re.split(r"(?<=[a-z])(?=[A-Z])|(?<=\.)", name)
+    return r"\allowbreak{}".join(escape(p) for p in parts)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("keys", nargs="*")
@@ -157,7 +164,7 @@ def main():
         if names:
             surface = ("\n\\subsection*{The definitions it unfolds to}\n"
                        "{\\raggedright In the section Definitions at the start: " +
-                       ", ".join("\\lc{%s}" % escape(nm) for nm in names) + ".\\par}\n")
+                       ", ".join("\\lc{%s}" % breakable(nm) for nm in names) + ".\\par}\n")
         lean_texts += [st["text"], *st["surface"]]
         items.append(ITEM % {
             "number": r["number"], "title": r["title"], "key": escape(r["key"]),
@@ -181,7 +188,7 @@ def main():
                 "once each. A statement's review covers the definitions it names.\n")
         for name in sorted(definitions):
             tex += ("\\subsection*{\\lc{%s}}\n\\begin{lstlisting}[style=lean]\n%s\n"
-                    "\\end{lstlisting}\n" % (escape(name), definitions[name]))
+                    "\\end{lstlisting}\n" % (breakable(name), definitions[name]))
     tex += "".join(items) + "\n\\end{document}\n"
 
     REVIEW.mkdir(parents=True, exist_ok=True)
