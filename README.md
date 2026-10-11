@@ -44,8 +44,8 @@ the right one.
 
 You need [elan](https://github.com/leanprover/elan) and git.
 
-    git clone https://github.com/skrivov/artform-calculus-proofs
-    cd artform-calculus-proofs
+    git clone https://github.com/skrivov/artform-calculus-textbook
+    cd artform-calculus-textbook
     lake exe cache get      # Mathlib's compiled files: a few GB
     lake build
 

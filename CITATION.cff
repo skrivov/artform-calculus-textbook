@@ -5,5 +5,5 @@ type: software
 authors:
   - family-names: Krivov
     given-names: Sergey
-repository-code: "https://github.com/skrivov/artform-calculus-proofs"
+repository-code: "https://github.com/skrivov/artform-calculus-textbook"
 license: Apache-2.0
