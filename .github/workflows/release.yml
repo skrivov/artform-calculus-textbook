@@ -10,12 +10,20 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v7
+      # Reuse the project's CI cache; Mathlib supplies its own compiled cache.
+      - uses: actions/cache@v5
+        with:
+          path: .lake/build
+          key: project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lakefile.toml', 'lake-manifest.json') }}-${{ github.sha }}
+          restore-keys: |
+            project-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lakefile.toml', 'lake-manifest.json') }}-
       # As CI, plus a kernel replay of the library's compiled files.
       - uses: leanprover/lean-action@v1
         with:
           build-args: "--wfail"
+          use-github-cache: false
           axiom-audit: true
-          axiom-audit-root: "Artform"
+          axiom-audit-root: "ArtformTextbook"
           leanchecker: true
           leanchecker-args: "ArtformTextbook LeanBasics ArtformChapter1 RepositoryTour"
         env:
@@ -27,6 +35,8 @@ jobs:
           python3 scripts/status.py --check
       - name: Files
         run: python3 scripts/check_tree.py
+      - name: Review tools
+        run: python3 -m unittest discover -s scripts/tests
       - name: The guide's PDF is built from the current sources
         run: python3 textbook/tutorial/tools/extract_listings.py --check
       # textbook/RELEASE-NOTES.md is written for each release.
