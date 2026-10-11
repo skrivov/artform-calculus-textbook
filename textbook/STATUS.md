@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 88 |
-| planned | 15 |
+| stated | 99 |
+| planned | 4 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -94,17 +94,17 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 11.18 | The tick preserves the colourless sector | `thm:mt-tick-gauss` | C | B6 | stated | `Artform.Statement.mtTickGauss` / `Artform.mtTickGauss` | awaits review |
 | 11.19 | Link moments | `prop:mt-moments` | C | B6 | stated | `Artform.Statement.mtMoments` / `Artform.mtMoments` | awaits review |
 | 11.20 | The there-and-back tally | `thm:mt-there-and-back` | C | B6 | stated | `Artform.Statement.mtThereAndBack` / `Artform.mtThereAndBack` | awaits review |
-| 12.1 | The eight invariants of a vertex with two slots | `prop:mm-two-slot-invariants` | D | B7 | planned |  |  |
-| 12.2 | Every extra state is located in one average | `thm:mm-census-moments` | C | B7 | planned |  |  |
-| 12.3 | The pair is bound more tightly than the quartet | `prop:mm-diquark` | D | B7 | planned |  |  |
-| 12.4 | The spectrum of the tally on one edge | `thm:mm-spectra` | D | B7 | planned |  |  |
-| 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | planned |  |  |
-| 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | planned |  |  |
-| 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | planned |  |  |
+| 12.1 | The eight invariants of a vertex with two slots | `prop:mm-two-slot-invariants` | D | B7 | stated | `Artform.Statement.mmTwoSlotInvariants` / `Artform.mmTwoSlotInvariants` | awaits review |
+| 12.2 | Every extra state is located in one average | `thm:mm-census-moments` | C | B7 | stated | `Artform.Statement.mmCensusMoments` | awaits review; no proof yet |
+| 12.3 | The pair is bound more tightly than the quartet | `prop:mm-diquark` | D | B7 | stated | `Artform.Statement.mmDiquark` / `Artform.mmDiquark` | awaits review |
+| 12.4 | The spectrum of the tally on one edge | `thm:mm-spectra` | D | B7 | stated | `Artform.Statement.mmSpectra` / `Artform.mmSpectra` | awaits review |
+| 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | stated | `Artform.Statement.mmSpinOrder` / `Artform.mmSpinOrder` | awaits review |
+| 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | stated | `Artform.Statement.mmControl` / `Artform.mmControl` | awaits review |
+| 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | stated | `Artform.Statement.mmParticleHole` / `Artform.mmParticleHole` | awaits review |
 | 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` / `Artform.sixtyRotations` | awaits review |
 | 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | stated | `Artform.Statement.a5Tensor` / `Artform.a5Tensor` | awaits review |
-| 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | planned |  |  |
-| 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | planned |  |  |
+| 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | stated | `Artform.Statement.mmSameSector` / `Artform.mmSameSector` | awaits review |
+| 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | stated | `Artform.Statement.mmCentre` / `Artform.mmCentre` | awaits review |
 | 12.13 | Orders from traces | `prop:mm-s1080-orders` | D | B7 | stated | `Artform.Statement.s1080Orders` / `Artform.s1080Orders` | awaits review |
 | 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | stated | `Artform.Statement.s1080Tensor` / `Artform.s1080Tensor` | awaits review |
 | 12.15 | Agreement with SU(3) at two slots | `thm:mm-s1080-agreement` | E | B8 | planned |  |  |
@@ -117,8 +117,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | stated | `Artform.Statement.mlSquareMatrix` / `Artform.mlSquareMatrix` | awaits review |
 | 13.7 | The square to third order | `thm:ml-square-series` | E | B8 | planned |  |  |
 | 13.8 | The third-order transfer | `thm:ml-transfer` | C | B8 | planned |  |  |
-| 13.9 | What the transfer does | `thm:ml-transfer-values` | D | B7 | planned |  |  |
-| 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | planned |  |  |
+| 13.9 | What the transfer does | `thm:ml-transfer-values` | D | B7 | stated | `Artform.Statement.mlTransferValues` / `Artform.mlTransferValues` | awaits review |
+| 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | stated | `Artform.Statement.mlWalk` | awaits review; no proof yet |
 | 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | stated | `Artform.Statement.mlCanvasCensus` / `Artform.mlCanvasCensus` | awaits review |
 
 ## Definitions

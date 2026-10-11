@@ -28,8 +28,8 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 88 |
-| planned | 15 |
+| stated | 99 |
+| planned | 4 |
 | informal | 0 |
 | **total** | **103** |
 <!-- status:end -->
