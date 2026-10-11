@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 44 |
-| planned | 59 |
+| stated | 51 |
+| planned | 52 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -78,15 +78,15 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 6.11 | What the two steps force | `prop:maxwell-shape` | B | B3 | stated | `Artform.Statement.maxwellShape` / `Artform.maxwellShape` | awaits review |
 | 7.3 | A kept count is woven: coherent laws | `cor:qr-woven` | B | B6 | planned |  |  |
 | 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | planned |  |  |
-| 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | planned |  |  |
-| 10.2 | Triality | `prop:mp-triality` | C | B6 | planned |  |  |
-| 11.2 | The two write families | `prop:mt-writes` | A | B6 | planned |  |  |
-| 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | planned |  |  |
+| 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | stated | `Artform.Statement.mpEpsilon` / `Artform.mpEpsilon` | awaits review |
+| 10.2 | Triality | `prop:mp-triality` | C | B6 | stated | `Artform.Statement.mpTriality` / `Artform.mpTriality` | awaits review |
+| 11.2 | The two write families | `prop:mt-writes` | A | B6 | stated | `Artform.Statement.mtWrites` / `Artform.mtWrites` | awaits review |
+| 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | stated | `Artform.Statement.mtBlocks` / `Artform.mtBlocks` | awaits review |
 | 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` / `Artform.mtAverage` | awaits review |
-| 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | planned |  |  |
+| 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | stated | `Artform.Statement.mtConvolution` / `Artform.mtConvolution` | awaits review |
 | 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | planned |  |  |
-| 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | planned |  |  |
-| 11.12 | Second quantization is a homomorphism | `prop:mt-gamma` | C | B6 | planned |  |  |
+| 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | stated | `Artform.Statement.mtOrderWitness` / `Artform.mtOrderWitness` | awaits review |
+| 11.12 | Second quantization is a homomorphism | `prop:mt-gamma` | C | B6 | stated | `Artform.Statement.mtGamma` / `Artform.mtGamma` | awaits review |
 | 11.14 | Colourless states are the invariants of one vertex | `prop:mt-gauge-fix` | C | B6 | planned |  |  |
 | 11.15 | Census of colourless states | `thm:mt-census` | C | B6 | planned |  |  |
 | 11.16 | The hop is covariant | `prop:mt-hop-covariant` | C | B6 | planned |  |  |
@@ -201,7 +201,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.25 | Face curvature | `def:curvature-general` | defined | `Artform.Canvas.FlatAt`, `Artform.Canvas.curvature` |
 | 5.26 | Three kinds of triviality | `def:flatness` | defined | `Artform.Canvas.FaceFlat`, `Artform.Skeleton.LoopFlat`, `Artform.Skeleton.PureGauge` |
 | 5.30 | Matter field and covariant transport | `def:matter` | planned |  |
-| 5.31 | Invariant vertex coupling | `def:intertwiner` | planned |  |
+| 5.31 | Invariant vertex coupling | `def:intertwiner` | defined | `Artform.IsIntertwiner` |
 | 5.32 | Gauss constraint | `def:gauss` | planned |  |
 | 5.33 | Gauge-safe profile | `def:gauge-safe` | planned |  |
 | 5.35 | Gauge-covariant law and realizer | `def:gauge-covariant-law` | defined | `Artform.DetRealizer.GaugeCovariant`, `Artform.GaugeAction`, `Artform.GaugeAction.CovariantInvariants`, `Artform.GaugeAction.CovariantLaw`, `Artform.GaugeAction.CovariantMove`, `Artform.Law.GaugeCovariant`, `Artform.LawInSteps.DetRealizer.GaugeCovariant`, `Artform.LawInSteps.GaugeCovariant`, `Artform.RelRealizer.GaugeCovariant`, `Artform.StochRealizer.GaugeCovariant` |
@@ -210,10 +210,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 6.8 | Temporal links | `def:temporal-links` | defined | `Artform.TemporalLinks`, `Artform.extendedTick`, `Artform.gaugeLinks`, `Artform.gaugeStates` |
 | 7.1 | Native coefficient ring | `qr:ring` | planned |  |
 | 7.2 | Coherent composition | `qr:coherent-composition` | planned |  |
-| 11.1 | Left and right writes | `def:mt-writes` | planned |  |
-| 11.3 | Block of an irreducible representation | `def:mt-block` | planned |  |
+| 11.1 | Left and right writes | `def:mt-writes` | defined | `Artform.leftWrite`, `Artform.rightWrite` |
+| 11.3 | Block of an irreducible representation | `def:mt-block` | defined | `Artform.block` |
 | 11.7 | Electric response and electric read | `def:mt-response` | planned |  |
 | 11.9 | Declared electric energy | `def:mt-energy` | planned |  |
-| 11.10 | Sign rule | `def:mt-sign-rule` | planned |  |
+| 11.10 | Sign rule | `def:mt-sign-rule` | defined | `Artform.Fock.annihilation`, `Artform.Fock.creation` |
 | 11.13 | Colourless states of one edge | `def:mt-colourless` | planned |  |
 | 12.11 | The group C_3× A_5 and its triplet | `def:mm-centre` | planned |  |

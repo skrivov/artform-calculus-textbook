@@ -36,7 +36,11 @@ import ArtformTextbook.Ch06.Gauss
 import ArtformTextbook.Ch06.Temporal
 import ArtformTextbook.Ch06.Hop
 import ArtformTextbook.Ch06.Shape
+import ArtformTextbook.Ch10.Colour
 import ArtformTextbook.Ch11.Statements
+import ArtformTextbook.Ch11.Tables
+import ArtformTextbook.Ch11.Blocks
+import ArtformTextbook.Ch11.Occupation
 import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements
 import ArtformTextbook.Ch12.Icosahedron
