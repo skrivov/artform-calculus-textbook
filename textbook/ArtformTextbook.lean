@@ -31,6 +31,7 @@ import ArtformTextbook.Ch05.TreeGauge
 import ArtformTextbook.Ch05.FlatClassification
 import ArtformTextbook.Ch05.FiveTicks
 import ArtformTextbook.Ch05.ClosedWindow
+import ArtformTextbook.Ch05.GaugeRuns
 import ArtformTextbook.Ch06.Statements
 import ArtformTextbook.Ch06.Reversible
 import ArtformTextbook.Ch06.Statements.Maxwell

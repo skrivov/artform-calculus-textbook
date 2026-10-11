@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 61 |
-| planned | 42 |
+| stated | 62 |
+| planned | 41 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -55,7 +55,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` / `Artform.pureGauge` | awaits review |
 | 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | stated | `Artform.Statement.treeGaugeFixing` / `Artform.treeGaugeFixing` | awaits review |
 | 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | stated | `Artform.Statement.flatClassification` / `Artform.flatClassification` | awaits review |
-| 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | planned |  |  |
+| 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | stated | `Artform.Statement.gaugeRuns` / `Artform.gaugeRuns` | awaits review |
 | 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | stated | `Artform.Statement.fiveTicks` / `Artform.fiveTicks` | awaits review |
 | 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` / `Artform.discreteStokes` | awaits review |
 | 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` / `Artform.twoStepReversal` | awaits review |

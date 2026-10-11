@@ -81,3 +81,33 @@ realizer's evidence of Definition 5.10, which Section 6.3 already cites.
 `LawInSteps` (Definition 5.12) keep the clause as printed, for single moves,
 so the Maxwell law cannot be written as either of them. Theorem 6.3 gives
 the law by its parts. Theorem 5.13's proof does not use the clause.
+
+## F3. The turns of the pose law are not batches
+
+*Found 2026-10-11, while proving Proposition 5.36 (`prop:gauge-runs`) with
+its example, the pose law of Section 5.15. 52nd edition, the paragraph
+after Definition 5.35.*
+
+**What the book says.** "Each of its moves reads one link and one pose and
+writes one pose, ... and the realizer that takes every move of the open
+step, whatever the links say, is gauge covariant too." A realizer selects
+batches (Definition 5.10), and a batch is a family of pairwise compatible
+enabled applications (Definition 2.6).
+
+**What fails.** A turn carries each pose of a square to the next corner.
+The move that writes the pose at a corner v reads the pose at the corner
+before v, and that pose is written by another move of the same turn. So the
+moves of one turn are not compatible: one of them changes a value that
+another's proposal assumed. Taking every move of the open step is then not
+a batch. Made one after another, the moves of a turn carry some poses more
+than one corner, and the result depends on the order. A turn is a
+simultaneous update from the state before the step, as the duet's two
+answers are in Chapter 2.
+
+**Proposed correction.** Either write each turn as one move, which reads
+the four poses and the links of its square and writes the four poses, or
+say that the moves of a step are made from the state before the step and
+extend Definitions 2.6 and 5.10 to such simultaneous steps.
+
+**In the repository.** The example of Proposition 5.36 writes each turn as
+a single move. The proposition itself does not depend on this.
