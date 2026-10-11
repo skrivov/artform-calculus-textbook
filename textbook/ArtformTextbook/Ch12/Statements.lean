@@ -36,9 +36,11 @@ def sixtyRotations : Prop :=
       M.mulVec v₁ = N.mulVec v₁ → M.mulVec v₂ = N.mulVec v₂ → M = N) ∧
   (∀ v₁ ∈ icoVertices, ∀ v₂ ∈ icoVertices, v₁ ⬝ᵥ v₂ = goldenRatio →
     ∀ w₁ ∈ icoVertices, ∀ w₂ ∈ icoVertices, w₁ ⬝ᵥ w₂ = goldenRatio →
-      ∃! M : Matrix (Fin 3) (Fin 3) ℝ,
-        M.mulVec v₁ = w₁ ∧ M.mulVec v₂ = w₂ ∧ M.mulVec (v₁ ⨯₃ v₂) = w₁ ⨯₃ w₂ ∧
-        M ∈ icoRotations ∧ ∀ i j, ∃ a b : ℤ, M i j = (a + b * goldenRatio) / 2) ∧
+      (∃! M : Matrix (Fin 3) (Fin 3) ℝ,
+        M.mulVec v₁ = w₁ ∧ M.mulVec v₂ = w₂ ∧ M.mulVec (v₁ ⨯₃ v₂) = w₁ ⨯₃ w₂) ∧
+      ∀ M : Matrix (Fin 3) (Fin 3) ℝ,
+        M.mulVec v₁ = w₁ → M.mulVec v₂ = w₂ → M.mulVec (v₁ ⨯₃ v₂) = w₁ ⨯₃ w₂ →
+          M ∈ icoRotations ∧ ∀ i j, ∃ a b : ℤ, M i j = (a + b * goldenRatio) / 2) ∧
   icoRotations.ncard = 60 ∧
   ∀ t : ℝ, {M | M ∈ icoRotations ∧ M.trace = t}.ncard =
     if t = 3 then 1 else if t = -1 then 15 else if t = 0 then 20

@@ -19,6 +19,7 @@ import ArtformTextbook.Ch06.Reversible
 import ArtformTextbook.Ch11.Statements
 import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements
+import ArtformTextbook.Ch12.Icosahedron
 
 /-!
 # *Artform Calculus* in Lean

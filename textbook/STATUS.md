@@ -101,7 +101,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | planned |  |  |
 | 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | planned |  |  |
 | 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | planned |  |  |
-| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` | awaits review; no proof yet |
+| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` / `Artform.sixtyRotations` | awaits review |
 | 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | planned |  |  |
 | 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | planned |  |  |
 | 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | planned |  |  |
