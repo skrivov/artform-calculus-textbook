@@ -14,7 +14,8 @@ and computes the status of each statement:
              review, or has no proof that proves exactly it with the three
              permitted axioms
   proved     reviewed, unchanged since review, and so proved
-  partial    as proved, for a narrower statement (set by hand, with fidelity)
+  partial    as proved, for a narrower statement (set by hand, with fidelity;
+             stated until it is reviewed)
   informal   not formalized by design (set by hand, with fidelity)
 and of each definition: planned, defined (a declaration carries its label),
 mathlib or informal (both set by hand).
@@ -248,7 +249,10 @@ def evaluate(st_entries, def_entries, inventory, report):
                 notes.append("no proof yet" if not proofs.get(key) else "no valid proof")
             status = ("partial" if recorded == "partial" else "proved") if ok else "stated"
             if recorded == "partial" and not ok:
-                problems.append(f"{key}: recorded as partial, but {'; '.join(notes)}")
+                # A statement decided to be partial may be recorded so before
+                # its review; until the review it counts as stated.
+                if notes != ["awaits review"]:
+                    problems.append(f"{key}: recorded as partial, but {'; '.join(notes)}")
                 status = "stated"
         fields = {}
         if recorded not in ("partial", "informal") and recorded != status:

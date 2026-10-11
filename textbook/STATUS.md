@@ -116,7 +116,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 13.5 | Colourless states of the empty square | `prop:ml-square-states` | D | B7 | stated | `Artform.Statement.mlSquareStates` / `Artform.mlSquareStates` | awaits review |
 | 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | stated | `Artform.Statement.mlSquareMatrix` / `Artform.mlSquareMatrix` | awaits review |
 | 13.7 | The square to third order | `thm:ml-square-series` | E | B8 | planned |  |  |
-| 13.8 | The third-order transfer | `thm:ml-transfer` | E | B8 | planned |  |  |
+| 13.8 | The third-order transfer | `thm:ml-transfer` | C | B8 | planned |  |  |
 | 13.9 | What the transfer does | `thm:ml-transfer-values` | D | B7 | planned |  |  |
 | 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | planned |  |  |
 | 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | stated | `Artform.Statement.mlCanvasCensus` / `Artform.mlCanvasCensus` | awaits review |
