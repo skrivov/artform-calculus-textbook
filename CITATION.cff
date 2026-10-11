@@ -1,7 +1,19 @@
 cff-version: 1.2.0
-message: "If you use these proofs or the guide, please cite them as below."
-title: "Artform Calculus: proofs in Lean"
+message: "If you use these proofs, the tutorial or the paper, please cite them as below."
+title: "Artform Calculus: Proofs in Lean"
 type: software
+version: "0.1.0"
+date-released: 2026-10-11
+abstract: >-
+  Lean 4 statements and proofs of the theorems of the textbook Artform
+  Calculus; the tutorial Lean through Artform Calculus; and the paper Five
+  Roles for Artforms on the type theory of the book's five roles, with the
+  Lean library that checks its first part.
+keywords:
+  - Lean 4
+  - Mathlib
+  - formalization
+  - type theory
 authors:
   - family-names: Krivov
     given-names: Sergey

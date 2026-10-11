@@ -48,6 +48,12 @@ Lean checks proofs, not the choice of a model. The repository does not claim
 that a physical model describes nature, or that one reading of an artform is
 the right one.
 
+**Which edition of the book.** The repository follows the 52nd edition
+(`textbook/edition.toml`). The 54th edition, of 11 October 2026, is the first
+to cite this repository. It prints the same 103 statements and 92 definitions
+word for word, and gives labels to seventeen items that had none. The
+repository will move to it once the judge has reviewed the changed keys.
+
 ## Build
 
 You need [elan](https://github.com/leanprover/elan) and git.

@@ -60,13 +60,15 @@ the edition of 11 October 2026 (53rd), by section and label.
   three counts are 3 (proofs counted), 2 (the book's count) and 1 (endpoints
   only). (Lean: `policySeparates_iff`, `witness_script_same_policy`,
   `twoCorners_counts`.)
-- **D4. A state is witness data.** A state is a legal choice of values: a
-  table with the evidence that it is legal, which is the book's own
-  formation rule (`def:frame-instance`). Choices and evidence are witness
-  data, so the state space is a homogeneous witness-role sum in the
-  calculus. STATE is still not a sixth role. This agrees with the ledger,
-  with §5.9 and with the process laboratory. It overrules §1.9's *name the
-  presentation*.
+- **D4. A state is witness data.** A state of a frame is a legal choice of
+  values at its positions: a table with the evidence that it is legal,
+  which is the book's own formation rule (`def:frame-instance`). Choices
+  and evidence are witness data, so the state space is a homogeneous
+  witness-role sum in the calculus. STATE is still not a sixth role. This
+  agrees with the ledger, with §5.9 and with the process laboratory. It
+  overrules §1.9's *name the presentation*. A process that grows its
+  carrier, such as Chapter 3's growth, has forms for its stages, and each
+  step of growth is a gate into a form.
 - **D5. Gates record what was assumed.** A gate contraction leaves a
   *record*, not a receipt. Gates are the only crossings from the instance
   level into the frame, and from presentation into form.
@@ -86,10 +88,12 @@ the edition of 11 October 2026 (53rd), by section and label.
 
 ## 3. The textbook passages these decisions affect
 
-The paper was changed and the book was not. The book is mostly consistent
-with the decisions already. These are the places where it is not, with
-wording that would make it so. They are for the author to decide, and any
-change goes through the book's own process.
+The paper was changed first. The book was mostly consistent with the
+decisions already; these were the places where it was not. The author
+accepted T1 and T2 and asked for all the recommendations (2026-10-11). The
+fifty-fourth edition of the book (its packet
+`planning/lean-repository-2026-10-11/`) applies T1–T4, T6 and T7 and cites
+this repository; T5 is withdrawn (below).
 
 1. **§1.9, *Four useful words that are not roles*, the state paragraph**
    (`chapters/01-foundations.tex`, after `\subsection{Four useful words that
@@ -112,8 +116,9 @@ change goes through the book's own process.
    rule*. (g) *part of the state, which is witness data; a state is not a
    role*.
 5. **`chapters/03-geometry-laboratory.tex`, rolestrip at the batch step**
-   (*FORM rule and states*). Under D4 the states are witness data: *FORM
-   rule; the states are witness data*.
+   (*FORM rule and states*). *Withdrawn on reading the context:* the states
+   there are the stages of a growth, which are forms, so the rolestrip is
+   right as it stands (D4's last sentence).
 6. **`ROLE-LEDGER.md`** (a planning file, not printed). §1 should take the
    paper's readings, and §3 (STATE) should take D4. The matrix in §2 is
    unchanged.
