@@ -22,8 +22,8 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 68 |
-| planned | 35 |
+| stated | 72 |
+| planned | 31 |
 | informal | 0 |
 | **total** | **103** |
 <!-- status:end -->

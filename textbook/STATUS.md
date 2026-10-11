@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 68 |
-| planned | 35 |
+| stated | 72 |
+| planned | 31 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -102,13 +102,13 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | planned |  |  |
 | 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | planned |  |  |
 | 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` / `Artform.sixtyRotations` | awaits review |
-| 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | planned |  |  |
+| 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | stated | `Artform.Statement.a5Tensor` / `Artform.a5Tensor` | awaits review |
 | 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | planned |  |  |
 | 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | planned |  |  |
-| 12.13 | Orders from traces | `prop:mm-s1080-orders` | D | B7 | planned |  |  |
-| 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | planned |  |  |
+| 12.13 | Orders from traces | `prop:mm-s1080-orders` | D | B7 | stated | `Artform.Statement.s1080Orders` / `Artform.s1080Orders` | awaits review |
+| 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | stated | `Artform.Statement.s1080Tensor` / `Artform.s1080Tensor` | awaits review |
 | 12.15 | Agreement with SU(3) at two slots | `thm:mm-s1080-agreement` | E | B8 | planned |  |  |
-| 12.16 | Every loop closes | `thm:mm-loop` | B | B7 | planned |  |  |
+| 12.16 | Every loop closes | `thm:mm-loop` | B | B7 | stated | `Artform.Statement.mmLoop` / `Artform.mmLoop` | awaits review |
 | 13.1 | Colourless states of a path | `prop:ml-path` | C | B7 | planned |  |  |
 | 13.2 | The string | `thm:ml-string` | C | B7 | planned |  |  |
 | 13.3 | The screening number | `prop:ml-screening` | D | B7 | planned |  |  |
@@ -216,4 +216,4 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 11.9 | Declared electric energy | `def:mt-energy` | planned |  |
 | 11.10 | Sign rule | `def:mt-sign-rule` | defined | `Artform.Fock.annihilation`, `Artform.Fock.creation` |
 | 11.13 | Colourless states of one edge | `def:mt-colourless` | planned |  |
-| 12.11 | The group C_3× A_5 and its triplet | `def:mm-centre` | planned |  |
+| 12.11 | The group C_3× A_5 and its triplet | `def:mm-centre` | defined | `Artform.C3A5`, `Artform.C3A5.triplet` |

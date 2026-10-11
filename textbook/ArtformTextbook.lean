@@ -51,6 +51,7 @@ import ArtformTextbook.Ch11.Occupation
 import ArtformTextbook.Ch11.Averaging
 import ArtformTextbook.Ch12.Statements
 import ArtformTextbook.Ch12.Icosahedron
+import ArtformTextbook.Ch12.Groups
 
 /-!
 # *Artform Calculus* in Lean
