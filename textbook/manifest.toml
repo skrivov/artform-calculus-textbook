@@ -42,13 +42,14 @@ book_sha256 = "f220c1efa67c7ad6900278bf166e662a777234c66adba20c66a9cc982fc4b2bf"
 tier = "B"
 batch = "B4"
 needs = "profiles and witnesses of §1.6; the spectra by `decide`"
-status = "planned"
-lean_statement = ""
-lean_proof = ""
+status = "stated"
+lean_statement = "Artform.Statement.tetractysIntwits"
+lean_proof = "Artform.tetractysIntwits"
 reviewed = ""
 review_text_sha256 = ""
 review_term_sha256 = ""
-fidelity = ""
+fidelity = """
+The palette P is the rod of four rows, row r having r + 1 phases, written locally 0..r; the drawn names 1-10 are a legend and are not modelled. A laying gives, for a row with k phases and a tick t of the clock of 12, a local phase; layRec(k, t) = t mod k and layDiv(k, t) = kt/12 in natural numbers, which is the floor. 'There are profiles' is carried by the definitions Crec and Cdiv, which the review covers. Each has the tapestries on CycleTime(12) as endpoints and the layings as realizers. A laying produces theta from F when every row shows only its own phases and theta is the tapestry the laying lays. The law is the covering (or grouping) equation in every row, the phase typing, and the period spectrum read off the tapestry produced: {{1,2,3,4}} (or {{1,12,12,12}}), as multisets. The covering and grouping equations are those of Section 1.5, at every tick, modulo k, with the shift taken on the cycle. The book's remark after the proposition, that c_div records the grouping equation at the cuts, follows from that. The endpoints I_rec and I_div are the tables of Figures 1.25 and 1.40, entry by entry. 'w_rec = (l_rec, c_rec) in IntWit' is: some witness has realizer l_rec, and likewise for div. 'Gamma lists the two profiles' is: Gamma is a set of profiles containing both. 'Gives two elements of Sem' is: the two tagged witnesses are elements, by their types, and they are different, for any witnesses of each kind."""
 
 [[statement]]
 key = "prop:artform-category-book"
@@ -2027,10 +2028,11 @@ source = "chapters/01-foundations.tex:2300"
 book_sha256 = "f505f7a3e9d8c750ab9ebf65a69fdfe00e00c1a18aa4a34661bedb34979e9739"
 planned_home = "Artform.RectTapestry (Ch01/Time)"
 first_needed = "B4"
-status = "planned"
-lean = []
+status = "defined"
+lean = ["Artform.RectFrame", "Artform.RectTapestry", "Artform.RectTapestry.frame"]
 reviewed = ""
-fidelity = ""
+fidelity = """
+The support T is a parameter: RectTapestry T has the ordered rows R, the values V(r) allowed in each row and the threads e. The frame A_rect(T; R, V) is RectFrame T. TapestryForm, the type of all tapestries on every support, is not named. A finite temporal support has finitely many positions and a successor defined on some of them, injective where it is defined; CycleTime n asks n to be at least 1."""
 
 [[definition]]
 key = "def:time-history"
@@ -2083,10 +2085,11 @@ source = "chapters/01-foundations.tex:3946"
 book_sha256 = "3d6bd77f2dbdbeada7e8f5fdb9410cf1aebdd44ed6692fae8f8049d388f1469e"
 planned_home = "Artform.IntWit (Ch01/Meaning)"
 first_needed = "B4"
-status = "planned"
-lean = []
+status = "defined"
+lean = ["Artform.IntProfile", "Artform.IntWit", "Artform.PointedInt", "Artform.Sem"]
 reviewed = ""
-fidelity = ""
+fidelity = """
+A profile for artforms of a type Src has endpoints, realizers indexed by the artform and the endpoint, a relation 'produces' and a law; the law may read the artform and the endpoint. A witness is a realizer with a certificate, a Lean proof that it produces the endpoint and obeys the law. 'A profile of Gamma that applies to F' is read as: a profile of Gamma for artforms of the type of F. The tag in Sem is the profile with its proof of membership. 'Selects nothing' and 'does not change raw artform equality' hold by construction and are not stated."""
 
 [[definition]]
 key = "def:finite-cell-pattern"

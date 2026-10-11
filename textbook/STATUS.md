@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 22 |
-| planned | 81 |
+| stated | 23 |
+| planned | 80 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -18,7 +18,7 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | No. | Title | Label | Tier | Batch | Status | Lean | Notes |
 |---|---|---|---|---|---|---|---|
 | 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` / `Artform.rodAlignmentUnique` | awaits review |
-| 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | planned |  |  |
+| 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | stated | `Artform.Statement.tetractysIntwits` / `Artform.tetractysIntwits` | awaits review |
 | 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | stated | `Artform.Statement.artformCategory` / `Artform.artformCategory` | awaits review |
 | 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | stated | `Artform.Statement.semanticQuotient` / `Artform.semanticQuotient` | awaits review |
 | 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | stated | `Artform.Statement.adjoints` / `Artform.adjoints` | awaits review |
@@ -127,11 +127,11 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|---|---|---|
 | 1.1 | Finite form | `nolabel:01-foundations:finite-form` | planned |  |
 | 1.2 | Perfect alignment | `nolabel:01-foundations:perfect-alignment` | defined | `Artform.Align` |
-| 1.5 | Rectangular tapestry | `def:time-rectangular` | planned |  |
+| 1.5 | Rectangular tapestry | `def:time-rectangular` | defined | `Artform.RectFrame`, `Artform.RectTapestry`, `Artform.RectTapestry.frame` |
 | 1.6 | Occurrence history | `def:time-history` | planned |  |
 | 1.7 | Tick realization | `def:time-ticks` | planned |  |
 | 1.8 | Finite cyclarchy | `def:time-cyclarchy` | planned |  |
-| 1.9 | Interpretation witness | `def:intwit-book` | planned |  |
+| 1.9 | Interpretation witness | `def:intwit-book` | defined | `Artform.IntProfile`, `Artform.IntWit`, `Artform.PointedInt`, `Artform.Sem` |
 | 1.11 | Finite cell pattern | `def:finite-cell-pattern` | planned |  |
 | 1.12 | Geometric form and its instances | `def:geometric-form-book` | planned |  |
 | 1.13 | Artform frame and instance | `def:frame-instance` | planned |  |
