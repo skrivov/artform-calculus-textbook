@@ -17,14 +17,14 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 
 | No. | Title | Label | Tier | Batch | Status | Lean | Notes |
 |---|---|---|---|---|---|---|---|
-| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` | awaits review; no proof yet |
+| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` / `Artform.rodAlignmentUnique` | awaits review |
 | 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | planned |  |  |
 | 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | planned |  |  |
 | 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | planned |  |  |
 | 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | planned |  |  |
 | 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` | awaits review |
 | 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | planned |  |  |
-| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` | awaits review; no proof yet |
+| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` / `Artform.rodLaws` | awaits review |
 | 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | planned |  |  |
 | 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | planned |  |  |
 | 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | planned |  |  |
@@ -40,10 +40,10 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | planned |  |  |
 | 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | planned |  |  |
 | 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | planned |  |  |
-| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` | awaits review; no proof yet |
+| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` / `Artform.countLaw` | awaits review |
 | 4.4 | Exit-level closure | `prob:markov` | C | B5 | planned |  |  |
 | 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | planned |  |  |
-| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` | awaits review; no proof yet |
+| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` / `Artform.orbitCriterion` | awaits review |
 | 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` / `Artform.noether` | awaits review |
 | 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` | awaits review |
 | 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` | awaits review; no proof yet |
@@ -57,16 +57,16 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | planned |  |  |
 | 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | planned |  |  |
 | 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | planned |  |  |
-| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` | awaits review; no proof yet |
-| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` | awaits review; no proof yet |
+| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` / `Artform.discreteStokes` | awaits review |
+| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` / `Artform.twoStepReversal` | awaits review |
 | 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | planned |  |  |
 | 5.42 | What a strung run fixes ◊ | `prop:run-fixes` | B | B2 | planned |  |  |
-| 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | stated | `Artform.Statement.hall` | awaits review; no proof yet |
+| 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | stated | `Artform.Statement.hall` / `Artform.hall` | awaits review |
 | 5.45 | A kept count is woven ◊ | `thm:woven` | B | B2 | planned |  |  |
 | 5.46 | Symmetries of a slot tapestry ◊ | `prop:slot-symmetry` | B | B2 | planned |  |  |
 | 5.47 | Symmetry of what may happen ◊ | `thm:curie` | B | B2 | planned |  |  |
 | 5.48 | Breaking needs a choice ◊ | `prop:breaking` | B | B2 | planned |  |  |
-| 6.1 | Reversibility | `thm:reversible` | B | P | stated | `Artform.Statement.reversible` | awaits review; no proof yet |
+| 6.1 | Reversibility | `thm:reversible` | B | P | stated | `Artform.Statement.reversible` / `Artform.reversible` | awaits review |
 | 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | planned |  |  |
 | 6.3 | Gauge covariance of the Maxwell tick | `thm:maxwell-covariant` | B | B3 | planned |  |  |
 | 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | planned |  |  |
