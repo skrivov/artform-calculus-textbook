@@ -1,5 +1,5 @@
 # The textbook's numbered statements and definitions, one entry each, keyed by
-# the book's \label. Empty until the book's inventory is added.
+# the book's \label (or nolabel:<file>:<title> where the book has none).
 #
 # [[statement]] fields: key, number, kind, title, optional, source,
 #   book_sha256, tier, batch, needs, status, lean_statement, lean_proof,
@@ -10,3 +10,3248 @@
 # scripts/status.py --write fills in status, lean_statement, lean_proof and
 # lean, and book_sha256 while an entry is unreviewed; --approve fills in the
 # review fields. Everything else is edited by hand.
+
+[[statement]]
+key = "prop:rod-alignment-unique"
+number = "1.3"
+kind = "proposition"
+title = "Uniqueness of rod alignment"
+optional = false
+source = "chapters/01-foundations.tex:613"
+book_sha256 = "06413a198cd1f5aed79e0838beaf20019f675b37317a5c6996129f2eb584590f"
+tier = "A"
+batch = "P"
+needs = "order isomorphisms of finite linear orders are unique"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:tetractys-intwits"
+number = "1.10"
+kind = "proposition"
+title = "The two tetractys interpretations coexist"
+optional = false
+source = "chapters/01-foundations.tex:3978"
+book_sha256 = "f220c1efa67c7ad6900278bf166e662a777234c66adba20c66a9cc982fc4b2bf"
+tier = "B"
+batch = "B4"
+needs = "profiles and witnesses of §1.6; the spectra by `decide`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:artform-category-book"
+number = "1.16"
+kind = "proposition"
+title = "The Artform category"
+optional = true
+source = "chapters/01-category-cafe.tex:81"
+book_sha256 = "467f14d3b0a16f7a96cf245816bfdfdb6495abd45c9643f307a4ff8d9321203e"
+tier = "C"
+batch = "B4"
+needs = "free category on a quiver, quotient category"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:semantic-quotient-book"
+number = "1.19"
+kind = "proposition"
+title = "The semantic quotient"
+optional = true
+source = "chapters/01-category-cafe.tex:550"
+book_sha256 = "a43f46305d2c71fb4bad2163acfa24ebf5089cb600a66372bb54d304211e37d9"
+tier = "C"
+batch = "B4"
+needs = "quotient by a congruence; faithful functor"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:adjoints-book"
+number = "1.27"
+kind = "proposition"
+title = "Adjoints of reindexing"
+optional = true
+source = "chapters/01-category-cafe.tex:1409"
+book_sha256 = "86b09c8bbbe170b2cef305a598e4568f204c3a4070afc4b3452a6eacfd68dbb7"
+tier = "C"
+batch = "B4"
+needs = "Σ ⊣ pullback ⊣ Π on families of sets"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:finset-topos-book"
+number = "1.29"
+kind = "proposition"
+title = "Sets form a topos"
+optional = true
+source = "chapters/01-category-cafe.tex:1466"
+book_sha256 = "e492d780ccf1499a8585ccd3fa054f441d9cbf40569904869f41a0df3e2a7a30"
+tier = "C"
+batch = "P"
+needs = "cartesian closed + subobject classifier for `Type` and `FintypeCat`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:artform-not-topos-book"
+number = "1.30"
+kind = "proposition"
+title = "The Artform category is not a topos"
+optional = true
+source = "chapters/01-category-cafe.tex:1517"
+book_sha256 = "f4d8cad8724cdbd8e5b2b15201197164d17da63da14e055e4d988e8da96741ec"
+tier = "C"
+batch = "B4"
+needs = "no terminal object or exponential in a free category"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:rod-laws"
+number = "1.31"
+kind = "proposition"
+title = "The laws of a rod"
+optional = true
+source = "chapters/01-rules-view.tex:121"
+book_sha256 = "bd3ec054e1789ece86daaf7b19933e977acd464fa7a76a4ecd71e7849ab1f1ef"
+tier = "A"
+batch = "P"
+needs = "strict total order on cells; Part II already proves it in core Lean"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:cube-assembly-book"
+number = "3.4"
+kind = "proposition"
+title = "Cube boundary assembled from squares"
+optional = false
+source = "chapters/03-geometric-construction.tex:437"
+book_sha256 = "5a143cc4f304fdcf0d48e2fe4192623008385d36b5f72e307bf658ee791b3f26"
+tier = "B"
+batch = "B5"
+needs = "gluing data; counts (8,12,6,1) by `decide`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:shared-positive-pattern-book"
+number = "3.11"
+kind = "proposition"
+title = "Shared positive pattern"
+optional = false
+source = "chapters/03-pattern-geometry.tex:728"
+book_sha256 = "6bf47d27716d35c31bc3459ea644270a919e771ba0fbaca6263f6cbe12a618b1"
+tier = "B"
+batch = "B5"
+needs = "partial injections, templates"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:partial-profile-iso-book"
+number = "3.12"
+kind = "proposition"
+title = "Partial profile isomorphism"
+optional = false
+source = "chapters/03-pattern-geometry.tex:754"
+book_sha256 = "fe0da9d03af02bf72181df5508c5b63c727328891898220dc4557d9c49f0b47a"
+tier = "B"
+batch = "B5"
+needs = "partial bijections"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:atom-image-occurrence-book"
+number = "3.22"
+kind = "proposition"
+title = "Positive occurrences are atom images"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1608"
+book_sha256 = "4577ddbaf43847f6e2a6a68355336da61a056705f8110d634b284498708a34b9"
+tier = "B"
+batch = "B5"
+needs = "free action, orbits (`MulAction`)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "nolabel:03-pattern-geometry:averaged-invariant-metric"
+number = "3.25"
+kind = "theorem"
+title = "Averaged invariant metric"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1750"
+book_sha256 = "2e40b1266bbac60a488dc2706bfe7322b4ff2dfc8385b5ef86eb3ec18e36b3b8"
+tier = "B"
+batch = "B5"
+needs = "averaged inner product over a finite group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "nolabel:03-pattern-geometry:perpendicularity-from-symmetry"
+number = "3.26"
+kind = "proposition"
+title = "Perpendicularity from symmetry"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1806"
+book_sha256 = "95d4dba77c50cf8fa4997d0c8ece616b0f7493b03da8ba0e6a11ac661776d168"
+tier = "B"
+batch = "B5"
+needs = "eigenspaces of an isometric involution"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:commuting-proposals"
+number = "3.27"
+kind = "proposition"
+title = "Commuting compatible changes"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2048"
+book_sha256 = "498af5f827cfa04ad662471588b13e9dab2a5236685cb714f623ede2c2365bfa"
+tier = "B"
+batch = "B5"
+needs = "enabled applications, compatibility"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:growth-stabilization"
+number = "3.29"
+kind = "theorem"
+title = "Stabilization"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2127"
+book_sha256 = "da400a7a1371091cec0501851346933a0cd419c43817b3a9dcc007bc31ee9ee1"
+tier = "A"
+batch = "B5"
+needs = "increasing chain in a finite set"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:fair-closure"
+number = "3.32"
+kind = "proposition"
+title = "Fair closure"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2265"
+book_sha256 = "9e11e3a858306d578f3f692fcf6cac8cbb315fac2763126beb4d31a182ea3ca1"
+tier = "B"
+batch = "B5"
+needs = "least closed set; fairness hypotheses"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:growth-symmetry"
+number = "3.33"
+kind = "proposition"
+title = "Symmetry of growth"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2344"
+book_sha256 = "01a0a9d9abaa7e23e30051522d7283f406eadf215fef826d1e2d9d6920cfbf5c"
+tier = "B"
+batch = "B5"
+needs = "group actions on runs"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "nolabel:03-pattern-geometry:finite-fubini-tonelli"
+number = "3.37"
+kind = "proposition"
+title = "Finite Fubini--Tonelli"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2800"
+book_sha256 = "ea635ebcace1be3dc36bcafeb7d4f9fab9c4f3803171b0f075364312963658a0"
+tier = "A"
+batch = "B5"
+needs = "`Finset.sum_comm`, `Finset.mul_sum`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "nolabel:03-pattern-geometry:monotone-convergence"
+number = "3.39"
+kind = "theorem"
+title = "Monotone convergence"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2899"
+book_sha256 = "409ff88509cc4eea1f48049da781905a4cbcdc262efbcf7954c8097c8a13d00f"
+tier = "A"
+batch = "B5"
+needs = "Mathlib: `MeasureTheory.lintegral_iSup`; the work is matching the statement"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:invariant-measure-orbits"
+number = "3.40"
+kind = "proposition"
+title = ""
+optional = false
+source = "chapters/03-pattern-geometry.tex:2924"
+book_sha256 = "ddc0192f91b42ad0eea3f8aaf4f324f81980d770e5d42fb5a4702762b1c4bf0b"
+tier = "A"
+batch = "B5"
+needs = "orbits of a finite group action"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:metric-feature-receipts-book"
+number = "3.43"
+kind = "proposition"
+title = "Receipts decide, and margins protect"
+optional = false
+source = "chapters/03-geometry-laboratory.tex:311"
+book_sha256 = "3cdcd0895d622d3cefdd6874a2a7da314d1107f0ad725044c5fce32ff6248d82"
+tier = "E"
+batch = "B8"
+needs = "sampled pictures must be modelled; the margin lemma alone is tier A"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:reference-marking-pullback-book"
+number = "3.45"
+kind = "proposition"
+title = "Reference marking along a comparison"
+optional = false
+source = "chapters/03-geometry-laboratory.tex:615"
+book_sha256 = "0e5f796cef8ce2287be9f1063ad3873e5507bd41d011104c0825a1948a2276c2"
+tier = "B"
+batch = "B5"
+needs = "composition with a comparison"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "probbook:count-law"
+number = "4.2"
+kind = "proposition"
+title = "Counting retained alternatives"
+optional = false
+source = "chapters/probability/04-counting.tex:22"
+book_sha256 = "16d36d2025fd050eea5d9fe4844a7bde1de47f178850407eb7a4e69786b8bcf3"
+tier = "B"
+batch = "P"
+needs = "`PMF` push-forward of the uniform law"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prob:markov"
+number = "4.4"
+kind = "proposition"
+title = "Exit-level closure"
+optional = false
+source = "chapters/probability/08-memory.tex:19"
+book_sha256 = "e4631abb369d2fecab4b979bcd26bd7084695246d1a2fae8b5b7e9b5f06439ee"
+tier = "C"
+batch = "B5"
+needs = "conditional laws on finite path spaces; Markov property"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "probbook:history-extension"
+number = "4.5"
+kind = "proposition"
+title = "Extension of compatible finite histories"
+optional = false
+source = "chapters/probability/10-continuation.tex:67"
+book_sha256 = "09bbd77ed843048ecbc6d60f4e1c2dc73a1c94176bc7312e933ea425e759dba5"
+tier = "C"
+batch = "B5"
+needs = "Ionescu-Tulcea / Kolmogorov extension"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:orbit-criterion"
+number = "5.4"
+kind = "theorem"
+title = "What a conserved reading can see"
+optional = false
+source = "chapters/04-physical-laws.tex:376"
+book_sha256 = "447493e523d3638077ed003e2b955c367cd1bc1d4e5ae11b765d6382d63a2301"
+tier = "A"
+batch = "P"
+needs = "orbits of a permutation (`Equiv.Perm`)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:noether"
+number = "5.6"
+kind = "theorem"
+title = "Noether's theorem for affine laws"
+optional = false
+source = "chapters/04-physical-laws.tex:556"
+book_sha256 = "f641790072d176e7e8ffc74c33393f00698f120bf13268d7cc66ef12ce6915af"
+tier = "B"
+batch = "P"
+needs = "modules, bilinear pairing, perfect pairing"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "cor:noether-square"
+number = "5.7"
+kind = "corollary"
+title = "Noether's theorem on the square"
+optional = false
+source = "chapters/04-physical-laws.tex:589"
+book_sha256 = "c8b63a568f2506b6b31aebc39a92429685a577a8bdf63f5f4dc067827df1cbc5"
+tier = "A"
+batch = "P"
+needs = "`ZMod 3` computation by `decide`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:tally-current"
+number = "5.8"
+kind = "proposition"
+title = "The current of a tally"
+optional = false
+source = "chapters/04-physical-laws.tex:732"
+book_sha256 = "c3f6ddb40439f7eaef299d6b3f3303abfcf4b80afe62db15fbbe377edeb558b8"
+tier = "B"
+batch = "B1"
+needs = "finite sums"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:law-decides"
+number = "5.11"
+kind = "proposition"
+title = "The law decides what is kept"
+optional = false
+source = "chapters/04-physical-laws.tex:962"
+book_sha256 = "39fb78fbfca4d2d0fb00c24c8335aa11a575c3c19e4a378eac4bb444019244cf"
+tier = "B"
+batch = "B1"
+needs = "deterministic, relational and stochastic realizers"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:well-posed"
+number = "5.13"
+kind = "theorem"
+title = "Finite well-posedness"
+optional = false
+source = "chapters/04-physical-laws.tex:1417"
+book_sha256 = "6f096b53706a0eba837ffd0438ff0d7197883eda27fb9e521540e0bf39ebc4dd"
+tier = "B"
+batch = "B1"
+needs = "laws in steps, scores, batches"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "lem:pose-torsor"
+number = "5.16"
+kind = "lemma"
+title = "Pose orbit"
+optional = false
+source = "chapters/04-physical-laws.tex:2228"
+book_sha256 = "71f69a8f8a67b292882185ba191d82165b3a75d3f0cf7715a1d4c6c0fea7dbb6"
+tier = "B"
+batch = "B2"
+needs = "free transitive action (torsor)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:connection-coordinates"
+number = "5.20"
+kind = "proposition"
+title = "Connection and coordinates"
+optional = false
+source = "chapters/04-physical-laws.tex:2664"
+book_sha256 = "b3ac21984abf8454ca9774f7208ba129c34c08bbfb448501d2f222f575088e3e"
+tier = "B"
+batch = "B2"
+needs = "localization, trivialization, link tables"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:holonomy-descent"
+number = "5.23"
+kind = "theorem"
+title = "Holonomy descent"
+optional = false
+source = "chapters/04-physical-laws.tex:3187"
+book_sha256 = "180871c44371e4839726e5213635ce7e8ff574e909cc4ca3dda574b4dea68efe"
+tier = "B"
+batch = "P"
+needs = "paths in a quiver labelled in a group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:pure-gauge"
+number = "5.27"
+kind = "theorem"
+title = "Pure gauge equals loop-flat"
+optional = false
+source = "chapters/04-physical-laws.tex:3663"
+book_sha256 = "a4e4019e980c0cb6bca842046dd7e10aa3ffedf89ceb20f6b3f8f7f13a9812a9"
+tier = "B"
+batch = "P"
+needs = "connected transport skeleton; potentials from paths"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:tree-gauge-fixing"
+number = "5.28"
+kind = "theorem"
+title = "Spanning-tree gauge fixing"
+optional = false
+source = "chapters/04-physical-laws.tex:3686"
+book_sha256 = "589ce423c4cb1d5a40482617a22c1ef157393994ee5f51084c87d754d9fec1cb"
+tier = "C"
+batch = "B2"
+needs = "spanning trees; quotient count G^(E-V+1)/G"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:flat-classification"
+number = "5.29"
+kind = "theorem"
+title = "Classification of face-flat connections"
+optional = false
+source = "chapters/04-physical-laws.tex:3872"
+book_sha256 = "876a938d08ff8569b59006a27652f32caef76031c498b57954776f94dc8c328b"
+tier = "C"
+batch = "B2"
+needs = "combinatorial π₁ of a 2-complex as a presented group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:gauge-runs"
+number = "5.36"
+kind = "proposition"
+title = "Gauge covariance passes to runs"
+optional = false
+source = "chapters/04-physical-laws.tex:4231"
+book_sha256 = "8620fc87a4b08c3eab52fd308d5064706913c082830e1f1905a4ea801caa3e34"
+tier = "B"
+batch = "B2"
+needs = "induction on runs"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:five-ticks"
+number = "5.37"
+kind = "proposition"
+title = "Five ticks read the outside"
+optional = false
+source = "chapters/04-physical-laws.tex:4294"
+book_sha256 = "1a4df9db3ee2fba0f920330cd7e5bbe1a5d1f9856047abdc8ef3e45167c1f29e"
+tier = "A"
+batch = "B2"
+needs = "one word computation in a group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:discrete-stokes"
+number = "5.38"
+kind = "proposition"
+title = "Discrete Stokes and divergence theorems"
+optional = false
+source = "chapters/04-physical-laws.tex:4922"
+book_sha256 = "3bf0250b54fca57dc54dc5bec5929b86302b8fe4ffe460dab6907a3cd13955f6"
+tier = "B"
+batch = "P"
+needs = "chains and cochains on an oriented canvas"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:two-step-reversal"
+number = "5.39"
+kind = "proposition"
+title = "Reversing a tick of two steps"
+optional = false
+source = "chapters/04-physical-laws.tex:5330"
+book_sha256 = "a72e7a936d4e8d91f9d37b002e1813499f07d6d20fe337009b72591b1d2c8ae5"
+tier = "A"
+batch = "P"
+needs = "algebra of involutions"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:closed-window"
+number = "5.40"
+kind = "theorem"
+title = "Closed-window conservation"
+optional = false
+source = "chapters/04-physical-laws.tex:5517"
+book_sha256 = "436dd200caffff061ed2362f3f23aa176966b46bd44bbbce1d755fd11f4fd5f1"
+tier = "B"
+batch = "B2"
+needs = "from the divergence theorem"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:run-fixes"
+number = "5.42"
+kind = "proposition"
+title = "What a strung run fixes"
+optional = true
+source = "chapters/04-physical-laws.tex:5637"
+book_sha256 = "2775c1e139881b8cca25ae6908a2d6f0a8a13240929702362c93b7865aa95125"
+tier = "B"
+batch = "B2"
+needs = "counting functions |A|^u"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:hall"
+number = "5.44"
+kind = "theorem"
+title = "Hall; supplies and demands"
+optional = true
+source = "chapters/04-physical-laws.tex:5785"
+book_sha256 = "3f9d9dfbe85e3f4c2af39c5ff9e904de78c56b4a8ce00b28cb562534c82521b7"
+tier = "B"
+batch = "P"
+needs = "Mathlib Hall (`Finset.all_card_le_biUnion_card_iff_exists_injective`) after splitting units; real-valued goods need flows"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:woven"
+number = "5.45"
+kind = "theorem"
+title = "A kept count is woven"
+optional = true
+source = "chapters/04-physical-laws.tex:5800"
+book_sha256 = "b2639ceb26c111d7004d89fddebc8390ecff9cd78aacc409603b7bd8d8fda350"
+tier = "B"
+batch = "B2"
+needs = "halos and weaves; uses Hall"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:slot-symmetry"
+number = "5.46"
+kind = "proposition"
+title = "Symmetries of a slot tapestry"
+optional = true
+source = "chapters/04-physical-laws.tex:5869"
+book_sha256 = "b85269f0721efbb484dfa93b496519b168b2d4f4f9599f3b49c17e2d1778592a"
+tier = "B"
+batch = "B2"
+needs = "indices mod k"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:curie"
+number = "5.47"
+kind = "theorem"
+title = "Symmetry of what may happen"
+optional = true
+source = "chapters/04-physical-laws.tex:5914"
+book_sha256 = "ef53d7d154cf5f74afe14d21eb29b7903207ee6194f395fa273cc2df3c27e408"
+tier = "B"
+batch = "B2"
+needs = "group actions on runs and weights"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:breaking"
+number = "5.48"
+kind = "proposition"
+title = "Breaking needs a choice"
+optional = true
+source = "chapters/04-physical-laws.tex:5930"
+book_sha256 = "5564090b4fd9098f371b272697055899e254def5d2c52560b5a6d75b998907f8"
+tier = "B"
+batch = "B2"
+needs = "averaging a realizer over a group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:reversible"
+number = "6.1"
+kind = "theorem"
+title = "Reversibility"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:516"
+book_sha256 = "a471b6557ced86b95061f45fd1b017a6cc7b27589a78a76ef200a405bad04821"
+tier = "B"
+batch = "P"
+needs = "Maxwell macro-tick over `ZMod 8`; explicit inverse"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "cor:maxwell-reversal"
+number = "6.2"
+kind = "corollary"
+title = "Time reversal of the Maxwell tick"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:656"
+book_sha256 = "a1998ff5d1807cbf180789039a2c1993938b6eaccb5c55e97fc34c7dd78b5ab2"
+tier = "B"
+batch = "B3"
+needs = "from Proposition 5.39"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:maxwell-covariant"
+number = "6.3"
+kind = "theorem"
+title = "Gauge covariance of the Maxwell tick"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:797"
+book_sha256 = "64d1ac9f701f68ea9230b9485e185b4a23a5ede6dcc425a19b3a8196284036ad"
+tier = "B"
+batch = "B3"
+needs = "curl ∘ D = 0"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:gauss-preserved"
+number = "6.4"
+kind = "theorem"
+title = "Gauss preservation"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:838"
+book_sha256 = "5d43fe981ddb60bca6a5411fe498823195b69e1d9d8f2f83a28110d44c972933"
+tier = "B"
+batch = "B3"
+needs = "div ∘ curl* = 0"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "lem:maxwell-pairing"
+number = "6.5"
+kind = "lemma"
+title = "The Maxwell shears keep the canonical pairing"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:948"
+book_sha256 = "3ffdf05578695f8b0bdf84d91665fded525243b2fbeae1f484468ff4c8feecb7"
+tier = "B"
+batch = "B3"
+needs = "symplectic pairing; adjoint operators"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "cor:gauss-noether"
+number = "6.6"
+kind = "corollary"
+title = "Gauss's law from the tally of gauge symmetry"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:974"
+book_sha256 = "7b7eb81b09360842ce266552c7f60c01576b2b9a70f9076c1b170175f6b5c60f"
+tier = "B"
+batch = "B3"
+needs = "applies Theorem 5.6"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:gauge-defect"
+number = "6.7"
+kind = "proposition"
+title = "A gauge change that varies from tick to tick"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:1017"
+book_sha256 = "10735cf0c921e833566c54b401aa0d6557cea1407dad1b3e5ec4e16a60530a6a"
+tier = "B"
+batch = "B3"
+needs = "algebra of runs"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:temporal-links"
+number = "6.9"
+kind = "theorem"
+title = "Temporal links"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:1052"
+book_sha256 = "df1263189b92bfd33b0cc38807fb2da1597f8de1ac4b33c69944a4773323cf6b"
+tier = "B"
+batch = "B3"
+needs = "temporal gauge fixing"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:hop-covariance"
+number = "6.10"
+kind = "proposition"
+title = "Gauge covariance of a hop"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:1619"
+book_sha256 = "6e36db90db94770d3a57b12f1cfae69b2450c7cd86f3b4e3d69b2c4478475e24"
+tier = "B"
+batch = "B3"
+needs = "matter phases over C8"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:maxwell-shape"
+number = "6.11"
+kind = "proposition"
+title = "What the two steps force"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:1797"
+book_sha256 = "443dfd6eb808beda48f9a7b1ece58a2b2fae27aeeae174824bef85fe7083c001"
+tier = "B"
+batch = "B3"
+needs = "characterization by linear algebra on one window"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "cor:qr-woven"
+number = "7.3"
+kind = "corollary"
+title = "A kept count is woven: coherent laws"
+optional = false
+source = "chapters/quantum-records/04-composition.tex:238"
+book_sha256 = "5dd4c1f6226283014216a59a3464e66ba0cd5361446307968bd73f8caf90f8a9"
+tier = "B"
+batch = "B6"
+needs = "coherent version of Theorem 5.45"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "qr:selected-law"
+number = "7.4"
+kind = "theorem"
+title = "The selected native probability law"
+optional = false
+source = "chapters/quantum-records/06-probability.tex:207"
+book_sha256 = "64490796ac625c463252c286b97350cc58474ae05d66f735c13c650bbc390127"
+tier = "E"
+batch = "B8"
+needs = "the axioms V, Z, AE, D2, N1, O must be stated formally; proof in outline"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mp-epsilon"
+number = "10.1"
+kind = "proposition"
+title = "The colourless three-quark state"
+optional = false
+source = "chapters/matter-physics/03-colour.tex:68"
+book_sha256 = "a1a14ae9fb1c355f4dfd3d1e5ce76f880cb51db14dee0bbfe6446a3fa1733b59"
+tier = "B"
+batch = "B6"
+needs = "ε and the determinant (`Matrix.det_fin_three`)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mp-triality"
+number = "10.2"
+kind = "proposition"
+title = "Triality"
+optional = false
+source = "chapters/matter-physics/04-qcd.tex:42"
+book_sha256 = "675b70c7680fddebac2a261cdf553bdc66dec0aecb1e0cfc38da0b28a7352f54"
+tier = "C"
+batch = "B6"
+needs = "centre of SU(3); action on quark tensors"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-writes"
+number = "11.2"
+kind = "proposition"
+title = "The two write families"
+optional = false
+source = "chapters/matter-tools/01-tables.tex:80"
+book_sha256 = "6d29a3b8668333d101db0ff2634656b56757843a2869cdb29d119385d979f76c"
+tier = "A"
+batch = "B6"
+needs = "left and right regular actions commute"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mt-blocks"
+number = "11.4"
+kind = "theorem"
+title = "Blocks fill the table space"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:32"
+book_sha256 = "17a80d876101ed7a0923951f4c45385687e9a2ecf483aeb623913db1fb2b8317"
+tier = "C"
+batch = "B6"
+needs = "Wedderburn/Peter-Weyl for finite groups: Σ d² = |G|"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-average"
+number = "11.5"
+kind = "proposition"
+title = "Averaging counts"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:123"
+book_sha256 = "e98e0f03ad978b9c2e702ac80980fd917ddf74af6d3c2153d7c27b72362038cb"
+tier = "C"
+batch = "P"
+needs = "averaging projector; Mathlib: `FDRep.average_char_eq_finrank_invariants`, `FDRep.char_orthonormal`"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mt-convolution"
+number = "11.6"
+kind = "theorem"
+title = "One-edge operators"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:152"
+book_sha256 = "66202ed6b9bbfab7129bc29916b0e4c3e6ca9ee3d03d129787b73d73c1ea5b59"
+tier = "C"
+batch = "B6"
+needs = "commutant of the regular actions; class functions"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-native-reads"
+number = "11.8"
+kind = "proposition"
+title = "Six native sign reads on the cube group"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:229"
+book_sha256 = "349503e87374508c94a7c5671af93c1d6e3e2082aee89553dde4e69fa7704f61"
+tier = "D"
+batch = "B7"
+needs = "S4 in R8; thirty sign assignments"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-order-witness"
+number = "11.11"
+kind = "proposition"
+title = "The order is a presentation"
+optional = false
+source = "chapters/matter-tools/04-occupation.tex:106"
+book_sha256 = "2f96e4db502df285fcdf903126a22f821a887a2d485abe43dfdf3022d145084c"
+tier = "C"
+batch = "B6"
+needs = "creation operators with the sign rule"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-gamma"
+number = "11.12"
+kind = "proposition"
+title = "Second quantization is a homomorphism"
+optional = false
+source = "chapters/matter-tools/04-occupation.tex:149"
+book_sha256 = "35707b176b09e60e95a11f3e9b2be92634b7bce0a520cbaf906bf10b695a056f"
+tier = "C"
+batch = "B6"
+needs = "second quantization on the exterior algebra; unitarity"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-gauge-fix"
+number = "11.14"
+kind = "proposition"
+title = "Colourless states are the invariants of one vertex"
+optional = false
+source = "chapters/matter-tools/05-colourless.tex:38"
+book_sha256 = "a5fc2a853ab706dd2bda8372913917c3d08f2cd3eff240dbcb13709f580e52cb"
+tier = "C"
+batch = "B6"
+needs = "invariants of one vertex"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mt-census"
+number = "11.15"
+kind = "theorem"
+title = "Census of colourless states"
+optional = false
+source = "chapters/matter-tools/05-colourless.tex:75"
+book_sha256 = "c02bdf716a835c1692316a5027d44051360dd58a28eb2038035350499665410e"
+tier = "C"
+batch = "B6"
+needs = "Molien-type average of det(1+zg)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-hop-covariant"
+number = "11.16"
+kind = "proposition"
+title = "The hop is covariant"
+optional = false
+source = "chapters/matter-tools/06-tick.tex:19"
+book_sha256 = "d9f4ea8071486a9f0b2ea3ab3a72d29d7b80fd27fca6b6df17d59efefbd9a297"
+tier = "C"
+batch = "B6"
+needs = "covariance of the hop"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-minors"
+number = "11.17"
+kind = "proposition"
+title = "The coin's coefficients are minors"
+optional = false
+source = "chapters/matter-tools/06-tick.tex:100"
+book_sha256 = "2f137a83cdfeb6c6ba54b74353c0f9e4f5ad1156e9fc0bfa2f0e056cd4fc10d7"
+tier = "C"
+batch = "B6"
+needs = "compound matrices (Cauchy-Binet); R8 entries"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mt-tick-gauss"
+number = "11.18"
+kind = "theorem"
+title = "The tick preserves the colourless sector"
+optional = false
+source = "chapters/matter-tools/06-tick.tex:171"
+book_sha256 = "9b3a2dc036a39208c1069bb41264fba82359963b04128959bbd2d3f1b07f26e7"
+tier = "C"
+batch = "B6"
+needs = "composition of covariant maps; unitarity"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mt-moments"
+number = "11.19"
+kind = "proposition"
+title = "Link moments"
+optional = false
+source = "chapters/matter-tools/06-tick.tex:212"
+book_sha256 = "f39dcaca4652ed5f468b9a903073fef8e1534761d2900bb8364d9c8656758812"
+tier = "C"
+batch = "B6"
+needs = "Schur orthogonality of matrix coefficients"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mt-there-and-back"
+number = "11.20"
+kind = "theorem"
+title = "The there-and-back tally"
+optional = false
+source = "chapters/matter-tools/06-tick.tex:274"
+book_sha256 = "6edd7529a7d19772e2d8e01d852aa8f33feb03b1659c20ef7797635032676235"
+tier = "C"
+batch = "B6"
+needs = "operator identity in Fock space"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-two-slot-invariants"
+number = "12.1"
+kind = "proposition"
+title = "The eight invariants of a vertex with two slots"
+optional = false
+source = "chapters/matter-models/01-cube.tex:90"
+book_sha256 = "fae80041d92e1ff47694d892eb47364c0d1bca247780f3a09bf2508dfe0bf367"
+tier = "D"
+batch = "B7"
+needs = "cube group on 64 states"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mm-census-moments"
+number = "12.2"
+kind = "theorem"
+title = "Every extra state is located in one average"
+optional = false
+source = "chapters/matter-models/01-cube.tex:201"
+book_sha256 = "5f0b67b50d612edecf5cd257694f89874d5c8c4347caee19079b9c6b74448263"
+tier = "C"
+batch = "B7"
+needs = "multinomial census; the SU(3) bound from G ≤ SU(3)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-diquark"
+number = "12.3"
+kind = "proposition"
+title = "The pair is bound more tightly than the quartet"
+optional = false
+source = "chapters/matter-models/02-exchange.tex:75"
+book_sha256 = "6c1a5844328c04febd10540bb02744f5344d9885e479f537110e2ae3fde006b4"
+tier = "D"
+batch = "B7"
+needs = "explicit Ω on Model I"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mm-spectra"
+number = "12.4"
+kind = "theorem"
+title = "The spectrum of the tally on one edge"
+optional = false
+source = "chapters/matter-models/02-exchange.tex:123"
+book_sha256 = "1d1b23e5a56558db06f1b9dd05c17cbb99c79b39ce1bac3125f9c979cc1716cc"
+tier = "D"
+batch = "B7"
+needs = "spectra of 36- and 64-state operators: eigenbasis certificates"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-spin-order"
+number = "12.5"
+kind = "proposition"
+title = "The two-baryon states are ordered by spin"
+optional = false
+source = "chapters/matter-models/02-exchange.tex:226"
+book_sha256 = "cc38ed50687aa20dcf0bc03584f188b0864ef7d7f74825a965beb6977728346c"
+tier = "D"
+batch = "B7"
+needs = "S_z sectors; certified eigenvalues"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-control"
+number = "12.6"
+kind = "proposition"
+title = "The pair hop is the cause"
+optional = false
+source = "chapters/matter-models/02-exchange.tex:302"
+book_sha256 = "fa55d846feda11032a205610fcc5be57afca9c1920a225dfa2586db0400aed12"
+tier = "D"
+batch = "B7"
+needs = "certified spectrum without the pair hop"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-particle-hole"
+number = "12.7"
+kind = "proposition"
+title = "A symmetry that only a real triplet has"
+optional = false
+source = "chapters/matter-models/02-exchange.tex:357"
+book_sha256 = "4b0f3a1cfc43bfc6153883151e75fea058f8582345f5ec6d6a797dfed151d04b"
+tier = "D"
+batch = "B7"
+needs = "commuting and anticommuting operators"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-icosahedron"
+number = "12.8"
+kind = "proposition"
+title = "The sixty rotations"
+optional = false
+source = "chapters/matter-models/03-icosahedron.tex:23"
+book_sha256 = "bcd3ab9a5a19a8d907a0803794b04d6ee1e442bcf201ef7b03d7d09b3fc81465"
+tier = "D"
+batch = "P"
+needs = "60 rotations over ℚ(√5)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-a5-tensor"
+number = "12.9"
+kind = "proposition"
+title = "The tensor square of the icosahedral triplet"
+optional = false
+source = "chapters/matter-models/03-icosahedron.tex:151"
+book_sha256 = "9fe97501c1887725779678f0867f908859d6efa3c8d0ae68747f0f3d38c85c20"
+tier = "D"
+batch = "B7"
+needs = "character averages over ℚ(√5)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-same-sector"
+number = "12.10"
+kind = "proposition"
+title = "Models I and II share their zero-flux sector"
+optional = false
+source = "chapters/matter-models/03-icosahedron.tex:179"
+book_sha256 = "ea9e95360ecfbba659a6d8c0b57401f4c05e1aea3edf267d763e0d47a172eb8e"
+tier = "D"
+batch = "B7"
+needs = "two models, same sector"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-centre"
+number = "12.12"
+kind = "proposition"
+title = "Triality, and the pair moment"
+optional = false
+source = "chapters/matter-models/04-centre.tex:41"
+book_sha256 = "1979d80c55b6794f185c4eb187ce0bb70d52a4e1ce18a7bd94f8ac3164d25c22"
+tier = "D"
+batch = "B7"
+needs = "C3 × A5 census and moments"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-s1080-orders"
+number = "12.13"
+kind = "proposition"
+title = "Orders from traces"
+optional = false
+source = "chapters/matter-models/05-valentiner.tex:25"
+book_sha256 = "6f6a7949aca265b2f98700eb2bf6403faf6935f1f3c2588d28fe9631e323aa53"
+tier = "D"
+batch = "B7"
+needs = "eigenvalues from traces; classes of S(1080)"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:mm-s1080-tensor"
+number = "12.14"
+kind = "proposition"
+title = "The tensor squares of the Valentiner triplet"
+optional = false
+source = "chapters/matter-models/05-valentiner.tex:116"
+book_sha256 = "c716688535575e1abca15f1380290945229478f99652a74ee532f348a98ab4a1"
+tier = "D"
+batch = "B7"
+needs = "character averages of the Valentiner group"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mm-s1080-agreement"
+number = "12.15"
+kind = "theorem"
+title = "Agreement with $SU(3)$ at two slots"
+optional = false
+source = "chapters/matter-models/05-valentiner.tex:145"
+book_sha256 = "3c0a4d7ba244c462c26fc31cc5f726c287150f06a108273e9368cde41e9001d5"
+tier = "E"
+batch = "B8"
+needs = "the S(1080) side is tier D; the SU(3) census needs SU(3) invariant theory"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:mm-loop"
+number = "12.16"
+kind = "theorem"
+title = "Every loop closes"
+optional = false
+source = "chapters/matter-models/06-misses.tex:31"
+book_sha256 = "6a38a45ad0540ec46b0cee08d9d33451969cc8f722998c3ab9ee8974e54df915"
+tier = "B"
+batch = "B7"
+needs = "exponent of a finite group; the exponents 12, 30, 30, 60 by computation"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:ml-path"
+number = "13.1"
+kind = "proposition"
+title = "Colourless states of a path"
+optional = false
+source = "chapters/matter-laboratory/01-string.tex:52"
+book_sha256 = "a60feab91a77ad30c9541dc8d7c8f9f6e2c6e2b3a753697b5f02e503756e2e6d"
+tier = "C"
+batch = "B7"
+needs = "gauge invariance on a path; census formula"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-string"
+number = "13.2"
+kind = "theorem"
+title = "The string"
+optional = false
+source = "chapters/matter-laboratory/01-string.tex:84"
+book_sha256 = "5439391c0a9265dfa7b018e10f44f4b25aa3341273af45f25a06427919f73925"
+tier = "C"
+batch = "B7"
+needs = "the one colourless line for five groups"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:ml-screening"
+number = "13.3"
+kind = "proposition"
+title = "The screening number"
+optional = false
+source = "chapters/matter-laboratory/01-string.tex:188"
+book_sha256 = "6b4111dde9f8de76c4b386ad01c7fe2ab86d43d8ae96f3c89c615ff65749f15a"
+tier = "D"
+batch = "B7"
+needs = "least screening numbers"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:ml-breaking"
+number = "13.4"
+kind = "proposition"
+title = "Where the string and screened levels cross"
+optional = false
+source = "chapters/matter-laboratory/01-string.tex:241"
+book_sha256 = "726044701d0b80be68459238ca21cac40c308eaccf803d85b534378399645174"
+tier = "D"
+batch = "B7"
+needs = "energy comparison once the declared energies are defined"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:ml-square-states"
+number = "13.5"
+kind = "proposition"
+title = "Colourless states of the empty square"
+optional = false
+source = "chapters/matter-laboratory/02-square.tex:36"
+book_sha256 = "0e92b2642b06b25615a784d169f4047fb96138ef89c17130d8577773fc809be8"
+tier = "D"
+batch = "B7"
+needs = "class functions; class counts 5, 5, 15, 17"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-square-matrix"
+number = "13.6"
+kind = "theorem"
+title = "The magnetic term in the electric basis"
+optional = false
+source = "chapters/matter-laboratory/02-square.tex:113"
+book_sha256 = "9531e461b0f1d14f291bc221180a83a7d2867cdd4a01d50df7b7f1a8b9aee15e"
+tier = "C"
+batch = "B7"
+needs = "character-table columns as eigenvectors"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-square-series"
+number = "13.7"
+kind = "theorem"
+title = "The square to third order"
+optional = false
+source = "chapters/matter-laboratory/02-square.tex:175"
+book_sha256 = "396f0e7000d02c3d15f35a2de62b26f45566b10d83c9ba660f9785749d4bc3b2"
+tier = "E"
+batch = "B8"
+needs = "third-order energy: perturbation theory must be fixed formally"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-transfer"
+number = "13.8"
+kind = "theorem"
+title = "The third-order transfer"
+optional = false
+source = "chapters/matter-laboratory/03-transfer.tex:19"
+book_sha256 = "147ff09b5fc6ee1243c1777bda884bdb44b31b43eaf69caa226816bbe3196e43"
+tier = "E"
+batch = "B8"
+needs = "third-order term of the energy law"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-transfer-values"
+number = "13.9"
+kind = "theorem"
+title = "What the transfer does"
+optional = false
+source = "chapters/matter-laboratory/03-transfer.tex:108"
+book_sha256 = "22db4732516a615ad54a2deb408420653af16e3df6412e46cf78a44002b74973"
+tier = "D"
+batch = "B7"
+needs = "the transfer on named states"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "prop:ml-walk"
+number = "13.10"
+kind = "proposition"
+title = "A baryon on a ring and on the cube"
+optional = false
+source = "chapters/matter-laboratory/03-transfer.tex:178"
+book_sha256 = "48f7f9d5e6c220adc2ba032b714c8af71b0b2d8c6371655671f30f04b6519f24"
+tier = "D"
+batch = "B7"
+needs = "adjacency spectra of the ring and the cube"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[statement]]
+key = "thm:ml-canvas-census"
+number = "13.11"
+kind = "theorem"
+title = "Census of a canvas"
+optional = false
+source = "chapters/matter-laboratory/04-cube.tex:25"
+book_sha256 = "03b59575591b399729a0ea8ed7206b5da53a470084cd23a187363304219cd210"
+tier = "C"
+batch = "B7"
+needs = "class-sum census; 336 465 for the cube group by computation"
+status = "planned"
+lean_statement = ""
+lean_proof = ""
+reviewed = ""
+review_text_sha256 = ""
+review_term_sha256 = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:01-foundations:finite-form"
+number = "1.1"
+title = "Finite form"
+optional = false
+source = "chapters/01-foundations.tex:76"
+book_sha256 = "06916cb47b004a473ad8cb0c72ce464fecaab184e8b385f3607d5fc8142ca3b5"
+planned_home = "Artform.Form (Ch01/Forms)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:01-foundations:perfect-alignment"
+number = "1.2"
+title = "Perfect alignment"
+optional = false
+source = "chapters/01-foundations.tex:564"
+book_sha256 = "a1670775afade0a94f9b3534865ff9afc2b875534943a438f79f9e3ea0e55c87"
+planned_home = "Artform.Align (Ch01/Rods)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:time-rectangular"
+number = "1.5"
+title = "Rectangular tapestry"
+optional = false
+source = "chapters/01-foundations.tex:2300"
+book_sha256 = "f505f7a3e9d8c750ab9ebf65a69fdfe00e00c1a18aa4a34661bedb34979e9739"
+planned_home = "Artform.RectTapestry (Ch01/Time)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:time-history"
+number = "1.6"
+title = "Occurrence history"
+optional = false
+source = "chapters/01-foundations.tex:2568"
+book_sha256 = "7ff647cdd75f83fe8aec6ec2be2bceaabc57d33cb82619725d2bc0badde1a3e5"
+planned_home = "Artform.OccurrenceHistory (Ch01/Time)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:time-ticks"
+number = "1.7"
+title = "Tick realization"
+optional = false
+source = "chapters/01-foundations.tex:2639"
+book_sha256 = "156bae769408bd0dc385eceec5166db365bf7cdd355233ab9da4e63e973e5eab"
+planned_home = "Artform.TickRealization (Ch01/Time)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:time-cyclarchy"
+number = "1.8"
+title = "Finite cyclarchy"
+optional = false
+source = "chapters/01-foundations.tex:2827"
+book_sha256 = "2c0910b503322b67547c39ca12469736ff65f63100a4f230acfd1f3e6d9f35d6"
+planned_home = "Artform.Cyclarchy (Ch01/Time)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:intwit-book"
+number = "1.9"
+title = "Interpretation witness"
+optional = false
+source = "chapters/01-foundations.tex:3946"
+book_sha256 = "3d6bd77f2dbdbeada7e8f5fdb9410cf1aebdd44ed6692fae8f8049d388f1469e"
+planned_home = "Artform.IntWit (Ch01/Meaning)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:finite-cell-pattern"
+number = "1.11"
+title = "Finite cell pattern"
+optional = false
+source = "chapters/01-foundations.tex:4368"
+book_sha256 = "9f70256493815e92038db9b891aefad21e97b7fc61213097ca9f3769539986d8"
+planned_home = "Artform.CellPattern (Ch01/Space)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:geometric-form-book"
+number = "1.12"
+title = "Geometric form and its instances"
+optional = false
+source = "chapters/01-geometric-type.tex:20"
+book_sha256 = "5151b32750c3484d14dfbfb72e6410075bb33d3a13d116fdef35fbb397f72845"
+planned_home = "Artform.GeometricForm (Ch01/Space)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:frame-instance"
+number = "1.13"
+title = "Artform frame and instance"
+optional = false
+source = "chapters/01-foundations.tex:4644"
+book_sha256 = "bba3faa99349944df56fd7ee0deb0a3131124607e03e9d64dc9e2df88bf7d529"
+planned_home = "Artform.Frame, Frame.Instance (Ch01/Frames)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:category-book"
+number = "1.15"
+title = "Category"
+optional = true
+source = "chapters/01-category-cafe.tex:22"
+book_sha256 = "6191ed48894083e55d346fe043d7e1714d4629a1c369afa2d41b47cff72a878e"
+planned_home = "Mathlib CategoryTheory.Category"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:subcategory-book"
+number = "1.17"
+title = "Subcategory"
+optional = true
+source = "chapters/01-category-cafe.tex:150"
+book_sha256 = "cd01607695e9a8c4fca0f3d3ffca11d318734ef7f3a04561d61ab08cf5031d04"
+planned_home = "Mathlib (a MorphismProperty with identities and composition; name to confirm)"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:functor-book"
+number = "1.18"
+title = "Functor"
+optional = true
+source = "chapters/01-category-cafe.tex:369"
+book_sha256 = "01bee0ff0037e5d0c5d5dfc20d58058e104df25e5449b5dbdca832ef5063b9fb"
+planned_home = "Mathlib CategoryTheory.Functor"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:natural-transformation-book"
+number = "1.20"
+title = "Natural transformation"
+optional = true
+source = "chapters/01-category-cafe.tex:594"
+book_sha256 = "b7db056946e58f925a25c63178afbc529d91f1219e27d13ea59b7dab7428e0c2"
+planned_home = "Mathlib CategoryTheory.NatTrans"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:product-book"
+number = "1.21"
+title = "Product"
+optional = true
+source = "chapters/01-category-cafe.tex:713"
+book_sha256 = "4dcf0fd369f8d2bd93c47f5accde4b7bbe428adcf7e0076e2f58072959b4c13c"
+planned_home = "Mathlib Limits.prod"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:coproduct-book"
+number = "1.22"
+title = "Coproduct"
+optional = true
+source = "chapters/01-category-cafe.tex:794"
+book_sha256 = "ae2c2419b58dc97f0ec59173ac481955af8fc49a4a8fe6288dadde18917b08f9"
+planned_home = "Mathlib Limits.coprod"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:exponential-book"
+number = "1.23"
+title = "Exponential"
+optional = true
+source = "chapters/01-category-cafe.tex:867"
+book_sha256 = "68ab3c53365720140afeed0b13d14a8880441f642fcb6808a7fcea794ede1a22"
+planned_home = "Mathlib CartesianClosed"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:pullback-book"
+number = "1.24"
+title = "Pullback"
+optional = true
+source = "chapters/01-category-cafe.tex:1123"
+book_sha256 = "677a2c3a3a74f5aa13ddafc038317d4c923e24b48e0f0fe4acc7b13177d83a84"
+planned_home = "Mathlib Limits.pullback"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:pushout-book"
+number = "1.25"
+title = "Pushout"
+optional = true
+source = "chapters/01-category-cafe.tex:1315"
+book_sha256 = "c3355d4c9bd4d2ca7ee6dd172e374a998a09f1d279e9d617046eb4ddd617a64a"
+planned_home = "Mathlib Limits.pushout"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:adjunction-book"
+number = "1.26"
+title = "Adjunction"
+optional = true
+source = "chapters/01-category-cafe.tex:1377"
+book_sha256 = "ac245142f058caffb3c4266e6dacb2b556b2e81c45f5afd269b5a5d81c4aa157"
+planned_home = "Mathlib CategoryTheory.Adjunction"
+first_needed = "B4"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:topos-book"
+number = "1.28"
+title = "Subobject classifier and topos"
+optional = true
+source = "chapters/01-category-cafe.tex:1453"
+book_sha256 = "a24289697c0beaaf705e1d7f856059a464f632b71c94e22a8f8319eed90dfc3e"
+planned_home = "Mathlib subobject classifier + Artform.IsTopos if Mathlib has no topos class"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:stage"
+number = "2.1"
+title = "Stage frame"
+optional = false
+source = "chapters/02-dynamics.tex:136"
+book_sha256 = "b1ba38d06f993e81b74ae1cf020892f65afd27bda92f8bd03faf9589a41a85ee"
+planned_home = "Artform.Stage (Ch02/Stage)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:legal-state"
+number = "2.2"
+title = "Legal duet state"
+optional = false
+source = "chapters/02-dynamics.tex:210"
+book_sha256 = "9048398a64346d625f9d6b047f4b10216e4f0da55c21fde2b3d0fe06e2e1d252"
+planned_home = "Artform.Duet.LegalState (Ch02/Duet), only if a statement needs it"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:contract"
+number = "2.3"
+title = "Contract"
+optional = false
+source = "chapters/02-dynamics.tex:565"
+book_sha256 = "ca1328884e2b91e8dfb2299a6088605c0e64b7f04b32f698155a3c8b151d463f"
+planned_home = "Artform.Contract (Ch02/Process)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:dance-symmetry"
+number = "2.4"
+title = "Symmetry of a dance"
+optional = false
+source = "chapters/02-dynamics.tex:635"
+book_sha256 = "fcf6014575c613ac07abb352b0f8648dea698e3ca60956033607325b9c3a8939"
+planned_home = "Artform.DanceSymmetry (Ch02/Process)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:process-profile"
+number = "2.5"
+title = "Process profile; enabled application"
+optional = false
+source = "chapters/02-dynamics.tex:741"
+book_sha256 = "160e3351535f1b5450b8958fd9940ba34cb6d0f51ecd6976e1eeb8e79bee8c6f"
+planned_home = "Artform.ProcessProfile, ProcessProfile.Enabled (Ch02/Process)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:batch"
+number = "2.6"
+title = "Compatibility; batch"
+optional = false
+source = "chapters/02-dynamics.tex:860"
+book_sha256 = "c0992acde92bc1b540b7359590bd3b342be3781f70c25a23cd22320965dc9be6"
+planned_home = "Artform.Compatible, Artform.Batch (Ch02/Process)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:slots-phases"
+number = "2.7"
+title = "Slots, phases and checkpoints"
+optional = false
+source = "chapters/02-dynamics.tex:1047"
+book_sha256 = "11eff7e6f5266a7bc87a7ca8383ec496557287fe7975bfc28098fb0560cd40c8"
+planned_home = "Artform.Score (Ch02/Score)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:control-tapestry"
+number = "2.8"
+title = "Control tapestry"
+optional = false
+source = "chapters/02-dynamics.tex:1158"
+book_sha256 = "8752305978d46114cd7aa59c68603af7324ab88ff76a1fd55e1147d9055dd703"
+planned_home = "Artform.ControlTapestry (Ch02/Score)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:trajectory-trace"
+number = "2.9"
+title = "Trajectory; trace"
+optional = false
+source = "chapters/02-dynamics.tex:1190"
+book_sha256 = "580fa2e5a2dc87e35521c84d114c5baadc37a24800b96a60a17822176ee64a3b"
+planned_home = "Artform.Trajectory, Artform.trace (Ch02/Score)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:canvas"
+number = "3.1"
+title = "Finite cellular canvas"
+optional = false
+source = "chapters/03-pattern-geometry.tex:56"
+book_sha256 = "f9ac62072872da55f2a9b38b08fd89e225f2ace0e8e8dba02c6938494e02cc3a"
+planned_home = "Artform.Canvas (Ch03/Canvas), shared by Chapters 5, 6 and 13"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:position-presentation"
+number = "3.2"
+title = "Position presentation"
+optional = false
+source = "chapters/03-pattern-geometry.tex:245"
+book_sha256 = "956da6cd2ef2004f17971fee7b7c8b15138800f76890de676e9362967a8436b1"
+planned_home = "Artform.PositionPresentation (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:geometric-records-book"
+number = "3.5"
+title = "Geometric part and construction records"
+optional = false
+source = "chapters/03-geometric-construction.tex:542"
+book_sha256 = "b1e061f57f90c1d81fe80c35b01de1387da8bbc5886c882bfdc07d15120ab046"
+planned_home = "Artform.GeometricRecord (Ch03/Construction)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:recognition-profile"
+number = "3.6"
+title = "Recognition profile"
+optional = false
+source = "chapters/03-pattern-geometry.tex:372"
+book_sha256 = "fcf75492564a7cd0dbf56eb00a0c4d5a3991406fe581a458a25e694330f5db5b"
+planned_home = "Artform.RecognitionProfile (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:recognition-pattern-book"
+number = "3.7"
+title = "Recognition pattern"
+optional = false
+source = "chapters/03-pattern-geometry.tex:381"
+book_sha256 = "806d13bec6e57d1cf203a0d2d0a81a0f6cd35de97deb25b2ce58688cb79f09a6"
+planned_home = "Artform.RecognitionPattern (Ch03/Recognition)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:strong-occurrence"
+number = "3.8"
+title = "Strong occurrence"
+optional = false
+source = "chapters/03-pattern-geometry.tex:520"
+book_sha256 = "266a4c83e121ab2b24c4b077633c6dd4fed483b7f2e6cec12813ecf14cf4d60c"
+planned_home = "Artform.StrongOccurrence (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:positive-feature-template-book"
+number = "3.9"
+title = "Positive reduct, positive template, positive instantiation"
+optional = false
+source = "chapters/03-pattern-geometry.tex:679"
+book_sha256 = "39b710f46da342db8ea2d85e3e4d97c4ace1d58ebf575e0f3a738d2be0d4959b"
+planned_home = "Artform.PositiveTemplate, Artform.Instantiation (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:partial-positive-comparison"
+number = "3.10"
+title = "Partial positive comparison"
+optional = false
+source = "chapters/03-pattern-geometry.tex:711"
+book_sha256 = "90962a4687898ffb6c5f40ae94edda0ea775279bba578efea9b80e9390402a11"
+planned_home = "Artform.PartialComparison (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:group"
+number = "3.13"
+title = "Group"
+optional = false
+source = "chapters/03-pattern-geometry.tex:826"
+book_sha256 = "4f615e88a50b963eaeddc5a4ae9d4f142e08df04957564c78e9e35234242114f"
+planned_home = "Mathlib Group"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:abelian"
+number = "3.14"
+title = "Abelian"
+optional = false
+source = "chapters/03-pattern-geometry.tex:846"
+book_sha256 = "af80373e2c3065171dff2f157de260dcd7b0bac40f3089265bd63d7ee7f16419"
+planned_home = "Mathlib CommGroup"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:cyclic-group"
+number = "3.15"
+title = "Cyclic group"
+optional = false
+source = "chapters/03-pattern-geometry.tex:946"
+book_sha256 = "2b2cedcf4f9a4d9b337193623977dcf279733344be56fe9a0bfd2b9cc62a855a"
+planned_home = "Mathlib ZMod n, Multiplicative (ZMod n), IsCyclic"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:dihedral-group"
+number = "3.16"
+title = "Dihedral group"
+optional = false
+source = "chapters/03-pattern-geometry.tex:969"
+book_sha256 = "19b967a1d8796dfa8fd07e0f8e21ae9e62ab84351444d67ac7f674eff5a1ff8f"
+planned_home = "Mathlib DihedralGroup n"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:homomorphism"
+number = "3.17"
+title = "Homomorphism, kernel, isomorphism"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1109"
+book_sha256 = "9071824dc170f2b08e09eeea19cb0551d89e3466d4ee4925e16633c5e1f4fb59"
+planned_home = "Mathlib MonoidHom, MonoidHom.ker, MulEquiv"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:conjugacy"
+number = "3.18"
+title = "Conjugacy class"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1123"
+book_sha256 = "562c281de9d8b6c2e326deb88fbe712271a0caf260d3b5c4d8f9b36c9ae88938"
+planned_home = "Mathlib ConjClasses"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:continuous-groups"
+number = "3.19"
+title = "Continuous groups named in this book"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1217"
+book_sha256 = "84d5de169ba8933f106563445c994c593c22fb836aaa4190a086ca3fa9955b13"
+planned_home = "Mathlib Matrix.unitaryGroup, Matrix.specialUnitaryGroup, Circle"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:automorphism-group"
+number = "3.20"
+title = "Automorphism group"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1360"
+book_sha256 = "f1da18f6ea959e1a98b71aaa37f64ce9326178a4e3f03ec11d5c0eb9f1e70bf7"
+planned_home = "Artform.Aut of a recognition profile (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:positive-occurrence-book"
+number = "3.21"
+title = "Template symmetry, atom image, positive occurrence"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1591"
+book_sha256 = "e3658811036b5a4b79a11c5659c9a9f1d68d8d8e967a82199bb52c9e0e99a790"
+planned_home = "Artform.atomImage, Artform.PositiveOccurrence (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:pattern-degree-book"
+number = "3.23"
+title = "Component inventory and degree"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1639"
+book_sha256 = "f6ef6b34cadc3872c1bac61cce31113420c30773d8b59792d766ddfc04a02ba8"
+planned_home = "Artform.componentInventory, Artform.degree (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:atom-disjoint-recurrence-book"
+number = "3.24"
+title = "Atom support and atom-disjoint recurrence"
+optional = false
+source = "chapters/03-pattern-geometry.tex:1675"
+book_sha256 = "32a7890bb9dbd54726e517ef60f22301696014630f84dbe643676df10273dba0"
+planned_home = "Artform.atomSupport (Ch03/Recognition)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:policy"
+number = "3.28"
+title = "Policy"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2095"
+book_sha256 = "a689de83dcbdd8de6bc2aaddb270bf8494034d6d0463be082f02dab3e0c91fb9"
+planned_home = "Artform.Policy (Ch03/Growth)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:fairness"
+number = "3.30"
+title = "Cadence fairness; application fairness"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2200"
+book_sha256 = "d7fcb449ec4364a23143bfe86e51468e1a714d41544557f1310c5b4518d3ea67"
+planned_home = "Artform.CadenceFair, Artform.ApplicationFair (Ch03/Growth)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:windowed-progress"
+number = "3.31"
+title = "Bounded windowed progress"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2222"
+book_sha256 = "e6765f4cf945249e86b9d9d5d182383842dea954ea123a8da73bef2c9bf93de3"
+planned_home = "Artform.WindowedProgress (Ch03/Growth)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:sigma-algebra"
+number = "3.34"
+title = "Sigma-algebra"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2508"
+book_sha256 = "ee0e9bd3662d848034bbd9fc7fd6573a53d7c055310e9e644a67469f99a47ff8"
+planned_home = "Mathlib MeasurableSpace"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:measure"
+number = "3.35"
+title = "Measure"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2554"
+book_sha256 = "6d670c23d8cca72c3bc0837b721c77d982ec75c840ffcc29d6920846c4756dca"
+planned_home = "Mathlib MeasureTheory.Measure"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:measurable-map"
+number = "3.36"
+title = "Measurable map"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2671"
+book_sha256 = "17b02f7c2bf87b319b8283800488b3a83589c3b551a7c84ad3cc83d02bfb3b96"
+planned_home = "Mathlib Measurable"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:measurability"
+number = "3.38"
+title = "Measurability"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2826"
+book_sha256 = "734b4225c4d839a5c1418fc016024e2c96ded48d9feebf688b49d41b365f7d49"
+planned_home = "Mathlib Measurable"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-pattern-geometry:weighted-cellular-content"
+number = "3.41"
+title = "Weighted cellular content"
+optional = false
+source = "chapters/03-pattern-geometry.tex:2951"
+book_sha256 = "1cb4b8bdb571d6ffd5d936ab8f03afece4e4d5d017820444666038c8ca0a9ace"
+planned_home = "Artform.cellularContent (Ch03/Measure)"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:03-reports:events-available-to-a-finite-report"
+number = "4.1"
+title = "Events available to a finite report"
+optional = false
+source = "chapters/probability/03-reports.tex:74"
+book_sha256 = "9dc3f987e7c6c63e437c980a170648a5dc22fc7095923374388c1794231ec63f"
+planned_home = "Mathlib MeasurableSpace.comap of the report map"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "nolabel:05-conditioning:conditioning-on-a-positive-mass-event"
+number = "4.3"
+title = "Conditioning on a positive-mass event"
+optional = false
+source = "chapters/probability/05-conditioning.tex:84"
+book_sha256 = "2b66106cd22e41baf14cbebc45490e5244dcb97aac606429447d742439fe4cbf"
+planned_home = "Mathlib ProbabilityTheory.cond"
+first_needed = "B5"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:tick"
+number = "5.1"
+title = "Deterministic law; tick; run"
+optional = false
+source = "chapters/04-physical-laws.tex:172"
+book_sha256 = "f5f042a750b75bc66ae1ab1e687a17b1e59fa40b2d679f735d1954bfae96866d"
+planned_home = "Artform.DetLaw, DetLaw.run (Ch05/Laws)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:local-law"
+number = "5.2"
+title = "Local law; halo"
+optional = false
+source = "chapters/04-physical-laws.tex:200"
+book_sha256 = "8206b9f9626dc0d724183b74b8cbf829bcb29c6afe1cea92ece1c5a44e7fdd44"
+planned_home = "Artform.LocalLaw, halo (Ch05/Laws)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:law-symmetry"
+number = "5.3"
+title = "Symmetry of a law; conserved reading"
+optional = false
+source = "chapters/04-physical-laws.tex:266"
+book_sha256 = "3cbc23b36b3b66921b5144c2fc1a18e942ef0784e913149000db7bdf2f3c4532"
+planned_home = "Artform.DetLaw.Symmetry, DetLaw.Conserved (Ch05/Laws)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:affine-law"
+number = "5.5"
+title = "Affine law; tally; pairing"
+optional = false
+source = "chapters/04-physical-laws.tex:542"
+book_sha256 = "e8dde76ccbbef4ff92c58853a3c8fef85978c2856dba6a65e2d0c3a45d74fef8"
+planned_home = "Artform.AffineLaw, AffineLaw.tally (Ch05/Noether)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:law"
+number = "5.9"
+title = "Law; move; legal state"
+optional = false
+source = "chapters/04-physical-laws.tex:812"
+book_sha256 = "a8289adc98db7080baa74fbf893bc20bf4b273dcbce803b44c0ffcba892e784c"
+planned_home = "Artform.Law (Ch05/Realizers)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:realizer"
+number = "5.10"
+title = "Realizer; run"
+optional = false
+source = "chapters/04-physical-laws.tex:849"
+book_sha256 = "4457fb4b5da1a71ea864e74c17bbedda7e2c57f4745df7858a8ee8434224d2b2"
+planned_home = "Artform.Realizer (Ch05/Realizers)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:law-steps"
+number = "5.12"
+title = "Law in steps; score; checkpoint; well-posed realizer"
+optional = false
+source = "chapters/04-physical-laws.tex:1195"
+book_sha256 = "cfb518c85de9fd4ffd56103aca3b7e7eb1635ccb1424382a7e40d33c339772b9"
+planned_home = "Artform.LawInSteps (Ch05/Realizers)"
+first_needed = "B1"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:equation-roles"
+number = "5.14"
+title = "Five kinds of equation"
+optional = false
+source = "chapters/04-physical-laws.tex:1573"
+book_sha256 = "5d80ef71473068405fff8edfbd88300d082ffbadd726af443aa3933f10594864"
+planned_home = "prose classification; no Lean counterpart (informal by design)"
+first_needed = "—"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:torsor"
+number = "5.15"
+title = "Right torsor"
+optional = false
+source = "chapters/04-physical-laws.tex:2192"
+book_sha256 = "bc2b1b9027b7e003185a82b4852c841f481756710efa55811249ba3d3a470a19"
+planned_home = "Artform.RightTorsor (Ch05/Gauge); Mathlib has only AddTorsor"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:localization"
+number = "5.17"
+title = "Localization"
+optional = false
+source = "chapters/04-physical-laws.tex:2309"
+book_sha256 = "da321d68a29ea8e9226982c6430613f36b6d01f25c6785bb4bf9f6fb772b36c4"
+planned_home = "Artform.Localization (Ch05/Gauge)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:connection-general"
+number = "5.18"
+title = "Connection"
+optional = false
+source = "chapters/04-physical-laws.tex:2452"
+book_sha256 = "eaa737be02f5c674ed8f8624ad22a2aa07114f8fcac19ab3504ce7afebc4c1ca"
+planned_home = "Artform.Connection (Ch05/Gauge)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:trivialization"
+number = "5.19"
+title = "Trivialization and link table"
+optional = false
+source = "chapters/04-physical-laws.tex:2592"
+book_sha256 = "57e8ad09dc22cbcc5cc64f0a815a7a94c9325100aa00bc25bb2dfc4c02b5b16b"
+planned_home = "Artform.Trivialization, Artform.LinkTable (Ch05/Gauge)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:gauge-group"
+number = "5.21"
+title = "Gauge group and gauge orbit"
+optional = false
+source = "chapters/04-physical-laws.tex:2726"
+book_sha256 = "63e62776abc5dc0192feab957515422260008d98a91b81b202fe35ef69a0b958"
+planned_home = "Artform.GaugeGroup (Ch05/Gauge), orbits by Mathlib MulAction.orbit"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:wilson"
+number = "5.24"
+title = "Class function and Wilson loop"
+optional = false
+source = "chapters/04-physical-laws.tex:3285"
+book_sha256 = "d5dfe70f5e0bac296beb2cf755f690d26d527ef85e638d545718955a9541d748"
+planned_home = "Artform.wilson (Ch05/Gauge)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:curvature-general"
+number = "5.25"
+title = "Face curvature"
+optional = false
+source = "chapters/04-physical-laws.tex:3442"
+book_sha256 = "8b8568d0205ad28e61265d07d8f93c8778773171058086c0ffaff50f8893ada2"
+planned_home = "Artform.curvature (Ch05/Gauge)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:flatness"
+number = "5.26"
+title = "Three kinds of triviality"
+optional = false
+source = "chapters/04-physical-laws.tex:3640"
+book_sha256 = "914911984c08143a17e60340c7f3b6c150d23d01726fdfbd0bbbfce2788b58ec"
+planned_home = "Artform.PureGauge, LoopFlat, FaceFlat (Ch05/Gauge)"
+first_needed = "P"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:matter"
+number = "5.30"
+title = "Matter field and covariant transport"
+optional = false
+source = "chapters/04-physical-laws.tex:3921"
+book_sha256 = "17a73ce64c5d6b51080a54b163880bf3f0a3a033c239c0513766c741ed71479b"
+planned_home = "Artform.MatterField (Ch05/Matter)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:intertwiner"
+number = "5.31"
+title = "Invariant vertex coupling"
+optional = false
+source = "chapters/04-physical-laws.tex:3946"
+book_sha256 = "369013fe0736cb6afc1a4e39b6cd8655f7dc629db57d086257bacc2d017dde3e"
+planned_home = "Artform.Intertwiner (Ch05/Matter)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:gauss"
+number = "5.32"
+title = "Gauss constraint"
+optional = false
+source = "chapters/04-physical-laws.tex:3980"
+book_sha256 = "f86e7e9a5ad43961264b0b53eae01372f7d07e8bb252f74ebeca49bc4d7518e3"
+planned_home = "Artform.Gauss (Ch05/Matter)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:gauge-safe"
+number = "5.33"
+title = "Gauge-safe profile"
+optional = false
+source = "chapters/04-physical-laws.tex:4049"
+book_sha256 = "438d1908ec9f83f9ba1f5c9361c0e18c46d38a59915a27de0270170a6bbf032f"
+planned_home = "Artform.GaugeSafe (Ch05/Matter)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:gauge-covariant-law"
+number = "5.35"
+title = "Gauge-covariant law and realizer"
+optional = false
+source = "chapters/04-physical-laws.tex:4132"
+book_sha256 = "e4474d6b3e60ef241e49b2cf20eaf53ec85a33bec7fa8ce5cf51bc2b50f35d57"
+planned_home = "Artform.GaugeCovariant (Ch05/Matter)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:no-signalling"
+number = "5.41"
+title = "No-signalling halo"
+optional = true
+source = "chapters/04-physical-laws.tex:5615"
+book_sha256 = "ec889e0878bdf5516c750888622075c658f345c2de0c2a0f71b56602a504b7ec"
+planned_home = "Artform.NoSignalling (Ch05/Patterns)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:weave"
+number = "5.43"
+title = "Count; weave; strand"
+optional = true
+source = "chapters/04-physical-laws.tex:5769"
+book_sha256 = "eea5c258b6a1b7dadaa31b6a0129d533984eb604b7f563bf9c8f179b849e7ea8"
+planned_home = "Artform.Count, Artform.Weave (Ch05/Patterns)"
+first_needed = "B2"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:temporal-links"
+number = "6.8"
+title = "Temporal links"
+optional = false
+source = "chapters/05-toy-electrodynamics.tex:1039"
+book_sha256 = "d77fa9153cfd870d383a97d0eb86780d8ba6c1823e319405c63830a89145543f"
+planned_home = "Artform.TemporalLinks (Ch06/Temporal)"
+first_needed = "B3"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "qr:ring"
+number = "7.1"
+title = "Native coefficient ring"
+optional = false
+source = "chapters/quantum-records/02-tallies.tex:84"
+book_sha256 = "f0e7390e7107021453f532bb62a376efd3e84e159833204b3ab9dbf4f8bfcc92"
+planned_home = "Artform.R8, computable, with a ring map to ℂ (Exact/R8)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "qr:coherent-composition"
+number = "7.2"
+title = "Coherent composition"
+optional = false
+source = "chapters/quantum-records/04-composition.tex:19"
+book_sha256 = "29f6e7384e1625c3aaddd9d5ad0ed1b73df15f19276afde71ee9ba282888dfd9"
+planned_home = "Artform.CoherentComp (Ch07/Composition)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-writes"
+number = "11.1"
+title = "Left and right writes"
+optional = false
+source = "chapters/matter-tools/01-tables.tex:29"
+book_sha256 = "a8e349538765a64e470fd1d39a67be8dd19906323d5e9d4d88ab0c30f267e7a9"
+planned_home = "Artform.leftWrite, Artform.rightWrite (Ch11/Tables)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-block"
+number = "11.3"
+title = "Block of an irreducible representation"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:15"
+book_sha256 = "407cc9c48cd1266b8171f9c563182df36acbe79bc5282d4d9c51fa9e2f81e1f7"
+planned_home = "Artform.block (Ch11/Blocks)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-response"
+number = "11.7"
+title = "Electric response and electric read"
+optional = false
+source = "chapters/matter-tools/02-blocks.tex:196"
+book_sha256 = "24115f219bf41d346a9f840731594463d85b91f51a9545c72292d00543b6088b"
+planned_home = "Artform.ElectricResponse (Ch11/Blocks)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-energy"
+number = "11.9"
+title = "Declared electric energy"
+optional = false
+source = "chapters/matter-tools/03-energy.tex:11"
+book_sha256 = "def8e40814bd6c936a9a5756514ddac0456ee1876f15c450dac300c65f29d6e7"
+planned_home = "Artform.electricEnergy (Ch11/Energy)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-sign-rule"
+number = "11.10"
+title = "Sign rule"
+optional = false
+source = "chapters/matter-tools/04-occupation.tex:48"
+book_sha256 = "0b7af03c3e12f4cd55d49ffe718dd713354cb54ea733a35bc5b74f852876b0cc"
+planned_home = "Artform.signRule (Ch11/Occupation)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mt-colourless"
+number = "11.13"
+title = "Colourless states of one edge"
+optional = false
+source = "chapters/matter-tools/05-colourless.tex:12"
+book_sha256 = "e6bcb64cbc0bd1d34db9f9ad5b50d94754ee1213b66f1d46762d33d3c213a9f2"
+planned_home = "Artform.Colourless (Ch11/Colourless)"
+first_needed = "B6"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""
+
+[[definition]]
+key = "def:mm-centre"
+number = "12.11"
+title = "The group $C_3\\times A_5$ and its triplet"
+optional = false
+source = "chapters/matter-models/04-centre.tex:12"
+book_sha256 = "72b4ebbd392a8c1b5ec14b57d73c99c848b77228f91eaab335d8011eb6f4a2c8"
+planned_home = "Artform.C3A5, its triplet (Ch12/Centre)"
+first_needed = "B7"
+status = "planned"
+lean = []
+reviewed = ""
+fidelity = ""

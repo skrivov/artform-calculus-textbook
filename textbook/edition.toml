@@ -1,0 +1,7 @@
+# The edition of the textbook this folder follows.
+name = "chain-of-pairs-2026-09-29"
+number = 52
+date = 2026-09-29
+pages = 1050
+pdf_sha256 = "85fc9729365468a1e8d489d588ebeee1ceb6092e82b8812b7ab0d2f208810ded"
+inventory = "inventory/edition-52.json"

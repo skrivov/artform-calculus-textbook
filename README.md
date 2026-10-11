@@ -18,7 +18,14 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 `Classical.choice` and `Quot.sound`.
 
 <!-- status:begin -->
-No statement is recorded yet.
+| Status | Statements |
+|---|---|
+| proved | 0 |
+| partial | 0 |
+| stated | 0 |
+| planned | 103 |
+| informal | 0 |
+| **total** | **103** |
 <!-- status:end -->
 
 Lean checks proofs, not the choice of a model. The repository does not claim
