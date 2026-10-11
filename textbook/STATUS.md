@@ -8,8 +8,8 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 |---|---|
 | proved | 0 |
 | partial | 0 |
-| stated | 29 |
-| planned | 74 |
+| stated | 35 |
+| planned | 68 |
 | informal | 0 |
 | **total** | **103** |
 
@@ -49,17 +49,17 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` / `Artform.tallyCurrent` | awaits review |
 | 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | stated | `Artform.Statement.lawDecides` / `Artform.lawDecides` | awaits review |
 | 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | stated | `Artform.Statement.finiteWellPosedness` / `Artform.finiteWellPosedness` | awaits review |
-| 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | planned |  |  |
-| 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | planned |  |  |
+| 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | stated | `Artform.Statement.poseTorsor` / `Artform.poseTorsor` | awaits review |
+| 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | stated | `Artform.Statement.connectionCoordinates` / `Artform.connectionCoordinates` | awaits review |
 | 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` / `Artform.holonomyDescent` | awaits review |
 | 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` / `Artform.pureGauge` | awaits review |
-| 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | planned |  |  |
-| 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | planned |  |  |
+| 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | stated | `Artform.Statement.treeGaugeFixing` / `Artform.treeGaugeFixing` | awaits review |
+| 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | stated | `Artform.Statement.flatClassification` / `Artform.flatClassification` | awaits review |
 | 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | planned |  |  |
-| 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | planned |  |  |
+| 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | stated | `Artform.Statement.fiveTicks` / `Artform.fiveTicks` | awaits review |
 | 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` / `Artform.discreteStokes` | awaits review |
 | 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` / `Artform.twoStepReversal` | awaits review |
-| 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | planned |  |  |
+| 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | stated | `Artform.Statement.closedWindow` / `Artform.closedWindow` | awaits review |
 | 5.42 | What a strung run fixes ◊ | `prop:run-fixes` | B | B2 | planned |  |  |
 | 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | stated | `Artform.Statement.hall` / `Artform.hall` | awaits review |
 | 5.45 | A kept count is woven ◊ | `thm:woven` | B | B2 | planned |  |  |
@@ -192,14 +192,14 @@ Book edition followed: the 52nd, `chain-of-pairs-2026-09-29` (1050 pages).
 | 5.10 | Realizer; run | `def:realizer` | defined | `Artform.DetRealizer`, `Artform.LawInSteps.DetRealizer`, `Artform.RelRealizer`, `Artform.Run`, `Artform.StochRealizer` |
 | 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | defined | `Artform.CheckedInvariant`, `Artform.LawInSteps`, `Artform.LawInSteps.DetRealizer.WellPosed`, `Artform.Score` |
 | 5.14 | Five kinds of equation | `def:equation-roles` | planned |  |
-| 5.15 | Right torsor | `def:torsor` | planned |  |
-| 5.17 | Localization | `def:localization` | planned |  |
-| 5.18 | Connection | `def:connection-general` | planned |  |
-| 5.19 | Trivialization and link table | `def:trivialization` | defined | `Artform.Skeleton.LinkTable` |
-| 5.21 | Gauge group and gauge orbit | `def:gauge-group` | defined | `Artform.Skeleton.gaugeAct` |
+| 5.15 | Right torsor | `def:torsor` | defined | `Artform.IsRightTorsor`, `Artform.RightTorsor` |
+| 5.17 | Localization | `def:localization` | defined | `Artform.Skeleton.Localization` |
+| 5.18 | Connection | `def:connection-general` | defined | `Artform.RightTorsor.EquivariantMap`, `Artform.Skeleton.Connection` |
+| 5.19 | Trivialization and link table | `def:trivialization` | defined | `Artform.Skeleton.Connection.linkTable`, `Artform.Skeleton.LinkTable`, `Artform.Skeleton.Trivialization` |
+| 5.21 | Gauge group and gauge orbit | `def:gauge-group` | defined | `Artform.Skeleton.GaugeEquivalent`, `Artform.Skeleton.gaugeAct` |
 | 5.24 | Class function and Wilson loop | `def:wilson` | planned |  |
-| 5.25 | Face curvature | `def:curvature-general` | planned |  |
-| 5.26 | Three kinds of triviality | `def:flatness` | defined | `Artform.Skeleton.LoopFlat`, `Artform.Skeleton.PureGauge` |
+| 5.25 | Face curvature | `def:curvature-general` | defined | `Artform.Canvas.FlatAt`, `Artform.Canvas.curvature` |
+| 5.26 | Three kinds of triviality | `def:flatness` | defined | `Artform.Canvas.FaceFlat`, `Artform.Skeleton.LoopFlat`, `Artform.Skeleton.PureGauge` |
 | 5.30 | Matter field and covariant transport | `def:matter` | planned |  |
 | 5.31 | Invariant vertex coupling | `def:intertwiner` | planned |  |
 | 5.32 | Gauss constraint | `def:gauss` | planned |  |

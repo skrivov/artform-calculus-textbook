@@ -21,6 +21,12 @@ import ArtformTextbook.Ch05.Stokes
 import ArtformTextbook.Ch05.Reversal
 import ArtformTextbook.Ch05.Orbits
 import ArtformTextbook.Ch05.Holonomy
+import ArtformTextbook.Ch05.Torsor
+import ArtformTextbook.Ch05.Connection
+import ArtformTextbook.Ch05.TreeGauge
+import ArtformTextbook.Ch05.FlatClassification
+import ArtformTextbook.Ch05.FiveTicks
+import ArtformTextbook.Ch05.ClosedWindow
 import ArtformTextbook.Ch06.Statements
 import ArtformTextbook.Ch06.Reversible
 import ArtformTextbook.Ch11.Statements
