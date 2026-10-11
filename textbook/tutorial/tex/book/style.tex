@@ -1,0 +1,597 @@
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{microtype}
+\usepackage{mathtools,amssymb,amsthm}
+% Inference rules of the type-theoretic track (Section 1.11 and its boxes).
+\usepackage{mathpartir}
+\usepackage[nointegrals]{wasysym}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{xltabular}
+\usepackage{enumitem}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,fit,matrix,positioning,shapes.geometric,patterns,backgrounds}
+
+% Chess diagrams (2026-09-04, CHESS-RUNNING-EXAMPLE-PLAN.md phase 1).  The
+% pieces are real Staunton figurines from the TeX chess fonts rather than
+% letters in discs: vector, already installed, and with no external asset or
+% attribution obligation in the build.  Dark squares are hatched by the board
+% font, which is the international print convention and is grayscale-safe by
+% construction; the book's flat palette is used for everything drawn *over* a
+% board, so a chess diagram reads as a chess diagram and an annotation reads as
+% one of ours.  Boards are placed inside tikzpictures as nodes, at natural
+% size, so the plate discipline of visual-calculus.tex still applies.
+\usepackage{chessboard}
+\setchessboard{showmover=false,boardfontsize=12pt,labelfontsize=5pt}
+\usepackage{adjustbox}
+% placeins without the [section] option (2026-09-19, whitespace audit at the
+% author's request): the automatic \FloatBarrier at every \section ended a
+% page early whenever a figure was still pending, and left forty-odd pages
+% with a blank tail of a third or more.  A pending figure now goes to the
+% top of the next page and the text fills the page it left; the explicit
+% \FloatBarrier commands in the chapters, placed where a plate must precede
+% what explains it, are unchanged.
+\usepackage{placeins}
+\usepackage{etoolbox}
+\usepackage{needspace}
+% Every \Needspace reserve is capped at four lines (2026-09-19 whitespace
+% audit at the author's request).  The chapters ask for up to 26 lines before
+% a subsection so that a plate would open with it; that reserved half a page
+% and printed as a blank tail whenever less remained.  Four lines keep a
+% heading with the start of its text, which the penalty below also does.
+% (memoir emulates the needspace package; these are memoir's internals.)
+\makeatletter
+\newdimen\Art@needdim
+\let\Art@needsp@\M@needsp@
+\let\Art@sneedsp@\M@sneedsp@
+\renewcommand{\M@needsp@}[1]{\Art@needdim=#1\relax
+  \ifdim\Art@needdim>4\baselineskip \Art@needdim=4\baselineskip\fi
+  \Art@needsp@{\Art@needdim}}
+\renewcommand{\M@sneedsp@}[1]{\Art@needdim=#1\relax
+  \ifdim\Art@needdim>4\baselineskip \Art@needdim=4\baselineskip\fi
+  \Art@sneedsp@{\Art@needdim}}
+\makeatother
+\usepackage[most]{tcolorbox}
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\setstocksize{9.5in}{6.5in}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+\settypeblocksize{6.80in}{4.55in}{*}
+\setlrmarginsandblock{0.80in}{1.15in}{*}
+\setulmarginsandblock{1.05in}{1.65in}{*}
+\checkandfixthelayout
+\setlength{\parindent}{1.1em}
+% Rubber in \parskip is what lets \flushbottom distribute slack across a page
+% instead of dumping it all at the foot.
+\setlength{\parskip}{0.15em plus 0.45em minus 0.05em}
+\setlength{\emergencystretch}{1.5em}
+\linespread{1.17}
+\flushbottom
+% Flush bottom, but with a bounded reservoir of stretch at the foot.  With
+% \flushbottom alone, a page holding a heading, three lines and a tall plate
+% has almost no glue to stretch, so the whole deficit lands in one place and
+% prints as a hole in the middle of the column.  \raggedbottom cures that and
+% costs three times as many short pages.  Giving \@textbottom a finite plus
+% makes the foot compete with the in-page glue in proportion: small deficits
+% still spread invisibly, large ones drain mostly to the foot where a reader
+% expects them.  Measured in tools/measure_whitespace.py.
+\makeatletter
+\def\@textbottom{\vskip\z@\@plus 10pt}
+\makeatother
+\widowpenalty=500
+\clubpenalty=500
+\displaywidowpenalty=500
+% This is a continuous teaching edition: do not manufacture blank versos at
+% front/main/back-matter transitions. Chapter openings still begin on a new
+% page through memoir's openany policy.
+\let\cleardoublepage\clearpage
+\setlength{\textfloatsep}{12pt plus 3pt minus 4pt}
+\setlength{\intextsep}{11pt plus 3pt minus 3pt}
+\setlength{\floatsep}{10pt plus 3pt minus 3pt}
+\renewcommand{\topfraction}{0.88}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.10}
+% 0.76 since the 2026-09-19 whitespace audit (was 0.72): four plates measure
+% 72-75% of the text height and were being set alone on a page with a third
+% of it blank below; at 0.76 they go to the top of a page and text follows.
+% 0.80 was measured too: it produced one overfull page (printed page 392).
+\renewcommand{\floatpagefraction}{0.76}
+% On a page holding only floats, set them at the top and leave the slack at
+% the foot, where a reader expects it (2026-09-19 whitespace audit).  The
+% class default centres them, which prints as a hole above the figure.
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@dblfptop}{0pt}
+\makeatother
+
+\definecolor{ArtNavy}{HTML}{17324D}
+\definecolor{ArtBlue}{HTML}{2E6F9E}
+\definecolor{ArtTeal}{HTML}{2B8A7E}
+\definecolor{ArtOrange}{HTML}{D47A28}
+\definecolor{ArtGold}{HTML}{C49A28}
+\definecolor{ArtPurple}{HTML}{75539A}
+\definecolor{ArtRed}{HTML}{B64A4A}
+\definecolor{ArtGreen}{HTML}{4D8452}
+\definecolor{ArtPaper}{HTML}{F7F4EC}
+\definecolor{ArtGray}{HTML}{5B6570}
+\definecolor{ArtLightBlue}{HTML}{EAF3F8}
+\definecolor{ArtLightGold}{HTML}{FAF3D7}
+\definecolor{ArtLightGreen}{HTML}{EAF4EB}
+\definecolor{ArtLightPurple}{HTML}{F1ECF6}
+\definecolor{ArtLightRed}{HTML}{FAECEA}
+
+% Shared palette for the recurrence/division tapestry and wheel family.
+% Figures 1.24 and 1.25 are the approved rendering baselines.
+\definecolor{solarPaper}{HTML}{FCF9F1}
+\definecolor{solarInk}{HTML}{283749}
+\definecolor{solarMuted}{HTML}{69747D}
+\definecolor{solarLine}{HTML}{C8BC9F}
+\definecolor{solarGold}{HTML}{DAB453}
+\definecolor{solarDeepGold}{HTML}{9D7429}
+\definecolor{solarSelect}{HTML}{AC4D43}
+\definecolor{solarA}{HTML}{FFD700}
+\definecolor{solarB}{HTML}{FFF9E9}
+\definecolor{solarC}{HTML}{536477}
+\definecolor{solarD}{HTML}{DEA46C}
+\definecolor{solarE}{HTML}{81B4A7}
+\definecolor{solarF}{HTML}{B1A0CC}
+\definecolor{solarG}{HTML}{D78B7D}
+\definecolor{solarH}{HTML}{99B18A}
+\definecolor{solarI}{HTML}{E6CA7D}
+\definecolor{solarJ}{HTML}{95B8CF}
+
+% Glass-bead rendering (2026-09-20, the Glass Bead Game of section 1.6 and
+% its plates).  A bead renders one cell or one event; the wire an order or a
+% row; a spacer a seam.  Eight phase beads for Z/8 form a hue wheel so that
+% opposite residues k and k+4 are complementary colours.  FIGURE-STYLE.md,
+% section "Glass-bead family", states the meaning contract.
+\definecolor{beadWire}{HTML}{7A6A4F}
+\definecolor{beadRim}{HTML}{4E5A66}
+\definecolor{beadPost}{HTML}{3E3A33}
+\definecolor{ph0}{HTML}{E06C6C}
+\definecolor{ph1}{HTML}{E9A15C}
+\definecolor{ph2}{HTML}{E3CF62}
+\definecolor{ph3}{HTML}{8FC26B}
+\definecolor{ph4}{HTML}{5FBFB4}
+\definecolor{ph5}{HTML}{6A93D6}
+\definecolor{ph6}{HTML}{9B7FD1}
+\definecolor{ph7}{HTML}{D57DB5}
+
+
+\hypersetup{
+  bookmarksnumbered=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=1,
+  bookmarksdepth=2,
+  pdfpagemode=UseOutlines,
+  colorlinks=true,
+  linkcolor=ArtNavy,
+  citecolor=ArtPurple,
+  urlcolor=ArtBlue,
+  pdftitle={The Artform Calculus: From Typed Constructions to Quantum Gauge Fields},
+  pdfauthor={Sergey Krivov}
+}
+
+% Reuse each heading's existing destination: outline-only entries must not
+% add printed contents lines, extra anchors, or change the page layout.
+\makeatletter
+\newcommand{\bookoutline}[2]{%
+  \bookmark[level=#1,dest=\@currentHref]{#2}}
+% Memoir's numbered-section counter puts its target before the heading
+% paragraph. If the heading moves to the next page, that target can stay
+% behind. Keep the counter data, but emit its target inside the heading's
+% number box, as memhfixc already does for unnumbered section headings.
+\newcommand{\book@headingstep}[1]{%
+  \let\book@savedraisedlink\Hy@raisedlink
+  \let\Hy@raisedlink\@gobble
+  \refstepcounter{#1}%
+  \let\Hy@raisedlink\book@savedraisedlink}
+\patchcmd{\H@old@sectm@m}{\refstepcounter{#1}}{\book@headingstep{#1}}{}
+  {\PackageError{artbook}{Cannot patch numbered-section counter}{Check the memoir/hyperref adapter.}}
+\patchcmd{\H@old@sectm@m}
+  {\protected@edef\@svsec{\@seccntformat{#1}\relax}}
+  {\protected@edef\@svsec{\@seccntformat{#1}\noexpand\Hy@SectionAnchorHref{\@currentHref}\relax}}{}
+  {\PackageError{artbook}{Cannot attach target to section heading}{Check the memoir/hyperref adapter.}}
+\makeatother
+\appto\cfttocbeforelisthook{\bookoutline{0}{Contents}}
+% The categorical rewrite carries the bibliography beyond printed page 999.
+% Reserve room for four-digit page numbers without reducing the text size.
+\setpnumwidth{2.5em}
+\setrmarg{3.5em}
+\indexsetup{othercode={\small\raggedcolumns\bookoutline{0}{Index}}}
+
+\chapterstyle{hangnum}
+\renewcommand*{\chapnumfont}{\normalfont\fontsize{44}{48}\selectfont\color{ArtTeal}}
+\renewcommand*{\chaptitlefont}{\normalfont\Huge\bfseries\color{ArtNavy}}
+\setlength{\beforechapskip}{24pt}
+\setlength{\midchapskip}{10pt}
+\setlength{\afterchapskip}{26pt}
+\setsecheadstyle{\Large\bfseries\color{ArtNavy}}
+\setsubsecheadstyle{\large\bfseries\color{ArtTeal}}
+\setsubsubsecheadstyle{\normalsize\bfseries\color{ArtPurple}}
+\setbeforesecskip{-1.2em plus -0.2em minus -0.2em}
+\setaftersecskip{0.7em}
+
+\makepagestyle{artbook}
+\makeevenhead{artbook}{\small\color{ArtGray}\thepage}{}{\small\color{ArtGray}THE ARTFORM CALCULUS}
+\makeoddhead{artbook}{\small\color{ArtGray}THE ARTFORM CALCULUS}{}{\small\color{ArtGray}\thepage}
+\makeevenfoot{artbook}{}{}{}
+\makeoddfoot{artbook}{}{}{}
+\pagestyle{artbook}
+\aliaspagestyle{chapter}{plain}
+
+\newtheoremstyle{artplain}{0.7em}{0.7em}{\itshape}{}{\bfseries\color{ArtNavy}\artfbkhead}{.}{0.5em}{}
+\theoremstyle{artplain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheoremstyle{artdef}{0.7em}{0.7em}{}{}{\bfseries\color{ArtTeal}\artfbkhead}{.}{0.5em}{}
+\theoremstyle{artdef}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{principle}[theorem]{Principle}
+
+% Not breakable: a Key idea box carries one self-contained thought, and
+% tools/validate_book.py enforces it.  Measured in the 2026-09-19 whitespace
+% audit: seven pages keep a tail of a quarter to a third because the box
+% missed the foot by a line; that is the price of the rule.
+\newtcolorbox{keyidea}[1][]{
+  enhanced,colback=ArtLightBlue,colframe=ArtBlue,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Key idea},fonttitle=\bfseries,#1}
+\newtcolorbox{picturefirst}[1][]{
+  enhanced,breakable,colback=ArtPaper,colframe=ArtTeal,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Picture first},fonttitle=\bfseries,artfbk=picturefirst,#1}
+\newtcolorbox{rolecheck}[1][]{
+  enhanced,colback=ArtLightGold,colframe=ArtGold,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Role check},fonttitle=\bfseries,#1}
+% Retained for historical/pilot documents; removed from the textbook on
+% 2026-09-19 at the author's request, with the front-matter legend entry.
+\newtcolorbox{worked}[1][]{
+  enhanced,breakable,colback=ArtLightGreen,colframe=ArtGreen,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Worked construction},fonttitle=\bfseries,artfbk=worked,#1}
+\newtcolorbox{hypothesis}[1][]{
+  enhanced,colback=ArtLightRed,colframe=ArtRed,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Why the hypothesis matters},fonttitle=\bfseries,#1}
+% Retained for historical/pilot documents; removed from the textbook on
+% 2026-09-19 at the author's request, with the front-matter legend entry.
+\newtcolorbox{formalcorner}[1][]{
+  enhanced,breakable,colback=ArtLightPurple,colframe=ArtPurple,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Formal corner},fonttitle=\bfseries,artfbk=formalcorner,#1}
+% modelboundary and hypothesis are deliberately NOT breakable.  Making them so
+% was tried on 2026-09-04 to close a hole on the page before a long Model
+% boundary box, and it drew a Key idea box on top of a Try it box two pages
+% earlier: with breakable in play tcolorbox mispositioned a later atomic box
+% whose float had moved.  tools/find_overprint.py catches that class of fault;
+% it found this one, and reverting breakable cleared it.
+% Retained for historical/pilot documents; removed from the textbook on 2026-09-18.
+\newtcolorbox{modelboundary}[1][]{
+  enhanced,colback=white,colframe=ArtGray,
+  frame style={dash pattern=on 3pt off 2pt},
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Model boundary},fonttitle=\bfseries,#1}
+% Making `rolecheck' and `checkpoint' breakable was measured on 2026-09-04
+% while closing the whitespace gaps: no overprints appeared, but the pages with
+% more than an inch of conspicuous white went 21 to 21 with both and to 22 with
+% `rolecheck' alone, so neither earns the risk recorded above.  `checkpoint'
+% must stay atomic in any case: the frontmatter promises the answer is just
+% below the question.
+\newtcolorbox{checkpoint}[1][]{
+  enhanced,colback=white,colframe=ArtOrange,
+  boxrule=0.7pt,arc=2pt,left=7pt,right=7pt,top=5pt,bottom=5pt,
+  title={Try it},fonttitle=\bfseries,#1}
+% "Why it is built this way" answers a design question: why the definition has
+% the shape it has, what the obvious alternative would be, and what goes wrong
+% with it. That is a different question from `hypothesis', which shows what
+% breaks when a stated condition is dropped. Added 2026-09-04 for chapter 4,
+% where the design questions are the ones a good reader actually asks.
+\newtcolorbox{design}[1][]{
+  enhanced,breakable,colback=ArtLightGreen,colframe=ArtGreen,
+  boxrule=0.8pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Why it is built this way},fonttitle=\bfseries,artfbk=design,#1}
+% The book no longer opens its chapters with this box: the author removed all
+% thirteen on 2026-09-15 to shorten the edition, and the front matter's list of
+% boxes lost its entry with them.  The definition stays because the pilot
+% documents (quantum-pilots/pilots.tex, matter-pilots) input this file and
+% still use it.  Nothing in chapters/ does.
+\newtcolorbox{chaptergoals}[1][]{
+  enhanced,breakable,colback=ArtPaper,colframe=ArtNavy,
+  boxrule=1pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,
+  title={What you will learn},fonttitle=\bfseries,artfbk=chaptergoals,#1}
+
+% A heading is never left at the foot of a page with nothing under it.
+%
+% This is done with a PENALTY, not by reserving space, and the distinction was
+% expensive to learn.  Both \needspace and \Needspace* reserve room by putting
+% glue on the vertical list ahead of the heading, and glue ahead of a heading
+% that sits under a tcolorbox goes wrong: the reserve is measured against
+% \pagegoal-\pagetotal before the box has finished contributing, so the break
+% is not taken and the heading is set over the box's last line.  That was the
+% overlap at section 4.5, at the Part B divider, on the "Three reading routes"
+% page, and on the first two lines of the table of contents -- intermittent,
+% because it depends on where the break falls.  Reserving space also cannot
+% help against an unplaced float, whose height is likewise unknown at the time
+% the reserve is measured.  Do not reintroduce either macro here.
+%
+% The penalty route asks the paragraph after a heading to keep its first three
+% lines together.  \@afterheading already sets \clubpenalty to \@M for the
+% first line; eTeX's \clubpenalties extends that to the second, so the earliest
+% legal break is after the third line and a heading always carries at least
+% that much with it.  The setting is scoped to the paragraph that follows a
+% heading -- \everypar restores the ordinary \clubpenalty at the next one -- so
+% it costs nothing anywhere else in the book.  Applying \clubpenalties to every
+% paragraph was measured and rejected: it cost five pages.
+% (Diagnosed 2026-09-04.)
+\makeatletter
+\def\@afterheading{%
+  \@nobreaktrue
+  \everypar{%
+    \if@nobreak
+      \@nobreakfalse
+      \clubpenalties 3 \@M \@M \@clubpenalty
+      \if@afterindent \else {\setbox\z@\lastbox}\fi
+    \else
+      \clubpenalties 1 \@clubpenalty
+      \everypar{}%
+    \fi}}
+\makeatother
+
+\NewDocumentCommand{\bookdivision}{s m m}{%
+  % A part divider introduces what follows it, so it must not be the last
+  % thing on a page. Reserve the bar plus the heading and a few lines of the
+  % section it opens; otherwise it strands at a page foot and leaves the rest
+  % of that page empty. (Added 2026-09-04 after chapter 4's Part B divider did
+  % exactly that.)
+  \par\addvspace{1.25em}
+  \IfBooleanTF{#1}{%
+  \begin{tcolorbox}[
+    enhanced,colback=ArtNavy,colframe=ArtNavy,boxrule=0pt,arc=2pt,
+    left=9pt,right=9pt,top=7pt,bottom=7pt,
+    after={\csname tcb@parfillskip@check\endcsname\par\nobreak\smallskip}]
+    \color{white}\sffamily
+    {\Large\bfseries Part #2}\hspace{0.8em}{\large #3}
+  \end{tcolorbox}}{%
+  \begin{tcolorbox}[
+    enhanced,colback=ArtNavy,colframe=ArtNavy,boxrule=0pt,arc=2pt,
+    left=9pt,right=9pt,top=7pt,bottom=7pt]
+    \color{white}\sffamily
+    {\Large\bfseries Part #2}\hspace{0.8em}{\large #3}
+  \end{tcolorbox}}%
+  \phantomsection
+  \addcontentsline{toc}{section}{Part #2: #3}
+  \IfBooleanTF{#1}{%
+  % The starred form keeps the divider with the heading it introduces
+  % (2026-09-23, chapter 5, whose Part B divider stranded at a page foot).
+  % Three breaks are closed. The box's after code is tcolorbox's default
+  % (\par\smallskip) with a \nobreak before the skip. The nobreak flag makes
+  % the \section that follows add neither its break penalty nor its skip, so
+  % that skip is laid here: the same \beforesecskip, and the spacing is
+  % unchanged. And the heading's \color would put a colour whatsit on the
+  % vertical list ahead of the heading paragraph, where the \parskip glue after
+  % it is a legal break; for this one heading the paragraph starts first, so
+  % the colour lands inside it, and the style restores itself at once. The
+  % plain form is unchanged, so no other chapter's pages move.
+  \nobreak\vskip-\beforesecskip\relax
+  \csname @nobreaktrue\endcsname
+  \global\let\bookdivisionsecheadstyle\secheadstyle
+  \gdef\secheadstyle{\noindent\bookdivisionsecheadstyle
+    \global\let\secheadstyle\bookdivisionsecheadstyle}}{%
+  \nobreak\vspace{0.35em}}%
+}
+
+\newenvironment{exercises}{
+  \section*{Exercises}
+  \phantomsection
+  \addcontentsline{toc}{section}{Exercises}
+  % Shrinkable itemsep: a long exercise list may tighten slightly rather than
+  % spill its last one or two items onto an otherwise empty page before the
+  % next chapter. 15 items give about four lines of slack.
+  \begin{enumerate}[label=\textbf{\thechapter.\arabic*},leftmargin=2.8em,
+    itemsep={0.8em plus 0.2em minus 0.32em}]
+}{\end{enumerate}}
+
+% Difficulty dots sit flush right on the last line and never wrap alone.
+\newcommand{\difficulty}[1]{\unskip\nobreak\hfil\penalty50\hskip1em\hbox{}\nobreak\hfil
+  \mbox{\color{ArtOrange}\textbf{#1}}%
+  {\parfillskip=0pt\finalhyphendemerits=0\par}}
+\newcommand{\role}[1]{\textsf{\bfseries\color{ArtPurple}#1}}
+% \term[index entry]{Printed term}: the optional argument is the index entry,
+% for a term printed in a shorter or inflected form (2026-09-23); a capitalised
+% entry keeps its sort key, as in \term[hilbert space@Hilbert space]{Hilbert space}.
+\NewDocumentCommand{\term}{o m}{\textbf{#2}\IfNoValueTF{#1}{\index{#2}}{\index{#1}}}
+% \lawforward opens a paragraph that says what a construction of Chapter 2
+% becomes in the definition of a physical law in Chapter 5 (author, 2026-09-24).
+\newcommand{\lawforward}{\par\noindent{\sffamily\bfseries\color{ArtTeal}In a physical law.}\enspace}
+\newcommand{\cells}{\AFCell}
+\newcommand{\supp}{\operatorname{Supp}}
+\newcommand{\pos}{\AFPos}
+\newcommand{\state}{\AFState}
+\newcommand{\val}{\operatorname{Val}}
+\newcommand{\RowShape}{\operatorname{RowShape}}
+\newcommand{\TempSpec}{\operatorname{TempSpec}}
+\newcommand{\assemble}{\AFAssemble}
+\newcommand{\glue}{\AFGlue}
+\newcommand{\subst}{\AFSubstitute}
+\newcommand{\Align}{\operatorname{Align}}
+\newcommand{\Emb}{\operatorname{Emb}}
+\newcommand{\Place}{\operatorname{Place}}
+% Positive comparison (chapter 3, 2026-09-05): positive reduct, atom image,
+% credited atoms. Plain operators; the witness types are in the registry.
+\newcommand{\AtP}{\operatorname{At}^{+}}
+\newcommand{\aim}{\operatorname{aim}}
+\newcommand{\Pres}{\AFPresentation}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Cont}{\operatorname{Cont}}
+\newcommand{\curl}{\operatorname{curl}}
+\newcommand{\divg}{\operatorname{div}}
+\newcommand{\Hol}{\operatorname{Hol}}
+% Added for the gauge expansion (GAUGE-EXPANSION-PLAN.md phase 0).
+% Plain mathematical operators only. New *public constructor* names
+% (localization, torsor, link table) belong in constructor-registry.tex
+% with a CONSTRUCTOR-NAME-LEDGER.md entry, and are added in the phase
+% that first writes the prose using them.
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Irr}{\operatorname{Irr}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\F}{\mathbb F}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Zmod}[1]{\Z/#1\Z}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\blank}{\square}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\angles}[1]{\langle #1\rangle}
+
+\input{constructor-registry}
+
+\tikzset{
+  book diagram/.style={
+    font=\small,line cap=round,line join=round,
+    show background rectangle,inner frame sep=4pt,
+    background rectangle/.style={
+      fill=ArtPaper!72,draw=ArtGray!24,line width=.45pt,rounded corners=4pt}},
+  cell/.style={draw=ArtNavy,thick,minimum width=7mm,minimum height=7mm,inner sep=1pt},
+  witness/.style={draw=ArtGold,very thick,-{Latex[length=2mm]}},
+  transform/.style={draw=ArtPurple,very thick,-{Latex[length=2.2mm]}},
+  incidence/.style={draw=ArtNavy,thick},
+  control/.style={fill=ArtLightBlue,draw=ArtBlue,thick},
+  state/.style={fill=ArtLightGreen,draw=ArtGreen,thick},
+  derived/.style={fill=ArtLightPurple,draw=ArtPurple,thick},
+  mirror/.style={draw=ArtRed,very thick},
+  root/.style={draw=ArtBlue,very thick,-{Latex[length=2mm]}},
+  lightgrid/.style={draw=ArtGray!35,thin}
+}
+
+% Keep the visual language local to actual figures; tcolorbox and theorem
+% internals also use TikZ and must not inherit the diagram backdrop.
+\AtBeginEnvironment{figure}{%
+  \tikzset{every picture/.append style={book diagram}}%
+}
+
+\input{visual-calculus}
+
+\captionnamefont{\small\bfseries\color{ArtNavy}}
+\captiontitlefont{\small\artfbkfloat}
+\setlength{\abovecaptionskip}{5pt}
+\setlength{\belowcaptionskip}{2pt}
+
+\crefname{enumi}{exercise}{exercises}
+\Crefname{enumi}{Exercise}{Exercises}
+\crefname{theorem}{theorem}{theorems}
+\crefname{proposition}{proposition}{propositions}
+\crefname{lemma}{lemma}{lemmas}
+\crefname{corollary}{corollary}{corollaries}
+\crefname{definition}{definition}{definitions}
+\crefname{example}{example}{examples}
+\crefname{principle}{principle}{principles}
+
+\newtcolorbox{literatureconnection}[1][]{
+  enhanced,breakable,colback=ArtPaper,colframe=ArtTeal,
+  boxrule=0.5pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Connections and sources},fonttitle=\bfseries,
+  fontupper=\small,artfbk=literatureconnection,#1}
+% The optional categorical track (2026-09-22, planning/category-cafe-optional-
+% 2026-09-22). A section, exercise or box marked \optionalmark is optional: it
+% reads the book's constructions in the language of category theory, and no
+% unmarked text depends on it. tools/verify_reading_map.py masks the box the
+% way it masks exercises. The box enters use with the later packets.
+\newcommand*{\optionalmark}{\ensuremath{\lozenge}}
+\newtcolorbox{categoricalview}[1][]{
+  enhanced,breakable,colback=ArtPaper,colframe=ArtPurple,
+  boxrule=0.5pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Categorical view \optionalmark},fonttitle=\bfseries,
+  fontupper=\small,artfbk=categoricalview,#1}
+% The optional type-theoretic track (2026-09-28, planning/type-theory-view-
+% 2026-09-28): Section 1.11 states Martin-Lof's rules behind the book's notation,
+% and one box in each of Sections 2.5, 5.6, 6.4 and 7.4 reads that chapter's
+% construction in them. Marked like the categorical track; nothing unmarked
+% cites it, and tools/verify_reading_map.py masks the box the same way.
+\newtcolorbox{typetheoryview}[1][]{
+  enhanced,breakable,colback=ArtPaper,colframe=ArtNavy,
+  boxrule=0.5pt,arc=2pt,left=7pt,right=7pt,top=6pt,bottom=6pt,
+  title={Type-theoretic view \optionalmark},fonttitle=\bfseries,
+  fontupper=\small,before upper={\setlength{\parskip}{4pt}},artfbk=typetheoryview,#1}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\refl}{\mathsf{refl}}
+\newcommand{\Hist}{\mathsf{Hist}}
+\newcommand{\App}{\mathsf{App}}
+\newcommand{\coef}{\operatorname{coef}}
+\newcommand{\Contact}{\mathsf{Contact}}
+\newcommand{\NoRow}{\mathsf{NoRow}}
+\newcommand{\stepto}[1]{\xrightarrow{\;#1\;}}
+\newcommand{\rulename}[1]{\textsc{#1}}
+
+% ------------------------------------------------------------------ float breaks
+% The author, 2026-09-29: "the figure never break a plate" and "the figure never
+% breaks a theorem". A breakable box, or a theorem-like statement, that runs on
+% to a later page must go on there with no float between its parts: no float page
+% between them, no float below its first part, and none above its last. Nothing
+% in the source says where a float will land, so positions are recorded at
+% shipout, in \jobname.fbk, and tools/find_float_breaks.py reads them.
+% Every mark sits in horizontal mode, inside a line of text: a mark on a vertical
+% list would let \parskip in ahead of the next paragraph and hide \lastskip from
+% \addvspace, and the pages would move. So a statement's start is marked in its
+% head and a box's in its title; the end is marked on the last line, or, when the
+% statement ends in a list, on the list's last line (an L record); a float is
+% marked on its caption. An end mark first removes the space before it, as \par
+% would have: a space left in front of a mark can push a word onto a new line.
+% Fields: record, kind, serial, page count, folio, height from the foot of the
+% page in sp, name. Defining \artfbknoT, \artfbknoE, \artfbknoL, \artfbknoF or
+% \artfbknoB before this file switches off the head, end, list-end, float or
+% box marks, for finding a mark that moves the pages (planning/simpler-models-
+% 2026-09-29/harness): with all five on, the pages are those without any.
+\newwrite\artfbk
+\AtBeginDocument{\immediate\openout\artfbk=\jobname.fbk\relax}
+\newcounter{artfbk}
+\def\artfbkid{0}
+\newcommand\artfbknew{\stepcounter{artfbk}\edef\artfbkid{\arabic{artfbk}}}
+\newcommand\artfbkmark[3]{%
+  \pdfsavepos
+  \begingroup\edef\x{\endgroup\write\artfbk{#1 #2 \artfbkid\space
+    \noexpand\the\noexpand\ReadonlyShipoutCounter\space\noexpand\thepage\space
+    \noexpand\the\noexpand\pdflastypos\space #3}}\x}
+\makeatletter
+\let\artfbkpending\@empty
+\newcommand\artfbkhead{\ifdefined\artfbknoT\else\ifx\artfbkpending\@empty\else
+  \global\let\artfbkpending\@empty\artfbkmark{S}{thm}{\@currentlabel}\fi\fi}
+\def\artfbkthm{\artfbknew\gdef\artfbkpending{x}}
+\def\artfbkend#1{\ifdefined\artfbknoE\else\ifhmode\ifnum\lastnodetype=-1 \else
+  \unskip\artfbkmark{E}{#1}{}\fi\fi\fi}
+\@for\artfbkenv:={theorem,proposition,lemma,corollary,definition,example,principle}\do{%
+  \expandafter\AtBeginEnvironment\expandafter{\artfbkenv}{\artfbkthm}%
+  \expandafter\AtEndEnvironment\expandafter{\artfbkenv}{\artfbkend{thm}}}
+\@for\artfbkenv:={enumerate,itemize,description,center,quote,quotation,flushleft,flushright}\do{%
+  \expandafter\AtEndEnvironment\expandafter{\artfbkenv}{\ifdefined\artfbknoL\else\ifhmode\unskip\artfbkmark{L}{any}{}\fi\fi}}
+% a statement or box that ends in a display leaves an empty paragraph after it,
+% which TeX discards; a mark there would print it as a blank line, so the end is
+% marked inside the display instead
+\@for\artfbkenv:={equation,equation*,align,align*,gather,gather*,multline,multline*,mathpar}\do{%
+  \expandafter\AtEndEnvironment\expandafter{\artfbkenv}{\ifdefined\artfbknoL\else\artfbkmark{L}{any}{}\fi}}
+\def\artfbk@figure{figure}\def\artfbk@table{table}
+\newcommand\artfbkfloat{\ifdefined\artfbknoF\else\artfbkfloatmark\fi}
+\newcommand\artfbkfloatmark{\ifnum0\ifx\@currenvir\artfbk@figure1\fi\ifx\@currenvir\artfbk@table1\fi>0
+  \begingroup\def\artfbkid{0}\artfbkmark{F}{float}{\@currentlabel}\endgroup\fi}
+\makeatother
+\tcbset{artfbk/.style={before title app={\ifdefined\artfbknoB\else\leavevmode\artfbkmark{S}{box}{#1}\fi},
+  after upper pre={\artfbkend{box}}}}
+\makeatletter\@for\artfbkenv:={picturefirst,worked,formalcorner,design,chaptergoals,literatureconnection,categoricalview,typetheoryview}\do{%
+  \expandafter\AtBeginEnvironment\expandafter{\artfbkenv}{\artfbknew}}
+\makeatother
+

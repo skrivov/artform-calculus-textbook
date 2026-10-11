@@ -1,0 +1,263 @@
+% Part I of the guide "Lean through Artform Calculus": the basics of Lean,
+% written 2026-10-09 at the author's request ("Add 10 pages in the beginning
+% explaining the basics of lean in an accessible way"). Every listing is cut
+% from ../LeanBasics.lean, which Lean 4.34.1 accepts; each answer of Lean
+% quoted here is pinned there with #guard_msgs.
+\chapter*{Part I. The basics of Lean}
+\addcontentsline{toc}{chapter}{Part I. The basics of Lean}
+
+Lean is a programming language in which programs and proofs are written in
+one notation and checked by one program. A Lean file is a list of
+declarations. Lean reads the file from top to bottom, and for each
+declaration it either accepts it or says what is wrong with it. This part
+teaches enough of the language to read Part~II, which writes the
+constructions of Chapter~1 of the book in Lean. It assumes no experience of
+programming.
+
+Every example was checked by Lean~4.34.1. A comment after \lc{-{}-} at the
+end of a line shows what Lean answers to that line. Where Lean refuses a line,
+its message follows the listing, as Lean prints it.
+
+\section*{Running Lean}
+\addcontentsline{toc}{section}{Running Lean}
+
+The quickest way to start needs nothing installed. The Lean playground at
+\url{https://live.lean-lang.org} is an editor in the browser: type on the
+left, and Lean answers on the right. For longer work, install the editor
+VS~Code and its official Lean~4 extension. The extension installs Lean
+itself and checks a file while it is being typed. Lean's answers appear in a
+panel beside the text, called the \emph{infoview}, and an error is
+underlined in red where it occurs. Lean also runs in a terminal:
+\lc{lean Basics.lean} checks the file \lc{Basics.lean} and prints the answers
+and the errors.
+
+The examples of this guide are in the folder \lc{textbook/tutorial} of the
+repository that holds it. Part~I's are in \lc{LeanBasics.lean} and
+Part~II's in \lc{ArtformChapter1.lean}. Those files check every answer
+quoted here, so an editor shows nothing while the answers are right. The
+folder \lc{play} holds copies without the checks, which show every answer
+in the infoview. To try them, copy \lc{play} to a folder outside the
+repository and open it in VS~Code; inside the repository, the editor would
+first set up the whole project, Mathlib included.
+
+The examples use Lean's core language only. Most mathematicians who use Lean
+also use Mathlib, a large library of mathematics written in Lean; nothing
+here needs it.
+
+\section*{Values and types}
+\addcontentsline{toc}{section}{Values and types}
+
+Every expression in Lean has a type. Two commands ask about an expression:
+\li!#check! shows its type, and \li!#eval! computes its value.
+\leanlisting{bvalues}
+The colon is read \emph{has type}, as in the book: \li!2 + 3 : Nat! says that
+$2+3$ is a natural number. \li!Nat! is the type of the natural numbers,
+\li!String! of texts, \li!Nat × String! of pairs of a number and a text, and
+\li!List Nat! of lists of numbers. A text is written between double quotes,
+and \li!++! joins two texts.
+
+Numbers need care. \li!Nat! has no negative numbers, so subtraction stops at
+zero, and division of natural numbers drops the remainder, which \li!%!
+gives. To compute in another type, write the expression with its type,
+\li!(e : T)!. On the integers \li!Int! subtraction goes below zero, and on
+the rationals \li!Rat! division is exact:
+\leanlisting{bnumbers}
+The last line is the sum $\frac14+\frac13=\frac7{12}$ of
+\cref{fig:wheel-refinement}. Lean prints a rational with its type.
+
+\section*{Definitions and functions}
+\addcontentsline{toc}{section}{Definitions and functions}
+
+\li!def! gives a name to a value. The name comes first; then the inputs, each
+in parentheses with its type; then a colon and the type of the result; and
+then \lc{:=} and the value.
+\leanlisting{bdefs}
+A function is applied by writing it before its input, without parentheses:
+\li!double 21!. Parentheses only group, as in \li!double (double 3)!.
+\li!#check! of a defined name shows its inputs and the type of its result.
+
+A function is a value, and \li!fun! builds one without a name:
+\li!fun n => 2 * n! is the function $n\mapsto2n$, of type \li!Nat → Nat!. A
+function of two inputs takes them one at a time, so \li!add 2! is again a
+function: the one that adds two to its input.
+\leanlisting{bfunctions}
+The first input of \li!twice! is a type, $\alpha$. The braces make it
+\emph{implicit}: Lean works out $\alpha$ from the other inputs, here
+\li!Nat!, and the caller does not write it. \li!twice double 3! doubles $3$
+twice.
+
+\section*{Definitions by cases, and recursion}
+\addcontentsline{toc}{section}{Definitions by cases, and recursion}
+
+A definition may be given case by case, with one line for each form the input
+can take. A natural number is either $0$ or $n+1$ for a smaller number $n$,
+and on the line for $n+1$ the definition may use itself at $n$:
+\leanlisting{brecursion}
+So \li!sumTo 4! is $4+3+2+1+0=10$, the ten points of the tetractys
+(\cref{sec:interpretation}). Lean accepts such a definition only after two
+checks: every case is covered, and every call of \li!sumTo! inside it is at a
+smaller number, so that the computation ends. A definition that leaves a case
+out is refused:
+\leanlisting{bmissing}
+\leanmessage{bmissing}
+The message names the case that was left out: a number of the form $n+1$,
+which Lean writes as \li!Nat.succ _!.
+
+\section*{Inductive types}
+\addcontentsline{toc}{section}{Inductive types}
+
+A new type is made by listing the ways to build its values. Each line names a
+\emph{constructor} and says what it takes. A colour is light or dark, and a
+tree is either a leaf carrying a letter or a node joining two trees:
+\leanlisting{binductive}
+Every value of the type is built by its constructors, and only by them;
+\cref{sec:rules-view} calls them the introduction rules. A function on a type
+is defined by cases, one for each constructor, and on a node it may use
+itself on the two smaller trees. The tree built from $a$, $b$ and $c$ below
+has three leaves, as the construction trees of \cref{sec:formation-lines}
+have one leaf for each atom.
+\leanlisting{btreesize}
+Two pieces of notation appear here. \li!Tree.size! is the function \li!size!
+belonging to the type \li!Tree!, and for a tree \li!t!, \li!t.size! means
+\li!Tree.size t!. Where Lean already knows that a tree is meant, \li!.leaf!
+means \li!Tree.leaf!. The natural numbers are an inductive type too, with the
+two constructors \li!zero! and \li!succ!, and the cases \li!0! and \li!n + 1!
+of \li!sumTo! are these two.
+
+\section*{Structures}
+\addcontentsline{toc}{section}{Structures}
+
+A \emph{structure} is a type of records with named fields. A value gives its
+fields either by name or in order between angle brackets, and a field is read
+with a dot:
+\leanlisting{bstructure}
+A structure is an inductive type with one constructor, which takes all the
+fields, and \li!⟨2, 5⟩! applies that constructor.
+
+\section*{Types that depend on values}
+\addcontentsline{toc}{section}{Types that depend on values}
+
+Types are values too: \li!Nat! has type \li!Type!. So a function may return a
+type, and a type may depend on a number. \li!Fin n! is the type of the
+numbers below $n$, the cells of the book's rod $R_n$. A value of it is a
+number together with a proof that the number is below $n$, written between
+angle brackets. The words \li!by decide! ask Lean to find the proof itself,
+by computing.
+\leanlisting{bfin}
+The second line shows a trap. A bare numeral in \li!Fin 5! is read modulo
+$5$, so \li!7! is accepted and means $2$, and nothing checks that $7$ is not
+a cell of $R_5$. Part~II writes cells with their proofs for this reason.
+
+A function whose output type depends on its input is a \emph{dependent
+function}. \li!last n! is the largest number below $n+1$, and its type
+\li!Fin (n + 1)! changes with $n$. Its proof, \li!by omega!, asks Lean to show
+$n<n+1$ by arithmetic.
+\leanlisting{bdependent}
+The type of \li!last! is written \li!(n : Nat) → Fin (n + 1)!: it is the
+book's $\AFDepFun_{n:\mathbb N}\mathsf{Fin}(n+1)$. In a \emph{dependent pair}
+the type of the second entry depends on the first: a value of
+\li!(n : Nat) × Fin n! is a number $n$ together with a number below it, the
+book's $\AFDepPair_{n:\mathbb N}\mathsf{Fin}(n)$. The pair \li!p! is $3$ with
+$1$.
+
+\section*{Propositions are types}
+\addcontentsline{toc}{section}{Propositions are types}
+
+A proposition is a type as well, of the sort \li!Prop!, and a proof of it is a
+value of that type. The equation \li!2 + 3 = 5! is a proposition, and
+\li!rfl! is a proof of it, because both sides compute to $5$. \li!example!
+states a proposition and gives its proof; \li!theorem! does the same and
+gives the proof a name.
+\leanlisting{bprop}
+A false proposition has no proof. Asked to decide one by computing, Lean
+answers that it is false:
+\leanlisting{bfalse}
+\leanmessage{bfalse}
+
+The logical connectives are types built from types. A proof of an
+implication $p\to q$ is a function that turns any proof of $p$ into a proof of
+$q$. A proof of $p\wedge q$ is a pair of proofs. A proof of
+$\exists x,\,P(x)$ is a pair: a witness $x$ together with a proof of $P(x)$. A
+proof of $\forall x,\,P(x)$ is a dependent function, giving a proof of $P(x)$
+for every $x$. \li!False! is the proposition with no proof, and $\neg p$ means
+$p\to$\,\li!False!.
+\leanlisting{bconnectives}
+The first line proves $p\to p$ by the function that returns its input. The
+second pairs two proofs. The third gives the witness $3$ with the proof that
+$3\cdot3=9$. A proof of an existence statement is a witness with its
+evidence, the shape of every witness in the book.
+
+\section*{Tactics}
+\addcontentsline{toc}{section}{Tactics}
+
+A long proof is easier to build in steps. After \li!by! come \emph{tactics}:
+commands that each change the \emph{goal}, the statement still to be proved,
+until nothing is left to prove. In the editor the infoview shows the goal
+after each step. These are the tactics this text uses:
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.17\textwidth} >{\raggedright\arraybackslash}X@{}}
+\toprule
+Tactic & What it does\\ \midrule
+\lc{rfl} & proves an equation whose two sides compute to one value\\
+\lc{decide} & checks a statement about finitely many cases by computing each\\
+\lc{omega} & proves facts of integer arithmetic: $+$, $-$, $\le$, $<$, and products, quotients and remainders by fixed numbers\\
+\lc{intro h} & begins a proof of $p\to q$ by assuming $p$ and naming its proof \lc{h}\\
+\lc{exact e} & finishes the goal with the proof \lc{e}\\
+\lc{cases}, \lc{induction} & split the goal by the constructors of a value\\
+\lc{simp} & rewrites the goal with definitions and known equations\\
+\lc{grind} & searches for a proof by combining the facts at hand\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\leanlisting{btactics}
+The first proof assumes $p$ and $p\to q$, then applies the second to the
+first. The second is arithmetic. The third checks, for the ten numbers below
+$10$, that a square leaves remainder $0$ or $1$ on division by $4$, never $2$.
+
+Induction proves a statement for every natural number from two cases, $0$
+and $n+1$; in the second case the statement for $n$ may be used. Here it
+proves Gauss's formula $2(1+2+\cdots+n)=n(n+1)$:
+\leanlisting{bgauss}
+In the case \li!succ n! the name \li!ih! stands for the formula at $n$.
+\li!simp only [sumTo]! unfolds \li!sumTo! once, at $n+1$, and \li!grind!
+finishes the algebra.
+
+\section*{Arguments that Lean finds}
+\addcontentsline{toc}{section}{Arguments that Lean finds}
+
+An input in square brackets is supplied by Lean, not by the caller.
+\li![Add α]! asks for an addition on the type $\alpha$. Lean has one for
+\li!Nat!, \li!Int! and \li!Rat!, so one definition serves all three:
+\leanlisting{binstances}
+Such an input is called an \emph{instance}, and the family of instances it
+belongs to a \emph{class}. \li!decide! works in the same way: it asks for an
+instance that says how to decide the statement, and Lean comes with instances
+for numbers, for the types \li!Fin n!, and for statements built from them.
+Part~II adds one class of its own, \li!Listed!, for the finite types of
+Chapter~1.
+
+\section*{Reading Lean's messages}
+\addcontentsline{toc}{section}{Reading Lean's messages}
+
+The commonest message is a type mismatch. It shows an expression, the type
+it has, and the type Lean expected there:
+\leanlisting{bmismatch}
+\leanmessage{bmismatch}
+Read it from the bottom. Lean expected a \li!Nat! on the right of \li!=!,
+because the left side, \li!double 2!, is a \li!Nat!, and it found a
+\li!String!. A misspelt name is reported as unknown:
+\leanlisting{bunknown}
+\leanmessage{bunknown}
+When a message is hard to read, \li!#check! on the parts of the expression
+usually shows which type is not the one meant.
+
+\begin{literatureconnection}[title={Further reading}]
+Avigad, de~Moura, Kong and Ullrich teach Lean from its types and tactics, in
+the order of this part and much further \cite{AvigadTPIL}. Christiansen
+teaches Lean as a programming language \cite{ChristiansenFPIL}. Avigad and
+Massot teach mathematics in Lean with Mathlib \cite{AvigadMassotMIL}.
+\end{literatureconnection}

@@ -1,9 +1,13 @@
 # The textbook in Lean
 
 This folder holds the Lean statements and proofs of the numbered statements
-of *Artform Calculus*. The guide *Lean through Artform Calculus* will join
-them here.
+of *Artform Calculus*, and the guide *Lean through Artform Calculus*.
 
+- `lean-through-artform-calculus.pdf`: the guide. Part I teaches the basics
+  of Lean; Part II writes the constructions of Chapter 1 of the book in Lean.
+- `tutorial/`: the guide's Lean files (`LeanBasics.lean`,
+  `ArtformChapter1.lean`, checked on every build), copies without the checks
+  for an editor (`play/`), the LaTeX sources (`tex/`) and `build.sh`.
 - `ArtformTextbook/`: the library.
   - `Meta/Book.lean` defines the attribute `@[book "label"]`, which ties a
     Lean declaration to the statement or definition of the book with that

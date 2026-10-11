@@ -17,7 +17,7 @@ jobs:
           axiom-audit: true
           axiom-audit-root: "Artform"
           leanchecker: true
-          leanchecker-args: "ArtformTextbook"
+          leanchecker-args: "ArtformTextbook LeanBasics ArtformChapter1"
         env:
           LEAN_NUM_THREADS: "1"   # lean-action's advice for leanchecker with Mathlib
       - name: Status report
@@ -27,12 +27,14 @@ jobs:
           python3 scripts/status.py --check
       - name: Files
         run: python3 scripts/check_tree.py
-      # textbook/RELEASE-NOTES.md is written for each release; the guide's PDF
-      # is attached from the first release on.
-      - name: Publish the release
+      - name: The guide's PDF is built from the current sources
+        run: python3 textbook/tutorial/tools/extract_listings.py --check
+      # textbook/RELEASE-NOTES.md is written for each release.
+      - name: Publish the release with the guide
         env:
           GH_TOKEN: ${{ github.token }}
         run: >
           gh release create "$GITHUB_REF_NAME"
+          textbook/lean-through-artform-calculus.pdf
           --title "$GITHUB_REF_NAME"
           --notes-file textbook/RELEASE-NOTES.md

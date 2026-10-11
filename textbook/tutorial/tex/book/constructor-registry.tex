@@ -1,0 +1,148 @@
+% Textbook adapters to the corpus-wide CN-1 public vocabulary.
+% Definitions and interfaces are owned by ../NOTATION.md and ../CONSTRUCTORS.md.
+% Historical source spellings remain in CONSTRUCTOR-NAME-LEDGER.md.
+
+% Sorts and role-indexed families.
+\newcommand{\OrderedForm}{\AFOrderedForm}
+\newcommand{\TimeForm}{\AFTimeForm}
+\newcommand{\PointedTimeForm}{\AFPointedTimeForm}
+\newcommand{\TapestryForm}{\AFTapestryForm}
+\newcommand{\CellForm}{\AFCellForm}
+\newcommand{\ChromoForm}{\AFChromoForm}
+\newcommand{\Presentation}{\AFPresentation}
+\newcommand{\State}{\AFState}
+\newcommand{\Witness}{\AFWitness}
+\newcommand{\Script}{\AFScript}
+\newcommand{\Scheduler}{\AFScheduler}
+\newcommand{\Observable}{\AFObservable}
+\newcommand{\Rendering}{\AFRendering}
+
+% Finite kernel and ordered arithmetic.
+\newcommand{\FinCode}{\AFFinCode}
+\newcommand{\History}{\AFHistory}
+\newcommand{\Empty}{\AFEmpty}
+\newcommand{\Atom}{\AFAtom}
+\newcommand{\TypedAtom}{\AFTypedAtom}
+\newcommand{\ValuedAtom}{\AFValuedAtom}
+\newcommand{\Index}{\AFIndex}
+\newcommand{\Replicate}{\AFReplicate}
+\newcommand{\Assemble}{\AFAssemble}
+\newcommand{\OrderedAssemble}{\AFAssemble^{\mathrm{ord}}}
+\newcommand{\Glue}{\AFGlue}
+\newcommand{\Substitute}{\AFSubstitute}
+\newcommand{\Normalize}{\AFNormalize}
+\newcommand{\NatForm}{\AFNatForm}
+\newcommand{\Rod}{\AFRod}
+\newcommand{\SegmentedRod}{\AFSegmentedRod}
+\newcommand{\ProductRod}{\AFProductRod}
+\newcommand{\GridView}{\AFGridView}
+\newcommand{\Wheel}{\AFWheel}
+\newcommand{\RatioForm}{\AFRatioForm}
+\newcommand{\PerfectAlign}{\AFPerfectAlign}
+\newcommand{\AddWitness}{\AFAddWitness}
+\newcommand{\MulWitness}{\AFMulWitness}
+
+% Time, tapestry, and dynamics.
+\newcommand{\LinearTime}{\AFLinearTime}
+\newcommand{\CycleTime}{\AFCycleTime}
+\newcommand{\PointTime}{\AFPointTime}
+\newcommand{\Clock}{\AFClock}
+\newcommand{\SampleClock}{\AFSampleClock}
+\newcommand{\Orb}{\AFOrb}
+\newcommand{\RectTapestry}{\AFRectTapestry}
+\newcommand{\EventTapestry}{\AFEventTapestry}
+\newcommand{\TemporalCode}{\AFTemporalCode}
+\newcommand{\ProcessProfile}{\AFProcessProfile}
+\newcommand{\SchedulerPolicy}{\AFSchedulerPolicy}
+\newcommand{\CompatibleBatch}{\AFCompatibleBatch}
+\newcommand{\Sweep}{\AFSweep}
+\newcommand{\Trajectory}{\AFTrajectory}
+\newcommand{\TraceTapestry}{\AFTraceTapestry}
+\newcommand{\ConcurrencyWitness}{\AFConcurrencyWitness}
+
+% Cellular and pattern geometry.
+\newcommand{\Canvas}{\AFCanvas}
+\newcommand{\SquareGrid}{\AFSquareGrid}
+\newcommand{\Quotient}{\AFQuotient}
+\newcommand{\AttachCell}{\AFAttachCell}
+\newcommand{\Refine}{\AFRefine}
+% Recognition modes. The ledger keeps all three: Match is the general family
+% of profile correspondences, Occurrence its strong mode, Placement the
+% preserve-only mode. They share a register because they share a family.
+\newcommand{\Match}{\AFMatch}
+\newcommand{\GeometricForm}{\AFGeometricForm}
+\newcommand{\RecognitionPattern}{\AFRecognitionPattern}
+\newcommand{\Occurrence}{\AFOccurrence}
+\newcommand{\Placement}{\AFPlacement}
+% Positive comparison and observation. Added 2026-09-05 with the
+% science-of-art foundation (SCIENCE-OF-ART-FOUNDATION-GRAFT.md); the naming
+% decisions are recorded in CONSTRUCTOR-NAME-LEDGER.md.
+\newcommand{\Instantiation}{\AFInstantiation}
+\newcommand{\Observe}{\AFObserve}
+\newcommand{\SampledPicture}{\AFSampledPicture}
+\newcommand{\ObservationProtocol}{\AFProtocol}
+\newcommand{\FeatureState}{\AFFeatureState}
+\newcommand{\Token}{\AFToken}
+\newcommand{\PatchWitness}{\AFPatchWitness}
+\newcommand{\Realization}{\AFRealization}
+\newcommand{\Realize}{\AFRealize}
+\newcommand{\Run}{\AFRun}
+\newcommand{\Realizer}{\AFRealizer}
+\newcommand{\Interpret}{\AFInterpret}
+% Interpretation witnesses.  The generic core is a dependent pair of a
+% realizer and its profile-specific law certificate; the named forms below
+% are conservative specializations used by the textbook.
+\newcommand{\IntWit}{\AFIntWit}
+\newcommand{\Sem}{\AFSem}
+\newcommand{\PointedInt}{\AFPointedInt}
+\newcommand{\ObsIntWit}{\AFObsIntWit}
+\newcommand{\MatchIntWit}{\AFMatchIntWit}
+\newcommand{\CoordIntWit}{\AFCoordIntWit}
+\newcommand{\GaugeObsIntWit}{\AFGaugeObsIntWit}
+\newcommand{\GaugeSafeRecIntWit}{\AFGaugeSafeRecIntWit}
+\newcommand{\SubstitutionStage}{\AFSubstitutionStage}
+
+% Gauge constructors. Added 2026-09-04 with the general gauge sections of
+% chapter 4; the naming decision is recorded in CONSTRUCTOR-NAME-LEDGER.md 4.8.
+\newcommand{\Torsor}{\AFTorsor}
+\newcommand{\PoseOrbit}{\AFPoseOrbit}
+\newcommand{\Localize}{\AFLocalize}
+\newcommand{\LinkTable}{\AFLinkTable}
+
+% Measure and physical application layer.
+\newcommand{\Tally}{\AFTally}
+\newcommand{\Content}{\AFContent}
+\newcommand{\CoefficientProfile}{\AFCoefficientProfile}
+\newcommand{\Field}{\AFField}
+\newcommand{\Connection}{\AFConnection}
+\newcommand{\Chromo}{\AFChromo}
+\newcommand{\ChromoState}{\AFChromoState}
+\newcommand{\RewriteApplication}{\AFRewriteApplication}
+\newcommand{\LawSpec}{\AFLawSpec}
+\newcommand{\MaxwellState}{\AFMaxwellState}
+
+% Judgments. These macros make the role visible in display mathematics.
+\newcommand{\forms}[1]{\vdash #1\;\mathsf{form}}
+\newcommand{\states}[2]{#1:#2}
+\newcommand{\witnesses}[3]{#1:#2\rightsquigarrow #3}
+\newcommand{\scripts}[3]{#1:#2\longrightarrow #3}
+\newcommand{\constructs}[3]{#1\mathrel{\xrightarrow{\ #2\ }}#3}
+\newcommand{\reduces}[3]{#1\mathrel{\xrightarrow[\mathrm{forget}]{\ #2\ }}#3}
+
+% Temporal counting and conservative record interfaces.
+\newcommand{\Cyclarchy}{\AFCyclarchy}
+\newcommand{\OccurrenceHistory}{\AFOccurrenceHistory}
+\newcommand{\TickRealization}{\AFTickRealization}
+\newcommand{\DurationRecord}{\AFDurationRecord}
+\newcommand{\EventAssociation}{\AFEventAssociation}
+\newcommand{\CalibrationRecord}{\AFCalibrationRecord}
+\newcommand{\Elapsed}{\AFElapsed}
+
+% Qualified spatial measurement interfaces.
+\newcommand{\MeasurandSpec}{\AFMeasurandSpec}
+\newcommand{\QuantityValue}{\AFQuantityValue}
+\newcommand{\MetricContentRecord}{\AFMetricContentRecord}
+\newcommand{\SpatialAssociation}{\AFSpatialAssociation}
+\newcommand{\SpatialCalibrationRecord}{\AFSpatialCalibrationRecord}
+\newcommand{\SpatialMeasurementWitness}{\AFSpatialMeasurementWitness}
+\newcommand{\SpatialRead}{\AFSpatialRead}

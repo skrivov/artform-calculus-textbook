@@ -24,3 +24,5 @@ jobs:
           python3 scripts/status.py --check
       - name: Files
         run: python3 scripts/check_tree.py
+      - name: The guide's PDF is built from the current sources
+        run: python3 textbook/tutorial/tools/extract_listings.py --check

@@ -1,0 +1,494 @@
+% Reusable semantic components for the textbook's visual calculus.
+% The styles encode mathematical roles and must remain distinguishable in
+% grayscale.  Figures may specialize geometry but not the role grammar.
+%
+% Plate discipline (2026-09-02 repair): plates are drawn at natural size and
+% must fit the 4.55in text block; no \resizebox or adjustbox max-width
+% shrinking is permitted around a plate, so node text never prints below the
+% \scriptsize used here.  Arrow labels always carry the `arrow label' backing
+% so they never overprint arrows, frames, or neighbouring nodes.
+
+\tikzset{
+  constructor arrow/.style={draw=ArtTeal,ultra thick,-{Latex[length=2.6mm]},
+    double=white,double distance=.7pt},
+  witness arrow/.style={draw=ArtGold!70!black,very thick,dashed,
+    -{Latex[length=2.2mm]}},
+  script arrow/.style={draw=ArtPurple,very thick,-{Latex[length=2.5mm]}},
+  reduct arrow/.style={draw=ArtGray,thick,densely dotted,
+    -{Latex[length=2.1mm]}},
+  dependency arrow/.style={draw=ArtGray!80,thin,-{Latex[length=1.7mm]}},
+  % A dependency the role policy forbids outright (the Ren row of the policy
+  % matrix).  Dotted red plus a crossed marker so it stays legible in grayscale
+  % and can never be mistaken for the merely gate-mediated `witness arrow'.
+  forbidden arrow/.style={draw=ArtRed,thick,densely dotted,
+    -{Latex[length=2.1mm]}},
+  forbidden mark/.style={circle,draw=ArtRed,fill=white,line width=.5pt,
+    inner sep=.6pt,font=\tiny\bfseries,text=ArtRed},
+  arrow label/.style={fill=ArtPaper!72,inner sep=1.5pt,font=\scriptsize,
+    align=center},
+  plain label/.style={fill=white,inner sep=1.5pt,font=\scriptsize,
+    align=center},
+  type node/.style={draw=ArtNavy,rounded corners=2pt,fill=white,
+    minimum height=7mm,align=center,font=\scriptsize,inner sep=3pt},
+  guard node/.style={draw=ArtGold!70!black,diamond,aspect=2.0,
+    fill=ArtLightGold,align=center,font=\scriptsize,inner sep=1.5pt},
+  process lane/.style={draw=ArtGray!55,rounded corners=2pt,fill=white,
+    minimum height=6mm,align=left,font=\scriptsize},
+  formal cell/.style={cell,font=\scriptsize,fill=white},
+  wide cell/.style={cell,font=\scriptsize,fill=white,minimum width=12mm},
+  provenance left/.style={formal cell,fill=ArtLightBlue},
+  provenance right/.style={formal cell,fill=ArtLightGold},
+  retained overlay/.style={draw=ArtOrange,very thick},
+  rendering boundary/.style={draw=ArtGray,dashed,rounded corners=3pt,
+    fill=ArtPaper!55,align=center,font=\scriptsize},
+  seam/.style={draw=ArtRed,very thick}
+}
+
+\newcommand{\rolebadge}[1]{%
+  \tikz[baseline=(r.base)]\node[draw=ArtPurple,rounded corners=2pt,
+  fill=ArtLightPurple,inner xsep=4pt,inner ysep=1.4pt,font=\scriptsize\bfseries]
+  (r){#1};}
+
+\newcommand{\rolestrip}[1]{%
+  \par\nobreak\smallskip\nobreak\noindent
+  \colorbox{ArtPaper}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\scriptsize
+  \raggedright\textbf{ROLE}\enspace #1\par}}\par\smallskip}
+
+% Formation and carrier lines are typeset at \small without any shrinking.
+% Long judgments break across lines with `\\' and lead every row with `&'.
+% The label sits on its own line so the judgment gets the full measure, and
+% the mathematics is set one size down: a formation line must never overflow.
+\newcommand{\formationline}[1]{%
+  \par\smallskip\noindent
+  \colorbox{ArtLightBlue}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+  \raggedright\small\textbf{Formation.}\par\nobreak\vspace{1pt}\nobreak
+  \footnotesize$\displaystyle\begin{aligned}[t]#1\end{aligned}$\par}}\par\smallskip}
+
+\newcommand{\carrierline}[1]{%
+  \par\smallskip\noindent
+  \colorbox{ArtLightGreen}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+  \raggedright\small\textbf{Carrier.}\enspace
+  \footnotesize$\displaystyle\begin{aligned}[t]#1\end{aligned}$\par}}\par\smallskip}
+
+\newcommand{\forgetline}[1]{%
+  \par\smallskip\noindent
+  \colorbox{ArtPaper}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\small
+  \textbf{Forgetting boundary.}\enspace #1}}\par\smallskip}
+
+% Study headings: unnumbered, one size below \subsection, kept with the
+% text that follows them (no page break after the title or its rule).
+\makeatletter
+\newcommand{\studyheading}[2]{%
+  % No \needspace (2026-09-29): a reserve measured after the role strip of the
+  % study above misjudged the room and left printed page 347 a third blank;
+  % \@afterheading keeps the heading with three lines of its text (style.tex).
+  \par\addvspace{1.1em}\noindent
+  {\normalsize\bfseries\color{ArtNavy}#2}\par\nobreak\smallskip\nobreak
+  \noindent\textcolor{#1}{\rule{\linewidth}{1.1pt}}\par\nobreak\smallskip
+  \@afterheading}
+\makeatother
+
+\newenvironment{constructorstudy}[1]{\studyheading{ArtTeal}{#1}}
+  {\par\addvspace{.8em}}
+\newenvironment{witnessstudy}[1]{\studyheading{ArtGold!75!black}{#1}}
+  {\par\addvspace{.8em}}
+\newenvironment{processstudy}[1]{\studyheading{ArtPurple}{#1}}
+  {\par\addvspace{.8em}}
+
+% A float-safe worked derivation.  The general ``worked'' box is breakable,
+% hence it cannot contain figure floats.  Visual derivations deliberately use
+% this open rule treatment so their numbered plates remain ordinary floats.
+\newenvironment{guidedderivation}[1]{\studyheading{ArtGreen}{#1}}
+  {\par\addvspace{.8em}}
+
+\newcommand{\schemainhabitantcaption}[2]{%
+  \par\smallskip
+  \begin{center}\scriptsize
+  \begin{tabularx}{.96\linewidth}{>{\bfseries\color{ArtTeal}}p{.18\linewidth}X}
+  schema & #1\\
+  inhabitant & #2
+  \end{tabularx}
+  \end{center}}
+
+\newcommand{\visualaudit}[4]{%
+  \begin{center}\scriptsize
+  \begin{tabularx}{.96\linewidth}{>{\bfseries}p{.19\linewidth}X}
+  creates & #1\\
+  retains & #2\\
+  effect & #3\\
+  does not create & #4
+  \end{tabularx}
+  \end{center}}
+
+% ------------------------------------------------- a second chess piece set
+% fig:chess-renderings needs two renderings of one position that a reader can
+% tell apart at a glance.  Panel (a) is the convention of printed chess
+% literature: Staunton figurines on a hatched board, set from the TeX chess
+% font by the chessboard package.  No second board font shipped with those
+% packages differs from the first by enough to make the point -- skak and
+% skaknew are near-identical at plate size, and berlin silently falls back to
+% skak -- and no SVG converter is installed to bring in an outside set, which
+% the plate contract would in any case refuse as non-editable.  So the second
+% set is drawn here: flat squares in the book's palette, geometric pieces.
+% White pieces are outlined and black pieces solid, so tone and not hue
+% carries the side.  Only the four kinds the running position uses are
+% defined; a fifth would be dead code until a plate needs it.
+\newcommand{\flatboard}[1]{%
+  \foreach \bdf in {0,...,7}{\foreach \bdr in {0,...,7}{%
+    \ifodd\numexpr\bdf+\bdr\relax
+      \fill[white] (\bdf*#1,\bdr*#1) rectangle (\bdf*#1+#1,\bdr*#1+#1);
+    \else
+      \fill[ArtGray!30] (\bdf*#1,\bdr*#1) rectangle (\bdf*#1+#1,\bdr*#1+#1);
+    \fi}}%
+  \draw[ArtNavy,thick] (0,0) rectangle (8*#1,8*#1);}
+
+\newcommand{\flatlabels}[1]{%
+  \foreach \bdf/\bdl in {0/a,1/b,2/c,3/d,4/e,5/f,6/g,7/h}
+    \node[font=\tiny,ArtGray,anchor=north,yshift=-.6mm]
+      at (\bdf*#1+0.5*#1,0) {\vphantom{b}\bdl};
+  \foreach \bdr in {0,...,7}{%
+    \pgfmathtruncatemacro{\bdn}{\bdr+1}%
+    \node[font=\tiny,ArtGray,anchor=base east]
+      at (-0.22*#1,\bdr*#1+0.5*#1-0.055*#1) {\bdn};}}
+
+% \legendswatch{<colour>} -- a framed 2.6 mm colour square for a legend row,
+% set inline before its word so the word can never run into the next swatch
+% (fig:zodiac-wheel).  Lowered a little so it sits on the x-height.
+\newcommand{\legendswatch}[1]{%
+  \raisebox{-0.45mm}{\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}%
+    \fcolorbox{ArtNavy}{#1}{\rule{0pt}{2.6mm}\rule{2.6mm}{0pt}}}}
+
+% The two hand-drawn piece sets that used to live here -- \flatpiece, solid
+% bodies, and \strokepiece, stems with finials -- were removed on 2026-09-04.
+% fig:chess-renderings now draws both of its panels with the `chessboard'
+% package: figurines on the left, \wdisc/\bdisc lettered discs on the right.
+% Drawing chessmen by hand is not worth it at plate size; the font is better
+% at it, and two drawing systems in one plate never looked right.
+% \flatboardplain{<square side>} -- the same board with the colouring removed,
+% for the panel of fig:board-colour-group that shows what a profile sees when
+% it reads incidence only.  Gridlines, because without them there is nothing
+% to see; they render the incidence and are not carried data.
+\newcommand{\flatboardplain}[1]{%
+  \fill[white] (0,0) rectangle (8*#1,8*#1);
+  \foreach \bdk in {1,...,7}{%
+    \draw[ArtGray!45,thin] (\bdk*#1,0)--(\bdk*#1,8*#1) (0,\bdk*#1)--(8*#1,\bdk*#1);}
+  \draw[ArtNavy,thick] (0,0) rectangle (8*#1,8*#1);}
+
+% \flatboardbw{<square side>} -- the plain board of \flatboardplain with the
+% palette applied and painted, black against white rather than the printer's
+% gray.  Used for the right-hand board of fig:board-construction, so that both
+% boards in that plate are the same drawing and only the marking differs.
+% No gridlines: the fills already show every edge.
+\newcommand{\flatboardbw}[1]{%
+  \foreach \bdf in {0,...,7}{\foreach \bdr in {0,...,7}{%
+    \ifodd\numexpr\bdf+\bdr\relax
+      \fill[white] (\bdf*#1,\bdr*#1) rectangle (\bdf*#1+#1,\bdr*#1+#1);
+    \else
+      \fill[black] (\bdf*#1,\bdr*#1) rectangle (\bdf*#1+#1,\bdr*#1+#1);
+    \fi}}%
+  \draw[ArtNavy,thick] (0,0) rectangle (8*#1,8*#1);}
+
+% Letters in discs, for the second panel of fig:chess-renderings.  They are
+% placed on a standard `chessboard' board through pgfstyle=text, so the board
+% itself -- squares, hatching, border, coordinates -- is the package's own and
+% identical to the panel beside it.  `show background rectangle=false' is
+% required: style.tex gives every picture the book's paper backing, which on a
+% disc this small would print as a grey card behind each piece.
+\newcommand{\wdisc}[1]{\tikz[baseline=-0.62ex,show background rectangle=false]
+  \node[circle,draw=ArtNavy,fill=white,line width=.55pt,inner sep=0pt,
+        minimum size=3.5mm,font=\bfseries\scriptsize,text=ArtNavy]{#1};}
+\newcommand{\bdisc}[1]{\tikz[baseline=-0.62ex,show background rectangle=false]
+  \node[circle,draw=ArtNavy,fill=ArtNavy,line width=.55pt,inner sep=0pt,
+        minimum size=3.5mm,font=\bfseries\scriptsize,text=white]{#1};}
+
+
+% ------------------------------------------------- the glass-bead rendering
+% Added 2026-09-20 for the Glass Bead Game (section 1.6).  The styles are
+% prefixed gb so that no figure-local style of the same name is overridden.
+% A bead renders one cell or one event and its colour a label or value; a wire
+% renders a linear order or one row of a tapestry, ended by knots or posts; a
+% spacer renders a seam, thick for the last constructor's seam and thin for an
+% inherited one; a long bead renders one value held over several positions.
+% Nothing drawn by these macros is data: no rule reads a bead.
+\tikzset{
+  gbwire/.style={draw=beadWire,line width=1.1pt,line cap=round},
+  gbwire faint/.style={draw=beadWire!55,line width=.8pt,line cap=round},
+  gbwire arrow/.style={draw=beadWire,line width=1.1pt,line cap=round,
+    -{Latex[length=1.7mm]}},
+  gbpost/.style={draw=beadPost,line width=2.4pt,line cap=round},
+  gbknot/.style={circle,fill=beadPost,inner sep=1.5pt},
+  gbbead/.style={circle,draw=beadRim,line width=.5pt,minimum size=5.25mm,
+    inner sep=0pt,font=\scriptsize,text=solarInk},
+  gbpoly/.style={draw=beadRim,line width=.5pt,inner sep=0pt,minimum size=5.6mm},
+  gbspacer/.style={rectangle,draw=ArtRed,fill=ArtRed,minimum width=1.3mm,
+    minimum height=4.4mm,inner sep=0pt},
+  gbspacer thin/.style={rectangle,draw=ArtRed!65,fill=ArtRed!65,
+    minimum width=.6mm,minimum height=3.4mm,inner sep=0pt},
+}
+% Coordinates are evaluated first, so a caller may pass any pgfmath expression
+% (a calc coordinate cannot nest the parentheses of cos(...)).
+% \gbead{x}{y}{fill}{label}: one bead with a glass highlight.
+\newcommand{\gbead}[4]{%
+  \pgfmathsetmacro{\gbx}{#1}\pgfmathsetmacro{\gby}{#2}%
+  \node[gbbead,fill=#3] at (\gbx,\gby) {#4};
+  \fill[white,opacity=.55] ($(\gbx,\gby)+(-.075cm,.085cm)$) circle (1.35pt);}
+% \gbeadw{x}{y}{fill}{label}: the same with a white numeral, for dark beads.
+\newcommand{\gbeadw}[4]{%
+  \pgfmathsetmacro{\gbx}{#1}\pgfmathsetmacro{\gby}{#2}%
+  \node[gbbead,fill=#3,text=white] at (\gbx,\gby) {#4};
+  \fill[white,opacity=.55] ($(\gbx,\gby)+(-.075cm,.085cm)$) circle (1.35pt);}
+% \gbeadrim{x}{y}{rim colour}{fill}{label}: a bead whose rim names a channel.
+\newcommand{\gbeadrim}[5]{%
+  \pgfmathsetmacro{\gbx}{#1}\pgfmathsetmacro{\gby}{#2}%
+  \node[gbbead,fill=#4,draw=#3,line width=.9pt] at (\gbx,\gby) {#5};
+  \fill[white,opacity=.55] ($(\gbx,\gby)+(-.075cm,.085cm)$) circle (1.35pt);}
+% \gbugle{x1}{x2}{y}{fill}{text colour}{label}: one bead held from the
+% position centred at x1 to the position centred at x2.
+\newcommand{\gbugle}[6]{%
+  \pgfmathsetmacro{\gbxa}{#1}\pgfmathsetmacro{\gbxb}{#2}\pgfmathsetmacro{\gby}{#3}%
+  \path[draw=beadRim,line width=.5pt,fill=#4,rounded corners=2.3mm]
+    ($(\gbxa,\gby)+(-.2625cm,-.25cm)$) rectangle ($(\gbxb,\gby)+(.2625cm,.25cm)$);
+  \fill[white,opacity=.42,rounded corners=.5mm]
+    ($(\gbxa,\gby)+(-.13cm,.09cm)$) rectangle ($(\gbxb,\gby)+(.13cm,.165cm)$);
+  \node[font=\scriptsize,text=#5] at ($(\gbxa,\gby)!.5!(\gbxb,\gby)$) {#6};}
+% \nbead{x}{y}{n}{fill}: a numeral bead, n sides for the value n; a ring for
+% 0, a disc for 1, a lens for 2.  In Z/8 the octagon is a full turn, 8 = 0.
+\newcommand{\nbead}[4]{%
+  \pgfmathsetmacro{\gbx}{#1}\pgfmathsetmacro{\gby}{#2}%
+  \ifnum#3=0
+    \draw[draw=beadRim,line width=.5pt,fill=#4,even odd rule]
+      (\gbx,\gby) circle (.27cm) (\gbx,\gby) circle (.11cm);
+    \fill[white,opacity=.5] ($(\gbx,\gby)+(-.07cm,.09cm)$) circle (1.1pt);
+  \else\ifnum#3=1
+    \node[gbbead,fill=#4] at (\gbx,\gby) {};
+    \fill[white,opacity=.55] ($(\gbx,\gby)+(-.075cm,.085cm)$) circle (1.35pt);
+  \else\ifnum#3=2
+    \path[draw=beadRim,line width=.5pt,fill=#4]
+      ($(\gbx,\gby)+(-.25cm,0)$) .. controls ($(\gbx,\gby)+(-.12cm,.22cm)$)
+      and ($(\gbx,\gby)+(.12cm,.22cm)$) .. ($(\gbx,\gby)+(.25cm,0)$)
+      .. controls ($(\gbx,\gby)+(.12cm,-.22cm)$)
+      and ($(\gbx,\gby)+(-.12cm,-.22cm)$) .. cycle;
+  \else
+    \node[gbpoly,regular polygon,regular polygon sides=#3,fill=#4] at (\gbx,\gby) {};
+  \fi\fi\fi}
+
+% ------------------------------------------------- the pointer law (chapter 5)
+% Added 2026-09-23 for Part A of chapter 5.  A pointer has three positions,
+% numbered 0, 1, 2 anticlockwise from the page's up, a third of a turn apart;
+% the hand of position k points at 90+120k degrees.  Corners of the running
+% square are v_0..v_3 anticlockwise from the lower left.  Nothing drawn by
+% these macros is data: no rule reads a hand.
+% \lawdial{x}{y}{position}{rim colour}{radius}: one pointer.
+\newcommand{\lawdial}[5]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \path[draw=#4,thick,fill=white] (0,0) circle (#5);
+    \foreach \k in {0,1,2}{\fill[ArtGray] ({90+120*\k}:#5) circle (.8pt);}
+    \draw[ArtNavy,line width=1.1pt,-{Latex[length=1.3mm]}] (0,0)--({90+120*#3}:{.72*#5});
+  \end{scope}}
+% \lawsquare{x}{y}{side}{p0}{p1}{p2}{p3}{fill}{radius}: a state of the
+% square, v_0 at (x,y).
+\newcommand{\lawsquare}[9]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[#8] (0,0) rectangle (#3,#3);
+    \draw[ArtNavy!45,thick] (0,0) rectangle (#3,#3);
+    \lawdial{0}{0}{#4}{ArtNavy}{#9}\lawdial{#3}{0}{#5}{ArtNavy}{#9}
+    \lawdial{#3}{#3}{#6}{ArtNavy}{#9}\lawdial{0}{#3}{#7}{ArtNavy}{#9}
+  \end{scope}}
+% \lawedges{x}{y}{side}: the oriented edges e_1..e_4 of the square, e_i from
+% v_{i-1} to v_i, drawn clear of pointers of radius .24.
+\newcommand{\lawedges}[3]{%
+  \draw[ArtNavy!55,thick,-{Latex[length=1.8mm]}] (#1+.32,#2)--(#1+#3-.32,#2);
+  \draw[ArtNavy!55,thick,-{Latex[length=1.8mm]}] (#1+#3,#2+.32)--(#1+#3,#2+#3-.32);
+  \draw[ArtNavy!55,thick,-{Latex[length=1.8mm]}] (#1+#3-.32,#2+#3)--(#1+.32,#2+#3);
+  \draw[ArtNavy!55,thick,-{Latex[length=1.8mm]}] (#1,#2+#3-.32)--(#1,#2+.32);}
+% Numbers in place of pointer hands (author, 2026-09-27: "Replace pointer
+% arrows in every diagrams by numbers").  A corner's number is its pointer's
+% position, counted in thirds of a turn anticlockwise from the page's up.
+% \lawnum{x}{y}{number}{size}: one number in a circle.
+\newcommand{\lawnum}[4]{\node[circle,draw=ArtNavy,thick,fill=white,inner sep=0pt,
+  minimum size=#4,font=\scriptsize] at (#1,#2) {$#3$};}
+% \lawnumsquare{x}{y}{side}{p0}{p1}{p2}{p3}{fill}{size}: a state of the
+% square, v_0 at (x,y), with numbers at its corners.
+\newcommand{\lawnumsquare}[9]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[#8] (0,0) rectangle (#3,#3);
+    \draw[ArtNavy!45,thick] (0,0) rectangle (#3,#3);
+    \lawnum{0}{0}{#4}{#9}\lawnum{#3}{0}{#5}{#9}\lawnum{#3}{#3}{#6}{#9}\lawnum{0}{#3}{#7}{#9}
+  \end{scope}}
+% \walkstate{x}{y}{side}{k}: a state of the walker, a small square centred at
+% (x,y) with its token at the corner v_k, k = 0..3.
+\newcommand{\walkstate}[4]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[ArtLightBlue!40] (-#3/2,-#3/2) rectangle (#3/2,#3/2);
+    \draw[ArtNavy!45] (-#3/2,-#3/2) rectangle (#3/2,#3/2);
+    \ifcase#4 \fill[ArtNavy] (-#3/2,-#3/2) circle (.075);
+    \or \fill[ArtNavy] (#3/2,-#3/2) circle (.075);
+    \or \fill[ArtNavy] (#3/2,#3/2) circle (.075);
+    \or \fill[ArtNavy] (-#3/2,#3/2) circle (.075);\fi
+  \end{scope}}
+% The spring law (chapter 5, A tick in steps).  \springedge{x}{y}{length}{angle}:
+% a spring from (x,y), clear of numbers of radius .23 at its ends.
+% \springstate{x}{y}{positions}{velocities}: a state, v_0 at (x,y), side 1.2,
+% positions in circles at the corners, velocities in boxes beside them.
+\tikzset{springvel/.style={draw=ArtOrange,thick,fill=ArtLightGold,rounded corners=1pt,
+  inner sep=1pt,minimum size=3.6mm,font=\scriptsize}}
+\newcommand{\springedge}[4]{%
+  \begin{scope}[shift={(#1,#2)},rotate=#4]
+    \draw[ArtNavy!55,thick] (.23,0)--(.34,0)
+      \foreach \k in {1,...,6}{--({.34+(\k-.5)*(#3-.68)/6},{.07*(2*mod(\k,2)-1)})}
+      --(#3-.34,0)--(#3-.23,0);
+  \end{scope}}
+\newcommand{\springstate}[4]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \fill[ArtLightBlue!40] (0,0) rectangle (1.2,1.2);
+    \springedge{0}{0}{1.2}{0}\springedge{1.2}{0}{1.2}{90}%
+    \springedge{1.2}{1.2}{1.2}{180}\springedge{0}{1.2}{1.2}{270}%
+    \foreach \v [count=\i from 0] in {#3}{%
+      \pgfmathsetmacro{\cx}{{0,1.2,1.2,0}[\i]}\pgfmathsetmacro{\cy}{{0,0,1.2,1.2}[\i]}%
+      \lawnum{\cx}{\cy}{\v}{4.4mm}}%
+    \foreach \v [count=\i from 0] in {#4}{%
+      \pgfmathsetmacro{\bx}{{-.38,1.58,1.58,-.38}[\i]}\pgfmathsetmacro{\by}{{-.3,-.3,1.5,1.5}[\i]}%
+      \node[springvel] at (\bx,\by) {$\v$};}%
+  \end{scope}}
+% Two squares that share an edge (chapter 5, from section 5.5 on; 2026-09-28).
+% Corners v_0=(0,0), v_1=(s,0), v_2=(s,s), v_3=(0,s) are the square of
+% Part A; v_4=(2s,0) and v_5=(2s,s) are added on the right.  Part A's edges
+% e_1..e_4 keep their direction, e_i from v_{i-1} to v_i, and the right
+% square carries on anticlockwise: e_5 from v_1 to v_4, e_6 from v_4 to v_5,
+% e_7 from v_5 to v_2.  Every outer edge points anticlockwise round the
+% outside, and the shared edge e_2 points up.
+% \tsqcoords{s}: name the six corners (v0)..(v5) at the scope's origin.
+\newcommand{\tsqcoords}[1]{%
+  \coordinate (v0) at (0,0); \coordinate (v1) at (#1,0); \coordinate (v2) at (#1,#1);
+  \coordinate (v3) at (0,#1); \coordinate (v4) at (2*#1,0); \coordinate (v5) at (2*#1,#1);}
+% \tsqfill{s}: the two faces, the left one blue and the right one gold, and the
+% seven edges as thin lines.
+\newcommand{\tsqfill}[1]{%
+  \fill[ArtLightBlue!80] (0,0) rectangle (#1,#1);
+  \fill[ArtLightGold] (#1,0) rectangle (2*#1,#1);
+  \draw[ArtNavy!45,thick] (0,0) rectangle (2*#1,#1); \draw[ArtNavy!45,thick] (#1,0)--(#1,#1);}
+% \tsqlink[style]{from}{to}{number}{placement}: an oriented link and its number;
+% an empty placement puts the number on the link.
+\newcommand{\tsqlink}[5][]{%
+  \draw[ArtNavy,thick,-{Latex[length=1.9mm]},#1] ($(#2)!.2!(#3)$)--($(#2)!.8!(#3)$)
+    node[midway,#5,plain label,inner sep=1pt]{#4};}
+% \tsqnum{corner}{entry}{size} and \tsqsix{v_0..v_5 entries}{size}: entries at
+% the corners.
+\newcommand{\tsqnum}[3]{\node[circle,draw=ArtNavy,thick,fill=white,inner sep=0pt,
+  minimum size=#3,font=\scriptsize] at (#1) {$#2$};}
+\newcommand{\tsqsix}[7]{\tsqnum{v0}{#1}{#7}\tsqnum{v1}{#2}{#7}\tsqnum{v2}{#3}{#7}%
+  \tsqnum{v3}{#4}{#7}\tsqnum{v4}{#5}{#7}\tsqnum{v5}{#6}{#7}}
+\tikzset{tsqvtx/.style={circle,fill=ArtNavy,inner sep=1.4pt},
+  turnL/.style={draw=ArtBlue,line width=1.1pt,-{Latex[length=1.7mm]}},
+  turnR/.style={draw=ArtOrange,line width=1.1pt,-{Latex[length=1.7mm]}}}
+% Runs strung as temporal tapestries (chapters 5 and 6; 2026-09-28, the author:
+% "consitently use temporal tapestries with time runing left to right").  A run
+% is a Hesse frame: one wire per cell, in the canvas's order from the top; one
+% rung per tick, or per slot for a law in steps, time running left to right;
+% posts at both ends.  A control row sits above the frame and the readings
+% below it, as readouts and not wires.  A bar holds one value over consecutive
+% rungs (PROSE-RULES section 9).  Nothing drawn by these macros is data.
+% \tapframe[extra]{x0}{dx}{n}{ytop}{dy}{wires}: rungs 0..n at x0+dx*t, wires down
+% from ytop; the optional extra moves the right post out, so that two contributions
+% can stand side by side at the last rung.
+\newcommand{\tapframe}[7][0]{%
+  \pgfmathsetmacro{\tapxa}{#2-.45}\pgfmathsetmacro{\tapxb}{#2+#3*#4+.45+#1}%
+  \pgfmathsetmacro{\tapya}{#5+.34}\pgfmathsetmacro{\tapyb}{#5-#6*(#7-1)-.34}%
+  \foreach \t in {0,...,#4}{\draw[solarLine,line width=.3pt] ({#2+#3*\t},\tapyb)--({#2+#3*\t},\tapya);}
+  \foreach \r in {1,...,#7}{\draw[gbwire] (\tapxa,{#5-#6*(\r-1)})--(\tapxb,{#5-#6*(\r-1)});}
+  \draw[gbpost] (\tapxa,\tapyb)--(\tapxa,\tapya);
+  \draw[gbpost] (\tapxb,\tapyb)--(\tapxb,\tapya);}
+% \taprungs{x0}{dx}{n}{y}: the rung numerals.
+\newcommand{\taprungs}[4]{\foreach \t in {0,...,#3}{%
+  \node[font=\scriptsize,text=solarMuted] at ({#1+#2*\t},#4) {$\t$};}}
+% \tapbead{x}{y}{v}: a number 0, 1 or 2 as a bead, white, teal or purple, the
+% colours of fig:square-gauge-beads; \taprow{x0}{dx}{y}{values}: one wire's beads.
+\newcommand{\tapbead}[3]{%
+  \ifcase#3\relax \gbead{#1}{#2}{white}{$0$}\or \gbead{#1}{#2}{ArtTeal!42}{$1$}\or
+  \gbead{#1}{#2}{ArtPurple!42}{$2$}\fi}
+\newcommand{\taprow}[4]{\foreach \v [count=\t from 0] in {#4}{\tapbead{#1+#2*\t}{#3}{\v}}}
+% Letters standing for numbers, one colour each, never a residue's colour; b,
+% the letter the two-squares law keeps at v_1, is gold.
+\colorlet{tapLa}{ArtBlue!38}\colorlet{tapLb}{ArtGold!70}\colorlet{tapLc}{ArtPurple!35}
+\colorlet{tapLd}{ArtRed!38}\colorlet{tapLe}{ArtGreen!38}\colorlet{tapLf}{ArtOrange!42}
+% \tapletter{x}{y}{letter} and \tapletters{x0}{dx}{y}{letters}.
+\newcommand{\tapletter}[3]{\gbead{#1}{#2}{tapL#3}{$#3$}}
+\newcommand{\tapletters}[4]{\foreach \v [count=\t from 0] in {#4}{\tapletter{#1+#2*\t}{#3}{\v}}}
+% \tapread{x1}{x2}{y}{fill}{label}: a reading held from x1 to x2, gold rim;
+% \tapreadbead{x}{y}{fill}{label}: a reading at one rung.
+\newcommand{\tapread}[5]{%
+  \pgfmathsetmacro{\gbxa}{#1}\pgfmathsetmacro{\gbxb}{#2}\pgfmathsetmacro{\gby}{#3}%
+  \path[draw=ArtGold!80!black,line width=.9pt,fill=#4,rounded corners=2.3mm]
+    ($(\gbxa,\gby)+(-.2625cm,-.25cm)$) rectangle ($(\gbxb,\gby)+(.2625cm,.25cm)$);
+  \fill[white,opacity=.42,rounded corners=.5mm]
+    ($(\gbxa,\gby)+(-.13cm,.09cm)$) rectangle ($(\gbxb,\gby)+(.13cm,.165cm)$);
+  \node[font=\scriptsize,text=ArtNavy] at ($(\gbxa,\gby)!.5!(\gbxb,\gby)$) {#5};}
+\newcommand{\tapreadbead}[4]{\gbeadrim{#1}{#2}{ArtGold!80!black}{#3}{#4}}
+% \tapheld{x1}{x2}{y}{channel colour}{residue}: a channel's value held from x1
+% to x2 (a round bead when x1 = x2), rim in the channel's colour.
+\newcommand{\tapheld}[5]{%
+  \pgfmathsetmacro{\gbxa}{#1}\pgfmathsetmacro{\gbxb}{#2}\pgfmathsetmacro{\gby}{#3}%
+  \path[draw=#4,line width=.9pt,fill=#4!30,rounded corners=2.3mm]
+    ($(\gbxa,\gby)+(-.2625cm,-.25cm)$) rectangle ($(\gbxb,\gby)+(.2625cm,.25cm)$);
+  \fill[white,opacity=.42,rounded corners=.5mm]
+    ($(\gbxa,\gby)+(-.13cm,.09cm)$) rectangle ($(\gbxb,\gby)+(.13cm,.165cm)$);
+  \node[font=\scriptsize,text=solarInk] at ($(\gbxa,\gby)!.5!(\gbxb,\gby)$) {$#5$};}
+% \tapsmall{x}{y}{fill}{label}: a small bead, for the prism.
+\newcommand{\tapsmall}[4]{\node[gbbead,minimum size=3.7mm,font=\tiny,fill=#3] at ({#1},{#2}) {#4};}
+% \tapstep{x}{y}{L or R}: a bead of the two squares' score; \tapphase{x}{y}{K or M}: of
+% the Maxwell score.
+\newcommand{\tapstep}[3]{\if#3L\node[draw=ArtBlue,fill=ArtBlue!16,rounded corners=2pt,
+    font=\scriptsize\bfseries,text=ArtBlue,minimum width=4.6mm,inner sep=1pt] at ({#1},{#2}) {L};%
+  \else\node[draw=ArtOrange,fill=ArtOrange!20,rounded corners=2pt,font=\scriptsize\bfseries,
+    text=ArtOrange!85!black,minimum width=4.6mm,inner sep=1pt] at ({#1},{#2}) {R};\fi}
+\newcommand{\tapphase}[3]{\if#3K\node[draw=ArtOrange,fill=ArtOrange!20,rounded corners=2pt,
+    font=\scriptsize\bfseries,text=ArtOrange!85!black,minimum width=4.6mm,inner sep=1pt] at ({#1},{#2}) {K};%
+  \else\node[draw=ArtTeal,fill=ArtTeal!20,rounded corners=2pt,font=\scriptsize\bfseries,
+    text=ArtTeal,minimum width=4.6mm,inner sep=1pt] at ({#1},{#2}) {M};\fi}
+\tikzset{
+  tapthread/.style={line width=2.2pt,line cap=round,opacity=.75},
+  tapwindow/.style={draw=ArtOrange,line width=1.2pt,rounded corners=3.2mm,inner sep=0pt},
+  tapnote/.style={font=\scriptsize,align=left,anchor=north west,inner sep=1pt},
+  taphead/.style={font=\scriptsize\bfseries,anchor=west,text=ArtNavy}}
+
+% Coherent runs and scores strung as tapestries (Chapters 7-11; 2026-09-28, the
+% author: "audit chapter 7 ... for dynamics that should be temporal tapestries";
+% "go with your recommendations, implement and publish").  A coherent run is strung
+% over its complete labels: one wire per label, the cells of a coefficient table.  A
+% bead is one history's contribution, coloured and numbered by its phase mark
+% (ph0-ph7); its size [1,g] is printed once below the rung; a grey thread is one
+% history.  A score's footprint is drawn as cells over the beads, dashed where a slot
+% reads the cell and shaded where it writes it; gold marks a checkpoint rung.
+% Nothing drawn by these macros is data.
+\tikzset{
+  tapgate/.style={draw=ArtNavy!65,fill=ArtNavy!7,rounded corners=2pt,font=\scriptsize,
+    inner sep=1.4pt,minimum height=4.3mm,text=ArtNavy},
+  tapcell read/.style={draw=ArtNavy!75,dashed,line width=.6pt,rounded corners=1.5pt},
+  tapcell K/.style={fill=ArtOrange,fill opacity=.32,draw=ArtOrange!80!black,line width=.4pt,
+    rounded corners=1.5pt},
+  tapcell M/.style={fill=ArtTeal,fill opacity=.30,draw=ArtTeal!80!black,line width=.4pt,
+    rounded corners=1.5pt},
+  tapcell W/.style={fill=ArtNavy,fill opacity=.18,draw=ArtNavy!60,line width=.4pt,
+    rounded corners=1.5pt},
+  tapcheck/.style={draw=ArtGold!85!black,line width=1.3pt},
+  taphistory/.style={draw=ArtGray!55,line width=1.6pt,line cap=round,opacity=.75},
+  tapquark/.style={draw=ArtGold,line width=2.2pt,line cap=round,opacity=.85},
+  tapbrace/.style={decorate,decoration={brace,amplitude=4pt},draw=ArtGray,thick},
+  taplabel/.style={font=\scriptsize,anchor=east,text=ArtNavy},
+  taptitle/.style={font=\small\bfseries,text=ArtNavy,anchor=west}}
+% \tapcell{x0}{dx}{slot}{y}{style}: one wire's cell in one slot, drawn over the beads.
+\newcommand{\tapcell}[5]{\path[#5] ({#1+#2*(#3)+.06},{#4-.3}) rectangle ({#1+#2*((#3)+1)-.06},{#4+.3});}
+% \tapcheck{x}{ytop}{ybottom}: a checkpoint rung; \tapchecktick: its two ends only,
+% for a frame whose bars would hide the rung.
+\newcommand{\tapcheck}[3]{\draw[tapcheck] ({#1},{#2}) -- ({#1},{#3});}
+\newcommand{\tapchecktick}[3]{\draw[tapcheck] ({#1},{#2}) -- ({#1},{#2+.2}) ({#1},{#3}) -- ({#1},{#3-.2});}
+% \tapfluxgrid{x}{y}{s or r}{b_L}{b_R}: the sixteen flux labels of two faces as a 4x4
+% glyph, top left at (x,y): all dark where the field is spread (s), one dark dot at
+% (b_L,b_R) where it is a single label (r).
+\newcommand{\tapfluxgrid}[5]{%
+  \foreach \i in {0,...,3}\foreach \j in {0,...,3}{%
+    \fill[ArtGray!45] ({#1+.11*\j},{#2-.11*\i}) circle (.9pt);}%
+  \if#3s\foreach \i in {0,...,3}\foreach \j in {0,...,3}{%
+    \fill[ArtNavy!70] ({#1+.11*\j},{#2-.11*\i}) circle (1.25pt);}\fi
+  \if#3r\fill[ArtNavy] ({#1+.11*#5},{#2-.11*#4}) circle (1.8pt);\fi}
+

@@ -1,5 +1,5 @@
 name = "artform-calculus-proofs"
-defaultTargets = ["ArtformTextbook"]
+defaultTargets = ["ArtformTextbook", "Tutorial"]
 
 [[require]]
 name = "mathlib"
@@ -12,3 +12,10 @@ rev = "v4.34.1"
 name = "ArtformTextbook"
 srcDir = "textbook"
 leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }
+
+# The guide's Lean files, core Lean only. Each answer the guide quotes is
+# pinned with #guard_msgs, so building this library checks the guide.
+[[lean_lib]]
+name = "Tutorial"
+srcDir = "textbook/tutorial"
+roots = ["LeanBasics", "ArtformChapter1"]

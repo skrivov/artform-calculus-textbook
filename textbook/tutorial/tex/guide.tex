@@ -1,0 +1,90 @@
+% "Lean through Artform Calculus", the guide of the repository
+% artform-calculus-proofs. Part I is the basics of Lean (part1-basics.tex) and
+% Part II is Chapter 1 of the book in Lean (part2-chapter1.tex).
+% References such as Section 1.4 point into the book. build.sh resolves them
+% through generated/book-labels-<n>.tex, the numbers of the edition the
+% repository follows, and finds the book's style files in book/ through
+% TEXINPUTS. Build from anywhere with:
+%   bash textbook/tutorial/build.sh
+\documentclass[12pt,openany]{memoir}
+\input{artform-notation}
+\input{style}
+\usepackage{listings}
+\input{generated/book-edition}
+\newcommand{\leandir}{generated/snippets}
+\input{\leandir/literate.tex}
+\lstdefinelanguage{Lean}{
+  morekeywords={def,abbrev,structure,inductive,class,instance,where,theorem,
+    example,fun,match,with,by,if,then,else,have,deriving,namespace,end,open,
+    in,Type,Prop,True,False,rfl,decide,omega,nofun,funext,trivial},
+  sensitive=true, morecomment=[l]{--}, morecomment=[s]{/-}{-/},
+  morestring=[b]"}
+\lstdefinestyle{lean}{language=Lean,style=leanglyphs,
+  basicstyle=\ttfamily\fontsize{8.6}{10.4}\selectfont,keywordstyle=\color{ArtBlue},
+  commentstyle=\color{ArtGray}\itshape,stringstyle=\color{ArtPurple},
+  columns=fixed,basewidth=0.5em,keepspaces=true,extendedchars=true,
+  upquote=true,frame=leftline,framerule=1.2pt,rulecolor=\color{ArtTeal},
+  framesep=6pt,xleftmargin=9pt,aboveskip=7pt,belowskip=7pt}
+\lstdefinestyle{leanmsg}{style=leanglyphs,basicstyle=\ttfamily\fontsize{8.6}{10.4}\selectfont\color{ArtRed!80!black},
+  columns=fixed,basewidth=0.5em,keepspaces=true,extendedchars=true,
+  frame=leftline,framerule=1.2pt,rulecolor=\color{ArtRed},
+  framesep=6pt,xleftmargin=9pt,aboveskip=4pt,belowskip=7pt,breaklines=true}
+\lstdefinestyle{leaninline}{style=lean,basicstyle=\ttfamily\small,keywordstyle={},
+  columns=flexible}
+\input{\leandir/sizes.tex}
+% A listing of at most 6 printed lines is kept on one page; a longer one
+% starts only where 4 of its lines fit, and may break, as running code does.
+\makeatletter
+\newcommand{\leanlisting}[1]{%
+  \ifnum\csname leanlines@#1\endcsname>6
+    \Needspace{4\baselineskip}%
+    \lstinputlisting[style=lean]{\leandir/#1.lean}%
+  \else
+    \par\vspace{7pt}\noindent\begin{minipage}{\linewidth}%
+    \lstinputlisting[style=lean,aboveskip=0pt,belowskip=0pt]{\leandir/#1.lean}%
+    \end{minipage}\par\vspace{7pt}%
+  \fi}
+\makeatother
+\newcommand{\leanmessage}[1]{\par\vspace{2pt}\noindent\begin{minipage}{\linewidth}%
+  {\footnotesize\sffamily\color{ArtRed}Lean refuses it:}\par\vspace{1pt}%
+  \lstinputlisting[style=leanmsg,aboveskip=0pt,belowskip=0pt]{\leandir/#1.msg}%
+  \end{minipage}\par\vspace{7pt}}
+\lstdefinestyle{leanreply}{style=leanglyphs,basicstyle=\ttfamily\fontsize{8.6}{10.4}\selectfont\color{ArtTeal!70!black},
+  columns=fixed,basewidth=0.5em,keepspaces=true,extendedchars=true,
+  frame=leftline,framerule=1.2pt,rulecolor=\color{ArtTeal},
+  framesep=6pt,xleftmargin=9pt,aboveskip=4pt,belowskip=7pt,breaklines=true}
+\newcommand{\leanreply}[1]{\par\vspace{2pt}\noindent\begin{minipage}{\linewidth}%
+  {\footnotesize\sffamily\color{ArtTeal}Lean replies:}\par\vspace{1pt}%
+  \lstinputlisting[style=leanreply,aboveskip=0pt,belowskip=0pt]{\leandir/#1.info}%
+  \end{minipage}\par\vspace{7pt}}
+\newcommand{\li}{\lstinline[style=leaninline]}
+\newcommand{\lc}[1]{{\ttfamily\small #1}}
+\renewcommand{\thetable}{\arabic{table}}
+\begin{document}
+\pagestyle{plain}
+\begin{center}
+{\Huge\bfseries\color{ArtNavy} Lean through Artform Calculus\par}
+\medskip
+{\large An introduction to Lean, read beside Chapter~1 of the book\par}
+\end{center}
+\bigskip
+
+\noindent Part~I explains the basics of Lean, a programming language in which
+proofs are checked by the computer. Part~II writes the constructions of
+Chapter~1 of \emph{Artform Calculus} in Lean. References such as
+Section~1.4, Figure~1.9 or Definition~1.5 point into the book; their numbers
+are those of its \bookedition. Every listing is cut from two Lean files,
+which Lean~4.34.1 accepts as a whole.
+
+\begingroup
+\setlength{\parskip}{0pt}
+\renewcommand{\contentsname}{Contents}
+\tableofcontents*
+\endgroup
+\clearpage
+\input{part1-basics}
+\clearpage
+\input{part2-chapter1}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

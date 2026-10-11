@@ -3,8 +3,11 @@
 Lean 4 proofs of the theorems of the textbook *Artform Calculus*, and a guide
 to reading them.
 
-**This repository is being set up.** No statement is formalized yet. The
-guide, *Lean through Artform Calculus*, and the statement table come next.
+**Start here:** [Lean through Artform Calculus](textbook/lean-through-artform-calculus.pdf)
+(PDF). It teaches Lean from the beginning and writes the constructions of
+Chapter 1 of the book in Lean.
+
+**This repository is being set up.** No statement is formalized yet.
 
 ## What will be proved
 
@@ -34,10 +37,12 @@ You need [elan](https://github.com/leanprover/elan) and git.
 ## Layout
 
 - `textbook/`: the textbook's definitions, statements and proofs, in the Lean
-  library `ArtformTextbook`, with the status table.
+  library `ArtformTextbook`, with the status table; and the guide, whose Lean
+  files and LaTeX sources are in `textbook/tutorial/`.
 - `scripts/`: the status report and the checks that CI runs.
 
 ## Licence
 
-Lean code and scripts: Apache-2.0 ([LICENSE](LICENSE)). The guide and the
-book's statement texts will be under CC BY 4.0.
+Lean code and scripts: Apache-2.0 ([LICENSE](LICENSE)). The guide and its
+LaTeX sources: CC BY 4.0 ([textbook/tutorial/tex/LICENSE](textbook/tutorial/tex/LICENSE)).
+The book's statement texts will be under CC BY 4.0 too.

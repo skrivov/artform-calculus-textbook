@@ -4,3 +4,15 @@
 /build/
 # Review sheets (generated PDFs)
 /textbook/review/*.pdf
+# The guide's LaTeX by-products and generated listings
+/textbook/tutorial/tex/generated/snippets/
+/textbook/tutorial/tex/*.aux
+/textbook/tutorial/tex/*.log
+/textbook/tutorial/tex/*.toc
+/textbook/tutorial/tex/*.out
+/textbook/tutorial/tex/*.bbl
+/textbook/tutorial/tex/*.blg
+/textbook/tutorial/tex/*.fbk
+/textbook/tutorial/tex/*.pdf
+/textbook/tutorial/tex/console.txt
+/textbook/tutorial/tex/bibtex.txt

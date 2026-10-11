@@ -1,0 +1,342 @@
+% Part II of the guide "Lean through Artform Calculus". Not book text: on
+% 2026-10-09 the author decided to read it as an introduction to Lean rather
+% than use it in the textbook. Every listing is cut from
+% ../ArtformChapter1.lean by ../tools/extract_listings.py, and Lean 4.34.1
+% accepts that file as a whole. Second version, after the clarity audit of
+% 2026-10-09 (planning/lean-section-2026-10-08/AUDIT.md in the textbook's
+% sources).
+\chapter*{Part II. Chapter 1 of the book in Lean}
+\addcontentsline{toc}{chapter}{Part II. Chapter 1 of the book in Lean}
+\label{sec:lean-view}
+
+This part writes the constructions of Chapter~1 of the book in Lean, in the
+order of the chapter. Lean's type theory contains the types and rules of
+\cref{sec:rules-view} \cite{deMouraUllrich2021}, and Lean checks every
+judgement a program makes. A formation line becomes a declaration, the
+inhabitant a plate works through becomes a value, and a value of the wrong
+type is refused with a message.
+
+The listings are cut from one file, which Lean~4.34 accepts as a whole; it
+uses Lean's core language and no library. A routine part of a value or a
+proof is printed as~$\cdots$, and the file contains it.
+
+\section*{From the book's notation to Lean}
+\addcontentsline{toc}{section}{From the book's notation to Lean}
+\label{sec:lean-reading}
+
+\Cref{tab:lean-card} sets the reading card of \cref{sec:writing-constructions}
+beside its Lean spelling.
+
+\begin{table}[!htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{.25\textwidth} >{\raggedright\arraybackslash}p{.43\textwidth} >{\raggedright\arraybackslash}X}
+\toprule
+Book & Lean & Read it as\\ \midrule
+$a:A$ & \lc{a : A} & $a$ is a value of $A$\\
+$A\to B$,\quad $a\mapsto b$ & \lc{A $\to$ B},\quad \lc{fun a => b} & functions\\
+$\AFDepPair_{i:I}B(i)$,\quad $(i,b)$ & \lc{(i : I) $\times$ B i},\quad \lc{$\langle$i, b$\rangle$} & a tagged choice\\
+$\AFDepFun_{i:I}B(i)$ & \lc{(i : I) $\to$ B i} & a complete assignment\\
+$\text{data}\Longrightarrow C(\text{data}):T$ & \lc{def C (data) : T := $\ldots$} & a formation line\\
+introduction rules & \lc{inductive T where | c : $\ldots$} & one line per rule\\
+elimination rule & a definition by cases & one case per rule\\
+$a\equiv b$ & \lc{rfl : a = b} & equal by computation\\
+$\Id_A(a,b)$ & \lc{a = b} & the identity type\\
+$\{s\mid\mathsf{Legal}(s)\}$ & \lc{\{ s // Legal s \}} & a table with its legality\\
+\bottomrule
+\end{tabularx}
+\caption{The reading card in Lean. Lean writes a tagged choice with $\times$
+because, over a constant family, it is the product
+(\cref{sec:writing-constructions}).}
+\label{tab:lean-card}
+\end{table}
+
+\Cref{sec:types-values} read $a:A$ as $a\in A$ for the finite cell types of
+this chapter. Lean is given that reading by a list of the values:
+\leanlisting{listed}
+With the list, \li!decide! checks a statement about every value of the type
+by running through the values. The file gives such lists for the cells of
+rods, the tags, and pairs and tagged pairs of listed types.
+
+\section*{Rods: their rules and their laws}
+\addcontentsline{toc}{section}{Rods: their rules and their laws}
+\label{sec:lean-rods}
+
+\Cref{sec:rules-rods} gave rods two introduction rules. In Lean they are an
+inductive type, one line for each rule, and uniform substitution
+(\cref{sec:building-forms}) is a third rule. The tags of a gluing are a type
+of two values.
+\leanlisting{tag}
+\leanlisting{orderedform}
+The elimination rule is definition by cases: say what a definition gives for
+each rule, given what it gives for the rods the rule takes. The cells are
+defined so. A cell of $R_n$ is a number below $n$, a cell of $\glue(P,Q)$ is a
+tag with a cell of the rod the tag names, and a cell of $\subst(P,Q)$ is a
+pair.
+\leanlisting{cells}
+Size, position and order are defined by the same cases. The second and third
+lines of \li!pos! are the position equations of \cref{sec:building-forms},
+and the last line is an instance of the computation rules of
+\cref{sec:rules-rods}: \li!rfl! checks it for every $P$ and $Q$, with no
+induction.
+\leanlisting{pos}
+
+\Cref{prop:rod-laws} says that the order on the cells of every rod is
+linear. In Lean two cells with one position are one cell, and linearity
+follows from the order of the numbers:
+\leanlisting{rodlaws}
+The proof of \li!pos_inj! takes the rules in pairs, as the proof of
+\cref{prop:rod-laws} did. For substitution it divides a position by the size
+of the inner rod to recover the outer cell.
+
+\section*{Witnesses, and three equalities in \texorpdfstring{$2+3=5$}{2+3=5}}
+\addcontentsline{toc}{section}{Witnesses, and three equalities in \texorpdfstring{$2+3=5$}{2+3=5}}
+\label{sec:lean-witnesses}
+
+A perfect alignment is a structure with five fields: a map, a map back, two
+equations saying that each undoes the other, and the law that the order is
+kept. The last three fields are proofs, so a value must supply them.
+\leanlisting{align}
+The alignment of \cref{fig:add-alignment} is written with its five arrows,
+in two lines for the two tags. \li!decide! checks the three laws on the five
+cells and on the twenty-five pairs of cells. A wrong arrow would fail a
+check, and Lean would refuse the value.
+\leanlisting{alpha}
+
+The three equalities of \cref{sec:rules-equalities} are three declarations:
+\leanlisting{threeeq}
+The second is the test of \cref{sec:rules-equalities}. \li!isGlued! is true
+of every glued rod and false of every $R_n$. A proof \li!h! that the glued
+rod equals $R_5$ would turn \li!trivial!, the proof that the glued rod is
+glued, into a proof that $R_5$ is glued, which is \li!False!. So there is no
+such \li!h!.
+
+An empty type is stated as a function into \li!False!: from a value it would
+return a proof of what has none. The rods $R_2$ and $R_3$ have no alignment
+(\cref{sec:evidence-preview}). The map back would send three cells into two,
+two of them would meet, and the map would then send one cell to two
+different cells. The order witness of \cref{sec:add-mult-order} is a tagged
+choice whose tag is a rod: a residual $C$, with an alignment of
+$\glue(R_m,C)$ with $R_n$. The evidence that $3\le5$ has the residual $R_2$,
+and its alignment is written as $\alpha$ was.
+\leanlisting{noalign}
+
+\section*{Laws as scripts}
+\addcontentsline{toc}{section}{Laws as scripts}
+\label{sec:lean-scripts}
+
+Each move in the table of laws of \cref{sec:rods-grids} is a function on
+cells. The exchange swaps the tags. The transpose swaps the coordinates, and
+transposing back is the identity by computation. The distributive cut sends
+a cell of the substituted segmented rod to the block its tag names, in the
+same row. Regrouping is written as the exchange is. Lean refuses a definition
+by cases that leaves a case out, so every move is total.
+\leanlisting{scripts}
+
+\section*{A tagged choice and a complete assignment}
+\addcontentsline{toc}{section}{A tagged choice and a complete assignment}
+\label{sec:lean-sigma-pi}
+
+The family $F$ of \cref{sec:tagged-choice} is a function from tags to rods.
+A value of the tagged choice is a tag with a cell of the rod it names, and
+the list of values has five entries, none repeated:
+\leanlisting{family}
+Lean refuses the pair $(L,2)$:
+\leanlisting{badcell}
+\leanmessage{badcell}
+Written $\langle2,h\rangle$, the cell carries a proof $h$ that $2<2$, and
+there is none. A bare numeral would not be checked: Lean reads a numeral in
+\li!Fin n! modulo $n$, so that $\langle L,2\rangle$ would be the cell
+$(L,0)$.
+
+A complete assignment is a function defined at both tags. It corresponds to
+the pairs of a row value and a column value (\cref{sec:complete-assignment})
+by two functions, and the two examples after them are the round trips. The
+first holds by computation. The second compares functions and uses
+\li!funext!: functions that agree at every input are equal. Lean proves this
+principle from its quotient types; an intensional type theory without them
+must assume it.
+\leanlisting{assignment}
+
+\section*{Formation lines}
+\addcontentsline{toc}{section}{Formation lines}
+\label{sec:lean-formation}
+
+A formation line becomes the head of a declaration: its inputs are the
+parameters, and the constructed type follows the colon. On cells, the
+assembly of \cref{sec:formation-lines} is the tagged choice itself. The code
+and the history of a form (\cref{fig:form-history-plate}) are a tagged
+choice whose tag is the code. \li!History k! holds the construction trees of
+$k$ cells: an inductive family, with one type for each code. The two trees of
+\cref{fig:one-code-two-histories} are two values over the code $3$.
+\leanlisting{history}
+A tree of four cells is a history of the four-cell code and of no other:
+\leanlisting{badtree}
+\leanmessage{badtree}
+
+The base cut of a pointed wheel is a cell of the wheel's own form, so the
+type of the second field mentions the first. The arc state and the gapped
+state of \cref{fig:wheel} are two tables with one tally. Normalization takes
+its evidence as an input, and so cannot be applied to $R_2$ and $R_3$.
+\leanlisting{wheel}
+
+\section*{Time}
+\addcontentsline{toc}{section}{Time}
+\label{sec:lean-time}
+
+A finite temporal support has positions, a successor defined on some of them,
+and the proof that the successor is injective. The line and the cycle supply
+that proof once for every $n$, and a clock is a pointed cycle.
+\leanlisting{timeform}
+A rectangular tapestry (\cref{def:time-rectangular}) keeps its support, its
+ordered rows, its temporal palette and one thread for every row. Lean numbers
+the rows of the tetractys palette from $0$, so row $r$ has $r+1$ phases. Each
+thread of \cref{fig:time-tapestry} reads a tick modulo the number of phases
+of its row, and the names $1,\ldots,10$ are computed for the reader. The two
+outlined columns, the distinctness of the twelve columns and the ten values
+of the palette are checked:
+\leanlisting{tapestry}
+A laying sends the number of phases of a row and a tick to a phase. The
+period of a row is the least step after which it repeats, and the spectra of
+\cref{prop:tetractys-intwits} are computed:
+\leanlisting{spectrum}
+
+An occurrence history (\cref{def:time-history}) is a path in a transition
+graph: an inductive family indexed by its two ends and its number of
+transitions. A tick realization (\cref{def:time-ticks}) keeps its certificate
+as a field, so no value can be formed without it. Every certified record of
+\cref{sec:time} has this shape.
+\leanlisting{ticks}
+The digits of a cyclarchy (\cref{def:time-cyclarchy}) are a complete
+assignment over a family that varies, one digit for each radix, written as
+nested pairs. Adding one carries into the next digit, and flattening makes
+the cyclarchy $(3,4)$ a clock of twelve:
+\leanlisting{cyclarchy}
+The covering and grouping equations of \cref{sec:clock-trajectory} are two
+statements about a laid row, and the division laying fails the first:
+\leanlisting{covering}
+The calibration of \cref{fig:time-measurement}, the gear phases, the event
+tapestry and the duration record are declared in the same way, and the
+closing table of this part names them. The calibration record carries as
+its certificate a proof that every pair of readings meets the law, and the
+file computes from it the elapsed interval $[2999,3001]U$.
+
+\section*{Meaning}
+\addcontentsline{toc}{section}{Meaning}
+\label{sec:lean-meaning}
+
+An interpretation profile declares its endpoints, its realizers and its law.
+An interpretation witness (\cref{def:intwit-book}) is a realizer with its
+certificate. The semantic fibre is a tagged choice over the profiles in use,
+and the selected layer a further one.
+\leanlisting{profile}
+The two disciplines of the game of \cref{sec:glass-bead-game} are two
+profiles. A law asks for its equation and for the phase typing of the rows;
+a profile asks that the frame be what the laying produces, with the declared
+spectrum. The two moves are two witnesses, and the moves side by side are two
+values of the fibre. The move that was not made is an empty type: no laying
+at all strings the palette into the division frame under the law of the
+clock. The frame shows the row of two unchanged from tick $0$ to tick $1$,
+and the covering equation requires a change.
+\leanlisting{disciplines}
+
+\section*{Spaces and states}
+\addcontentsline{toc}{section}{Spaces and states}
+\label{sec:lean-space}
+
+A finite cell pattern (\cref{def:finite-cell-pattern}) declares cells, their
+dimensions, the immediate faces and a face-closed boundary, with the two
+laws as fields. $\SquareGrid(m,n)$ gives the cells of each dimension.
+\leanlisting{canvas}
+Listing the cells of the board gives the counts of \cref{sec:board-canvas}.
+The colouring rule, the shared edge and the domino of
+\cref{fig:figures-on-board} follow. The placement at $d6$ and $e7$ has no
+value, since its field would prove that \li!false = true!; \li!nofun!, the
+function with no cases, shows it.
+\leanlisting{board}
+The state space is a subtype. Lean treats any two proofs of one proposition
+as equal, so two states with one table are equal by computation. This is
+legality read as a property (\cref{sec:rules-counting}): Lean counts tables,
+not proofs.
+\leanlisting{state}
+
+\section*{Scripts and roles}
+\addcontentsline{toc}{section}{Scripts and roles}
+\label{sec:lean-roles}
+
+A script retains its operations as well as its action. The transpose followed
+by itself acts as the identity and records two operations, as
+\cref{sec:rods-grids} said of the two-step script. Positions with White to
+play and positions with Black to play are two types, and a White turn goes
+from the first to the second (\cref{fig:chess-typed-arrows}).
+\leanlisting{script}
+Two White turns do not compose:
+\leanlisting{badturns}
+\leanmessage{badturns}
+\li!#eval! prints a value for the reader, and no later declaration can refer
+to what it printed. A definition is a value that later declarations may use.
+\leanlisting{reading}
+
+\section*{What Lean does not see}
+\addcontentsline{toc}{section}{What Lean does not see}
+
+Lean checks that each value has its type. As \cref{sec:rules-view} said of
+the rules, it does not say what a value is for. The material balance of a
+position could be computed by one definition and consumed by the next, and
+Lean would accept both. The rule of \cref{sec:role-policy} that nothing may
+depend on a reading is kept by whoever writes the program, by leaving
+readings in \li!#eval!.
+
+Nor does Lean see pictures. \Cref{sec:writing-constructions} specified a
+structure by a picture and stated its laws in the text. In Lean the inductive
+type is the specification, and a law the picture shows is a theorem, as
+\li!pos_inj! is for the row of cells.
+
+\section*{Every formation line in Lean}
+\addcontentsline{toc}{section}{Every formation line in Lean}
+
+Each formation line of this chapter, and the declaration of the file that
+writes it:
+
+{\small
+\renewcommand{\arraystretch}{1.1}
+\begin{xltabular}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{.42\textwidth}@{}}
+\toprule
+Formation line & Lean\\ \midrule
+\endhead
+$\glue(P,Q)$, $R_n$, $\subst(P,Q)$ & \lc{OrderedForm}, three rules\\
+$\Assemble(I;F)$, $\Index(n)$, $\varnothing$, an atom & \lc{assemble}, \lc{Fin n}, \lc{Fin 0}, \lc{Fin 1}\\
+code $k$ and history $h:\History(k)$ & \lc{AFForm}, \lc{History}\\
+$\Wheel_n(F;b)$, $\Normalize(X;\alpha)$ & \lc{Wheel}, \lc{normalize}\\
+$\LinearTime(n)$, $\CycleTime(n)$, $\PointTime(T;t_0)$ & \lc{LinearTime}, \lc{CycleTime}, \lc{PointTime}\\
+$\mathsf{toClock}(W;i)$, $\SampleClock$ & \lc{toClock}, \lc{SampleClock}\\
+$\RectTapestry(T;R,V,e)$ & \lc{RectTapestry}\\
+$\OccurrenceHistory(G;\gamma)$ & \lc{Path}\\
+$\TickRealization(G,T)$ & \lc{TickRealization}\\
+$\Cyclarchy(N)$ & \lc{Digits}, \lc{inc}, \lc{flatten}\\
+$\EventTapestry(T;D)$ & \lc{EventData}\\
+$\DurationRecord(\gamma;U,d)$ & \lc{DurationRecord}, \lc{D}\\
+$\EventAssociation(E,\gamma)$ & \lc{EventAssociation}\\
+$\CalibrationRecord(R;\rho,\epsilon,c)$, $\Elapsed(w;e,f)$ & \lc{CalibrationRecord}, \lc{elapsed}\\
+$\IntWit_{\mathcal C}(F,\theta)$, $\Sem_\Gamma(F)$, $\PointedInt_\Gamma$ & \lc{IntWit}, \lc{Sem}, \lc{PointedInt}\\
+$\SquareGrid(m,n)$, $\Canvas(F;c)$ & \lc{SquareGrid}, \lc{Canvas}\\
+$\AttachCell(X,c;w)$ & \lc{attachCell}, \lc{PatchWitness}\\
+$\State(A)$, a frame and its instances & \lc{State}, \lc{Frame}, \lc{Frame.Instance}\\
+$\Refine(X;\rho)$ & \lc{RefinementData}\\
+$g\circ f:\Script(A,C)$ & \lc{Script.comp}\\
+\bottomrule
+\end{xltabular}}
+
+The file also counts the eight symmetries of the square of
+\cref{sec:shape-type-book} from its incidence.
+
+% LIT-1E | sec:lean-view
+\begin{literatureconnection}
+Lean~4 is described by de~Moura and Ullrich. Its type theory goes back to
+the calculus of constructions of Coquand and Huet, with the inductive types
+of Coquand and Paulin; inductive families, such as the histories and paths
+of this part, are Dybjer's.
+\smallskip
+\textit{Sources:} \cite{deMouraUllrich2021,CoquandHuet1988,CoquandPaulin1990,Dybjer1994}.
+\end{literatureconnection}
