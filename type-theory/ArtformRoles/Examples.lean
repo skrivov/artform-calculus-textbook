@@ -170,13 +170,14 @@ theorem walker_two_ticks :
   decide
 
 /-- On the square each step has one certificate and leads to a corner of its
-own, so the three counts of §4 agree. -/
-theorem walker_counts_agree (n : ℕ) (z : Fin 4) :
-    walker.proofs 0 n z = walker.histories 0 n z ∧
-      walker.histories 0 n z = walker.trajectories 0 n z := by
+own, so the three counts of §4 agree, from every start and for every number
+of ticks. -/
+theorem walker_counts_agree (x₀ : Fin 4) (n : ℕ) (z : Fin 4) :
+    walker.proofs x₀ n z = walker.histories x₀ n z ∧
+      walker.histories x₀ n z = walker.trajectories x₀ n z := by
   refine ⟨walker.proofs_eq_histories
     (fun _ => Fintype.card_le_one_iff_subsingleton.mpr (inferInstanceAs (Subsingleton (Fin 1))))
-    0 n z, walker.histories_eq_trajectories ?_ 0 n z⟩
+    x₀ n z, walker.histories_eq_trajectories ?_ x₀ n z⟩
   intro y z a b _ _
   have hk : (if z = y + 1 then 1 else 0) + (if z + 1 = y then 1 else 0) ≤ 1 := by
     revert y z; decide
