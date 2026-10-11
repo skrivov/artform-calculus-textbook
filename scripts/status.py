@@ -376,7 +376,8 @@ def render_tex(results):
            "No. & Statement & Lean & Status\\\\", "\\midrule", "\\endhead"]
     for r in results:
         name = (r["proof"] or r["statement"]).removeprefix("Artform.")
-        name = tex_escape(name).replace(".", ".\\allowbreak ")
+        name = re.sub(r"(?<=[a-z])(?=[A-Z])", r"\\allowbreak ", tex_escape(name))
+        name = name.replace(".", ".\\allowbreak ")
         lean = f"\\texttt{{\\footnotesize {name}}}" if name else "---"
         out.append(f"{r['number']} & {r['title']} & {lean} & {r['status']}\\\\")
     out += ["\\bottomrule", "\\end{xltabular}}"]
