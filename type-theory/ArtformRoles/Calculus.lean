@@ -15,11 +15,15 @@ import ArtformRoles.Calculus.Inversion
 import ArtformRoles.Calculus.TelFacts
 import ArtformRoles.Calculus.SigWeaken
 import ArtformRoles.Calculus.Preservation
+import ArtformRoles.Calculus.Skeleton
+import ArtformRoles.Calculus.Principal
+import ArtformRoles.Calculus.SN
 
 /-!
 # The calculus of Part II
 
 The dependent calculus `RATT` of Part II of the paper *Five Roles for Artforms*:
 its syntax, effects, signatures and judgments, reduction and confluence,
-renaming and substitution with exact effects, and subject reduction.
+renaming and substitution with exact effects, subject reduction, role
+functionality and principal effects, and strong normalization.
 -/
