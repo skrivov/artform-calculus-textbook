@@ -5,26 +5,37 @@ Reads
   textbook/manifest.toml  hand-edited: one [[statement]] and one [[definition]]
                           per item of the book, keyed by its label
   the inventory           named by textbook/edition.toml: the book's items as
-                          printed, each with a hash (absent until Phase 3)
+                          printed, each with a hash
   build/report.json       written by `lake env lean --run scripts/Report.lean`
 
 and computes the status of each statement:
   planned    no Lean statement carries its label
-  stated     a Lean statement does, but it awaits review, has changed since
-             review, or has no proof that proves exactly it with the three
+  stated     a Lean statement does, but it awaits review, a review returned
+             it, or it has no proof that proves exactly it with the three
              permitted axioms
-  proved     reviewed, unchanged since review, and so proved
+  proved     approved by the review, and proved
   partial    as proved, for a narrower statement (set by hand, with fidelity;
              stated until it is reviewed)
   informal   not formalized by design (set by hand, with fidelity)
 and of each definition: planned, defined (a declaration carries its label),
 mathlib or informal (both set by hand).
 
+An approval is recorded once and stands until a later review returns the
+statement. Rebuilding the library, moving or renaming declarations, adding
+definitions and editing fidelity notes never revoke it. The approval keeps
+the hash of the text the reviewer read, the statement and the definitions it
+reaches as Lean prints them, and the hash of the book's text. --drift lists
+the approved statements whose Lean text or book text differs from what was
+approved, as the worklist of the next review; drift never changes a status.
+
 Usage, from the repository root:
   python3 scripts/status.py --write           write STATUS.md, the README's
                                               status block, and the statuses
                                               and Lean names in the manifest
-  python3 scripts/status.py --check           fail if anything is stale or wrong
+  python3 scripts/status.py --check           fail if a generated file is out
+                                              of date or anything is wrong
+  python3 scripts/status.py --drift           list the approved statements
+                                              changed since their review
   python3 scripts/status.py --tex PATH        write only the guide's statement
                                               table, with the counts as macros
   python3 scripts/status.py --approve KEY...  record the judge's approval of the
@@ -33,8 +44,8 @@ Options: --report PATH (default build/report.json); --tex PATH, which also
 writes the guide's statement table; --date YYYY-MM-DD, for --approve.
 
 The script edits only one-line fields of the manifest: status, lean_statement,
-lean_proof, lean, book_sha256, reviewed, review_text_sha256 and
-review_term_sha256, review_context_sha256 and review_return (cleared on approval).
+lean_proof, lean, book_sha256, reviewed, review_text_sha256 and review_return
+(cleared on approval).
 """
 import argparse
 import datetime
@@ -67,32 +78,6 @@ def sha(text):
 def text_hash(statement):
     """The hash of what the reviewer reads: the statement and its definitions."""
     return sha("\n\n".join([statement["text"], *statement["surface"]]))
-
-
-def term_hash(statement):
-    """The hash of the exact Lean terms of the same declarations."""
-    return sha("\n\n".join(statement["terms"]))
-
-
-def context_hash(entry, definitions, inventory):
-    """Bind approval to the book and the declared scope of its translation.
-
-    Lean dependencies alone cannot detect a changed book definition or a new
-    fidelity qualification. Conservatively include every inventoried book
-    item and every definition's fidelity note; the inventory does not record
-    which book definitions a statement uses. Ignore locations and numbering.
-    """
-    context = {
-        "book": {key: {field: item.get(field, "")
-                       for field in ("kind", "title", "statement")}
-                 for key, item in (inventory or {}).items()},
-        "definitions": {e["key"]: {field: e.get(field, "")
-                                  for field in ("fidelity", "planned_home")}
-                        for e in definitions},
-        "fidelity": entry.get("fidelity", ""),
-        "partial": entry.get("status") == "partial",
-    }
-    return sha(json.dumps(context, sort_keys=True, ensure_ascii=False))
 
 
 def slug(s):
@@ -252,22 +237,11 @@ def evaluate(st_entries, def_entries, inventory, report):
         elif st is None:
             status = "planned"
         else:
-            ok = not e.get("review_return")
-            if not e.get("reviewed"):
-                ok = False
-                if not e.get("review_return"):
-                    notes.append("awaits review")
-            else:
-                if (e.get("review_text_sha256") != text_hash(st)
-                        or e.get("review_term_sha256") != term_hash(st)):
-                    ok = False
-                    notes.append("changed since review")
-                if book and e.get("book_sha256") != book["statement_sha256"]:
-                    ok = False
-                    notes.append("the book's text changed since review")
-                if e.get("review_context_sha256") != context_hash(e, def_entries, inventory):
-                    ok = False
-                    notes.append("the book or fidelity context changed since review")
+            # An approval stands until a review returns the statement; what
+            # changed since it is reported by drift(), never here.
+            ok = bool(e.get("reviewed")) and not e.get("review_return")
+            if not e.get("reviewed") and not e.get("review_return"):
+                notes.append("awaits review")
             if not good:
                 ok = False
                 notes.append("no proof yet" if not proofs.get(key) else "no valid proof")
@@ -325,6 +299,27 @@ def evaluate(st_entries, def_entries, inventory, report):
             "status": status, "lean": names, "home": e.get("planned_home", ""),
         })
     return results, def_results, problems, updates
+
+
+def drift(st_entries, inventory, report):
+    """The approved statements whose Lean text, or text in the book, differs
+    from the text recorded at their approval, each with what differs. Drift
+    never changes a status: it is the worklist of the next review."""
+    lean_st = report[0]
+    out = []
+    for e in st_entries:
+        if not e.get("reviewed") or e.get("review_return"):
+            continue
+        st = lean_st.get(e["key"])
+        book = inventory.get(e["key"]) if inventory else None
+        changed = []
+        if st is not None and e.get("review_text_sha256") != text_hash(st):
+            changed.append("Lean text")
+        if book and e.get("book_sha256") != book["statement_sha256"]:
+            changed.append("book text")
+        if changed:
+            out.append((e["key"], changed))
+    return out
 
 
 def ordinal(n):
@@ -416,25 +411,20 @@ def approve(keys, date, report, inventory):
     text = MANIFEST.read_text(encoding="utf-8")
     manifest = tomllib.loads(text)
     entries = {e["key"]: e for e in manifest.get("statement", [])}
-    definitions = manifest.get("definition", [])
     lean_st = report[0]
     log = []
     for key in keys:
         st = lean_st.get(key)
         if st is None:
             sys.exit(f"{key}: no Lean statement carries this label")
-        fields = {"reviewed": date, "review_text_sha256": text_hash(st),
-                  "review_term_sha256": term_hash(st),
-                  "review_context_sha256": context_hash(entries[key], definitions, inventory)}
+        fields = {"reviewed": date, "review_text_sha256": text_hash(st)}
         if entries[key].get("review_return"):
             fields["review_return"] = ""
         if inventory and key in inventory:
             fields["book_sha256"] = inventory[key]["statement_sha256"]
         text = set_fields(text, "statement", key, fields)
         log.append(f"- {date}: `{key}` approved as `{st['decl']}` "
-                   f"(text {fields['review_text_sha256'][:12]}, "
-                   f"term {fields['review_term_sha256'][:12]}, "
-                   f"context {fields['review_context_sha256'][:12]})")
+                   f"(text {fields['review_text_sha256'][:12]})")
     candidate = tomllib.loads(text)
     problems = evaluate(candidate.get("statement", []), candidate.get("definition", []),
                         inventory, report)[2]
@@ -453,19 +443,28 @@ def main():
     mode = ap.add_mutually_exclusive_group()
     mode.add_argument("--write", action="store_true")
     mode.add_argument("--check", action="store_true")
+    mode.add_argument("--drift", action="store_true")
     mode.add_argument("--approve", nargs="+", metavar="KEY")
     ap.add_argument("--report", type=Path, default=ROOT / "build" / "report.json")
     ap.add_argument("--tex", type=Path)
     ap.add_argument("--date", default=datetime.date.today().isoformat())
     args = ap.parse_args()
-    if not (args.write or args.check or args.approve or args.tex):
-        ap.error("one of --write, --check, --approve or --tex is required")
+    if not (args.write or args.check or args.drift or args.approve or args.tex):
+        ap.error("one of --write, --check, --drift, --approve or --tex is required")
 
     report = load_report(args.report)
     edition, inventory = load_inventory()
     if args.approve:
         approve(args.approve, args.date, report, inventory)
     text, st_entries, def_entries = load_manifest()
+    changed = drift(st_entries, inventory, report)
+    if args.drift:
+        reviewed = {e["key"]: e.get("reviewed") for e in st_entries}
+        for key, what in changed:
+            print(f"{key}: the {' and the '.join(what)} changed since its review of {reviewed[key]}")
+        print(f"{len(changed)} approved statement{'' if len(changed) == 1 else 's'} "
+              f"changed since review")
+        return 0
     results, def_results, problems, updates = evaluate(st_entries, def_entries, inventory, report)
 
     new_text = text
@@ -484,17 +483,19 @@ def main():
 
     tally = ", ".join(f"{sum(r['status'] == s for r in results)} {s}" for s in STATEMENT_STATUSES)
     summary = f"{len(results)} statements ({tally}); {len(def_results)} definitions"
+    if changed:
+        summary += f"; {len(changed)} approved changed since review (--drift)"
     if args.check:
-        stale = [p for p, content in outputs.items()
-                 if not p.exists() or p.read_text(encoding="utf-8") != content]
+        outdated = [p for p, content in outputs.items()
+                    if not p.exists() or p.read_text(encoding="utf-8") != content]
         if new_text != text:
-            stale.append(MANIFEST)
-        for p in stale:
-            print(f"stale: {p.relative_to(ROOT)} (run scripts/status.py --write)")
+            outdated.append(MANIFEST)
+        for p in outdated:
+            print(f"out of date: {p.relative_to(ROOT)} (run scripts/status.py --write)")
         for p in problems:
             print(f"problem: {p}")
         print(summary)
-        return 1 if stale or problems else 0
+        return 1 if outdated or problems else 0
 
     if not (args.write or args.approve):
         # --tex alone writes the guide's table and nothing else.
@@ -514,6 +515,7 @@ def main():
     STATUS_JSON.parent.mkdir(parents=True, exist_ok=True)
     STATUS_JSON.write_text(json.dumps({
         "edition": edition, "statements": results, "definitions": def_results,
+        "drift": [{"key": k, "changed": what} for k, what in changed],
         "problems": problems}, indent=1, ensure_ascii=False, default=str) + "\n",
         encoding="utf-8")
     for p in problems:

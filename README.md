@@ -17,8 +17,8 @@ things.
   `ArtformRoles` that checks both of its parts: the role discipline, and the
   calculus RATT with its metatheory and decision procedure.
 
-The [edition-54 review](textbook/review/edition-54-2026-10-12.md) renews the
-95 previously approved translations. The separate
+The [edition-54 review](textbook/review/edition-54-2026-10-12.md) confirms the
+95 approved translations against the 54th edition. The separate
 [five-roles review](type-theory/review/audit-2026-10-12.md) accepted the narrower
 Lean results and returned three claims in the paper for revision; the revision
 of 12 October answers them, mechanizes the calculus, and awaits re-review.
@@ -28,8 +28,11 @@ records a verdict for every numbered statement. Six existing translations
 need revision, two approved translations still need proofs, and two statements
 remain planned. The two *partial* approvals cover only the scope recorded in
 their fidelity notes. A statement becomes *proved* only when its translation
-has passed review against the book and Lean has checked its proof. Errors and
-gaps found in the book while formalizing it are recorded in
+has passed review against the book and Lean has checked its proof. The
+approval is given once: rebuilding the library, moving declarations and
+adding definitions do not revoke it. `python3 scripts/status.py --drift`
+lists any approved statement whose Lean text has changed since, for the next
+review. Errors and gaps found in the book while formalizing it are recorded in
 [`textbook/FINDINGS.md`](textbook/FINDINGS.md).
 
 ## What will be proved
@@ -43,9 +46,9 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 <!-- status:begin -->
 | Status | Statements |
 |---|---|
-| proved | 0 |
-| partial | 0 |
-| stated | 101 |
+| proved | 91 |
+| partial | 2 |
+| stated | 8 |
 | planned | 2 |
 | informal | 0 |
 | **total** | **103** |

@@ -4,6 +4,7 @@ import importlib.util
 import io
 import sys
 import tempfile
+import tomllib
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -41,10 +42,7 @@ class ReviewTests(unittest.TestCase):
                        {"prop:test": [{"decl": "Artform.test", "proves": self.statement["decl"],
                                        "axioms": ["propext"]}]},
                        {"def:test": [{"decl": "Artform.D"}]}, [])
-        self.entry.update(review_text_sha256=status.text_hash(self.statement),
-                          review_term_sha256=status.term_hash(self.statement),
-                          review_context_sha256=status.context_hash(
-                              self.entry, self.definitions, self.inventory))
+        self.entry.update(review_text_sha256=status.text_hash(self.statement))
 
     def result(self):
         results, _, problems, _ = status.evaluate(
@@ -52,37 +50,67 @@ class ReviewTests(unittest.TestCase):
         self.assertEqual(problems, [])
         return results[0]
 
+    def drift(self):
+        return status.drift([self.entry], self.inventory, self.report)
+
     def test_unchanged_review_stays_proved(self):
         self.assertEqual(self.result()["status"], "proved")
+        self.assertEqual(self.drift(), [])
 
-    def test_book_definition_change_revokes_review_even_with_unchanged_stored_hash(self):
-        self.inventory["def:test"]["statement"] = "Changed book definition."
+    def test_unreviewed_statement_awaits_review(self):
+        del self.entry["reviewed"]
         self.assertEqual(self.result()["status"], "stated")
-
-    def test_fidelity_change_revokes_review(self):
-        self.entry["fidelity"] = "A new restriction."
-        self.assertEqual(self.result()["status"], "stated")
-
-    def test_definition_fidelity_change_revokes_review(self):
-        self.definitions[0]["fidelity"] = "A different interpretation."
-        self.assertEqual(self.result()["status"], "stated")
-
-    def test_missing_context_hash_revokes_legacy_review(self):
-        del self.entry["review_context_sha256"]
-        self.assertEqual(self.result()["status"], "stated")
+        self.assertEqual(self.result()["notes"], ["awaits review"])
 
     def test_return_verdict_blocks_an_old_approval(self):
         self.entry["review_return"] = "Missing a book case."
         self.assertEqual(self.result()["status"], "stated")
         self.assertIn("returned: Missing a book case.", self.result()["notes"])
+        self.assertEqual(self.drift(), [])
 
-    def test_renumbering_and_relocation_preserve_review(self):
-        self.inventory["def:test"].update(number="2.1", file="moved.tex", line=25)
-        self.assertEqual(self.result()["status"], "proved")
-
-    def test_lean_dependency_change_still_revokes_review(self):
-        self.statement["terms"].append("changed dependency")
+    def test_missing_proof_keeps_an_approved_statement_stated(self):
+        self.report[1]["prop:test"].clear()
         self.assertEqual(self.result()["status"], "stated")
+        self.assertEqual(self.result()["notes"], ["no proof yet"])
+
+    def test_rebuilds_moves_and_new_definitions_do_not_touch_a_review(self):
+        # A move renames hygienic binders in the exact terms; new definitions,
+        # fidelity notes and a renumbered book change the context.
+        self.statement["terms"].append("inst._@.ArtformTextbook.Moved._hyg.12")
+        self.definitions.append({"key": "def:new", "status": "defined", "fidelity": "New."})
+        self.inventory["def:new"] = {"kind": "definition", "statement": "Another definition."}
+        self.definitions[0]["fidelity"] = "A different interpretation."
+        self.entry["fidelity"] = "A clarified note."
+        self.inventory["def:test"].update(statement="Changed book definition.", number="2.1")
+        self.assertEqual(self.result()["status"], "proved")
+        self.assertEqual(self.drift(), [])
+
+    def test_changed_lean_text_keeps_the_approval_and_is_listed(self):
+        self.statement["surface"] = ["D, changed"]
+        self.assertEqual(self.result()["status"], "proved")
+        self.assertEqual(self.result()["notes"], [])
+        self.assertEqual(self.drift(), [("prop:test", ["Lean text"])])
+
+    def test_changed_book_text_keeps_the_approval_and_is_listed(self):
+        self.inventory["prop:test"]["statement_sha256"] = "new book hash"
+        self.assertEqual(self.result()["status"], "proved")
+        self.assertEqual(self.drift(), [("prop:test", ["book text"])])
+
+    def test_approval_records_the_reviewed_text_and_clears_a_return(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest, log = Path(tmp) / "manifest.toml", Path(tmp) / "review-log.md"
+            manifest.write_text('[[statement]]\nkey = "prop:test"\nstatus = "stated"\n'
+                                'review_return = "Missing a book case."\n'
+                                '[[definition]]\nkey = "def:test"\nstatus = "defined"\n')
+            with patch.object(status, "MANIFEST", manifest), patch.object(status, "REVIEW_LOG", log), \
+                    redirect_stdout(io.StringIO()):
+                status.approve(["prop:test"], "2026-10-12", self.report, self.inventory)
+            entry = tomllib.loads(manifest.read_text())["statement"][0]
+            self.assertEqual(entry["reviewed"], "2026-10-12")
+            self.assertEqual(entry["review_text_sha256"], status.text_hash(self.statement))
+            self.assertEqual(entry["book_sha256"], "book hash")
+            self.assertEqual(entry["review_return"], "")
+            self.assertIn("`prop:test` approved", log.read_text())
 
     def test_bad_proof_cannot_write_an_approval(self):
         self.report[1]["prop:test"][0]["axioms"].append("sorryAx")

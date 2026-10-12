@@ -27,8 +27,9 @@ This repository holds Lean proofs of the numbered statements of the textbook
    every statement's state is there. If `PLAN.md` exists, read it too. It is
    kept out of git on the author's machine.
 2. A change to a file in a `Defs/` folder or to a `Statements.lean` must be
-   named in the commit message, together with the entries it sends back to
-   review. `scripts/status.py` resets those reviews in any case.
+   named in the commit message, together with the approved entries whose
+   Lean text it changes; `python3 scripts/status.py --drift` lists them. The
+   change does not revoke their approval: they go on the next review sheet.
 3. Never weaken a statement, add a hypothesis, or narrow a definition to make
    a proof go through. If a statement cannot be proved as the book prints it,
    record it in `textbook/FINDINGS.md` and stop work on that statement.
@@ -39,7 +40,10 @@ This repository holds Lean proofs of the numbered statements of the textbook
    judge, an independent AI review of its Lean form against the book, has
    approved it. Approval is recorded by
    `python3 scripts/status.py --approve <key>` when the judge's verdict
-   approves the statement. No human review is a gate for anything here.
+   approves the statement. An approval is given once and stands until a
+   later review returns the statement: rebuilds, moves, renames, new
+   definitions and edited fidelity notes never revoke it, and no review is
+   repeated because of them. No human review is a gate for anything here.
 6. Every proved statement has a non-vacuity example on the book's running
    example: an `example` showing that the statement's hypotheses can be met,
    in a section `Non-vacuity` at the end of its proof file.

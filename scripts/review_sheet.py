@@ -5,16 +5,17 @@ For each statement the sheet sets side by side:
 - the book's statement, typeset with the book's own macros;
 - the Lean statement, and every definition of the library it unfolds to;
 - the recorded differences from the book (the manifest's fidelity note);
-- the two review hashes, which an approval records;
+- the review hash of the text it shows, which an approval records;
 - a box to approve or return it.
 
   python3 scripts/review_sheet.py [KEY ...] [--report PATH] [--book-aux PATH]
                                    [--name NAME]
 
-Without keys the sheet holds every statement whose status is stated because
-it awaits review, has changed since review, or whose text in the book has
-changed. It writes textbook/review/<NAME>.tex and .pdf, by default
-sheet-<date>; neither is committed. The judge's decisions are recorded with
+Without keys the sheet holds every statement that awaits review, and every
+approved statement whose Lean text or text in the book has changed since its
+review (`python3 scripts/status.py --drift`). It writes
+textbook/review/<NAME>.tex and .pdf, by default sheet-<date>; neither is
+committed. The judge's decisions are recorded with
 `python3 scripts/status.py --approve KEY...`.
 """
 import argparse
@@ -34,7 +35,6 @@ ROOT = status.ROOT
 REVIEW = ROOT / "textbook" / "review"
 BOOK_STYLE = ROOT / "tutorial" / "tex" / "book"
 DEFAULT_AUX = ROOT.parent / "textbook" / "artform-calculus-and-applications.aux"
-WAITING = ("awaits review", "changed since review", "the book's text changed since review")
 
 PREAMBLE = r"""\documentclass[11pt,openany]{memoir}
 \input{artform-notation}
@@ -58,9 +58,10 @@ PREAMBLE = r"""\documentclass[11pt,openany]{memoir}
 \medskip
 \noindent %(count)s, from the %(edition)s of the book. For each one, compare
 the book's statement with the Lean statement and the definitions it unfolds
-to, then mark it approved or returned. An approval is recorded with its two
-review hashes, printed under each title: if the Lean statement or one of its
-definitions changes later, the statement comes back for review.
+to, then mark it approved or returned. An approval is recorded once, with
+the review hash printed under each title, the hash of the text shown here. A
+later change of that text does not revoke the approval; it puts the statement
+on the next sheet.
 """
 
 ITEM = r"""
@@ -68,7 +69,7 @@ ITEM = r"""
 \section{%(number)s\quad %(title)s}
 \noindent\lc{%(key)s}\quad %(kind)s, tier %(tier)s, batch %(batch)s\\
 book source: \lc{%(source)s}\\
-review hashes: text \lc{%(text_hash)s}, term \lc{%(term_hash)s}
+review hash: \lc{%(text_hash)s}
 
 \subsection*{In the book}
 \begin{tcolorbox}[colback=white,colframe=ArtNavy!40,breakable]
@@ -137,8 +138,8 @@ def main():
         if unknown:
             sys.exit("not statements of the manifest: " + ", ".join(unknown))
     else:
-        chosen = [r for r in results if r["status"] == "stated"
-                  and any(n in WAITING for n in r["notes"])]
+        drifted = {key for key, _ in status.drift(st_entries, inventory, report)}
+        chosen = [r for r in results if r["key"] in drifted or "awaits review" in r["notes"]]
     missing_lean = [r["key"] for r in chosen if r["key"] not in report[0]]
     if missing_lean:
         sys.exit("no Lean statement carries: " + ", ".join(missing_lean))
@@ -172,7 +173,7 @@ def main():
             "source": escape(e.get("source", "")), "book": book, "lean": st["text"],
             "surface": surface,
             "fidelity": escape(e.get("fidelity", "").strip()) or r"\emph{None recorded.}",
-            "text_hash": status.text_hash(st)[:12], "term_hash": status.term_hash(st)[:12],
+            "text_hash": status.text_hash(st)[:12],
         })
     missing = unmapped(lean_texts)
     if missing:

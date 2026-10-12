@@ -50,8 +50,9 @@ any reader, to judge it. Every Lean statement has a \emph{fidelity note},
 which lists each way it reads the book: a hypothesis made explicit, a case
 generalized, a choice between two readings. Non-vacuity examples exhibit
 inputs on which the hypotheses hold. And an approval records hashes of the
-Lean text and exact terms, the inventoried book text, and the fidelity notes.
-If these change later, the statement goes back for review.
+Lean text that the reviewer read and of the book's text, so that a later
+change to either can be listed for the next review. Such a change does not
+revoke the approval.
 
 When this guide was built, \statuscount{proved} statements were proved,
 \statuscount{partial} were partial, \statuscount{stated} were stated and
@@ -446,15 +447,17 @@ library use \li!decide +kernel! instead, which the kernel itself checks, on
 data that a script computes beforehand. The sixty rotations of the
 icosahedron (\cref{prop:mm-icosahedron}) are checked so.
 
-An approval records three review hashes. The first is of the text the reviewer read:
-the statement, and the definitions it uses, as Lean prints them. The second
-is of their exact terms, as Lean stores them. The third records the book's
-inventoried text and the fidelity notes, including whether the approval is
-partial. A change to any of these sends the statement back for review.
-The book's inventory does not record dependencies between its definitions
-and statements, so a change to its text conservatively reopens every review.
+An approval records two hashes. The first is of the text the reviewer
+read: the statement, and the definitions it uses, as Lean prints them. The
+second is of the statement's text in the book. Neither decides a status. An
+approval is given once and stands until a later review returns the
+statement: rebuilding the library, moving a declaration to another file or
+adding a definition leaves it in place. The command
+\lc{python3 scripts/status.py --drift} lists the approved statements whose
+Lean text or book text differs from what was approved, and the next review
+reads exactly those.
 
-GitHub runs the same commands on every change:
+These commands run before every change is published:
 \begin{itemize}[leftmargin=1.4em]
 \item \lc{lake build --wfail} compiles the library and the files of this
   guide, and fails on any warning; the axioms of every theorem are then
