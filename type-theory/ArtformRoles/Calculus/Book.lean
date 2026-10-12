@@ -1,4 +1,4 @@
-import ArtformRoles.Calculus.Accept
+import ArtformRoles.Calculus.CheckerComplete
 
 /-!
 # The book in the calculus
@@ -931,19 +931,6 @@ end Interp
 
 /-! ## §12.5–12.6: frames, states, scripts, and one capture -/
 
-/-- App at the level of derivability: the instantiated codomain is formed by
-substitution into the codomain of the function's type. -/
-theorem derivable_app {S : Sig} (hS : SigWF S) {Γ : Ctx} (hΓ : CtxWF S Γ) {q : Grade}
-    {σ ρ : Role} {A B f u : Exp} {φ η : Eff}
-    (df : Derivable S true (.tm Γ ρ f (.pi q σ A B) φ)) (du : Derivable S true (.tm Γ σ u A η)) :
-    Derivable S true (.tm Γ ρ (.app f u) (B.inst u) (φ ⊓ Eff.scale q η)) := by
-  obtain ⟨df⟩ := df
-  obtain ⟨du⟩ := du
-  obtain ⟨_, ⟨dpi⟩⟩ := df.tm_ty
-  obtain ⟨-, _, ⟨dB⟩⟩ := dpi.inv_tyPi
-  obtain ⟨dC⟩ := Deriv.inst_ty hS hΓ dB du
-  exact ⟨Deriv.mkApp df du dC⟩
-
 /-- Sig-Primitive, inverted at the last entry. -/
 theorem sigWF_last_prim {S : Sig} {ρ : Role} {A : Exp} (h : SigWF (S ++ [.prim ρ A])) :
     (∃ α, Derivable S true (.ty [] ρ A α)) ∧ A.gradefree := by
@@ -1478,7 +1465,7 @@ theorem pos_typed : Derivable sig true (.tm [] .witness s0 state effPos) ∧
 
 theorem attack_typed : Derivable sig true (.tm [] .witness atk (tbool a) effAtk) ∧
     ∀ acc ρ C ε, Derivable sig acc (.tm [] ρ atk C ε) → ε = effAtk :=
-  typed_with (derivable_app sig_wf (.nil sig_wf) ⟨dAttackC⟩ ⟨dPos 23 rfl⟩) (by eff_eq)
+  typed_with (Derivable.app sig_wf (.nil sig_wf) ⟨dAttackC⟩ ⟨dPos 23 rfl⟩) (by eff_eq)
 
 /-- The certificate of the capture: `check N×e5 s₀ (attack s₀) : Applicable(N×e5, s₀)`,
 whose effect has grade `0` at `check`, at the capture, at `attack`, and at `t₀`
@@ -1486,8 +1473,8 @@ and `ℓ₀`, and `∞` elsewhere. -/
 theorem cert_typed : Derivable sig true (.tm [] .witness cert (applicable nxe5 s0) effCert) ∧
     ∀ acc ρ C ε, Derivable sig acc (.tm [] ρ cert C ε) → ε = effCert := by
   have hΓ : CtxWF sig [] := .nil sig_wf
-  exact typed_with (derivable_app sig_wf hΓ (derivable_app sig_wf hΓ
-    (derivable_app sig_wf hΓ ⟨dCheckC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) attack_typed.1) (by eff_eq)
+  exact typed_with (Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ
+    (Derivable.app sig_wf hΓ ⟨dCheckC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) attack_typed.1) (by eff_eq)
 
 /-- The position after the capture, `actG N×e5 s₀ c = (actG_T N×e5 s₀ c,
 actG_L N×e5 s₀ c) : State(A)`, consumes the certificate `c`: its effect has
@@ -1496,10 +1483,10 @@ atom of the certificate (`check`, `attack`), and `∞` elsewhere. -/
 theorem next_typed : Derivable sig true (.tm [] .witness next state effNext) ∧
     ∀ acc ρ C ε, Derivable sig acc (.tm [] ρ next C ε) → ε = effNext := by
   have hΓ : CtxWF sig [] := .nil sig_wf
-  obtain ⟨dT⟩ := derivable_app sig_wf hΓ (derivable_app sig_wf hΓ
-    (derivable_app sig_wf hΓ ⟨dActGTC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) cert_typed.1
-  obtain ⟨dL⟩ := derivable_app sig_wf hΓ (derivable_app sig_wf hΓ
-    (derivable_app sig_wf hΓ ⟨dActGLC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) cert_typed.1
+  obtain ⟨dT⟩ := Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ
+    (Derivable.app sig_wf hΓ ⟨dActGTC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) cert_typed.1
+  obtain ⟨dL⟩ := Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ
+    (Derivable.app sig_wf hΓ ⟨dActGLC⟩ ⟨dNxe5⟩) ⟨dPos 23 rfl⟩) cert_typed.1
   exact typed_with ⟨Deriv.mkPair (B := legal (.var 0)) dT dL
     (dState sig_wf decls_sig rfl rfl)⟩ (by eff_eq)
 
@@ -1540,9 +1527,9 @@ theorem actId_typed : ∃ ε, Derivable sig true (.tm [] .witness actId state ε
   have hsnd : Derivable sig true (.tm [] .witness (.snd s0) (legal (.fst s0)) _) :=
     ⟨Deriv.mkSnd (dPos 23 rfl) (dLegal sig_wf rfl (Deriv.mkFst (dPos 23 rfl)
       (dTableA sig_wf decls_sig rfl)))⟩
-  obtain ⟨dT⟩ := derivable_app sig_wf hΓ (derivable_app sig_wf hΓ
+  obtain ⟨dT⟩ := Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ
     ⟨Deriv.mkConst (i := 11) (k := 0) rfl (dTyActT sig_wf decls_sig rfl rfl)⟩ hid) hfst
-  obtain ⟨dL⟩ := derivable_app sig_wf hΓ (derivable_app sig_wf hΓ (derivable_app sig_wf hΓ
+  obtain ⟨dL⟩ := Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ (Derivable.app sig_wf hΓ
     ⟨Deriv.mkConst (i := 12) (k := 0) rfl (dTyActL sig_wf decls_sig rfl rfl rfl rfl)⟩ hid)
     hfst) hsnd
   exact ⟨_, ⟨Deriv.mkPair (B := legal (.var 0)) dT dL (dState sig_wf decls_sig rfl rfl)⟩,
@@ -1556,10 +1543,10 @@ theorem readings_typed :
     (Derivable sig true (.tm [] .rendering diagram graphic effDiagram) ∧
       ∀ acc ρ C ε, Derivable sig acc (.tm [] ρ diagram C ε) → ε = effDiagram) := by
   have hΓ : CtxWF sig [] := .nil sig_wf
-  refine ⟨typed_with (derivable_app sig_wf hΓ ⟨Deriv.mkConst (i := 26) (k := 0) rfl
+  refine ⟨typed_with (Derivable.app sig_wf hΓ ⟨Deriv.mkConst (i := 26) (k := 0) rfl
       (Deriv.mkTyPi (q := .free) (dState sig_wf decls_sig rfl rfl)
         (Deriv.mkTyFam sig_wf rfl .mkSpineNil) (by decide))⟩ ⟨dPos 23 rfl⟩) (by eff_eq),
-    typed_with (derivable_app sig_wf hΓ ⟨Deriv.mkConst (i := 28) (k := 0) rfl
+    typed_with (Derivable.app sig_wf hΓ ⟨Deriv.mkConst (i := 28) (k := 0) rfl
       (Deriv.mkTyPi (q := .free) (dState sig_wf decls_sig rfl rfl)
         (Deriv.mkTyFam sig_wf rfl .mkSpineNil) (by decide))⟩ ⟨dPos 23 rfl⟩) (by eff_eq)⟩
 
@@ -1716,6 +1703,16 @@ theorem effects_match_table :
       (Eff.scale_mono le_rfl ((inf_le_left.trans inf_le_left).trans inf_le_right))
   · have := h (.decl 15 0)
     simp [effScoreT, Eff.unit, Eff.scale] at this
+
+/-- Outside the bidirectional fragment the reference procedure is incomplete
+(Proposition C.1 holds for the fragment): `fst s₀` is derivable at `Table(A)`,
+but its argument is a pair, which has no synthesized type, so the checker
+rejects the judgment. -/
+theorem checker_incomplete :
+    Derivable sig true (.tm [] .witness (.fst s0) (table a) effPos) ∧
+    ∀ hC, check sig_wf [] (.nil sig_wf) (.fst s0) .witness (table a) hC = none :=
+  ⟨⟨Deriv.mkFst (dPos 23 rfl) (dTableA sig_wf decls_sig rfl)⟩,
+    fun hC => check_fst_pair sig_wf (.nil sig_wf) _ _ hC⟩
 
 end Chess
 
