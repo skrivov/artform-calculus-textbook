@@ -29,6 +29,7 @@ import ArtformRoles.Calculus.Accept
 import ArtformRoles.Calculus.Normalize
 import ArtformRoles.Calculus.Checker
 import ArtformRoles.Calculus.CheckerComplete
+import ArtformRoles.Calculus.SigCheck
 import ArtformRoles.Calculus.Book
 
 /-!
