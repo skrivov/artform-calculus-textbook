@@ -4,8 +4,8 @@ This repository accompanies the textbook *Artform Calculus*. It holds three
 things.
 
 - **The textbook's theorems in Lean** ([`textbook/`](textbook/README.md)): a
-  Lean statement of each numbered theorem, proposition, lemma and corollary of
-  the book, with proofs that Lean's kernel checks.
+  catalogue of every numbered theorem, proposition, lemma and corollary of
+  the book, with the available Lean statements and kernel-checked proofs.
 - **The Lean tutorial** ([`tutorial/`](tutorial/README.md)):
   [*Lean through Artform Calculus*](tutorial/lean-through-artform-calculus.pdf)
   (PDF). It teaches Lean from the beginning, writes the constructions of
@@ -14,7 +14,12 @@ things.
 - **The type theory of the five roles** ([`type-theory/`](type-theory/README.md)):
   the paper [*Five Roles for Artforms*](type-theory/paper/role-stratified-artform-type-theory.pdf),
   on the role-based type theory the book uses, and the Lean library
-  `ArtformRoles` that checks its first part.
+  `ArtformRoles` that checks its policy, graph and counting results.
+
+The [edition-54 review](textbook/review/edition-54-2026-10-12.md) renews the
+95 previously approved translations. The separate
+[five-roles review](type-theory/review/audit-2026-10-12.md) accepts the narrower
+Lean results and returns three claims in the paper for revision.
 
 **Work in progress.** The [independent review of 11 October 2026](textbook/review/audit-2026-10-11.md)
 records a verdict for every numbered statement. Six existing translations
@@ -36,9 +41,9 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 <!-- status:begin -->
 | Status | Statements |
 |---|---|
-| proved | 0 |
-| partial | 0 |
-| stated | 101 |
+| proved | 91 |
+| partial | 2 |
+| stated | 8 |
 | planned | 2 |
 | informal | 0 |
 | **total** | **103** |
@@ -84,7 +89,7 @@ with `latexmk -pdf` in `type-theory/paper/`.
   LaTeX sources, and its Lean files, the library `Tutorial`.
 - `type-theory/`: the paper *Five Roles for Artforms*, which asks whether the
   book's five roles are the right ones, and the Lean library `ArtformRoles`
-  that checks its first part.
+  that checks its policy, graph and counting results; its independent review.
 - `scripts/`: the status report and local publication checks.
 
 ## Licence
