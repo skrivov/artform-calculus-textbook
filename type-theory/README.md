@@ -2,14 +2,15 @@
 
 This folder holds the paper
 [*Five Roles for Artforms: A Role-Stratified Type Theory with Traceable Gates*](paper/role-stratified-artform-type-theory.pdf)
-and the Lean library `ArtformRoles` that checks its policy, graph and counting
-results.
+and the Lean library `ArtformRoles` that checks both of its parts.
 
-**Review of 12 October 2026: paper returned for revision.** The
-[independent verdict](review/audit-2026-10-12.md) accepts the narrower Lean
-results, but finds gaps in the argument for necessary WITNESS/SCRIPT
-separation, the property-valued legality of states, and the guarded capture
-encoding. The PDF is the reviewed draft; its broader claims are not approved.
+**Revision of 12 October 2026.** The
+[independent review](review/audit-2026-10-12.md) of the same day accepted the
+narrower Lean results and returned three claims: the necessary
+WITNESS/SCRIPT separation, the property-valued legality of states, and the
+guarded capture encoding. The revision answers each in Lean and in the paper,
+and mechanizes the calculus of Part II. It awaits the reviewer's next
+verdict.
 
 The paper asks whether the five roles of the textbook *Artform Calculus*
 (FORM, PRESENTATION, WITNESS, SCRIPT, RENDERING) are the right ones, and
@@ -22,13 +23,19 @@ answers in two parts.
   sufficient. On constructions with graded dependencies: the firewall,
   mediation by recorded gates, frame stability and presentation
   independence, for chains and for values. The policy separates every pair of
-  roles except WITNESS and SCRIPT. The three counts of histories are checked;
-  their interpretation as a necessary separation of roles is under revision.
-  The capture and realizer are checked as dependency graphs, and the walker
-  as a counting example.
-- **Part II (Sections 6–12), proved on paper.** The calculus RATT, whose
-  judgements carry the role, with gates whose contraction leaves a record,
-  and its metatheory. Its mechanization is open.
+  roles except WITNESS and SCRIPT. Under counting that is uniform by role, the
+  counts of histories separate those two (Theorem 4.5(ii)); without that
+  restriction they are motivation (Remark 4.6). The capture and realizer are
+  checked as dependency graphs, and the walker as a counting example.
+- **Part II (Sections 6–12), checked in Lean.** The calculus RATT, whose
+  judgements carry the role, with gates whose contraction leaves a record; its
+  metatheory (substitution, subject reduction, strong normalization,
+  confluence, canonical forms, path mediation, gate adequacy, the module
+  theorems, erasure); a certified decision procedure, complete on the
+  bidirectional fragment (Appendix C); and the book's examples, among them the
+  capture with a guarded action that takes its certificate. Mechanizing the
+  calculus changed two signature rules and corrected or narrowed six claims;
+  Section 14 lists them.
 
 [`COHERENCE.md`](COHERENCE.md) records how the paper was brought into line
 with the textbook, and the passages of the textbook that the paper's
@@ -38,16 +45,17 @@ decisions affect.
 
 | Path | Contents |
 |---|---|
-| `paper/role-stratified-artform-type-theory.tex` | the paper (44 pages) |
+| `paper/role-stratified-artform-type-theory.tex` | the paper (47 pages) |
 | `paper/artform-notation.tex` | a copy of the workspace's shared notation |
 | `ArtformRoles/Basic.lean` | roles, grades, the policy, levels, path closure, separation |
 | `ArtformRoles/Construction.lean` | constructions; local to global; firewall, mediation, records; values |
-| `ArtformRoles/Histories.lean` | histories, proof lists and trajectories; the two corners |
+| `ArtformRoles/Histories.lean` | histories, proof lists and trajectories; the two corners; counting conventions |
+| `ArtformRoles/States.lean` | states counted as pairs and through their tables |
 | `ArtformRoles/Examples.lean` | the capture, the realizer, the walker |
+| `ArtformRoles/Calculus/` | the calculus RATT: syntax, effects, typing, reduction, metatheory, adequacy, modules, erasure, the decision procedure, the book's examples |
 
-Table 5 lists the paper's proposed correspondence with Lean declarations;
-the review explains the limits of that correspondence. The checked proofs
-use only the axioms `propext`, `Classical.choice` and `Quot.sound`.
+Tables 5 and 8 of the paper list the Lean names of its results. The checked
+proofs use only the axioms `propext`, `Classical.choice` and `Quot.sound`.
 Nothing here is a statement of the textbook: the library has no `@[book]`
 tags and does not enter `textbook/STATUS.md`.
 

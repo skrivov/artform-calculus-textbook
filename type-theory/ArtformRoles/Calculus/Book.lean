@@ -430,7 +430,7 @@ theorem no_inhabitant_before {ρ : Role} {t : Exp} {ε : Eff} :
     | snd h => cases h.of_base
 
 /-- The observation layer `𝒱₈` is rendering-only over `base + ℰ₈`; by
-Theorems 10.4 and 10.7 it creates no new normal form at an old grade-free type
+Theorems 10.5 and 10.8 it creates no new normal form at an old grade-free type
 of a non-rendering role, and reflects equality. -/
 theorem view :
     RenderingOnly V8 ∧
@@ -504,7 +504,7 @@ attestation `q@I = (e_q, o_q)` of an old term at an old type is an
 evidence-inhabitant module; the public gate term with the credential
 `stamp(I, e_q, o_q)` contracts to the node that retains the exact pair `I` and
 the event `e_q`; and `e_q` is in its event support and is owned by the module, as
-Theorem 10.6 requires of every enabled normal form. -/
+Theorem 10.7 requires of every enabled normal form. -/
 theorem attested_installation {S : Sig} {A I : Exp} (hA : A.Old S.length)
     (hI : I.Old S.length) (g ℓ : ℕ) (ds : Exp) :
     EvidenceInhabitant S.length [.attest A I] ∧
@@ -1705,7 +1705,7 @@ theorem effects_match_table :
     simp [effScoreT, Eff.unit, Eff.scale] at this
 
 /-- Outside the bidirectional fragment the reference procedure is incomplete
-(Proposition C.1 holds for the fragment): `fst s₀` is derivable at `Table(A)`,
+(Proposition C.2 holds for the fragment): `fst s₀` is derivable at `Table(A)`,
 but its argument is a pair, which has no synthesized type, so the checker
 rejects the judgment. -/
 theorem checker_incomplete :

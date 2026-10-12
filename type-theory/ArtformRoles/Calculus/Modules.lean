@@ -678,7 +678,7 @@ theorem Conv.old_join {N : ℕ} {t u : Exp} (ht : t.Old N) (h : Conv t u) :
   obtain ⟨w, h₁, h₂⟩ := h.joinable
   exact ⟨w, h₁.old ht, h₁, h₂⟩
 
-/-! ## Theorems 10.4 and 10.5: conservative modules -/
+/-! ## Theorems 10.5 and 10.6: conservative modules -/
 
 theorem region_closed {S : Sig} (hS : SigWF S) {N : ℕ} (hexcl : NewConstsExcluded S N)
     (hgate : ∀ g Δ σ A ρ B, S.gate? g = some (Δ, σ, A, ρ, B) → g < N) {ρ : Role}
@@ -702,10 +702,11 @@ theorem extension_support_conservative {S M : Sig} (hSM : SigWF (S ++ M))
   · exact region_closed hSM hM.excluded (fun _ _ _ _ _ _ h => gate_old_of_no_gate hM.no_gate h)
       hρ hA hgf d hn
 
-/-- **Theorem 10.4** (rendering noninterference). Let `M` be rendering-only over `S`.
-At every old grade-free type of a non-rendering role, every closed term of the
-extension reduces to an old normal term (term conservativity), and convertible
-old terms are joined through old terms (equality reflection). -/
+/-- **Theorem 10.5** (rendering noninterference, `thm:rendering`). Let `M` be
+rendering-only over `S`. At every old grade-free type of a non-rendering role,
+every closed term of the extension reduces to an old normal term (term
+conservativity), and convertible old terms are joined through old terms
+(equality reflection). -/
 theorem rendering_noninterference {S M : Sig} (hSM : SigWF (S ++ M)) (hM : RenderingOnly M)
     {ρ : Role} (hρ : ρ ≠ .rendering) {A : Exp} (hA : A.Old S.length) (hgf : A.gradefree)
     {t : Exp} {ε : Eff} (dt : Deriv (S ++ M) true (.tm [] ρ t A ε)) :
@@ -717,10 +718,11 @@ theorem rendering_noninterference {S M : Sig} (hSM : SigWF (S ++ M)) (hM : Rende
   exact ⟨⟨n, ε', hs, hn, extension_support_conservative hSM (.inl hM) hρ hA hgf dn hn, ⟨dn⟩⟩,
     fun _ _ hu _ h => h.old_join hu⟩
 
-/-- **Theorem 10.5** (fresh-family conservativity). Let `M` be a fresh-witness-family
-module over `S`. At every old grade-free type of a non-rendering role (the paper
-states the protected roles), every closed term of the extension reduces to an
-old normal term, and convertible old terms are joined through old terms. -/
+/-- **Theorem 10.6** (fresh-family conservativity, `thm:fresh`). Let `M` be a
+fresh-witness-family module over `S`. At every old grade-free type of a
+non-rendering role (the paper states the protected roles), every closed term of
+the extension reduces to an old normal term, and convertible old terms are
+joined through old terms. -/
 theorem fresh_family_conservative {S M : Sig} (hSM : SigWF (S ++ M))
     (hM : FreshWitnessFamily S.length M) {ρ : Role} (hρ : ρ ≠ .rendering) {A : Exp}
     (hA : A.Old S.length) (hgf : A.gradefree) {t : Exp} {ε : Eff}
@@ -1103,7 +1105,7 @@ theorem Exp.OldEv.old {S : Sig} {N : ℕ} {t : Exp} (ht : t.OldEv S N)
       ihs ht.2.2 fun g' ℓ' ds' p' e' ho => h g' ℓ' ds' p' e' (.child (by simp [Exp.children]) ho)⟩
 
 
-/-! ## Lemma 10.2 (iii) and Theorem 10.6: evidence modules -/
+/-! ## Lemma 10.2 (iii) and Theorem 10.7: evidence modules -/
 
 /-- A context of protected variables with grade-free types old up to pinned
 records. -/
@@ -1311,9 +1313,10 @@ theorem extension_support_evidence {S M : Sig} (hSM : SigWF (S ++ M))
     (fun _ _ _ _ _ _ h => gate_old_of_no_gate hM.no_gate h)) hn hρ (.nil hSM) CtxFP.nil hJ
     (.inl ⟨gskel_gf hgf, .of_oldEv hA.oldEv⟩)).2.2
 
-/-- **Theorem 10.6** (no silent enabling). Let `M` be an evidence-inhabitant
-module over `S`, and let `t` be a closed public term at a protected role whose
-type is old and grade-free. If its normal form `n` is not old, then
+/-- **Theorem 10.7** (no silent enabling, `thm:no-silent`). Let `M` be an
+evidence-inhabitant module over `S`, and let `t` be a closed public term at a
+protected role whose type is old and grade-free. If its normal form `n` is not
+old, then
 `events(n) ∩ Event_M ≠ ∅`: the enabled result names the responsible module in
 its normal provenance. Equality of old terms is reflected as for every module. -/
 theorem no_silent_enabling {S M : Sig} (hSM : SigWF (S ++ M))
@@ -1361,11 +1364,11 @@ theorem old_head {S M : Sig} (hSM : SigWF (S ++ M))
   rw [hh] at h
   exact h
 
-/-! ## Theorem 10.7: composition -/
+/-! ## Theorem 10.8: composition -/
 
-/-- **Theorem 10.7** (module composition). A module `M'` well formed over `S ++ M`
-composes with `M` into the module `M ++ M'` well formed over `S`, and
-concatenation is associative. Principal effects, normalization, mediation and
+/-- **Theorem 10.8** (module composition, `thm:composition`). A module `M'` well
+formed over `S ++ M` composes with `M` into the module `M ++ M'` well formed
+over `S`, and concatenation is associative. Principal effects, normalization, mediation and
 record adequacy are theorems about every well-formed signature, so they hold for
 the composite. -/
 theorem module_composition {S M M' : Sig} (h : SigWF ((S ++ M) ++ M')) :

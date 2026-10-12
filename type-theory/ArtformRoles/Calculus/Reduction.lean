@@ -17,7 +17,8 @@ The paper's typed definitional equality relates well-typed expressions only;
 the calculus here uses `Conv` in the conversion rule together with an accepted
 formation derivation of the target type, and every typed equality is a `Conv`.
 
-`Step.subst` and `Steps.subst_arg` are Lemma 8.8 (residuals of one step).
+`Step.subst` and `Steps.subst_arg` are Lemma 8.11 (residuals of one step,
+`lem:one-step-substitution`).
 -/
 
 namespace Artform.Roles.Calculus
@@ -103,7 +104,7 @@ theorem ren {t t' : Exp} (h : Step t t') (ξ : ℕ → ℕ) : Step (t.ren ξ) (t
   | cons₁ _ ih => exact .cons₁ (ih ξ)
   | cons₂ _ ih => exact .cons₂ (ih ξ)
 
-/-- Lemma 8.8, first part: a step survives substitution. -/
+/-- Lemma 8.11, first part: a step survives substitution. -/
 theorem subst {t t' : Exp} (h : Step t t') (σ : ℕ → Exp) : Step (t.subst σ) (t'.subst σ) := by
   induction h generalizing σ with
   | beta => rw [Exp.subst_inst]; exact .beta
@@ -177,7 +178,7 @@ theorem up {σ τ : ℕ → Exp} (h : ∀ i, Steps (σ i) (τ i)) : ∀ i, Steps
   | 0 => .refl
   | i + 1 => (h i).ren _
 
-/-- Lemma 8.8, second part: reducing the substituted terms reduces the result. -/
+/-- Lemma 8.11, second part: reducing the substituted terms reduces the result. -/
 theorem subst_arg {σ τ : ℕ → Exp} (h : ∀ i, Steps (σ i) (τ i)) (t : Exp) :
     Steps (t.subst σ) (t.subst τ) := by
   induction t generalizing σ τ with
@@ -203,7 +204,7 @@ theorem subst_arg {σ τ : ℕ → Exp} (h : ∀ i, Steps (σ i) (τ i)) (t : Ex
   | nil => exact .refl
   | cons t ts iht ihts => exact lift₂ cons Step.cons₁ Step.cons₂ (iht h) (ihts h)
 
-/-- Lemma 8.8 for one variable: reducing the argument of an instantiation. -/
+/-- Lemma 8.11 for one variable: reducing the argument of an instantiation. -/
 theorem inst_arg {u u' : Exp} (h : Steps u u') (t : Exp) : Steps (t.inst u) (t.inst u') :=
   subst_arg (fun i => by cases i with | zero => exact h | succ i => exact .refl) t
 

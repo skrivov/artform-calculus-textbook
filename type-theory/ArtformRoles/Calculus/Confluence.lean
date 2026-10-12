@@ -3,7 +3,8 @@ import ArtformRoles.Calculus.Reduction
 /-!
 # Confluence
 
-Theorem 8.10 (confluence) and Lemma 8.9 (local confluence) of the paper, for
+Theorem 8.13 (confluence, `thm:confluence`) and Lemma 8.12 (local confluence,
+`lem:local-confluence`) of the paper, for
 raw reduction on all expressions, typed or not. The paper derives confluence of
 typed reduction from strong normalization and local confluence by Newman's
 lemma; here confluence is proved directly, by parallel reduction and its
@@ -315,7 +316,7 @@ theorem strip {t u v : Exp} (hu : PStep t u) (hv : ReflTransGen PStep t v) :
     obtain ⟨w', hw, hs'⟩ := hvw.diamond hs
     exact ⟨w', huw.tail hw, hs'⟩
 
-/-- Theorem 8.10: reduction is confluent. -/
+/-- Theorem 8.13 (`thm:confluence`): reduction is confluent. -/
 theorem confluent {t u v : Exp} (hu : Steps t u) (hv : Steps t v) :
     ∃ w, Steps u w ∧ Steps v w := by
   have key : ∀ {t u v}, ReflTransGen PStep t u → ReflTransGen PStep t v →
@@ -330,7 +331,7 @@ theorem confluent {t u v : Exp} (hu : Steps t u) (hv : Steps t v) :
   obtain ⟨w, h₁, h₂⟩ := key hu.to_pSteps hv.to_pSteps
   exact ⟨w, of_pSteps h₁, of_pSteps h₂⟩
 
-/-- Lemma 8.9: one-step peaks are joinable. -/
+/-- Lemma 8.12 (`lem:local-confluence`): one-step peaks are joinable. -/
 theorem local_confluent {t u v : Exp} (hu : Step t u) (hv : Step t v) :
     ∃ w, Steps u w ∧ Steps v w :=
   confluent (single hu) (single hv)

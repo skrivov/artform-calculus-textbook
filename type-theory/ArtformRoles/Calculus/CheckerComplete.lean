@@ -22,7 +22,8 @@ Appendix C (`app:checker`), declarative adequacy of the reference procedure.
 Outside the fragment the procedure of Appendix C is incomplete: a pair has no
 principal type, so a pair in a synthesis position, such as the argument of a
 projection, is rejected although the judgment may be derivable
-(`infer_fst_pair`). Proposition C.1 of the paper holds for the fragment.
+(`check_fst_pair`). Proposition C.2 (`prop:checker`) of the paper holds for the
+fragment.
 -/
 
 namespace Artform.Roles.Calculus
@@ -603,7 +604,7 @@ shape of a type. -/
 theorem TmCert.tyShape {Γ : Ctx} {t : Exp} (r : TmCert S Γ t) : r.1.2.1.TyShape :=
   Exp.TyShape.of_ex (Derivable.ty_of_tm r.2)
 
-/-- **Proposition C.1** (`app:checker`, declarative adequacy of the reference
+/-- **Proposition C.2** (`prop:checker`, declarative adequacy of the reference
 procedure), on the bidirectional fragment. Over a well-formed signature and in a
 well-formed context: `inferTy` succeeds on every formed type of the fragment;
 `infer` succeeds on every typable term it synthesizes, with a type convertible to

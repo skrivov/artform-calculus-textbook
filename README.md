@@ -14,12 +14,14 @@ things.
 - **The type theory of the five roles** ([`type-theory/`](type-theory/README.md)):
   the paper [*Five Roles for Artforms*](type-theory/paper/role-stratified-artform-type-theory.pdf),
   on the role-based type theory the book uses, and the Lean library
-  `ArtformRoles` that checks its policy, graph and counting results.
+  `ArtformRoles` that checks both of its parts: the role discipline, and the
+  calculus RATT with its metatheory and decision procedure.
 
 The [edition-54 review](textbook/review/edition-54-2026-10-12.md) renews the
 95 previously approved translations. The separate
-[five-roles review](type-theory/review/audit-2026-10-12.md) accepts the narrower
-Lean results and returns three claims in the paper for revision.
+[five-roles review](type-theory/review/audit-2026-10-12.md) accepted the narrower
+Lean results and returned three claims in the paper for revision; the revision
+of 12 October answers them, mechanizes the calculus, and awaits re-review.
 
 **Work in progress.** The [independent review of 11 October 2026](textbook/review/audit-2026-10-11.md)
 records a verdict for every numbered statement. Six existing translations
@@ -89,7 +91,7 @@ with `latexmk -pdf` in `type-theory/paper/`.
   LaTeX sources, and its Lean files, the library `Tutorial`.
 - `type-theory/`: the paper *Five Roles for Artforms*, which asks whether the
   book's five roles are the right ones, and the Lean library `ArtformRoles`
-  that checks its policy, graph and counting results; its independent review.
+  that checks both of its parts; its independent review.
 - `scripts/`: the status report and local publication checks.
 
 ## Licence

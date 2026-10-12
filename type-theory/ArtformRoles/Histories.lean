@@ -213,7 +213,7 @@ theorem countWith_properties (m : Mode) (x₀ : X) :
 
 end Law
 
-/-- **Theorem 4.4(ii)** (`thm:separation`), under role-uniform counting. A
+/-- **Theorem 4.5(ii)** (`thm:separation`), under role-uniform counting. A
 counting convention gives every role one mode. If applications and
 certificates have the same role, they are counted alike, and the two corners
 give 3 or 1 lists after one step, never the book's 2. -/

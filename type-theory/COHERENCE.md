@@ -3,7 +3,9 @@
 Written 2026-10-11, when the paper `paper/role-stratified-artform-type-theory.tex`
 was rebuilt from the manuscript *Traceable Gates for Artforms* (September
 2026) to agree with the textbook *Artform Calculus*. Book references are to
-the edition of 11 October 2026 (53rd), by section and label.
+the edition of 11 October 2026 (53rd), by section and label. Revised
+2026-10-12 after the paper's review of that day: D3 and D4 carry its
+qualifications, and items 8 and 9 of §3 come from the edition-54 review.
 
 ## 1. Where the two disagreed
 
@@ -56,10 +58,15 @@ the edition of 11 October 2026 (53rd), by section and label.
   script built from a witness. Their rules separate them. A history is a
   list of applications of scripts, while a certificate only admits an
   application and is counted as a property (§7.4, `qr:composition`).
-  Merging the roles changes the book's counts. On the two-corner law the
-  three counts are 3 (proofs counted), 2 (the book's count) and 1 (endpoints
-  only). (Lean: `policySeparates_iff`, `witness_script_same_policy`,
-  `twoCorners_counts`.)
+  When each role's data are counted one way, merging the roles changes the
+  book's counts: on the two-corner law the three counts are 3 (proofs
+  counted), 2 (the book's count) and 1 (endpoints only). Without that
+  restriction the counts motivate two roles for two jobs; they do not prove
+  that every calculus needs both, since identifying SCRIPT with WITNESS keeps
+  every entry of the policy (review of 2026-10-12, finding 1; paper Theorem
+  4.5(ii) and Remark 4.6). (Lean: `policySeparates_iff`,
+  `witness_script_same_policy`, `twoCorners_counts`, `merged_roles_miscount`,
+  `book_count_separates`, `collapseRole_keeps_policy`.)
 - **D4. A state is witness data.** A state of a frame is a legal choice of
   values at its positions: a table with the evidence that it is legal,
   which is the book's own formation rule (`def:frame-instance`). Choices
@@ -68,7 +75,12 @@ the edition of 11 October 2026 (53rd), by section and label.
   agrees with the ledger, with §5.9 and with the process laboratory. It
   overrules §1.9's *name the presentation*. A process that grows its
   carrier, such as Chapter 3's growth, has forms for its stages, and each
-  step of growth is a gate into a form.
+  step of growth is a gate into a form. The calculus keeps legality
+  proof-relevant: the sum counts a table once per legality proof, two proofs
+  of one table give two distinct states, and the book's count of legal tables
+  is a count through the table; the calculus adds no proof-irrelevance rule
+  (review finding 2; paper §12.5). (Lean: `card_states_eq_iff`,
+  `tables_of_states`, `Book.Chess.two_legal_states`.)
 - **D5. Gates record what was assumed.** A gate contraction leaves a
   *record*, not a receipt. Gates are the only crossings from the instance
   level into the frame, and from presentation into form.
@@ -97,13 +109,14 @@ this repository; T5 is withdrawn (below).
 
 1. **§1.9, *Four useful words that are not roles*, the state paragraph**
    (`chapters/01-foundations.tex`, after `\subsection{Four useful words that
-   are not roles}`). It now says: *When a role must be named, name the
-   presentation and then say what inhabits it.* Under D4 this is wrong. A
-   possible replacement: *A state is a legal choice of values at the
+   are not roles}`). The fifty-third edition said: *When a role must be named,
+   name the presentation and then say what inhabits it.* Under D4 this was
+   wrong, and the fifty-fourth edition replaced it. The proposed
+   replacement was: *A state is a legal choice of values at the
    positions of a frame: a table together with the evidence that it is
    legal. Choices and evidence are witness data, so when a role must be named
-   for a state, it is WITNESS; the state set is not another role.* This is
-   the one change the coherent theory needs.
+   for a state, it is WITNESS; the state set is not another role.* This was
+   the one change the coherent theory needed.
 2. **§1.9, `sec:role-policy`, first paragraph.** Add the presentation → form
    gate, for example: *A witness or a script may even feed back into a
    presentation or a form, and a presentation into a form, provided the
@@ -124,6 +137,27 @@ this repository; T5 is withdrawn (below).
    unchanged.
 7. **§1.11, *What the rules do not see*** (later). Once the book cites the
    repository, this is where it can point to the paper's single judgement.
+
+8. **§1.9, the crossing sentence** (`chapters/01-foundations.tex`, about
+   lines 5194–5196 of edition 54; edition-54 review, correction 1). It says
+   that every crossing into a form or presentation passes a gate. A form may
+   be used freely by a presentation (`D(F,P) = 0`; the chess construction
+   has the free edge board → addressing). Proposed: *every crossing from the
+   instance level into the frame, and from a presentation into a form,
+   passes a gate.* Record retention is now checked in Lean for the calculus
+   (`record_persistence`, `gate_adequacy`), so the book may attribute it to
+   the paper's mechanized calculus rather than to a paper proof.
+9. **Front matter and §1.11, the mechanization boundary**
+   (`frontmatter.tex`, about lines 47–53 of edition 54; edition-54 review,
+   correction 2). The book should not read as saying that every book theorem
+   is mechanized: the status table records returned translations, pending
+   proofs and two planned statements. For the paper, both parts are now
+   checked in Lean; the reference checker is complete on the bidirectional
+   fragment only, and one consequence of the rendering theorem (inhabitation
+   in the base signature) is a paper argument.
+
+Items 8 and 9 are proposals for the book's own editing and release process;
+this repository does not edit the book.
 
 Nothing else in the book contradicts the paper. In particular, the §5.9
 connection passage already agrees with D4: the gathered family keeps the

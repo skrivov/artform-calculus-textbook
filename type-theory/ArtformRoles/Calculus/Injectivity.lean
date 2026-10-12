@@ -6,7 +6,7 @@ import ArtformRoles.Calculus.Confluence
 No reduction rule changes the head of a type former, of a lambda, a pair, a
 stamp or a node: they reduce only inside. With confluence this gives the
 injectivity of the formers under conversion (type-head injectivity, used in the
-proofs of Theorem 8.12 and Lemma 10.1 of the paper), and distinct heads are
+proofs of Theorem 8.14 and Lemma 10.1 of the paper), and distinct heads are
 never convertible.
 -/
 
