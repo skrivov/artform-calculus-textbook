@@ -18,6 +18,7 @@ import ArtformRoles.Calculus.Preservation
 import ArtformRoles.Calculus.Skeleton
 import ArtformRoles.Calculus.Principal
 import ArtformRoles.Calculus.SN
+import ArtformRoles.Calculus.Canonical
 
 /-!
 # The calculus of Part II
