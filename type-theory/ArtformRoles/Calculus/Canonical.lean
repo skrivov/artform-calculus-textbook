@@ -249,7 +249,7 @@ theorem SigWF.const_cases {S : Sig} (hS : SigWF S) {i k : ℕ} {ρ : Role} {T : 
       (∃ A t, S[i]? = some (.attest A t) ∧ k = 1 ∧ T = .origin A (.const i 0) t))) := by
   induction hS with
   | nil => simp [Sig.const?] at h
-  | @family S' Δ ρ' δ _ _ ih | @gate S' Δ σ' A' ρ' B' δ α β _ _ _ _ _ _ _ _ _ ih =>
+  | @family S' Δ ρ' δ _ _ ih | @gate S' Δ σ' A' ρ' B' δ α β _ _ _ _ _ _ _ _ _ _ _ ih =>
     rcases Sig.const?_snoc h with h' | ⟨_, h'⟩
     · have hi := Sig.lt_of_const h'
       rcases ih h' with ⟨h₁, h₂⟩ | ⟨h₁, h₂, h₃⟩ | ⟨h₁, h₂⟩
@@ -316,7 +316,7 @@ theorem SigWF.gate_formed {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ :
       (∃ β, Derivable S true (.ty Δ.reverse ρ B β)) := by
   induction hS with
   | nil => simp [Sig.gate?] at h
-  | @gate S' Δ' σ' A' ρ' B' δ' α' β' _ _ hA' hB' _ _ _ _ _ ih =>
+  | @gate S' Δ' σ' A' ρ' B' δ' α' β' _ _ hA' hB' _ _ _ _ _ _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
     · obtain ⟨⟨α, ha⟩, ⟨β, hb⟩⟩ := ih h
       exact ⟨⟨α, ha.weakenSig _⟩, ⟨β, hb.weakenSig _⟩⟩

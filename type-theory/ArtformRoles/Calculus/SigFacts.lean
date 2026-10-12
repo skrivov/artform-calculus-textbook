@@ -172,7 +172,7 @@ theorem closed {S : Sig} (hS : SigWF S) :
     · rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
       · exact ih.2.2 g Δ' σ' A' ρ' B h
       · cases he
-  | @gate S Δ σ A ρ B δ α β _ hΔ hA hB _ _ _ _ _ ih =>
+  | @gate S Δ σ A ρ B δ α β _ hΔ hA hB _ _ _ _ _ _ _ ih =>
     obtain ⟨dΔ⟩ := hΔ
     obtain ⟨dA⟩ := hA
     obtain ⟨dB⟩ := hB

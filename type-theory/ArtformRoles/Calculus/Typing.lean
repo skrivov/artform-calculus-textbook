@@ -172,11 +172,14 @@ inductive SigWF : Sig → Prop
   | attest {S A t θ} : SigWF S → Derivable S true (.tm [] .witness t A θ) → t.IsPublic →
       A.gradefree → WData S A → SigWF (S ++ [.attest A t])
   /-- Sig-Gate: a protected, grade-free result independent of the payload,
-  parameters of demand `0` into the result role, a non-rendering payload. -/
+  parameters of demand `0` into the result role, a non-rendering payload, and a
+  grade-free interface: the parameter and payload types are grade-free as
+  well as the result. -/
   | gate {S Δ σ A ρ B δ α β} : SigWF S → Derivable S true (.tel [] Δ δ) →
       Derivable S true (.ty Δ.reverse σ A α) → Derivable S true (.ty Δ.reverse ρ B β) →
       (ρ = .form ∨ ρ = .presentation) → σ ≠ .rendering →
       (∀ p ∈ Δ, demand p.1 ρ = .free) → demand σ ρ ≤ .gated → B.gradefree →
+      (∀ p ∈ Δ, p.2.gradefree) → A.gradefree →
       SigWF (S ++ [.gate Δ σ A ρ B])
 
 /-- Context formation (Appendix A). -/

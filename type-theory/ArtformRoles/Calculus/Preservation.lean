@@ -58,10 +58,26 @@ theorem SigWF.gate_cond {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : R
       demand σ ρ ≤ .gated ∧ B.gradefree := by
   induction hS with
   | nil => simp [Sig.gate?] at h
-  | gate _ _ _ _ hρ hσ hΔ hσρ hB ih =>
+  | gate _ _ _ _ hρ hσ hΔ hσρ hB _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
     · exact ih h
     · cases he; cases hp; exact ⟨hσ, hρ, hΔ, hσρ, hB⟩
+  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
+    rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
+    · exact ih h
+    · cases he
+
+/-- The interface of a declared gate is grade-free: its parameter types and its
+payload type, as well as its result type. -/
+theorem SigWF.gate_gradefree {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : Role}
+    {A B : Exp} (h : S.gate? g = some (Δ, σ, A, ρ, B)) :
+    (∀ p ∈ Δ, p.2.gradefree) ∧ A.gradefree := by
+  induction hS with
+  | nil => simp [Sig.gate?] at h
+  | gate _ _ _ _ _ _ _ _ _ hΔ hA ih =>
+    rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
+    · exact ih h
+    · cases he; cases hp; exact ⟨hΔ, hA⟩
   | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
     · exact ih h

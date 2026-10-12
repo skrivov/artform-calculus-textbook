@@ -94,7 +94,7 @@ theorem SigWF.init {S : Sig} {e : Entry} (h : SigWF (S ++ [e])) : SigWF S := by
   | prim hS _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
   | cert hS _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
   | attest hS _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
-  | gate hS _ _ _ _ _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
+  | gate hS _ _ _ _ _ _ _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
 
 /-- A prefix of a well-formed signature is well formed. -/
 theorem SigWF.prefix {S M : Sig} (h : SigWF (S ++ M)) : SigWF S := by
@@ -141,7 +141,7 @@ theorem SigWF.family_tel {S : Sig} (hS : SigWF S) {a : ℕ} {Δ : Tel} {ρ : Rol
       rcases Sig.family?_snoc h with h | ⟨_, Δ'', ρ'', he, hp⟩
       · obtain ⟨δ, hd⟩ := ih h; exact ⟨δ, hd.weakenSig _⟩
       · cases he; cases hp; exact ⟨δ', hΔ'.weakenSig _⟩
-    | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ ih =>
+    | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
       rcases Sig.family?_snoc h with h | ⟨_, _, _, he, _⟩
       · obtain ⟨δ, hd⟩ := ih h; exact ⟨δ, hd.weakenSig _⟩
       · cases he
@@ -159,7 +159,7 @@ theorem SigWF.gate_tel {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : Ro
       (∃ β, Derivable S true (.ty Δ.reverse ρ B β)) := by
     induction hS with
     | nil => simp [Sig.gate?] at h
-    | @gate S' Δ' σ' A' ρ' B' δ' α' β' _ hΔ' hA' hB' _ _ _ _ _ ih =>
+    | @gate S' Δ' σ' A' ρ' B' δ' α' β' _ hΔ' hA' hB' _ _ _ _ _ _ _ ih =>
       rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
       · obtain ⟨⟨δ, hd⟩, ⟨α, ha⟩, ⟨β, hb⟩⟩ := ih h
         exact ⟨⟨δ, hd.weakenSig _⟩, ⟨α, ha.weakenSig _⟩, ⟨β, hb.weakenSig _⟩⟩
