@@ -90,7 +90,7 @@ theorem SigWF.init {S : Sig} {e : Entry} (h : SigWF (S ++ [e])) : SigWF S := by
   generalize hT : S ++ [e] = T at h
   cases h with
   | nil => simp at hT
-  | family hS _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
+  | family hS _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
   | prim hS _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
   | cert hS _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
   | attest hS _ _ _ _ => obtain ⟨rfl, -⟩ := List.append_inj' hT rfl; exact hS
@@ -137,7 +137,7 @@ theorem SigWF.family_tel {S : Sig} (hS : SigWF S) {a : ℕ} {Δ : Tel} {ρ : Rol
   have key : ∃ δ, Derivable S true (.tel [] Δ δ) := by
     induction hS with
     | nil => simp [Sig.family?] at h
-    | @family S' Δ' ρ' δ' _ hΔ' ih =>
+    | @family S' Δ' ρ' δ' _ hΔ' _ ih =>
       rcases Sig.family?_snoc h with h | ⟨_, Δ'', ρ'', he, hp⟩
       · obtain ⟨δ, hd⟩ := ih h; exact ⟨δ, hd.weakenSig _⟩
       · cases he; cases hp; exact ⟨δ', hΔ'.weakenSig _⟩
@@ -165,7 +165,7 @@ theorem SigWF.gate_tel {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : Ro
         exact ⟨⟨δ, hd.weakenSig _⟩, ⟨α, ha.weakenSig _⟩, ⟨β, hb.weakenSig _⟩⟩
       · cases he; cases hp
         exact ⟨⟨δ', hΔ'.weakenSig _⟩, ⟨α', hA'.weakenSig _⟩, ⟨β', hB'.weakenSig _⟩⟩
-    | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
+    | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
       rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
       · obtain ⟨⟨δ, hd⟩, ⟨α, ha⟩, ⟨β, hb⟩⟩ := ih h
         exact ⟨⟨δ, hd.weakenSig _⟩, ⟨α, ha.weakenSig _⟩, ⟨β, hb.weakenSig _⟩⟩

@@ -62,8 +62,23 @@ theorem SigWF.gate_cond {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : R
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
     · exact ih h
     · cases he; cases hp; exact ⟨hσ, hρ, hΔ, hσρ, hB⟩
-  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
+  | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
+    · exact ih h
+    · cases he
+
+/-- Every telescope entry of a declared family has demand `0` into the family's
+role (Sig-Family). -/
+theorem SigWF.family_demand {S : Sig} (hS : SigWF S) {a : ℕ} {Δ : Tel} {ρ : Role}
+    (h : S.family? a = some (Δ, ρ)) : ∀ p ∈ Δ, demand p.1 ρ = .free := by
+  induction hS with
+  | nil => simp [Sig.family?] at h
+  | family _ _ hΔ ih =>
+    rcases Sig.family?_snoc h with h | ⟨_, _, _, he, hp⟩
+    · exact ih h
+    · cases he; cases hp; exact hΔ
+  | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
+    rcases Sig.family?_snoc h with h | ⟨_, _, _, he, _⟩
     · exact ih h
     · cases he
 
@@ -78,7 +93,7 @@ theorem SigWF.gate_gradefree {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ �
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, hp⟩
     · exact ih h
     · cases he; cases hp; exact ⟨hΔ, hA⟩
-  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
+  | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
     · exact ih h
     · cases he

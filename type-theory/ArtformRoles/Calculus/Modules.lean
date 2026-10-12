@@ -237,7 +237,7 @@ theorem SigWF.gate_old {S : Sig} (hS : SigWF S) {g : ℕ} {Δ : Tel} {σ ρ : Ro
       obtain ⟨dA⟩ := hA'
       obtain ⟨dB⟩ := hB'
       exact ⟨dΔ.subject_old, dA.subject_old, dB.subject_old⟩
-  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
+  | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | attest _ _ _ _ _ ih =>
     rcases Sig.gate?_snoc h with h | ⟨_, _, _, _, _, _, he, _⟩
     · exact ih h
     · cases he
@@ -248,7 +248,7 @@ theorem SigWF.const_old {S : Sig} (hS : SigWF S) {i k : ℕ} {ρ : Role} {T : Ex
     (h : S.const? i k = some (ρ, T)) : T.Old (i + 1) := by
   induction hS with
   | nil => simp [Sig.const?] at h
-  | family _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
+  | family _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
     rcases Sig.const?_snoc h with h' | ⟨_, h'⟩
     · exact ih h'
     · rcases h' with ⟨_, _, he, _⟩ | ⟨_, _, he, _⟩ | ⟨_, _, he, _⟩ <;> cases he
@@ -296,7 +296,7 @@ theorem SigWF.attest_old {S : Sig} (hS : SigWF S) {i : ℕ} {A t : Exp}
     (h : S[i]? = some (.attest A t)) : A.Old i ∧ t.Old i := by
   induction hS with
   | nil => simp at h
-  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
+  | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
     rw [getElem?_append_singleton] at h
     split_ifs at h with h₁ h₂
     · exact ih h
@@ -913,7 +913,7 @@ theorem SigWF.attest_closed {S : Sig} (hS : SigWF S) {i : ℕ} {A t : Exp}
     (h : S[i]? = some (.attest A t)) : t.Closed := by
   induction hS with
   | nil => simp at h
-  | family _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
+  | family _ _ _ ih | prim _ _ _ _ ih | cert _ _ _ _ _ ih | gate _ _ _ _ _ _ _ _ _ _ _ ih =>
     rw [getElem?_append_singleton] at h
     split_ifs at h with h₁ h₂
     · exact ih h

@@ -108,7 +108,7 @@ theorem closed {S : Sig} (hS : SigWF S) :
   induction hS with
   | nil => exact ⟨fun _ _ _ h => by simp [Sig.family?] at h,
       fun _ _ _ _ h => by simp [Sig.const?] at h, fun _ _ _ _ _ _ h => by simp [Sig.gate?] at h⟩
-  | @family S Δ ρ δ _ hΔ ih =>
+  | @family S Δ ρ δ _ hΔ _ ih =>
     obtain ⟨d⟩ := hΔ
     refine ⟨fun a Δ' ρ' h => ?_, fun i k ρ' A h => ?_, fun g Δ' σ A ρ' B h => ?_⟩
     · rcases Sig.family?_snoc h with h | ⟨_, Δ'', ρ'', he, hp⟩

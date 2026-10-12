@@ -158,9 +158,10 @@ well-formed signature, whose positions it does not reuse. -/
 inductive SigWF : Sig → Prop
   /-- Sig-Empty: only the built-in formers `Event`, `Origin`, `Stamped`. -/
   | nil : SigWF []
-  /-- Sig-Family. -/
+  /-- Sig-Family: every entry of the telescope has demand `0` into the family's
+  role, so that the family's arguments are ordinary dependencies. -/
   | family {S Δ ρ δ} : SigWF S → Derivable S true (.tel [] Δ δ) →
-      SigWF (S ++ [.family Δ ρ])
+      (∀ p ∈ Δ, demand p.1 ρ = .free) → SigWF (S ++ [.family Δ ρ])
   /-- Sig-Primitive: closed, grade-free, with a declared family as result head. -/
   | prim {S ρ A α} : SigWF S → Derivable S true (.ty [] ρ A α) → A.gradefree →
       OrdinaryHead S A → SigWF (S ++ [.prim ρ A])
