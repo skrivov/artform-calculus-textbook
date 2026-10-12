@@ -6,9 +6,9 @@ Book edition followed: the 54th, `lean-repository-2026-10-11` (1053 pages).
 
 | Status | Statements |
 |---|---|
-| proved | 91 |
-| partial | 2 |
-| stated | 8 |
+| proved | 0 |
+| partial | 0 |
+| stated | 101 |
 | planned | 2 |
 | informal | 0 |
 | **total** | **103** |
@@ -17,126 +17,126 @@ Book edition followed: the 54th, `lean-repository-2026-10-11` (1053 pages).
 
 | No. | Title | Label | Tier | Batch | Status | Lean | Notes |
 |---|---|---|---|---|---|---|---|
-| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | proved | `Artform.Statement.rodAlignmentUnique` / `Artform.rodAlignmentUnique` |  |
-| 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | proved | `Artform.Statement.tetractysIntwits` / `Artform.tetractysIntwits` |  |
-| 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | proved | `Artform.Statement.artformCategory` / `Artform.artformCategory` |  |
-| 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | proved | `Artform.Statement.semanticQuotient` / `Artform.semanticQuotient` |  |
-| 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | proved | `Artform.Statement.adjoints` / `Artform.adjoints` |  |
-| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | proved | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` |  |
-| 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | proved | `Artform.Statement.artformNotTopos` / `Artform.artformNotTopos` |  |
-| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | proved | `Artform.Statement.rodLaws` / `Artform.rodLaws` |  |
-| 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | proved | `Artform.Statement.cubeAssembly` / `Artform.cubeAssembly` |  |
-| 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | proved | `Artform.Statement.sharedPositivePattern` / `Artform.sharedPositivePattern` |  |
-| 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | proved | `Artform.Statement.partialProfileIso` / `Artform.partialProfileIso` |  |
-| 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | proved | `Artform.Statement.atomImageOccurrence` / `Artform.atomImageOccurrence` |  |
-| 3.25 | Averaged invariant metric | `thm:averaged-invariant-metric` | B | B5 | proved | `Artform.Statement.averagedInvariantMetric` / `Artform.averagedInvariantMetric` |  |
-| 3.26 | Perpendicularity from symmetry | `prop:perpendicularity-from-symmetry` | B | B5 | proved | `Artform.Statement.perpendicularityFromSymmetry` / `Artform.perpendicularityFromSymmetry` |  |
-| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | proved | `Artform.Statement.commutingProposals` / `Artform.commutingProposals` |  |
-| 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | proved | `Artform.Statement.growthStabilization` / `Artform.growthStabilization` |  |
+| 1.3 | Uniqueness of rod alignment | `prop:rod-alignment-unique` | A | P | stated | `Artform.Statement.rodAlignmentUnique` / `Artform.rodAlignmentUnique` | the book or fidelity context changed since review |
+| 1.10 | The two tetractys interpretations coexist | `prop:tetractys-intwits` | B | B4 | stated | `Artform.Statement.tetractysIntwits` / `Artform.tetractysIntwits` | the book or fidelity context changed since review |
+| 1.16 | The Artform category ◊ | `prop:artform-category-book` | C | B4 | stated | `Artform.Statement.artformCategory` / `Artform.artformCategory` | the book or fidelity context changed since review |
+| 1.19 | The semantic quotient ◊ | `prop:semantic-quotient-book` | C | B4 | stated | `Artform.Statement.semanticQuotient` / `Artform.semanticQuotient` | the book or fidelity context changed since review |
+| 1.27 | Adjoints of reindexing ◊ | `prop:adjoints-book` | C | B4 | stated | `Artform.Statement.adjoints` / `Artform.adjoints` | the book or fidelity context changed since review |
+| 1.29 | Sets form a topos ◊ | `prop:finset-topos-book` | C | P | stated | `Artform.Statement.finsetTopos` / `Artform.finsetTopos` | the book or fidelity context changed since review |
+| 1.30 | The Artform category is not a topos ◊ | `prop:artform-not-topos-book` | C | B4 | stated | `Artform.Statement.artformNotTopos` / `Artform.artformNotTopos` | the book or fidelity context changed since review |
+| 1.31 | The laws of a rod ◊ | `prop:rod-laws` | A | P | stated | `Artform.Statement.rodLaws` / `Artform.rodLaws` | the book or fidelity context changed since review |
+| 3.4 | Cube boundary assembled from squares | `prop:cube-assembly-book` | B | B5 | stated | `Artform.Statement.cubeAssembly` / `Artform.cubeAssembly` | the book or fidelity context changed since review |
+| 3.11 | Shared positive pattern | `prop:shared-positive-pattern-book` | B | B5 | stated | `Artform.Statement.sharedPositivePattern` / `Artform.sharedPositivePattern` | the book or fidelity context changed since review |
+| 3.12 | Partial profile isomorphism | `prop:partial-profile-iso-book` | B | B5 | stated | `Artform.Statement.partialProfileIso` / `Artform.partialProfileIso` | the book or fidelity context changed since review |
+| 3.22 | Positive occurrences are atom images | `prop:atom-image-occurrence-book` | B | B5 | stated | `Artform.Statement.atomImageOccurrence` / `Artform.atomImageOccurrence` | the book or fidelity context changed since review |
+| 3.25 | Averaged invariant metric | `thm:averaged-invariant-metric` | B | B5 | stated | `Artform.Statement.averagedInvariantMetric` / `Artform.averagedInvariantMetric` | the book or fidelity context changed since review |
+| 3.26 | Perpendicularity from symmetry | `prop:perpendicularity-from-symmetry` | B | B5 | stated | `Artform.Statement.perpendicularityFromSymmetry` / `Artform.perpendicularityFromSymmetry` | the book or fidelity context changed since review |
+| 3.27 | Commuting compatible changes | `prop:commuting-proposals` | B | B5 | stated | `Artform.Statement.commutingProposals` / `Artform.commutingProposals` | the book or fidelity context changed since review |
+| 3.29 | Stabilization | `thm:growth-stabilization` | A | B5 | stated | `Artform.Statement.growthStabilization` / `Artform.growthStabilization` | the book or fidelity context changed since review |
 | 3.32 | Fair closure | `prop:fair-closure` | B | B5 | stated | `Artform.Statement.fairClosure` / `Artform.fairClosure` | returned: Pending starts at enabling rather than the book's first offer (F1). |
-| 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | proved | `Artform.Statement.growthSymmetry` / `Artform.growthSymmetry` |  |
-| 3.37 | Finite Fubini–Tonelli | `prop:finite-fubini-tonelli` | A | B5 | proved | `Artform.Statement.finiteFubiniTonelli` / `Artform.finiteFubiniTonelli` |  |
-| 3.39 | Monotone convergence | `thm:monotone-convergence` | A | B5 | proved | `Artform.Statement.monotoneConvergence` / `Artform.monotoneConvergence` |  |
-| 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | proved | `Artform.Statement.invariantMeasureOrbits` / `Artform.invariantMeasureOrbits` |  |
-| 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | partial | `Artform.Statement.metricFeatureReceipts` / `Artform.metricFeatureReceipts` |  |
-| 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | proved | `Artform.Statement.referenceMarkingPullback` / `Artform.referenceMarkingPullback` |  |
-| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | proved | `Artform.Statement.countLaw` / `Artform.countLaw` |  |
-| 4.4 | Exit-level closure | `prob:markov` | C | B5 | proved | `Artform.Statement.exitLevelClosure` / `Artform.exitLevelClosure` |  |
-| 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | proved | `Artform.Statement.historyExtension` / `Artform.historyExtension` |  |
-| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | proved | `Artform.Statement.orbitCriterion` / `Artform.orbitCriterion` |  |
-| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | proved | `Artform.Statement.noether` / `Artform.noether` |  |
-| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | proved | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` |  |
-| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | proved | `Artform.Statement.tallyCurrent` / `Artform.tallyCurrent` |  |
-| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | proved | `Artform.Statement.lawDecides` / `Artform.lawDecides` |  |
-| 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | proved | `Artform.Statement.finiteWellPosedness` / `Artform.finiteWellPosedness` |  |
-| 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | proved | `Artform.Statement.poseTorsor` / `Artform.poseTorsor` |  |
-| 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | proved | `Artform.Statement.connectionCoordinates` / `Artform.connectionCoordinates` |  |
-| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | proved | `Artform.Statement.holonomyDescent` / `Artform.holonomyDescent` |  |
-| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | proved | `Artform.Statement.pureGauge` / `Artform.pureGauge` |  |
-| 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | proved | `Artform.Statement.treeGaugeFixing` / `Artform.treeGaugeFixing` |  |
-| 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | proved | `Artform.Statement.flatClassification` / `Artform.flatClassification` |  |
-| 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | proved | `Artform.Statement.gaugeRuns` / `Artform.gaugeRuns` |  |
-| 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | proved | `Artform.Statement.fiveTicks` / `Artform.fiveTicks` |  |
-| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | proved | `Artform.Statement.discreteStokes` / `Artform.discreteStokes` |  |
-| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | proved | `Artform.Statement.twoStepReversal` / `Artform.twoStepReversal` |  |
-| 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | proved | `Artform.Statement.closedWindow` / `Artform.closedWindow` |  |
-| 5.42 | What a strung run fixes ◊ | `prop:run-fixes` | B | B2 | proved | `Artform.Statement.runFixes` / `Artform.runFixes` |  |
+| 3.33 | Symmetry of growth | `prop:growth-symmetry` | B | B5 | stated | `Artform.Statement.growthSymmetry` / `Artform.growthSymmetry` | the book or fidelity context changed since review |
+| 3.37 | Finite Fubini–Tonelli | `prop:finite-fubini-tonelli` | A | B5 | stated | `Artform.Statement.finiteFubiniTonelli` / `Artform.finiteFubiniTonelli` | the book or fidelity context changed since review |
+| 3.39 | Monotone convergence | `thm:monotone-convergence` | A | B5 | stated | `Artform.Statement.monotoneConvergence` / `Artform.monotoneConvergence` | the book or fidelity context changed since review |
+| 3.40 |  | `prop:invariant-measure-orbits` | A | B5 | stated | `Artform.Statement.invariantMeasureOrbits` / `Artform.invariantMeasureOrbits` | the book or fidelity context changed since review |
+| 3.43 | Receipts decide, and margins protect | `prop:metric-feature-receipts-book` | E | B8 | stated | `Artform.Statement.metricFeatureReceipts` / `Artform.metricFeatureReceipts` | the book or fidelity context changed since review |
+| 3.45 | Reference marking along a comparison | `prop:reference-marking-pullback-book` | B | B5 | stated | `Artform.Statement.referenceMarkingPullback` / `Artform.referenceMarkingPullback` | the book or fidelity context changed since review |
+| 4.2 | Counting retained alternatives | `probbook:count-law` | B | P | stated | `Artform.Statement.countLaw` / `Artform.countLaw` | the book or fidelity context changed since review |
+| 4.4 | Exit-level closure | `prob:markov` | C | B5 | stated | `Artform.Statement.exitLevelClosure` / `Artform.exitLevelClosure` | the book or fidelity context changed since review |
+| 4.5 | Extension of compatible finite histories | `probbook:history-extension` | C | B5 | stated | `Artform.Statement.historyExtension` / `Artform.historyExtension` | the book or fidelity context changed since review |
+| 5.4 | What a conserved reading can see | `thm:orbit-criterion` | A | P | stated | `Artform.Statement.orbitCriterion` / `Artform.orbitCriterion` | the book or fidelity context changed since review |
+| 5.6 | Noether's theorem for affine laws | `thm:noether` | B | P | stated | `Artform.Statement.noether` / `Artform.noether` | the book or fidelity context changed since review |
+| 5.7 | Noether's theorem on the square | `cor:noether-square` | A | P | stated | `Artform.Statement.noetherSquare` / `Artform.noetherSquare` | the book or fidelity context changed since review |
+| 5.8 | The current of a tally | `prop:tally-current` | B | B1 | stated | `Artform.Statement.tallyCurrent` / `Artform.tallyCurrent` | the book or fidelity context changed since review |
+| 5.11 | The law decides what is kept | `prop:law-decides` | B | B1 | stated | `Artform.Statement.lawDecides` / `Artform.lawDecides` | the book or fidelity context changed since review |
+| 5.13 | Finite well-posedness | `thm:well-posed` | B | B1 | stated | `Artform.Statement.finiteWellPosedness` / `Artform.finiteWellPosedness` | the book or fidelity context changed since review |
+| 5.16 | Pose orbit | `lem:pose-torsor` | B | B2 | stated | `Artform.Statement.poseTorsor` / `Artform.poseTorsor` | the book or fidelity context changed since review |
+| 5.20 | Connection and coordinates | `prop:connection-coordinates` | B | B2 | stated | `Artform.Statement.connectionCoordinates` / `Artform.connectionCoordinates` | the book or fidelity context changed since review |
+| 5.23 | Holonomy descent | `thm:holonomy-descent` | B | P | stated | `Artform.Statement.holonomyDescent` / `Artform.holonomyDescent` | the book or fidelity context changed since review |
+| 5.27 | Pure gauge equals loop-flat | `thm:pure-gauge` | B | P | stated | `Artform.Statement.pureGauge` / `Artform.pureGauge` | the book or fidelity context changed since review |
+| 5.28 | Spanning-tree gauge fixing | `thm:tree-gauge-fixing` | C | B2 | stated | `Artform.Statement.treeGaugeFixing` / `Artform.treeGaugeFixing` | the book or fidelity context changed since review |
+| 5.29 | Classification of face-flat connections | `thm:flat-classification` | C | B2 | stated | `Artform.Statement.flatClassification` / `Artform.flatClassification` | the book or fidelity context changed since review |
+| 5.36 | Gauge covariance passes to runs | `prop:gauge-runs` | B | B2 | stated | `Artform.Statement.gaugeRuns` / `Artform.gaugeRuns` | the book or fidelity context changed since review |
+| 5.37 | Five ticks read the outside | `prop:five-ticks` | A | B2 | stated | `Artform.Statement.fiveTicks` / `Artform.fiveTicks` | the book or fidelity context changed since review |
+| 5.38 | Discrete Stokes and divergence theorems | `prop:discrete-stokes` | B | P | stated | `Artform.Statement.discreteStokes` / `Artform.discreteStokes` | the book or fidelity context changed since review |
+| 5.39 | Reversing a tick of two steps | `prop:two-step-reversal` | A | P | stated | `Artform.Statement.twoStepReversal` / `Artform.twoStepReversal` | the book or fidelity context changed since review |
+| 5.40 | Closed-window conservation | `thm:closed-window` | B | B2 | stated | `Artform.Statement.closedWindow` / `Artform.closedWindow` | the book or fidelity context changed since review |
+| 5.42 | What a strung run fixes ◊ | `prop:run-fixes` | B | B2 | stated | `Artform.Statement.runFixes` / `Artform.runFixes` | the book or fidelity context changed since review |
 | 5.44 | Hall; supplies and demands ◊ | `thm:hall` | B | P | stated | `Artform.Statement.hall` / `Artform.hall` | returned: Natural-number supplies omit the book's nonnegative fractional amounts. |
-| 5.45 | A kept count is woven ◊ | `thm:woven` | B | B2 | proved | `Artform.Statement.woven` / `Artform.woven` |  |
-| 5.46 | Symmetries of a slot tapestry ◊ | `prop:slot-symmetry` | B | B2 | proved | `Artform.Statement.slotSymmetry` / `Artform.slotSymmetry` |  |
-| 5.47 | Symmetry of what may happen ◊ | `thm:curie` | B | B2 | proved | `Artform.Statement.curie` / `Artform.curie` |  |
-| 5.48 | Breaking needs a choice ◊ | `prop:breaking` | B | B2 | proved | `Artform.Statement.breaking` / `Artform.breaking` |  |
-| 6.1 | Reversibility | `thm:reversible` | B | P | proved | `Artform.Statement.reversible` / `Artform.reversible` |  |
-| 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | proved | `Artform.Statement.maxwellReversal` / `Artform.maxwellReversal` |  |
+| 5.45 | A kept count is woven ◊ | `thm:woven` | B | B2 | stated | `Artform.Statement.woven` / `Artform.woven` | the book or fidelity context changed since review |
+| 5.46 | Symmetries of a slot tapestry ◊ | `prop:slot-symmetry` | B | B2 | stated | `Artform.Statement.slotSymmetry` / `Artform.slotSymmetry` | the book or fidelity context changed since review |
+| 5.47 | Symmetry of what may happen ◊ | `thm:curie` | B | B2 | stated | `Artform.Statement.curie` / `Artform.curie` | the book or fidelity context changed since review |
+| 5.48 | Breaking needs a choice ◊ | `prop:breaking` | B | B2 | stated | `Artform.Statement.breaking` / `Artform.breaking` | the book or fidelity context changed since review |
+| 6.1 | Reversibility | `thm:reversible` | B | P | stated | `Artform.Statement.reversible` / `Artform.reversible` | the book or fidelity context changed since review |
+| 6.2 | Time reversal of the Maxwell tick | `cor:maxwell-reversal` | B | B3 | stated | `Artform.Statement.maxwellReversal` / `Artform.maxwellReversal` | the book or fidelity context changed since review |
 | 6.3 | Gauge covariance of the Maxwell tick | `thm:maxwell-covariant` | B | B3 | stated | `Artform.Statement.maxwellCovariant` / `Artform.maxwellCovariant` | returned: The packaged law/realizer clause is absent because per-move legality fails (F2). |
-| 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | proved | `Artform.Statement.gaussPreserved` / `Artform.gaussPreserved` |  |
-| 6.5 | The Maxwell shears keep the canonical pairing | `lem:maxwell-pairing` | B | B3 | proved | `Artform.Statement.maxwellPairing` / `Artform.maxwellPairing` |  |
-| 6.6 | Gauss's law from the tally of gauge symmetry | `cor:gauss-noether` | B | B3 | proved | `Artform.Statement.gaussNoether` / `Artform.gaussNoether` |  |
-| 6.7 | A gauge change that varies from tick to tick | `prop:gauge-defect` | B | B3 | proved | `Artform.Statement.gaugeDefect` / `Artform.gaugeDefect` |  |
-| 6.9 | Temporal links | `thm:temporal-links` | B | B3 | proved | `Artform.Statement.temporalLinks` / `Artform.temporalLinks` |  |
-| 6.10 | Gauge covariance of a hop | `prop:hop-covariance` | B | B3 | proved | `Artform.Statement.hopCovariance` / `Artform.hopCovariance` |  |
+| 6.4 | Gauss preservation | `thm:gauss-preserved` | B | B3 | stated | `Artform.Statement.gaussPreserved` / `Artform.gaussPreserved` | the book or fidelity context changed since review |
+| 6.5 | The Maxwell shears keep the canonical pairing | `lem:maxwell-pairing` | B | B3 | stated | `Artform.Statement.maxwellPairing` / `Artform.maxwellPairing` | the book or fidelity context changed since review |
+| 6.6 | Gauss's law from the tally of gauge symmetry | `cor:gauss-noether` | B | B3 | stated | `Artform.Statement.gaussNoether` / `Artform.gaussNoether` | the book or fidelity context changed since review |
+| 6.7 | A gauge change that varies from tick to tick | `prop:gauge-defect` | B | B3 | stated | `Artform.Statement.gaugeDefect` / `Artform.gaugeDefect` | the book or fidelity context changed since review |
+| 6.9 | Temporal links | `thm:temporal-links` | B | B3 | stated | `Artform.Statement.temporalLinks` / `Artform.temporalLinks` | the book or fidelity context changed since review |
+| 6.10 | Gauge covariance of a hop | `prop:hop-covariance` | B | B3 | stated | `Artform.Statement.hopCovariance` / `Artform.hopCovariance` | the book or fidelity context changed since review |
 | 6.11 | What the two steps force | `prop:maxwell-shape` | B | B3 | stated | `Artform.Statement.maxwellShape` / `Artform.maxwellShape` | returned: No bridge from every allowed local link update to the assumed faceKick representation. |
-| 7.3 | A kept count is woven: coherent laws | `cor:qr-woven` | B | B6 | proved | `Artform.Statement.qrWoven` / `Artform.qrWoven` |  |
-| 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | partial | `Artform.Statement.selectedLaw` / `Artform.selectedLaw` |  |
-| 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | proved | `Artform.Statement.mpEpsilon` / `Artform.mpEpsilon` |  |
-| 10.2 | Triality | `prop:mp-triality` | C | B6 | proved | `Artform.Statement.mpTriality` / `Artform.mpTriality` |  |
-| 11.2 | The two write families | `prop:mt-writes` | A | B6 | proved | `Artform.Statement.mtWrites` / `Artform.mtWrites` |  |
-| 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | proved | `Artform.Statement.mtBlocks` / `Artform.mtBlocks` |  |
-| 11.5 | Averaging counts | `prop:mt-average` | C | P | proved | `Artform.Statement.mtAverage` / `Artform.mtAverage` |  |
-| 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | proved | `Artform.Statement.mtConvolution` / `Artform.mtConvolution` |  |
-| 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | proved | `Artform.Statement.mtNativeReads` / `Artform.mtNativeReads` |  |
-| 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | proved | `Artform.Statement.mtOrderWitness` / `Artform.mtOrderWitness` |  |
-| 11.12 | Second quantization is a homomorphism | `prop:mt-gamma` | C | B6 | proved | `Artform.Statement.mtGamma` / `Artform.mtGamma` |  |
-| 11.14 | Colourless states are the invariants of one vertex | `prop:mt-gauge-fix` | C | B6 | proved | `Artform.Statement.mtGaugeFix` / `Artform.mtGaugeFix` |  |
-| 11.15 | Census of colourless states | `thm:mt-census` | C | B6 | proved | `Artform.Statement.mtCensus` / `Artform.mtCensus` |  |
-| 11.16 | The hop is covariant | `prop:mt-hop-covariant` | C | B6 | proved | `Artform.Statement.mtHopCovariant` / `Artform.mtHopCovariant` |  |
-| 11.17 | The coin's coefficients are minors | `prop:mt-minors` | C | B6 | proved | `Artform.Statement.mtMinors` / `Artform.mtMinors` |  |
-| 11.18 | The tick preserves the colourless sector | `thm:mt-tick-gauss` | C | B6 | proved | `Artform.Statement.mtTickGauss` / `Artform.mtTickGauss` |  |
-| 11.19 | Link moments | `prop:mt-moments` | C | B6 | proved | `Artform.Statement.mtMoments` / `Artform.mtMoments` |  |
-| 11.20 | The there-and-back tally | `thm:mt-there-and-back` | C | B6 | proved | `Artform.Statement.mtThereAndBack` / `Artform.mtThereAndBack` |  |
-| 12.1 | The eight invariants of a vertex with two slots | `prop:mm-two-slot-invariants` | D | B7 | proved | `Artform.Statement.mmTwoSlotInvariants` / `Artform.mmTwoSlotInvariants` |  |
-| 12.2 | Every extra state is located in one average | `thm:mm-census-moments` | C | B7 | stated | `Artform.Statement.mmCensusMoments` | no proof yet |
-| 12.3 | The pair is bound more tightly than the quartet | `prop:mm-diquark` | D | B7 | proved | `Artform.Statement.mmDiquark` / `Artform.mmDiquark` |  |
-| 12.4 | The spectrum of the tally on one edge | `thm:mm-spectra` | D | B7 | proved | `Artform.Statement.mmSpectra` / `Artform.mmSpectra` |  |
-| 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | proved | `Artform.Statement.mmSpinOrder` / `Artform.mmSpinOrder` |  |
-| 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | proved | `Artform.Statement.mmControl` / `Artform.mmControl` |  |
-| 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | proved | `Artform.Statement.mmParticleHole` / `Artform.mmParticleHole` |  |
-| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | proved | `Artform.Statement.sixtyRotations` / `Artform.sixtyRotations` |  |
-| 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | proved | `Artform.Statement.a5Tensor` / `Artform.a5Tensor` |  |
-| 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | proved | `Artform.Statement.mmSameSector` / `Artform.mmSameSector` |  |
-| 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | proved | `Artform.Statement.mmCentre` / `Artform.mmCentre` |  |
-| 12.13 | Orders from traces | `prop:mm-s1080-orders` | D | B7 | proved | `Artform.Statement.s1080Orders` / `Artform.s1080Orders` |  |
-| 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | proved | `Artform.Statement.s1080Tensor` / `Artform.s1080Tensor` |  |
+| 7.3 | A kept count is woven: coherent laws | `cor:qr-woven` | B | B6 | stated | `Artform.Statement.qrWoven` / `Artform.qrWoven` | the book or fidelity context changed since review |
+| 7.4 | The selected native probability law | `qr:selected-law` | E | B8 | stated | `Artform.Statement.selectedLaw` / `Artform.selectedLaw` | the book or fidelity context changed since review |
+| 10.1 | The colourless three-quark state | `prop:mp-epsilon` | B | B6 | stated | `Artform.Statement.mpEpsilon` / `Artform.mpEpsilon` | the book or fidelity context changed since review |
+| 10.2 | Triality | `prop:mp-triality` | C | B6 | stated | `Artform.Statement.mpTriality` / `Artform.mpTriality` | the book or fidelity context changed since review |
+| 11.2 | The two write families | `prop:mt-writes` | A | B6 | stated | `Artform.Statement.mtWrites` / `Artform.mtWrites` | the book or fidelity context changed since review |
+| 11.4 | Blocks fill the table space | `thm:mt-blocks` | C | B6 | stated | `Artform.Statement.mtBlocks` / `Artform.mtBlocks` | the book or fidelity context changed since review |
+| 11.5 | Averaging counts | `prop:mt-average` | C | P | stated | `Artform.Statement.mtAverage` / `Artform.mtAverage` | the book or fidelity context changed since review |
+| 11.6 | One-edge operators | `thm:mt-convolution` | C | B6 | stated | `Artform.Statement.mtConvolution` / `Artform.mtConvolution` | changed since review; the book or fidelity context changed since review |
+| 11.8 | Six native sign reads on the cube group | `prop:mt-native-reads` | D | B7 | stated | `Artform.Statement.mtNativeReads` / `Artform.mtNativeReads` | the book or fidelity context changed since review |
+| 11.11 | The order is a presentation | `prop:mt-order-witness` | C | B6 | stated | `Artform.Statement.mtOrderWitness` / `Artform.mtOrderWitness` | the book or fidelity context changed since review |
+| 11.12 | Second quantization is a homomorphism | `prop:mt-gamma` | C | B6 | stated | `Artform.Statement.mtGamma` / `Artform.mtGamma` | the book or fidelity context changed since review |
+| 11.14 | Colourless states are the invariants of one vertex | `prop:mt-gauge-fix` | C | B6 | stated | `Artform.Statement.mtGaugeFix` / `Artform.mtGaugeFix` | the book or fidelity context changed since review |
+| 11.15 | Census of colourless states | `thm:mt-census` | C | B6 | stated | `Artform.Statement.mtCensus` / `Artform.mtCensus` | the book or fidelity context changed since review |
+| 11.16 | The hop is covariant | `prop:mt-hop-covariant` | C | B6 | stated | `Artform.Statement.mtHopCovariant` / `Artform.mtHopCovariant` | the book or fidelity context changed since review |
+| 11.17 | The coin's coefficients are minors | `prop:mt-minors` | C | B6 | stated | `Artform.Statement.mtMinors` / `Artform.mtMinors` | the book or fidelity context changed since review |
+| 11.18 | The tick preserves the colourless sector | `thm:mt-tick-gauss` | C | B6 | stated | `Artform.Statement.mtTickGauss` / `Artform.mtTickGauss` | the book or fidelity context changed since review |
+| 11.19 | Link moments | `prop:mt-moments` | C | B6 | stated | `Artform.Statement.mtMoments` / `Artform.mtMoments` | the book or fidelity context changed since review |
+| 11.20 | The there-and-back tally | `thm:mt-there-and-back` | C | B6 | stated | `Artform.Statement.mtThereAndBack` / `Artform.mtThereAndBack` | the book or fidelity context changed since review |
+| 12.1 | The eight invariants of a vertex with two slots | `prop:mm-two-slot-invariants` | D | B7 | stated | `Artform.Statement.mmTwoSlotInvariants` / `Artform.mmTwoSlotInvariants` | the book or fidelity context changed since review |
+| 12.2 | Every extra state is located in one average | `thm:mm-census-moments` | C | B7 | stated | `Artform.Statement.mmCensusMoments` | the book or fidelity context changed since review; no proof yet |
+| 12.3 | The pair is bound more tightly than the quartet | `prop:mm-diquark` | D | B7 | stated | `Artform.Statement.mmDiquark` / `Artform.mmDiquark` | the book or fidelity context changed since review |
+| 12.4 | The spectrum of the tally on one edge | `thm:mm-spectra` | D | B7 | stated | `Artform.Statement.mmSpectra` / `Artform.mmSpectra` | the book or fidelity context changed since review |
+| 12.5 | The two-baryon states are ordered by spin | `prop:mm-spin-order` | D | B7 | stated | `Artform.Statement.mmSpinOrder` / `Artform.mmSpinOrder` | the book or fidelity context changed since review |
+| 12.6 | The pair hop is the cause | `prop:mm-control` | D | B7 | stated | `Artform.Statement.mmControl` / `Artform.mmControl` | the book or fidelity context changed since review |
+| 12.7 | A symmetry that only a real triplet has | `prop:mm-particle-hole` | D | B7 | stated | `Artform.Statement.mmParticleHole` / `Artform.mmParticleHole` | the book or fidelity context changed since review |
+| 12.8 | The sixty rotations | `prop:mm-icosahedron` | D | P | stated | `Artform.Statement.sixtyRotations` / `Artform.sixtyRotations` | the book or fidelity context changed since review |
+| 12.9 | The tensor square of the icosahedral triplet | `prop:mm-a5-tensor` | D | B7 | stated | `Artform.Statement.a5Tensor` / `Artform.a5Tensor` | the book or fidelity context changed since review |
+| 12.10 | Models I and II share their zero-flux sector | `prop:mm-same-sector` | D | B7 | stated | `Artform.Statement.mmSameSector` / `Artform.mmSameSector` | the book or fidelity context changed since review |
+| 12.12 | Triality, and the pair moment | `prop:mm-centre` | D | B7 | stated | `Artform.Statement.mmCentre` / `Artform.mmCentre` | the book or fidelity context changed since review |
+| 12.13 | Orders from traces | `prop:mm-s1080-orders` | D | B7 | stated | `Artform.Statement.s1080Orders` / `Artform.s1080Orders` | the book or fidelity context changed since review |
+| 12.14 | The tensor squares of the Valentiner triplet | `prop:mm-s1080-tensor` | D | B7 | stated | `Artform.Statement.s1080Tensor` / `Artform.s1080Tensor` | the book or fidelity context changed since review |
 | 12.15 | Agreement with SU(3) at two slots | `thm:mm-s1080-agreement` | E | B8 | planned |  | returned: No Lean statement to judge. |
-| 12.16 | Every loop closes | `thm:mm-loop` | B | B7 | proved | `Artform.Statement.mmLoop` / `Artform.mmLoop` |  |
-| 13.1 | Colourless states of a path | `prop:ml-path` | C | B7 | proved | `Artform.Statement.mlPath` / `Artform.mlPath` |  |
-| 13.2 | The string | `thm:ml-string` | C | B7 | proved | `Artform.Statement.mlString` / `Artform.mlString` |  |
-| 13.3 | The screening number | `prop:ml-screening` | D | B7 | proved | `Artform.Statement.mlScreening` / `Artform.mlScreening` |  |
-| 13.4 | Where the string and screened levels cross | `prop:ml-breaking` | D | B7 | proved | `Artform.Statement.mlBreaking` / `Artform.mlBreaking` |  |
-| 13.5 | Colourless states of the empty square | `prop:ml-square-states` | D | B7 | proved | `Artform.Statement.mlSquareStates` / `Artform.mlSquareStates` |  |
-| 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | proved | `Artform.Statement.mlSquareMatrix` / `Artform.mlSquareMatrix` |  |
+| 12.16 | Every loop closes | `thm:mm-loop` | B | B7 | stated | `Artform.Statement.mmLoop` / `Artform.mmLoop` | the book or fidelity context changed since review |
+| 13.1 | Colourless states of a path | `prop:ml-path` | C | B7 | stated | `Artform.Statement.mlPath` / `Artform.mlPath` | the book or fidelity context changed since review |
+| 13.2 | The string | `thm:ml-string` | C | B7 | stated | `Artform.Statement.mlString` / `Artform.mlString` | the book or fidelity context changed since review |
+| 13.3 | The screening number | `prop:ml-screening` | D | B7 | stated | `Artform.Statement.mlScreening` / `Artform.mlScreening` | the book or fidelity context changed since review |
+| 13.4 | Where the string and screened levels cross | `prop:ml-breaking` | D | B7 | stated | `Artform.Statement.mlBreaking` / `Artform.mlBreaking` | the book or fidelity context changed since review |
+| 13.5 | Colourless states of the empty square | `prop:ml-square-states` | D | B7 | stated | `Artform.Statement.mlSquareStates` / `Artform.mlSquareStates` | changed since review; the book or fidelity context changed since review |
+| 13.6 | The magnetic term in the electric basis | `thm:ml-square-matrix` | C | B7 | stated | `Artform.Statement.mlSquareMatrix` / `Artform.mlSquareMatrix` | the book or fidelity context changed since review |
 | 13.7 | The square to third order | `thm:ml-square-series` | E | B8 | planned |  | returned: No Lean statement to judge. |
 | 13.8 | The third-order transfer | `thm:ml-transfer` | C | B8 | stated | `Artform.Statement.mlTransfer` / `Artform.mlTransfer` | returned: The operator theorem assumes a finite group and omits SU(3). |
 | 13.9 | What the transfer does | `thm:ml-transfer-values` | D | B7 | stated | `Artform.Statement.mlTransferValues` / `Artform.mlTransferValues` | returned: The SU(3) word matrix is not connected to the projected operator. |
-| 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | stated | `Artform.Statement.mlWalk` | no proof yet |
-| 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | proved | `Artform.Statement.mlCanvasCensus` / `Artform.mlCanvasCensus` |  |
+| 13.10 | A baryon on a ring and on the cube | `prop:ml-walk` | D | B7 | stated | `Artform.Statement.mlWalk` | the book or fidelity context changed since review; no proof yet |
+| 13.11 | Census of a canvas | `thm:ml-canvas-census` | C | B7 | stated | `Artform.Statement.mlCanvasCensus` / `Artform.mlCanvasCensus` | the book or fidelity context changed since review |
 
 ## Definitions
 
 | No. | Definition | Label | Status | Lean |
 |---|---|---|---|---|
-| 1.1 | Finite form | `def:finite-form` | planned |  |
+| 1.1 | Finite form | `def:finite-form` | defined | `Artform.FiniteForm`, `Artform.FormType` |
 | 1.2 | Perfect alignment | `def:perfect-alignment` | defined | `Artform.Align` |
 | 1.5 | Rectangular tapestry | `def:time-rectangular` | defined | `Artform.RectFrame`, `Artform.RectTapestry`, `Artform.RectTapestry.frame` |
-| 1.6 | Occurrence history | `def:time-history` | planned |  |
-| 1.7 | Tick realization | `def:time-ticks` | planned |  |
-| 1.8 | Finite cyclarchy | `def:time-cyclarchy` | planned |  |
+| 1.6 | Occurrence history | `def:time-history` | defined | `Artform.OccurrenceHistory`, `Artform.OccurrenceHistoryData`, `Artform.OccurrenceHistoryData.h`, `Artform.OccurrenceHistoryData.positions`, `Artform.TransitionGraph`, `Artform.TransitionGraph.Path` |
+| 1.7 | Tick realization | `def:time-ticks` | defined | `Artform.TickData`, `Artform.TickLaw`, `Artform.TickRealization` |
+| 1.8 | Finite cyclarchy | `def:time-cyclarchy` | defined | `Artform.Cyclarchy`, `Artform.CyclarchyData` |
 | 1.9 | Interpretation witness | `def:intwit-book` | defined | `Artform.IntProfile`, `Artform.IntWit`, `Artform.PointedInt`, `Artform.Sem` |
-| 1.11 | Finite cell pattern | `def:finite-cell-pattern` | planned |  |
+| 1.11 | Finite cell pattern | `def:finite-cell-pattern` | defined | `Artform.CellPattern`, `Artform.CellPattern.Orientation`, `Artform.CellPattern.Palette`, `Artform.CellPattern.faces` |
 | 1.12 | Geometric form and its instances | `def:geometric-form-book` | defined | `Artform.IncidenceCanvas.IsInstance` |
-| 1.13 | Artform frame and instance | `def:frame-instance` | planned |  |
+| 1.13 | Artform frame and instance | `def:frame-instance` | defined | `Artform.ArtformFrame`, `Artform.ArtformFrame.Instance` |
 | 1.15 | Category | `def:category-book` | mathlib | Mathlib CategoryTheory.Category |
-| 1.17 | Subcategory | `def:subcategory-book` | planned |  |
+| 1.17 | Subcategory | `def:subcategory-book` | defined | `Artform.Subcategory`, `Artform.Subcategory.Full` |
 | 1.18 | Functor | `def:functor-book` | mathlib | Mathlib CategoryTheory.Functor |
 | 1.20 | Natural transformation | `def:natural-transformation-book` | mathlib | Mathlib CategoryTheory.NatTrans |
 | 1.21 | Product | `def:product-book` | mathlib | Mathlib Limits.prod (HasBinaryProducts, prod.lift) |
@@ -146,18 +146,18 @@ Book edition followed: the 54th, `lean-repository-2026-10-11` (1053 pages).
 | 1.25 | Pushout | `def:pushout-book` | mathlib | Mathlib IsPushout |
 | 1.26 | Adjunction | `def:adjunction-book` | mathlib | Mathlib CategoryTheory.Adjunction |
 | 1.28 | Subobject classifier and topos | `def:topos-book` | defined | `Artform.IsSubobjectClassifier`, `Artform.IsTopos` |
-| 2.1 | Stage frame | `def:stage` | planned |  |
-| 2.2 | Legal duet state | `def:legal-state` | planned |  |
-| 2.3 | Contract | `def:contract` | planned |  |
-| 2.4 | Symmetry of a dance | `def:dance-symmetry` | planned |  |
+| 2.1 | Stage frame | `def:stage` | defined | `Artform.Duet.Place.GateEdge`, `Artform.Duet.Place.Ring`, `Artform.Duet.Place.Spoke`, `Artform.Duet.Stage`, `Artform.Duet.Stage.face` |
+| 2.2 | Legal duet state | `def:legal-state` | defined | `Artform.Duet.CandidateState.Legal` |
+| 2.3 | Contract | `def:contract` | defined | `Artform.Contract`, `Artform.Contract.Compose` |
+| 2.4 | Symmetry of a dance | `def:dance-symmetry` | defined | `Artform.IsDanceSymmetry` |
 | 2.5 | Process profile; enabled application | `def:process-profile` | defined | `Artform.EnabledApp`, `Artform.ProcessProfile` |
 | 2.6 | Compatibility; batch | `def:batch` | defined | `Artform.Batch`, `Artform.EnabledApp.Compatible` |
-| 2.7 | Slots, phases and checkpoints | `def:slots-phases` | planned |  |
-| 2.8 | Control tapestry | `def:control-tapestry` | planned |  |
-| 2.9 | Trajectory; trace | `def:trajectory-trace` | planned |  |
+| 2.7 | Slots, phases and checkpoints | `def:slots-phases` | defined | `Artform.SlotSchedule`, `Artform.SlotSchedule.boundaries`, `Artform.SlotSchedule.phase`, `Artform.SlotSchedule.slots` |
+| 2.8 | Control tapestry | `def:control-tapestry` | defined | `Artform.ControlTapestry` |
+| 2.9 | Trajectory; trace | `def:trajectory-trace` | defined | `Artform.PerformanceRun`, `Artform.PerformanceRun.trajectory`, `Artform.Trace` |
 | 3.1 | Finite cellular canvas | `def:canvas` | defined | `Artform.Canvas`, `Artform.IncidenceCanvas` |
 | 3.2 | Position presentation | `def:position-presentation` | defined | `Artform.PositionPresentation` |
-| 3.5 | Geometric part and construction records | `def:geometric-records-book` | planned |  |
+| 3.5 | Geometric part and construction records | `def:geometric-records-book` | defined | `Artform.AssemblyData`, `Artform.AssemblyPlan.joined`, `Artform.AssemblyPlan.piece`, `Artform.Decomposition`, `Artform.PartFamily` |
 | 3.6 | Recognition profile | `def:recognition-profile` | defined | `Artform.RecognitionProfile` |
 | 3.7 | Recognition pattern | `def:recognition-pattern-book` | defined | `Artform.ProfiledState` |
 | 3.8 | Strong occurrence | `def:strong-occurrence` | defined | `Artform.IsStrongOccurrence`, `Artform.Occurrence` |
@@ -172,8 +172,8 @@ Book edition followed: the 54th, `lean-repository-2026-10-11` (1053 pages).
 | 3.19 | Continuous groups named in this book | `def:continuous-groups` | mathlib | Mathlib Matrix.unitaryGroup, Matrix.specialUnitaryGroup, Circle |
 | 3.20 | Automorphism group | `def:automorphism-group` | defined | `Artform.Aut` |
 | 3.21 | Template symmetry, atom image, positive occurrence | `def:positive-occurrence-book` | defined | `Artform.Instantiation.atomImage`, `Artform.PositiveOccurrence`, `Artform.PositiveTemplate.posAut` |
-| 3.23 | Component inventory and degree | `def:pattern-degree-book` | planned |  |
-| 3.24 | Atom support and atom-disjoint recurrence | `def:atom-disjoint-recurrence-book` | planned |  |
+| 3.23 | Component inventory and degree | `def:pattern-degree-book` | defined | `Artform.AtomSet.Adjacent`, `Artform.AtomSet.Component`, `Artform.AtomSet.Component.pair`, `Artform.AtomSet.degree`, `Artform.AtomSet.inventory`, `Artform.PartialComparison.degree`, `Artform.PositiveTemplate.degree` |
+| 3.24 | Atom support and atom-disjoint recurrence | `def:atom-disjoint-recurrence-book` | defined | `Artform.IsRecurrenceWitness`, `Artform.PositiveOccurrence.AtomDisjoint`, `Artform.PositiveOccurrence.support`, `Artform.RecursExternally`, `Artform.RecursInternally` |
 | 3.28 | Policy | `def:policy` | defined | `Artform.Policy` |
 | 3.30 | Cadence fairness; application fairness | `def:fairness` | defined | `Artform.Execution.ApplicationFair`, `Artform.Execution.CadenceFair` |
 | 3.31 | Bounded windowed progress | `def:windowed-progress` | defined | `Artform.Execution.WindowedProgress` |
@@ -182,34 +182,34 @@ Book edition followed: the 54th, `lean-repository-2026-10-11` (1053 pages).
 | 3.36 | Measurable map | `def:measurable-map` | mathlib | Mathlib Measurable |
 | 3.38 | Measurability | `def:measurability` | mathlib | Mathlib Measurable |
 | 3.41 | Weighted cellular content | `def:weighted-cellular-content` | defined | `Artform.cellularContent` |
-| 4.1 | Events available to a finite report | `def:report-events` | planned |  |
+| 4.1 | Events available to a finite report | `def:report-events` | defined | `Artform.Available`, `Artform.reportAtoms`, `Artform.reportEvents` |
 | 4.3 | Conditioning on a positive-mass event | `def:conditioning` | mathlib | Mathlib ProbabilityTheory.cond |
 | 5.1 | Deterministic law; tick; run | `def:tick` | defined | `Artform.DetLaw` |
-| 5.2 | Local law; halo | `def:local-law` | planned |  |
+| 5.2 | Local law; halo | `def:local-law` | defined | `Artform.Canvas.halo`, `Artform.DetLaw.IsLocal` |
 | 5.3 | Symmetry of a law; conserved reading | `def:law-symmetry` | defined | `Artform.DetLaw.Conserved`, `Artform.DetLaw.IsSymmetry` |
 | 5.5 | Affine law; tally; pairing | `def:affine-law` | defined | `Artform.AffineLaw`, `Artform.AffineLaw.Keeps`, `Artform.Pairing`, `Artform.Pairing.Perfect`, `Artform.Tally` |
 | 5.9 | Law; move; legal state | `def:law` | defined | `Artform.Law` |
 | 5.10 | Realizer; run | `def:realizer` | defined | `Artform.DetRealizer`, `Artform.LawInSteps.DetRealizer`, `Artform.RelRealizer`, `Artform.Run`, `Artform.StochRealizer` |
 | 5.12 | Law in steps; score; checkpoint; well-posed realizer | `def:law-steps` | defined | `Artform.CheckedInvariant`, `Artform.LawInSteps`, `Artform.LawInSteps.DetRealizer.WellPosed`, `Artform.Score` |
-| 5.14 | Five kinds of equation | `def:equation-roles` | planned |  |
+| 5.14 | Five kinds of equation | `def:equation-roles` | defined | `Artform.EquationRole`, `Artform.FiveEquations.oppositeAgree`, `Artform.FiveEquations.squareIdentity`, `Artform.FiveEquations.walkerConstraint`, `Artform.FiveEquations.walkerTick`, `Artform.FiveEquations.zeros` |
 | 5.15 | Right torsor | `def:torsor` | defined | `Artform.IsRightTorsor`, `Artform.RightTorsor` |
 | 5.17 | Localization | `def:localization` | defined | `Artform.Skeleton.Localization` |
 | 5.18 | Connection | `def:connection-general` | defined | `Artform.RightTorsor.EquivariantMap`, `Artform.Skeleton.Connection` |
 | 5.19 | Trivialization and link table | `def:trivialization` | defined | `Artform.Skeleton.Connection.linkTable`, `Artform.Skeleton.LinkTable`, `Artform.Skeleton.Trivialization` |
 | 5.21 | Gauge group and gauge orbit | `def:gauge-group` | defined | `Artform.Skeleton.GaugeEquivalent`, `Artform.Skeleton.gaugeAct` |
-| 5.24 | Class function and Wilson loop | `def:wilson` | planned |  |
+| 5.24 | Class function and Wilson loop | `def:wilson` | defined | `Artform.IsClassFunction`, `Artform.Skeleton.wilsonLine`, `Artform.Skeleton.wilsonLoop`, `Artform.character` |
 | 5.25 | Face curvature | `def:curvature-general` | defined | `Artform.Canvas.FlatAt`, `Artform.Canvas.curvature` |
 | 5.26 | Three kinds of triviality | `def:flatness` | defined | `Artform.Canvas.FaceFlat`, `Artform.Skeleton.LoopFlat`, `Artform.Skeleton.PureGauge` |
-| 5.30 | Matter field and covariant transport | `def:matter` | planned |  |
+| 5.30 | Matter field and covariant transport | `def:matter` | defined | `Artform.MatterField`, `Artform.covariantTransport` |
 | 5.31 | Invariant vertex coupling | `def:intertwiner` | defined | `Artform.IsIntertwiner` |
-| 5.32 | Gauss constraint | `def:gauss` | planned |  |
-| 5.33 | Gauge-safe profile | `def:gauge-safe` | planned |  |
+| 5.32 | Gauss constraint | `def:gauss` | defined | `Artform.GaussConstraint` |
+| 5.33 | Gauge-safe profile | `def:gauge-safe` | defined | `Artform.GaugeReading.GaugeSafe` |
 | 5.35 | Gauge-covariant law and realizer | `def:gauge-covariant-law` | defined | `Artform.DetRealizer.GaugeCovariant`, `Artform.GaugeAction`, `Artform.GaugeAction.CovariantInvariants`, `Artform.GaugeAction.CovariantLaw`, `Artform.GaugeAction.CovariantMove`, `Artform.Law.GaugeCovariant`, `Artform.LawInSteps.DetRealizer.GaugeCovariant`, `Artform.LawInSteps.GaugeCovariant`, `Artform.RelRealizer.GaugeCovariant`, `Artform.StochRealizer.GaugeCovariant` |
 | 5.41 | No-signalling halo | `def:no-signalling` | defined | `Artform.DetRealizer.NoSignalling`, `Artform.RelRealizer.NoSignalling`, `Artform.ScriptTable.NoSignalling`, `Artform.StochRealizer.NoSignalling` |
 | 5.43 | Count; weave; strand | `def:weave` | defined | `Artform.Count`, `Artform.Count.N`, `Artform.Weave` |
 | 6.8 | Temporal links | `def:temporal-links` | defined | `Artform.TemporalLinks`, `Artform.extendedTick`, `Artform.gaugeLinks`, `Artform.gaugeStates` |
 | 7.1 | Native coefficient ring | `qr:ring` | defined | `Artform.Exact.R8`, `Artform.Exact.R8C` |
-| 7.2 | Coherent composition | `qr:coherent-composition` | planned |  |
+| 7.2 | Coherent composition | `qr:coherent-composition` | defined | `Artform.composePhases`, `Artform.endpointCoeff`, `Artform.historyCoeff` |
 | 11.1 | Left and right writes | `def:mt-writes` | defined | `Artform.leftWrite`, `Artform.rightWrite` |
 | 11.3 | Block of an irreducible representation | `def:mt-block` | defined | `Artform.block` |
 | 11.7 | Electric response and electric read | `def:mt-response` | defined | `Artform.IsElectricResponse`, `Artform.electricKernel`, `Artform.electricRead` |

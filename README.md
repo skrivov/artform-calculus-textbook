@@ -43,9 +43,9 @@ a proof that Lean's kernel checks using only the axioms `propext`,
 <!-- status:begin -->
 | Status | Statements |
 |---|---|
-| proved | 91 |
-| partial | 2 |
-| stated | 8 |
+| proved | 0 |
+| partial | 0 |
+| stated | 101 |
 | planned | 2 |
 | informal | 0 |
 | **total** | **103** |

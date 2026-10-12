@@ -2,7 +2,7 @@ import Mathlib.Algebra.Star.Pi
 import Mathlib.Analysis.Complex.Basic
 import Mathlib.LinearAlgebra.Trace
 import Mathlib.RepresentationTheory.Basic
-import ArtformTextbook.Meta.Book
+import ArtformTextbook.Ch05.Defs.Wilson
 
 /-!
 # Tables on a group, writes and blocks (Sections 11.1 and 11.2)
@@ -68,9 +68,6 @@ end Blocks
 section Convolution
 
 variable {G : Type*} [Group G]
-
-/-- A class function: `f(h U h⁻¹) = f(U)` for all `h` and `U`. -/
-def IsClassFunction {A : Type*} (f : G → A) : Prop := ∀ h U, f (h * U * h⁻¹) = f U
 
 /-- Convolution by `f` as a matrix on the table space: `(f * ψ)(V) = Σ_U f(V U⁻¹) ψ(U)`. -/
 def convolution (f : G → ℂ) : Matrix G G ℂ := Matrix.of fun V U => f (V * U⁻¹)
