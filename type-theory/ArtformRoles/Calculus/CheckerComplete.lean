@@ -15,6 +15,9 @@ Appendix C (`app:checker`), declarative adequacy of the reference procedure.
   fragment, and a synthesized type is convertible to every type of the term.
 * `typeCheck_complete`, `decTyping`, `decFormed`: type checking and type
   formation are decidable on the fragment.
+* `normal_fragment`: every well-typed normal term, well-formed normal type and
+  well-typed normal argument list lies in the fragment, so the checker is
+  complete on normal judgments (`typeCheck_complete_normal`).
 
 Outside the fragment the procedure of Appendix C is incomplete: a pair has no
 principal type, so a pair in a synthesis position, such as the argument of a
@@ -435,6 +438,148 @@ theorem checkSpine_cons {a rest : Exp} {ρ : Role} {A : Exp} {Δ : Tel}
 
 end Eval
 
+/-! ## Normal forms lie in the fragment -/
+
+/-- A term that synthesizes is not an introduction form of a pair, a stamp or an
+abstraction. -/
+def Exp.NotIntro (t : Exp) : Prop :=
+  (∀ a b, t ≠ .pair a b) ∧ (∀ a e o, t ≠ .stamp a e o) ∧ (∀ q σ A b, t ≠ .lam q σ A b)
+
+/-- Every well-formed normal type, every well-typed normal term and every
+well-typed normal argument list lies in the bidirectional fragment; a normal
+term that is not an introduction form synthesizes. -/
+theorem normal_fragment {S : Sig} (t : Exp) :
+    (∀ {Γ : Ctx} {ρ : Role} {α : Eff}, Normal t → Derivable S true (.ty Γ ρ t α) → t.TyFr) ∧
+    (∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal t →
+      Derivable S true (.tm Γ ρ t C ε) → t.Chk) ∧
+    (∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal t → t.NotIntro →
+      Derivable S true (.tm Γ ρ t C ε) → t.Syn) ∧
+    (∀ {Γ : Ctx} {Δ : Tel} {δ : Eff}, Normal t →
+      Derivable S true (.spine Γ t Δ δ) → t.SpFr) := by
+  induction t with
+  | var i =>
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun _ _ => trivial, fun _ _ _ => trivial,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | const i k =>
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun _ _ => trivial, fun _ _ _ => trivial,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | fam a args ih =>
+    refine ⟨fun hn ⟨d⟩ => ?_, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+    cases d with
+    | tyFam _ dargs _ _ => exact ih.2.2.2 (Normal.of_step_lift (fun h => Step.fam h) hn) ⟨dargs⟩
+  | event =>
+    exact ⟨fun _ _ => trivial, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | origin A e t ihA ihe iht =>
+    refine ⟨fun hn ⟨d⟩ => ?_, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+    cases d with
+    | tyOrigin dA de dt _ _ =>
+      exact ⟨ihA.1 (Normal.of_step_lift (fun h => Step.origin₁ h) hn) ⟨dA⟩,
+        ihe.2.1 (Normal.of_step_lift (fun h => Step.origin₂ h) hn) ⟨de⟩,
+        iht.2.1 (Normal.of_step_lift (fun h => Step.origin₃ h) hn) ⟨dt⟩⟩
+  | stamped σ A ih =>
+    refine ⟨fun hn ⟨d⟩ => ?_, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+    cases d with
+    | tyStamped dA _ _ _ => exact ih.1 (Normal.of_step_lift (fun h => Step.stamped h) hn) ⟨dA⟩
+  | pi q σ A B ihA ihB =>
+    refine ⟨fun hn ⟨d⟩ => ?_, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+    cases d with
+    | tyPi dA dB _ _ _ =>
+      exact ⟨ihA.1 (Normal.of_step_lift (fun h => Step.pi₁ h) hn) ⟨dA⟩,
+        ihB.1 (Normal.of_step_lift (fun h => Step.pi₂ h) hn) ⟨dB⟩⟩
+  | sigma ρ A B ihA ihB =>
+    refine ⟨fun hn ⟨d⟩ => ?_, fun _ ⟨d⟩ => d.isTermHead.elim, fun _ _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ ⟨d⟩ => (by cases d)⟩
+    cases d with
+    | tySigma dA dB _ _ =>
+      exact ⟨ihA.1 (Normal.of_step_lift (fun h => Step.sigma₁ h) hn) ⟨dA⟩,
+        ihB.1 (Normal.of_step_lift (fun h => Step.sigma₂ h) hn) ⟨dB⟩⟩
+  | lam q σ A b ihA ihb =>
+    refine ⟨fun _ ⟨d⟩ => (by cases d), fun hn ⟨d⟩ => ?_, fun _ hi _ => absurd rfl (hi.2.2 _ _ _ _),
+      fun _ ⟨d⟩ => (by cases d)⟩
+    obtain ⟨_, _, _, _, _, ⟨_, hA⟩, hb, _⟩ := d.inv_lam
+    exact ⟨ihA.1 hn.lam.1 hA, ihb.2.1 hn.lam.2 hb⟩
+  | app f u ihf ihu =>
+    have syn : ∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal (.app f u) →
+        Derivable S true (.tm Γ ρ (.app f u) C ε) → (Exp.app f u).Syn := by
+      intro Γ ρ C ε hn ⟨d⟩
+      obtain ⟨_, _, _, _, _, _, _, _, ⟨df⟩, hu, _⟩ := d.inv_app
+      obtain ⟨hf, hu', hlam⟩ := hn.app
+      refine ⟨ihf.2.2.1 hf ⟨fun a b he => ?_, fun a e o he => ?_, hlam⟩ ⟨df⟩, ihu.2.1 hu' hu⟩
+      · subst he
+        exact df.not_pair_of_pi
+      · subst he
+        exact df.not_stamp_of_pi
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun hn d => syn hn d, fun hn _ d => syn hn d,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | pair a b iha ihb =>
+    refine ⟨fun _ ⟨d⟩ => (by cases d), fun hn ⟨d⟩ => ?_, fun _ hi _ => absurd rfl (hi.1 _ _),
+      fun _ ⟨d⟩ => (by cases d)⟩
+    obtain ⟨_, _, _, _, _, _, ha, hb, _⟩ := d.inv_pair
+    exact ⟨iha.2.1 hn.pair.1 ha, ihb.2.1 hn.pair.2 hb⟩
+  | fst p ih =>
+    have syn : ∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal (.fst p) →
+        Derivable S true (.tm Γ ρ (.fst p) C ε) → (Exp.fst p).Syn := by
+      intro Γ ρ C ε hn ⟨d⟩
+      obtain ⟨_, _, _, ⟨dp⟩, _⟩ := d.inv_fst
+      obtain ⟨hp, hpair⟩ := hn.fst
+      refine ih.2.2.1 hp ⟨hpair, fun a e o he => ?_, fun q σ A b he => ?_⟩ ⟨dp⟩
+      · subst he
+        exact dp.not_stamp_of_sigma
+      · subst he
+        exact dp.not_lam_of_sigma
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun hn d => syn hn d, fun hn _ d => syn hn d,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | snd p ih =>
+    have syn : ∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal (.snd p) →
+        Derivable S true (.tm Γ ρ (.snd p) C ε) → (Exp.snd p).Syn := by
+      intro Γ ρ C ε hn ⟨d⟩
+      obtain ⟨_, _, _, ⟨dp⟩, _⟩ := d.inv_snd
+      obtain ⟨hp, hpair⟩ := hn.snd
+      refine ih.2.2.1 hp ⟨hpair, fun a e o he => ?_, fun q σ A b he => ?_⟩ ⟨dp⟩
+      · subst he
+        exact dp.not_stamp_of_sigma
+      · subst he
+        exact dp.not_lam_of_sigma
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun hn d => syn hn d, fun hn _ d => syn hn d,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | stamp a e o iha ihe iho =>
+    refine ⟨fun _ ⟨d⟩ => (by cases d), fun hn ⟨d⟩ => ?_, fun _ hi _ => absurd rfl (hi.2.1 _ _ _),
+      fun _ ⟨d⟩ => (by cases d)⟩
+    obtain ⟨_, _, _, _, _, _, _, _, ha, he, ho, _⟩ := d.inv_stamp
+    obtain ⟨n₁, n₂, n₃⟩ := hn.stamp
+    exact ⟨iha.2.1 n₁ ha, ihe.2.1 n₂ he, iho.2.1 n₃ ho⟩
+  | gate g ds s ihds ihs =>
+    have syn : ∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal (.gate g ds s) →
+        Derivable S true (.tm Γ ρ (.gate g ds s) C ε) → (Exp.gate g ds s).Syn := by
+      intro Γ ρ C ε hn ⟨d⟩
+      obtain ⟨_, _, _, _, _, _, _, _, _, hds, hs, _⟩ := d.inv_gate
+      exact ⟨ihds.2.2.2 hn.gate.1 hds, ihs.2.1 hn.gate.2.1 hs⟩
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun hn d => syn hn d, fun hn _ d => syn hn d,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | node g ℓ ds a e ihds iha ihe =>
+    have syn : ∀ {Γ : Ctx} {ρ : Role} {C : Exp} {ε : Eff}, Normal (.node g ℓ ds a e) →
+        Derivable S true (.tm Γ ρ (.node g ℓ ds a e) C ε) → (Exp.node g ℓ ds a e).Syn := by
+      intro Γ ρ C ε hn ⟨d⟩
+      obtain ⟨_, _, _, _, _, _, _, _, _, _, hds, ha, he, _⟩ := d.inv_node
+      obtain ⟨n₁, n₂, n₃⟩ := hn.node
+      exact ⟨ihds.2.2.2 n₁ hds, iha.2.1 n₂ ha, ihe.2.1 n₃ he⟩
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun hn d => syn hn d, fun hn _ d => syn hn d,
+      fun _ ⟨d⟩ => (by cases d)⟩
+  | nil =>
+    exact ⟨fun _ ⟨d⟩ => (by cases d), fun _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ _ ⟨d⟩ => d.isTermHead.elim, fun _ _ => trivial⟩
+  | cons a rest iha ihrest =>
+    refine ⟨fun _ ⟨d⟩ => (by cases d), fun _ ⟨d⟩ => d.isTermHead.elim,
+      fun _ _ ⟨d⟩ => d.isTermHead.elim, fun hn ⟨d⟩ => ?_⟩
+    cases d with
+    | spineCons da drest _ =>
+      exact ⟨iha.2.1 hn.cons.1 ⟨da⟩, ihrest.2.2.2 hn.cons.2 ⟨drest⟩⟩
+
 /-! ## Completeness -/
 
 section Complete
@@ -709,6 +854,14 @@ theorem typeCheck_complete {Γ : Ctx} (hΓ : CtxWF S Γ) {t : Exp} {ρ : Role} {
   obtain ⟨r, hr⟩ := (complete hS t).2.2.1 hΓ ⟨γ', hC'⟩ ht d
   simp only [typeCheck, hrC, ↓reduceDIte, hr]
   exact ⟨r, rfl⟩
+
+/-- Type checking succeeds on every derivable judgment whose term and type are
+normal: normal forms lie in the fragment (`normal_fragment`). -/
+theorem typeCheck_complete_normal {Γ : Ctx} (hΓ : CtxWF S Γ) {t : Exp} {ρ : Role} {C : Exp}
+    {ε : Eff} (ht : Normal t) (hC : Normal C) (d : Derivable S true (.tm Γ ρ t C ε)) :
+    ∃ r, typeCheck hS Γ hΓ t ρ C = some r := by
+  obtain ⟨γ, hγ⟩ := Derivable.ty_of_tm d
+  exact typeCheck_complete hS hΓ ((normal_fragment t).2.1 ht d) ((normal_fragment C).1 hC hγ) d
 
 /-- `thm:decidability`, type checking: on the bidirectional fragment, whether a
 term has a given role and type is decidable. -/
