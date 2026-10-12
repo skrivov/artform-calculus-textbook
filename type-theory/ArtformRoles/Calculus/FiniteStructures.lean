@@ -17,6 +17,8 @@ elements `Fin n` gives each relation a Boolean value on every tuple.
 * `FinStr.canon`: canonical labelling, the least table over all relabellings.
   Two structures are isomorphic exactly when their canonical tables are equal
   (`iso_iff_canon_eq`), so isomorphism is decidable (`decIso`).
+* `FinStr.ofBinary`: a structure of binary relations, given by their tables;
+  the rosette's wheel `Book.Rosette.wheel8` is one.
 
 The interpretation `⟦-⟧_L` of erased normal forms as finite structures is
 supplied by a signature and is not part of the calculus; with it, different
@@ -116,6 +118,12 @@ theorem iso_iff_canon_eq (M N : FinStr L n) : M.Iso N ↔ M.canon = N.canon := b
 /-- Isomorphism of finite structures is decidable. -/
 def decIso (M N : FinStr L n) : Decidable (M.Iso N) :=
   decidable_of_iff _ (iso_iff_canon_eq M N).symm
+
+/-- A finite structure whose relations are `k` binary relations, given by
+their tables: relation `r` holds of the pair `(a, b)` when `R r a b`. -/
+def ofBinary {k : ℕ} (R : Fin k → Fin n → Fin n → Bool) : FinStr (List.replicate k 2) n :=
+  ⟨fun i v => R (Fin.cast List.length_replicate i) (v (Fin.cast (by simp) (0 : Fin 2)))
+    (v (Fin.cast (by simp) (1 : Fin 2)))⟩
 
 end FinStr
 

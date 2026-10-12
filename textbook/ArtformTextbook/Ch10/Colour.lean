@@ -1,5 +1,6 @@
 import Mathlib.RingTheory.RootsOfUnity.Complex
 import ArtformTextbook.Ch10.Statements.Colour
+import ArtformTextbook.Exact.ZOmegaPhi
 
 /-!
 # Colour and triality (Propositions 10.1 and 10.2)
@@ -165,6 +166,10 @@ theorem cyc_mem : cyc ∈ Matrix.specialUnitaryGroup (Fin 3) ℂ := by
     fin_cases i <;> fin_cases j <;>
       simp [cyc, Matrix.mul_apply, Fin.sum_univ_three, Matrix.star_eq_conjTranspose]
   · simp [cyc, Matrix.det_fin_three]
+
+/-- Chapter 10's `ω` is the `ω` of the exact arithmetic, `e^{2πi/3}`, by
+definition. -/
+theorem omega_eq_exact : omega = Exact.omega := rfl
 
 theorem omega_ne_one : omega ≠ 1 :=
   omega_isPrimitiveRoot.ne_one (by norm_num)

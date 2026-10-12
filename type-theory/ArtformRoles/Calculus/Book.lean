@@ -1,4 +1,5 @@
 import ArtformRoles.Calculus.CheckerComplete
+import ArtformRoles.Calculus.FiniteStructures
 
 /-!
 # The book in the calculus
@@ -456,25 +457,25 @@ theorem erasure :
 
 /-! ### A finite structural interpretation -/
 
-/-- A finite structure on `Fin n` with two binary relations, `Rim` and `Spoke`. -/
-structure FinStr (n : ℕ) where
-  rim : Fin n → Fin n → Bool
-  spoke : Fin n → Fin n → Bool
+/-- The rim of `⟦|N₈|⟧₈`: `(i, 1 + (i mod 8))` for `1 ≤ i ≤ 8`. -/
+def rim8 (i j : Fin 9) : Bool := 1 ≤ i.val && i.val ≤ 8 && j.val == 1 + i.val % 8
 
-/-- `⟦|N₈|⟧₈ = (fin 9, {(i, 1 + (i mod 8)) | 1 ≤ i ≤ 8}, {(0, i) | 1 ≤ i ≤ 8})`. -/
-def wheel8 : FinStr 9 where
-  rim i j := 1 ≤ i.val && i.val ≤ 8 && j.val == 1 + i.val % 8
-  spoke i j := i.val == 0 && 1 ≤ j.val
+/-- The spokes of `⟦|N₈|⟧₈`: `(0, i)` for `1 ≤ i ≤ 8`. -/
+def spoke8 (i j : Fin 9) : Bool := i.val == 0 && 1 ≤ j.val
+
+/-- `⟦|N₈|⟧₈ = (fin 9, Rim, Spoke)`: a finite structure (§12.8) with two binary
+relations, the rim (relation `0`) and the spokes (relation `1`). -/
+def wheel8 : FinStr (List.replicate 2 2) 9 := FinStr.ofBinary ![rim8, spoke8]
 
 /-- The interpretation is the directed rim and eight spokes of a wheel: every
 rim vertex has exactly one successor on the rim, going round all eight, and the
 centre has a spoke to each of them. -/
 theorem wheel8_is_wheel :
-    (∀ i : Fin 9, 1 ≤ i.val → (∃ j, wheel8.rim i j = true) ∧
-      ∀ j j', wheel8.rim i j = true → wheel8.rim i j' = true → j = j') ∧
-    (∀ i j : Fin 9, wheel8.rim i j = true → 1 ≤ i.val ∧ 1 ≤ j.val) ∧
-    (∀ j : Fin 9, wheel8.spoke 0 j = true ↔ 1 ≤ j.val) ∧
-    (∀ i j : Fin 9, wheel8.spoke i j = true → i.val = 0) := by
+    (∀ i : Fin 9, 1 ≤ i.val → (∃ j, rim8 i j = true) ∧
+      ∀ j j', rim8 i j = true → rim8 i j' = true → j = j') ∧
+    (∀ i j : Fin 9, rim8 i j = true → 1 ≤ i.val ∧ 1 ≤ j.val) ∧
+    (∀ j : Fin 9, spoke8 0 j = true ↔ 1 ≤ j.val) ∧
+    (∀ i j : Fin 9, spoke8 i j = true → i.val = 0) := by
   decide
 
 end Rosette

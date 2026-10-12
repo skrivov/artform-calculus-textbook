@@ -15,6 +15,7 @@ import ArtformTextbook.Ch03.Cube
 import ArtformTextbook.Ch03.Defs.Canvas
 import ArtformTextbook.Ch03.Defs.Records
 import ArtformTextbook.Ch03.Defs.Recurrence
+import ArtformTextbook.Ch03.Defs.Views
 import ArtformTextbook.Ch03.Growth
 import ArtformTextbook.Ch03.Measure
 import ArtformTextbook.Ch03.Metric
@@ -77,6 +78,7 @@ import ArtformTextbook.Ch11.Tick
 import ArtformTextbook.Ch12.Groups
 import ArtformTextbook.Ch12.Icosahedron
 import ArtformTextbook.Ch12.Models
+import ArtformTextbook.Ch12.SquareForms
 import ArtformTextbook.Ch12.Statements
 import ArtformTextbook.Ch12.Statements.Models
 import ArtformTextbook.Ch13.Census

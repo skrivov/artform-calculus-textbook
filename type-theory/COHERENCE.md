@@ -6,6 +6,8 @@ was rebuilt from the manuscript *Traceable Gates for Artforms* (September
 the edition of 11 October 2026 (53rd), by section and label. Revised
 2026-10-12 after the paper's review of that day: D3 and D4 carry its
 qualifications, and items 8 and 9 of §3 come from the edition-54 review.
+Revised again the same day: §4 compares the definitions of the two Lean
+libraries, once every definition of the book had a Lean form.
 
 ## 1. Where the two disagreed
 
@@ -138,8 +140,8 @@ this repository; T5 is withdrawn (below).
 7. **§1.11, *What the rules do not see*** (later). Once the book cites the
    repository, this is where it can point to the paper's single judgement.
 
-8. **§1.9, the crossing sentence** (`chapters/01-foundations.tex`, about
-   lines 5194–5196 of edition 54; edition-54 review, correction 1). It says
+8. **§1.9, the crossing sentence** (`sec:role-policy`; edition-54 review,
+   correction 1). It says
    that every crossing into a form or presentation passes a gate. A form may
    be used freely by a presentation (`D(F,P) = 0`; the chess construction
    has the free edge board → addressing). Proposed: *every crossing from the
@@ -147,9 +149,8 @@ this repository; T5 is withdrawn (below).
    passes a gate.* Record retention is now checked in Lean for the calculus
    (`record_persistence`, `gate_adequacy`), so the book may attribute it to
    the paper's mechanized calculus rather than to a paper proof.
-9. **Front matter and §1.11, the mechanization boundary**
-   (`frontmatter.tex`, about lines 47–53 of edition 54; edition-54 review,
-   correction 2). The book should not read as saying that every book theorem
+9. **Front matter and §1.11, the mechanization boundary** (edition-54
+   review, correction 2). The book should not read as saying that every book theorem
    is mechanized: the status table records returned translations, pending
    proofs and two planned statements. For the paper, both parts are now
    checked in Lean; the reference checker is complete on the bidirectional
@@ -162,3 +163,25 @@ this repository does not edit the book.
 Nothing else in the book contradicts the paper. In particular, the §5.9
 connection passage already agrees with D4: the gathered family keeps the
 witness role.
+
+## 4. The two Lean libraries
+
+The textbook's library (`ArtformTextbook`) states the book's mathematics
+directly; the paper's (`ArtformRoles`) states the type theory of its roles.
+Neither imports the other, and no theorem passes between them. Where both
+define a notion of the book, the table says what each one defines and how the
+two relate. References to the book are by label.
+
+| Notion | Textbook library | Type-theory library | How they relate |
+|---|---|---|---|
+| finite form (`def:finite-form`) | `FiniteForm`, with its `FormType` | `FinStr`, a finite structure for a vocabulary of relations (§12.8) | a `FinStr` is a finite form whose carried structure is a family of relations; the calculus interprets erased normal forms as such forms |
+| frame and instance (`def:frame-instance`) | `ArtformFrame` and `ArtformFrame.Instance`; `Presentation` holds a frame's positions and values | the frame roles `IsFrame` (F and P); the families `Table` and `Legal` of the capture's signature | the five parts of a frame sit on the four levels of D2: the carrier (FORM), its carried structure (PRESENTATION), the legal states (WITNESS), the moves that act on them (SCRIPT), and the observations, scripts whose values are renderings (D8) |
+| legal state (`def:law`, `def:legal-state`) | `Law.Legal` and `ArtformFrame.Instance`: legality is a proposition | `Σ t, Legal t`: legality is proof-relevant | the two counts of states agree exactly when each table has at most one legality proof (`card_states_eq_iff`), as every proposition does: the textbook's count is the book's count through the table (D4) |
+| law (`def:law`) | `Law`: invariants and moves on a frame | `Roles.Law`: applications between labels, each with a type of certificates | the paper's law is the counting skeleton of a law: the applications of its moves, and the evidence that admits each |
+| history and trajectory (`def:time-history`, `def:trajectory-trace`) | `OccurrenceHistory`, `PerformanceRun.trajectory` | the counts `Law.histories` and `Law.trajectories` | the paper counts the histories and trajectories that the two definitions describe |
+| construction (*Writing a construction down*) | no general type; each chapter writes its constructors | `Construction`, a graph with roles and graded dependencies; the terms of the calculus | only the type theory checks the dependency discipline |
+| canvas (`def:canvas`, `def:finite-cell-pattern`) | `CellPattern`; `IncidenceCanvas` and the two-dimensional `Canvas` | none | both forms of the canvas are views of a cell pattern (`CellPattern.toIncidenceCanvas`, `Canvas.toIncidenceCanvas`, `Canvas.orientation`); the squares of Chapters 3, 6 and 12 are instances of one geometric form (`SquareForms.one_form`) |
+| class function (`def:wilson`) | `IsClassFunction`, defined once and used in Chapters 5 and 11 | none | none |
+| `ω = e^{2πi/3}` | `Colour.omega` and `Exact.omega` | none | equal by definition (`Colour.omega_eq_exact`) |
+| policy (the word) | `Policy`, the growth policy of `def:policy` | `demand`, the policy matrix `D` | one word with two meanings; the paper calls the matrix the policy `D` |
+
