@@ -1973,7 +1973,7 @@ policy validation reduces to the binder tests \(D(\sigma,\rho)\le q\) and
 rendering type;
 \item signature formation, context formation, type formation and type
 checking are decidable on the bidirectional fragment of \cref{app:checker},
-which contains every normal form.
+which contains every well-typed normal form.
 \end{enumerate}
 \end{theorem}
 
@@ -3470,7 +3470,8 @@ Result & Lean name\\
 \texttt{canonical\_credential}\\
 \cref{thm:decidability} & \texttt{conv\_iff\_nf\_eq},
 \texttt{Deriv.decConvTy}, \texttt{Deriv.decConvTm}, \texttt{decTyping},
-\texttt{decFormed}, \texttt{decSigWF}, \texttt{decCtxWF}\\
+\texttt{decFormed}, \texttt{decSigWF}, \texttt{decCtxWF},
+\texttt{Deriv.origin\_nonrendering}\\
 \cref{thm:mediation} & \texttt{Deriv.mediation},
 \texttt{Deriv.mediation\_steps}\\
 \cref{lem:positive-function,lem:no-latent-escape,lem:gradefree-mediation} &
@@ -3529,7 +3530,7 @@ into the family's role; the text assumed it.
 has a new rendering family as ultimate head; a rendering primitive may
 construct an old rendering family, and only its role keeps it out.
 \item \cref{thm:decidability} and \cref{prop:checker} hold on the
-bidirectional fragment, which contains every normal form
+bidirectional fragment, which contains every well-typed normal form
 (\cref{rem:fragment}).
 \item \cref{thm:separation}(ii) holds under counting that is uniform by role
 (\cref{rem:collapse}).
@@ -3542,8 +3543,9 @@ the table (\cref{sec:frames-calculus}).
 \end{enumerate}
 Some results are proved in a stronger form.  \Cref{lem:no-latent-escape}
 holds for every path outside private nodes, and \cref{lem:gradefree-mediation}
-for every path, live or not; \cref{thm:rendering,thm:fresh} hold at every
-non-rendering role and for every closed term, not only for public ones.  The
+for every path, live or not; \cref{thm:fresh} holds at every
+non-rendering role, and \cref{thm:rendering,thm:fresh} hold for every closed
+term, not only for public ones.  The
 proof of \cref{lem:extension-support}(i) at the witness and script roles
 uses the region argument, since \cref{lem:no-latent-escape,lem:gradefree-mediation}
 are stated only at the protected roles.  \Cref{thm:adequacy} locates the
@@ -3930,7 +3932,8 @@ types check, and the term of each attestation checks.
 \begin{proposition}[Declarative adequacy of the decision procedure]\label{prop:checker}
 The procedure terminates on every input, and every judgment it accepts is
 derivable.  It accepts every derivable signature, context, type formation and
-typing judgment of the bidirectional fragment, and every normal form is in the
+typing judgment of the bidirectional fragment, and every well-typed normal
+form, well-formed normal type and checked normal argument list is in the
 fragment.
 \end{proposition}
 
