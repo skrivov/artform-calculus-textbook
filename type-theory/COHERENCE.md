@@ -153,9 +153,10 @@ this repository; T5 is withdrawn (below).
    review, correction 2). The book should not read as saying that every book theorem
    is mechanized: the status table records returned translations, pending
    proofs and two planned statements. For the paper, both parts are now
-   checked in Lean; the reference checker is complete on the bidirectional
-   fragment only, and one consequence of the rendering theorem (inhabitation
-   in the base signature) is a paper argument.
+   checked in Lean, including the inhabitation consequence of the rendering
+   theorem (`rendering_inhabitation`); the reference checker is complete on
+   the bidirectional fragment only, and the elaboration of omitted grades is
+   not implemented.
 
 Items 8 and 9 are proposals for the book's own editing and release process;
 this repository does not edit the book.

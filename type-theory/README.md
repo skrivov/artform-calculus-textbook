@@ -33,9 +33,12 @@ answers in two parts.
   confluence, canonical forms, path mediation, gate adequacy, the module
   theorems, erasure); a certified decision procedure, complete on the
   bidirectional fragment (Appendix C); and the book's examples, among them the
-  capture with a guarded action that takes its certificate. Mechanizing the
-  calculus changed two signature rules and corrected or narrowed six claims;
-  Section 14 lists them.
+  capture with a guarded action that takes its certificate. Signature
+  strengthening (Proposition C.4) gives the inhabitation sentence of
+  Theorem 10.5, and the counterexamples of Remarks 10.3 and 10.4 show that the
+  grade-free conditions are needed, the second under the earlier gate rule.
+  Mechanizing the calculus changed two signature rules and corrected or
+  narrowed six claims; Section 14 lists them.
 
 [`COHERENCE.md`](COHERENCE.md) records how the paper was brought into line
 with the textbook, and the passages of the textbook that the paper's
@@ -45,14 +48,14 @@ decisions affect.
 
 | Path | Contents |
 |---|---|
-| `paper/role-stratified-artform-type-theory.tex` | the paper (47 pages) |
+| `paper/role-stratified-artform-type-theory.tex` | the paper (48 pages) |
 | `paper/artform-notation.tex` | a copy of the workspace's shared notation |
 | `ArtformRoles/Basic.lean` | roles, grades, the policy, levels, path closure, separation |
 | `ArtformRoles/Construction.lean` | constructions; local to global; firewall, mediation, records; values |
 | `ArtformRoles/Histories.lean` | histories, proof lists and trajectories; the two corners; counting conventions |
 | `ArtformRoles/States.lean` | states counted as pairs and through their tables |
 | `ArtformRoles/Examples.lean` | the capture, the realizer, the walker |
-| `ArtformRoles/Calculus/` | the calculus RATT: syntax, effects, typing, reduction, metatheory, adequacy, modules, erasure, the decision procedure, the book's examples |
+| `ArtformRoles/Calculus/` | the calculus RATT: syntax, effects, typing, reduction, metatheory, adequacy, modules, erasure, the decision procedure, signature strengthening, the counterexamples of Remarks 10.3–10.4, the book's examples |
 
 Tables 5 and 8 of the paper list the Lean names of its results. The checked
 proofs use only the axioms `propext`, `Classical.choice` and `Quot.sound`.

@@ -2387,7 +2387,9 @@ bundle adding \(a_d:W\) creates
 at an old form-role type without yet producing a record.  Both dependencies
 are latent behind a neutral higher-order call, and both result types contain a
 nonzero grade.  Thus unrestricted higher-order conservativity and traceability
-would be false.
+would be false.  Lean checks both examples over a signature of the three
+families: no old term is convertible to the first, and no event of the bundle
+occurs in the second (\cref{tab:lean-calculus}).
 \end{remark}
 
 \begin{remark}[Grade-free gate interfaces]\label{rem:gate-interface}
@@ -2403,23 +2405,31 @@ evidence bundle's payload \(a_d\) enters a node whose event is old, and
 parameter types of a gate to be grade-free, and it requires the payload type
 to be grade-free as well, so that the extension arguments treat payloads as
 they treat parameters.  An earlier version required only the result type to
-be grade-free; every gate of this paper meets the stronger condition.
+be grade-free; every gate of this paper meets the stronger condition.  Under
+the earlier rule both failures occur; Lean checks them over a signature with
+two such gates, which that rule admits and \textsc{Sig-Gate} rejects
+(\cref{tab:lean-calculus}).
 \end{remark}
 
 \begin{theorem}[Rendering noninterference]\label{thm:rendering}
 Let \(\mathcal R\) be rendering-only.  For every old closed type
 \(A\) of role \(\rho\), with \(\rho\ne\Ren\) and \(\mathsf{gradefree}(A)\), the extension
 \(\AFDeclSignature+\mathcal R\) is term-conservative at \(A\) and reflects equality of
-old terms.  In particular, it cannot change inhabitation of an old form,
-presentation, witness or script type at this observation boundary.  This is
-the book's key idea, that nothing may depend on a reading, as a theorem about
-extensions.
+old terms.  In particular, at this observation boundary it cannot change
+inhabitation of such a type formed over \(\AFDeclSignature\): the normal form of
+every closed term of \(A\) over \(\AFDeclSignature+\mathcal R\) is a closed
+term of \(A\) over \(\AFDeclSignature\).  This is the book's key idea, that
+nothing may depend on a reading, as a theorem about extensions.
 \end{theorem}
 
 \begin{proof}
 Normalize a closed public extended \(\vdash_{\rho}t:A\).  By
 \cref{lem:extension-support}(i), \(\nf(t)\) is old, proving term
-conservativity.
+conservativity.  If \(A\) is formed over \(\AFDeclSignature\), the old normal
+form \(\nf(t)\), which has type \(A\) by \cref{thm:preservation}, has type
+\(A\) over \(\AFDeclSignature\) by \cref{prop:strengthening}; and every term
+over \(\AFDeclSignature\) is a term over \(\AFDeclSignature+\mathcal R\).  So
+inhabitation does not change.
 
 An old term contains no new atom and hence has exactly its base reductions.
 If two old terms are equal in the extension, confluence gives a common normal
@@ -3450,7 +3460,8 @@ Result & Lean name\\
 \midrule
 \cref{lem:role-functionality} & \texttt{Deriv.role\_unique}\\
 \cref{lem:path-characterization} & \texttt{Deriv.eff\_eq\_pathEff}\\
-\cref{thm:principal} & \texttt{Deriv.effect\_unique}, \texttt{lam\_grade\_iff}\\
+\cref{thm:principal} & \texttt{Deriv.effect\_unique}, \texttt{lam\_grade\_iff},
+\texttt{lam\_max\_grade}\\
 \cref{lem:substitution,thm:substitution} & \texttt{Deriv.inst\_tm},
 \texttt{Deriv.inst\_ty}, \texttt{Deriv.subst}\\
 \cref{thm:preservation} & \texttt{Deriv.subject\_reduction},
@@ -3484,8 +3495,15 @@ Result & Lean name\\
 \texttt{origin\_protected}\\
 \cref{lem:extension-support} & \texttt{extension\_support\_conservative},
 \texttt{extension\_support\_evidence}\\
+\Cref{rem:gradefree-boundary} & \texttt{GradeFreedom.Remark103.rendering\_boundary},
+\texttt{evidence\_boundary}, \texttt{extension\_support\_needs\_gradefree},
+\texttt{no\_silent\_enabling\_needs\_gradefree}\\
+\Cref{rem:gate-interface} & \texttt{SigWF}\(_0\), \texttt{SigWF.toSigWF}\(_0\),
+\texttt{GradeFreedom.Remark104.rendering\_gate}, \texttt{evidence\_gate},
+\texttt{extension\_support\_fails\_old\_rule},
+\texttt{no\_silent\_enabling\_fails\_old\_rule}\\
 \cref{thm:rendering,thm:fresh} & \texttt{rendering\_noninterference},
-\texttt{fresh\_family\_conservative}\\
+\texttt{rendering\_inhabitation}, \texttt{fresh\_family\_conservative}\\
 \cref{thm:no-silent,thm:composition} & \texttt{no\_silent\_enabling},
 \texttt{module\_composition}\\
 \cref{thm:erasure,prop:prov} & \texttt{Deriv.erase}, \texttt{Step.erase},
@@ -3508,6 +3526,8 @@ finite structural semantics & \texttt{FinStr.iso\_iff\_canon\_eq},
 \cref{prop:checker,rem:fragment} & \texttt{complete},
 \texttt{normal\_fragment}, \texttt{checkSig\_complete},
 \texttt{checkCtx\_complete}, \texttt{Book.Chess.checker\_incomplete}\\
+\cref{prop:strengthening} & \texttt{checker\_strengthen},
+\texttt{Derivable.strengthen\_ty}, \texttt{Derivable.strengthen}\\
 \bottomrule
 \end{tabularx}
 \caption{The results of the second part in the Lean library
@@ -3545,7 +3565,8 @@ Some results are proved in a stronger form.  \Cref{lem:no-latent-escape}
 holds for every path outside private nodes, and \cref{lem:gradefree-mediation}
 for every path, live or not; \cref{thm:fresh} holds at every
 non-rendering role, and \cref{thm:rendering,thm:fresh} hold for every closed
-term, not only for public ones.  The
+term, not only for public ones; \cref{prop:strengthening} holds for every
+module, not only a rendering-only one.  The
 proof of \cref{lem:extension-support}(i) at the witness and script roles
 uses the region argument, since \cref{lem:no-latent-escape,lem:gradefree-mediation}
 are stated only at the protected roles.  \Cref{thm:adequacy} locates the
@@ -3553,14 +3574,15 @@ nodes of the normal form by their positions; the labels of
 \cref{def:cross} are not typed.
 
 \paragraph{Limitations.}
-Three things are not mechanized.  The claim of \cref{thm:rendering} that an
-extension cannot change inhabitation of an old type needs a strengthening
-lemma, that an old normal term derivable over \(\AFDeclSignature+\mathcal R\)
-is derivable over \(\AFDeclSignature\); the term conservativity and equality
-reflection it rests on are checked.  The elaboration of omitted grades,
-which chooses \(q=\theta(x)\), precedes the checker and is not part of it.
-The counterexamples of \cref{rem:gradefree-boundary,rem:gate-interface} are
-given on paper; the Lean signature rules exclude them.
+The elaboration of omitted grades is not implemented: the checker takes the
+core syntax, in which every binder carries its grade.  What elaboration relies
+on is checked: an explicit grade is accepted exactly when
+\(D(\sigma,\rho)\le q\le\theta(x)\), and \(\theta(x)\) is accepted, so the
+maximal choice is well defined (\cref{thm:principal}).  The inhabitation
+sentence of \cref{thm:rendering} rests on \cref{prop:strengthening}, and the
+counterexamples of \cref{rem:gradefree-boundary,rem:gate-interface} are
+checked, the second under the earlier gate rule, which the Lean library states
+as a separate signature judgment.
 
 The calculus is intentionally intensional.  It does not identify different
 histories with the same erased structure, and it does not add an extensional
@@ -3958,6 +3980,34 @@ An earlier version of \cref{prop:checker} claimed completeness for every
 judgment, and of \cref{thm:decidability} decidable type checking for every
 term; both hold on the fragment.
 \end{remark}
+
+\begin{proposition}[Signature strengthening]\label{prop:strengthening}
+Let \(\AFDeclSignature+\mathcal M\) be well formed, and let \(\Gamma\) be a
+context formed over \(\AFDeclSignature\).
+\begin{enumerate}[label=(\roman*),leftmargin=2.5em]
+\item An old type in the fragment that is formed over
+\(\AFDeclSignature+\mathcal M\) at role \(\rho\) is formed over
+\(\AFDeclSignature\) at role \(\rho\).
+\item If an old term \(t\) that checks has
+\(\AFDeclSignature+\mathcal M;\Gamma\vdash_{\rho}t:A\triangleright\eps\), and
+\(A\) is formed over \(\AFDeclSignature\) at role \(\rho\), then
+\(\AFDeclSignature;\Gamma\vdash_{\rho}t:A\triangleright\eps\).
+\end{enumerate}
+In particular, (ii) holds for every old normal term.
+\end{proposition}
+
+\begin{proof}
+The procedure reads the signature only at the declarations that its subject
+names: it looks up a family, a constant or a gate at its position, and its
+conversion test normalizes, which does not read the signature.  On an old
+subject every such position lies in \(\AFDeclSignature\), where the two
+signatures have the same entries, so each answer of the procedure over
+\(\AFDeclSignature+\mathcal M\) is an answer over \(\AFDeclSignature\), with
+the same role, type and effect.  By \cref{prop:checker} the procedure accepts
+the judgment over \(\AFDeclSignature+\mathcal M\), and every answer it gives
+over \(\AFDeclSignature\) is a derivation.  Normal terms lie in the fragment
+by \cref{prop:checker}.
+\end{proof}
 
 The procedure is implemented in Lean as a total, computable function on the
 core syntax whose answers carry their derivations, with the completeness

@@ -12,7 +12,10 @@ and a credential or payload has demand at most `1` into a gate's result.
 
 The constructors `Deriv.mkVar`, `Deriv.mkApp`, … build accepted derivations with
 the effect that each rule computes, discharging validity in this way. They are
-used to write the book's examples in the calculus.
+used to write the book's examples in the calculus. `mkTyFamOf`, `mkGateOf` and
+`mkNodeOf` take as hypotheses the conditions of the signature rules that they
+use, so that they also apply over signatures formed under the earlier gate rule
+of Remark 10.4.
 -/
 
 namespace Artform.Roles.Calculus
@@ -87,12 +90,19 @@ namespace Deriv
 
 variable {S : Sig}
 
+/-- Ty-Fam, accepted, for a family whose telescope has demand `0` into its role. -/
+def mkTyFamOf {Γ : Ctx} {a : ℕ} {args : Exp} {Δ : Tel} {ρ : Role} {δ : Eff}
+    (h : S.family? a = some (Δ, ρ)) (hΔ : ∀ p ∈ Δ, demand p.1 ρ = .free)
+    (dargs : Deriv S true (.spine Γ args Δ δ)) :
+    Deriv S true (.ty Γ ρ (.fam a args) (Eff.unit (.decl a 0) ⊓ δ)) :=
+  .tyFam h dargs rfl fun _ =>
+    (valid_unit_decl (Sig.declRole_family h)).inf (dargs.spine_valid hΔ)
+
 /-- Ty-Fam, accepted. -/
 def mkTyFam (hS : SigWF S) {Γ : Ctx} {a : ℕ} {args : Exp} {Δ : Tel} {ρ : Role} {δ : Eff}
     (h : S.family? a = some (Δ, ρ)) (dargs : Deriv S true (.spine Γ args Δ δ)) :
     Deriv S true (.ty Γ ρ (.fam a args) (Eff.unit (.decl a 0) ⊓ δ)) :=
-  .tyFam h dargs rfl fun _ =>
-    (valid_unit_decl (Sig.declRole_family h)).inf (dargs.spine_valid (hS.family_demand h))
+  mkTyFamOf h (hS.family_demand h) dargs
 
 /-- Ty-Event, accepted. -/
 def mkTyEvent {Γ : Ctx} : Deriv S true (.ty Γ .witness .event ⊤) := .tyEvent rfl
@@ -184,6 +194,20 @@ theorem demand_witness_protected {ρ : Role} (hρ : ρ = .form ∨ ρ = .present
     demand .witness ρ ≤ .gated := by
   rcases hρ with rfl | rfl <;> decide
 
+/-- Gate, accepted, for a gate with a protected result into which its
+parameters have demand `0`. -/
+def mkGateOf {Γ : Ctx} {g : ℕ} {ds s : Exp} {Δ : Tel} {σ : Role} {A : Exp}
+    {ρ : Role} {B : Exp} {δ η γ : Eff} (hg : S.gate? g = some (Δ, σ, A, ρ, B))
+    (hρ : ρ = .form ∨ ρ = .presentation) (hΔ : ∀ p ∈ Δ, demand p.1 ρ = .free)
+    (dds : Deriv S true (.spine Γ ds Δ δ))
+    (dst : Deriv S true (.tm Γ .witness s (.stamped σ (instType ds Δ A)) η))
+    (dC : Deriv S true (.ty Γ ρ (instType ds Δ B) γ)) :
+    Deriv S true (.tm Γ ρ (.gate g ds s) (instType ds Δ B)
+      (Eff.unit (.decl g 0) ⊓ δ ⊓ Eff.scale .gated η)) :=
+  .gate hg dds dst rfl dC rfl fun _ =>
+    ((valid_unit_decl (Sig.declRole_gate hg)).inf (dds.spine_valid hΔ)).inf
+      (dst.valid_tm.scale_of_demand (demand_witness_protected hρ))
+
 /-- Gate, accepted. -/
 def mkGate (hS : SigWF S) {Γ : Ctx} {g : ℕ} {ds s : Exp} {Δ : Tel} {σ : Role} {A : Exp}
     {ρ : Role} {B : Exp} {δ η γ : Eff} (hg : S.gate? g = some (Δ, σ, A, ρ, B))
@@ -192,10 +216,24 @@ def mkGate (hS : SigWF S) {Γ : Ctx} {g : ℕ} {ds s : Exp} {Δ : Tel} {σ : Rol
     (dC : Deriv S true (.ty Γ ρ (instType ds Δ B) γ)) :
     Deriv S true (.tm Γ ρ (.gate g ds s) (instType ds Δ B)
       (Eff.unit (.decl g 0) ⊓ δ ⊓ Eff.scale .gated η)) :=
-  .gate hg dds dst rfl dC rfl fun _ =>
-    ((valid_unit_decl (Sig.declRole_gate hg)).inf
-      (dds.spine_valid (hS.gate_cond hg).2.2.1)).inf
-      (dst.valid_tm.scale_of_demand (demand_witness_protected (hS.gate_cond hg).2.1))
+  mkGateOf hg (hS.gate_cond hg).2.1 (hS.gate_cond hg).2.2.1 dds dst dC
+
+/-- Node, accepted, for a gate with a protected result into which its parameters
+have demand `0` and its payload demand at most `1`. -/
+def mkNodeOf {Γ : Ctx} {g ℓ : ℕ} {ds t e : Exp} {Δ : Tel} {σ : Role} {A : Exp}
+    {ρ : Role} {B : Exp} {δ θ η γ : Eff} (hg : S.gate? g = some (Δ, σ, A, ρ, B))
+    (hρ : ρ = .form ∨ ρ = .presentation) (hΔ : ∀ p ∈ Δ, demand p.1 ρ = .free)
+    (hσρ : demand σ ρ ≤ .gated)
+    (dds : Deriv S true (.spine Γ ds Δ δ)) (dt : Deriv S true (.tm Γ σ t (instType ds Δ A) θ))
+    (de : Deriv S true (.tm Γ .witness e .event η))
+    (dC : Deriv S true (.ty Γ ρ (instType ds Δ B) γ)) :
+    Deriv S true (.tm Γ ρ (.node g ℓ ds t e) (instType ds Δ B)
+      (Eff.unit (.decl g 0) ⊓ δ ⊓ Eff.scale .gated (θ ⊓ η))) :=
+  .node hg dds dt de rfl dC rfl fun _ => by
+    rw [Eff.scale_inf]
+    exact ((valid_unit_decl (Sig.declRole_gate hg)).inf (dds.spine_valid hΔ)).inf
+      ((dt.valid_tm.scale_of_demand hσρ).inf
+        (de.valid_tm.scale_of_demand (demand_witness_protected hρ)))
 
 /-- Node, accepted. -/
 def mkNode (hS : SigWF S) {Γ : Ctx} {g ℓ : ℕ} {ds t e : Exp} {Δ : Tel} {σ : Role} {A : Exp}
@@ -205,12 +243,7 @@ def mkNode (hS : SigWF S) {Γ : Ctx} {g ℓ : ℕ} {ds t e : Exp} {Δ : Tel} {σ
     (dC : Deriv S true (.ty Γ ρ (instType ds Δ B) γ)) :
     Deriv S true (.tm Γ ρ (.node g ℓ ds t e) (instType ds Δ B)
       (Eff.unit (.decl g 0) ⊓ δ ⊓ Eff.scale .gated (θ ⊓ η))) :=
-  .node hg dds dt de rfl dC rfl fun _ => by
-    obtain ⟨-, hρ, hΔ, hσρ, -⟩ := hS.gate_cond hg
-    rw [Eff.scale_inf]
-    exact ((valid_unit_decl (Sig.declRole_gate hg)).inf (dds.spine_valid hΔ)).inf
-      ((dt.valid_tm.scale_of_demand hσρ).inf
-        (de.valid_tm.scale_of_demand (demand_witness_protected hρ)))
+  mkNodeOf hg (hS.gate_cond hg).2.1 (hS.gate_cond hg).2.2.1 (hS.gate_cond hg).2.2.2.1 dds dt de dC
 
 /-- Spine, empty. -/
 def mkSpineNil {Γ : Ctx} : Deriv S true (.spine Γ .nil [] ⊤) := .spineNil rfl

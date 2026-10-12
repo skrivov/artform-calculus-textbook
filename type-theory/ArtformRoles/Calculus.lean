@@ -32,6 +32,8 @@ import ArtformRoles.Calculus.CheckerComplete
 import ArtformRoles.Calculus.SigCheck
 import ArtformRoles.Calculus.FiniteStructures
 import ArtformRoles.Calculus.Book
+import ArtformRoles.Calculus.Strengthen
+import ArtformRoles.Calculus.GradeFreedom
 
 /-!
 # The calculus of Part II
@@ -42,6 +44,8 @@ renaming and substitution with exact effects, subject reduction, role
 functionality and principal effects, strong normalization, canonical forms,
 effects as path semantics, static and dynamic gate adequacy, justified records,
 the module and extension theorems, erasure to a role-free calculus, decidable
-conversion and a certified bidirectional checker (Appendix C), the book's
-examples written in the calculus, and canonical labelling of finite structures.
+conversion and a certified bidirectional checker (Appendix C), strengthening
+and the inhabitation sentence of Theorem 10.5, the counterexamples of
+Remarks 10.3 and 10.4, the book's examples written in the calculus, and
+canonical labelling of finite structures.
 -/
