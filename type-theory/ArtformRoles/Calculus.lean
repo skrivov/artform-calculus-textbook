@@ -30,6 +30,7 @@ import ArtformRoles.Calculus.Normalize
 import ArtformRoles.Calculus.Checker
 import ArtformRoles.Calculus.CheckerComplete
 import ArtformRoles.Calculus.SigCheck
+import ArtformRoles.Calculus.FiniteStructures
 import ArtformRoles.Calculus.Book
 
 /-!
@@ -41,6 +42,6 @@ renaming and substitution with exact effects, subject reduction, role
 functionality and principal effects, strong normalization, canonical forms,
 effects as path semantics, static and dynamic gate adequacy, justified records,
 the module and extension theorems, erasure to a role-free calculus, decidable
-conversion and a certified bidirectional checker (Appendix C), and the book's
-examples written in the calculus.
+conversion and a certified bidirectional checker (Appendix C), the book's
+examples written in the calculus, and canonical labelling of finite structures.
 -/
