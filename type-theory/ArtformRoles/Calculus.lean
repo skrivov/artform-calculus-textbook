@@ -25,6 +25,8 @@ import ArtformRoles.Calculus.Records
 import ArtformRoles.Calculus.Justified
 import ArtformRoles.Calculus.Modules
 import ArtformRoles.Calculus.Erasure
+import ArtformRoles.Calculus.Accept
+import ArtformRoles.Calculus.Book
 
 /-!
 # The calculus of Part II
@@ -34,5 +36,6 @@ its syntax, effects, signatures and judgments, reduction and confluence,
 renaming and substitution with exact effects, subject reduction, role
 functionality and principal effects, strong normalization, canonical forms,
 effects as path semantics, static and dynamic gate adequacy, justified records,
-the module and extension theorems, and erasure to a role-free calculus.
+the module and extension theorems, erasure to a role-free calculus, and the
+book's examples written in the calculus.
 -/
