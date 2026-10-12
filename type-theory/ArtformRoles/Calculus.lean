@@ -19,6 +19,9 @@ import ArtformRoles.Calculus.Skeleton
 import ArtformRoles.Calculus.Principal
 import ArtformRoles.Calculus.SN
 import ArtformRoles.Calculus.Canonical
+import ArtformRoles.Calculus.Paths
+import ArtformRoles.Calculus.Adequacy
+import ArtformRoles.Calculus.Records
 
 /-!
 # The calculus of Part II
@@ -26,5 +29,6 @@ import ArtformRoles.Calculus.Canonical
 The dependent calculus `RATT` of Part II of the paper *Five Roles for Artforms*:
 its syntax, effects, signatures and judgments, reduction and confluence,
 renaming and substitution with exact effects, subject reduction, role
-functionality and principal effects, and strong normalization.
+functionality and principal effects, strong normalization, canonical forms,
+effects as path semantics, and static and dynamic gate adequacy.
 -/
