@@ -1,5 +1,6 @@
 import Mathlib.Algebra.BigOperators.Ring.Finset
 import Mathlib.Data.Fintype.Card
+import ArtformRoles.Basic
 
 /-!
 # Histories: why WITNESS and SCRIPT are two roles
@@ -23,6 +24,15 @@ application the finite type `Ev a` of its certificates (WITNESS data).
 * `proofs_eq_histories`, `histories_eq_trajectories`: the counts agree when
   certificates, or applications, are unique.
 * `twoCorners`: a law where the three counts are 3, 2 and 1.
+* `Mode`, `countWith`: the three counts as one count with a convention for
+  applications and one for certificates (`countWith_book`, `countWith_values`,
+  `countWith_properties`).
+* `merged_roles_miscount`, `book_count_separates`: under role-uniform counting,
+  where a role counts all its data by one convention, one role for
+  applications and certificates counts the two corners as 3 or 1, never as 2.
+* `collapseRole`: without that restriction the counts prove nothing about
+  roles: identifying SCRIPT with WITNESS keeps the policy, and `Law` carries
+  no roles (Astra's countermodel, review of 2026-10-12).
 -/
 
 namespace Artform.Roles
@@ -129,5 +139,118 @@ theorem twoCorners_counts :
     twoCorners.proofs 0 1 1 = 3 ∧ twoCorners.histories 0 1 1 = 2 ∧
       twoCorners.trajectories 0 1 1 = 1 := by
   decide
+
+/-! ## Counting conventions -/
+
+/-- How data of one kind are counted: every datum as a value, or only whether
+there is one, as a property. -/
+inductive Mode
+  /-- each datum counts once -/
+  | value
+  /-- a kind of data counts once if inhabited -/
+  | property
+  deriving DecidableEq
+
+namespace Law
+
+variable {X : Type*} [Fintype X] [DecidableEq X] (L : Law X)
+
+/-- The certificates of an application counted in mode `m`. -/
+def evCount (m : Mode) {y z : X} (a : L.App y z) : ℕ :=
+  match m with
+  | .value => Fintype.card (L.Ev a)
+  | .property => L.admitted a
+
+/-- The admitted applications from `y` to `z` counted in mode `mApp`, each
+weighted by its certificates counted in mode `mEv`. As properties, the
+applications between two labels count once if one of them is admitted. -/
+def appCount (mApp mEv : Mode) (y z : X) : ℕ :=
+  match mApp with
+  | .value => ∑ a : L.App y z, L.evCount mEv a
+  | .property => L.step y z
+
+/-- Lists of `n` applications from `x₀` to `z`, counted with applications in
+mode `mApp` and certificates in mode `mEv`. -/
+def countWith (mApp mEv : Mode) (x₀ : X) : ℕ → X → ℕ
+  | 0, z => if z = x₀ then 1 else 0
+  | n + 1, z => ∑ y, L.appCount mApp mEv y z * countWith mApp mEv x₀ n y
+
+/-- The book's count: applications as values, certificates as properties. -/
+theorem countWith_book (x₀ : X) :
+    ∀ n z, L.countWith .value .property x₀ n z = L.histories x₀ n z := by
+  intro n
+  induction n with
+  | zero => intro z; rfl
+  | succ n ih =>
+    intro z
+    simp only [countWith, histories, appCount, evCount]
+    refine sum_congr rfl fun y _ => ?_
+    rw [ih y, sum_mul]
+
+/-- Both as values: every certificate counts. -/
+theorem countWith_values (x₀ : X) :
+    ∀ n z, L.countWith .value .value x₀ n z = L.proofs x₀ n z := by
+  intro n
+  induction n with
+  | zero => intro z; rfl
+  | succ n ih =>
+    intro z
+    simp only [countWith, proofs, appCount, evCount]
+    refine sum_congr rfl fun y _ => ?_
+    rw [ih y, sum_mul]
+
+/-- Applications as properties: only endpoints count, whatever the mode of
+the certificates. -/
+theorem countWith_properties (m : Mode) (x₀ : X) :
+    ∀ n z, L.countWith .property m x₀ n z = L.trajectories x₀ n z := by
+  intro n
+  induction n with
+  | zero => intro z; rfl
+  | succ n ih =>
+    intro z
+    simp only [countWith, trajectories, appCount]
+    exact sum_congr rfl fun y _ => by rw [ih y]
+
+end Law
+
+/-- **Theorem 4.4(ii)** (`thm:separation`), under role-uniform counting. A
+counting convention gives every role one mode. If applications and
+certificates have the same role, they are counted alike, and the two corners
+give 3 or 1 lists after one step, never the book's 2. -/
+theorem merged_roles_miscount (conv : Role → Mode) {ρApp ρEv : Role} (h : ρApp = ρEv) :
+    twoCorners.countWith (conv ρApp) (conv ρEv) 0 1 1 = 3 ∨
+      twoCorners.countWith (conv ρApp) (conv ρEv) 0 1 1 = 1 := by
+  subst h
+  rcases hm : conv ρApp with _ | _
+  · left; rw [Law.countWith_values]; exact twoCorners_counts.1
+  · right; rw [Law.countWith_properties]; exact twoCorners_counts.2.2
+
+/-- Under role-uniform counting, a convention that counts the two corners as the
+book does puts applications and certificates in different roles; the book's
+convention, scripts as values and witnesses as properties, does. -/
+theorem book_count_separates (conv : Role → Mode) {ρApp ρEv : Role}
+    (h : twoCorners.countWith (conv ρApp) (conv ρEv) 0 1 1 = twoCorners.histories 0 1 1) :
+    ρApp ≠ ρEv := by
+  rintro rfl
+  rcases merged_roles_miscount conv (ρApp := ρApp) rfl with h' | h' <;>
+    · rw [h'] at h; revert h; decide
+
+/-- The book's convention counts the two corners as the book does. -/
+theorem book_convention_counts (conv : Role → Mode) (hS : conv .script = .value)
+    (hW : conv .witness = .property) :
+    twoCorners.countWith (conv .script) (conv .witness) 0 1 1 = 2 := by
+  rw [hS, hW, Law.countWith_book]; exact twoCorners_counts.2.1
+
+/-- Astra's countermodel: identifying SCRIPT with WITNESS. -/
+def collapseRole : Role → Role
+  | .script => .witness
+  | r => r
+
+/-- The identification keeps every entry of the policy, so the policy alone
+cannot require two roles; and `Law` carries no roles, so the book's count is
+unchanged by it. Only role-uniform counting makes the merger miscount. -/
+theorem collapseRole_keeps_policy (a b : Role) :
+    demand (collapseRole a) (collapseRole b) = demand a b := by
+  cases a <;> cases b <;> rfl
 
 end Artform.Roles
