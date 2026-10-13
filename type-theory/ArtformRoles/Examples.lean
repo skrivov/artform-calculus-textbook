@@ -33,7 +33,7 @@ inductive ChessItem
   | attackMap
   /-- the certificate that the capture is legal -/
   | certificate
-  /-- the capture itself -/
+  /-- the capture itself, a move between positions written in the addressing -/
   | capture
   /-- the position after the capture -/
   | next
@@ -67,7 +67,8 @@ def ChessItem.role : ChessItem → Role
   | diagram => .rendering
 
 open ChessItem in
-/-- The direct dependencies of the capture. The score keeps the capture
+/-- The direct dependencies of the capture. The capture is a move of the
+addressed board, so it depends on the addressing. The score keeps the capture
 through a gate; every other use is ordinary. -/
 def ChessItem.edge : ChessItem → ChessItem → Grade
   | board, addressing => .free
@@ -77,6 +78,7 @@ def ChessItem.edge : ChessItem → ChessItem → Grade
   | position, attackMap => .free
   | position, certificate => .free
   | attackMap, certificate => .free
+  | addressing, capture => .free
   | capture, certificate => .free
   | position, next => .free
   | capture, next => .free

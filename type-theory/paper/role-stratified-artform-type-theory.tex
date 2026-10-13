@@ -803,9 +803,10 @@ The book's \S1.9 follows one capture, \(N{\times}e5\), with the five roles.
 their adjacency and the step shape of each piece are form; the addressing is
 presentation; the positions before and after the capture, the squares White
 bears on, and the certificate that the capture is legal are witness data; the
-capture is a script; the game score is a form that keeps the moves; the
-engine's evaluation and the printed diagram are renderings.  The score keeps
-the capture through a gate, and every other dependency is ordinary.
+capture is a script, a move written in the addressing; the game score is a
+form that keeps the moves; the engine's evaluation and the printed diagram are
+renderings.  The score keeps the capture through a gate, and every other
+dependency is ordinary.
 
 \begin{table}[ht]
 \centering
@@ -820,7 +821,7 @@ position & \(\Wit\) & board, addressing\\
 squares White bears on & \(\Wit\) & board, position\\
 certificate of \(N{\times}e5\) & \(\Wit\) & position, squares White bears
 on, the capture\\
-capture \(N{\times}e5\) & \(\Scr\) & ---\\
+capture \(N{\times}e5\) & \(\Scr\) & addressing\\
 position after & \(\Wit\) & position, capture, certificate\\
 game score & \(\Frm\) & capture, through a gate\\
 evaluation & \(\Ren\) & position\\
@@ -2599,7 +2600,7 @@ the capture of \cref{sec:chess} in the calculus.  All three are checked in
 Lean (\cref{tab:lean-calculus}): their signatures are admitted and their
 derivations, effects and traces are the ones displayed.
 
-\subsection{Forms and construction history}
+\subsection{Forms and construction history}\label{sec:forms-calculus}
 
 Declare at role \(\Frm\)
 \[
@@ -2804,7 +2805,7 @@ This is the directed rim and eight spokes of a wheel.  Its canonical finite
 table records the realized rosette, while the source normal form additionally
 records which certificate event authorized it.
 
-\subsection{Installed presentations}
+\subsection{Installed presentations}\label{sec:installed-presentations}
 \label{sec:installed-structure}
 
 The book's \PRES{} retains a selected order, seams, coordinates, cuts and
@@ -2837,7 +2838,7 @@ Coordinates, seams, cuts and sectors use the same indexed pattern.  A
 descriptor lives at \(\Wit\), the installed family at \(\Prs\), and
 installation is a presentation gate.
 
-\subsection{Interpretation witnesses and the raw/interpreted split}
+\subsection{Interpretation witnesses and the raw/interpreted split}\label{sec:interpretation}
 \label{sec:interpretation-witnesses}
 
 The book reads one raw artform in several ways without changing
@@ -3287,17 +3288,26 @@ formation edge from a rendering into \(\Wit\) has demand \(\absent\), so
 \textsc{Sig-Family} rejects it.  A rule that consults a reading is not merely
 discouraged; it is not a well-formed declaration.
 
-The derivations carry the dependencies of \cref{tab:chess}.  Its edges into
-the squares White bears on, the certificate, the position after the capture,
-the evaluation and the diagram are term effects: each of these items has
-grade \(0\) at every atom of the items it depends on.  The frame enters
-through types.  The addressing is declared at \(\mathsf{Addr}(\mathsf{Board})\),
-whose formation effect has grade \(0\) at the board's constants, and the
-types of the position, of the squares White bears on and of the capture,
-\(\State(A)\), \(\mathsf{Table}_{\mathsf{Bool}}(A)\) and
-\(\mathsf{Guarded}(A,A)\), have grade \(0\) at \(A\).  So every witness item,
-and the capture, depends on the addressing through its type; the table
-records that dependency once, at the position.  The score
+\Cref{tab:chess} is read off these derivations.  Each of its items is a
+closed term of the signature, typed at the role the table gives it.  An item
+\(v\) \emph{uses} an item \(u\) at the least grade that the effect of the term
+of \(v\), or the formation effect of its type, gives a declaration of \(u\).  The
+frame enters through types: the addressing is declared at
+\(\mathsf{Addr}(\mathsf{Board})\), whose formation effect has grade \(0\) at
+the board's constants, and \(\State(A)\), \(\mathsf{Table}_{\mathsf{Bool}}(A)\)
+and \(\mathsf{Guarded}(A,A)\), the types of the positions, of the squares
+White bears on and of the capture, have grade \(0\) at \(A\).  The other uses
+are term effects, and effects are path closed
+(\cref{lem:path-characterization}): the position after the capture uses the
+squares White bears on, inside its certificate.  So the uses and the table
+differ only by shortcuts.  The table has direct edges from the board to the
+position and to the squares White bears on, and from the addressing to the
+diagram, where the uses pass through the addressing or the position; the uses
+have direct edges from the addressing to those squares and to the position
+after the capture, and from the squares to the position after the capture,
+where the table passes through the position or the certificate.  Each direct
+dependency of either is a chain of the other at the same grade, so the two
+have the same live chains at every grade.  The score
 \(\mathsf{note}(T_0;\mathsf{stamp}(\mathsf{mv}\,\mathsf{nxe5},e,o))\) has
 grade \(1\) at the capture and at its record, and one record step contracts
 it to the node \(\mathsf{note}_0(T_0;\mathsf{mv}\,\mathsf{nxe5},e)\), which
@@ -3312,7 +3322,7 @@ attack map and the check, so it shows how the roles and grades of
 \cref{tab:chess} are carried by derivations; it does not implement the rules
 of chess.
 
-\subsection{Rendering firewall}
+\subsection{Rendering firewall}\label{sec:firewall}
 
 A rendering is a value at a rendering-role type, and a readout is a script or
 function whose values are renderings.  Declare
@@ -3342,7 +3352,7 @@ scores and installed presentations.  A higher-order scheduler interface whose
 type itself contains grade \(1\) or \(\absent\) is intentionally outside that
 observation boundary until it is applied to a closed implementation.
 
-\subsection{Finite structural semantics}
+\subsection{Finite structural semantics}\label{sec:finite-semantics}
 
 For a fixed finite relational vocabulary \(L\), an Artforms signature may
 supply a total interpretation
@@ -3520,7 +3530,9 @@ interpretation instance & \texttt{Book.Interp.install},
 \texttt{next\_typed}, \texttt{guarded\_not\_script},
 \texttt{effects\_match\_table}, \texttt{frame\_types},
 \texttt{score\_typed}, \texttt{firewall}, \texttt{silent\_score},
-\texttt{two\_legal\_states}; \texttt{card\_states\_eq\_iff}\\
+\texttt{two\_legal\_states}, \texttt{items\_typed}, \texttt{uses\_eq},
+\texttt{readOff\_valid}, \texttt{read\_off\_reach};
+\texttt{card\_states\_eq\_iff}\\
 finite structural semantics & \texttt{FinStr.iso\_iff\_canon\_eq},
 \texttt{FinStr.decIso}\\
 \cref{prop:checker,rem:fragment} & \texttt{complete},

@@ -60,6 +60,24 @@ theorem Reach.mono {g h : Grade} (hgh : g ≤ h) {u v : V} (p : c.Reach g u v) :
   | refl => exact .refl _
   | tail _ e ih => exact .tail ih (by rw [le_def] at *; omega)
 
+/-- A chain of one direct dependency. -/
+theorem Reach.one {g : Grade} {u v : V} (h : c.edge u v ≤ g) : c.Reach g u v :=
+  .tail (.refl u) h
+
+/-- A chain of two direct dependencies. -/
+theorem Reach.two {g : Grade} {u w v : V} (h₁ : c.edge u w ≤ g) (h₂ : c.edge w v ≤ g) :
+    c.Reach g u v :=
+  .tail (.tail (.refl u) h₁) h₂
+
+/-- Every chain of `c` is a chain of `c'` when every direct dependency of `c` is
+a chain of `c'`, at the same grade. -/
+theorem Reach.of_edges {c' : Construction V} {g : Grade}
+    (h : ∀ u v, c.edge u v ≤ g → c'.Reach g u v) {u v : V} (p : c.Reach g u v) :
+    c'.Reach g u v := by
+  induction p with
+  | refl => exact .refl _
+  | tail _ e ih => exact ih.trans (h _ _ e)
+
 /-- **Local to global.** Under a path-closed policy, a construction whose
 direct dependencies are valid satisfies the policy along every chain. -/
 theorem Valid.reach {D : Role → Role → Grade} (hD : PathClosed D)

@@ -31,7 +31,10 @@ import ArtformRoles.Calculus.Checker
 import ArtformRoles.Calculus.CheckerComplete
 import ArtformRoles.Calculus.SigCheck
 import ArtformRoles.Calculus.FiniteStructures
-import ArtformRoles.Calculus.Book
+import ArtformRoles.Calculus.Examples.Forms
+import ArtformRoles.Calculus.Examples.Rosette
+import ArtformRoles.Calculus.Examples.Interp
+import ArtformRoles.Calculus.Examples.Chess
 import ArtformRoles.Calculus.Strengthen
 import ArtformRoles.Calculus.GradeFreedom
 
