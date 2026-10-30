@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 23 |
+| proved | 25 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **23** |
+| **total** | **25** |
 
 ## Statements
 
@@ -19,6 +19,8 @@
 | R5 | Time reversal | proved | `Artform.Scores.Statement.timeReversal` / `Artform.Scores.timeReversal` | awaiting review |
 | R6 | Blocking | proved | `Artform.Scores.Statement.blocking` / `Artform.Scores.blocking` | awaiting review |
 | R6:red-black | Red-black on the blocked artform | proved | `Artform.Scores.Statement.redBlack` / `Artform.Scores.redBlack` | awaiting review |
+| R6:cosets | The coset basis of a sublattice | proved | `Artform.Scores.Statement.cosets` / `Artform.Scores.cosets` | awaiting review |
+| R6:checkerboard | Red-black on the checkerboard, with the face form | proved | `Artform.Scores.Statement.checkerboardRedBlack` / `Artform.Scores.checkerboardRedBlack` | awaiting review |
 | T1:field | One dimension, every dial | proved | `Artform.Scores.Statement.everyLawIsAScore` / `Artform.Scores.everyLawIsAScore` | awaiting review |
 | T1:prime-power | One dimension, the dials Z/p^k | proved | `Artform.Scores.Statement.everyLawIsAScorePrimePower` / `Artform.Scores.everyLawIsAScorePrimePower` | awaiting review |
 | T1:modulus | One dimension, every dial Z/n | proved | `Artform.Scores.Statement.everyLawIsAScoreModulus` / `Artform.Scores.everyLawIsAScoreModulus` | awaiting review |

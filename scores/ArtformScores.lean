@@ -11,3 +11,4 @@ import ArtformScores.Lifting
 import ArtformScores.CRT
 import ArtformScores.Completeness
 import ArtformScores.Bells
+import ArtformScores.Checkerboard

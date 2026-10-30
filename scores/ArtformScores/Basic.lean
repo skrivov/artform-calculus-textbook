@@ -251,6 +251,58 @@ noncomputable def blackRedTick [Algebra S' S] (bs : Module.Basis (Fin 2) S' S) (
 end Blocking
 
 
+/-! ## Blocking by a sublattice
+
+The stencils of a lattice `Λ` are its group ring `R[Λ]`, and those of a sublattice `Λ′` are
+`R[Λ′] ⊂ R[Λ]` (the ledger's Definition 3). On `ℤ²` the red-black scheme blocks by the
+checkerboard: the red cells `(a, b)` have `a + b` even, the black ones `a + b` odd. -/
+
+section Sublattice
+
+/-- The stencils of a sublattice `Λ′ ⊂ Λ` act on those of `Λ`, `R[Λ′] ⊂ R[Λ]`: a shift by a
+cell of `Λ′` is a shift of `Λ`. -/
+@[ledger "def:block"]
+noncomputable instance sublatticeAlgebra {R Λ : Type*} [CommRing R] [AddCommGroup Λ]
+    (Λ' : AddSubgroup Λ) : Algebra (AddMonoidAlgebra R Λ') (AddMonoidAlgebra R Λ) :=
+  (AddMonoidAlgebra.mapDomainRingHom R Λ'.subtype).toAlgebra
+
+/-- The checkerboard: the cells `(a, b)` of `ℤ²` with `a + b` even, the red cells. -/
+@[ledger "def:red-black"]
+def checkerboard : AddSubgroup (ℤ × ℤ) where
+  carrier := {p | (p.1 + p.2) % 2 = 0}
+  add_mem' := by
+    intro a b ha hb
+    simp only [Set.mem_ofPred_eq, Prod.fst_add, Prod.snd_add] at *
+    omega
+  zero_mem' := by simp
+  neg_mem' := by
+    intro a ha
+    simp only [Set.mem_ofPred_eq, Prod.fst_neg, Prod.snd_neg] at *
+    omega
+
+/-- The cell `u = (1, 1)` of the checkerboard, the shift `x y`. -/
+@[ledger "def:red-black"]
+def cellU : checkerboard := ⟨(1, 1), by change ((1 : ℤ) + 1) % 2 = 0; decide⟩
+
+/-- The cell `v = (1, -1)` of the checkerboard, the shift `x/y`. -/
+@[ledger "def:red-black"]
+def cellV : checkerboard := ⟨(1, -1), by change ((1 : ℤ) + -1) % 2 = 0; decide⟩
+
+/-- The shift `x` of `ℤ²` by `e₁`, a stencil of the plane `R[x^±1, y^±1] = R[ℤ²]`. -/
+@[ledger "def:red-black"]
+noncomputable def shiftX (R : Type*) [CommRing R] : AddMonoidAlgebra R (ℤ × ℤ) :=
+  AddMonoidAlgebra.single (1, 0) 1
+
+/-- The book's face form in the plane, `g = 4 - x - 1/x - y - 1/y` (the ledger's
+Definition 2). -/
+@[ledger "def:face-form"]
+noncomputable def faceStencil (R : Type*) [CommRing R] : AddMonoidAlgebra R (ℤ × ℤ) :=
+  4 - AddMonoidAlgebra.single (1, 0) 1 - AddMonoidAlgebra.single (-1, 0) 1 -
+    AddMonoidAlgebra.single (0, 1) 1 - AddMonoidAlgebra.single (0, -1) 1
+
+end Sublattice
+
+
 /-! ## The curve of a phase
 
 A law `T = [[a, b], [c, d]]` of phase `t` acts on the curve `λ + 1/λ = t`, the dispersion

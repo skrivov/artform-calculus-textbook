@@ -35,6 +35,11 @@ book states it.
   - Red-black is a law of the blocked artform, since its kicks are placed steps. The blocked
     shift turns it into black-red, so it is the blocking of no law of the artform once the
     move couples red and black.
+  - Every sublattice blocking is a case: the shifts by coset representatives are a basis of
+    the stencils over the sublattice's stencils (`Checkerboard.lean`).
+  - On `ℤ²` the checkerboard has the basis `1, x`, with `x² = u v` a unit. The book's face
+    form `g = 4 - x - 1/x - y - 1/y` has the black part `-(1 + 1/u + 1/v + 1/(u v))`, so
+    red-black with the half move `M(-λg/2)` is the blocking of no law of the plane.
 - **Phase 4** continues with T7, the class of a law (`Classes.lean`, after Latimer and
   MacDuffee).
   - The row `(c, λ - a)` is a left eigenvector of a law of phase `t` on the curve

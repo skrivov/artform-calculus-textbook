@@ -70,6 +70,42 @@ def redBlack : Prop :=
     ((∃ T : Matrix (Fin 2) (Fin 2) S, block bs T = redBlackTick bs κ h) →
       κ * κ * bs.repr h 1 = 0)
 
+/-- **R6** (the cosets; the ledger's Definition 3). Blocking by a sublattice `Λ′ ⊂ Λ` reads the
+stencils as a free module over the sublattice's stencils. When `t₀, …, t_(m-1)` are coset
+representatives, each cell being `λ′ + t_i` for exactly one `i`, the shifts by the `t_i` are a
+basis of `R[Λ]` over `R[Λ′]`, one place for each coset. So the blocking (R6) and red-black
+apply to every sublattice blocking. -/
+@[ledger "R6"]
+def cosets : Prop :=
+  ∀ (R Λ : Type) [CommRing R] [AddCommGroup Λ] (Λ' : AddSubgroup Λ) (m : ℕ) (t : Fin m → Λ),
+    (∀ a : Λ, ∃! i, a - t i ∈ Λ') →
+    ∃ bs : Module.Basis (Fin m) (AddMonoidAlgebra R Λ') (AddMonoidAlgebra R Λ),
+      ∀ i, bs i = AddMonoidAlgebra.single (t i) 1
+
+/-- **R6** (red-black on the checkerboard; Definition 3 and finding 044). On `ℤ²` the
+checkerboard `Λ′`, the cells `(a, b)` with `a + b` even, has the coset representatives `0` and
+`e₁`. So the stencils `R[x^±1, y^±1]` have the basis `1, x` over the checkerboard's stencils
+`R[Λ′] = R[u^±1, v^±1]`, with `u = x y` and `v = x/y`, and `x² = u v` is a unit of `R[Λ′]`:
+red-black's hypotheses hold. The book's face form `g = 4 - x - 1/x - y - 1/y` has the red part
+`4` and the black part `-(1 + 1/u + 1/v + 1/(u v))`. So when `κ² λ ≠ 0`, the red-black tick
+`K_red(κ) M½ K_black(κ) M½`, with the half move `M½ = M(-λg/2)`, is the blocking of no law of
+the artform. -/
+@[ledger "R6"]
+def checkerboardRedBlack : Prop :=
+  ∀ (R : Type) [CommRing R] [Invertible (2 : R)],
+    ∃ bs : Module.Basis (Fin 2) (AddMonoidAlgebra R checkerboard) (AddMonoidAlgebra R (ℤ × ℤ)),
+      bs 0 = 1 ∧ bs 1 = shiftX R ∧
+      shiftX R * shiftX R = algebraMap (AddMonoidAlgebra R checkerboard)
+        (AddMonoidAlgebra R (ℤ × ℤ)) (AddMonoidAlgebra.single (cellU + cellV) 1) ∧
+      IsUnit (AddMonoidAlgebra.single (cellU + cellV) (1 : R)) ∧
+      bs.repr (faceStencil R) 0 = 4 ∧
+      bs.repr (faceStencil R) 1 = -(1 + AddMonoidAlgebra.single (-cellU) 1 +
+        AddMonoidAlgebra.single (-cellV) 1 + AddMonoidAlgebra.single (-(cellU + cellV)) 1) ∧
+      ∀ κ ℓ : R, κ * κ * ℓ ≠ 0 →
+        ¬ ∃ T : Matrix (Fin 2) (Fin 2) (AddMonoidAlgebra R (ℤ × ℤ)),
+          block bs T = redBlackTick bs (algebraMap R (AddMonoidAlgebra R checkerboard) κ)
+            ((-(ℓ * ⅟2)) • faceStencil R)
+
 /-- **T1** (one dimension, every dial). Over a field `F`, every law of determinant 1
 on a dial, `A ∈ SL(2, F[x, 1/x])`, is the law of a score: `E₂ = SL₂` there. -/
 @[ledger "T1"]
