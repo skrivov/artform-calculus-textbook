@@ -483,6 +483,19 @@ def IsExtent {G : Type*} [Group G] (A B : G) (σ : Perm G) : Prop :=
 @[ledger "def:extent"]
 noncomputable def fibRank (p : ℕ) : ℕ := sInf {k | 0 < k ∧ p ∣ Nat.fib k}
 
+/-- The subgroup `{±1}` of `SL(2, Z/n)`, by which `PSL(2, Z/n) = SL(2, Z/n)/{±1}`, the groups of
+the ledger's findings 037, 038 and 043. -/
+@[ledger "def:extent"]
+def pmOne (n : ℕ) : Subgroup (SpecialLinearGroup (Fin 2) (ZMod n)) := Subgroup.zpowers (-1)
+
+/-- `{±1}` is central, so normal. -/
+@[ledger "def:extent"]
+instance pmOne_normal (n : ℕ) : (pmOne n).Normal where
+  conj_mem a ha g := by
+    obtain ⟨k, rfl⟩ := Subgroup.mem_zpowers_iff.mp ha
+    rw [((Commute.neg_one_right g).zpow_right k).eq, mul_inv_cancel_right]
+    exact Subgroup.zpow_mem_zpowers _ _
+
 end Bells
 
 end Artform.Scores

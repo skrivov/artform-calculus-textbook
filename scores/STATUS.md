@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 28 |
+| proved | 30 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **28** |
+| **total** | **30** |
 
 ## Statements
 
@@ -41,3 +41,5 @@
 | T15:rankin | Rankin's parity | proved | `Artform.Scores.Statement.rankinParity` / `Artform.Scores.rankinParity` | awaiting review |
 | T15:lifting | The lifting lemma | proved | `Artform.Scores.Statement.extentLifting` / `Artform.Scores.extentLifting` | awaiting review |
 | T15:fibonacci | The Fibonacci rule | proved | `Artform.Scores.Statement.fibonacciRule` / `Artform.Scores.fibonacciRule` | awaiting review |
+| T15:back-step | One back-step | proved | `Artform.Scores.Statement.oneBackStep` / `Artform.Scores.oneBackStep` | awaiting review |
+| T15:cat-map | Kicks with back-moves never ring | proved | `Artform.Scores.Statement.catMapNeverRings` / `Artform.Scores.catMapNeverRings` | awaiting review |

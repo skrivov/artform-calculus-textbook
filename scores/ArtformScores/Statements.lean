@@ -373,4 +373,33 @@ def fibonacciRule : Prop :=
         ((Step.move (-1 : ZMod p)).sl : Matrix.ProjectiveSpecialLinearGroup (Fin 2) (ZMod p)) σ →
         4 ∣ Bells.fibRank p
 
+/-- **T15** (one back-step; the ledger's finding 043, Lemma 3). Let `σ` be a permutation of a
+finite group `G` that steps forward, `x → A x` or `x → B x`, at every element but one, `x₀`, where
+it steps back by `A⁻¹` or by `B⁻¹`; a Hamiltonian cycle with one back-step is one. Then `A B` lies
+in `⟨c⟩`, `c = A⁻¹ B`, when the back-step is `A⁻¹`, and `B A` does when it is `B⁻¹`. -/
+@[ledger "T15"]
+def oneBackStep : Prop :=
+  ∀ (G : Type) [Group G] [Finite G] (A B : G) (σ : Equiv.Perm G) (x₀ : G),
+    (∀ x, x ≠ x₀ → σ x = A * x ∨ σ x = B * x) →
+      (σ x₀ = A⁻¹ * x₀ → A * B ∈ Subgroup.zpowers (A⁻¹ * B)) ∧
+      (σ x₀ = B⁻¹ * x₀ → B * A ∈ Subgroup.zpowers (A⁻¹ * B))
+
+/-- **T15** (kicks with back-moves never ring; finding 043, Theorem S5.3, part 1). On one mode
+over `ZMod n`, `n ≥ 3`, take the forward kick `K = K(1)` and the backward move `M⁻¹ = M(1)`, the
+inverse of the leapfrog's move `M = M(-1)`. Their staggered tick `M⁻¹ K = [[2, 1], [1, 1]]` is
+Arnold's cat map, and the score of `K` and `M⁻¹` has no extent of `SL(2, Z/n)` or of
+`PSL(2, Z/n) = SL(2, Z/n)/{±1}`. -/
+@[ledger "T15"]
+def catMapNeverRings : Prop :=
+  ∀ n : ℕ, 3 ≤ n →
+    (((Step.move (1 : ZMod n)).sl * (Step.kick (1 : ZMod n)).sl :
+        SpecialLinearGroup (Fin 2) (ZMod n)) : Matrix (Fin 2) (Fin 2) (ZMod n)) =
+      !![2, 1; 1, 1] ∧
+    (∀ σ : Equiv.Perm (SpecialLinearGroup (Fin 2) (ZMod n)),
+      ¬ Bells.IsExtent (Step.kick (1 : ZMod n)).sl (Step.move (1 : ZMod n)).sl σ) ∧
+    ∀ σ : Equiv.Perm (SpecialLinearGroup (Fin 2) (ZMod n) ⧸ Bells.pmOne n),
+      ¬ Bells.IsExtent
+        ((Step.kick (1 : ZMod n)).sl : SpecialLinearGroup (Fin 2) (ZMod n) ⧸ Bells.pmOne n)
+        ((Step.move (1 : ZMod n)).sl : SpecialLinearGroup (Fin 2) (ZMod n) ⧸ Bells.pmOne n) σ
+
 end Artform.Scores.Statement

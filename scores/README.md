@@ -65,6 +65,9 @@ book states it.
     lifting lemma, and the Fibonacci rule, by which a forward extent of `SL(2, p)` or
     `PSL(2, p)` under the leapfrog's `K` and `M` needs `4 ∣ α(p)`, the Fibonacci rank of
     apparition. So `SL(2, 5)` has none.
+  - One back-step forces `A B` or `B A` into `⟨A⁻¹ B⟩`, and the cat map's score of forward
+    kicks and backward moves rings neither `SL(2, Z/n)` nor `PSL(2, Z/n)` for any `n ≥ 3`
+    (`BackSteps.lean`).
 - **Plan.** The rest of Phase 4, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

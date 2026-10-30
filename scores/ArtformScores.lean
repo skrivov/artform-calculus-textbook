@@ -13,3 +13,4 @@ import ArtformScores.Completeness
 import ArtformScores.Bells
 import ArtformScores.Checkerboard
 import ArtformScores.Extents
+import ArtformScores.BackSteps
