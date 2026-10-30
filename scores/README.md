@@ -40,7 +40,12 @@ book states it.
   - The row `(c, λ - a)` is a left eigenvector of a law of phase `t` on the curve
     `A_t = S[λ]/(λ² - tλ + 1)`.
   - Processing keeps the class of the ideal `(c, λ - a)`, when `t² - 4` is not a square.
-  - A cyclic vector conjugates the law to the companion tick, so its class is trivial.
+  - A cyclic vector conjugates the law to the companion tick, so its class is trivial; and a
+    law in the trivial class has a cyclic vector.
+  - The correspondence is one to one: two laws of phase `t` are in one class exactly when
+    processing turns one into the other.
+  - Over a principal ideal domain, as `F[x, 1/x]` (`Euclid.lean`), every nonzero ideal of
+    `A_t` is in the class of a law: the matrix of `λ` on a basis of the ideal.
 - **Phase 4** continues with T15, the bells (`Bells.lean`; the ledger's finding 042).
   - A change is an involution, so the painted rows of every method obey the tick
     `u(t + 1) + u(t - 1) = (P_t + P_(t-1)) u(t)`. Two changes cut the row into mirror boxes
@@ -51,6 +56,6 @@ book states it.
   - Coxeter's rules present `S_N` on the swaps of neighbours (Moore 1897), against Mathlib's
     `CoxeterMatrix.A`. The descending runs `s_m ⋯ s_k` are coset representatives, so the
     presented group has at most `N!` elements.
-- **Plan.** T7's one-to-one correspondence, then the rest of Phase 4 as the author chooses.
+- **Plan.** The rest of Phase 4, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

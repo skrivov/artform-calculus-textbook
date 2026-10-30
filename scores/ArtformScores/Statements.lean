@@ -127,17 +127,41 @@ def classInvariance : Prop :=
         eig t • eigenRow t T ∧
       SameClass (lawIdeal t T') (lawIdeal t T)
 
-/-- **T7** (the trivial class). A cyclic vector `v` of a law `T` of phase `t`, one with
-`det[v | T v]` a unit, conjugates `T` to the companion tick `C_t = [[0, -1], [1, t]]`:
-`T [v | T v] = [v | T v] C_t`. Then `(c, λ - a)` is in the class of `A_t` itself, the
-trivial class. -/
+/-- **T7** (the trivial class). A law `T` of phase `t` is in the trivial class, the class of
+`A_t` itself, exactly when it has a cyclic vector `v`, one with `det[v | T v]` a unit. That
+determinant is the law's quadratic form `Q_T(v)`, so the class is trivial exactly when `Q_T`
+represents a unit. A cyclic vector conjugates `T` to the companion tick
+`C_t = [[0, -1], [1, t]]`: `T [v | T v] = [v | T v] C_t`. -/
 @[ledger "T7"]
 def trivialClass : Prop :=
   ∀ (S : Type) [CommRing S] [IsDomain S] (t : S), NonSquareDisc t →
-    ∀ (T : SpecialLinearGroup (Fin 2) S) (v : Fin 2 → S), phase T = t →
-      IsUnit (cyclicMatrix (T : Matrix (Fin 2) (Fin 2) S) v).det →
-      (T : Matrix (Fin 2) (Fin 2) S) * cyclicMatrix T v = cyclicMatrix T v * companion t ∧
-      SameClass (lawIdeal t T) ⊤
+    ∀ T : SpecialLinearGroup (Fin 2) S, phase T = t →
+      (∀ v : Fin 2 → S, IsUnit (cyclicMatrix (T : Matrix (Fin 2) (Fin 2) S) v).det →
+        (T : Matrix (Fin 2) (Fin 2) S) * cyclicMatrix T v = cyclicMatrix T v * companion t) ∧
+      (SameClass (lawIdeal t T) ⊤ ↔
+        ∃ v : Fin 2 → S, IsUnit (cyclicMatrix (T : Matrix (Fin 2) (Fin 2) S) v).det)
+
+/-- **T7** (Latimer–MacDuffee: one class, one law up to processing). When `t² - 4` is not a
+square in the fraction field, the ideal `(c, λ - a)` of a law of phase `t` is nonzero, and two
+laws of phase `t` have their ideals in the same class exactly when processing turns one into
+the other: `T′ = P T P⁻¹` with `P` invertible. -/
+@[ledger "T7"]
+def classesOneToOne : Prop :=
+  ∀ (S : Type) [CommRing S] [IsDomain S] (t : S), NonSquareDisc t →
+    ∀ T T' : SpecialLinearGroup (Fin 2) S, phase T = t → phase T' = t →
+      lawIdeal t T ≠ ⊥ ∧
+      (SameClass (lawIdeal t T') (lawIdeal t T) ↔
+        ∃ P : GL (Fin 2) S, (T' : Matrix (Fin 2) (Fin 2) S) =
+          (P : Matrix (Fin 2) (Fin 2) S) * T * ((P⁻¹ : GL (Fin 2) S) : Matrix (Fin 2) (Fin 2) S))
+
+/-- **T7** (Latimer–MacDuffee: every class is a law's). Over a principal ideal domain `S`, as
+the ledger's `F[x, 1/x]`, with `t² - 4` not a square in the fraction field, every nonzero ideal
+of `A_t` is in the class of the ideal `(c, λ - a)` of some law of phase `t`. -/
+@[ledger "T7"]
+def classesOnto : Prop :=
+  ∀ (S : Type) [CommRing S] [IsDomain S] [IsPrincipalIdealRing S] (t : S), NonSquareDisc t →
+    ∀ I : Ideal (curveRing t), I ≠ ⊥ →
+      ∃ T : SpecialLinearGroup (Fin 2) S, phase T = t ∧ SameClass (lawIdeal t T) I
 
 /-- **T12** (the reading). Two laws with the same phase and the same reading give
 the same output from rest: from `(b, e) = (b₀, 0)`, the flux `b` after `n`
