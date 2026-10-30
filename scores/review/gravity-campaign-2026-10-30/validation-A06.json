@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "fe7bdba9f6784d38da1f723600169da30d2add3f",
+  "investigation": "GAC-A06",
+  "independent_review": "pending",
+  "proofs": [
+    {
+      "label": "GAC:defect-stability",
+      "decl": "Artform.Scores.GravityBridge.defectStability",
+      "proves": "Artform.Scores.GravityBridge.Statement.defectStability",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "full_build_wfail": 0,
+  "required_report_status_tree_certificate_checks": "all passed",
+  "approved_surface_drift": [],
+  "kernel_replay": {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "ArtformScores.GravityBridge.Stability"
+    ],
+    "exit_code": 0
+  },
+  "file_hashes": {
+    "scores/ArtformScores/GravityBridge/LinearDefs.lean": "7ca720ee7f89927f71a3c7af2217c44eee528ec37591f2b58ed52a2cf700daa7",
+    "scores/ArtformScores/GravityBridge/Statements.lean": "66cea1d57ada34ef0cec290144e27dc91ba2dfed9042198c72840d8a4f9d4033",
+    "scores/ArtformScores/GravityBridge/Stability.lean": "7515f0bf1f06da0b501c815b7235bd5ea91eb770cd08fc9c8fb565c57806a2e9"
+  },
+  "scope": "Exact operator norm estimate. Native application and physical norm comparison remain separate."
+}

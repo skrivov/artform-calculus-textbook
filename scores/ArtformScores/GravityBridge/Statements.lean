@@ -1,4 +1,5 @@
 import ArtformScores.GravityBridge.Defs
+import ArtformScores.GravityBridge.LinearDefs
 
 /-! # Registered statements for the gravity calculus campaign -/
 
@@ -30,5 +31,16 @@ def invariantRealization : Prop :=
     (r.Intertwines T → ∀ (n : ℕ) (y : Y),
       T^[n] (r.embed y) = r.embed ((r.visible T)^[n] y) ∧
       r.read (T^[n] (r.embed y)) = (r.visible T)^[n] y)
+
+/-- **GAC:defect-stability** (quantitative stability of the full realization defect).
+Every factor remains in the chosen operator norm; no uniformity in h is assumed. -/
+@[ledger "GAC:defect-stability"]
+def defectStability : Prop :=
+  ∀ (Y H : Type)
+    [NormedAddCommGroup Y] [NormedSpace ℝ Y]
+    [NormedAddCommGroup H] [NormedSpace ℝ H]
+    (E F : Y →L[ℝ] H) (R : H →L[ℝ] Y) (T : H →L[ℝ] H),
+    ‖linearDefect F R T - linearDefect E R T‖ ≤
+      ‖T‖ * ‖F - E‖ * (1 + ‖R‖ * (‖E‖ + ‖F‖))
 
 end Artform.Scores.GravityBridge.Statement

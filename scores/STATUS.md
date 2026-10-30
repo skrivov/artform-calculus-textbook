@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 63 |
-| stated | 4 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **67** |
+| **total** | **68** |
 
 ## Statements
 
@@ -82,3 +82,4 @@
 | GAC:realization | Invariance and all-time realization | stated | `Artform.Scores.GravityBridge.Statement.invariantRealization` / `Artform.Scores.GravityBridge.invariantRealization` | awaiting review |
 | GAC:native-distinct-block | Signed native Schur cancellation | stated | `Artform.Scores.GravityBridge.Native.Statement.distinctBlock` / `Artform.Scores.GravityBridge.Native.distinctBlock` | awaiting review |
 | GAC:temporal-witness | Rational transverse traceless symbol witness | stated | `Artform.Scores.GravityBridge.Native.Statement.temporalWitness` / `Artform.Scores.GravityBridge.Native.temporalWitness` | awaiting review |
+| GAC:defect-stability | Quantitative realization defect | stated | `Artform.Scores.GravityBridge.Statement.defectStability` / `Artform.Scores.GravityBridge.defectStability` | awaiting review |

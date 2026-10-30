@@ -1,6 +1,6 @@
 # Gravity calculus foundation submission
 
-30 October 2026. Four new checked proof submissions; independent fidelity review pending.
+30 October 2026. Five new checked proof submissions; independent fidelity review pending.
 The original sixty-three scores entries retain their independent approvals.
 
 ## Statements to review
@@ -11,9 +11,10 @@ The original sixty-three scores entries retain their independent approvals.
 | GAC:realization | GravityBridge.Statement.invariantRealization / GravityBridge.invariantRealization |
 | GAC:native-distinct-block | GravityBridge.Native.Statement.distinctBlock / GravityBridge.Native.distinctBlock |
 | GAC:temporal-witness | GravityBridge.Native.Statement.temporalWitness / GravityBridge.Native.temporalWitness |
+| GAC:defect-stability | GravityBridge.Statement.defectStability / GravityBridge.defectStability |
 
 All names start with Artform.Scores. The literal source statements are quoted in scores/manifest.toml
-from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–103.
+from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–104.
 Definitions, statements, proofs and positive examples are under scores/ArtformScores/GravityBridge/.
 
 ## Required fidelity checks
@@ -29,10 +30,17 @@ Definitions, statements, proofs and positive examples are under scores/ArtformSc
 5. Check every TT entry, transversality, trace, momentum contraction and positive 36/505 coefficient.
    This theorem proves a rational symbol certificate. It does not formalize the complete forty-equation
    reduction, packet construction, native-step noninvariance or physical boundary equivalence.
+6. Check the exact difference identity and operator-norm estimate in Stability.lean. The statement has no
+   completeness, finite-dimensionality, recovery or native-domain assumption. Its corollary keeps every
+   constant and its positive example changes the embedded graph while preserving the common readout.
+   A generator bound must not silently be transferred to a step bound or to a physical energy norm.
 
 The three bounded historical source/review snapshots in source/ and source-pins.json preserve provenance.
 Their old UNREVIEWED headings are historical; the distinct review gives the inherited scoped acceptance.
 They do not approve these new Lean submissions.
+
+validation-checkpoint-01.json belongs to the first four submissions at the first checkpoint.
+The later quantitative-defect submission has its own validation record.
 
 ## Reproduction and verdict
 

@@ -836,3 +836,22 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Statement.temporalWitness"
 lean_proof = "Artform.Scores.GravityBridge.Native.temporalWitness"
 reviewed = ""
 review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:defect-stability"
+label = "GAC:defect-stability"
+title = "Quantitative realization defect"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:defect-stability)"
+statement = """
+**GAC:defect-stability (quantitative realization defect).** Let Y,H be real normed vector spaces,
+E,F:Y to H bounded linear maps, R:H to Y a bounded linear map and T:H to H a bounded linear map.
+Put D(E)=T E-E R T E. In their operator norms,
+norm(D(F)-D(E)) <= norm(T)*norm(F-E)*(1+norm(R)*(norm(E)+norm(F))).
+No recovery, invariance or h-uniformity assumption is built into this estimate.
+See [finding 104](findings/104-quantitative-realization-defect.md) for the exact difference identity,
+positive example and the native generator/step distinction.
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.defectStability"
+lean_proof = "Artform.Scores.GravityBridge.defectStability"
+reviewed = ""
+review_text_sha256 = ""
