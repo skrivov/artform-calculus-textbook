@@ -107,6 +107,18 @@ reviewed = ""
 review_text_sha256 = ""
 
 [[statement]]
+key = "T4"
+label = "T4"
+title = "One mode on a prime dial"
+source = "ALGEBRA-OF-SCORES.md §4.2 (T4)"
+statement = """
+Let S = F_p (constant stencils, one mode). The group presented by merging (R1) and Whitehead's rule (R3), on X = M(1) and Y = K(1), is SL_2(F_p) for p = 5, 7, 11 and 13. So two constant scores give the same tick exactly when the two rules turn one into the other. The Lean form: the realizer X -> M(1), Y -> K(1) reaches every law in SL(2, ZMod p), and two words in X and Y have the same law exactly when they are equal in the group presented by the relators of R1 (all stencils f, g) and R3 (all units u, all stencils f), with M(f) = X^f and K(f) = Y^f for 0 <= f < p."""
+lean_statement = "Artform.Scores.Statement.oneModeComplete"
+lean_proof = "Artform.Scores.oneModeComplete"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
 key = "T12:reading"
 label = "T12"
 title = "The reading"

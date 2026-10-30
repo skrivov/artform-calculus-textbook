@@ -7,3 +7,4 @@ import ArtformScores.Caller
 import ArtformScores.Euclid
 import ArtformScores.Lifting
 import ArtformScores.CRT
+import ArtformScores.Completeness

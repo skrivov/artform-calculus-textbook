@@ -117,4 +117,57 @@ def splitTick {K : Type*} [Field K] (xFirst : Bool) (h gx gy : K) :
   let g₂ := if xFirst then gy else gx
   realize [.kick (h / 4), .move (-(h * g₁)), .kick (h / 2), .move (-(h * g₂)), .kick (h / 4)]
 
+
+/-! ## The one-mode presentation
+
+On one mode over `ZMod p` every stencil is a constant, and every step is a power of
+the move `X = M(1)` or of the kick `Y = K(1)`: `M(f) = X^f` and `K(f) = Y^f`, with
+`0 ≤ f < p`. The rules R1 and R3, read as words in `X` and `Y`, are the relators of
+a presented group (T4). -/
+
+namespace OneMode
+
+/-- The generators of the one-mode presentation: the move `X = M(1)` and the kick
+`Y = K(1)`. -/
+@[ledger "def:one-mode"]
+inductive Gen
+  | X
+  | Y
+  deriving DecidableEq
+
+/-- The word of the move `M(f) = X^f`, with `0 ≤ f < p`. -/
+@[ledger "def:one-mode"]
+def move (p : ℕ) (f : ZMod p) : FreeGroup Gen := FreeGroup.of .X ^ f.val
+
+/-- The word of the kick `K(f) = Y^f`, with `0 ≤ f < p`. -/
+@[ledger "def:one-mode"]
+def kick (p : ℕ) (f : ZMod p) : FreeGroup Gen := FreeGroup.of .Y ^ f.val
+
+/-- The word of the Whitehead score `w(u) = M(u) K(-u⁻¹) M(u)`. -/
+@[ledger "def:one-mode"]
+def whiteheadWord (p : ℕ) (u : (ZMod p)ˣ) : FreeGroup Gen :=
+  move p ↑u * kick p (-↑u⁻¹) * move p ↑u
+
+/-- The relators of merging (R1), `M(f) M(g) = M(f + g)` and `K(f) K(g) = K(f + g)`,
+and of Whitehead's rule (R3), `w(u) M(f) w(u)⁻¹ = K(-u⁻² f)` and
+`w(u) K(f) w(u)⁻¹ = M(-u² f)`, for all stencils `f`, `g` and units `u` of `ZMod p`. -/
+@[ledger "def:one-mode"]
+def relators (p : ℕ) : Set (FreeGroup Gen) :=
+  {r | ∃ f g : ZMod p, r = move p f * move p g * (move p (f + g))⁻¹ ∨
+      r = kick p f * kick p g * (kick p (f + g))⁻¹} ∪
+  {r | ∃ (u : (ZMod p)ˣ) (f : ZMod p),
+      r = whiteheadWord p u * move p f * (whiteheadWord p u)⁻¹ *
+        (kick p (-(↑u⁻¹ * ↑u⁻¹ * f)))⁻¹ ∨
+      r = whiteheadWord p u * kick p f * (whiteheadWord p u)⁻¹ *
+        (move p (-(↑u * ↑u * f)))⁻¹}
+
+/-- The law of a word: `X` is the move `M(1)` and `Y` the kick `K(1)`. -/
+@[ledger "def:one-mode"]
+def law (p : ℕ) : FreeGroup Gen →* SpecialLinearGroup (Fin 2) (ZMod p) :=
+  FreeGroup.lift fun
+    | .X => (Step.move 1).sl
+    | .Y => (Step.kick 1).sl
+
+end OneMode
+
 end Artform.Scores

@@ -20,6 +20,15 @@ book states it.
     leaves a law with a unit corner, which is `K(m) diag(u, 1/u) M(v)` (`Lifting.lean`).
   - Over `Z/n`, the Chinese remainder theorem splits the dial into prime powers
     (`CRT.lean`).
-- **Plan.** Phase 3 is T4, completeness on one mode, by certificate.
+- **Phase 3** proves T4: on one mode over `F_p`, `p = 5, 7, 11, 13`, merging and
+  Whitehead's rule present `SL(2, F_p)` on `X = M(1)` and `Y = K(1)`.
+  - The presented group maps onto `SL(2, F_p)` (`OneMode.lean`).
+  - It is no bigger: a coset table of `⟨X⟩` with `p² - 1` rows covers it
+    (`Coset.lean`). Every edge of the table is a tree edge, the subgroup's edge, or a
+    deduction from one relator through earlier edges, and Lean checks the table by
+    computation (`decide +kernel`).
+  - `scripts/one_mode_certificates.py` writes the four tables (`Certificates/`), by
+    Todd–Coxeter enumeration; with `--check` it fails if a table differs from its output.
+- **Plan.** Phase 4 is open, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

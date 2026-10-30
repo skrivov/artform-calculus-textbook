@@ -76,6 +76,18 @@ def index : Prop :=
   ∀ (S : Type) [CommRing S] (a : S), a ≠ 1 →
     ∀ w : Score S, (realize w : Matrix (Fin 2) (Fin 2) S) ≠ !![a, 0; 0, 1]
 
+/-- **T4** (one mode on a prime dial). For `p = 5, 7, 11, 13`, merging (R1) and
+Whitehead's rule (R3) present `SL(2, F_p)` on `X = M(1)` and `Y = K(1)`. Every law is
+the law of a word in `X` and `Y`, and two words have the same law exactly when they
+are equal in the group presented by the rules. -/
+@[ledger "T4"]
+def oneModeComplete : Prop :=
+  ∀ p ∈ ({5, 7, 11, 13} : Finset ℕ),
+    (∀ A : SpecialLinearGroup (Fin 2) (ZMod p), ∃ v : FreeGroup OneMode.Gen,
+      OneMode.law p v = A) ∧
+    ∀ v₁ v₂ : FreeGroup OneMode.Gen, OneMode.law p v₁ = OneMode.law p v₂ ↔
+      PresentedGroup.mk (OneMode.relators p) v₁ = PresentedGroup.mk (OneMode.relators p) v₂
+
 /-- **T12** (the reading). Two laws with the same phase and the same reading give
 the same output from rest: from `(b, e) = (b₀, 0)`, the flux `b` after `n`
 ticks is the same for both. -/

@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 12 |
+| proved | 13 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **12** |
+| **total** | **13** |
 
 ## Statements
 
@@ -21,6 +21,7 @@
 | T1:prime-power | One dimension, the dials Z/p^k | proved | `Artform.Scores.Statement.everyLawIsAScorePrimePower` / `Artform.Scores.everyLawIsAScorePrimePower` | awaiting review |
 | T1:modulus | One dimension, every dial Z/n | proved | `Artform.Scores.Statement.everyLawIsAScoreModulus` / `Artform.Scores.everyLawIsAScoreModulus` | awaiting review |
 | T2 | The index | proved | `Artform.Scores.Statement.index` / `Artform.Scores.index` | awaiting review |
+| T4 | One mode on a prime dial | proved | `Artform.Scores.Statement.oneModeComplete` / `Artform.Scores.oneModeComplete` | awaiting review |
 | T12:reading | The reading | proved | `Artform.Scores.Statement.readingDetermines` / `Artform.Scores.readingDetermines` | awaiting review |
 | T12:palindromes | Palindromes | proved | `Artform.Scores.Statement.palindrome` / `Artform.Scores.palindrome` | awaiting review |
 | T13 | The crystallographic pulls | proved | `Artform.Scores.Statement.stepOrders` / `Artform.Scores.stepOrders` | awaiting review |
