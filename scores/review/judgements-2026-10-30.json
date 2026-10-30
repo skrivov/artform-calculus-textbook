@@ -1,0 +1,1704 @@
+{
+  "date": "2026-10-30",
+  "judge": "Codex independent review",
+  "baseline_commit": "fec7898475642ca74e829911ab7d71e3a4473df8",
+  "scope": "ArtformScores only; nine dedicated handoffs and the Lean-related algebra-of-scores part of the ledger umbrella handoff. No physics experiments or literature audit.",
+  "counts": {
+    "statements": 63,
+    "checked_proofs": 63,
+    "approved": 54,
+    "returned": 9
+  },
+  "handoffs": [
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE1.md",
+      "sha256": "654ff92f4d94c0f2484bb3000ff72b6d9693a6fc4ea5c9b5d5c7a243e49592e0",
+      "keys": [
+        "R1",
+        "R3",
+        "R4",
+        "R5",
+        "T2",
+        "T12:reading",
+        "T12:palindromes",
+        "T13",
+        "T14"
+      ],
+      "approved": 6,
+      "returned": 3
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE2.md",
+      "sha256": "8c795b99396181734ba538646d2c2dbe932f7deaca6d5873a525bd6907d458b5",
+      "keys": [
+        "T1:field",
+        "T1:prime-power",
+        "T1:modulus"
+      ],
+      "approved": 3,
+      "returned": 0
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE3.md",
+      "sha256": "9c230ee3f81336f0bb1b3881db56629bd02ce2010cbd919dd178110e2448ecd3",
+      "keys": [
+        "T4"
+      ],
+      "approved": 1,
+      "returned": 0
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4.md",
+      "sha256": "d19799826174891e8a845b408b35de1542f886a6f7921a07f6f05938d9f80c0d",
+      "keys": [
+        "R6",
+        "R6:red-black",
+        "R6:cosets",
+        "R6:checkerboard"
+      ],
+      "approved": 4,
+      "returned": 0
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4-T7.md",
+      "sha256": "2c401fc9bf6296495dfe2b447b3a0965c7a97d37ab26823dc6e28489888e0221",
+      "keys": [
+        "T7:invariance",
+        "T7:trivial-class",
+        "T7:one-to-one",
+        "T7:onto"
+      ],
+      "approved": 4,
+      "returned": 0
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "sha256": "7d26ecbeaa74bcf81aa6db9a8f5a7bc1fd90552ca4169ec134a332c7e4aa93ff",
+      "keys": [
+        "T15:methods",
+        "T15:plain-hunt",
+        "T15:modes",
+        "T15:coxeter",
+        "T15:rankin",
+        "T15:lifting",
+        "T15:fibonacci",
+        "T15:back-step",
+        "T15:cat-map",
+        "T15:balance",
+        "T15:two-squares",
+        "T15:fewest",
+        "T15:table",
+        "T15:transport"
+      ],
+      "approved": 13,
+      "returned": 1
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "sha256": "d9998c47661bbae2f9c30dddcd8b482187cd30fbbc894854ac35d9e46b4ebc48",
+      "keys": [
+        "T13:growth",
+        "T13:step-groups",
+        "T13:free",
+        "T13:regular-map",
+        "T13:platonic",
+        "T13:turns",
+        "T13:cells",
+        "T13:two-squares",
+        "T13:presentations",
+        "T13:psl-a5"
+      ],
+      "approved": 9,
+      "returned": 1
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "sha256": "253117f04954b7d35c7712695bcdaa5d521e34d8105f6a1845350ab0cce788cd",
+      "keys": [
+        "R2",
+        "T1:fewest",
+        "T2:group",
+        "T11",
+        "T12:criterion",
+        "T14:rules",
+        "T14:cue",
+        "T16"
+      ],
+      "approved": 5,
+      "returned": 3
+    },
+    {
+      "path": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "sha256": "a4d278aaaf65e8c05cf0aac817918c1bbcd4482f564f59d05204db5e76b51896",
+      "keys": [
+        "T8:curve",
+        "T8:classes",
+        "T8:count",
+        "T8:split",
+        "T8:schemes",
+        "T8:magic",
+        "T8:magic-count",
+        "T8:magic-schemes",
+        "T12:leapfrog-palindromes",
+        "T12:gap"
+      ],
+      "approved": 9,
+      "returned": 1
+    }
+  ],
+  "external_sources": [
+    {
+      "path": "../physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md",
+      "sha256": "6248fe8e274cc404dfe6dc88c175fb8185b1fca798bef3582de9574f89c6adfe"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/LEAN-PLAN-ALGEBRA-OF-SCORES.md",
+      "sha256": "2d71fb36a8d5bdf769735866d1c0beaae7cddbafc2d5627aa5646526947246c8"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/REVIEW-HANDOFF.md",
+      "sha256": "d6bf47b02823b325c4362ab3f4fdd34ac0dd14d69aaef713fc4e80457916ab27"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/037-the-one-mode-step-group.md",
+      "sha256": "079a81fd0836be6709071fa64010219bb0a3716b6f3fc3f423f4fbdfa7dd7b7a"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/038-the-leapfrog-on-the-platonic-solids.md",
+      "sha256": "53909c1721dd2ae4592cc79e3aaf70b16ea9932cfad008604a916cbeccef0e1a"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/042-change-ringing-is-light.md",
+      "sha256": "5b37e22eb48ed4d967633d64560341ff25da683c06f04a836acaacecad8a1ec5"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/043-extents-of-the-step-groups.md",
+      "sha256": "e3e775f5b13ca8152a5ab325349ddd0cf83d53b59da16b6f2ce8dc919f2087af"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/045-where-the-schemes-sit.md",
+      "sha256": "f72e3e26abb4e99b20d392d14fc2d8d29fd4916899f77118eb616ce6faaa4507"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/057-the-classes-of-a-phase.md",
+      "sha256": "a4fa9bd20cb3f7fa1f7cae4d07b4efbc3c8e8be118ccf623195926687723fc09"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/064-the-laws-of-a-higher-order-phase.md",
+      "sha256": "95baac7769b25fbe4585025301ea25cadaa609707d99066d192104e63bf079e0"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/080-random-orders-and-the-shared-cue.md",
+      "sha256": "7ed631dcf0aa9591e5cf7d7213570f1c99ef69c4aac059ebc7ff63d10b00d56d"
+    },
+    {
+      "path": "../physics/ledgers/lattice-waves/findings/082-light-costs-a-3d-reflection-law-a-reservoir.md",
+      "sha256": "1a2d2886421644fb41f1bf4467c16053ccf9abf595b6059811e2de47ea1a5414"
+    }
+  ],
+  "lean_sources": [
+    {
+      "path": "scores/ArtformScores/BackSteps.lean",
+      "sha256": "a5ee4d7404d2463d397d8e7aa6cfd2d30b9b1a4a62e5195ba5c67a40e49cacc0"
+    },
+    {
+      "path": "scores/ArtformScores/Basic.lean",
+      "sha256": "0e68414c6b42cafce75644f4a55964c03518e8c7954dce3e218b205b51fdbe86"
+    },
+    {
+      "path": "scores/ArtformScores/Bells.lean",
+      "sha256": "6391480b7d830ead7ca8f0b09a97f7b14f8d9076803d6c37550d98701b154031"
+    },
+    {
+      "path": "scores/ArtformScores/Blocking.lean",
+      "sha256": "9c50b719c34c2a970c113b3cb187b7b3561b259e833f254fccae8ed00184fdba"
+    },
+    {
+      "path": "scores/ArtformScores/CRT.lean",
+      "sha256": "64939aed98959a39e42cfafc8caca5437cf370c3c5aefb5be446ba42cdf17c37"
+    },
+    {
+      "path": "scores/ArtformScores/Caller.lean",
+      "sha256": "35c9fbc167973f30cc988d9ea3a8c6292e1715f1d459cb660601ee5e1dbb8288"
+    },
+    {
+      "path": "scores/ArtformScores/Callers.lean",
+      "sha256": "a83c9d8ce0f7e54f9005a98c438d5a73b3b01b1aabb2e52ac9241d6bef676eb6"
+    },
+    {
+      "path": "scores/ArtformScores/Certificates/Extents.lean",
+      "sha256": "851ef474a60e40a4aaf2f38c575ab6b49c65a5e44d3728492ccb09ce4385b36f"
+    },
+    {
+      "path": "scores/ArtformScores/Certificates/OneMode11.lean",
+      "sha256": "01b89ad69302dffdc65efd7314b0cd45f1b6299cfe74f0216dfaac0fb7b022c6"
+    },
+    {
+      "path": "scores/ArtformScores/Certificates/OneMode13.lean",
+      "sha256": "950b0c1c97ca94929c46167ac8b8c13b425546ffdb1d1ab5d22f729317ce5a41"
+    },
+    {
+      "path": "scores/ArtformScores/Certificates/OneMode5.lean",
+      "sha256": "52cd143d96538bbd4a1506981f91a8ea2af8e2fec30611ec0955546cffda5ebe"
+    },
+    {
+      "path": "scores/ArtformScores/Certificates/OneMode7.lean",
+      "sha256": "6d8bb32b5be1486fb4c01a29ab6a821a2b0b53a1e4c3e47dd06a9a7e0bb8088a"
+    },
+    {
+      "path": "scores/ArtformScores/Checkerboard.lean",
+      "sha256": "0255a1ed770b78a9d27237c3ade797291625cc20b6e5c8cddcfca2aed027016e"
+    },
+    {
+      "path": "scores/ArtformScores/Classes.lean",
+      "sha256": "59e39110fc1a42f0a3776a63bc2c683da546245b40f2580bb01c835caea5edf8"
+    },
+    {
+      "path": "scores/ArtformScores/Completeness.lean",
+      "sha256": "e7131cb5541c9a34dba5feab01223afca36d7d36829edac4aad01a08caef06b7"
+    },
+    {
+      "path": "scores/ArtformScores/Coset.lean",
+      "sha256": "9ce2389dd8a6e8121dd86b18062a8ea22fac39b92976410b061dabdc3c005252"
+    },
+    {
+      "path": "scores/ArtformScores/Euclid.lean",
+      "sha256": "d56f5d2d085834657beca9aa077298b48d6cc9d4b46aa1344ec10b062ee3f1b5"
+    },
+    {
+      "path": "scores/ArtformScores/ExtentTable.lean",
+      "sha256": "e8dd061aeba6fa7b6cd2069974454318d9214cffe8421b7f786868189379ae6e"
+    },
+    {
+      "path": "scores/ArtformScores/Extents.lean",
+      "sha256": "00a7cd9c386a626e54798d85012bf81e4658baad163ec3ad25179fd83582f3bb"
+    },
+    {
+      "path": "scores/ArtformScores/FaceLink.lean",
+      "sha256": "58f13ef2262b505aead442fd7f8ad55e40dbceb14ed7ff1489078a830b0a3b13"
+    },
+    {
+      "path": "scores/ArtformScores/KleinMap.lean",
+      "sha256": "daef3b708fc59512d8777ee1ae927c6a8e5c40dc444256218dfd71ea7fba1961"
+    },
+    {
+      "path": "scores/ArtformScores/LeapfrogClasses.lean",
+      "sha256": "25384077525aed75a227454f909d71925f9a9d346d083a6187b91739f52076f8"
+    },
+    {
+      "path": "scores/ArtformScores/LeapfrogCurve.lean",
+      "sha256": "b112f21b06cc13ae4552ff492041076e4e5db00e03a30831aa4723d528ff7df7"
+    },
+    {
+      "path": "scores/ArtformScores/LeapfrogExamples.lean",
+      "sha256": "59112bc2800ccd1070e7313d4cce47a7ddd3b2260bfe28f957167132c0915a4e"
+    },
+    {
+      "path": "scores/ArtformScores/LeapfrogPalindromes.lean",
+      "sha256": "bf471d4d180ffda47534df5e816a3a5515ef03f1d087d94b2e1884c73c512e1b"
+    },
+    {
+      "path": "scores/ArtformScores/LeapfrogUnits.lean",
+      "sha256": "b56f9a7f4a6d48e73e1b823d56627c548f78b6ac5ea87eb927f0dedcd59582b0"
+    },
+    {
+      "path": "scores/ArtformScores/Lifting.lean",
+      "sha256": "f1dac34d602621fb84cb131786a00764a0d30faf05666145c8174de7b56e8eb6"
+    },
+    {
+      "path": "scores/ArtformScores/MagicStep.lean",
+      "sha256": "311d6f11ccb42f81c97c620db8544e7b8babf3c6a334a2d9a8ab9cd1961f187d"
+    },
+    {
+      "path": "scores/ArtformScores/Meta/Ledger.lean",
+      "sha256": "b7a57bdcaa17c605497342d766093a0566280345c082e6ce89c62220e180b90f"
+    },
+    {
+      "path": "scores/ArtformScores/OneMode.lean",
+      "sha256": "6a1e3f0d2dfb50773553f668dc5e4883729651a1739b41475686b8994dff65b2"
+    },
+    {
+      "path": "scores/ArtformScores/PalindromeClasses.lean",
+      "sha256": "039e4afd2eb6da079f25253d3ac59d16014a5572a0867310971cb125bd53e823"
+    },
+    {
+      "path": "scores/ArtformScores/Readings.lean",
+      "sha256": "4bbf328628377c137bf96db4277951f26b492e51a203f23dba1e0d4d93e47e19"
+    },
+    {
+      "path": "scores/ArtformScores/Rules.lean",
+      "sha256": "54534c1096d719e0e09a0ddc1ec40c9bb03ad9871a16453a27c736b4d5247ff0"
+    },
+    {
+      "path": "scores/ArtformScores/Runs.lean",
+      "sha256": "a7cc58f127b670592296db2d074413c33022d3057fd2310f915be369ef5d865b"
+    },
+    {
+      "path": "scores/ArtformScores/Statements.lean",
+      "sha256": "fff580cc8a71ad725e83eb113daa3c57825cc30db5be2bb79cbc42b1be08251a"
+    },
+    {
+      "path": "scores/ArtformScores/Steinberg.lean",
+      "sha256": "44ef4eaac6285405efcdde2c45fa64e5c28968186cd5540a314834b6057f92bf"
+    },
+    {
+      "path": "scores/ArtformScores/StepGroups.lean",
+      "sha256": "9c137e15908e1d0e880e447df05f34cd5e923902fa500536f511c0a7c1a66b4c"
+    },
+    {
+      "path": "scores/ArtformScores/StepOrders.lean",
+      "sha256": "800587a2bc779e403dc762a1570ac05e5407865442de09b1551964bb43af5a24"
+    },
+    {
+      "path": "scores/ArtformScores/StepPresentations.lean",
+      "sha256": "06a61488166e7f1d1623557a109a7f5f854aa74276cd3b61f8ea5c4d58a49aaa"
+    },
+    {
+      "path": "scores/ArtformScores/Transport.lean",
+      "sha256": "7b44a9d17b69e0bd79080f9d87a9abf1b7f5eaca415c0248f914102ac9197017"
+    },
+    {
+      "path": "scores/ArtformScores/TwoSquares.lean",
+      "sha256": "f1b6bede52dd3588c2cd9e30c21b0c269287fa1826cb7a536ec69b9631d3ac2e"
+    },
+    {
+      "path": "scores/ArtformScores.lean",
+      "sha256": "0390a62d3d667271fd4e566e1d4686345a6917a28556f19fe5cdbf40ff4b963d"
+    }
+  ],
+  "judgements": [
+    {
+      "key": "R1",
+      "title": "Merging",
+      "verdict": "approve",
+      "reason": "Both shear-merging identities over any commutative ring; the zero-step law is also covered in R2.",
+      "lean_statement": "Artform.Scores.Statement.merging",
+      "lean_proof": "Artform.Scores.merging",
+      "proof": {
+        "path": "scores/ArtformScores/Rules.lean",
+        "line": 33
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "a6e9e07c3038f940472546ab538b4af298708f8a414cffd94c52b8e8e16d47bd",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R3",
+      "title": "Whitehead's rule",
+      "verdict": "approve",
+      "reason": "Unit-valued Whitehead matrix and both conjugations agree with the ledger, including stencil powers and signs.",
+      "lean_statement": "Artform.Scores.Statement.whiteheadRule",
+      "lean_proof": "Artform.Scores.whiteheadRule",
+      "proof": {
+        "path": "scores/ArtformScores/Rules.lean",
+        "line": 43
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "170f866c2c3678a353788884b6442d719b90dc0fd01a4ba95fc9caa3c603099b",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R4",
+      "title": "Balanced movers",
+      "verdict": "return",
+      "reason": "The product of laws is correct, but the ledger time-order word realizes diag(u^-1, u).",
+      "lean_statement": "Artform.Scores.Statement.balancedRule",
+      "lean_proof": "Artform.Scores.balancedRule",
+      "proof": {
+        "path": "scores/ArtformScores/Rules.lean",
+        "line": 55
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "finding": "J1",
+      "review_text_sha256": "f28287a97a8d9bdeb5ba7dbf4bff6925217ffdaf5b1fa3fd35e4485ffb08a8d3",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "R5",
+      "title": "Time reversal",
+      "verdict": "approve",
+      "reason": "List reversal with negated stencils gives the inverse law for every score; list syntax retains all signed words.",
+      "lean_statement": "Artform.Scores.Statement.timeReversal",
+      "lean_proof": "Artform.Scores.timeReversal",
+      "proof": {
+        "path": "scores/ArtformScores/Rules.lean",
+        "line": 64
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "5be73b0356c23e66313bedefb738a425302befd478fc6c58f212a5a4b31399ee",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R6",
+      "title": "Blocking",
+      "verdict": "approve",
+      "reason": "Restriction of scalars through a finite basis equals the realizer of the explicitly placed blocked steps.",
+      "lean_statement": "Artform.Scores.Statement.blocking",
+      "lean_proof": "Artform.Scores.blocking",
+      "proof": {
+        "path": "scores/ArtformScores/Blocking.lean",
+        "line": 216
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4.md",
+      "review_text_sha256": "a009a95f1aae188ac409a34e70604f3dfcefcfee632807dc0940f737c303c328",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R6:red-black",
+      "title": "Red-black on the blocked artform",
+      "verdict": "approve",
+      "reason": "The two kicks merge, the blocked shift exchanges the orders, and descendability implies the stated obstruction.",
+      "lean_statement": "Artform.Scores.Statement.redBlack",
+      "lean_proof": "Artform.Scores.redBlack",
+      "proof": {
+        "path": "scores/ArtformScores/Blocking.lean",
+        "line": 220
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4.md",
+      "review_text_sha256": "661c29c746f8cfbb8f37f9748e9682c1882fa8a084fd9e2fdfa87b836eef68da",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R6:cosets",
+      "title": "The coset basis of a sublattice",
+      "verdict": "approve",
+      "reason": "The unique representative hypothesis is precisely the coset partition, with the correct subgroup-ring action.",
+      "lean_statement": "Artform.Scores.Statement.cosets",
+      "lean_proof": "Artform.Scores.cosets",
+      "proof": {
+        "path": "scores/ArtformScores/Checkerboard.lean",
+        "line": 221
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4.md",
+      "review_text_sha256": "3340dbb7df34876a1c4f2bdc094ea8e2e220a26c58f576b496db1dbb0245beda",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R6:checkerboard",
+      "title": "Red-black on the checkerboard, with the face form",
+      "verdict": "approve",
+      "reason": "The plane basis, x squared, face-stencil coefficients and nonzero obstruction are all asserted with 2 invertible.",
+      "lean_statement": "Artform.Scores.Statement.checkerboardRedBlack",
+      "lean_proof": "Artform.Scores.checkerboardRedBlack",
+      "proof": {
+        "path": "scores/ArtformScores/Checkerboard.lean",
+        "line": 226
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4.md",
+      "review_text_sha256": "66281ae2201a7a5d665dd3b0e80a10482ac93a89fdf73e5ccf328b82e5069358",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T1:field",
+      "title": "One dimension, every dial",
+      "verdict": "approve",
+      "reason": "Every determinant-one Laurent matrix over every field is a score, with no extra hypothesis on its entries.",
+      "lean_statement": "Artform.Scores.Statement.everyLawIsAScore",
+      "lean_proof": "Artform.Scores.everyLawIsAScore",
+      "proof": {
+        "path": "scores/ArtformScores/Euclid.lean",
+        "line": 171
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE2.md",
+      "review_text_sha256": "ad86ed7bb0bfc496479fd4d69d58d7b53730003c581611a94ddd42c372f67ce8",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T1:prime-power",
+      "title": "One dimension, the dials Z/p^k",
+      "verdict": "approve",
+      "reason": "All prime powers are covered, including k = 0; the nilpotent reduction kernel is proved rather than assumed.",
+      "lean_statement": "Artform.Scores.Statement.everyLawIsAScorePrimePower",
+      "lean_proof": "Artform.Scores.everyLawIsAScorePrimePower",
+      "proof": {
+        "path": "scores/ArtformScores/Lifting.lean",
+        "line": 154
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE2.md",
+      "review_text_sha256": "9eee26182505fe0607d8cb7a85cdc26a4706b04bc89c41c786de2df7fdb7bac9",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T1:modulus",
+      "title": "One dimension, every dial Z/n",
+      "verdict": "approve",
+      "reason": "All positive moduli are covered through prime powers and CRT; excluding ZMod 0 correctly excludes the integer ring.",
+      "lean_statement": "Artform.Scores.Statement.everyLawIsAScoreModulus",
+      "lean_proof": "Artform.Scores.everyLawIsAScoreModulus",
+      "proof": {
+        "path": "scores/ArtformScores/CRT.lean",
+        "line": 127
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE2.md",
+      "review_text_sha256": "09058df122441eafac8405fb46283b6044273fe317df47954af94082521d4e33",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T2",
+      "title": "The index",
+      "verdict": "approve",
+      "reason": "The determinant obstruction excludes every diag(a,1) with a different from 1, including the running shift example.",
+      "lean_statement": "Artform.Scores.Statement.index",
+      "lean_proof": "Artform.Scores.index",
+      "proof": {
+        "path": "scores/ArtformScores/Rules.lean",
+        "line": 74
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "83b3f58ebbc5f441a2dcd8ba1198692a32edb3e4c83a40a2d866b02d7ba66584",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T4",
+      "title": "One mode on a prime dial",
+      "verdict": "approve",
+      "reason": "Surjectivity and equality iff equality in the presented group establish completeness for exactly the four specified primes.",
+      "lean_statement": "Artform.Scores.Statement.oneModeComplete",
+      "lean_proof": "Artform.Scores.oneModeComplete",
+      "proof": {
+        "path": "scores/ArtformScores/Completeness.lean",
+        "line": 23
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE3.md",
+      "review_text_sha256": "7b54a0463f3333ca4a47ca384b0af01ecc687a29b42e9936d722700485a4e100",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T7:invariance",
+      "title": "The class of a law",
+      "verdict": "approve",
+      "reason": "The left eigenvector and equality of ideal classes under GL processing use the actual quadratic quotient ring.",
+      "lean_statement": "Artform.Scores.Statement.classInvariance",
+      "lean_proof": "Artform.Scores.classInvariance",
+      "proof": {
+        "path": "scores/ArtformScores/Classes.lean",
+        "line": 639
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T7.md",
+      "review_text_sha256": "adb49a505c36b8bb08290dfe6f1ee0eaae19692a3ba2fce0bf1a5f9e137f2c93",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T7:trivial-class",
+      "title": "The trivial class",
+      "verdict": "approve",
+      "reason": "Both directions of trivial ideal class iff a cyclic vector are stated; the cyclic basis intertwines with the companion.",
+      "lean_statement": "Artform.Scores.Statement.trivialClass",
+      "lean_proof": "Artform.Scores.trivialClass",
+      "proof": {
+        "path": "scores/ArtformScores/Classes.lean",
+        "line": 644
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T7.md",
+      "review_text_sha256": "5fea29a884e4d9dba5271f06caf8975e21d3e865598c66d02654c32ab599e882",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T7:one-to-one",
+      "title": "One class, one law up to processing",
+      "verdict": "approve",
+      "reason": "Nonzero law ideals and the full same-class iff GL conjugacy are asserted, without requiring invertible ideals.",
+      "lean_statement": "Artform.Scores.Statement.classesOneToOne",
+      "lean_proof": "Artform.Scores.classesOneToOne",
+      "proof": {
+        "path": "scores/ArtformScores/Classes.lean",
+        "line": 650
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T7.md",
+      "review_text_sha256": "a2eb6bc02b592ebfd912f4d6e2e0f76fe9a77ae2656075b4abd941c902925e29",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T7:onto",
+      "title": "Every class is a law's",
+      "verdict": "approve",
+      "reason": "Over a PID every nonzero integral ideal occurs; denominator clearing represents all fractional ideal classes.",
+      "lean_statement": "Artform.Scores.Statement.classesOnto",
+      "lean_proof": "Artform.Scores.classesOnto",
+      "proof": {
+        "path": "scores/ArtformScores/Classes.lean",
+        "line": 656
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T7.md",
+      "review_text_sha256": "2229257bd41702775845b2140752d36ca45402cbdc69c47eb03c474036141965",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T12:reading",
+      "title": "The reading",
+      "verdict": "return",
+      "reason": "Only output invariance is stated; the submitted reading claim also requires completeness and its closed form.",
+      "lean_statement": "Artform.Scores.Statement.readingDetermines",
+      "lean_proof": "Artform.Scores.readingDetermines",
+      "proof": {
+        "path": "scores/ArtformScores/Readings.lean",
+        "line": 41
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "finding": "J3",
+      "review_text_sha256": "d41ac8ac811b9e955470d34713bc8dfcc3a9bffa73b4e7e2db7ffca2ad9a9995",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T12:palindromes",
+      "title": "Palindromes",
+      "verdict": "approve",
+      "reason": "Equal diagonal entries imply the exact reflection/inverse matrix identity, including characteristic 2.",
+      "lean_statement": "Artform.Scores.Statement.palindrome",
+      "lean_proof": "Artform.Scores.palindrome",
+      "proof": {
+        "path": "scores/ArtformScores/Readings.lean",
+        "line": 62
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "f3e88b0747645d7a5bd14541b66f844084b823e47ddda9fce081ab68a30c8eec",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13",
+      "title": "The crystallographic pulls",
+      "verdict": "approve",
+      "reason": "The orders 6, 4, 3 are exact, and pull 4 has infinite order; the other pulls are covered by T13:growth.",
+      "lean_statement": "Artform.Scores.Statement.stepOrders",
+      "lean_proof": "Artform.Scores.stepOrders",
+      "proof": {
+        "path": "scores/ArtformScores/StepOrders.lean",
+        "line": 47
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "review_text_sha256": "d3f9c7ace4fce758d76f6cb0f16c6767fe52754efe379348081a907c53e150ca",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T14",
+      "title": "The caller's cut",
+      "verdict": "return",
+      "reason": "The cut formula is correct, but the submitted cancellation iff is absent and needs nondegenerate or universal quantification.",
+      "lean_statement": "Artform.Scores.Statement.callerCut",
+      "lean_proof": "Artform.Scores.callerCut",
+      "proof": {
+        "path": "scores/ArtformScores/Caller.lean",
+        "line": 30
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE1.md",
+      "finding": "J4",
+      "review_text_sha256": "d7a2df39c7c6e35232c455f92fb4a8d74cfda91b097030e6452ba5a30104b102",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T15:methods",
+      "title": "Every method is light",
+      "verdict": "approve",
+      "reason": "The recurrence follows the actual painted permutations; pointwise walls and doubled bonds encode the interval decomposition.",
+      "lean_statement": "Artform.Scores.Statement.methodsAreLight",
+      "lean_proof": "Artform.Scores.methodsAreLight",
+      "proof": {
+        "path": "scores/ArtformScores/Bells.lean",
+        "line": 636
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "f154dfbfc82f956a74ce7181c83b6ae9735d5a928c51412679c3120a2d4643e2",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:plain-hunt",
+      "title": "Plain hunt is light in a mirror box",
+      "verdict": "approve",
+      "reason": "The fold formula, motion at walls and exact row congruence for N at least 3 express the claimed light paths and course.",
+      "lean_statement": "Artform.Scores.Statement.plainHuntIsLight",
+      "lean_proof": "Artform.Scores.plainHuntIsLight",
+      "proof": {
+        "path": "scores/ArtformScores/Bells.lean",
+        "line": 644
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "d7e7b5c5503b6758095cb490b0e903932ca1e059f812aaad481f9f7a2a22732a",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:modes",
+      "title": "The modes of the mirror box",
+      "verdict": "approve",
+      "reason": "Explicit cosine eigenvectors, independence, exhaustive eigenvalues and periodic oscillatory solutions are asserted.",
+      "lean_statement": "Artform.Scores.Statement.mirrorModes",
+      "lean_proof": "Artform.Scores.mirrorModes",
+      "proof": {
+        "path": "scores/ArtformScores/Bells.lean",
+        "line": 652
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "1e8e3bfa9ac63ecc59b74bf7e63f0985518aed435624be9fe663327aa1a1da19",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:coxeter",
+      "title": "The presentation of the bells",
+      "verdict": "approve",
+      "reason": "The actual neighbour swaps are expressive and faithful for the A-type Coxeter presentation for every positive number of positions.",
+      "lean_statement": "Artform.Scores.Statement.bellsPresentation",
+      "lean_proof": "Artform.Scores.bellsPresentation",
+      "proof": {
+        "path": "scores/ArtformScores/Bells.lean",
+        "line": 658
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "dbbde590f245a17edf92a3a2a3f7ea730ea2121b552a5a5bc5dd9f2a3c418811",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:rankin",
+      "title": "Rankin's parity",
+      "verdict": "approve",
+      "reason": "The permutation condition, coset choice invariant, sign formula and sign of a Hamiltonian cycle match the source.",
+      "lean_statement": "Artform.Scores.Statement.rankinParity",
+      "lean_proof": "Artform.Scores.rankinParity",
+      "proof": {
+        "path": "scores/ArtformScores/Extents.lean",
+        "line": 570
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "1f84528bee71ad1f58c521bf29d0f8dd3e96cec66ef23e7ce5d39b462cb53912",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:lifting",
+      "title": "The lifting lemma",
+      "verdict": "approve",
+      "reason": "The quotient permutation is both well-defined on every coset and an extent, under the stated normal subgroup hypothesis.",
+      "lean_statement": "Artform.Scores.Statement.extentLifting",
+      "lean_proof": "Artform.Scores.extentLifting",
+      "proof": {
+        "path": "scores/ArtformScores/Extents.lean",
+        "line": 575
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "6e64d8c21e10fa790b158f3f9bcc20a1b25bac6c234039fd17ff9f22c798134b",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:fibonacci",
+      "title": "The Fibonacci rule",
+      "verdict": "approve",
+      "reason": "Every odd prime is covered for SL and the center quotient PSL; fibRank is the least positive Fibonacci zero. A positive witness exists in ExtentTable.some7.",
+      "lean_statement": "Artform.Scores.Statement.fibonacciRule",
+      "lean_proof": "Artform.Scores.fibonacciRule",
+      "proof": {
+        "path": "scores/ArtformScores/Extents.lean",
+        "line": 580
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "7de24d7afb707c3934aee9b37457bdba0c9ceadefe4014bb3be4b364004d6141",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:back-step",
+      "title": "One back-step",
+      "verdict": "return",
+      "reason": "The translation is faithful, but its Non-vacuity section only excludes a one-back-step example; it supplies no positive witness.",
+      "lean_statement": "Artform.Scores.Statement.oneBackStep",
+      "lean_proof": "Artform.Scores.oneBackStep",
+      "proof": {
+        "path": "scores/ArtformScores/BackSteps.lean",
+        "line": 429
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "finding": "J9",
+      "review_text_sha256": "aef444b017f07b5d9ff03ad4d0d53c7872f304b795956eaae992863d95ba03b7",
+      "proof_checked": true,
+      "fidelity_verdict": "approve",
+      "package_issue": "missing positive non-vacuity witness"
+    },
+    {
+      "key": "T15:cat-map",
+      "title": "Kicks with back-moves never ring",
+      "verdict": "approve",
+      "reason": "The claimed matrix and both nonexistence results hold for every n at least 3, with composite PSL explicitly the quotient by signs.",
+      "lean_statement": "Artform.Scores.Statement.catMapNeverRings",
+      "lean_proof": "Artform.Scores.catMapNeverRings",
+      "proof": {
+        "path": "scores/ArtformScores/BackSteps.lean",
+        "line": 434
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "57d978e2489977ac7ac67755a5456cbacd9ffe4b2e2f69929a75876e3e18cb7e",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:balance",
+      "title": "The balance of back-steps",
+      "verdict": "approve",
+      "reason": "The new cardinality identity counts actual exceptional steps and targets on every invariant union of cosets.",
+      "lean_statement": "Artform.Scores.Statement.backStepBalance",
+      "lean_proof": "Artform.Scores.backStepBalance",
+      "proof": {
+        "path": "scores/ArtformScores/ExtentTable.lean",
+        "line": 999
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "b974c51655a5351cf7ecd58f4cb5b5d21c3ef69ab46a11a2944e1791ecc90d61",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:two-squares",
+      "title": "The two squares need two back-turns",
+      "verdict": "approve",
+      "reason": "The concrete corner permutations define the group; exact orders and existence/minimality of two back-turns are proved.",
+      "lean_statement": "Artform.Scores.Statement.twoSquaresBackTurns",
+      "lean_proof": "Artform.Scores.twoSquaresBackTurns",
+      "proof": {
+        "path": "scores/ArtformScores/ExtentTable.lean",
+        "line": 1012
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "138f7ac5ac8f2d1be64f5e9839e0d75a5bdc57b84f9be266719009a4af03d411",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:fewest",
+      "title": "The fewest back-steps",
+      "verdict": "approve",
+      "reason": "The minima include existence; n = 8 is correctly left undecided at zero while excluding exactly one and two.",
+      "lean_statement": "Artform.Scores.Statement.fewestBackSteps",
+      "lean_proof": "Artform.Scores.fewestBackSteps",
+      "proof": {
+        "path": "scores/ArtformScores/ExtentTable.lean",
+        "line": 1027
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "9bab8beb0cf3def5e003b18a66bd6662405f26821aed0026d9322efe66e1f57e",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:table",
+      "title": "The table of forward extents",
+      "verdict": "approve",
+      "reason": "The counts are of Hamiltonian-cycle permutations, not words with a chosen origin; all listed existence and nonexistence clauses are explicit.",
+      "lean_statement": "Artform.Scores.Statement.forwardExtentTable",
+      "lean_proof": "Artform.Scores.forwardExtentTable",
+      "proof": {
+        "path": "scores/ArtformScores/ExtentTable.lean",
+        "line": 1054
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "776d0b7b73ff3c2ccbd07577301817c9526835e99034059552f276d3b2cebd1a",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T15:transport",
+      "title": "Ringing on a lattice only transports",
+      "verdict": "approve",
+      "reason": "Shift-equivariance forces a finite channel permutation with channelwise translations after a positive power, in any cell group.",
+      "lean_statement": "Artform.Scores.Statement.permutationLawsTransport",
+      "lean_proof": "Artform.Scores.permutationLawsTransport",
+      "proof": {
+        "path": "scores/ArtformScores/Transport.lean",
+        "line": 60
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T15.md",
+      "review_text_sha256": "bd2f9b0fc9cecdd6a307aacac02cebd226af4a5b1c09ca018b5dfcff9c548604",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:growth",
+      "title": "The tick's orders and growth",
+      "verdict": "approve",
+      "reason": "The full finite-order iff, both parabolic power formulas and hyperbolic trace growth match Theorem Q.",
+      "lean_statement": "Artform.Scores.Statement.tickGrowth",
+      "lean_proof": "Artform.Scores.tickGrowth",
+      "proof": {
+        "path": "scores/ArtformScores/StepGroups.lean",
+        "line": 1053
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "845ff79b708f2e4d18759476c9a3e5518dfd907396f16c5b3adfec7b864b72f2",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:step-groups",
+      "title": "The step groups",
+      "verdict": "approve",
+      "reason": "The actual generated subgroups, congruence conditions, equality criterion and finite/infinite indices match the table.",
+      "lean_statement": "Artform.Scores.Statement.stepGroups",
+      "lean_proof": "Artform.Scores.stepGroups",
+      "proof": {
+        "path": "scores/ArtformScores/StepGroups.lean",
+        "line": 1062
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "70fe82878d2c8106d0df599f31743f055f1d95deb91774aa7b534da05de258db",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:free",
+      "title": "The free step groups",
+      "verdict": "approve",
+      "reason": "Injectivity of the free-group lift expresses freeness on the specified generators, including every real pull at least 4.",
+      "lean_statement": "Artform.Scores.Statement.stepGroupsFree",
+      "lean_proof": "Artform.Scores.stepGroupsFree",
+      "proof": {
+        "path": "scores/ArtformScores/StepGroups.lean",
+        "line": 1082
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "cdbc7e41c935016c89b3e3a823e1b9cf76eee666c6f908acb7382fa94498a497",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:regular-map",
+      "title": "The regular map of a dial",
+      "verdict": "approve",
+      "reason": "Explicit determinant-defined incidences, directed-edge torsor, counts, degree, triangles and action preservation match the combinatorial map.",
+      "lean_statement": "Artform.Scores.Statement.regularMap",
+      "lean_proof": "Artform.Scores.regularMap",
+      "proof": {
+        "path": "scores/ArtformScores/KleinMap.lean",
+        "line": 1183
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "52cf0d8eeaf855b4bec5b8d066d2a849d6e31fd1a7bb7a03098f678bb40134e0",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:platonic",
+      "title": "The tetrahedron, the octahedron and the icosahedron",
+      "verdict": "return",
+      "reason": "The numerical counts are proved; no identification with the three named incidence structures is stated.",
+      "lean_statement": "Artform.Scores.Statement.platonicSolids",
+      "lean_proof": "Artform.Scores.platonicSolids",
+      "proof": {
+        "path": "scores/ArtformScores/KleinMap.lean",
+        "line": 1218
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "finding": "J7",
+      "review_text_sha256": "0930e34a372074f0aaf571175393d824851a676bc29d8ad5349c71cbd1f64507",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T13:turns",
+      "title": "The steps are turns",
+      "verdict": "approve",
+      "reason": "The state action and determinant formulas give the exact edge test; the complete positive-modulus unit-square list includes the harmless zero-ring dial.",
+      "lean_statement": "Artform.Scores.Statement.stepsAreTurns",
+      "lean_proof": "Artform.Scores.stepsAreTurns",
+      "proof": {
+        "path": "scores/ArtformScores/KleinMap.lean",
+        "line": 1233
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "01689512054c1eed810d66f94446c27242f3ddd950c288a5df7a17bc4d0c79ea",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:cells",
+      "title": "The cells that a tick fixes",
+      "verdict": "approve",
+      "reason": "Trace obstructions and the explicit fixed sets give the tick criterion; the exploding-mode exclusions and four orders are included.",
+      "lean_statement": "Artform.Scores.Statement.tickCells",
+      "lean_proof": "Artform.Scores.tickCells",
+      "proof": {
+        "path": "scores/ArtformScores/KleinMap.lean",
+        "line": 1238
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "d556154e9e341bf69b46a9d10376c8953d062510cade6f7972ad92a3c92275ee",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:two-squares",
+      "title": "The two squares are the projective line over F₅",
+      "verdict": "approve",
+      "reason": "The explicit labelling conjugates the turns into the projective action; generation, S5, uniqueness and square-determinant clauses are included.",
+      "lean_statement": "Artform.Scores.Statement.twoSquaresProjective",
+      "lean_proof": "Artform.Scores.twoSquaresProjective",
+      "proof": {
+        "path": "scores/ArtformScores/TwoSquares.lean",
+        "line": 554
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "6726bb067b3399c825415a570742e6656fbc97e5b133885d1afe909010879462",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "R2",
+      "title": "Commutation",
+      "verdict": "return",
+      "reason": "The positive matrix commutator is correct; the ledger score commutator needs the opposite sign.",
+      "lean_statement": "Artform.Scores.Statement.steinbergRules",
+      "lean_proof": "Artform.Scores.steinbergRules'",
+      "proof": {
+        "path": "scores/ArtformScores/Steinberg.lean",
+        "line": 217
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "finding": "J2",
+      "review_text_sha256": "109deb84447b656135b65a1f590d28f56dae5587f7324ab6d9d1ad4e265cd784",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T1:fewest",
+      "title": "The fewest steps",
+      "verdict": "approve",
+      "reason": "At most two steps is the correct treatment of identities and shears; the nonzero Strang coefficient forces at least three.",
+      "lean_statement": "Artform.Scores.Statement.fewestSteps",
+      "lean_proof": "Artform.Scores.fewestSteps",
+      "proof": {
+        "path": "scores/ArtformScores/Steinberg.lean",
+        "line": 222
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "review_text_sha256": "84235e0e19e0b3b28bd94e526e7075f3d31af9ec00855327e0aa4abd80b77d47",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T2:group",
+      "title": "The index as a group",
+      "verdict": "return",
+      "reason": "The group statement is restricted to fields; the ledger also covers composite dials, whose units need not be monomials.",
+      "lean_statement": "Artform.Scores.Statement.indexGroup",
+      "lean_proof": "Artform.Scores.indexGroup",
+      "proof": {
+        "path": "scores/ArtformScores/Steinberg.lean",
+        "line": 241
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "finding": "J5",
+      "review_text_sha256": "ffd5d15572b242b63e704c05abfe5b5ace07a13cd550d5a00a12f6b99fe691df",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T11",
+      "title": "Face and link",
+      "verdict": "return",
+      "reason": "Intertwining and ideal inclusions do not establish the claimed normalization/gluing map; arbitrary scores need not be glued.",
+      "lean_statement": "Artform.Scores.Statement.faceAndLink",
+      "lean_proof": "Artform.Scores.faceAndLink",
+      "proof": {
+        "path": "scores/ArtformScores/FaceLink.lean",
+        "line": 112
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "finding": "J6",
+      "review_text_sha256": "8236403c7fe0659cdd9de2989b213891e8633e67d4c3fb3e8ef990b6e02a2533",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T12:criterion",
+      "title": "The criterion for palindromes",
+      "verdict": "approve",
+      "reason": "Both directions use an invertible reversing matrix with square negative determinant, correcting the old missing square condition.",
+      "lean_statement": "Artform.Scores.Statement.palindromeCriterion",
+      "lean_proof": "Artform.Scores.palindromeCriterion",
+      "proof": {
+        "path": "scores/ArtformScores/PalindromeClasses.lean",
+        "line": 350
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "review_text_sha256": "ece87bd036027ab187f1991b73c7fca8d34257204a2809e35c99848c0d030dd5",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T14:rules",
+      "title": "The caller's rule decides the cancellation",
+      "verdict": "approve",
+      "reason": "The three Boolean shares and their exact mean cuts are proved; numerical convergence orders are outside this entry.",
+      "lean_statement": "Artform.Scores.Statement.callerRules",
+      "lean_proof": "Artform.Scores.callerRules",
+      "proof": {
+        "path": "scores/ArtformScores/Callers.lean",
+        "line": 96
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "review_text_sha256": "b8c1390e790eb303c6dc0943d04e3b1b69f2b8d37b2742b83aee87d404747435",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T14:cue",
+      "title": "One cue",
+      "verdict": "approve",
+      "reason": "The indicator/shift commutation iff is precise; it distinguishes uniform sets from noninvariant coin outcomes without claiming every random outcome fails.",
+      "lean_statement": "Artform.Scores.Statement.oneCue",
+      "lean_proof": "Artform.Scores.oneCue",
+      "proof": {
+        "path": "scores/ArtformScores/Callers.lean",
+        "line": 115
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "review_text_sha256": "e3780e289ad28e9c3693ff3d56c7a96462ac3545505f30ef1bd393868a453b7c",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T16",
+      "title": "The duet",
+      "verdict": "approve",
+      "reason": "The uniform finite counts and Cartesian-source constancy theorem formalize the shared-cue claim; phrase legality remains in the textbook library.",
+      "lean_statement": "Artform.Scores.Statement.duet",
+      "lean_proof": "Artform.Scores.duet",
+      "proof": {
+        "path": "scores/ArtformScores/Callers.lean",
+        "line": 120
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-REST.md",
+      "review_text_sha256": "baadf8e8e55c21acf2b1f80fa37a70fb4f4982de81eb8461d3e07946b071b68b",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:curve",
+      "title": "The curve of the leapfrog phase",
+      "verdict": "return",
+      "reason": "The parametrization identities are proved; nodality, uniqueness of the singularity and the normalization claim are not stated.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogCurve",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogCurve",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogClasses.lean",
+        "line": 1695
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "finding": "J8",
+      "review_text_sha256": "7c7615984d40273aab48b7ab492166f5c8fb5d17ef0c8ceaa7285ff98d2cace4",
+      "proof_checked": true,
+      "fidelity_verdict": "return"
+    },
+    {
+      "key": "T8:classes",
+      "title": "The classes of the leapfrog phase",
+      "verdict": "approve",
+      "reason": "The classification is onto and faithful for processing, with zero-mode, cyclic-vector, reversal and explicit representative values pinning the map.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogClasses",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogClasses",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogClasses.lean",
+        "line": 1763
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "10839ac5cea3e0e7a6c3ef823eb3875339b88f870b533c337bebc235388baeea",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:count",
+      "title": "The count of the classes",
+      "verdict": "approve",
+      "reason": "The count is of the quotient of all laws of the phase, with the split/nonsplit sizes and the sharp gluing-subgroup bound.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogCount",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogCount",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogClasses.lean",
+        "line": 1797
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "41a42675f607e4e4d910e4d77ab7a24ae80c1d5fac6b3f170b1a3423ff160368",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:split",
+      "title": "The split node",
+      "verdict": "approve",
+      "reason": "Evaluation at the chosen square root is the explicit group isomorphism and carries the gluing subgroup to the specified generators.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogSplit",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogSplit",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogClasses.lean",
+        "line": 1825
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "431c2b611bb231df1442b3745df989e28760569932ee867c6dd10ded93ebc038",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:schemes",
+      "title": "The schemes of the leapfrog phase",
+      "verdict": "approve",
+      "reason": "All four concrete scores and both face/link forms have the asserted phase and processing representatives.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogSchemes",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogSchemes",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogClasses.lean",
+        "line": 1837
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "9d0c0c913aa58501e24ef10ca8d243345daf8e4595e0d55aa3b75a0ffc99d1c3",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:magic",
+      "title": "The magic step",
+      "verdict": "approve",
+      "reason": "Every law has the triangular normal form; the complete invariant is pinned by both crossing values, with surjectivity and all three exceptional classes.",
+      "lean_statement": "Artform.Scores.Statement.magicClasses",
+      "lean_proof": "Artform.Scores.Leapfrog.magicClasses",
+      "proof": {
+        "path": "scores/ArtformScores/MagicStep.lean",
+        "line": 675
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "cda255e4cf38d725bd6d8b6c1ed8e6fabae520e44775cf6a411fe637ca5afc73",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:magic-count",
+      "title": "The count at the magic step",
+      "verdict": "approve",
+      "reason": "The cardinality of all processing classes at the magic phase is (field size - 1)/2 + 3.",
+      "lean_statement": "Artform.Scores.Statement.magicCount",
+      "lean_proof": "Artform.Scores.Leapfrog.magicCount",
+      "proof": {
+        "path": "scores/ArtformScores/MagicStep.lean",
+        "line": 694
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "8ab3eb8709c0fe8b980357e62d1fd5d9575f943b878257806478543f42043979",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T8:magic-schemes",
+      "title": "The schemes at the magic step",
+      "verdict": "approve",
+      "reason": "Cyclic vectors, both zero-mode tests and the diagonal split movers place the concrete schemes in the claimed classes.",
+      "lean_statement": "Artform.Scores.Statement.magicSchemes",
+      "lean_proof": "Artform.Scores.Leapfrog.magicSchemes",
+      "proof": {
+        "path": "scores/ArtformScores/MagicStep.lean",
+        "line": 713
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "17da6244781e0fa33a4943c6111f77aba5e3f29e700f686f48bd380bdbc787c8",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T12:leapfrog-palindromes",
+      "title": "The palindromes of the leapfrog phase",
+      "verdict": "approve",
+      "reason": "The complete palindrome-existence iff lists exactly the unglued, trivial and square-root/kappa alternatives, with actual processing.",
+      "lean_statement": "Artform.Scores.Statement.leapfrogPalindromes",
+      "lean_proof": "Artform.Scores.Leapfrog.leapfrogPalindromes",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogPalindromes.lean",
+        "line": 891
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "6a246a0d86bc9d305f72c8abd5812120d0d83cdc665d2057bde99529afffae96",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T12:gap",
+      "title": "A fixed class without a palindrome",
+      "verdict": "approve",
+      "reason": "Each of the fourteen concrete laws has the right phase, is processed into its inverse, and is processed from no equal-diagonal law.",
+      "lean_statement": "Artform.Scores.Statement.palindromeGap",
+      "lean_proof": "Artform.Scores.Leapfrog.palindromeGap",
+      "proof": {
+        "path": "scores/ArtformScores/LeapfrogPalindromes.lean",
+        "line": 1097
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T8.md",
+      "review_text_sha256": "79ca839d0ea2871c5d9eb50ea8554c1a2108b12ba7086be20fd0722fce3d165d",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:presentations",
+      "title": "The presentations of the step groups",
+      "verdict": "approve",
+      "reason": "The normal-closure iff uses exactly the table relators; the two congruence-group isomorphisms are also stated.",
+      "lean_statement": "Artform.Scores.Statement.stepPresentations",
+      "lean_proof": "Artform.Scores.StepGroup.stepPresentations",
+      "proof": {
+        "path": "scores/ArtformScores/StepPresentations.lean",
+        "line": 861
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "2b00ab39eb524341bd5e27b2e5bf7255b3f066f8f5bd2151580dc3e37136ea1d",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    },
+    {
+      "key": "T13:psl-a5",
+      "title": "PSL(2, 5) is the alternating group",
+      "verdict": "approve",
+      "reason": "The sign quotient of the actual SL(2,5) is isomorphic to the alternating group on five letters.",
+      "lean_statement": "Artform.Scores.Statement.pslAlternating",
+      "lean_proof": "Artform.Scores.pslAlternating",
+      "proof": {
+        "path": "scores/ArtformScores/TwoSquares.lean",
+        "line": 565
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "handoff": "plan/HANDOFF-SCORES-PHASE4-T13.md",
+      "review_text_sha256": "c5af96205bc9b6c1ef83c2a5d20a673e11ffb57feeaa829df0031b0127acb056",
+      "proof_checked": true,
+      "fidelity_verdict": "approve"
+    }
+  ]
+}

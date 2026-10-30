@@ -1,0 +1,392 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "fec7898475642ca74e829911ab7d71e3a4473df8",
+  "commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 3.55,
+      "stdout": "build/judge-build.log",
+      "stderr": "build/judge-build.stderr.log"
+    },
+    {
+      "name": "textbook-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.4,
+      "stdout": "build/report.json",
+      "stderr": "build/judge-textbook-report.stderr.log"
+    },
+    {
+      "name": "textbook-status",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.29,
+      "stdout": "build/judge-textbook-status.log",
+      "stderr": "build/judge-textbook-status.stderr.log"
+    },
+    {
+      "name": "tree-identity",
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.24,
+      "stdout": "build/judge-tree-identity.log",
+      "stderr": "build/judge-tree-identity.stderr.log"
+    },
+    {
+      "name": "ledger-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.33,
+      "stdout": "build/ledger-report.json",
+      "stderr": "build/judge-ledger-report.stderr.log"
+    },
+    {
+      "name": "ledger-status",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/judge-ledger-status.log",
+      "stderr": "build/judge-ledger-status.stderr.log"
+    },
+    {
+      "name": "one-mode-certificates",
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19,
+      "stdout": "build/judge-one-mode-certificates.log",
+      "stderr": "build/judge-one-mode-certificates.stderr.log"
+    },
+    {
+      "name": "extent-certificates",
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.2,
+      "stdout": "build/judge-extent-certificates.log",
+      "stderr": "build/judge-extent-certificates.stderr.log"
+    },
+    {
+      "name": "review-regressions",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "stdout": "build/judge-review-regressions.log",
+      "stderr": "build/judge-review-regressions.stderr.log"
+    },
+    {
+      "name": "judge-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        "build/JudgeChecks.olean",
+        "scores/review/JudgeChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.66,
+      "stdout": "build/judge-judge-witnesses.log",
+      "stderr": "build/judge-judge-witnesses.stderr.log"
+    },
+    {
+      "name": "diff-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0,
+      "stdout": "build/judge-diff-whitespace.log",
+      "stderr": "build/judge-diff-whitespace.stderr.log"
+    }
+  ],
+  "kernel_replay": {
+    "complete": true,
+    "module_count": 41,
+    "command_template": [
+      "lake",
+      "env",
+      "leanchecker",
+      "MODULE"
+    ],
+    "scope": "Replay each scores source module against its imported environment; not a fresh Mathlib replay or an independent kernel implementation. The root ArtformScores.lean contains imports only.",
+    "results": [
+      {
+        "module": "ArtformScores.BackSteps",
+        "exit_code": 0,
+        "seconds": 28.73
+      },
+      {
+        "module": "ArtformScores.Basic",
+        "exit_code": 0,
+        "seconds": 5.68
+      },
+      {
+        "module": "ArtformScores.Bells",
+        "exit_code": 0,
+        "seconds": 8.13
+      },
+      {
+        "module": "ArtformScores.Blocking",
+        "exit_code": 0,
+        "seconds": 5.58
+      },
+      {
+        "module": "ArtformScores.CRT",
+        "exit_code": 0,
+        "seconds": 5.26
+      },
+      {
+        "module": "ArtformScores.Caller",
+        "exit_code": 0,
+        "seconds": 5.22
+      },
+      {
+        "module": "ArtformScores.Callers",
+        "exit_code": 0,
+        "seconds": 5.21
+      },
+      {
+        "module": "ArtformScores.Certificates.Extents",
+        "exit_code": 0,
+        "seconds": 5.22
+      },
+      {
+        "module": "ArtformScores.Certificates.OneMode11",
+        "exit_code": 0,
+        "seconds": 9.1
+      },
+      {
+        "module": "ArtformScores.Certificates.OneMode13",
+        "exit_code": 0,
+        "seconds": 12.55
+      },
+      {
+        "module": "ArtformScores.Certificates.OneMode5",
+        "exit_code": 0,
+        "seconds": 5.37
+      },
+      {
+        "module": "ArtformScores.Certificates.OneMode7",
+        "exit_code": 0,
+        "seconds": 5.89
+      },
+      {
+        "module": "ArtformScores.Checkerboard",
+        "exit_code": 0,
+        "seconds": 5.42
+      },
+      {
+        "module": "ArtformScores.Classes",
+        "exit_code": 0,
+        "seconds": 5.65
+      },
+      {
+        "module": "ArtformScores.Completeness",
+        "exit_code": 0,
+        "seconds": 5.22
+      },
+      {
+        "module": "ArtformScores.Coset",
+        "exit_code": 0,
+        "seconds": 5.14
+      },
+      {
+        "module": "ArtformScores.Euclid",
+        "exit_code": 0,
+        "seconds": 5.25
+      },
+      {
+        "module": "ArtformScores.ExtentTable",
+        "exit_code": 0,
+        "seconds": 167.11
+      },
+      {
+        "module": "ArtformScores.Extents",
+        "exit_code": 0,
+        "seconds": 5.43
+      },
+      {
+        "module": "ArtformScores.FaceLink",
+        "exit_code": 0,
+        "seconds": 5.42
+      },
+      {
+        "module": "ArtformScores.KleinMap",
+        "exit_code": 0,
+        "seconds": 7.27
+      },
+      {
+        "module": "ArtformScores.LeapfrogClasses",
+        "exit_code": 0,
+        "seconds": 8.45
+      },
+      {
+        "module": "ArtformScores.LeapfrogCurve",
+        "exit_code": 0,
+        "seconds": 7.84
+      },
+      {
+        "module": "ArtformScores.LeapfrogExamples",
+        "exit_code": 0,
+        "seconds": 5.17
+      },
+      {
+        "module": "ArtformScores.LeapfrogPalindromes",
+        "exit_code": 0,
+        "seconds": 8.74
+      },
+      {
+        "module": "ArtformScores.LeapfrogUnits",
+        "exit_code": 0,
+        "seconds": 5.53
+      },
+      {
+        "module": "ArtformScores.Lifting",
+        "exit_code": 0,
+        "seconds": 5.29
+      },
+      {
+        "module": "ArtformScores.MagicStep",
+        "exit_code": 0,
+        "seconds": 5.57
+      },
+      {
+        "module": "ArtformScores.Meta.Ledger",
+        "exit_code": 0,
+        "seconds": 3.73
+      },
+      {
+        "module": "ArtformScores.OneMode",
+        "exit_code": 0,
+        "seconds": 5.46
+      },
+      {
+        "module": "ArtformScores.PalindromeClasses",
+        "exit_code": 0,
+        "seconds": 5.49
+      },
+      {
+        "module": "ArtformScores.Readings",
+        "exit_code": 0,
+        "seconds": 5.23
+      },
+      {
+        "module": "ArtformScores.Rules",
+        "exit_code": 0,
+        "seconds": 5.4
+      },
+      {
+        "module": "ArtformScores.Runs",
+        "exit_code": 0,
+        "seconds": 5.73
+      },
+      {
+        "module": "ArtformScores.Statements",
+        "exit_code": 0,
+        "seconds": 5.37
+      },
+      {
+        "module": "ArtformScores.Steinberg",
+        "exit_code": 0,
+        "seconds": 5.49
+      },
+      {
+        "module": "ArtformScores.StepGroups",
+        "exit_code": 0,
+        "seconds": 6.22
+      },
+      {
+        "module": "ArtformScores.StepOrders",
+        "exit_code": 0,
+        "seconds": 5.39
+      },
+      {
+        "module": "ArtformScores.StepPresentations",
+        "exit_code": 0,
+        "seconds": 5.81
+      },
+      {
+        "module": "ArtformScores.Transport",
+        "exit_code": 0,
+        "seconds": 5.28
+      },
+      {
+        "module": "ArtformScores.TwoSquares",
+        "exit_code": 0,
+        "seconds": 25.83
+      }
+    ]
+  },
+  "proof_summary": {
+    "numbered_statements": 63,
+    "exact_named_proofs_with_matching_labels": 63,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "approved": 54,
+    "returned": 9,
+    "original_lean_sources_unchanged": true,
+    "verdicts_match_manifest": true,
+    "regression_tests": 17
+  },
+  "sha256": {
+    "scores/manifest.toml": "7acc19ee55af168f3a60db5d84b4738e3b1475e27d33f7336d34fa23dad80f8f",
+    "scores/STATUS.md": "decdf749fecd38bc22ef785b2119366d5474907ffc9bb85d673f4975bd0c3645",
+    "scripts/ledger_status.py": "1a82f6d069c0f7fb9e2dcaeafefd83a70e73ac4ba8a6c8fa0da9bdd1d5ca6c40",
+    "scripts/tests/test_ledger_review.py": "2137afc202ecab3a1009c6cc071c6bf0f2c56e0b24db98c1690ed0908b4e7a79",
+    "scores/review/JudgeChecks.lean": "3b7a590e66d8c32e67eb1398bd092e9d064778b6db5f932b096644aabcd53e1b",
+    "scores/review/judgements-2026-10-30.json": "f71bee620db74fa00faa9f3010dc5be4706b2cb77252dd5081c848e7db9b5f30",
+    "scores/review/audit-2026-10-30.md": "0f2ae617acfb04662bd36dc18f45ad75156fccb7d089a37cb8658c64e03dc188",
+    "build/ledger-report.json": "aa8e8d5f0cd6fd1a20702518968d690b980d4ed4820dbe5beb76a817130cfa0d",
+    "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a"
+  }
+}

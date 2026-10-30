@@ -1,0 +1,67 @@
+# Review log of the algebra of scores
+
+One line per verdict. Approvals are written by `scripts/ledger_status.py --approve`; returns cite the independent audit.
+
+- 2026-10-30: `R1` approved as `Artform.Scores.Statement.merging` (text a6e9e07c3038)
+- 2026-10-30: `R3` approved as `Artform.Scores.Statement.whiteheadRule` (text 170f866c2c36)
+- 2026-10-30: `R5` approved as `Artform.Scores.Statement.timeReversal` (text 5be73b0356c2)
+- 2026-10-30: `R6` approved as `Artform.Scores.Statement.blocking` (text a009a95f1aae)
+- 2026-10-30: `R6:red-black` approved as `Artform.Scores.Statement.redBlack` (text 661c29c746f8)
+- 2026-10-30: `R6:cosets` approved as `Artform.Scores.Statement.cosets` (text 3340dbb7df34)
+- 2026-10-30: `R6:checkerboard` approved as `Artform.Scores.Statement.checkerboardRedBlack` (text 66281ae2201a)
+- 2026-10-30: `T1:field` approved as `Artform.Scores.Statement.everyLawIsAScore` (text ad86ed7bb0bf)
+- 2026-10-30: `T1:prime-power` approved as `Artform.Scores.Statement.everyLawIsAScorePrimePower` (text 9eee26182505)
+- 2026-10-30: `T1:modulus` approved as `Artform.Scores.Statement.everyLawIsAScoreModulus` (text 09058df12244)
+- 2026-10-30: `T2` approved as `Artform.Scores.Statement.index` (text 83b3f58ebbc5)
+- 2026-10-30: `T4` approved as `Artform.Scores.Statement.oneModeComplete` (text 7b54a0463f33)
+- 2026-10-30: `T7:invariance` approved as `Artform.Scores.Statement.classInvariance` (text adb49a505c36)
+- 2026-10-30: `T7:trivial-class` approved as `Artform.Scores.Statement.trivialClass` (text 5fea29a884e4)
+- 2026-10-30: `T7:one-to-one` approved as `Artform.Scores.Statement.classesOneToOne` (text a2eb6bc02b59)
+- 2026-10-30: `T7:onto` approved as `Artform.Scores.Statement.classesOnto` (text 2229257bd417)
+- 2026-10-30: `T12:palindromes` approved as `Artform.Scores.Statement.palindrome` (text f3e88b074764)
+- 2026-10-30: `T13` approved as `Artform.Scores.Statement.stepOrders` (text d3f9c7ace4fc)
+- 2026-10-30: `T15:methods` approved as `Artform.Scores.Statement.methodsAreLight` (text f154dfbfc82f)
+- 2026-10-30: `T15:plain-hunt` approved as `Artform.Scores.Statement.plainHuntIsLight` (text d7e7b5c5503b)
+- 2026-10-30: `T15:modes` approved as `Artform.Scores.Statement.mirrorModes` (text 1e8e3bfa9ac6)
+- 2026-10-30: `T15:coxeter` approved as `Artform.Scores.Statement.bellsPresentation` (text dbbde590f245)
+- 2026-10-30: `T15:rankin` approved as `Artform.Scores.Statement.rankinParity` (text 1f84528bee71)
+- 2026-10-30: `T15:lifting` approved as `Artform.Scores.Statement.extentLifting` (text 6e64d8c21e10)
+- 2026-10-30: `T15:fibonacci` approved as `Artform.Scores.Statement.fibonacciRule` (text 7de24d7afb70)
+- 2026-10-30: `T15:cat-map` approved as `Artform.Scores.Statement.catMapNeverRings` (text 57d978e24899)
+- 2026-10-30: `T15:balance` approved as `Artform.Scores.Statement.backStepBalance` (text b974c51655a5)
+- 2026-10-30: `T15:two-squares` approved as `Artform.Scores.Statement.twoSquaresBackTurns` (text 138f7ac5ac8f)
+- 2026-10-30: `T15:fewest` approved as `Artform.Scores.Statement.fewestBackSteps` (text 9bab8beb0cf3)
+- 2026-10-30: `T15:table` approved as `Artform.Scores.Statement.forwardExtentTable` (text 776d0b7b73ff)
+- 2026-10-30: `T15:transport` approved as `Artform.Scores.Statement.permutationLawsTransport` (text bd2f9b0fc9ce)
+- 2026-10-30: `T13:growth` approved as `Artform.Scores.Statement.tickGrowth` (text 845ff79b708f)
+- 2026-10-30: `T13:step-groups` approved as `Artform.Scores.Statement.stepGroups` (text 70fe82878d2c)
+- 2026-10-30: `T13:free` approved as `Artform.Scores.Statement.stepGroupsFree` (text cdbc7e41c935)
+- 2026-10-30: `T13:regular-map` approved as `Artform.Scores.Statement.regularMap` (text 52cf0d8eeaf8)
+- 2026-10-30: `T13:turns` approved as `Artform.Scores.Statement.stepsAreTurns` (text 01689512054c)
+- 2026-10-30: `T13:cells` approved as `Artform.Scores.Statement.tickCells` (text d556154e9e34)
+- 2026-10-30: `T13:two-squares` approved as `Artform.Scores.Statement.twoSquaresProjective` (text 6726bb067b33)
+- 2026-10-30: `T1:fewest` approved as `Artform.Scores.Statement.fewestSteps` (text 84235e0e19e0)
+- 2026-10-30: `T12:criterion` approved as `Artform.Scores.Statement.palindromeCriterion` (text ece87bd03602)
+- 2026-10-30: `T14:rules` approved as `Artform.Scores.Statement.callerRules` (text b8c1390e790e)
+- 2026-10-30: `T14:cue` approved as `Artform.Scores.Statement.oneCue` (text e3780e289ad2)
+- 2026-10-30: `T16` approved as `Artform.Scores.Statement.duet` (text baadf8e8e55c)
+- 2026-10-30: `T8:classes` approved as `Artform.Scores.Statement.leapfrogClasses` (text 10839ac5cea3)
+- 2026-10-30: `T8:count` approved as `Artform.Scores.Statement.leapfrogCount` (text 41a42675f607)
+- 2026-10-30: `T8:split` approved as `Artform.Scores.Statement.leapfrogSplit` (text 431c2b611bb2)
+- 2026-10-30: `T8:schemes` approved as `Artform.Scores.Statement.leapfrogSchemes` (text 9d0c0c913aa5)
+- 2026-10-30: `T8:magic` approved as `Artform.Scores.Statement.magicClasses` (text cda255e4cf38)
+- 2026-10-30: `T8:magic-count` approved as `Artform.Scores.Statement.magicCount` (text 8ab3eb8709c0)
+- 2026-10-30: `T8:magic-schemes` approved as `Artform.Scores.Statement.magicSchemes` (text 17da6244781e)
+- 2026-10-30: `T12:leapfrog-palindromes` approved as `Artform.Scores.Statement.leapfrogPalindromes` (text 6a246a0d86bc)
+- 2026-10-30: `T12:gap` approved as `Artform.Scores.Statement.palindromeGap` (text 79ca839d0ea2)
+- 2026-10-30: `T13:presentations` approved as `Artform.Scores.Statement.stepPresentations` (text 2b00ab39eb52)
+- 2026-10-30: `T13:psl-a5` approved as `Artform.Scores.Statement.pslAlternating` (text c5af96205bc9)
+- 2026-10-30: `R4` returned (J1): The product of laws is correct, but the ledger time-order word realizes diag(u^-1, u). See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T12:reading` returned (J3): Only output invariance is stated; the submitted reading claim also requires completeness and its closed form. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T14` returned (J4): The cut formula is correct, but the submitted cancellation iff is absent and needs nondegenerate or universal quantification. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T15:back-step` returned (J9): The translation is faithful, but its Non-vacuity section only excludes a one-back-step example; it supplies no positive witness. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T13:platonic` returned (J7): The numerical counts are proved; no identification with the three named incidence structures is stated. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `R2` returned (J2): The positive matrix commutator is correct; the ledger score commutator needs the opposite sign. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T2:group` returned (J5): The group statement is restricted to fields; the ledger also covers composite dials, whose units need not be monomials. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T11` returned (J6): Intertwining and ideal inclusions do not establish the claimed normalization/gluing map; arbitrary scores need not be glued. See `scores/review/audit-2026-10-30.md`.
+- 2026-10-30: `T8:curve` returned (J8): The parametrization identities are proved; nodality, uniqueness of the singularity and the normalization claim are not stated. See `scores/review/audit-2026-10-30.md`.

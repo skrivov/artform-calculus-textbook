@@ -117,3 +117,10 @@ book states it.
   literature theorems beyond Mathlib or open problems.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.
+
+The [independent review of 30 October 2026](review/audit-2026-10-30.md) records
+verdicts for all nine scores handoffs and all 63 submitted entries: 54 approved
+and nine returned. Each submitted Lean proposition has a checked proof;
+`STATUS.md` counts it as **proved** only after independent approval against the
+ledger. Returned claims, their valid intermediate results, and the remaining
+proof-package requirements are detailed in the review.
