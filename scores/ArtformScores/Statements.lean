@@ -402,4 +402,72 @@ def catMapNeverRings : Prop :=
         ((Step.kick (1 : ZMod n)).sl : SpecialLinearGroup (Fin 2) (ZMod n) ⧸ Bells.pmOne n)
         ((Step.move (1 : ZMod n)).sl : SpecialLinearGroup (Fin 2) (ZMod n) ⧸ Bells.pmOne n) σ
 
+/-- **T15** (the balance of back-steps; it generalizes the ledger's finding 043, Lemma 3). For any
+permutation `σ` of a finite group, `A ≠ B` and any union `O` of the cosets `⟨c⟩ x`, `c = A⁻¹ B`: the
+back-steps of `σ` in `O` are as many as the `v ∈ O` such that `B v` is the target of a back-step. -/
+@[ledger "T15"]
+def backStepBalance : Prop :=
+  ∀ (G : Type) [Group G] [Finite G] (A B : G) (σ : Equiv.Perm G) (O : Set G), A ≠ B →
+    (∀ v, A⁻¹ * B * v ∈ O ↔ v ∈ O) →
+      (O ∩ Bells.backSteps A B σ).ncard = (O ∩ {v | σ⁻¹ (B * v) ∈ Bells.backSteps A B σ}).ncard
+
+/-- **T15** (the two squares; finding 043, Theorem S5.4, part 1). Their extents need exactly two
+back-turns: `L⁻¹ R` has order 3, `L R` and `R L` have order 5, and the fewest back-turns of a run of
+the group of the two squares is two. -/
+@[ledger "T15"]
+def twoSquaresBackTurns : Prop :=
+  orderOf (Bells.turnL⁻¹ * Bells.turnR) = 3 ∧ orderOf (Bells.turnL * Bells.turnR) = 5 ∧
+    orderOf (Bells.turnR * Bells.turnL) = 5 ∧ Bells.FewestBack Bells.turnL Bells.turnR 2
+
+/-- **T15** (the fewest back-steps; finding 043, Theorem S5.4, parts 2 and 3), under the leapfrog's
+`K` and `M`, on `SL(2, Z/n)` and `PSL(2, Z/n)`: none for `n = 3, 6, 7, 9, 12`; exactly two for
+`n = 4, 5, 10, 13`, among them the octahedron's and the icosahedron's groups `PSL(2, Z/4)` and
+`PSL(2, 5)`; neither one nor two for `n = 8` and `n = 11`, so at least three for `n = 11`, which has
+no extent; and `PSL(2, Z/8)` has a run with three. -/
+@[ledger "T15"]
+def fewestBackSteps : Prop :=
+  (∀ n ∈ [3, 6, 7, 9, 12], Bells.FewestBack (Bells.leapK n) (Bells.leapM n) 0 ∧
+    Bells.FewestBack (Bells.barK n) (Bells.barM n) 0) ∧
+  (∀ n ∈ [4, 5, 10, 13], Bells.FewestBack (Bells.leapK n) (Bells.leapM n) 2 ∧
+    Bells.FewestBack (Bells.barK n) (Bells.barM n) 2) ∧
+  (∀ n ∈ [8, 11],
+    (∀ σ, Bells.IsRun (Bells.leapK n) (Bells.leapM n) σ →
+      (Bells.backSteps (Bells.leapK n) (Bells.leapM n) σ).ncard ≠ 1 ∧
+      (Bells.backSteps (Bells.leapK n) (Bells.leapM n) σ).ncard ≠ 2) ∧
+    ∀ σ, Bells.IsRun (Bells.barK n) (Bells.barM n) σ →
+      (Bells.backSteps (Bells.barK n) (Bells.barM n) σ).ncard ≠ 1 ∧
+      (Bells.backSteps (Bells.barK n) (Bells.barM n) σ).ncard ≠ 2) ∧
+  (∀ σ, Bells.IsRun (Bells.leapK 11) (Bells.leapM 11) σ →
+    3 ≤ (Bells.backSteps (Bells.leapK 11) (Bells.leapM 11) σ).ncard) ∧
+  (∀ σ, Bells.IsRun (Bells.barK 11) (Bells.barM 11) σ →
+    3 ≤ (Bells.backSteps (Bells.barK 11) (Bells.barM 11) σ).ncard) ∧
+  ∃ σ, Bells.IsRun (Bells.barK 8) (Bells.barM 8) σ ∧
+    (Bells.backSteps (Bells.barK 8) (Bells.barM 8) σ).ncard = 3
+
+/-- **T15** (the table of forward extents; finding 043, Theorem S5.3, part 3), under the leapfrog's
+`K` and `M`: `2` extents for `n = 2`, `16` for `n = 3` and `768` for `n = 6`, of `SL(2, Z/n)` and of
+`PSL(2, Z/n)` alike; none for `n = 4, 5, 10, 11, 13`; and some for `n = 7, 9, 12`. For `n = 8` the
+question is open. -/
+@[ledger "T15"]
+def forwardExtentTable : Prop :=
+  (Bells.extentsSL 2).ncard = 2 ∧ (Bells.extentsPSL 2).ncard = 2 ∧
+  (Bells.extentsSL 3).ncard = 16 ∧ (Bells.extentsPSL 3).ncard = 16 ∧
+  (Bells.extentsSL 6).ncard = 768 ∧ (Bells.extentsPSL 6).ncard = 768 ∧
+  (∀ n ∈ [4, 5, 10, 11, 13], Bells.extentsSL n = ∅ ∧ Bells.extentsPSL n = ∅) ∧
+  ∀ n ∈ [7, 9, 12], (Bells.extentsSL n).Nonempty ∧ (Bells.extentsPSL n).Nonempty
+
+/-- **T15** (ringing on a lattice only transports; finding 082, the permutation case of finding
+016's Theorem K, here without that theorem). A linear permutation law moves the values of `c`
+channels on the cells `Λ`: it is a permutation `σ` of `Λ × Fin c` that commutes with the shifts of
+`Λ`. In any dimension, and for one tick of any periodic score (blocked by Definition 3 if its place
+needs it), some `q ≥ 1` makes `σ^q` a shift of each channel by its own lattice vector `v i`. So
+every painted field moves rigidly: its value at `(z, i)` is at `(z + v i, i)` after `q` ticks. -/
+@[ledger "T15"]
+def permutationLawsTransport : Prop :=
+  ∀ (Λ : Type) [AddCommGroup Λ] (c : ℕ) (σ : Equiv.Perm (Λ × Fin c)),
+    (∀ w z i, σ (z + w, i) = ((σ (z, i)).1 + w, (σ (z, i)).2)) →
+    ∃ (q : ℕ) (v : Fin c → Λ), 0 < q ∧
+      (∀ z i, (σ ^ q) (z, i) = (z + v i, i)) ∧
+      ∀ (R : Type) (u : Λ × Fin c → R) z i, u ((σ ^ q)⁻¹ (z + v i, i)) = u (z, i)
+
 end Artform.Scores.Statement

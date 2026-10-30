@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 30 |
+| proved | 35 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **30** |
+| **total** | **35** |
 
 ## Statements
 
@@ -43,3 +43,8 @@
 | T15:fibonacci | The Fibonacci rule | proved | `Artform.Scores.Statement.fibonacciRule` / `Artform.Scores.fibonacciRule` | awaiting review |
 | T15:back-step | One back-step | proved | `Artform.Scores.Statement.oneBackStep` / `Artform.Scores.oneBackStep` | awaiting review |
 | T15:cat-map | Kicks with back-moves never ring | proved | `Artform.Scores.Statement.catMapNeverRings` / `Artform.Scores.catMapNeverRings` | awaiting review |
+| T15:balance | The balance of back-steps | proved | `Artform.Scores.Statement.backStepBalance` / `Artform.Scores.backStepBalance` | awaiting review |
+| T15:two-squares | The two squares need two back-turns | proved | `Artform.Scores.Statement.twoSquaresBackTurns` / `Artform.Scores.twoSquaresBackTurns` | awaiting review |
+| T15:fewest | The fewest back-steps | proved | `Artform.Scores.Statement.fewestBackSteps` / `Artform.Scores.fewestBackSteps` | awaiting review |
+| T15:table | The table of forward extents | proved | `Artform.Scores.Statement.forwardExtentTable` / `Artform.Scores.forwardExtentTable` | awaiting review |
+| T15:transport | Ringing on a lattice only transports | proved | `Artform.Scores.Statement.permutationLawsTransport` / `Artform.Scores.permutationLawsTransport` | awaiting review |

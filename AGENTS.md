@@ -57,8 +57,9 @@ This repository holds Lean proofs of the numbered statements of the textbook
 
    For the library `ArtformScores` (`scores/`), also run
    `lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json`,
-   `python3 scripts/ledger_status.py --check` and
-   `python3 scripts/one_mode_certificates.py --check`. Its statements are tagged
+   `python3 scripts/ledger_status.py --check`,
+   `python3 scripts/one_mode_certificates.py --check` and
+   `python3 scripts/extent_certificates.py --check`. Its statements are tagged
    `@[ledger "label"]` with the labels of the ledger's ALGEBRA-OF-SCORES.md, and
    `scores/manifest.toml` quotes each one. They follow rules 3 to 6 like the
    book's, with `scripts/ledger_status.py --approve` in place of

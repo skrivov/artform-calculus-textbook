@@ -84,6 +84,7 @@ Publication checks run locally; GitHub Actions is disabled for this repository.
     lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json
     python3 scripts/ledger_status.py --check
     python3 scripts/one_mode_certificates.py --check
+    python3 scripts/extent_certificates.py --check
 
 The tutorial's PDF is rebuilt with `bash tutorial/build.sh`, and the paper's
 with `latexmk -pdf` in `type-theory/paper/`.
@@ -103,7 +104,8 @@ with `latexmk -pdf` in `type-theory/paper/`.
   book text: steps (kicks and moves), scores, the realizer, the rules and the first
   theorems. Its manifest quotes each statement; `scores/STATUS.md` gives its state.
   `scores/ArtformScores/Certificates/` holds generated coset tables, which
-  `scripts/one_mode_certificates.py` writes.
+  `scripts/one_mode_certificates.py` writes, and generated runs of groups, which
+  `scripts/extent_certificates.py` writes.
 - `scripts/`: the status reports and local publication checks.
 
 ## Licence

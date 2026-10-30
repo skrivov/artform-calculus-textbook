@@ -496,6 +496,75 @@ instance pmOne_normal (n : ℕ) : (pmOne n).Normal where
     rw [((Commute.neg_one_right g).zpow_right k).eq, mul_inv_cancel_right]
     exact Subgroup.zpow_mem_zpowers _ _
 
+/-- A run of a group `G` under the steps `A` and `B`, with back-steps allowed (finding 043): a
+permutation `σ` through all of `G`, each `σ x` being `A x`, `B x`, `A⁻¹ x` or `B⁻¹ x`. An extent is
+a run with no back-steps. -/
+@[ledger "def:extent"]
+def IsRun {G : Type*} [Group G] (A B : G) (σ : Perm G) : Prop :=
+  (∀ x, σ x = A * x ∨ σ x = B * x ∨ σ x = A⁻¹ * x ∨ σ x = B⁻¹ * x) ∧ ∀ x y, ∃ k : ℕ, (σ ^ k) x = y
+
+/-- The back-steps of a permutation `σ`: the elements that it moves by neither `A` nor `B`. -/
+@[ledger "def:extent"]
+def backSteps {G : Type*} [Group G] (A B : G) (σ : Perm G) : Set G :=
+  {x | σ x ≠ A * x ∧ σ x ≠ B * x}
+
+/-- The fewest back-steps of a run of `G` under `A` and `B` is `k`: some run has `k`, and none has
+fewer. -/
+@[ledger "def:extent"]
+def FewestBack {G : Type*} [Group G] (A B : G) (k : ℕ) : Prop :=
+  (∃ σ, IsRun A B σ ∧ (backSteps A B σ).ncard = k) ∧
+    ∀ σ, IsRun A B σ → k ≤ (backSteps A B σ).ncard
+
+/-- The leapfrog's kick on one mode over `Z/n`: `K = K(1)`. -/
+@[ledger "def:extent"]
+abbrev leapK (n : ℕ) : SpecialLinearGroup (Fin 2) (ZMod n) := (Step.kick (1 : ZMod n)).sl
+
+/-- The leapfrog's move on one mode over `Z/n`: `M = M(-1)`. -/
+@[ledger "def:extent"]
+abbrev leapM (n : ℕ) : SpecialLinearGroup (Fin 2) (ZMod n) := (Step.move (-1 : ZMod n)).sl
+
+/-- `PSL(2, Z/n) = SL(2, Z/n)/{±1}`. -/
+@[ledger "def:extent"]
+abbrev PSLZ (n : ℕ) : Type := SpecialLinearGroup (Fin 2) (ZMod n) ⧸ pmOne n
+
+/-- The kick in `PSL(2, Z/n)`. -/
+@[ledger "def:extent"]
+abbrev barK (n : ℕ) : PSLZ n := (leapK n : SpecialLinearGroup (Fin 2) (ZMod n))
+
+/-- The move in `PSL(2, Z/n)`. -/
+@[ledger "def:extent"]
+abbrev barM (n : ℕ) : PSLZ n := (leapM n : SpecialLinearGroup (Fin 2) (ZMod n))
+
+/-- The forward extents of `SL(2, Z/n)` under `K` and `M`. -/
+@[ledger "def:extent"]
+def extentsSL (n : ℕ) : Set (Perm (SpecialLinearGroup (Fin 2) (ZMod n))) :=
+  {σ | IsExtent (leapK n) (leapM n) σ}
+
+/-- The forward extents of `PSL(2, Z/n)` under `K` and `M`. -/
+@[ledger "def:extent"]
+def extentsPSL (n : ℕ) : Set (Perm (PSLZ n)) := {σ | IsExtent (barK n) (barM n) σ}
+
+/-- The book's first square turned on the six corners of the two squares, numbered as `v₀, …, v₅`:
+`L = (v₀ v₁ v₂ v₃)`. -/
+@[ledger "def:two-squares"]
+def squareL : Perm (Fin 6) := ⟨![1, 2, 3, 0, 4, 5], ![3, 0, 1, 2, 4, 5], by decide, by decide⟩
+
+/-- The book's second square: `R = (v₁ v₄ v₅ v₂)`. -/
+@[ledger "def:two-squares"]
+def squareR : Perm (Fin 6) := ⟨![0, 4, 1, 3, 5, 2], ![0, 2, 5, 3, 1, 4], by decide, by decide⟩
+
+/-- The group of the two squares. -/
+@[ledger "def:two-squares"]
+def twoSquares : Subgroup (Perm (Fin 6)) := Subgroup.closure {squareL, squareR}
+
+/-- The turn `L` in the group of the two squares. -/
+@[ledger "def:two-squares"]
+def turnL : twoSquares := ⟨squareL, Subgroup.subset_closure (by simp)⟩
+
+/-- The turn `R` in the group of the two squares. -/
+@[ledger "def:two-squares"]
+def turnR : twoSquares := ⟨squareR, Subgroup.subset_closure (by simp)⟩
+
 end Bells
 
 end Artform.Scores

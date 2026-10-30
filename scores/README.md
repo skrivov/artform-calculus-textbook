@@ -68,6 +68,17 @@ book states it.
   - One back-step forces `A B` or `B A` into `⟨A⁻¹ B⟩`, and the cat map's score of forward
     kicks and backward moves rings neither `SL(2, Z/n)` nor `PSL(2, Z/n)` for any `n ≥ 3`
     (`BackSteps.lean`).
+  - The balance (`Runs.lean`): in any permutation of a finite group, each coset of `⟨c⟩` holds as
+    many back-steps as elements `v` with `B v` the target of a back-step. It excludes one
+    back-step, or two, by a small computation.
+  - The table of extents (`ExtentTable.lean`; finding 043, Theorems S5.3 and S5.4): `2`, `16` and
+    `768` extents on `Z/2`, `Z/3` and `Z/6`, counted exactly; none on `Z/n` for
+    `n = 4, 5, 10, 11, 13`; some for `n = 7, 9, 12`; exactly two back-steps on `n = 4, 5, 10, 13`
+    and on the two squares; at least three on `Z/11`. The runs are certificates, which
+    `scripts/extent_certificates.py` writes (`Certificates/Extents.lean`) and the kernel checks on
+    natural numbers.
+  - A linear permutation law commutes with the shifts, so it only transports, in any dimension
+    (`Transport.lean`; finding 082, without Theorem K).
 - **Plan.** The rest of Phase 4, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

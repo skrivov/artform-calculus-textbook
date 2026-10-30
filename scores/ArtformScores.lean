@@ -14,3 +14,7 @@ import ArtformScores.Bells
 import ArtformScores.Checkerboard
 import ArtformScores.Extents
 import ArtformScores.BackSteps
+import ArtformScores.Runs
+import ArtformScores.Certificates.Extents
+import ArtformScores.ExtentTable
+import ArtformScores.Transport
