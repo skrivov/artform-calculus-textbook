@@ -170,4 +170,84 @@ def law (p : ℕ) : FreeGroup Gen →* SpecialLinearGroup (Fin 2) (ZMod p) :=
 
 end OneMode
 
+
+/-! ## Blocking
+
+Blocking by a sublattice `Λ′ ⊂ Λ` of index `m` (the ledger's §1, Definition 3) reads the
+artform `A` as an artform `B(A)` with `2m` channels. The stencil ring `S = R[Λ]` is a free
+module over `S′ = R[Λ′]`, with one basis vector for each coset of `Λ′`: the *places*. The
+channel `(i, s)` of `B(A)` is the channel `i` of `A` at the place `s`, and a stencil `f`
+of `A` acts on the places by the matrix of multiplication by `f`
+(`Algebra.leftMulMatrix`). -/
+
+section Blocking
+
+variable {S' : Type*} [CommRing S'] {m : ℕ}
+
+/-- The blocking `B(T)` of a law `T` of `A`: the law on the `2m` channels of `B(A)` whose
+entry `((i, s), (j, t))` is the entry `(s, t)` of the matrix of `T i j`. -/
+@[ledger "def:block"]
+noncomputable def block [Algebra S' S] (bs : Module.Basis (Fin m) S' S)
+    (T : Matrix (Fin 2) (Fin 2) S) : Matrix (Fin 2 × Fin m) (Fin 2 × Fin m) S' :=
+  Matrix.of fun p q => Algebra.leftMulMatrix bs (T p.1 q.1) p.2 q.2
+
+/-- A placed step of `B(A)`: add `g` times the channel `β` to the channel `α`. -/
+@[ledger "def:block"]
+structure PStep (S' : Type*) (m : ℕ) where
+  α : Fin 2 × Fin m
+  β : Fin 2 × Fin m
+  g : S'
+
+/-- The law of a placed step, the shear `1 + g E_αβ`. -/
+@[ledger "def:block"]
+def PStep.mat (s : PStep S' m) : Matrix (Fin 2 × Fin m) (Fin 2 × Fin m) S' :=
+  1 + Matrix.single s.α s.β s.g
+
+/-- The law of a score of placed steps, in time order as for `realize`. -/
+@[ledger "def:block"]
+def realizePlaced : List (PStep S' m) → Matrix (Fin 2 × Fin m) (Fin 2 × Fin m) S'
+  | [] => 1
+  | s :: w => realizePlaced w * s.mat
+
+/-- The placed steps of a blocked step. The kick `K(f)` adds `B(f)_st` times `b` at the
+place `t` to `e` at the place `s`, for all places `s` and `t`; the move `M(f)` adds from
+`e` to `b` in the same way. -/
+@[ledger "def:block"]
+noncomputable def Step.block [Algebra S' S] (bs : Module.Basis (Fin m) S' S) :
+    Step S → List (PStep S' m)
+  | .kick f => (List.finRange m).flatMap fun s => (List.finRange m).map fun t =>
+      ⟨(1, s), (0, t), Algebra.leftMulMatrix bs f s t⟩
+  | .move f => (List.finRange m).flatMap fun s => (List.finRange m).map fun t =>
+      ⟨(0, s), (1, t), Algebra.leftMulMatrix bs f s t⟩
+
+/-- The blocked score `B(w)`: each step replaced by its placed steps. -/
+@[ledger "def:block"]
+noncomputable def blockScore [Algebra S' S] (bs : Module.Basis (Fin m) S' S) (w : Score S) :
+    List (PStep S' m) :=
+  w.flatMap (Step.block bs)
+
+/-- On an index-2 blocking, with the places red (`0`) and black (`1`): the red kick,
+`e += κ b` at the red places only. -/
+@[ledger "def:red-black"]
+def redKick (κ : S') : PStep S' 2 := ⟨(1, 0), (0, 0), κ⟩
+
+/-- The black kick, `e += κ b` at the black places only. -/
+@[ledger "def:red-black"]
+def blackKick (κ : S') : PStep S' 2 := ⟨(1, 1), (0, 1), κ⟩
+
+/-- The red-black tick (the ledger's finding 044): the red kick `K_red(κ)`, the move
+`M(h)`, the black kick `K_black(κ)`, and the move `M(h)` again. -/
+@[ledger "def:red-black"]
+noncomputable def redBlackTick [Algebra S' S] (bs : Module.Basis (Fin 2) S' S) (κ : S') (h : S) :
+    Matrix (Fin 2 × Fin 2) (Fin 2 × Fin 2) S' :=
+  realizePlaced ([redKick κ] ++ (Step.move h).block bs ++ [blackKick κ] ++ (Step.move h).block bs)
+
+/-- The black-red tick: the same, with the black kick first. -/
+@[ledger "def:red-black"]
+noncomputable def blackRedTick [Algebra S' S] (bs : Module.Basis (Fin 2) S' S) (κ : S') (h : S) :
+    Matrix (Fin 2 × Fin 2) (Fin 2 × Fin 2) S' :=
+  realizePlaced ([blackKick κ] ++ (Step.move h).block bs ++ [redKick κ] ++ (Step.move h).block bs)
+
+end Blocking
+
 end Artform.Scores

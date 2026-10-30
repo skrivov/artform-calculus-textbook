@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 13 |
+| proved | 15 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **13** |
+| **total** | **15** |
 
 ## Statements
 
@@ -17,6 +17,8 @@
 | R3 | Whitehead's rule | proved | `Artform.Scores.Statement.whiteheadRule` / `Artform.Scores.whiteheadRule` | awaiting review |
 | R4 | Balanced movers | proved | `Artform.Scores.Statement.balancedRule` / `Artform.Scores.balancedRule` | awaiting review |
 | R5 | Time reversal | proved | `Artform.Scores.Statement.timeReversal` / `Artform.Scores.timeReversal` | awaiting review |
+| R6 | Blocking | proved | `Artform.Scores.Statement.blocking` / `Artform.Scores.blocking` | awaiting review |
+| R6:red-black | Red-black on the blocked artform | proved | `Artform.Scores.Statement.redBlack` / `Artform.Scores.redBlack` | awaiting review |
 | T1:field | One dimension, every dial | proved | `Artform.Scores.Statement.everyLawIsAScore` / `Artform.Scores.everyLawIsAScore` | awaiting review |
 | T1:prime-power | One dimension, the dials Z/p^k | proved | `Artform.Scores.Statement.everyLawIsAScorePrimePower` / `Artform.Scores.everyLawIsAScorePrimePower` | awaiting review |
 | T1:modulus | One dimension, every dial Z/n | proved | `Artform.Scores.Statement.everyLawIsAScoreModulus` / `Artform.Scores.everyLawIsAScoreModulus` | awaiting review |

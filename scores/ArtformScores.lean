@@ -1,6 +1,7 @@
 import ArtformScores.Basic
 import ArtformScores.Statements
 import ArtformScores.Rules
+import ArtformScores.Blocking
 import ArtformScores.Readings
 import ArtformScores.StepOrders
 import ArtformScores.Caller

@@ -47,6 +47,29 @@ each inverted, realizes the inverse law. -/
 def timeReversal : Prop :=
   ∀ (S : Type) [CommRing S] (w : Score S), realize w.reverse = (realize w)⁻¹
 
+/-- **R6** (blocking). Blocking commutes with the realizer, `⟦B(w)⟧ = B(⟦w⟧)`: when the
+stencil ring `S` is free over `S′` on `m` places, the blocking of the law of a score is the
+law of its blocked score. -/
+@[ledger "R6"]
+def blocking : Prop :=
+  ∀ (S' S : Type) [CommRing S'] [CommRing S] [Algebra S' S] (m : ℕ)
+    (bs : Module.Basis (Fin m) S' S) (w : Score S),
+    block bs (realize w : Matrix (Fin 2) (Fin 2) S) = realizePlaced (blockScore bs w)
+
+/-- **R6** (red-black on the blocked artform). On an index-2 blocking, with the places red
+(the basis vector `1`) and black (`x`, with `x² = d` a unit), the red and black kicks
+together are the blocked kick. The blocked shift by `x` turns the red-black tick into the
+black-red tick, and the red-black tick is the blocking of a law of the artform only if
+`κ² β = 0`, `β` the black part of the move's stencil `h`. -/
+@[ledger "R6"]
+def redBlack : Prop :=
+  ∀ (S' S : Type) [CommRing S'] [CommRing S] [Algebra S' S] (bs : Module.Basis (Fin 2) S' S)
+    (x : S) (d : S'ˣ), bs 0 = 1 → bs 1 = x → x * x = algebraMap S' S ↑d → ∀ (κ : S') (h : S),
+    realizePlaced [redKick κ, blackKick κ] = block bs (Step.kick (algebraMap S' S κ)).mat ∧
+    block bs (x • 1) * redBlackTick bs κ h = blackRedTick bs κ h * block bs (x • 1) ∧
+    ((∃ T : Matrix (Fin 2) (Fin 2) S, block bs T = redBlackTick bs κ h) →
+      κ * κ * bs.repr h 1 = 0)
+
 /-- **T1** (one dimension, every dial). Over a field `F`, every law of determinant 1
 on a dial, `A ∈ SL(2, F[x, 1/x])`, is the law of a score: `E₂ = SL₂` there. -/
 @[ledger "T1"]

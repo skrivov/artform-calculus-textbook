@@ -29,6 +29,12 @@ book states it.
     computation (`decide +kernel`).
   - `scripts/one_mode_certificates.py` writes the four tables (`Certificates/`), by
     Todd–Coxeter enumeration; with `--check` it fails if a table differs from its output.
-- **Plan.** Phase 4 is open, as the author chooses.
+- **Phase 4** begins with R6, blocking (`Blocking.lean`).
+  - Blocking reads an artform on `m` places as one with `2m` channels, through the matrix of
+    multiplication by each stencil (`Algebra.leftMulMatrix`). The realizer commutes with it.
+  - Red-black is a law of the blocked artform, since its kicks are placed steps. The blocked
+    shift turns it into black-red, so it is the blocking of no law of the artform once the
+    move couples red and black.
+- **Plan.** The rest of Phase 4 (T7, T15), as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.
