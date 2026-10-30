@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 17 |
+| proved | 21 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **17** |
+| **total** | **21** |
 
 ## Statements
 
@@ -30,3 +30,7 @@
 | T12:palindromes | Palindromes | proved | `Artform.Scores.Statement.palindrome` / `Artform.Scores.palindrome` | awaiting review |
 | T13 | The crystallographic pulls | proved | `Artform.Scores.Statement.stepOrders` / `Artform.Scores.stepOrders` | awaiting review |
 | T14 | The caller's cut | proved | `Artform.Scores.Statement.callerCut` / `Artform.Scores.callerCut` | awaiting review |
+| T15:methods | Every method is light | proved | `Artform.Scores.Statement.methodsAreLight` / `Artform.Scores.methodsAreLight` | awaiting review |
+| T15:plain-hunt | Plain hunt is light in a mirror box | proved | `Artform.Scores.Statement.plainHuntIsLight` / `Artform.Scores.plainHuntIsLight` | awaiting review |
+| T15:modes | The modes of the mirror box | proved | `Artform.Scores.Statement.mirrorModes` / `Artform.Scores.mirrorModes` | awaiting review |
+| T15:coxeter | The presentation of the bells | proved | `Artform.Scores.Statement.bellsPresentation` / `Artform.Scores.bellsPresentation` | awaiting review |

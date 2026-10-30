@@ -302,4 +302,123 @@ def companion (t : S) : Matrix (Fin 2) (Fin 2) S := !![0, -1; 1, t]
 
 end Curve
 
+
+/-! ## Bells
+
+Change ringing on `N` bells (the ledger's T15 and finding 042). The positions are
+`0, …, N - 1`, the front first. A *change* swaps disjoint pairs of neighbours, and the other
+bells make places. Painting a number on each bell reads a row as a field: the number on the
+bell in each position. -/
+
+namespace Bells
+
+open Equiv
+
+variable {N : ℕ}
+
+/-- A change: an involution of the positions that moves each position at most one place, so
+a product of disjoint swaps of neighbours. -/
+@[ledger "def:change"]
+def IsChange (π : Perm (Fin N)) : Prop :=
+  ∀ i, π (π i) = i ∧ (π i : ℕ) ≤ i + 1 ∧ (i : ℕ) ≤ π i + 1
+
+/-- A change acting on a painted row: `(P_π u) i = u (π i)`. -/
+@[ledger "def:change"]
+def act {R : Type*} (π : Perm (Fin N)) (u : Fin N → R) : Fin N → R := fun i => u (π i)
+
+/-- The rows of a method, the changes `π 0, π 1, …` rung in turn from rounds: `row π t b` is
+the position of the bell `b` after `t` changes. -/
+@[ledger "def:change"]
+def row (π : ℕ → Perm (Fin N)) : ℕ → Perm (Fin N)
+  | 0 => 1
+  | t + 1 => π t * row π t
+
+/-- A row painted by `f`, a number on each bell: the number on the bell in each position. -/
+@[ledger "def:change"]
+def paint {R : Type*} (f : Fin N → R) (σ : Perm (Fin N)) : Fin N → R := fun i => f (σ.symm i)
+
+/-- The changes `A` and `B` dodge at `i`: both swap `i` with the same neighbour. -/
+@[ledger "def:box"]
+def IsDodge (A B : Perm (Fin N)) (i : Fin N) : Prop := A i = B i ∧ A i ≠ i
+
+/-- The left neighbour of `i` in the box that the changes `A` and `B` cut: `i - 1` if one of
+them swaps the two, else `i` itself, a wall. -/
+@[ledger "def:box"]
+def boxLeft (A B : Perm (Fin N)) (i : Fin N) : Fin N :=
+  if (A i : ℕ) + 1 = i then A i else if (B i : ℕ) + 1 = i then B i else i
+
+/-- The right neighbour of `i` in its box: `i + 1` if one of the changes swaps the two, else
+`i` itself, a wall. -/
+@[ledger "def:box"]
+def boxRight (A B : Perm (Fin N)) (i : Fin N) : Fin N :=
+  if (A i : ℕ) = i + 1 then A i else if (B i : ℕ) = i + 1 then B i else i
+
+/-- The neighbour sum of the boxes that `A` and `B` cut, with a mirror at each wall. -/
+@[ledger "def:box"]
+def boxSum {R : Type*} [Add R] (A B : Perm (Fin N)) (u : Fin N → R) : Fin N → R :=
+  fun i => u (boxLeft A B i) + u (boxRight A B i)
+
+/-- The neighbour sum of the mirror box, `(S u) i = u (i - 1) + u (i + 1)`, with the ghosts
+`u (-1) = u 0` and `u N = u (N - 1)`. -/
+@[ledger "def:box"]
+def mirror {R : Type*} [Add R] (u : Fin N → R) : Fin N → R := fun i =>
+  u ⟨i - 1, by have := i.2; omega⟩ + u ⟨min (i + 1) (N - 1), by have := i.2; omega⟩
+
+/-- The partner of the position `i` in the change that swaps the pairs `(2j + e, 2j + e + 1)`,
+with `e` taken mod 2. -/
+@[ledger "def:plain-hunt"]
+def partner (N e i : ℕ) : ℕ :=
+  if i % 2 = e % 2 then (if i + 1 < N then i + 1 else i) else i - 1
+
+/-- The change that swaps the pairs `(2j + e, 2j + e + 1)`; a bell with no partner makes a
+place. -/
+@[ledger "def:plain-hunt"]
+def huntChange (N e : ℕ) : Perm (Fin N) :=
+  Function.Involutive.toPerm
+    (fun i => ⟨partner N e i, by have := i.2; unfold partner; split_ifs <;> omega⟩)
+    (fun i => Fin.ext (by
+      have := i.2
+      change partner N e (partner N e i) = i
+      unfold partner
+      split_ifs <;> omega))
+
+/-- Plain hunt's cross, `X = (12)(34)…` in the ledger's numbering from 1. -/
+@[ledger "def:plain-hunt"]
+def huntX (N : ℕ) : Perm (Fin N) := huntChange N 0
+
+/-- Plain hunt's other change, `Y = (23)(45)…`. -/
+@[ledger "def:plain-hunt"]
+def huntY (N : ℕ) : Perm (Fin N) := huntChange N 1
+
+/-- The rows of plain hunt: `X` and `Y` in turn, `X` first. -/
+@[ledger "def:plain-hunt"]
+def hunt (N : ℕ) : ℕ → Perm (Fin N) := row (huntChange N)
+
+/-- The mirror: the point `k` of a circle of `2N` places, folded onto the box `0, …, N - 1`. -/
+@[ledger "def:plain-hunt"]
+def fold (N k : ℕ) : ℕ := if k % (2 * N) < N then k % (2 * N) else 2 * N - 1 - k % (2 * N)
+
+/-- The starting point on the circle of the bell in the position `b`: a bell in an even
+position sets off up, one in an odd position down. -/
+@[ledger "def:plain-hunt"]
+def start (N b : ℕ) : ℕ := if b % 2 = 0 then b else 2 * N - 1 - b
+
+/-- The mode `k` of the mirror box, `v_k(i) = cos(πk(2i + 1)/(2N))`. -/
+@[ledger "def:mode"]
+noncomputable def mode (N k : ℕ) : Fin N → ℝ := fun i =>
+  Real.cos (Real.pi * k * (2 * i + 1) / (2 * N))
+
+/-- The mode `k` turned by `πk/N` per change: `(A cos(πkt/N) + B sin(πkt/N)) v_k`. -/
+@[ledger "def:mode"]
+noncomputable def turn (N k : ℕ) (A B : ℝ) (t : ℕ) : Fin N → ℝ :=
+  (A * Real.cos (Real.pi * k / N * t) + B * Real.sin (Real.pi * k / N * t)) • mode N k
+
+/-- The law of a word in the generators `s_i`, the swaps of the neighbours `i` and `i + 1` of
+`n + 1` positions. -/
+@[ledger "def:bells-law"]
+def law (n : ℕ) : FreeGroup (Fin n) →* Perm (Fin (n + 1)) :=
+  FreeGroup.lift fun i => swap i.castSucc i.succ
+
+end Bells
+
 end Artform.Scores

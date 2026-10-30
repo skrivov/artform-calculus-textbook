@@ -185,4 +185,87 @@ def callerCut : Prop :=
         (1 - q) • (splitTick false h gx gy : Matrix (Fin 2) (Fin 2) K)) =
       (2 * q - 1) * (h ^ 2 * (gx - gy) / 2)
 
+/-- **T15** (every method is light in the boxes its score cuts; the ledger's finding 042,
+Theorem S5.2). Paint a number on each bell and read each row as a field. For every sequence
+of changes, `u(t + 1) = P_t u(t)`, and the rows obey the book's tick
+`u(t + 1) + u(t - 1) = S_t u(t)` with `S_t = P_t + P_(t-1)`. Two changes `A` and `B` cut the
+row into dodges and mirror boxes. On a dodge, a pair that both swap, `S` is the doubled bond.
+Elsewhere `S` is the neighbour sum of the box, with a wall where neither change swaps, and at
+a wall a place is made. -/
+@[ledger "T15"]
+def methodsAreLight : Prop :=
+  ∀ (R : Type) [AddCommMonoid R] (N : ℕ),
+    (∀ (π : ℕ → Equiv.Perm (Fin N)), (∀ t, Bells.IsChange (π t)) → ∀ (f : Fin N → R) (t : ℕ),
+      Bells.paint f (Bells.row π (t + 1)) = Bells.act (π t) (Bells.paint f (Bells.row π t)) ∧
+      Bells.paint f (Bells.row π (t + 2)) + Bells.paint f (Bells.row π t) =
+        Bells.act (π (t + 1)) (Bells.paint f (Bells.row π (t + 1))) +
+          Bells.act (π t) (Bells.paint f (Bells.row π (t + 1)))) ∧
+    ∀ (A B : Equiv.Perm (Fin N)), Bells.IsChange A → Bells.IsChange B →
+      ∀ (u : Fin N → R) (i : Fin N),
+        (Bells.IsDodge A B i →
+          Bells.act A u i + Bells.act B u i = u (A i) + u (A i) ∧ B (A i) = i) ∧
+        (¬ Bells.IsDodge A B i →
+          Bells.act A u i + Bells.act B u i = Bells.boxSum A B u i ∧
+          (Bells.boxLeft A B i = i ∨ Bells.boxRight A B i = i → A i = i ∨ B i = i))
+
+/-- **T15** (plain hunt is light in a mirror box; finding 042, Theorem S5.1). Plain hunt rings
+the changes `X = (12)(34)…` and `Y = (23)(45)…` in turn, `X` first. On `N` bells:
+1. `P_X + P_Y = S_mirror`, the neighbour sum of a box with mirror walls;
+2. the painted rows obey the book's tick `u(t + 1) + u(t - 1) = S_mirror u(t)`;
+3. every bell is a light ray: after `t` changes the bell from the position `b` is at
+   `fold (start b + t)`, the point `start b + t` of a circle of `2N` places folded onto the box.
+   It moves one place per change or lies at a wall, and for `N ≥ 2` it never lies twice
+   running;
+4. for `N ≥ 3` the plain course has `2N` rows: two rows are equal exactly when their times
+   agree mod `2N`. -/
+@[ledger "T15"]
+def plainHuntIsLight : Prop :=
+  ∀ N : ℕ,
+    (∀ (R : Type) [AddCommMonoid R] (u : Fin N → R),
+      Bells.act (Bells.huntX N) u + Bells.act (Bells.huntY N) u = Bells.mirror u) ∧
+    (∀ (R : Type) [AddCommMonoid R] (f : Fin N → R) (t : ℕ),
+      Bells.paint f (Bells.hunt N (t + 2)) + Bells.paint f (Bells.hunt N t) =
+        Bells.mirror (Bells.paint f (Bells.hunt N (t + 1)))) ∧
+    (∀ (t : ℕ) (b : Fin N),
+      (Bells.hunt N t b : ℕ) = Bells.fold N (Bells.start N b + t) ∧
+      ((Bells.hunt N (t + 1) b : ℕ) + 1 = Bells.hunt N t b ∨
+        (Bells.hunt N t b : ℕ) + 1 = Bells.hunt N (t + 1) b ∨
+        (Bells.hunt N (t + 1) b = Bells.hunt N t b ∧
+          ((Bells.hunt N t b : ℕ) = 0 ∨ (Bells.hunt N t b : ℕ) + 1 = N))) ∧
+      (2 ≤ N → Bells.hunt N (t + 1) b = Bells.hunt N t b →
+        Bells.hunt N (t + 2) b ≠ Bells.hunt N (t + 1) b)) ∧
+    (3 ≤ N → ∀ s t : ℕ, Bells.hunt N s = Bells.hunt N t ↔ s % (2 * N) = t % (2 * N))
+
+/-- **T15** (the modes of the mirror box; finding 042, Theorem S5.1, part 4). The mode
+`v_k(i) = cos(πk(2i + 1)/(2N))` has `S_mirror v_k = 2 cos(πk/N) v_k`. The `N` modes
+`0 ≤ k < N` are independent, and `S_mirror` has no other eigenvalue. The tick turns the mode
+`k` by `πk/N` per change: `u(t) = (A cos(πkt/N) + B sin(πkt/N)) v_k` obeys
+`u(t + 1) + u(t - 1) = S_mirror u(t)`, and `2N` changes, the plain course, are a period of
+every mode. -/
+@[ledger "T15"]
+def mirrorModes : Prop :=
+  ∀ N : ℕ,
+    (∀ k : ℕ, Bells.mirror (Bells.mode N k) =
+      (2 * Real.cos (Real.pi * k / N)) • Bells.mode N k) ∧
+    LinearIndependent ℝ (fun k : Fin N => Bells.mode N k) ∧
+    (∀ (μ : ℝ) (v : Fin N → ℝ), v ≠ 0 → Bells.mirror v = μ • v →
+      ∃ k < N, μ = 2 * Real.cos (Real.pi * k / N)) ∧
+    ∀ (k : ℕ) (A B : ℝ) (t : ℕ),
+      Bells.turn N k A B (t + 2) + Bells.turn N k A B t =
+        Bells.mirror (Bells.turn N k A B (t + 1)) ∧
+      Bells.turn N k A B (t + 2 * N) = Bells.turn N k A B t
+
+/-- **T15** (the presentation of the bells; Moore 1897). On `n + 1` positions the steps are the
+swaps `s_i` of the neighbours `i` and `i + 1`, and the rules are Coxeter's: `s_i² = 1`,
+`(s_i s_(i+1))³ = 1`, and `(s_i s_j)² = 1` for `|i - j| ≥ 2`, the relations of Mathlib's
+Coxeter matrix `A_n`. Every permutation is the law of a word in the `s_i`, and two words have
+the same law exactly when they are equal in the group that the rules present. -/
+@[ledger "T15"]
+def bellsPresentation : Prop :=
+  ∀ n : ℕ,
+    (∀ σ : Equiv.Perm (Fin (n + 1)), ∃ v : FreeGroup (Fin n), Bells.law n v = σ) ∧
+    ∀ v₁ v₂ : FreeGroup (Fin n), Bells.law n v₁ = Bells.law n v₂ ↔
+      PresentedGroup.mk (CoxeterMatrix.A n).relationsSet v₁ =
+        PresentedGroup.mk (CoxeterMatrix.A n).relationsSet v₂
+
 end Artform.Scores.Statement

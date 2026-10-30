@@ -41,6 +41,16 @@ book states it.
     `A_t = S[λ]/(λ² - tλ + 1)`.
   - Processing keeps the class of the ideal `(c, λ - a)`, when `t² - 4` is not a square.
   - A cyclic vector conjugates the law to the companion tick, so its class is trivial.
-- **Plan.** The rest of Phase 4 (T15), as the author chooses.
+- **Phase 4** continues with T15, the bells (`Bells.lean`; the ledger's finding 042).
+  - A change is an involution, so the painted rows of every method obey the tick
+    `u(t + 1) + u(t - 1) = (P_t + P_(t-1)) u(t)`. Two changes cut the row into mirror boxes
+    and dodges.
+  - Plain hunt is light in a mirror box: `P_X + P_Y = S_mirror`. Each bell's path is a circle
+    of `2N` places folded onto the box, and the plain course has `2N` rows. The modes
+    `cos(πk(2i + 1)/(2N))` have the eigenvalues `2 cos(πk/N)`.
+  - Coxeter's rules present `S_N` on the swaps of neighbours (Moore 1897), against Mathlib's
+    `CoxeterMatrix.A`. The descending runs `s_m ⋯ s_k` are coset representatives, so the
+    presented group has at most `N!` elements.
+- **Plan.** T7's one-to-one correspondence, then the rest of Phase 4 as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.
