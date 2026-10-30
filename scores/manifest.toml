@@ -1,0 +1,119 @@
+# The statements of the algebra of scores that the library ArtformScores proves,
+# one entry each. The source is the research ledger's ALGEBRA-OF-SCORES.md (in
+# the author's workspace, physics/ledgers/lattice-waves/); `statement` quotes its
+# text, so that a review needs nothing outside this repository.
+#
+# [[statement]] fields: key, label, title, source, statement, lean_statement,
+#   lean_proof, reviewed, review_text_sha256
+#
+# scripts/ledger_status.py --approve fills in the review fields. An approval
+# stands until a review returns the statement; its hash records what was
+# reviewed (scripts/ledger_status.py --drift). Everything else is edited by hand.
+
+[[statement]]
+key = "R1"
+label = "R1"
+title = "Merging"
+source = "ALGEBRA-OF-SCORES.md §3 (R1)"
+statement = """
+e_ij(f) e_ij(g) = e_ij(f + g): two kicks in a row are one kick with the summed stencil, and two moves in a row are one move. Over every commutative ring S."""
+lean_statement = "Artform.Scores.Statement.merging"
+lean_proof = "Artform.Scores.merging"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "R3"
+label = "R3"
+title = "Whitehead's rule"
+source = "ALGEBRA-OF-SCORES.md §3 (R3)"
+statement = """
+For a unit u, the Whitehead word w(u) = M(u) K(-u^-1) M(u) has the law [[0, u], [-u^-1, 0]], and w(u) M(f) w(u)^-1 = K(-u^-2 f), w(u) K(f) w(u)^-1 = M(-u^2 f). Over every commutative ring S."""
+lean_statement = "Artform.Scores.Statement.whiteheadRule"
+lean_proof = "Artform.Scores.whiteheadRule"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "R4"
+label = "R4"
+title = "Balanced movers"
+source = "ALGEBRA-OF-SCORES.md §3 (R4)"
+statement = """
+The balanced pair h(u) = w(u) w(1)^-1 is diag(u, u^-1), and h(u) h(v) = h(uv), for units u, v of every commutative ring S."""
+lean_statement = "Artform.Scores.Statement.balancedRule"
+lean_proof = "Artform.Scores.balancedRule"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "R5"
+label = "R5"
+title = "Time reversal"
+source = "ALGEBRA-OF-SCORES.md §3 (R5)"
+statement = """
+The anti-automorphism that reverses a score and inverts its letters realizes the inverse law: [[rho(w)]] = [[w]]^-1."""
+lean_statement = "Artform.Scores.Statement.timeReversal"
+lean_proof = "Artform.Scores.timeReversal"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T2"
+label = "T2"
+title = "The index"
+source = "ALGEBRA-OF-SCORES.md §4.1 (T2)"
+statement = """
+Every score has a law of determinant 1, so the chiral mover diag(x, 1) is no score. The Lean form: for every a different from 1, no score realizes diag(a, 1)."""
+lean_statement = "Artform.Scores.Statement.index"
+lean_proof = "Artform.Scores.index"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T12:reading"
+label = "T12"
+title = "The reading"
+source = "ALGEBRA-OF-SCORES.md §4.4 (T12)"
+statement = """
+From rest the output depends only on (t, a): b_n = [cos n theta + ((a - d)/2) sin n theta / sin theta] b_0, so the pair (t, a) of phase and reading is the complete invariant of the output. The Lean form proves the invariance: two laws with the same phase and reading give the same flux b at every tick from (b, e) = (b_0, 0)."""
+lean_statement = "Artform.Scores.Statement.readingDetermines"
+lean_proof = "Artform.Scores.readingDetermines"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T12:palindromes"
+label = "T12"
+title = "Palindromes"
+source = "ALGEBRA-OF-SCORES.md §3 (R5) and §4.4 (T12)"
+statement = """
+A tick with a = d (no cut) satisfies P_0 T P_0 = T^-1, with P_0 = diag(1, -1)."""
+lean_statement = "Artform.Scores.Statement.palindrome"
+lean_proof = "Artform.Scores.palindrome"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T13"
+label = "T13"
+title = "The crystallographic pulls"
+source = "ALGEBRA-OF-SCORES.md §4.5 (T13), Theorem Q"
+statement = """
+The one-mode tick has order 6, 4 and 3 at the crystallographic pulls mu = 1, 2 and 3. The Lean form also proves infinite order at mu = 4, over the integers, for the tick K(1) then M(-mu)."""
+lean_statement = "Artform.Scores.Statement.stepOrders"
+lean_proof = "Artform.Scores.stepOrders"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T14"
+label = "T14"
+title = "The caller's cut"
+source = "ALGEBRA-OF-SCORES.md §4.6 (T14); finding 080, Theorems S8.4-S8.5"
+statement = """
+The two orders of the dimension split have the same phase and the cuts +-h^2(g_x - g_y)/2; a caller with weights q, 1 - q has a mean tick with the cut (2q - 1) h^2 (g_x - g_y)/2, which cancels exactly for a fair caller (q = 1/2); the book's caller (turn on 11, q = 1/4) leaves -h^2 (g_x - g_y)/4. Over every field of characteristic zero."""
+lean_statement = "Artform.Scores.Statement.callerCut"
+lean_proof = "Artform.Scores.callerCut"
+reviewed = ""
+review_text_sha256 = ""

@@ -55,6 +55,13 @@ This repository holds Lean proofs of the numbered statements of the textbook
        python3 scripts/status.py --check
        python3 scripts/check_tree.py --identity
 
+   For the library `ArtformScores` (`scores/`), also run
+   `lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json`
+   and `python3 scripts/ledger_status.py --check`. Its statements are tagged
+   `@[ledger "label"]` with the labels of the ledger's ALGEBRA-OF-SCORES.md, and
+   `scores/manifest.toml` quotes each one. They follow rules 3 to 6 like the
+   book's, with `scripts/ledger_status.py --approve` in place of
+   `scripts/status.py --approve`.
 8. Publication on GitHub needs no go-ahead in chat. Once the judge has
    approved the repository, push it; from then on publish every completed
    change whose checks pass, as the workspace rule says.

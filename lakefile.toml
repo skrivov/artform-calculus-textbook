@@ -1,5 +1,5 @@
 name = "artform-calculus-textbook"
-defaultTargets = ["ArtformTextbook", "Tutorial", "ArtformRoles"]
+defaultTargets = ["ArtformTextbook", "Tutorial", "ArtformRoles", "ArtformScores"]
 
 [[require]]
 name = "mathlib"
@@ -25,4 +25,12 @@ roots = ["LeanBasics", "ArtformChapter1", "RepositoryTour"]
 [[lean_lib]]
 name = "ArtformRoles"
 srcDir = "type-theory"
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }
+
+# The algebra of scores: a calculus of the schemes of the research ledger
+# (physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md in the author's
+# workspace), not book text. Statements carry @[ledger "label"].
+[[lean_lib]]
+name = "ArtformScores"
+srcDir = "scores"
 leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }

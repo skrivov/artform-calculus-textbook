@@ -2,8 +2,9 @@
 """Checks on the repository's files.
 
 Fails when:
-  - a Lean file of the library (textbook/ArtformTextbook/) contains, outside
-    comments and strings, one of the words FORBIDDEN, or declares an axiom;
+  - a Lean file of the libraries (textbook/ArtformTextbook/, scores/ArtformScores/)
+    contains, outside comments and strings, one of the words FORBIDDEN, or declares
+    an axiom;
   - any file contains an absolute home path or an e-mail address other than a
     GitHub no-reply address;
   - a file other than the guide's PDF is larger than 5 MB;
@@ -20,7 +21,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LIBRARY = "textbook/ArtformTextbook/"
+LIBRARY = ("textbook/ArtformTextbook/", "scores/ArtformScores/")
 GUIDE_PDF = "tutorial/lean-through-artform-calculus.pdf"
 LIMIT = 5 * 1024 * 1024
 FORBIDDEN = ("sorry", "admit", "native_decide", "implemented_by", "extern",

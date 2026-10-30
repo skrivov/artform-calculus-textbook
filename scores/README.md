@@ -1,0 +1,19 @@
+# The algebra of scores
+
+The Lean library `ArtformScores`: a calculus of the simulation schemes studied in
+the author's research ledger on lattice waves (`ALGEBRA-OF-SCORES.md` there). It
+is not book text, and nothing here enters the library `ArtformTextbook` until the
+book states it.
+
+- **Steps.** A kick `K f` is the shear `e += f b`, and a move `M f` is the shear
+  `b += f e`, on two channels with values in a commutative ring.
+- **Scores.** A score is a list of steps in time order. The realizer sends it to its
+  law in `SL(2, S)`.
+- **Phase 1** proves the rules R1 (merging), R3 (Whitehead's rule), R4 (balanced
+  movers) and R5 (time reversal), and the theorems T2 (the index), T12 (the reading
+  and palindromes), T13 (the crystallographic pulls) and T14 (the caller's cut).
+- **Plan.** Phase 2 is T1, every 1D two-channel law of determinant 1 as a score over
+  a field, by Euclid on Laurent polynomials. Phase 3 is T4, completeness on one mode,
+  by certificate.
+
+`STATUS.md` gives the state of each statement, and `manifest.toml` its text.

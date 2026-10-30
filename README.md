@@ -81,6 +81,8 @@ Publication checks run locally; GitHub Actions is disabled for this repository.
     python3 scripts/check_tree.py --identity
     python3 -m unittest discover -s scripts/tests
     python3 tutorial/tools/extract_listings.py --check
+    lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json
+    python3 scripts/ledger_status.py --check
 
 The tutorial's PDF is rebuilt with `bash tutorial/build.sh`, and the paper's
 with `latexmk -pdf` in `type-theory/paper/`.
@@ -95,7 +97,11 @@ with `latexmk -pdf` in `type-theory/paper/`.
 - `type-theory/`: the paper *Five Roles for Artforms*, which asks whether the
   book's five roles are the right ones, and the Lean library `ArtformRoles`
   that checks both of its parts; its independent review.
-- `scripts/`: the status report and local publication checks.
+- `scores/`: the algebra of scores, the Lean library `ArtformScores`. It is a calculus
+  of the simulation schemes of the author's research ledger on lattice waves, not
+  book text: steps (kicks and moves), scores, the realizer, the rules and the first
+  theorems. Its manifest quotes each statement; `scores/STATUS.md` gives its state.
+- `scripts/`: the status reports and local publication checks.
 
 ## Licence
 
