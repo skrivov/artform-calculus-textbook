@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 43 |
+| proved | 51 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **43** |
+| **total** | **51** |
 
 ## Statements
 
@@ -56,3 +56,11 @@
 | T13:turns | The steps are turns | proved | `Artform.Scores.Statement.stepsAreTurns` / `Artform.Scores.stepsAreTurns` | awaiting review |
 | T13:cells | The cells that a tick fixes | proved | `Artform.Scores.Statement.tickCells` / `Artform.Scores.tickCells` | awaiting review |
 | T13:two-squares | The two squares are the projective line over F₅ | proved | `Artform.Scores.Statement.twoSquaresProjective` / `Artform.Scores.twoSquaresProjective` | awaiting review |
+| R2 | Commutation | proved | `Artform.Scores.Statement.steinbergRules` / `Artform.Scores.steinbergRules'` | awaiting review |
+| T1:fewest | The fewest steps | proved | `Artform.Scores.Statement.fewestSteps` / `Artform.Scores.fewestSteps` | awaiting review |
+| T2:group | The index as a group | proved | `Artform.Scores.Statement.indexGroup` / `Artform.Scores.indexGroup` | awaiting review |
+| T11 | Face and link | proved | `Artform.Scores.Statement.faceAndLink` / `Artform.Scores.faceAndLink` | awaiting review |
+| T12:criterion | The criterion for palindromes | proved | `Artform.Scores.Statement.palindromeCriterion` / `Artform.Scores.palindromeCriterion` | awaiting review |
+| T14:rules | The caller's rule decides the cancellation | proved | `Artform.Scores.Statement.callerRules` / `Artform.Scores.callerRules` | awaiting review |
+| T14:cue | One cue | proved | `Artform.Scores.Statement.oneCue` / `Artform.Scores.oneCue` | awaiting review |
+| T16 | The duet | proved | `Artform.Scores.Statement.duet` / `Artform.Scores.duet` | awaiting review |

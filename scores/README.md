@@ -90,6 +90,14 @@ book states it.
     `±2`, `0` or `±1`.
   - `TwoSquares.lean`, Theorem Y: the two squares generate `PGL(2, 5)` on the projective line over
     `F₅`, which is `S₅`, and their labelling is forced.
-- **Plan.** The rest of Phase 4, as the author chooses.
+- **Phase 4** continues with the smaller statements.
+  - `Steinberg.lean`: R2, Steinberg's relations on `c` channels, with the sign of the commutator in
+    time order; T1's fewest steps; and T2 as a group, `GL₂(S)/E₂(S) ≅ S*` over a field.
+  - `FaceLink.lean`: T11. The link form is the face form conjugated by `diag(1, D*)`, and at the
+    zero mode it is the identity, while the face form is a kick.
+  - `PalindromeClasses.lean`: T12. A law is processing-equivalent to a palindrome exactly when some
+    `P` reverses it with `-det P` a square. A class that time reversal fixes need not hold one.
+  - `Callers.lean`: T14's rules and one cue, and T16, the duet.
+- **Plan.** T8's counts.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

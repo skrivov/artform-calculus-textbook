@@ -21,3 +21,7 @@ import ArtformScores.Transport
 import ArtformScores.StepGroups
 import ArtformScores.KleinMap
 import ArtformScores.TwoSquares
+import ArtformScores.Steinberg
+import ArtformScores.FaceLink
+import ArtformScores.PalindromeClasses
+import ArtformScores.Callers

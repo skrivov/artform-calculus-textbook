@@ -667,4 +667,133 @@ def twoSquaresProjective : Prop :=
   (IsSquare (Bells.matL * Bells.matL).1.det ∧ IsSquare (Bells.matL * Bells.matR).1.det ∧
     IsSquare (Bells.matR * Bells.matL).1.det ∧ IsSquare (Bells.matR * Bells.matR).1.det)
 
+/-- **R2** (commutation; Steinberg's relations). On `c` channels: merging; `e_ij(0) = 1`; steps
+`e_ij(f)` and `e_kl(g)` with `j ≠ k` and `i ≠ l` commute; and for distinct `i, j, k` the commutator
+of the laws, `e_ij(f) e_jk(g) e_ij(-f) e_jk(-g)` as matrices, is `e_ik(f g)`. A score runs in time
+order, so that law is the score `e_jk(-g), e_ij(-f), e_jk(g), e_ij(f)`, and the score
+`e_ij(f), e_jk(g), e_ij(-f), e_jk(-g)` has the law `e_ik(-f g)`. -/
+@[ledger "R2"]
+def steinbergRules : Prop :=
+  ∀ (S : Type) [CommRing S] (c : ℕ) (i j k l : Fin c) (f g : S),
+    (i ≠ j → realizeC [(⟨i, j, f⟩ : ChanStep c S), ⟨i, j, g⟩] = realizeC [⟨i, j, f + g⟩]) ∧
+    realizeC [(⟨i, j, 0⟩ : ChanStep c S)] = 1 ∧
+    (j ≠ k → i ≠ l → realizeC [(⟨i, j, f⟩ : ChanStep c S), ⟨k, l, g⟩] =
+      realizeC [⟨k, l, g⟩, ⟨i, j, f⟩]) ∧
+    (i ≠ j → j ≠ k → i ≠ k →
+      Matrix.transvection i j f * Matrix.transvection j k g * Matrix.transvection i j (-f) *
+        Matrix.transvection j k (-g) = Matrix.transvection i k (f * g) ∧
+      realizeC [(⟨j, k, -g⟩ : ChanStep c S), ⟨i, j, -f⟩, ⟨j, k, g⟩, ⟨i, j, f⟩] =
+        (⟨i, k, f * g⟩ : ChanStep c S).mat ∧
+      realizeC [(⟨i, j, f⟩ : ChanStep c S), ⟨j, k, g⟩, ⟨i, j, -f⟩, ⟨j, k, -g⟩] =
+        (⟨i, k, -(f * g)⟩ : ChanStep c S).mat)
+
+/-- **T1** (the fewest steps). A law is one step exactly when it is a shear, and a score of at most
+two steps exactly when `a = 1` or `d = 1`. So every other law needs three or more, and Strang's
+`K(k), M(m), K(k)` with `k m ≠ 0` needs three. -/
+@[ledger "T1"]
+def fewestSteps : Prop :=
+  ∀ (S : Type) [CommRing S],
+    (∀ T : SpecialLinearGroup (Fin 2) S, (∃ s : Step S, s.sl = T) ↔
+      T.1 0 0 = 1 ∧ T.1 1 1 = 1 ∧ (T.1 0 1 = 0 ∨ T.1 1 0 = 0)) ∧
+    (∀ T : SpecialLinearGroup (Fin 2) S, (∃ w : Score S, w.length ≤ 2 ∧ realize w = T) ↔
+      T.1 0 0 = 1 ∨ T.1 1 1 = 1) ∧
+    ∀ k m : S, k * m ≠ 0 → ∀ w : Score S,
+      realize w = realize [Step.kick k, Step.move m, Step.kick k] → 3 ≤ w.length
+
+/-- **T2** (the index as a group). Over a field `F`, with `S = F[x, 1/x]`: `E₂(S)` is the kernel of
+the determinant on `GL₂(S)`, and the determinant is onto, so `GL₂(S)/E₂(S) ≅ S*`. The units of `S`
+are the monomials `r xᵏ`. The balanced pair `diag(x, 1/x)` is a score of six shears. -/
+@[ledger "T2"]
+def indexGroup : Prop :=
+  ∀ (F : Type) [Field F],
+    elementary (LaurentPolynomial F) = (Matrix.GeneralLinearGroup.det :
+      Matrix.GeneralLinearGroup (Fin 2) (LaurentPolynomial F) →* (LaurentPolynomial F)ˣ).ker ∧
+    Function.Surjective (Matrix.GeneralLinearGroup.det :
+      Matrix.GeneralLinearGroup (Fin 2) (LaurentPolynomial F) →* (LaurentPolynomial F)ˣ) ∧
+    (∀ u : (LaurentPolynomial F)ˣ, ∃ (r : Fˣ) (k : ℤ),
+      (u : LaurentPolynomial F) = LaurentPolynomial.C (r : F) * LaurentPolynomial.T k) ∧
+    (∀ (r : Fˣ) (k : ℤ), IsUnit (LaurentPolynomial.C (r : F) * LaurentPolynomial.T k)) ∧
+    ∃ w : Score (LaurentPolynomial F), w.length = 6 ∧
+      (realize w : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) =
+        !![LaurentPolynomial.T 1, 0; 0, LaurentPolynomial.T (-1)]
+
+/-- **T11** (face and link; finding 064, Theorem S3.10). Take any score of constant kicks `K(w κ)`
+and moves `M(-w ℓ g)`, `g = D D*`, and its link form, with the kicks `K(w κ D*)` and the moves
+`M(-w ℓ D)`. Then `T_link Λ = Λ T_face` with `Λ = diag(1, D*)`, so `a` is the same, and `c_link =
+D* c` and `b = D* b_link`. At the zero mode `x = 1` the link form is the identity (unglued), and
+the face form is the kick of the total weight, glued when that is not zero. Over a domain, the two
+have one phase, and the link ideal lies between `D*` times the face ideal and the face ideal. -/
+@[ledger "T11"]
+def faceAndLink : Prop :=
+  ∀ (R : Type) [CommRing R] [IsDomain R] (κ ℓ : R) (w : List (Step R)),
+    let Tf := realize (w.map (faceStep κ ℓ))
+    let Tl := realize (w.map (linkStep κ ℓ))
+    Tl.1 * lambdaMat R = lambdaMat R * Tf.1 ∧
+    Tl.1 0 0 = Tf.1 0 0 ∧ Tl.1 1 0 = diffDs R * Tf.1 1 0 ∧ Tf.1 0 1 = Tl.1 0 1 * diffDs R ∧
+    Tl.1 1 1 = Tf.1 1 1 ∧
+    Matrix.SpecialLinearGroup.map (atZero R) Tl = 1 ∧
+    (Matrix.SpecialLinearGroup.map (atZero R) Tf).1 = !![1, 0; totalKick w * κ, 1] ∧
+    ∀ t : LaurentPolynomial R, lawIdeal t Tl.1 ≤ lawIdeal t Tf.1 ∧
+      Ideal.span {algebraMap _ (curveRing t) (diffDs R)} * lawIdeal t Tf.1 ≤ lawIdeal t Tl.1
+
+/-- **T12** (the criterion for palindromes). Over a principal ideal domain in which `2` is
+invertible, a law is processing-equivalent to a palindrome exactly when some invertible `P`
+reverses it, `P T P⁻¹ = T⁻¹`, with `-det P` a square. So a palindrome's class is fixed by time
+reversal. The converse needs the square: on some dials a class that time reversal fixes holds no
+palindrome. -/
+@[ledger "T12"]
+def palindromeCriterion : Prop :=
+  ∀ (S : Type) [CommRing S] [IsDomain S] [IsPrincipalIdealRing S] [Invertible (2 : S)]
+    (T : SpecialLinearGroup (Fin 2) S),
+    (∃ Q : Matrix.GeneralLinearGroup (Fin 2) S,
+      (Q.1 * T.1 * (Q⁻¹ : Matrix.GeneralLinearGroup (Fin 2) S).1) 0 0 =
+        (Q.1 * T.1 * (Q⁻¹ : Matrix.GeneralLinearGroup (Fin 2) S).1) 1 1) ↔
+    ∃ P : Matrix.GeneralLinearGroup (Fin 2) S,
+      P.1 * T.1 = ((T⁻¹ : SpecialLinearGroup (Fin 2) S) : Matrix (Fin 2) (Fin 2) S) * P.1 ∧
+      IsSquare (-(P.1.det))
+
+/-- **T14** (the caller's rule; finding 080, Theorem S8.5). A caller that reads two equally
+prepared response cells calls `xy` with the share of the patterns that its rule sends there. The
+book's rule, turn on `11`, has the share `1/4`, and leaves the cut `-h²(g_x - g_y)/4`. The rules
+"turn on `a = 1`" and "turn on `a ≠ b`" have the share `1/2`, and leave no cut. -/
+@[ledger "T14"]
+def callerRules : Prop :=
+  share turnOn11 = 1 / 4 ∧ share turnOnA = 1 / 2 ∧ share turnOnNe = 1 / 2 ∧
+  ∀ (K : Type) [Field K] [CharZero K] (h gx gy : K),
+    cut (((share turnOn11 : ℚ) : K) • (splitTick true h gx gy : Matrix (Fin 2) (Fin 2) K) +
+      (1 - ((share turnOn11 : ℚ) : K)) • (splitTick false h gx gy : Matrix (Fin 2) (Fin 2) K)) =
+        -(h ^ 2 * (gx - gy) / 4) ∧
+    cut (((share turnOnA : ℚ) : K) • (splitTick true h gx gy : Matrix (Fin 2) (Fin 2) K) +
+      (1 - ((share turnOnA : ℚ) : K)) • (splitTick false h gx gy : Matrix (Fin 2) (Fin 2) K)) = 0 ∧
+    cut (((share turnOnNe : ℚ) : K) • (splitTick true h gx gy : Matrix (Fin 2) (Fin 2) K) +
+      (1 - ((share turnOnNe : ℚ) : K)) • (splitTick false h gx gy : Matrix (Fin 2) (Fin 2) K)) = 0
+
+/-- **T14** (one cue; finding 080, Theorem S8.6). Multiplication by the indicator of a set `X` of
+cells commutes with the shift by `w` exactly when `X` is invariant under `w`, and with all the
+shifts exactly when `X` is empty or everything. So a kick placed by one cue for all the faces of a
+colour is a stencil on the blocked artform, and a kick placed by a coin per face is none. -/
+@[ledger "T14"]
+def oneCue : Prop :=
+  ∀ (Λ R : Type) [AddCommGroup Λ] [CommRing R] [Nontrivial R] (X : Set Λ),
+    (∀ w : Λ, (∀ u : Λ → R, shiftField w (maskField X u) = maskField X (shiftField w u)) ↔
+      ∀ z, z + w ∈ X ↔ z ∈ X) ∧
+    ((∀ (w : Λ) (u : Λ → R), shiftField w (maskField X u) = maskField X (shiftField w u)) ↔
+      X = ∅ ∨ X = Set.univ)
+
+/-- **T16** (the duet; the book's `06-controller`). The cue is read from two equally prepared cells,
+`orbit` on `11`. Read by both dancers, they never disagree, and both orbit on one pattern of four.
+With a coin each, they disagree on `6` of `16` patterns, and both orbit on one of `16`. Two choices
+from independent sources that agree every time are fixed: they can agree and vary only through a
+cause they share. -/
+@[ledger "T16"]
+def duet : Prop :=
+  (Finset.univ.filter fun p : Bool × Bool => turnOn11 p ≠ turnOn11 p).card = 0 ∧
+  (Finset.univ.filter fun p : Bool × Bool => turnOn11 p = true ∧ turnOn11 p = true).card = 1 ∧
+  (Finset.univ.filter fun p : (Bool × Bool) × (Bool × Bool) =>
+    turnOn11 p.1 ≠ turnOn11 p.2).card = 6 ∧
+  (Finset.univ.filter fun p : (Bool × Bool) × (Bool × Bool) =>
+    turnOn11 p.1 = true ∧ turnOn11 p.2 = true).card = 1 ∧
+  ∀ (Ω₁ Ω₂ α : Type) [Nonempty Ω₁] [Nonempty Ω₂] (f : Ω₁ → α) (g : Ω₂ → α),
+    (∀ ω₁ ω₂, f ω₁ = g ω₂) → ∃ a, (∀ ω, f ω = a) ∧ ∀ ω, g ω = a
+
 end Artform.Scores.Statement
