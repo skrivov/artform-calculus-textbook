@@ -1691,7 +1691,6 @@ theorem cyclic_face (h2 : (2 : F) ≠ 0) {κ : F} (hκ : κ ≠ 0) (ℓ : F) {w 
 /-! ### The theorems -/
 
 /-- **T8** (the curve of the leapfrog phase). -/
-@[ledger "T8"]
 theorem leapfrogCurve : Statement.leapfrogCurve := by
   intro K _ q hq0 hq1
   refine ⟨?_, ?_, ?_⟩

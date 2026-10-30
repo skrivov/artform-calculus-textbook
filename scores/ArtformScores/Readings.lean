@@ -37,7 +37,6 @@ theorem pow_add_two (A : SpecialLinearGroup (Fin 2) S) (n : ℕ) :
   rw [pow_add, sq, sq_eq_phase_smul_sub, Matrix.mul_sub, Matrix.mul_smul, mul_one, ← pow_succ]
 
 /-- **T12** (the reading). -/
-@[ledger "T12"]
 theorem readingDetermines : Statement.readingDetermines := by
   intro S _ T T' ht ha n b₀
   have key : ∀ m : ℕ,

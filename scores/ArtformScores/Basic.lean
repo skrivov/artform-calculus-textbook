@@ -98,6 +98,9 @@ def whitehead (u : Sˣ) : Score S := [.move ↑u, .kick (-↑u⁻¹), .move ↑u
 def balanced (u : Sˣ) : SpecialLinearGroup (Fin 2) S :=
   realize (whitehead u) * (realize (whitehead 1))⁻¹
 
+/-- The balanced mover as a score in time order: first `w(1)⁻¹`, then `w(u)`. -/
+def balancedScore (u : Sˣ) : Score S := (whitehead 1).reverse ++ whitehead u
+
 /-- The cut of a law, `a - d`: the difference of its diagonal entries. -/
 @[ledger "def:cut"]
 def cut {K : Type*} [Ring K] (T : Matrix (Fin 2) (Fin 2) K) : K := T 0 0 - T 1 1

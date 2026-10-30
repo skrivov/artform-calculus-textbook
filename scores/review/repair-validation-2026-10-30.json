@@ -1,0 +1,427 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "e1efbee",
+  "kind": "author repair validation; independent re-review pending",
+  "commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 3.02,
+      "stdout": "build/scores-repair/final/build.log",
+      "stderr": "build/scores-repair/final/build.stderr.log"
+    },
+    {
+      "name": "textbook-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.26,
+      "stdout": "build/report.json",
+      "stderr": "build/scores-repair/final/textbook-report.stderr.log"
+    },
+    {
+      "name": "ledger-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 12.53,
+      "stdout": "build/ledger-report.json",
+      "stderr": "build/scores-repair/final/ledger-report.stderr.log"
+    },
+    {
+      "name": "textbook-status",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.29,
+      "stdout": "build/scores-repair/final/textbook-status.log",
+      "stderr": "build/scores-repair/final/textbook-status.stderr.log"
+    },
+    {
+      "name": "ledger-status-write",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/scores-repair/final/ledger-status-write.log",
+      "stderr": "build/scores-repair/final/ledger-status-write.stderr.log"
+    },
+    {
+      "name": "ledger-status",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/scores-repair/final/ledger-status.log",
+      "stderr": "build/scores-repair/final/ledger-status.stderr.log"
+    },
+    {
+      "name": "textbook-drift",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.28,
+      "stdout": "build/scores-repair/final/textbook-drift.log",
+      "stderr": "build/scores-repair/final/textbook-drift.stderr.log"
+    },
+    {
+      "name": "ledger-drift",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/scores-repair/final/ledger-drift.log",
+      "stderr": "build/scores-repair/final/ledger-drift.stderr.log"
+    },
+    {
+      "name": "one-mode-certificates",
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19,
+      "stdout": "build/scores-repair/final/one-mode-certificates.log",
+      "stderr": "build/scores-repair/final/one-mode-certificates.stderr.log"
+    },
+    {
+      "name": "extent-certificates",
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.19,
+      "stdout": "build/scores-repair/final/extent-certificates.log",
+      "stderr": "build/scores-repair/final/extent-certificates.stderr.log"
+    },
+    {
+      "name": "script-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "stdout": "build/scores-repair/final/script-tests.log",
+      "stderr": "build/scores-repair/final/script-tests.stderr.log"
+    },
+    {
+      "name": "kernel-Basic",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 5.59,
+      "stdout": "build/scores-repair/final/kernel-Basic.log",
+      "stderr": "build/scores-repair/final/kernel-Basic.stderr.log"
+    },
+    {
+      "name": "kernel-Rules",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Rules"
+      ],
+      "exit_code": 0,
+      "seconds": 5.32,
+      "stdout": "build/scores-repair/final/kernel-Rules.log",
+      "stderr": "build/scores-repair/final/kernel-Rules.stderr.log"
+    },
+    {
+      "name": "kernel-BackSteps",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.BackSteps"
+      ],
+      "exit_code": 0,
+      "seconds": 5.47,
+      "stdout": "build/scores-repair/final/kernel-BackSteps.log",
+      "stderr": "build/scores-repair/final/kernel-BackSteps.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Statements",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Statements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.18,
+      "stdout": "build/scores-repair/final/kernel-ReviewRepair-Statements.log",
+      "stderr": "build/scores-repair/final/kernel-ReviewRepair-Statements.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Elementary",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Elementary"
+      ],
+      "exit_code": 0,
+      "seconds": 5.7,
+      "stdout": "build/scores-repair/final/kernel-ReviewRepair-Elementary.log",
+      "stderr": "build/scores-repair/final/kernel-ReviewRepair-Elementary.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Reading",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Reading"
+      ],
+      "exit_code": 0,
+      "seconds": 5.36,
+      "stdout": "build/scores-repair/final/kernel-ReviewRepair-Reading.log",
+      "stderr": "build/scores-repair/final/kernel-ReviewRepair-Reading.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Normalization",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Normalization"
+      ],
+      "exit_code": 0,
+      "seconds": 5.73,
+      "stdout": "build/scores-repair/final/kernel-ReviewRepair-Normalization.log",
+      "stderr": "build/scores-repair/final/kernel-ReviewRepair-Normalization.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-FaceNormalization",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.FaceNormalization"
+      ],
+      "exit_code": 0,
+      "seconds": 5.3,
+      "stdout": "build/scores-repair/final/kernel-ReviewRepair-FaceNormalization.log",
+      "stderr": "build/scores-repair/final/kernel-ReviewRepair-FaceNormalization.stderr.log"
+    },
+    {
+      "name": "tree-identity",
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.26,
+      "stdout": "build/scores-repair/final/tree-identity.log",
+      "stderr": "build/scores-repair/final/tree-identity.stderr.log"
+    }
+  ],
+  "counts": {
+    "proved": 54,
+    "stated": 9,
+    "planned": 0
+  },
+  "approved_surface_drift": [],
+  "repairs": [
+    {
+      "key": "R4",
+      "statement": "Artform.Scores.Statement.balancedRule",
+      "proof": "Artform.Scores.balancedRule",
+      "statement_text": "Artform.Scores.Statement.balancedRule : Prop :=\n  ∀ (S : Type) [inst : CommRing S] (u v : Sˣ),\n  ↑(Artform.Scores.balanced u) = !![↑u, 0; 0, ↑u⁻¹] ∧\n    Artform.Scores.balanced u * Artform.Scores.balanced v = Artform.Scores.balanced (u * v) ∧\n      Artform.Scores.realize (Artform.Scores.balancedScore u) = Artform.Scores.balanced u",
+      "text_sha256": "77fd114b3f77da21512f944cc5cab233cb5c0e152022cee5486118396d1cfb71",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T12:reading",
+      "statement": "Artform.Scores.Statement.readingComplete",
+      "proof": "Artform.Scores.readingComplete",
+      "statement_text": "Artform.Scores.Statement.readingComplete : Prop :=\n  Artform.Scores.Statement.readingDetermines ∧\n  (∀ (S : Type) [inst : CommRing S] (A B : Matrix.SpecialLinearGroup (Fin 2) S),\n      Artform.Scores.phase A = Artform.Scores.phase B ∧ Artform.Scores.reading A = Artform.Scores.reading B ↔\n        ∀ (n : ℕ), ↑(A ^ n) 0 0 = ↑(B ^ n) 0 0) ∧\n    (∀ (A : Matrix.SpecialLinearGroup (Fin 2) ℝ) (θ : ℝ),\n        Artform.Scores.phase A = 2 * Real.cos θ →\n          Real.sin θ ≠ 0 →\n            ∀ (n : ℕ), ↑(A ^ n) 0 0 = Real.cos (↑n * θ) + (↑A 0 0 - ↑A 1 1) / 2 * Real.sin (↑n * θ) / Real.sin θ) ∧\n      ∀ (S : Type) [inst : CommRing S] (A : Matrix.SpecialLinearGroup (Fin 2) S) (ε : S),\n        ε * ε = 1 →\n          Artform.Scores.phase A = 2 * ε →\n            ∀ (n : ℕ), ↑(A ^ n) 0 0 = ε ^ n * (1 + ↑n * (ε * Artform.Scores.reading A - 1))",
+      "text_sha256": "a99f9915623bfb5b0671c66bae3e78291afc767d29c41bb1e2aa956f186dfc2b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T14",
+      "statement": "Artform.Scores.Statement.callerCutComplete",
+      "proof": "Artform.Scores.callerCutComplete",
+      "statement_text": "Artform.Scores.Statement.callerCutComplete : Prop :=\n  Artform.Scores.Statement.callerCut ∧\n  ∀ (K : Type) [inst : Field K] [CharZero K] (h gx gy q : K),\n    Artform.Scores.cut\n          (q • ↑(Artform.Scores.splitTick true h gx gy) + (1 - q) • ↑(Artform.Scores.splitTick false h gx gy)) =\n        0 ↔\n      q = 1 / 2 ∨ h = 0 ∨ gx = gy",
+      "text_sha256": "40d5e3a9f5423f7273ab25b34e6772ae08298a5cdfce0250bc96d0edfc62f71c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T15:back-step",
+      "statement": "Artform.Scores.Statement.oneBackStep",
+      "proof": "Artform.Scores.oneBackStep",
+      "statement_text": "Artform.Scores.Statement.oneBackStep : Prop :=\n  ∀ (G : Type) [inst : Group G] [Finite G] (A B : G) (σ : Equiv.Perm G) (x₀ : G),\n  (∀ (x : G), x ≠ x₀ → σ x = A * x ∨ σ x = B * x) →\n    (σ x₀ = A⁻¹ * x₀ → A * B ∈ Subgroup.zpowers (A⁻¹ * B)) ∧ (σ x₀ = B⁻¹ * x₀ → B * A ∈ Subgroup.zpowers (A⁻¹ * B))",
+      "text_sha256": "aef444b017f07b5d9ff03ad4d0d53c7872f304b795956eaae992863d95ba03b7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T13:platonic",
+      "statement": "Artform.Scores.Statement.platonicIncidence",
+      "proof": "Artform.Scores.platonicIncidence",
+      "statement_text": "Artform.Scores.Statement.platonicIncidence : Prop :=\n  Artform.Scores.Statement.platonicSolids ∧\n  (Artform.Scores.PrimitiveGraphModel 3 4 fun i j => i ≠ j) ∧\n    Artform.Scores.PrimitiveGraphModel 4 6 Artform.Scores.octahedronAdj ∧\n      Artform.Scores.PrimitiveGraphModel 5 12 Artform.Scores.icosahedronAdj",
+      "text_sha256": "9a69512a4fdd2523533f06b2166244fb4c4f0139cddda72534baa75c40d5409f",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "R2",
+      "statement": "Artform.Scores.Statement.steinbergRules",
+      "proof": "Artform.Scores.steinbergRules'",
+      "statement_text": "Artform.Scores.Statement.steinbergRules : Prop :=\n  ∀ (S : Type) [inst : CommRing S] (c : ℕ) (i j k l : Fin c) (f g : S),\n  (i ≠ j →\n      Artform.Scores.realizeC [{ i := i, j := j, f := f }, { i := i, j := j, f := g }] =\n        Artform.Scores.realizeC [{ i := i, j := j, f := f + g }]) ∧\n    Artform.Scores.realizeC [{ i := i, j := j, f := 0 }] = 1 ∧\n      (j ≠ k →\n          i ≠ l →\n            Artform.Scores.realizeC [{ i := i, j := j, f := f }, { i := k, j := l, f := g }] =\n              Artform.Scores.realizeC [{ i := k, j := l, f := g }, { i := i, j := j, f := f }]) ∧\n        (i ≠ j →\n          j ≠ k →\n            i ≠ k →\n              Matrix.transvection i j f * Matrix.transvection j k g * Matrix.transvection i j (-f) *\n                    Matrix.transvection j k (-g) =\n                  Matrix.transvection i k (f * g) ∧\n                Artform.Scores.realizeC\n                      [{ i := j, j := k, f := -g }, { i := i, j := j, f := -f }, { i := j, j := k, f := g },\n                        { i := i, j := j, f := f }] =\n                    { i := i, j := k, f := f * g }.mat ∧\n                  Artform.Scores.realizeC\n                      [{ i := i, j := j, f := f }, { i := j, j := k, f := g }, { i := i, j := j, f := -f },\n                        { i := j, j := k, f := -g }] =\n                    { i := i, j := k, f := -(f * g) }.mat)",
+      "text_sha256": "109deb84447b656135b65a1f590d28f56dae5587f7324ab6d9d1ad4e265cd784",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T2:group",
+      "statement": "Artform.Scores.Statement.indexGroupComplete",
+      "proof": "Artform.Scores.indexGroupComplete",
+      "statement_text": "Artform.Scores.Statement.indexGroupComplete : Prop :=\n  Artform.Scores.Statement.indexGroup ∧\n  ∀ (n : ℕ),\n    n ≠ 0 →\n      Artform.Scores.elementary (LaurentPolynomial (ZMod n)) = Matrix.GeneralLinearGroup.det.ker ∧\n        Function.Surjective ⇑Matrix.GeneralLinearGroup.det",
+      "text_sha256": "bb4a8df98c065e83c8737cd755bc199cdaf7a070ff414b3f04d4300ceaecd9bb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T11",
+      "statement": "Artform.Scores.Statement.faceAndLinkNormalization",
+      "proof": "Artform.Scores.faceAndLinkNormalization",
+      "statement_text": "Artform.Scores.Statement.faceAndLinkNormalization : Prop :=\n  Artform.Scores.Statement.faceAndLink ∧\n  ∀ (F : Type) [inst : Field F] (κ ℓ : F) (w : Artform.Scores.Score F),\n    Artform.Scores.totalKick w * κ ≠ 0 →\n      have Tf := Artform.Scores.realize (List.map (Artform.Scores.faceStep κ ℓ) w);\n      have Tl := Artform.Scores.realize (List.map (Artform.Scores.linkStep κ ℓ) w);\n      ∀ (B : Type) [inst_1 : CommRing B] [IsDomain B] [IsIntegrallyClosed B] (ι : LaurentPolynomial F →+* B),\n        Function.Injective ⇑ι →\n          ∀ (lam : B),\n            lam * lam - ι (Artform.Scores.phase Tf) * lam + 1 = 0 →\n              Ideal.span {ι (↑Tl 1 0), lam - ι (↑Tl 0 0)} =\n                Ideal.span {ι (Artform.Scores.diffDs F)} * Ideal.span {ι (↑Tf 1 0), lam - ι (↑Tf 0 0)}",
+      "text_sha256": "1dbf424ba634a44ed324ef10665139eed9150ee35e1feb9a37147afb0cb32173",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    },
+    {
+      "key": "T8:curve",
+      "statement": "Artform.Scores.Statement.leapfrogNormalization",
+      "proof": "Artform.Scores.leapfrogNormalization",
+      "statement_text": "Artform.Scores.Statement.leapfrogNormalization : Prop :=\n  Artform.Scores.Statement.leapfrogCurve ∧\n  ∀ (F : Type) [inst : Field F] (q : F),\n    2 ≠ 0 →\n      q ≠ 0 →\n        q ≠ 1 →\n          IsIntegrallyClosed (Artform.Scores.Leapfrog.Norm q) ∧\n            (∃ ι,\n                Function.Injective ⇑ι ∧\n                  (∀ (z : Artform.Scores.Leapfrog.Norm q), ∃ p, p.Monic ∧ Polynomial.eval₂ ι z p = 0) ∧\n                    (∀ (z : Artform.Scores.Leapfrog.Norm q), ∃ a d, d ≠ 0 ∧ ι d * z = ι a) ∧\n                      ι (Artform.Scores.eig (Artform.Scores.Leapfrog.phaseT q)) =\n                        1 +\n                          (ι\n                                ((algebraMap (LaurentPolynomial F)\n                                    (Artform.Scores.curveRing (Artform.Scores.Leapfrog.phaseT q)))\n                                  (LaurentPolynomial.T 1)) -\n                              1) *\n                            Artform.Scores.Leapfrog.sN q) ∧\n              (∀ (x lam : F),\n                  x ≠ 0 →\n                    lam ≠ 0 →\n                      (x * (lam - 1) ^ 2 - q * (x - 1) ^ 2 * lam = 0 ∧\n                          (lam - 1) ^ 2 - 2 * q * (x - 1) * lam = 0 ∧ 2 * x * (lam - 1) - q * (x - 1) ^ 2 = 0 ↔\n                        x = 1 ∧ lam = 1)) ∧\n                (∀ (u v : F),\n                    (1 + u) * (1 + v - 1) ^ 2 - q * (1 + u - 1) ^ 2 * (1 + v) =\n                      v ^ 2 - q * u ^ 2 + u * v ^ 2 - q * u ^ 2 * v) ∧\n                  (Polynomial.X ^ 2 - Polynomial.C q).Separable ∧\n                    ∀ (h : F), h * h = q → h ≠ -h ∧ ∀ (u v : F), v ^ 2 - q * u ^ 2 = (v - h * u) * (v + h * u)",
+      "text_sha256": "6456f518b3e1b8def49ba4cc067e1fbd1797eccc6d53557286fe2544f90e19dd",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "stated",
+      "review": "repair submitted; independent re-review pending"
+    }
+  ],
+  "input_sha256": {
+    "scores/ArtformScores/BackSteps.lean": "352f80096ce21f4f89ee2440e64a899ee86c5e6ab9755fde5dd0f7222279f190",
+    "scores/ArtformScores/Basic.lean": "3f9c959f78307c5fbfda7b7758b9ded0ecbeb65c4b9d1ab23b637f3e9a9148c6",
+    "scores/ArtformScores/Caller.lean": "c36b32f749061e81e077e019b9bb6fba964c99fae7986dd536aa4bc652ab7e47",
+    "scores/ArtformScores/FaceLink.lean": "36318d7f28d29b857a872bc4658419e26f6bd301df1218afb7e32701bb518ec9",
+    "scores/ArtformScores/KleinMap.lean": "7cb07c1f4cb8681e2cf4630b0c6f0f63ff0bb943008562ac7bc960a1eeddc67f",
+    "scores/ArtformScores/LeapfrogClasses.lean": "1f4039f43c883a1a9f6a88a221f5fada9ee5456c3c9dce4e0be03a1b6d11a875",
+    "scores/ArtformScores/Readings.lean": "d11ef7cf34bd0ecc6137e8d63b2c50300f1065caf1ced7df764a5dc3ccef8436",
+    "scores/ArtformScores/ReviewRepair/Elementary.lean": "2ceb374f2fda01a50595acd63b354dd0d7cae769905c867b60d49b22610eb112",
+    "scores/ArtformScores/ReviewRepair/FaceNormalization.lean": "cc340ef0005dd068396ad5a9b0acaf3eac1590fe309f9fa30fdfa6830febbee2",
+    "scores/ArtformScores/ReviewRepair/Normalization.lean": "cb41c8fb9b031f1d24ad7076626cbd1d58cff8f5396884472526599b82c5249b",
+    "scores/ArtformScores/ReviewRepair/Reading.lean": "bbbf2f3755b0e22e9f566ac795cb943746e6b3757f78fd46c8be8b5a413529cf",
+    "scores/ArtformScores/ReviewRepair/Statements.lean": "bf25e4a1e72cb53f0988d2965a63afbe5d48a3d04b5346bf0da9f82861d89b3a",
+    "scores/ArtformScores/Rules.lean": "aa92d9fc95b845a4d8f8fcc7e68a456203239e2c2a8697c25323e26ae7952859",
+    "scores/ArtformScores/Statements.lean": "484f130034c47eb978086bcb21c079142e16090ed53db9f5f07c4c15fe633c69",
+    "scores/ArtformScores/Steinberg.lean": "5acdaa96b4fff331fd8e72a0ec3aec948bb81e81d64de778e1d8517caa1defe0",
+    "scores/STATUS.md": "3717b0d1640eb54d5ef02dead86f84eadc9f808b8c78ca28acd0a3a1e2dcc648",
+    "scores/manifest.toml": "5c81be4476df1e43d21ed0ad0c790dffc3afec9b7314d53a89e95184e8cd8d1d",
+    "scores/review/repairs-2026-10-30/source/README.md": "3c47bb8fa667436f55be50e8e5d528a505ccc631b293e7d2163a1c95d759ce89",
+    "scores/review/repairs-2026-10-30/source/after/ALGEBRA-OF-SCORES.md": "2a45579891ebff5c755babbc3bd71770a2cf0e430b3d46b977275e74a70f1223",
+    "scores/review/repairs-2026-10-30/source/after/findings/057-the-classes-of-a-phase.md": "42a00010eaa0e4bf954f159bc7fbaa42a781f5039bcf75ceef12092c72c80d79",
+    "scores/review/repairs-2026-10-30/source/after/findings/064-the-laws-of-a-higher-order-phase.md": "b141e818b873699fbf53bce64100d569a2200e8b06ffd5964518fbee49d82211",
+    "scores/review/repairs-2026-10-30/source/after/findings/080-random-orders-and-the-shared-cue.md": "36c5a0e16b1a44d2fc5beaa1e037f03064e17a416142faf456be584a0ac926a8",
+    "scores/review/repairs-2026-10-30/source/before/ALGEBRA-OF-SCORES.md": "6248fe8e274cc404dfe6dc88c175fb8185b1fca798bef3582de9574f89c6adfe",
+    "scores/review/repairs-2026-10-30/source/before/findings/057-the-classes-of-a-phase.md": "a4fa9bd20cb3f7fa1f7cae4d07b4efbc3c8e8be118ccf623195926687723fc09",
+    "scores/review/repairs-2026-10-30/source/before/findings/064-the-laws-of-a-higher-order-phase.md": "95baac7769b25fbe4585025301ea25cadaa609707d99066d192104e63bf079e0",
+    "scores/review/repairs-2026-10-30/source/before/findings/080-random-orders-and-the-shared-cue.md": "7ed631dcf0aa9591e5cf7d7213570f1c99ef69c4aac059ebc7ff63d10b00d56d",
+    "scores/review/repairs-2026-10-30.md": "48c84de146e934346f3607f08d5df92192216df40a1f200cdd0eefbbd6171890"
+  },
+  "full_original_kernel_replay": "scores/review/validation-2026-10-30.json; unchanged proofs were replayed in the original audit"
+}

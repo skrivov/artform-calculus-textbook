@@ -65,3 +65,5 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `T2:group` returned (J5): The group statement is restricted to fields; the ledger also covers composite dials, whose units need not be monomials. See `scores/review/audit-2026-10-30.md`.
 - 2026-10-30: `T11` returned (J6): Intertwining and ideal inclusions do not establish the claimed normalization/gluing map; arbitrary scores need not be glued. See `scores/review/audit-2026-10-30.md`.
 - 2026-10-30: `T8:curve` returned (J8): The parametrization identities are proved; nodality, uniqueness of the singularity and the normalization claim are not stated. See `scores/review/audit-2026-10-30.md`.
+
+- 2026-10-30: repairs submitted for `R4`, `R2`, `T12:reading`, `T14`, `T2:group`, `T11`, `T13:platonic`, `T8:curve` and `T15:back-step`. See `scores/review/repairs-2026-10-30.md`. This records an author submission, not an independent approval; the nine original returns are preserved.

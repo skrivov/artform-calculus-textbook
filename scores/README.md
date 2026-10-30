@@ -124,3 +124,12 @@ and nine returned. Each submitted Lean proposition has a checked proof;
 `STATUS.md` counts it as **proved** only after independent approval against the
 ledger. Returned claims, their valid intermediate results, and the remaining
 proof-package requirements are detailed in the review.
+
+The [repair handoff](review/repairs-2026-10-30.md) addresses all nine returns.
+`ArtformScores/ReviewRepair/` adds the missing conclusions while retaining the
+original propositions as conjuncts and callable lemmas. R4 now connects its
+corrected time-order word to the diagonal law; R2's source bracket is explicit;
+and the one-back-step package has a positive five-state witness. The manifest
+maps the six stronger claims to their new proofs. The original return verdicts
+remain in force until a different agent reviews the repairs. Checked repairs
+are recorded as submitted, not independently approved.

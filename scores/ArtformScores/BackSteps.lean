@@ -445,6 +445,21 @@ theorem catMapNeverRings : Statement.catMapNeverRings := fun _ hn =>
 /-- `ℤ/6`, written multiplicatively, with the steps `A = +1` and `B = +4`. -/
 abbrev Z6 := Multiplicative (ZMod 6)
 
+/-- A genuine one-back-step run: `0 → 1 → 3 → 2 → 4 → 0` on `Z/5`.
+The forward increments are `1,2`; only `3 → 2` is backward. -/
+example :
+    let G := Multiplicative (ZMod 5)
+    let A : G := Multiplicative.ofAdd 1
+    let B : G := Multiplicative.ofAdd 2
+    let σ : Equiv.Perm G := List.formPerm [Multiplicative.ofAdd 0,
+      Multiplicative.ofAdd 1, Multiplicative.ofAdd 3, Multiplicative.ofAdd 2,
+      Multiplicative.ofAdd 4]
+    (∀ x, x ≠ Multiplicative.ofAdd 3 → σ x = A * x ∨ σ x = B * x) ∧
+    σ (Multiplicative.ofAdd 3) = A⁻¹ * Multiplicative.ofAdd 3 ∧
+    σ (Multiplicative.ofAdd 3) ≠ A * Multiplicative.ofAdd 3 ∧
+    σ (Multiplicative.ofAdd 3) ≠ B * Multiplicative.ofAdd 3 := by
+  decide +kernel
+
 theorem z6_not_mem : (Multiplicative.ofAdd (1 : ZMod 6) * Multiplicative.ofAdd 4 : Z6) ∉
     Subgroup.zpowers ((Multiplicative.ofAdd (1 : ZMod 6))⁻¹ * Multiplicative.ofAdd 4) := by
   intro h

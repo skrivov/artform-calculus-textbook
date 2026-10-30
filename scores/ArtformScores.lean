@@ -32,3 +32,8 @@ import ArtformScores.LeapfrogClasses
 import ArtformScores.LeapfrogPalindromes
 import ArtformScores.MagicStep
 import ArtformScores.LeapfrogExamples
+
+import ArtformScores.ReviewRepair.Elementary
+import ArtformScores.ReviewRepair.Reading
+import ArtformScores.ReviewRepair.Normalization
+import ArtformScores.ReviewRepair.FaceNormalization

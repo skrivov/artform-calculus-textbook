@@ -54,10 +54,19 @@ theorem whiteheadRule : Statement.whiteheadRule := by
 @[ledger "R4"]
 theorem balancedRule : Statement.balancedRule := by
   intro S _ u v
-  refine ⟨balanced_mat u, ?_⟩
-  ext i j
-  simp only [Matrix.SpecialLinearGroup.coe_mul, balanced_mat, Matrix.mul_fin_two]
-  fin_cases i <;> fin_cases j <;> simp [mul_comm]
+  refine ⟨balanced_mat u, ?_, ?_⟩
+  · ext i j
+    simp only [Matrix.SpecialLinearGroup.coe_mul, balanced_mat, Matrix.mul_fin_two]
+    fin_cases i <;> fin_cases j <;> simp [mul_comm]
+  · simp only [balancedScore, realize_append, balanced]
+    have hrev : ∀ w : Score S, realize w.reverse = (realize w)⁻¹ := by
+      intro w
+      induction w with
+      | nil => simp [Score.reverse]
+      | cons s w ih =>
+        simp only [Score.reverse, List.map_cons, List.reverse_cons] at ih ⊢
+        rw [realize_append, ih, realize_singleton, Step.sl_neg, realize_cons, mul_inv_rev]
+    rw [hrev]
 
 /-- **R5** (time reversal). -/
 @[ledger "R5"]
@@ -97,7 +106,12 @@ example : (realize (whitehead (⟨3, 5, by decide, by decide⟩ : (ZMod 7)ˣ)) :
 example : balanced (⟨3, 5, by decide, by decide⟩ : (ZMod 7)ˣ) *
     balanced ⟨5, 3, by decide, by decide⟩ =
       balanced ((⟨3, 5, by decide, by decide⟩ : (ZMod 7)ˣ) * ⟨5, 3, by decide, by decide⟩) :=
-  (balancedRule (ZMod 7) _ _).2
+  (balancedRule (ZMod 7) _ _).2.1
+
+/-- The corrected time-order balanced word realizes that same diagonal law. -/
+example : realize (balancedScore (⟨3, 5, by decide, by decide⟩ : (ZMod 7)ˣ)) =
+    balanced (⟨3, 5, by decide, by decide⟩ : (ZMod 7)ˣ) :=
+  (balancedRule (ZMod 7) _ 1).2.2
 
 /-- Time reversal of the book's tick `K(1) M(-3)` over `F₇`. -/
 example : realize (Score.reverse [Step.kick (1 : ZMod 7), Step.move (-3)]) =

@@ -34,13 +34,14 @@ def whiteheadRule : Prop :=
     realize (whitehead u) * (Step.kick f).sl * (realize (whitehead u))⁻¹ =
       (Step.move (-(↑u * ↑u * f))).sl
 
-/-- **R4** (balanced movers). The balanced pair `h(u) = w(u) w(1)⁻¹` is the law
-`diag(u, u⁻¹)`, and `h(u) h(v) = h(uv)`. -/
+/-- **R4** (balanced movers). The law product `W(u) W(1)⁻¹` is `diag(u, u⁻¹)`
+and is multiplicative in `u`. Its time-order score is `w(1)⁻¹ w(u)`. -/
 @[ledger "R4"]
 def balancedRule : Prop :=
   ∀ (S : Type) [CommRing S] (u v : Sˣ),
     (balanced u : Matrix (Fin 2) (Fin 2) S) = !![↑u, 0; 0, ↑u⁻¹] ∧
-    balanced u * balanced v = balanced (u * v)
+    balanced u * balanced v = balanced (u * v) ∧
+    realize (balancedScore u) = balanced u
 
 /-- **R5** (time reversal). The reversed score, its steps in the opposite order and
 each inverted, realizes the inverse law. -/
@@ -203,7 +204,6 @@ def classesOnto : Prop :=
 /-- **T12** (the reading). Two laws with the same phase and the same reading give
 the same output from rest: from `(b, e) = (b₀, 0)`, the flux `b` after `n`
 ticks is the same for both. -/
-@[ledger "T12"]
 def readingDetermines : Prop :=
   ∀ (S : Type) [CommRing S] (T T' : SpecialLinearGroup (Fin 2) S),
     phase T = phase T' → reading T = reading T' → ∀ (n : ℕ) (b₀ : S),
@@ -235,7 +235,6 @@ phase and the cuts `±h²(gx - gy)/2`. A caller that calls `xy` with weight `q`
 and `yx` with weight `1 - q` has a mean tick with the cut
 `(2q - 1) h²(gx - gy)/2`, which vanishes for every pull exactly when
 `q = 1/2`. -/
-@[ledger "T14"]
 def callerCut : Prop :=
   ∀ (K : Type) [Field K] [CharZero K] (h gx gy q : K),
     cut (splitTick true h gx gy : Matrix (Fin 2) (Fin 2) K) = h ^ 2 * (gx - gy) / 2 ∧
@@ -546,7 +545,6 @@ def regularMap : Prop :=
 /-- **T13** (Theorem U, part 1; finding 038). The dials `n = 3, 4, 5` give the tetrahedron, the
 octahedron and the icosahedron: `|PSL| = 12, 24, 60`, with `(V, E, F) = (4, 6, 4)`, `(6, 12, 8)` and
 `(12, 30, 20)`. -/
-@[ledger "T13"]
 def platonicSolids : Prop :=
   (Nat.card (Bells.PSLZ 3) = 12 ∧ (Klein.vertices 3).ncard = 4 ∧ (Klein.edges 3).ncard = 6 ∧
     (Klein.faces 3).ncard = 4) ∧
@@ -703,7 +701,6 @@ def fewestSteps : Prop :=
 /-- **T2** (the index as a group). Over a field `F`, with `S = F[x, 1/x]`: `E₂(S)` is the kernel of
 the determinant on `GL₂(S)`, and the determinant is onto, so `GL₂(S)/E₂(S) ≅ S*`. The units of `S`
 are the monomials `r xᵏ`. The balanced pair `diag(x, 1/x)` is a score of six shears. -/
-@[ledger "T2"]
 def indexGroup : Prop :=
   ∀ (F : Type) [Field F],
     elementary (LaurentPolynomial F) = (Matrix.GeneralLinearGroup.det :
@@ -723,7 +720,6 @@ and moves `M(-w ℓ g)`, `g = D D*`, and its link form, with the kicks `K(w κ D
 D* c` and `b = D* b_link`. At the zero mode `x = 1` the link form is the identity (unglued), and
 the face form is the kick of the total weight, glued when that is not zero. Over a domain, the two
 have one phase, and the link ideal lies between `D*` times the face ideal and the face ideal. -/
-@[ledger "T11"]
 def faceAndLink : Prop :=
   ∀ (R : Type) [CommRing R] [IsDomain R] (κ ℓ : R) (w : List (Step R)),
     let Tf := realize (w.map (faceStep κ ℓ))
@@ -802,7 +798,6 @@ the line, other than `0`, `1` and `q`, goes to `x = q (1 - s) / (s (s - q))` and
 `λ = s (1 - s) / (s - q)`, a point of the curve. Conversely `s = (λ - 1) / (x - 1)` is the inverse,
 at every point of the curve with `x ≠ 1`. Over `x = 1` the curve has the one point `λ = 1`, the
 node, and the line has the two points `s² = q`, its two branches. -/
-@[ledger "T8"]
 def leapfrogCurve : Prop :=
   ∀ (K : Type) [Field K] (q : K), q ≠ 0 → q ≠ 1 →
     (∀ s : K, s ≠ 0 → s ≠ 1 → s ≠ q →

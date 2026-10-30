@@ -108,7 +108,6 @@ theorem face_at_zero (κ ℓ : R) (w : List (Step R)) :
 end FaceLink
 
 /-- **T11** (face and link). -/
-@[ledger "T11"]
 theorem faceAndLink : Statement.faceAndLink := by
   intro R _ _ κ ℓ w Tf Tl
   have hint : Tl.1 * lambdaMat R = lambdaMat R * Tf.1 := score_intertwine κ ℓ w

@@ -1214,7 +1214,6 @@ theorem card_PSL_of_check {n : ℕ} [NeZero n] {N w : ℕ} (hN : 0 < N)
   exact (modelPSL n).card_of_check closure_KM_PSL hN h
 
 /-- **T13** (Theorem U, part 1: the tetrahedron, the octahedron and the icosahedron). -/
-@[ledger "T13"]
 theorem platonicSolids : Statement.platonicSolids := by
   have c3 : Nat.card (PSLZ 3) = 12 :=
     card_PSL_of_check (w := Cert.wordPSL3) (by norm_num) (by decide +kernel)

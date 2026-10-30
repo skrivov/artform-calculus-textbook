@@ -26,7 +26,6 @@ theorem splitTick_mat (xFirst : Bool) (h gx gy : K) :
   simp [splitTick, Matrix.SpecialLinearGroup.coe_mul, mul_assoc]
 
 /-- **T14** (the caller's cut). -/
-@[ledger "T14"]
 theorem callerCut : Statement.callerCut := by
   intro K _ _ h gx gy q
   have hcut : ∀ (A B : Matrix (Fin 2) (Fin 2) K) (r : K),

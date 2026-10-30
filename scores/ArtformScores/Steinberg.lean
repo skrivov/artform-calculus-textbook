@@ -237,7 +237,6 @@ theorem fewestSteps : Statement.fewestSteps := by
   · exact hkm (by linear_combination h)
 
 /-- **T2** (the index as a group). -/
-@[ledger "T2"]
 theorem indexGroup : Statement.indexGroup := by
   intro F _
   refine ⟨?_, det_surjective, units_laurent, fun r k => ?_, ?_⟩
