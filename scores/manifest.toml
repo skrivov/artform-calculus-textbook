@@ -143,6 +143,30 @@ reviewed = ""
 review_text_sha256 = ""
 
 [[statement]]
+key = "T7:invariance"
+label = "T7"
+title = "The class of a law"
+source = "ALGEBRA-OF-SCORES.md §4.3 (T7); finding 057 §1"
+statement = """
+(T7, Latimer-MacDuffee) The laws of phase t, up to processing, correspond one to one with the classes of fractional ideals of A_t = S[λ]/(λ^2 - tλ + 1). The law T goes to the class of (c, λ - a). Finding 057 §1 assumes that t^2 - 4 is not a square in F(x); the ideal is cut out by T's left eigenvector u = (c, λ - a), for which u T = λ u on C_t. The Lean form holds over every integral domain S with t^2 - 4 not a square in its fraction field: u T = λ u, and processing, T' = P T P^-1 with P invertible, keeps the class of (c, λ - a), since the two ideals differ by non-zero-divisor factors. The one-to-one correspondence (every class is a law's, and the laws of one class are processing-equivalent) is not in Lean."""
+lean_statement = "Artform.Scores.Statement.classInvariance"
+lean_proof = "Artform.Scores.classInvariance"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "T7:trivial-class"
+label = "T7"
+title = "The trivial class"
+source = "ALGEBRA-OF-SCORES.md §4.3 (T7); finding 057 §1 (the trivial class)"
+statement = """
+Finding 057 §1: T is in the trivial class iff Q_T represents a unit. A vector v with that property is a cyclic vector: P = [v | T v] gives T P = P C_t, where C_t = [[0, -1], [1, t]] is the companion tick. The Lean form proves the direction from a cyclic vector, over every integral domain with t^2 - 4 not a square in its fraction field: if det[v | T v] = Q_T(v) is a unit, then T [v | T v] = [v | T v] C_t, and (c, λ - a) is in the class of A_t itself. The converse is not in Lean."""
+lean_statement = "Artform.Scores.Statement.trivialClass"
+lean_proof = "Artform.Scores.trivialClass"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
 key = "T12:reading"
 label = "T12"
 title = "The reading"

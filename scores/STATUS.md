@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 15 |
+| proved | 17 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **15** |
+| **total** | **17** |
 
 ## Statements
 
@@ -24,6 +24,8 @@
 | T1:modulus | One dimension, every dial Z/n | proved | `Artform.Scores.Statement.everyLawIsAScoreModulus` / `Artform.Scores.everyLawIsAScoreModulus` | awaiting review |
 | T2 | The index | proved | `Artform.Scores.Statement.index` / `Artform.Scores.index` | awaiting review |
 | T4 | One mode on a prime dial | proved | `Artform.Scores.Statement.oneModeComplete` / `Artform.Scores.oneModeComplete` | awaiting review |
+| T7:invariance | The class of a law | proved | `Artform.Scores.Statement.classInvariance` / `Artform.Scores.classInvariance` | awaiting review |
+| T7:trivial-class | The trivial class | proved | `Artform.Scores.Statement.trivialClass` / `Artform.Scores.trivialClass` | awaiting review |
 | T12:reading | The reading | proved | `Artform.Scores.Statement.readingDetermines` / `Artform.Scores.readingDetermines` | awaiting review |
 | T12:palindromes | Palindromes | proved | `Artform.Scores.Statement.palindrome` / `Artform.Scores.palindrome` | awaiting review |
 | T13 | The crystallographic pulls | proved | `Artform.Scores.Statement.stepOrders` / `Artform.Scores.stepOrders` | awaiting review |

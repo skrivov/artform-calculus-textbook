@@ -250,4 +250,56 @@ noncomputable def blackRedTick [Algebra S' S] (bs : Module.Basis (Fin 2) S' S) (
 
 end Blocking
 
+
+/-! ## The curve of a phase
+
+A law `T = [[a, b], [c, d]]` of phase `t` acts on the curve `λ + 1/λ = t`, the dispersion
+relation, whose ring is `A_t = S[λ]/(λ² - tλ + 1)` (the ledger's T7 and finding 057). The
+row `u = (c, λ - a)` is a left eigenvector of `T`, and the ideal `(c, λ - a)` of `A_t` is
+the law's class. -/
+
+section Curve
+
+/-- The ring of the curve of the phase `t`, `A_t = S[λ]/(λ² - tλ + 1)`. -/
+@[ledger "def:curve"]
+abbrev curveRing (t : S) :=
+  AdjoinRoot (Polynomial.X ^ 2 - Polynomial.C t * Polynomial.X + 1 : Polynomial S)
+
+/-- The tick's eigenvalue `λ` on the curve. -/
+@[ledger "def:curve"]
+noncomputable def eig (t : S) : curveRing t := AdjoinRoot.root _
+
+/-- The left eigenvector `u = (c, λ - a)` of a law `[[a, b], [c, d]]` on the curve. -/
+@[ledger "def:curve"]
+noncomputable def eigenRow (t : S) (T : Matrix (Fin 2) (Fin 2) S) : Fin 2 → curveRing t :=
+  ![algebraMap S (curveRing t) (T 1 0), eig t - algebraMap S (curveRing t) (T 0 0)]
+
+/-- The ideal `(c, λ - a)` of a law on the curve of `t`. -/
+@[ledger "def:curve"]
+noncomputable def lawIdeal (t : S) (T : Matrix (Fin 2) (Fin 2) S) : Ideal (curveRing t) :=
+  Ideal.span {algebraMap S (curveRing t) (T 1 0), eig t - algebraMap S (curveRing t) (T 0 0)}
+
+/-- Two ideals in the same class: `α I = β J` for non-zero-divisors `α` and `β`, so that
+`I` and `J` differ by a factor of the ring of fractions. -/
+@[ledger "def:curve"]
+def SameClass {A : Type*} [CommRing A] (I J : Ideal A) : Prop :=
+  ∃ α ∈ nonZeroDivisors A, ∃ β ∈ nonZeroDivisors A, Ideal.span {α} * I = Ideal.span {β} * J
+
+/-- `t² - 4` is not a square in the fraction field: `y² = (t² - 4) z²` forces `z = 0`. -/
+@[ledger "def:curve"]
+def NonSquareDisc (t : S) : Prop := ∀ y z : S, y * y = (t * t - 4) * (z * z) → z = 0
+
+/-- The matrix `[v | T v]` of a vector and its image. Its determinant is
+`c v₀² + (d - a) v₀ v₁ - b v₁²`, the law's quadratic form. -/
+@[ledger "def:curve"]
+def cyclicMatrix (T : Matrix (Fin 2) (Fin 2) S) (v : Fin 2 → S) : Matrix (Fin 2) (Fin 2) S :=
+  !![v 0, (T.mulVec v) 0; v 1, (T.mulVec v) 1]
+
+/-- The companion tick `[[0, -1], [1, t]]` of the phase `t`, the recurrence
+`u(n + 1) + u(n - 1) = t u(n)` on one channel. -/
+@[ledger "def:curve"]
+def companion (t : S) : Matrix (Fin 2) (Fin 2) S := !![0, -1; 1, t]
+
+end Curve
+
 end Artform.Scores

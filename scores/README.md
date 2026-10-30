@@ -35,6 +35,12 @@ book states it.
   - Red-black is a law of the blocked artform, since its kicks are placed steps. The blocked
     shift turns it into black-red, so it is the blocking of no law of the artform once the
     move couples red and black.
-- **Plan.** The rest of Phase 4 (T7, T15), as the author chooses.
+- **Phase 4** continues with T7, the class of a law (`Classes.lean`, after Latimer and
+  MacDuffee).
+  - The row `(c, λ - a)` is a left eigenvector of a law of phase `t` on the curve
+    `A_t = S[λ]/(λ² - tλ + 1)`.
+  - Processing keeps the class of the ideal `(c, λ - a)`, when `t² - 4` is not a square.
+  - A cyclic vector conjugates the law to the companion tick, so its class is trivial.
+- **Plan.** The rest of Phase 4 (T15), as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

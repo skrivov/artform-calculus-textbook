@@ -111,6 +111,34 @@ def oneModeComplete : Prop :=
     ∀ v₁ v₂ : FreeGroup OneMode.Gen, OneMode.law p v₁ = OneMode.law p v₂ ↔
       PresentedGroup.mk (OneMode.relators p) v₁ = PresentedGroup.mk (OneMode.relators p) v₂
 
+/-- **T7** (Latimer–MacDuffee: the class of a law). On the curve of the phase `t`,
+`A_t = S[λ]/(λ² - tλ + 1)`, a law `[[a, b], [c, d]]` of phase `t` has the left eigenvector
+`u = (c, λ - a)`, `u T = λ u`, and so the ideal `(c, λ - a)`. When `t² - 4` is not a
+square in the fraction field, processing keeps the ideal's class: if `T′ = P T P⁻¹` with
+`P` invertible, then `(c′, λ - a′)` and `(c, λ - a)` are in the same class. -/
+@[ledger "T7"]
+def classInvariance : Prop :=
+  ∀ (S : Type) [CommRing S] [IsDomain S] (t : S), NonSquareDisc t →
+    ∀ (T T' : SpecialLinearGroup (Fin 2) S) (P : GL (Fin 2) S), phase T = t →
+      (T' : Matrix (Fin 2) (Fin 2) S) = (P : Matrix (Fin 2) (Fin 2) S) * T *
+        ((P⁻¹ : GL (Fin 2) S) : Matrix (Fin 2) (Fin 2) S) →
+      Matrix.vecMul (eigenRow t T)
+          ((T : Matrix (Fin 2) (Fin 2) S).map (algebraMap S (curveRing t))) =
+        eig t • eigenRow t T ∧
+      SameClass (lawIdeal t T') (lawIdeal t T)
+
+/-- **T7** (the trivial class). A cyclic vector `v` of a law `T` of phase `t`, one with
+`det[v | T v]` a unit, conjugates `T` to the companion tick `C_t = [[0, -1], [1, t]]`:
+`T [v | T v] = [v | T v] C_t`. Then `(c, λ - a)` is in the class of `A_t` itself, the
+trivial class. -/
+@[ledger "T7"]
+def trivialClass : Prop :=
+  ∀ (S : Type) [CommRing S] [IsDomain S] (t : S), NonSquareDisc t →
+    ∀ (T : SpecialLinearGroup (Fin 2) S) (v : Fin 2 → S), phase T = t →
+      IsUnit (cyclicMatrix (T : Matrix (Fin 2) (Fin 2) S) v).det →
+      (T : Matrix (Fin 2) (Fin 2) S) * cyclicMatrix T v = cyclicMatrix T v * companion t ∧
+      SameClass (lawIdeal t T) ⊤
+
 /-- **T12** (the reading). Two laws with the same phase and the same reading give
 the same output from rest: from `(b, e) = (b₀, 0)`, the flux `b` after `n`
 ticks is the same for both. -/
