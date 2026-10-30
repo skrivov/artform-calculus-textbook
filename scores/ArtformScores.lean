@@ -25,3 +25,8 @@ import ArtformScores.Steinberg
 import ArtformScores.FaceLink
 import ArtformScores.PalindromeClasses
 import ArtformScores.Callers
+import ArtformScores.LeapfrogCurve
+import ArtformScores.LeapfrogUnits
+import ArtformScores.LeapfrogClasses
+import ArtformScores.MagicStep
+import ArtformScores.LeapfrogExamples

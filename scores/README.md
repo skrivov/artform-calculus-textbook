@@ -98,6 +98,16 @@ book states it.
   - `PalindromeClasses.lean`: T12. A law is processing-equivalent to a palindrome exactly when some
     `P` reverses it with `-det P` a square. A class that time reversal fixes need not hold one.
   - `Callers.lean`: T14's rules and one cue, and T16, the duet.
-- **Plan.** T8's counts.
+  - T8, the classes of the leapfrog phase, S3.4 and S3.5 of finding 057:
+    - `LeapfrogCurve.lean`: the normalization `F[s, 1/(s(s-1)(s-q))]` of the curve, its involution
+      and its value on the fibre `E = F[r]/(r² - q)` over the node.
+    - `LeapfrogUnits.lean`: `E^×/F^× ≅ U` (Hilbert 90), and the units of the normalization, whose
+      images generate `⟨-1, ρ⟩`.
+    - `LeapfrogClasses.lean`: the primitive eigenvector of a law, its stencil lattice and the
+      classes.
+    - `MagicStep.lean`: the magic step, by the normal form `[[x, 0], [w, 1/x]]`.
+    - `LeapfrogExamples.lean`: the finding's tables, computed from the theorems.
+- **Plan.** The rest of the ledger is out of this library's reach. T3, T5, T6, T9, T10 and T14's spectral gaps are
+  literature theorems beyond Mathlib or open problems.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

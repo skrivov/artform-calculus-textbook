@@ -796,4 +796,142 @@ def duet : Prop :=
   ∀ (Ω₁ Ω₂ α : Type) [Nonempty Ω₁] [Nonempty Ω₂] (f : Ω₁ → α) (g : Ω₂ → α),
     (∀ ω₁ ω₂, f ω₁ = g ω₂) → ∃ a, (∀ ω, f ω = a) ∧ ∀ ω, g ω = a
 
+/-- **T8** (the curve of the leapfrog phase; finding 057, Theorem S3.4, part 1). With `q = κ ℓ`
+different from `0` and `1`, the curve `λ + 1/λ = 2 - q (2 - x - 1/x)` is rational. The point `s` of
+the line, other than `0`, `1` and `q`, goes to `x = q (1 - s) / (s (s - q))` and
+`λ = s (1 - s) / (s - q)`, a point of the curve. Conversely `s = (λ - 1) / (x - 1)` is the inverse,
+at every point of the curve with `x ≠ 1`. Over `x = 1` the curve has the one point `λ = 1`, the
+node, and the line has the two points `s² = q`, its two branches. -/
+@[ledger "T8"]
+def leapfrogCurve : Prop :=
+  ∀ (K : Type) [Field K] (q : K), q ≠ 0 → q ≠ 1 →
+    (∀ s : K, s ≠ 0 → s ≠ 1 → s ≠ q →
+      let x := q * (1 - s) / (s * (s - q))
+      let l := s * (1 - s) / (s - q)
+      x ≠ 0 ∧ l ≠ 0 ∧ l + l⁻¹ = 2 - q * (2 - x - x⁻¹) ∧ (x = 1 ↔ s * s = q)) ∧
+    (∀ x l : K, x ≠ 0 → l ≠ 0 → l + l⁻¹ = 2 - q * (2 - x - x⁻¹) → x ≠ 1 →
+      let s := (l - 1) / (x - 1)
+      s ≠ 0 ∧ s ≠ 1 ∧ s ≠ q ∧ x = q * (1 - s) / (s * (s - q)) ∧ l = s * (1 - s) / (s - q)) ∧
+    (∀ l : K, l ≠ 0 → l + l⁻¹ = 2 - q * (2 - 1 - 1⁻¹) → l = 1)
+
+/-- **T8** (the classes of the leapfrog phase; finding 057, Theorem S3.4). Over a field of
+characteristic not `2`, with `q = κ ℓ` different from `0` and `1`, the discriminant of the phase
+`t = 2 - q g` is not a square, so T7 applies, and the laws of the phase, up to processing, are one
+to one with `U/⟨-1, ρ⟩` and one more class: the glued classes and the unglued one. The law `L` is
+unglued exactly when it is the identity at the zero mode. It has the trivial class exactly when it
+has a cyclic vector. Time reversal inverts the class. The law `gluedLaw q y` has the class of
+`z / z̄`, with `z = y + r`, and `ungluedLaw q` the unglued one, which pins the map on every
+class. -/
+@[ledger "T8"]
+def leapfrogClasses : Prop :=
+  ∀ (F : Type) [Field F] (q : F), (2 : F) ≠ 0 → q ≠ 0 → q ≠ 1 →
+    NonSquareDisc (Leapfrog.phaseT q) ∧
+    (∀ y, phase (Leapfrog.gluedLaw q y) = Leapfrog.phaseT q) ∧
+    phase (Leapfrog.ungluedLaw q) = Leapfrog.phaseT q ∧
+    ∃ Φ : SpecialLinearGroup (Fin 2) (LaurentPolynomial F) →
+        Option (Leapfrog.U q ⧸ Leapfrog.gluing q),
+      (∀ L L', phase L = Leapfrog.phaseT q → phase L' = Leapfrog.phaseT q →
+        (Φ L = Φ L' ↔ Processed L L')) ∧
+      (∀ w, ∃ L, phase L = Leapfrog.phaseT q ∧ Φ L = w) ∧
+      (∀ L, phase L = Leapfrog.phaseT q →
+        (Φ L = none ↔ Matrix.SpecialLinearGroup.map (atZero F) L = 1)) ∧
+      (∀ L, phase L = Leapfrog.phaseT q → (Φ L = some 1 ↔ ∃ v,
+        IsUnit (cyclicMatrix (L : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) v).det)) ∧
+      (∀ L, phase L = Leapfrog.phaseT q → Φ L⁻¹ = (Φ L).map (·⁻¹)) ∧
+      (∀ (y : F) (z : (Leapfrog.Fib q)ˣ), (z : Leapfrog.Fib q) =
+          algebraMap F (Leapfrog.Fib q) y + Leapfrog.rE →
+        Φ (Leapfrog.gluedLaw q y) = some (Leapfrog.theta z : Leapfrog.U q)) ∧
+      Φ (Leapfrog.ungluedLaw q) = none
+
+/-- **T8** (the count; finding 057, Theorem S3.4). Over a finite field of characteristic not `2`,
+with `q` different from `0` and `1`, there are `|U| / |⟨-1, ρ⟩|` glued classes and one unglued, and
+`|U|` is `|F| - 1` when `q` is a square and `|F| + 1` when it is not. The subgroup `⟨-1, ρ⟩` has at
+least four elements, so at most `|U| / 4` classes are glued, and exactly four when `q = -1`. -/
+@[ledger "T8"]
+def leapfrogCount : Prop :=
+  ∀ (F : Type) [Field F] [Finite F] (q : F), (2 : F) ≠ 0 → q ≠ 0 → q ≠ 1 →
+    Nat.card (Quotient (processingSetoid (Leapfrog.phaseT q))) =
+      Nat.card (Leapfrog.U q) / Nat.card (Leapfrog.gluing q) + 1 ∧
+    (IsSquare q → Nat.card (Leapfrog.U q) = Nat.card F - 1) ∧
+    (¬ IsSquare q → Nat.card (Leapfrog.U q) = Nat.card F + 1) ∧
+    4 ≤ Nat.card (Leapfrog.gluing q) ∧ (Nat.card (Leapfrog.gluing q) = 4 ↔ q = -1)
+
+/-- **T8** (the split node; finding 057, Theorem S3.4). When `q = h²` in `F`, evaluation at `h`
+identifies `U` with the units of `F` and `⟨-1, ρ⟩` with `⟨-1, (1 - h)/(1 + h)⟩`. -/
+@[ledger "T8"]
+def leapfrogSplit : Prop :=
+  ∀ (F : Type) [Field F] (q h : F), (2 : F) ≠ 0 → q ≠ 0 → q ≠ 1 → h * h = q →
+    ∃ e : Leapfrog.U q ≃* Fˣ,
+      (∀ u : Leapfrog.U q, ((e u : Fˣ) : F) =
+        ((u : (Leapfrog.Fib q)ˣ) : Leapfrog.Fib q).re +
+          ((u : (Leapfrog.Fib q)ˣ) : Leapfrog.Fib q).im * h) ∧
+      (Leapfrog.gluing q).map e.toMonoidHom =
+        Subgroup.closure {x : Fˣ | (x : F) = -1 ∨ (x : F) * (1 + h) = 1 - h}
+
+/-- **T8** (the schemes; finding 057, Theorem S3.4, part 4). With `κ ℓ` different from `0` and `1`,
+the face form of the book's tick, of `M K`, of Strang and of position Verlet has the leapfrog phase
+and is processed from the companion tick, the trivial class. The link form of each has the same
+phase and is processed from `ungluedLaw`, the unglued class. -/
+@[ledger "T8"]
+def leapfrogSchemes : Prop :=
+  ∀ (F : Type) [Field F] (κ ℓ : F), (2 : F) ≠ 0 → κ * ℓ ≠ 0 → κ * ℓ ≠ 1 →
+    ∀ w ∈ Leapfrog.schemes F,
+      phase (realize (w.map (faceStep κ ℓ))) = Leapfrog.phaseT (κ * ℓ) ∧
+      Processed (Leapfrog.companionLaw (κ * ℓ)) (realize (w.map (faceStep κ ℓ))) ∧
+      phase (realize (w.map (linkStep κ ℓ))) = Leapfrog.phaseT (κ * ℓ) ∧
+      Processed (Leapfrog.ungluedLaw (κ * ℓ)) (realize (w.map (linkStep κ ℓ)))
+
+/-- **T8** (the magic step; finding 057, Theorem S3.5). At `κ ℓ = 1` the phase is `x + 1/x`, and
+every law is processed from a normal form `[[x, 0], [w, 1/x]]`, whose class is read from the values
+of `w` at the two crossings `x = 1` and `x = -1`. The classes are those glued at both crossings,
+`F^×/{±1}`, by the ratio of the values, and one each glued at `x = 1` only, at `x = -1` only and at
+neither. A law is the identity at `x = 1` exactly when `w` vanishes there, and `-1` at `x = -1`
+exactly when `w` vanishes there. The trivial class, glued at both with the ratio `1`, is the class
+of the laws with a cyclic vector. -/
+@[ledger "T8"]
+def magicClasses : Prop :=
+  ∀ (F : Type) [Field F], (2 : F) ≠ 0 →
+    ∃ Φ : SpecialLinearGroup (Fin 2) (LaurentPolynomial F) →
+        (Fˣ ⧸ Leapfrog.signs F) ⊕ Fin 3,
+      (∀ L L', phase L = Leapfrog.phaseT (1 : F) → phase L' = Leapfrog.phaseT (1 : F) →
+        (Φ L = Φ L' ↔ Processed L L')) ∧
+      (∀ w, phase (Leapfrog.magicLaw w) = Leapfrog.phaseT (1 : F) ∧
+        Φ (Leapfrog.magicLaw w) = Leapfrog.ofPair (atZero F w) (Leapfrog.atPi F w)) ∧
+      (∀ c, ∃ w, Leapfrog.ofPair (atZero F w) (Leapfrog.atPi F w) = c) ∧
+      (∀ L, phase L = Leapfrog.phaseT (1 : F) → ∃ w, Processed (Leapfrog.magicLaw w) L) ∧
+      (∀ L w, Processed (Leapfrog.magicLaw w) L →
+        ((L : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)).map (atZero F) = 1 ↔
+          atZero F w = 0) ∧
+        ((L : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)).map (Leapfrog.atPi F) = -1 ↔
+          Leapfrog.atPi F w = 0)) ∧
+      (∀ L, phase L = Leapfrog.phaseT (1 : F) → (Φ L = Sum.inl 1 ↔ ∃ v,
+        IsUnit (cyclicMatrix (L : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) v).det))
+
+/-- **T8** (the count at the magic step; finding 057, Theorem S3.5). On a dial `C_p` there are
+`(p - 1)/2 + 3` classes: over a finite field `F` of characteristic not `2`, `(|F| - 1)/2 + 3`. -/
+@[ledger "T8"]
+def magicCount : Prop :=
+  ∀ (F : Type) [Field F] [Finite F], (2 : F) ≠ 0 →
+    Nat.card (Quotient (processingSetoid (Leapfrog.phaseT (1 : F)))) = (Nat.card F - 1) / 2 + 3
+
+/-- **T8** (the schemes at the magic step; finding 057, Theorem S3.5). With `κ ℓ = 1`, each face
+form of the book's schemes has a cyclic vector, so the trivial class. The link form of each is the
+identity at `x = 1` and not `-1` at `x = -1`: glued at `x = -1` only. The split movers
+`diag(x, 1/x)` are the normal form of `w = 0`, glued at neither. -/
+@[ledger "T8"]
+def magicSchemes : Prop :=
+  ∀ (F : Type) [Field F] (κ ℓ : F), (2 : F) ≠ 0 → κ * ℓ = 1 →
+    (∀ w ∈ Leapfrog.schemes F,
+      phase (realize (w.map (faceStep κ ℓ))) = Leapfrog.phaseT (1 : F) ∧
+      (∃ v, IsUnit (cyclicMatrix (realize (w.map (faceStep κ ℓ)) :
+        Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) v).det) ∧
+      phase (realize (w.map (linkStep κ ℓ))) = Leapfrog.phaseT (1 : F) ∧
+      (realize (w.map (linkStep κ ℓ)) : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)).map
+        (atZero F) = 1 ∧
+      (realize (w.map (linkStep κ ℓ)) : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)).map
+        (Leapfrog.atPi F) ≠ -1) ∧
+    (Leapfrog.magicLaw (0 : LaurentPolynomial F) : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) =
+      !![LaurentPolynomial.T 1, 0; 0, LaurentPolynomial.T (-1)] ∧
+    Leapfrog.ofPair (atZero F 0) (Leapfrog.atPi F 0) = Sum.inr 2
+
 end Artform.Scores.Statement

@@ -886,4 +886,177 @@ def shiftField {Λ R : Type*} [Add Λ] (w : Λ) (u : Λ → R) : Λ → R := fun
 
 end Cue
 
+/-! ### The leapfrog phase (T8) -/
+
+namespace Leapfrog
+
+open LaurentPolynomial (T)
+open Matrix (SpecialLinearGroup)
+
+variable {F : Type*} [Field F]
+
+/-- The leapfrog phase `t = 2 - q g`, with `g = 2 - x - 1/x` and `q = κ ℓ`. -/
+@[ledger "def:leapfrog"]
+noncomputable def phaseT (q : F) : LaurentPolynomial F :=
+  2 - LaurentPolynomial.C q * stencilG F
+
+/-- The fibre of the normalization of the curve over the node: `E = F[r]/(r² - q)`. -/
+@[ledger "def:leapfrog"]
+abbrev Fib (q : F) := QuadraticAlgebra F q 0
+
+/-- The element `r` of the fibre, the value of `s` there, with `r² = q`. -/
+@[ledger "def:leapfrog"]
+noncomputable abbrev rE {q : F} : Fib q := QuadraticAlgebra.omega
+
+/-- The norm-one group `U` of the fibre. -/
+@[ledger "def:leapfrog"]
+def U (q : F) : Subgroup (Fib q)ˣ := (Units.map (QuadraticAlgebra.norm : Fib q →* F)).ker
+
+variable {q : F}
+
+theorem mem_U {u : (Fib q)ˣ} : u ∈ U q ↔ QuadraticAlgebra.norm (u : Fib q) = 1 := by
+  rw [U, MonoidHom.mem_ker, Units.ext_iff]
+  rfl
+
+theorem theta_mem (z : (Fib q)ˣ) : z * (star z)⁻¹ ∈ U q := by
+  have h : Units.map (QuadraticAlgebra.norm : Fib q →* F) (star z) =
+      Units.map (QuadraticAlgebra.norm : Fib q →* F) z := by
+    ext
+    exact QuadraticAlgebra.norm_star _
+  rw [U, MonoidHom.mem_ker, map_mul, map_inv, h, mul_inv_cancel]
+
+/-- The map `z ↦ z / z̄` from the units of the fibre onto `U`. -/
+@[ledger "def:leapfrog"]
+noncomputable def theta : (Fib q)ˣ →* U q where
+  toFun z := ⟨z * (star z)⁻¹, theta_mem z⟩
+  map_one' := Subtype.ext (by simp)
+  map_mul' a b := Subtype.ext (by
+    change (a * b) * (star (a * b))⁻¹ = (a * (star a)⁻¹) * (b * (star b)⁻¹)
+    rw [star_mul', mul_inv, mul_mul_mul_comm])
+
+variable (q) in
+/-- The subgroup `⟨-1, ρ⟩` of `U`, with `ρ = (1 - r) / (1 + r)`. -/
+@[ledger "def:leapfrog"]
+def gluing : Subgroup (U q) :=
+  Subgroup.closure {u | ((u : (Fib q)ˣ) : Fib q) = -1 ∨
+    ((u : (Fib q)ˣ) : Fib q) * (1 + rE) = 1 - rE}
+
+variable (q) in
+/-- The coefficient `κ₁ = q (1 - 1/x)` of `s² = κ₁ s + κ₀`. -/
+@[ledger "def:leapfrog"]
+noncomputable def kap1 : LaurentPolynomial F := LaurentPolynomial.C q * (1 - T (-1))
+
+variable (q) in
+/-- The coefficient `κ₀ = q / x` of `s² = κ₁ s + κ₀`. -/
+@[ledger "def:leapfrog"]
+noncomputable def kap0 : LaurentPolynomial F := LaurentPolynomial.C q * T (-1)
+
+/-- The stencil `δ = x - 1`. -/
+@[ledger "def:leapfrog"]
+noncomputable abbrev deltaS : LaurentPolynomial F := T 1 - 1
+
+theorem T_mul_T_neg : (T 1 : LaurentPolynomial F) * T (-1) = 1 := by
+  rw [← LaurentPolynomial.T_add]
+  simp
+
+variable (q) in
+/-- The companion tick of the phase, as a law. -/
+@[ledger "def:leapfrog"]
+noncomputable def companionLaw : SpecialLinearGroup (Fin 2) (LaurentPolynomial F) :=
+  ⟨companion (phaseT q), by simp [companion, Matrix.det_fin_two]⟩
+
+variable (q) in
+/-- A law of the unglued class: the matrix of `λ` on the basis `1, s` of the normalization. -/
+@[ledger "def:leapfrog"]
+noncomputable def ungluedLaw : SpecialLinearGroup (Fin 2) (LaurentPolynomial F) :=
+  ⟨!![1, deltaS * kap0 q; deltaS, 1 + deltaS * kap1 q], by
+    rw [Matrix.det_fin_two_of]
+    simp only [kap0, kap1, deltaS]
+    linear_combination (-((T 1 - 1) * LaurentPolynomial.C q)) * T_mul_T_neg (F := F)⟩
+
+variable (q) in
+/-- The law of the glued class of `y + r`: the matrix of `λ` on the basis `δ, y + s` of the
+lattice. -/
+@[ledger "def:leapfrog"]
+noncomputable def gluedLaw (y : F) : SpecialLinearGroup (Fin 2) (LaurentPolynomial F) :=
+  ⟨!![1 - LaurentPolynomial.C y * deltaS,
+      kap0 q - kap1 q * LaurentPolynomial.C y - LaurentPolynomial.C y * LaurentPolynomial.C y;
+      deltaS * deltaS, 1 + LaurentPolynomial.C y * deltaS + deltaS * kap1 q], by
+    rw [Matrix.det_fin_two_of]
+    simp only [kap0, kap1, deltaS]
+    linear_combination (-((T 1 - 1) * LaurentPolynomial.C q)) * T_mul_T_neg (F := F)⟩
+
+variable (F) in
+/-- The schemes of the leapfrog phase, as scores of weights: the book's tick, `M K`, Strang and
+position Verlet. -/
+@[ledger "def:leapfrog"]
+noncomputable def schemes : List (Score F) :=
+  [[.kick 1, .move 1], [.move 1, .kick 1], [.kick 2⁻¹, .move 1, .kick 2⁻¹],
+    [.move 2⁻¹, .kick 1, .move 2⁻¹]]
+
+variable (F) in
+/-- Evaluation at the crossing `x = -1`, the mode `k = π`. -/
+@[ledger "def:leapfrog"]
+noncomputable def atPi : LaurentPolynomial F →+* F :=
+  LaurentPolynomial.eval₂ (RingHom.id F) (-1)
+
+/-- The normal form `[[x, 0], [w, 1/x]]` of a law of the magic step. -/
+@[ledger "def:leapfrog"]
+noncomputable def magicLaw (w : LaurentPolynomial F) :
+    SpecialLinearGroup (Fin 2) (LaurentPolynomial F) :=
+  ⟨!![T 1, 0; w, T (-1)], by
+    rw [Matrix.det_fin_two_of, zero_mul, sub_zero]
+    exact T_mul_T_neg⟩
+
+variable (F) in
+/-- The group `{±1}`. -/
+@[ledger "def:leapfrog"]
+def signs : Subgroup Fˣ := Subgroup.zpowers (-1)
+
+open Classical in
+/-- The class of the values `(α, β)` of `w` at the crossings `x = 1` and `x = -1`: glued at both
+with the ratio `β / α`, glued at `x = 1` only (`inr 0`), at `x = -1` only (`inr 1`), or at neither
+(`inr 2`). -/
+@[ledger "def:leapfrog"]
+noncomputable def ofPair (α β : F) : (Fˣ ⧸ signs F) ⊕ Fin 3 :=
+  if hα : α = 0 then (if β = 0 then Sum.inr 2 else Sum.inr 1)
+  else if hβ : β = 0 then Sum.inr 0
+  else Sum.inl ((Units.mk0 β hβ / Units.mk0 α hα : Fˣ) : Fˣ ⧸ signs F)
+
+end Leapfrog
+
+section Processing
+
+variable {S : Type*} [CommRing S]
+
+/-- Two laws are the same up to processing: `T′ = P T P⁻¹` for a local `P` with a local inverse. -/
+@[ledger "def:leapfrog"]
+def Processed (T T' : SpecialLinearGroup (Fin 2) S) : Prop :=
+  ∃ P : GL (Fin 2) S, (T' : Matrix (Fin 2) (Fin 2) S) =
+    (P : Matrix (Fin 2) (Fin 2) S) * T * ((P⁻¹ : GL (Fin 2) S) : Matrix (Fin 2) (Fin 2) S)
+
+/-- Processing is an equivalence relation on the laws of a phase. -/
+@[ledger "def:leapfrog"]
+def processingSetoid (t : S) : Setoid {T : SpecialLinearGroup (Fin 2) S // phase T = t} where
+  r T T' := Processed T.1 T'.1
+  iseqv := by
+    refine ⟨fun T => ⟨1, by simp⟩, ?_, ?_⟩
+    · rintro T T' ⟨P, hP⟩
+      refine ⟨P⁻¹, ?_⟩
+      have h1 : ((P⁻¹ : GL (Fin 2) S) : Matrix (Fin 2) (Fin 2) S) * (P : Matrix (Fin 2) (Fin 2) S) =
+          1 := by
+        rw [← Units.val_mul, inv_mul_cancel, Units.val_one]
+      rw [hP, inv_inv]
+      calc (T.1 : Matrix (Fin 2) (Fin 2) S) = (((P⁻¹ : GL (Fin 2) S) : Matrix (Fin 2) (Fin 2) S) *
+            (P : Matrix (Fin 2) (Fin 2) S)) * T.1 * (((P⁻¹ : GL (Fin 2) S) :
+            Matrix (Fin 2) (Fin 2) S) * (P : Matrix (Fin 2) (Fin 2) S)) := by
+            rw [h1, Matrix.one_mul, Matrix.mul_one]
+        _ = _ := by simp only [Matrix.mul_assoc]
+    · rintro T T' T'' ⟨P, hP⟩ ⟨Q, hQ⟩
+      refine ⟨Q * P, ?_⟩
+      rw [hQ, hP, mul_inv_rev]
+      simp only [Units.val_mul, Matrix.mul_assoc]
+
+end Processing
+
 end Artform.Scores

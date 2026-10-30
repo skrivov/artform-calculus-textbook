@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 51 |
+| proved | 59 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **51** |
+| **total** | **59** |
 
 ## Statements
 
@@ -64,3 +64,11 @@
 | T14:rules | The caller's rule decides the cancellation | proved | `Artform.Scores.Statement.callerRules` / `Artform.Scores.callerRules` | awaiting review |
 | T14:cue | One cue | proved | `Artform.Scores.Statement.oneCue` / `Artform.Scores.oneCue` | awaiting review |
 | T16 | The duet | proved | `Artform.Scores.Statement.duet` / `Artform.Scores.duet` | awaiting review |
+| T8:curve | The curve of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogCurve` / `Artform.Scores.Leapfrog.leapfrogCurve` | awaiting review |
+| T8:classes | The classes of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogClasses` / `Artform.Scores.Leapfrog.leapfrogClasses` | awaiting review |
+| T8:count | The count of the classes | proved | `Artform.Scores.Statement.leapfrogCount` / `Artform.Scores.Leapfrog.leapfrogCount` | awaiting review |
+| T8:split | The split node | proved | `Artform.Scores.Statement.leapfrogSplit` / `Artform.Scores.Leapfrog.leapfrogSplit` | awaiting review |
+| T8:schemes | The schemes of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogSchemes` / `Artform.Scores.Leapfrog.leapfrogSchemes` | awaiting review |
+| T8:magic | The magic step | proved | `Artform.Scores.Statement.magicClasses` / `Artform.Scores.Leapfrog.magicClasses` | awaiting review |
+| T8:magic-count | The count at the magic step | proved | `Artform.Scores.Statement.magicCount` / `Artform.Scores.Leapfrog.magicCount` | awaiting review |
+| T8:magic-schemes | The schemes at the magic step | proved | `Artform.Scores.Statement.magicSchemes` / `Artform.Scores.Leapfrog.magicSchemes` | awaiting review |
