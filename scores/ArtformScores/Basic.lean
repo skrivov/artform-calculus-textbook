@@ -565,6 +565,208 @@ def turnL : twoSquares := ⟨squareL, Subgroup.subset_closure (by simp)⟩
 @[ledger "def:two-squares"]
 def turnR : twoSquares := ⟨squareR, Subgroup.subset_closure (by simp)⟩
 
+/-- The field `F₅`. -/
+@[ledger "def:two-squares"]
+abbrev K5 := ZMod 5
+
+/-- `5` is a prime. -/
+instance : Fact (Nat.Prime 5) := ⟨by norm_num⟩
+
+/-- The six corners on the projective line over `F₅`: `v₀ ↦ ∞`, `v_k ↦ k - 1`. -/
+@[ledger "def:two-squares"]
+def pointOf : Fin 6 → Option K5 := ![none, some 0, some 1, some 2, some 3, some 4]
+
+/-- The labelling of the corners is one to one and onto. -/
+theorem pointOf_bijective : Function.Bijective pointOf := by decide
+
+/-- The labelling of the corners as a bijection onto the projective line. -/
+@[ledger "def:two-squares"]
+noncomputable def corner : Fin 6 ≃ OnePoint K5 :=
+  Equiv.ofBijective pointOf pointOf_bijective
+
+/-- The action of `GL(2, F₅)` on the projective line, whose image is `PGL(2, 5)`. -/
+@[ledger "def:two-squares"]
+noncomputable def rho : Matrix.GeneralLinearGroup (Fin 2) K5 →* Perm (OnePoint K5) :=
+  MulAction.toPermHom _ _
+
+/-- The matrix of `L`, `x ↦ 1 / (2 x + 1)`. -/
+@[ledger "def:two-squares"]
+def matL : Matrix.GeneralLinearGroup (Fin 2) K5 :=
+  Matrix.GeneralLinearGroup.mkOfDetNeZero !![0, 1; 2, 1] (by rw [Matrix.det_fin_two_of]; decide)
+
+/-- The matrix of `R`, `x ↦ 2 x + 3`. -/
+@[ledger "def:two-squares"]
+def matR : Matrix.GeneralLinearGroup (Fin 2) K5 :=
+  Matrix.GeneralLinearGroup.mkOfDetNeZero !![2, 3; 0, 1] (by rw [Matrix.det_fin_two_of]; decide)
+
+/-- The matrix of the kick of strength `2`, `x ↦ x / (2 x + 1)`. -/
+@[ledger "def:two-squares"]
+def matK2 : Matrix.GeneralLinearGroup (Fin 2) K5 :=
+  Matrix.GeneralLinearGroup.mkOfDetNeZero !![1, 0; 2, 1] (by rw [Matrix.det_fin_two_of]; decide)
+
+/-- The permutations of the corners carried to the projective line by the labelling. -/
+@[ledger "def:two-squares"]
+noncomputable def toLine : Perm (Fin 6) ≃* Perm (OnePoint K5) := corner.permCongrHom
+
+/-- A labelling of the corners makes the turns Möbius maps. -/
+@[ledger "def:two-squares"]
+def IsMobiusLabelling (c : Fin 6 ≃ OnePoint K5) : Prop :=
+  c.permCongr squareL ∈ rho.range ∧ c.permCongr squareR ∈ rho.range
+
+/-- The turn `L` on a state over `F₅`. -/
+@[ledger "def:two-squares"]
+def stateL (u : K5 × K5) : K5 × K5 := (u.2, 2 * u.1 + u.2)
+
+/-- The turn `R` on a state over `F₅`. -/
+@[ledger "def:two-squares"]
+def stateR (u : K5 × K5) : K5 × K5 := (2 * u.1 + 3 * u.2, u.2)
+
+/-- The determinant of two states over `F₅`. -/
+@[ledger "def:two-squares"]
+def detK5 (u v : K5 × K5) : K5 := u.1 * v.2 - u.2 * v.1
+
 end Bells
+
+/-! ## The step groups of one mode (the ledger's finding 037) -/
+
+namespace StepGroup
+
+/-- The kick `K = K(1)` over `ℤ`. -/
+@[ledger "def:step-group"]
+abbrev Kz : SpecialLinearGroup (Fin 2) ℤ := (Step.kick (1 : ℤ)).sl
+
+/-- The move `M = M(-μ)` over `ℤ`, at the pull `μ`. -/
+@[ledger "def:step-group"]
+abbrev Mz (μ : ℤ) : SpecialLinearGroup (Fin 2) ℤ := (Step.move (-μ)).sl
+
+/-- The step group `Σ_μ`: the laws of the one-mode scores at the pull `μ`. -/
+@[ledger "def:step-group"]
+def stepGroup (μ : ℤ) : Subgroup (SpecialLinearGroup (Fin 2) ℤ) :=
+  Subgroup.closure {Kz, Mz μ}
+
+/-- `Γ¹(μ)`: the laws `[[a, b], [c, d]]` with `b ≡ 0` and `a ≡ d ≡ 1` modulo `μ`. -/
+@[ledger "def:step-group"]
+def gammaUpper (μ : ℕ) : Subgroup (SpecialLinearGroup (Fin 2) ℤ) where
+  carrier := {g | ((g.1 0 0 : ℤ) : ZMod μ) = 1 ∧ ((g.1 0 1 : ℤ) : ZMod μ) = 0 ∧
+    ((g.1 1 1 : ℤ) : ZMod μ) = 1}
+  mul_mem' := by
+    rintro g h ⟨h1, h2, h3⟩ ⟨h4, h5, h6⟩
+    simp only [Set.mem_ofPred_eq, Matrix.SpecialLinearGroup.coe_mul, Matrix.mul_apply,
+      Fin.sum_univ_two, Int.cast_add, Int.cast_mul, h1, h2, h3, h4, h5, h6]
+    simp
+  one_mem' := by simp
+  inv_mem' := by
+    rintro g ⟨h1, h2, h3⟩
+    simp only [Set.mem_ofPred_eq, Matrix.SpecialLinearGroup.coe_inv, Matrix.adjugate_fin_two]
+    simp [h1, h2, h3]
+
+/-- The growth per tick for `μ ≥ 5`: `ρ = (μ - 2 + √(μ² - 4μ))/2`. -/
+@[ledger "def:step-group"]
+noncomputable def growth (μ : ℝ) : ℝ := (μ - 2 + Real.sqrt (μ ^ 2 - 4 * μ)) / 2
+
+end StepGroup
+
+/-! ## The regular map of a dial (the ledger's finding 038, Theorem U) -/
+
+namespace Klein
+
+variable {n : ℕ}
+
+/-- A state of one mode on the dial `Z/n`: the vector `(b, e)`. -/
+@[ledger "def:klein-map"]
+abbrev State (n : ℕ) := ZMod n × ZMod n
+
+/-- The determinant of two states. -/
+@[ledger "def:klein-map"]
+def det2 (u v : State n) : ZMod n := u.1 * v.2 - u.2 * v.1
+
+/-- A primitive state: its entries generate the unit ideal. -/
+@[ledger "def:klein-map"]
+def IsPrim (u : State n) : Prop := ∃ a b : ZMod n, a * u.1 + b * u.2 = 1
+
+/-- States up to sign. -/
+@[ledger "def:klein-map"]
+def signSetoid (n : ℕ) : Setoid (State n) where
+  r u v := u = v ∨ u = -v
+  iseqv := ⟨fun _ => Or.inl rfl,
+    fun h => h.elim (fun e => Or.inl e.symm) (fun e => Or.inr (by rw [e, neg_neg])),
+    fun h1 h2 => by
+      rcases h1 with rfl | rfl <;> rcases h2 with rfl | rfl <;> simp⟩
+
+/-- The class `[u]` of a state up to sign. -/
+@[ledger "def:klein-map"]
+abbrev Cls (n : ℕ) := Quotient (signSetoid n)
+
+/-- The class of a state. -/
+@[ledger "def:klein-map"]
+def cls (u : State n) : Cls n := Quotient.mk _ u
+
+/-- The vertices of the map: primitive states up to sign. -/
+@[ledger "def:klein-map"]
+def vertices (n : ℕ) : Set (Cls n) := {x | ∃ u : State n, IsPrim u ∧ cls u = x}
+
+/-- The directed edges: `[u] → [v]` with `det(u, v) = 1`, for some representatives. -/
+@[ledger "def:klein-map"]
+def dirEdges (n : ℕ) : Set (Cls n × Cls n) :=
+  {p | ∃ u v : State n, det2 u v = 1 ∧ cls u = p.1 ∧ cls v = p.2}
+
+/-- The edges: the sets `{[u], [v]}` with `det(u, v) = 1`. -/
+@[ledger "def:klein-map"]
+def edges (n : ℕ) : Set (Set (Cls n)) :=
+  {S | ∃ u v : State n, det2 u v = 1 ∧ S = {cls u, cls v}}
+
+/-- The faces: the sets `{[u], [v], [u + v]}` with `det(u, v) = 1`. -/
+@[ledger "def:klein-map"]
+def faces (n : ℕ) : Set (Set (Cls n)) :=
+  {S | ∃ u v : State n, det2 u v = 1 ∧ S = {cls u, cls v, cls (u + v)}}
+
+/-- A law acting on a state. -/
+@[ledger "def:klein-map"]
+def act (g : SpecialLinearGroup (Fin 2) (ZMod n)) (u : State n) : State n :=
+  (g.1 0 0 * u.1 + g.1 0 1 * u.2, g.1 1 0 * u.1 + g.1 1 1 * u.2)
+
+/-- The all-flux state `B = (1, 0)`. -/
+@[ledger "def:klein-map"]
+def eB : State n := (1, 0)
+
+/-- The all-electric state `E = (0, 1)`. -/
+@[ledger "def:klein-map"]
+def eE : State n := (0, 1)
+
+/-- The directed edge of a law: the classes of its two columns, `[g B] → [g E]`. -/
+@[ledger "def:klein-map"]
+def toDir (g : SpecialLinearGroup (Fin 2) (ZMod n)) : Cls n × Cls n :=
+  (cls (act g eB), cls (act g eE))
+
+/-- The neighbours of a class: the targets of its directed edges. -/
+@[ledger "def:klein-map"]
+def neighbours (x : Cls n) : Set (Cls n) := {y | (x, y) ∈ dirEdges n}
+
+/-- The tick at the pull `μ` on the dial `Z/n`. -/
+@[ledger "def:klein-map"]
+def tickN (μ : ZMod n) : SpecialLinearGroup (Fin 2) (ZMod n) := realize [.kick 1, .move (-μ)]
+
+/-- `SL(2, Z/n)` acts on states up to sign. -/
+@[ledger "def:klein-map"]
+instance : MulAction (SpecialLinearGroup (Fin 2) (ZMod n)) (Cls n) where
+  smul g := Quotient.map (act g) (by
+    rintro u v (rfl | rfl)
+    · exact Or.inl rfl
+    · refine Or.inr ?_
+      simp only [act, Prod.fst_neg, Prod.snd_neg, Prod.neg_mk, Prod.mk.injEq]
+      constructor <;> ring)
+  one_smul x := by
+    induction x using Quotient.inductionOn with | _ u => ?_
+    have : act (1 : SpecialLinearGroup (Fin 2) (ZMod n)) u = u := by simp [act]
+    exact congrArg cls this
+  mul_smul g h x := by
+    induction x using Quotient.inductionOn with | _ u => ?_
+    have : act (g * h) u = act g (act h u) := by
+      simp only [act, Matrix.SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,
+        Prod.mk.injEq]
+      constructor <;> ring
+    exact congrArg cls this
+
+end Klein
 
 end Artform.Scores

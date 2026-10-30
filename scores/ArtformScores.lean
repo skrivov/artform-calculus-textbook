@@ -18,3 +18,6 @@ import ArtformScores.Runs
 import ArtformScores.Certificates.Extents
 import ArtformScores.ExtentTable
 import ArtformScores.Transport
+import ArtformScores.StepGroups
+import ArtformScores.KleinMap
+import ArtformScores.TwoSquares

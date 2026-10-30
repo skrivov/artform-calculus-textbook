@@ -79,6 +79,17 @@ book states it.
     natural numbers.
   - A linear permutation law commutes with the shifts, so it only transports, in any dimension
     (`Transport.lean`; finding 082, without Theorem K).
+- **Phase 4** continues with T13, the step groups and their geometry (findings 037 and 038).
+  - `StepGroups.lean`, Theorem Q: the one-mode tick has finite order exactly at `μ = 1, 2, 3`. The
+    step group lies in `Γ¹(μ)`, with equality exactly when `μ ≤ 4`, by a descent, and has the
+    indices `1, 3, 8, 12` and then infinite index. It is free exactly when `μ ≥ 4`, by ping-pong.
+  - `KleinMap.lean`, Theorem U: the primitive states of a dial up to sign form a regular map of type
+    `{3, n}`, on whose directed edges `PSL(2, Z/n)` acts simply transitively, so
+    `|PSL| = V n = 2 E = 3 F`. For `n = 3, 4, 5` these are the counts of the tetrahedron, the
+    octahedron and the icosahedron. A law that fixes a vertex, an edge or a face has the trace
+    `±2`, `0` or `±1`.
+  - `TwoSquares.lean`, Theorem Y: the two squares generate `PGL(2, 5)` on the projective line over
+    `F₅`, which is `S₅`, and their labelling is forced.
 - **Plan.** The rest of Phase 4, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

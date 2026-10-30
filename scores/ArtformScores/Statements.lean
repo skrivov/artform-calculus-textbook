@@ -12,6 +12,7 @@ namespace Artform.Scores.Statement
 
 open Matrix (SpecialLinearGroup)
 open Artform.Scores
+open scoped Pointwise
 
 /-- **R1** (merging). Two kicks in a row are one kick with the summed stencil, and
 two moves in a row are one move. -/
@@ -469,5 +470,201 @@ def permutationLawsTransport : Prop :=
     ∃ (q : ℕ) (v : Fin c → Λ), 0 < q ∧
       (∀ z i, (σ ^ q) (z, i) = (z + v i, i)) ∧
       ∀ (R : Type) (u : Λ × Fin c → R) z i, u ((σ ^ q)⁻¹ (z + v i, i)) = u (z, i)
+
+/-- **T13** (Theorem Q, part 1; finding 037). The one-mode tick `T = M(-μ) K(1)` has finite order
+exactly at the pulls `μ = 1, 2, 3` (`stepOrders` gives the orders `6, 4, 3`). At `μ = 0` and `μ = 4`
+it grows linearly, by the powers written here. For `μ ≥ 5` it grows by `ρ = (μ - 2 + √(μ² - 4μ))/2`
+per tick: `ρ > 1`, and the trace of `Tⁿ` is `(-ρ)ⁿ + (-ρ)⁻ⁿ`. -/
+@[ledger "T13"]
+def tickGrowth : Prop :=
+  (∀ μ : ℕ, IsOfFinOrder (tick μ) ↔ μ = 1 ∨ μ = 2 ∨ μ = 3) ∧
+  (∀ n : ℕ, ((tick 0 ^ n : SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) =
+    !![1, 0; (n : ℤ), 1]) ∧
+  (∀ n : ℕ, ((tick 4 ^ n : SpecialLinearGroup (Fin 2) ℤ) : Matrix (Fin 2) (Fin 2) ℤ) =
+    (-1 : ℤ) ^ n • !![1 + 2 * (n : ℤ), 4 * n; -n, 1 - 2 * n]) ∧
+  ∀ μ : ℕ, 5 ≤ μ → 1 < StepGroup.growth μ ∧ ∀ n : ℕ,
+    ((Matrix.trace ((tick μ ^ n : SpecialLinearGroup (Fin 2) ℤ) :
+      Matrix (Fin 2) (Fin 2) ℤ) : ℤ) : ℝ) =
+      (-StepGroup.growth μ) ^ n + ((-StepGroup.growth μ)⁻¹) ^ n
+
+/-- **T13** (Theorem Q, part 2; finding 037). The step group `Σ_μ = ⟨K, M(-μ)⟩` lies in `Γ¹(μ)` for
+every `μ ≥ 1`, with equality exactly when `μ ≤ 4`. Its index in `SL(2, ℤ)` is `1, 3, 8, 12` at
+`μ = 1, 2, 3, 4`, and infinite (`Subgroup.index = 0`) for `μ ≥ 5`. The relations of the ledger's
+table hold: `K M K = M K M` and `(K M K)⁴ = 1` at `μ = 1`; `(M K)⁴ = 1` and `(M K)² K = K (M K)²` at
+`μ = 2`; `(M K)³ = 1` at `μ = 3`. -/
+@[ledger "T13"]
+def stepGroups : Prop :=
+  (∀ μ : ℕ, 1 ≤ μ → StepGroup.stepGroup μ ≤ StepGroup.gammaUpper μ ∧
+    (StepGroup.stepGroup μ = StepGroup.gammaUpper μ ↔ μ ≤ 4)) ∧
+  (StepGroup.stepGroup 1).index = 1 ∧ (StepGroup.stepGroup 2).index = 3 ∧
+  (StepGroup.stepGroup 3).index = 8 ∧ (StepGroup.stepGroup 4).index = 12 ∧
+  (∀ μ : ℤ, 5 ≤ μ → (StepGroup.stepGroup μ).index = 0) ∧
+  StepGroup.Kz * StepGroup.Mz 1 * StepGroup.Kz = StepGroup.Mz 1 * StepGroup.Kz * StepGroup.Mz 1 ∧
+  (StepGroup.Kz * StepGroup.Mz 1 * StepGroup.Kz) ^ 4 = 1 ∧
+  (StepGroup.Mz 2 * StepGroup.Kz) ^ 4 = 1 ∧
+  (StepGroup.Mz 2 * StepGroup.Kz) ^ 2 * StepGroup.Kz =
+    StepGroup.Kz * (StepGroup.Mz 2 * StepGroup.Kz) ^ 2 ∧
+  (StepGroup.Mz 3 * StepGroup.Kz) ^ 3 = 1
+
+/-- **T13** (Theorem Q, part 3; finding 037). For every real `μ ≥ 4` the kick and the move generate
+a free group. For a positive integer `μ`, they do exactly when `μ ≥ 4`. -/
+@[ledger "T13"]
+def stepGroupsFree : Prop :=
+  (∀ μ : ℝ, 4 ≤ μ → Function.Injective
+    (FreeGroup.lift ![(Step.kick (1 : ℝ)).sl, (Step.move (-μ)).sl])) ∧
+  ∀ μ : ℕ, 1 ≤ μ →
+    (Function.Injective (FreeGroup.lift ![StepGroup.Kz, StepGroup.Mz μ]) ↔ 4 ≤ μ)
+
+/-- **T13** (Theorem U, part 1; finding 038, after Klein). For `n ≥ 3` the map of the dial `Z/n` is
+a regular map of type `{3, n}`. `PSL(2, Z/n)` acts simply transitively on the directed edges: each
+law gives the directed edge of its columns, every directed edge is one law's, and two laws have one
+directed edge exactly when they are one element of `PSL(2, Z/n)`. The counts: one directed edge per
+element, `|PSL| = V n = 2 E = 3 F`, so `(V - E + F) · 6 n = |PSL| (6 - n)`. `E` has `n` neighbours.
+The triangles of the graph are the faces, the two faces `{u, v, u ± v}` on an edge differ, and the
+action keeps the edges and the faces. -/
+@[ledger "T13"]
+def regularMap : Prop :=
+  ∀ n : ℕ, 3 ≤ n →
+    (∀ g : SpecialLinearGroup (Fin 2) (ZMod n), Klein.toDir g ∈ Klein.dirEdges n) ∧
+    (∀ p ∈ Klein.dirEdges n, ∃ g : SpecialLinearGroup (Fin 2) (ZMod n), Klein.toDir g = p) ∧
+    (∀ g h : SpecialLinearGroup (Fin 2) (ZMod n),
+      Klein.toDir g = Klein.toDir h ↔ (g : Bells.PSLZ n) = (h : Bells.PSLZ n)) ∧
+    Nat.card (Bells.PSLZ n) = (Klein.dirEdges n).ncard ∧
+    Nat.card (Bells.PSLZ n) = (Klein.vertices n).ncard * n ∧
+    Nat.card (Bells.PSLZ n) = (Klein.edges n).ncard * 2 ∧
+    Nat.card (Bells.PSLZ n) = (Klein.faces n).ncard * 3 ∧
+    (((Klein.vertices n).ncard : ℤ) - (Klein.edges n).ncard + (Klein.faces n).ncard) * (6 * n) =
+      Nat.card (Bells.PSLZ n) * (6 - n) ∧
+    (Klein.neighbours (Klein.cls (Klein.eE : Klein.State n))).ncard = n ∧
+    (∀ u v w : Klein.State n, Klein.det2 u v = 1 →
+      (Klein.det2 u w = 1 ∨ Klein.det2 u w = -1) → (Klein.det2 v w = 1 ∨ Klein.det2 v w = -1) →
+        ({Klein.cls u, Klein.cls v, Klein.cls w} : Set (Klein.Cls n)) ∈ Klein.faces n) ∧
+    (∀ u v : Klein.State n, Klein.det2 u v = 1 → Klein.cls (u + v) ≠ Klein.cls (u - v)) ∧
+    (∀ (g : SpecialLinearGroup (Fin 2) (ZMod n)), ∀ S ∈ Klein.edges n, g • S ∈ Klein.edges n) ∧
+    ∀ (g : SpecialLinearGroup (Fin 2) (ZMod n)), ∀ S ∈ Klein.faces n, g • S ∈ Klein.faces n
+
+/-- **T13** (Theorem U, part 1; finding 038). The dials `n = 3, 4, 5` give the tetrahedron, the
+octahedron and the icosahedron: `|PSL| = 12, 24, 60`, with `(V, E, F) = (4, 6, 4)`, `(6, 12, 8)` and
+`(12, 30, 20)`. -/
+@[ledger "T13"]
+def platonicSolids : Prop :=
+  (Nat.card (Bells.PSLZ 3) = 12 ∧ (Klein.vertices 3).ncard = 4 ∧ (Klein.edges 3).ncard = 6 ∧
+    (Klein.faces 3).ncard = 4) ∧
+  (Nat.card (Bells.PSLZ 4) = 24 ∧ (Klein.vertices 4).ncard = 6 ∧ (Klein.edges 4).ncard = 12 ∧
+    (Klein.faces 4).ncard = 8) ∧
+  (Nat.card (Bells.PSLZ 5) = 60 ∧ (Klein.vertices 5).ncard = 12 ∧ (Klein.edges 5).ncard = 30 ∧
+    (Klein.faces 5).ncard = 20)
+
+/-- **T13** (Theorem U, parts 2 and 3; finding 038). The kick fixes `E` and turns its link
+`[1 : e] ↦ [1 : e + κ]`; the move fixes `B` and turns its link `[b : 1] ↦ [b - ℓ : 1]`; `E` and `B`
+are adjacent. A kick moves a state `(b, e)` along an edge exactly when `κ b² = ±1`, and a move when
+`ℓ e² = ±1`, since `det(v, K v) = κ b²` and `det(v, M v) = ℓ e²`. Every unit squares to `±1` exactly
+on the dials `1, 2, 3, 4, 5, 6, 8, 10, 12` and `24`. -/
+@[ledger "T13"]
+def stepsAreTurns : Prop :=
+  (∀ (n : ℕ) (κ ℓ : ZMod n),
+    Klein.act (Step.kick κ).sl Klein.eE = Klein.eE ∧
+    (∀ e : ZMod n, Klein.act (Step.kick κ).sl (1, e) = (1, e + κ)) ∧
+    Klein.act (Step.move (-ℓ)).sl Klein.eB = Klein.eB ∧
+    (∀ b : ZMod n, Klein.act (Step.move (-ℓ)).sl (b, 1) = (b - ℓ, 1)) ∧
+    Klein.det2 (Klein.eE : Klein.State n) Klein.eB = -1 ∧
+    (∀ u : Klein.State n, Klein.det2 u (Klein.act (Step.kick κ).sl u) = κ * u.1 ^ 2) ∧
+    ∀ u : Klein.State n, Klein.det2 u (Klein.act (Step.move (-ℓ)).sl u) = ℓ * u.2 ^ 2) ∧
+  ∀ n : ℕ, n ≠ 0 → ((∀ u : (ZMod n)ˣ, (u : ZMod n) ^ 2 = 1 ∨ (u : ZMod n) ^ 2 = -1) ↔
+    n ∈ [1, 2, 3, 4, 5, 6, 8, 10, 12, 24])
+
+/-- **T13** (Theorem U, parts 4 and 5; finding 038). A law that fixes a vertex has the trace `±2`,
+one that fixes an edge `0` or `±2`, and one that fixes a face `±1` or `±2`; the tick `T_μ` has the
+trace `2 - μ`. So a fixed cell needs `μ ≡ 0, 1, 2, 3, 4` modulo `n`, and each of these fixes a cell
+on every dial: `E`; the face `{B, E, [1 : -1]}`; the edge `{B, [1 : -1]}`; the face
+`{B, [-2 : 1], [1 : -1]}`; and the vertex `[-2 : 1]`. The exploding mode `μ = 8` fixes no cell for
+`n ≥ 9`. It is an edge flip on `C₃`, the turn about `E` on `C₄`, and a face turn on `C₅`, and its
+orders on `C₃₆`, `C₁₂₀`, `C₃₆₀` and `C₃₆₀₀` are `12, 24, 24` and `240`. -/
+@[ledger "T13"]
+def tickCells : Prop :=
+  (∀ (n : ℕ) (g : SpecialLinearGroup (Fin 2) (ZMod n)), ∀ x ∈ Klein.vertices n, g • x = x →
+    Matrix.trace g.1 = 2 ∨ Matrix.trace g.1 = -2) ∧
+  (∀ (n : ℕ) (g : SpecialLinearGroup (Fin 2) (ZMod n)), ∀ S ∈ Klein.edges n, g • S = S →
+    Matrix.trace g.1 = 0 ∨ Matrix.trace g.1 = 2 ∨ Matrix.trace g.1 = -2) ∧
+  (∀ n : ℕ, 3 ≤ n → ∀ (g : SpecialLinearGroup (Fin 2) (ZMod n)), ∀ S ∈ Klein.faces n, g • S = S →
+    Matrix.trace g.1 = 1 ∨ Matrix.trace g.1 = -1 ∨ Matrix.trace g.1 = 2 ∨ Matrix.trace g.1 = -2) ∧
+  (∀ (n : ℕ) (μ : ZMod n), Matrix.trace (Klein.tickN μ).1 = 2 - μ) ∧
+  (∀ n : ℕ,
+    Klein.tickN (0 : ZMod n) • Klein.cls (Klein.eE : Klein.State n) = Klein.cls Klein.eE ∧
+    Klein.tickN (1 : ZMod n) •
+      ({Klein.cls Klein.eB, Klein.cls Klein.eE, Klein.cls ((1, -1) : Klein.State n)} :
+        Set (Klein.Cls n)) =
+      {Klein.cls Klein.eB, Klein.cls Klein.eE, Klein.cls ((1, -1) : Klein.State n)} ∧
+    Klein.tickN (2 : ZMod n) •
+      ({Klein.cls Klein.eB, Klein.cls ((1, -1) : Klein.State n)} : Set (Klein.Cls n)) =
+      {Klein.cls Klein.eB, Klein.cls ((1, -1) : Klein.State n)} ∧
+    Klein.tickN (3 : ZMod n) •
+      ({Klein.cls Klein.eB, Klein.cls ((-2, 1) : Klein.State n),
+        Klein.cls ((1, -1) : Klein.State n)} : Set (Klein.Cls n)) =
+      {Klein.cls Klein.eB, Klein.cls ((-2, 1) : Klein.State n),
+        Klein.cls ((1, -1) : Klein.State n)} ∧
+    Klein.tickN (4 : ZMod n) • Klein.cls ((-2, 1) : Klein.State n) =
+      Klein.cls ((-2, 1) : Klein.State n)) ∧
+  (∀ n : ℕ, 9 ≤ n →
+    (∀ x ∈ Klein.vertices n, Klein.tickN (8 : ZMod n) • x ≠ x) ∧
+    (∀ S ∈ Klein.edges n, Klein.tickN (8 : ZMod n) • S ≠ S) ∧
+    ∀ S ∈ Klein.faces n, Klein.tickN (8 : ZMod n) • S ≠ S) ∧
+  (Klein.tickN (8 : ZMod 3) •
+      ({Klein.cls Klein.eB, Klein.cls ((1, -1) : Klein.State 3)} : Set (Klein.Cls 3)) =
+      {Klein.cls Klein.eB, Klein.cls ((1, -1) : Klein.State 3)} ∧
+    Klein.tickN (8 : ZMod 4) • Klein.cls (Klein.eE : Klein.State 4) = Klein.cls Klein.eE ∧
+    Klein.tickN (8 : ZMod 5) •
+      ({Klein.cls Klein.eB, Klein.cls ((-2, 1) : Klein.State 5),
+        Klein.cls ((1, -1) : Klein.State 5)} : Set (Klein.Cls 5)) =
+      {Klein.cls Klein.eB, Klein.cls ((-2, 1) : Klein.State 5),
+        Klein.cls ((1, -1) : Klein.State 5)}) ∧
+  orderOf (Klein.tickN (8 : ZMod 36)) = 12 ∧ orderOf (Klein.tickN (8 : ZMod 120)) = 24 ∧
+    orderOf (Klein.tickN (8 : ZMod 360)) = 24 ∧ orderOf (Klein.tickN (8 : ZMod 3600)) = 240
+
+/-- **T13** (Theorem Y; finding 038). The two squares are the projective line over `F₅`.
+1. With the labelling `v₀ ↦ ∞`, `v_k ↦ k - 1`, `L` is `x ↦ 1 / (2 x + 1)` and `R` is `x ↦ 2 x + 3`.
+   They generate `PGL(2, 5)`, the image of `GL(2, 5)` on the projective line: `120` elements, and
+   isomorphic to `S₅`.
+2. The labellings that make `L` and `R` Möbius maps are the book's labelling followed by an element
+   of `PGL(2, 5)`: `120` of them, and only the book's has `v₀, v₁, v₂` at `∞, 0, 1`.
+3. `R ∘ L` is the kick of strength `2`, `x ↦ x / (2 x + 1)`. It moves the ring
+   `v₀ → v₄ → v₅ → v₂ → v₃ → v₀` and fixes `v₁`, and its order is `5`.
+4. `det L = 3` and `det R = 2` are not squares mod `5`. Each turn carries the pairs of determinant
+   `±1` onto those of determinant `±2`, and back. A law of square determinant acts as an element of
+   `SL(2, 5)`, and each product of two turns has a square determinant. -/
+@[ledger "T13"]
+def twoSquaresProjective : Prop :=
+  (∀ i, Bells.corner (Bells.squareL i) = Bells.matL • Bells.corner i) ∧
+  (∀ i, Bells.corner (Bells.squareR i) = Bells.matR • Bells.corner i) ∧
+  Bells.twoSquares.map Bells.toLine.toMonoidHom = Bells.rho.range ∧
+  Nat.card Bells.twoSquares = 120 ∧
+  Nonempty (Bells.twoSquares ≃* Equiv.Perm (Fin 5)) ∧
+  (∀ c, Bells.IsMobiusLabelling c ↔ ∃ g, ∀ i, c i = Bells.rho g (Bells.corner i)) ∧
+  {c | Bells.IsMobiusLabelling c}.ncard = 120 ∧
+  (∀ c, Bells.IsMobiusLabelling c → c 0 = Bells.corner 0 → c 1 = Bells.corner 1 →
+    c 2 = Bells.corner 2 → c = Bells.corner) ∧
+  Bells.corner.permCongr (Bells.squareR * Bells.squareL) = Bells.rho Bells.matK2 ∧
+  ((Bells.squareR * Bells.squareL) 0 = 4 ∧ (Bells.squareR * Bells.squareL) 4 = 5 ∧
+    (Bells.squareR * Bells.squareL) 5 = 2 ∧ (Bells.squareR * Bells.squareL) 2 = 3 ∧
+    (Bells.squareR * Bells.squareL) 3 = 0 ∧ (Bells.squareR * Bells.squareL) 1 = 1) ∧
+  orderOf (Bells.squareR * Bells.squareL) = 5 ∧
+  (Bells.matL.det = (3 : Bells.K5) ∧ ¬ IsSquare (3 : Bells.K5) ∧ Bells.matR.det = (2 : Bells.K5) ∧
+    ¬ IsSquare (2 : Bells.K5)) ∧
+  (∀ u v : Bells.K5 × Bells.K5,
+    ((Bells.detK5 u v = 1 ∨ Bells.detK5 u v = -1) →
+      (Bells.detK5 (Bells.stateL u) (Bells.stateL v) = 2 ∨
+        Bells.detK5 (Bells.stateL u) (Bells.stateL v) = -2) ∧
+      (Bells.detK5 (Bells.stateR u) (Bells.stateR v) = 2 ∨
+        Bells.detK5 (Bells.stateR u) (Bells.stateR v) = -2)) ∧
+    ((Bells.detK5 u v = 2 ∨ Bells.detK5 u v = -2) →
+      (Bells.detK5 (Bells.stateL u) (Bells.stateL v) = 1 ∨
+        Bells.detK5 (Bells.stateL u) (Bells.stateL v) = -1) ∧
+      (Bells.detK5 (Bells.stateR u) (Bells.stateR v) = 1 ∨
+        Bells.detK5 (Bells.stateR u) (Bells.stateR v) = -1))) ∧
+  (∀ g : Matrix.GeneralLinearGroup (Fin 2) Bells.K5, IsSquare (g.1.det) →
+    ∃ s : SpecialLinearGroup (Fin 2) Bells.K5,
+      Bells.rho g = Bells.rho (s : Matrix.GeneralLinearGroup (Fin 2) Bells.K5)) ∧
+  (IsSquare (Bells.matL * Bells.matL).1.det ∧ IsSquare (Bells.matL * Bells.matR).1.det ∧
+    IsSquare (Bells.matR * Bells.matL).1.det ∧ IsSquare (Bells.matR * Bells.matR).1.det)
 
 end Artform.Scores.Statement

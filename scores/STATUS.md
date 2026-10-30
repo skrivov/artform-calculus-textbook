@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 35 |
+| proved | 43 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **35** |
+| **total** | **43** |
 
 ## Statements
 
@@ -48,3 +48,11 @@
 | T15:fewest | The fewest back-steps | proved | `Artform.Scores.Statement.fewestBackSteps` / `Artform.Scores.fewestBackSteps` | awaiting review |
 | T15:table | The table of forward extents | proved | `Artform.Scores.Statement.forwardExtentTable` / `Artform.Scores.forwardExtentTable` | awaiting review |
 | T15:transport | Ringing on a lattice only transports | proved | `Artform.Scores.Statement.permutationLawsTransport` / `Artform.Scores.permutationLawsTransport` | awaiting review |
+| T13:growth | The tick's orders and growth | proved | `Artform.Scores.Statement.tickGrowth` / `Artform.Scores.tickGrowth` | awaiting review |
+| T13:step-groups | The step groups | proved | `Artform.Scores.Statement.stepGroups` / `Artform.Scores.stepGroups` | awaiting review |
+| T13:free | The free step groups | proved | `Artform.Scores.Statement.stepGroupsFree` / `Artform.Scores.stepGroupsFree` | awaiting review |
+| T13:regular-map | The regular map of a dial | proved | `Artform.Scores.Statement.regularMap` / `Artform.Scores.regularMap` | awaiting review |
+| T13:platonic | The tetrahedron, the octahedron and the icosahedron | proved | `Artform.Scores.Statement.platonicSolids` / `Artform.Scores.platonicSolids` | awaiting review |
+| T13:turns | The steps are turns | proved | `Artform.Scores.Statement.stepsAreTurns` / `Artform.Scores.stepsAreTurns` | awaiting review |
+| T13:cells | The cells that a tick fixes | proved | `Artform.Scores.Statement.tickCells` / `Artform.Scores.tickCells` | awaiting review |
+| T13:two-squares | The two squares are the projective line over F₅ | proved | `Artform.Scores.Statement.twoSquaresProjective` / `Artform.Scores.twoSquaresProjective` | awaiting review |
