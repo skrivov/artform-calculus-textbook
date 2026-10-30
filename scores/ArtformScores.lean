@@ -37,3 +37,8 @@ import ArtformScores.ReviewRepair.Elementary
 import ArtformScores.ReviewRepair.Reading
 import ArtformScores.ReviewRepair.Normalization
 import ArtformScores.ReviewRepair.FaceNormalization
+
+import ArtformScores.GravityBridge.Relations
+import ArtformScores.GravityBridge.Realization
+import ArtformScores.GravityBridge.Native.DistinctBlock
+import ArtformScores.GravityBridge.Native.TemporalWitness

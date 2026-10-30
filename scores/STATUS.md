@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 63 |
-| stated | 0 |
+| stated | 4 |
 | planned | 0 |
-| **total** | **63** |
+| **total** | **67** |
 
 ## Statements
 
@@ -78,3 +78,7 @@
 | T12:gap | A fixed class without a palindrome | proved | `Artform.Scores.Statement.palindromeGap` / `Artform.Scores.Leapfrog.palindromeGap` | approved 2026-10-30 |
 | T13:presentations | The presentations of the step groups | proved | `Artform.Scores.Statement.stepPresentations` / `Artform.Scores.StepGroup.stepPresentations` | approved 2026-10-30 |
 | T13:psl-a5 | PSL(2, 5) is the alternating group | proved | `Artform.Scores.Statement.pslAlternating` / `Artform.Scores.pslAlternating` | approved 2026-10-30 |
+| GAC:relations | Typed relations extend score laws | stated | `Artform.Scores.GravityBridge.Statement.typedRelations` / `Artform.Scores.GravityBridge.typedRelations` | awaiting review |
+| GAC:realization | Invariance and all-time realization | stated | `Artform.Scores.GravityBridge.Statement.invariantRealization` / `Artform.Scores.GravityBridge.invariantRealization` | awaiting review |
+| GAC:native-distinct-block | Signed native Schur cancellation | stated | `Artform.Scores.GravityBridge.Native.Statement.distinctBlock` / `Artform.Scores.GravityBridge.Native.distinctBlock` | awaiting review |
+| GAC:temporal-witness | Rational transverse traceless symbol witness | stated | `Artform.Scores.GravityBridge.Native.Statement.temporalWitness` / `Artform.Scores.GravityBridge.Native.temporalWitness` | awaiting review |

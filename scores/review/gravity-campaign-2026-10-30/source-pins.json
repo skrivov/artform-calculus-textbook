@@ -1,0 +1,23 @@
+{
+  "new_statement_review": "pending",
+  "source_pins": [
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M162-R7-explicit-coordinate-forcing-and-selected-TT-noninvariance-UNREVIEWED-20261030.md",
+      "snapshot": "source/M162-R7-explicit-coordinate-forcing-and-selected-TT-noninvariance-UNREVIEWED-20261030.md",
+      "sha256": "f8c8769129b03d210185e642dad1501f226c785eeac31b6b3898c273b57272f9",
+      "inherited_scope": "native mixed-force source accepted only in the distinct review scope"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-M162-selected-TT-noninvariance-distinct-review-evidence-20261030/finished-distinct-manual-selected-TT-noninvariance-review.md",
+      "snapshot": "source/finished-distinct-manual-selected-TT-noninvariance-review.md",
+      "sha256": "3d82b32a55a29f5870cb46108e1a4a127a60a65604b616a01c548c7d681120ef",
+      "inherited_scope": "independent scoped review of M162"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r7-M179-bounded-frontier-duty-research-20261030/UNREVIEWED-M179-R7-uniform-coordinate-trace-gap-for-native-step-invariant-graphs.md",
+      "snapshot": "source/UNREVIEWED-M179-R7-uniform-coordinate-trace-gap-for-native-step-invariant-graphs.md",
+      "sha256": "ccb125af8796d26c91d3d0f99e52b1680b16adc57fb062da4389f49e81bfcf5b",
+      "inherited_scope": "accepted scoped baseline gap, not a new campaign result"
+    }
+  ]
+}

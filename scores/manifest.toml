@@ -765,3 +765,74 @@ lean_statement = "Artform.Scores.Statement.pslAlternating"
 lean_proof = "Artform.Scores.pslAlternating"
 reviewed = "2026-10-30"
 review_text_sha256 = "c5af96205bc9b6c1ef83c2a5d20a673e11ffb57feeaa829df0031b0127acb056"
+
+[[statement]]
+key = "GAC:relations"
+label = "GAC:relations"
+title = "Typed relations extend score laws"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:relations)"
+statement = """
+**GAC:relations (typed relations extend score laws).** For relations r:X to Y, s:Y to Z and t:Z to W,
+time-order composition, defined by an existential intermediate state, is associative. For functions f:X to Y
+and g:Y to Z, compose(graph(f),graph(g))=graph(g composed with f). Over every commutative ring S, the graph of
+the column action distinguishes two-by-two matrices. For every two scores u,v over S, the graph of
+realize(u ++ v) is the time-order composition of the graphs of realize(u) and realize(v).
+See [finding 102](findings/102-typed-evolution-and-invariant-realization.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.typedRelations"
+lean_proof = "Artform.Scores.GravityBridge.typedRelations"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:realization"
+label = "GAC:realization"
+title = "Invariance and all-time realization"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:realization)"
+statement = """
+**GAC:realization (invariance and all-time realization).** For arbitrary types Y,H, maps E:Y to H, R:H to Y
+with R(E(y))=y, and T:H to H, put U=R composed with T composed with E. The image of E is forward invariant
+under T if and only if T(E(y))=E(U(y)) for every y. This implies, for every natural n and y,
+T^n(E(y))=E(U^n(y)) and R(T^n(E(y)))=U^n(y). No converse from visible readings alone is asserted.
+See [finding 102](findings/102-typed-evolution-and-invariant-realization.md), including its counterexample.
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.invariantRealization"
+lean_proof = "Artform.Scores.GravityBridge.invariantRealization"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:native-distinct-block"
+label = "GAC:native-distinct-block"
+title = "Signed native Schur cancellation"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:native-distinct-block)"
+statement = """
+**GAC:native-distinct-block (signed native Schur cancellation).** Over the rationals, use kappa=1/101,
+Tc=[[-1,1,0],[1,0,-1],[0,-1,-1]], M=-I, Bc=[[0,-1,-1],[-1,0,1],[-1,1,0]],
+B=Bc+2*kappa*Tc^T*M*Tc and Z=(z,z,0).
+Then det(B)=2058146/1030301 and, for every rational z,
+M*Z-2*kappa*M*Tc*B^-1*Tc^T*M*Z=(-101*z/103,-101*z/103,0).
+See [finding 103](findings/103-native-signed-block-and-temporal-symbol.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Statement.distinctBlock"
+lean_proof = "Artform.Scores.GravityBridge.Native.distinctBlock"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:temporal-witness"
+label = "GAC:temporal-witness"
+title = "Rational transverse traceless symbol witness"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:temporal-witness)"
+statement = """
+**GAC:temporal-witness (rational transverse traceless symbol witness).** For k=(1,2,3) and
+q=[[47,-46,15],[-46,-22,30],[15,30,-25]]/70, q is symmetric, trace(q)=0, q*k=0,
+sum_j k_j^2=14, sum_j k_j*q_jj=-36/35 and -(sum_j k_j^2)*(sum_j k_j*q_jj)/202=36/505, which is nonzero.
+This certifies the rational coefficient only. Its identification with the complete native force and its
+transfer to admitted packets are separate obligations; see
+[finding 103](findings/103-native-signed-block-and-temporal-symbol.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Statement.temporalWitness"
+lean_proof = "Artform.Scores.GravityBridge.Native.temporalWitness"
+reviewed = ""
+review_text_sha256 = ""

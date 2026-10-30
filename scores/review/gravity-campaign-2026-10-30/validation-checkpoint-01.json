@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "e1aa1642572f0746c2d6afe8decdccf94124fe3e",
+  "research_checkpoint": 1,
+  "new_submissions": 4,
+  "independent_review": "pending",
+  "proofs": [
+    {
+      "label": "GAC:native-distinct-block",
+      "decl": "Artform.Scores.GravityBridge.Native.distinctBlock",
+      "proves": "Artform.Scores.GravityBridge.Native.Statement.distinctBlock",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "label": "GAC:temporal-witness",
+      "decl": "Artform.Scores.GravityBridge.Native.temporalWitness",
+      "proves": "Artform.Scores.GravityBridge.Native.Statement.temporalWitness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "label": "GAC:realization",
+      "decl": "Artform.Scores.GravityBridge.invariantRealization",
+      "proves": "Artform.Scores.GravityBridge.Statement.invariantRealization",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "label": "GAC:relations",
+      "decl": "Artform.Scores.GravityBridge.typedRelations",
+      "proves": "Artform.Scores.GravityBridge.Statement.typedRelations",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "required_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "approved_surface_drift": [],
+  "kernel_replays": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Relations"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Realization"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.DistinctBlock"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.TemporalWitness"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "file_hashes": {
+    "scores/ArtformScores/GravityBridge/Defs.lean": "8296f0bacd08f086df8df9eaf3c1ce9e9b49eb5632c462bed65b8b56a3a3b5d7",
+    "scores/ArtformScores/GravityBridge/Native/Defs.lean": "5f04523624d4d7dc2c8f0182d9fa44c4a2d308234d81bf117b47f37fd97c1876",
+    "scores/ArtformScores/GravityBridge/Native/DistinctBlock.lean": "c682c8985ae2b97c0bf57b84942892f2b8162a0a3611e645775e919b24c8e683",
+    "scores/ArtformScores/GravityBridge/Native/Statements.lean": "e4c61a979d27dd6af16bdccd112785c811efbc1c8d2ada6e6a5faf0688bb4cd6",
+    "scores/ArtformScores/GravityBridge/Native/TemporalWitness.lean": "f9225b555a218c0309fd76865b2fe1e081e5bd23750a47737694ef12ff48a6e5",
+    "scores/ArtformScores/GravityBridge/Realization.lean": "f5b6f1a3fecf77ebff7e7eb1f8706b5e6677f6aeeb021fe887cd3f8d1f63ff14",
+    "scores/ArtformScores/GravityBridge/Relations.lean": "dd3b008073949e9ba166bce6709acf4fcec9594ee9026f2cd84b256d96962479",
+    "scores/ArtformScores/GravityBridge/Statements.lean": "0d39fc137d4bb6df9de31095b4093c56fcd799b7a14487103cea67d3b2b3bfca",
+    "scores/ArtformScores.lean": "c93acd4d855807f7593be357e414ffeb3f226a2fa80a3a85713ffa0b668c53b3",
+    "scores/manifest.toml": "d99509e633586c3220245f2d45acb7f50d0c8bf8eaeba3a756f749c246009206",
+    "scores/STATUS.md": "d6d711ce1d6e1c8353a90ac8caa5c1f550daac7f9d9d5f0a3b17928504a3c87a"
+  },
+  "scope": "Foundations and exact native sub-block/symbol certificates. Full native application bridge remains open."
+}
