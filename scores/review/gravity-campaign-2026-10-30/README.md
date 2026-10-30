@@ -1,6 +1,6 @@
 # Gravity calculus foundation submission
 
-30 October 2026. Five new checked proof submissions; independent fidelity review pending.
+30 October 2026. Six new checked proof submissions; independent fidelity review pending.
 The original sixty-three scores entries retain their independent approvals.
 
 ## Statements to review
@@ -12,9 +12,10 @@ The original sixty-three scores entries retain their independent approvals.
 | GAC:native-distinct-block | GravityBridge.Native.Statement.distinctBlock / GravityBridge.Native.distinctBlock |
 | GAC:temporal-witness | GravityBridge.Native.Statement.temporalWitness / GravityBridge.Native.temporalWitness |
 | GAC:defect-stability | GravityBridge.Statement.defectStability / GravityBridge.defectStability |
+| GAC:connection-preparation | GravityBridge.Native.Statement.connectionPreparationLaw / GravityBridge.Native.connectionPreparationLaw |
 
 All names start with Artform.Scores. The literal source statements are quoted in scores/manifest.toml
-from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–104.
+from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–105.
 Definitions, statements, proofs and positive examples are under scores/ArtformScores/GravityBridge/.
 
 ## Required fidelity checks
@@ -34,8 +35,13 @@ Definitions, statements, proofs and positive examples are under scores/ArtformSc
    completeness, finite-dimensionality, recovery or native-domain assumption. Its corollary keeps every
    constant and its positive example changes the embedded graph while preserving the common readout.
    A generator bound must not silently be transferred to a step bound or to a physical energy norm.
+7. Check the first-lift normalization in the additional original-source snapshot:
+   c=-2*kappa*B^-1*r, with stationary equation B*c+2*kappa*r=0.
+   Check its exact quadratic variation, the nonzero TT inputs and the unique prepared correction.
+   The c-independent term -2*kappa*z^2 must be retained for the input-dependent effective density.
+   Neither this block nor its first-lift correction is the entire native connection or gravity action.
 
-The three bounded historical source/review snapshots in source/ and source-pins.json preserve provenance.
+The bounded historical source/review snapshots in source/ and source-pins.json preserve provenance.
 Their old UNREVIEWED headings are historical; the distinct review gives the inherited scoped acceptance.
 They do not approve these new Lean submissions.
 

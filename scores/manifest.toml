@@ -855,3 +855,25 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.defectStability"
 lean_proof = "Artform.Scores.GravityBridge.defectStability"
 reviewed = ""
 review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:connection-preparation"
+label = "GAC:connection-preparation"
+title = "Native connection preparation and source term"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:connection-preparation)"
+statement = """
+**GAC:connection-preparation (native connection preparation and source term).** Use the rational signed
+block B and kappa=1/101 of GAC:native-distinct-block. Put r(z)=(0,-z,z), c*(z)=(0,-2*z/103,2*z/103),
+L(z,c)=c.B.c/2+2*kappa*c.r(z), and z_ij=-14*q_ij/4 for the polarization q of GAC:temporal-witness.
+For every rational z,c, B*c+2*kappa*r(z)=0 if and only if c=c*(z); c=0 solves it if and only if z=0.
+The values z_01,z_02,z_12 are 23/10,-3/4,-3/2, and no unordered spatial pair admits the zero preparation.
+For all rational z,c,delta,epsilon,
+L(z,c+epsilon*delta)=L(z,c)+epsilon*delta.(B*c+2*kappa*r(z))+epsilon^2*delta.B.delta/2.
+For every rational z, -2*kappa*z^2+L(z,c*(z))=-2*z^2/103 and L(z,c*(z))=4*z^2/10403.
+This is the stationary contorsion sub-block and its input-dependent density, not the entire native connection
+or effective gravity action. See [finding 105](findings/105-native-connection-preparation-and-source-term.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.connectionPreparationLaw"
+reviewed = ""
+review_text_sha256 = ""

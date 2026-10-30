@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "38b13d56799fa6e9ae519a1c51fb8327570bdab5",
+  "investigation": "GAC-A07",
+  "independent_review": "pending",
+  "proofs": [
+    {
+      "label": "GAC:connection-preparation",
+      "decl": "Artform.Scores.GravityBridge.Native.connectionPreparationLaw",
+      "proves": "Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "full_build_wfail": 0,
+  "required_report_status_tree_certificate_checks": "all passed",
+  "approved_surface_drift": [],
+  "kernel_replay": {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "ArtformScores.GravityBridge.Native.Preparation"
+    ],
+    "exit_code": 0
+  },
+  "file_hashes": {
+    "scores/ArtformScores/GravityBridge/Native/PreparationDefs.lean": "5ea243a030e1b56c63b04b43e333849b40432e5bb738fb746a6219e9529d94e7",
+    "scores/ArtformScores/GravityBridge/Native/PreparationStatements.lean": "0a71d147e9904bb24c41f8258514013454176401a283346a342a9650301f1beb",
+    "scores/ArtformScores/GravityBridge/Native/Preparation.lean": "9dfd89b71a5f37a3a46ac301063abc8d24fb2d39cabe6e24e890dc68867a654e"
+  },
+  "scope": "Original first-lift stationary sub-block and input-dependent density. Complete native transfer remains open."
+}

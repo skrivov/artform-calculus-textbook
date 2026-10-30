@@ -18,6 +18,12 @@
       "snapshot": "source/UNREVIEWED-M179-R7-uniform-coordinate-trace-gap-for-native-step-invariant-graphs.md",
       "sha256": "ccb125af8796d26c91d3d0f99e52b1680b16adc57fb062da4389f49e81bfcf5b",
       "inherited_scope": "accepted scoped baseline gap, not a new campaign result"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-actual-j2-normal-source-M157-research-evidence-20261030/OPEN-original-j2-Schur-normal-source-and-actual-three-dimensional-scalar-trace.md",
+      "snapshot": "source/OPEN-original-j2-Schur-normal-source-and-actual-three-dimensional-scalar-trace.md",
+      "sha256": "a55708276369d2cc3015e6d2626515c96f413ea3a9b9c0f97d569ec708dbd6b3",
+      "inherited_scope": "Original first-lift c=-2*kappa*B^-1*r and effective density, consumed in M162 distinct review; full native correspondence remains separately scoped."
     }
   ]
 }
