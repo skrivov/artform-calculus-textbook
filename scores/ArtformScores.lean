@@ -5,3 +5,5 @@ import ArtformScores.Readings
 import ArtformScores.StepOrders
 import ArtformScores.Caller
 import ArtformScores.Euclid
+import ArtformScores.Lifting
+import ArtformScores.CRT

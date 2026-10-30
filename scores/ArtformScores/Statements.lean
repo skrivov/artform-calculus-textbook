@@ -54,6 +54,21 @@ def everyLawIsAScore : Prop :=
   ∀ (F : Type) [Field F] (A : SpecialLinearGroup (Fin 2) (LaurentPolynomial F)),
     ∃ w : Score (LaurentPolynomial F), realize w = A
 
+/-- **T1** for the dials `Z/p^k`, `p` prime: every law of determinant 1 in
+`SL(2, (Z/p^k)[x, 1/x])` is the law of a score. -/
+@[ledger "T1"]
+def everyLawIsAScorePrimePower : Prop :=
+  ∀ (p k : ℕ), p.Prime → ∀ A : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod (p ^ k))),
+    ∃ w : Score (LaurentPolynomial (ZMod (p ^ k))), realize w = A
+
+/-- **T1** for every dial `Z/n`, `n ≥ 1`: every law of determinant 1 in
+`SL(2, (Z/n)[x, 1/x])` is the law of a score. (Mathlib's `ZMod 0` is `ℤ`, which is
+no dial.) -/
+@[ledger "T1"]
+def everyLawIsAScoreModulus : Prop :=
+  ∀ n : ℕ, n ≠ 0 → ∀ A : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod n)),
+    ∃ w : Score (LaurentPolynomial (ZMod n)), realize w = A
+
 /-- **T2** (the index). No score realizes a chiral mover `diag(a, 1)` with
 `a ≠ 1`: every law of a score has determinant 1. -/
 @[ledger "T2"]

@@ -12,10 +12,14 @@ book states it.
 - **Phase 1** proves the rules R1 (merging), R3 (Whitehead's rule), R4 (balanced
   movers) and R5 (time reversal), and the theorems T2 (the index), T12 (the reading
   and palindromes), T13 (the crystallographic pulls) and T14 (the caller's cut).
-- **Phase 2** proves T1 over every field `F`: every law of determinant 1 on a dial,
-  in `SL(2, F[x, 1/x])`, is a score. The proof is Euclid's algorithm on the first
-  column, with polynomial division after a shift by a power of `x` (`Euclid.lean`).
-- **Plan.** The rest of Phase 2 lifts T1 to `Z/p^k` and `Z/n`. Phase 3 is T4,
-  completeness on one mode, by certificate.
+- **Phase 2** proves T1: every law of determinant 1 in `SL(2, R[x, 1/x])` is a score
+  when `R` is a field, `Z/p^k` or `Z/n`.
+  - Over a field, the proof is Euclid's algorithm on the first column, with
+    polynomial division after a shift by a power of `x` (`Euclid.lean`).
+  - Over `Z/p^k`, a law reduced modulo `p` is a score over `F_p`; lifted back, it
+    leaves a law with a unit corner, which is `K(m) diag(u, 1/u) M(v)` (`Lifting.lean`).
+  - Over `Z/n`, the Chinese remainder theorem splits the dial into prime powers
+    (`CRT.lean`).
+- **Plan.** Phase 3 is T4, completeness on one mode, by certificate.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.
