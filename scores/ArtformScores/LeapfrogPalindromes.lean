@@ -924,105 +924,179 @@ end Palindromes
 
 section Gap
 
-/-- The sixth power is trivial on `⟨-1, ρ⟩` at `(p, κλ) = (11, 8)`. -/
-theorem gluing_pow_six : ∀ u ∈ gluing (8 : ZMod 11), u ^ 6 = 1 := by
-  have hq1 : (8 : ZMod 11) ≠ 1 := by decide
-  have hle : gluing (8 : ZMod 11) ≤ (powMonoidHom 6 : U (8 : ZMod 11) →* U (8 : ZMod 11)).ker := by
-    refine (Subgroup.closure_le _).mpr ?_
-    rintro u (hu | hu)
-    · refine Subtype.ext (Units.ext ?_)
-      change ((u : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11)) ^ 6 = 1
-      rw [hu]
-      decide +kernel
-    · have hv : ((u : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11)) = ⟨5, 5⟩ :=
-        (isUnit_one_add_rE hq1).mul_left_inj.mp (hu.trans (by decide +kernel))
-      refine Subtype.ext (Units.ext ?_)
-      change ((u : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11)) ^ 6 = 1
-      rw [hv]
-      decide +kernel
-  exact fun u hu => hle hu
-
-/-- **T12** (a fixed class without a palindrome). -/
-@[ledger "T12"]
-theorem palindromeGap : Statement.palindromeGap := by
-  have h2 : (2 : ZMod 11) ≠ 0 := by decide
-  have hq0 : (8 : ZMod 11) ≠ 0 := by decide
-  have hq1 : (8 : ZMod 11) ≠ 1 := by decide
-  have hy : (5 : ZMod 11) * 5 ≠ 8 := by decide
-  have ht := phase_gluedLaw (q := (8 : ZMod 11)) 5
+/-- A fixed class without a palindrome, from a finite check. The subgroup `⟨-1, ρ⟩` lies in the
+elements with `u^N = 1`, and so does `κ`, but `z / z̄` does not, while its square lies in
+`⟨-1, ρ⟩`. -/
+theorem gap_of_checks {F : Type} [Field F] {q : F} (h2 : (2 : F) ≠ 0) (hq0 : q ≠ 0) (hq1 : q ≠ 1)
+    {y : F} (hy : y * y ≠ q) (th rh : Fib q)
+    (hth : th * star (algebraMap F (Fib q) y + rE) = algebraMap F (Fib q) y + rE)
+    (hrh : rh * (1 + rE) = 1 - rE) (N : ℕ) (hneg : (-1 : Fib q) ^ N = 1) (hrhN : rh ^ N = 1)
+    (hthN : th ^ N ≠ 1) (e k : ℕ) (hsq : th * th = (-1) ^ e * rh ^ k)
+    (hw : ∀ w : F, w * w = 1 - q → (1 - rE : Fib q) ^ N = algebraMap F (Fib q) w ^ N) :
+    FixedNoPalindrome q y := by
+  have ht := phase_gluedLaw (q := q) y
   have hcl := classOf_gluedLaw hq0 hq1 hy
-  set z : (Fib (8 : ZMod 11))ˣ := (isUnit_y_add_rE hy).unit with hz
-  have hzv : (z : Fib (8 : ZMod 11)) = algebraMap (ZMod 11) (Fib (8 : ZMod 11)) 5 + rE := rfl
-  -- `z / z̄ = 9 r`
-  have hval : thetaV z = ⟨0, 9⟩ := by
-    refine (isUnit_star z).mul_left_inj.mp ((thetaV_mul_star z).trans ?_)
-    rw [hzv]
-    decide +kernel
+  set z : (Fib q)ˣ := (isUnit_y_add_rE hy).unit with hz
+  have hzv : (z : Fib q) = algebraMap F (Fib q) y + rE := rfl
+  have hval : thetaV z = th :=
+    (isUnit_star z).mul_left_inj.mp ((thetaV_mul_star z).trans (by rw [hzv]; exact hth.symm))
+  have hρv : ((rhoU hq0 hq1 : (Fib q)ˣ) : Fib q) = rh :=
+    (isUnit_one_add_rE hq1).mul_left_inj.mp ((val_rhoU hq0 hq1).trans hrh.symm)
   have hmap := classMap_eq hq0 hq1 h2 ht hcl
-  -- its sixth power is `-1`
-  have hsix : (theta z) ^ 6 ≠ 1 := by
+  -- `⟨-1, ρ⟩` lies in the elements of exponent `N`
+  have hexp : ∀ u ∈ gluing q, u ^ N = 1 := by
+    have hle : gluing q ≤ (powMonoidHom N : U q →* U q).ker := by
+      refine (Subgroup.closure_le _).mpr ?_
+      rintro u (hu | hu)
+      · refine Subtype.ext (Units.ext ?_)
+        change ((u : (Fib q)ˣ) : Fib q) ^ N = 1
+        rw [hu]
+        exact hneg
+      · have hv : ((u : (Fib q)ˣ) : Fib q) = rh :=
+          (isUnit_one_add_rE hq1).mul_left_inj.mp (hu.trans hrh.symm)
+        refine Subtype.ext (Units.ext ?_)
+        change ((u : (Fib q)ˣ) : Fib q) ^ N = 1
+        rw [hv]
+        exact hrhN
+    exact fun u hu => hle hu
+  have hne : (theta z) ^ N ≠ 1 := by
     intro h
-    have h1 := congrArg
-      (fun u : U (8 : ZMod 11) => ((u : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11))) h
-    change thetaV z ^ 6 = 1 at h1
+    have h1 := congrArg (fun u : U q => ((u : (Fib q)ˣ) : Fib q)) h
+    change thetaV z ^ N = 1 at h1
     rw [hval] at h1
-    exact absurd h1 (by decide +kernel)
+    exact hthN h1
   refine ⟨ht, ?_, ?_⟩
   · -- the class is fixed by time reversal
-    have hi : phase (gluedLaw (8 : ZMod 11) 5)⁻¹ = phaseT (8 : ZMod 11) := by
-      rw [phase_inv, ht]
+    have hi : phase (gluedLaw q y)⁻¹ = phaseT q := by rw [phase_inv, ht]
     have h3 := classMap_eq hq0 hq1 h2 hi ((classMap_spec hq0 hq1 ht).inv hq0 hq1)
     rw [hmap] at h3
     refine (classMap_eq_iff hq0 hq1 h2 ht hi).mp ?_
     rw [hmap, h3]
     refine congrArg some ?_
-    have hsq : theta z * theta z ∈ gluing (8 : ZMod 11) := by
-      refine Subgroup.subset_closure (Or.inl ?_)
-      change thetaV z * thetaV z = -1
-      rw [hval]
-      decide +kernel
-    change ((theta z : U (8 : ZMod 11)) : U (8 : ZMod 11) ⧸ gluing (8 : ZMod 11)) =
-      ((theta z : U (8 : ZMod 11)) : U (8 : ZMod 11) ⧸ gluing (8 : ZMod 11))⁻¹
+    have hsqm : theta z * theta z ∈ gluing q := by
+      have hval2 : theta z * theta z = negU hq0 hq1 ^ e * rhoU hq0 hq1 ^ k := by
+        refine Subtype.ext (Units.ext ?_)
+        change thetaV z * thetaV z = ((negU hq0 hq1 : (Fib q)ˣ) : Fib q) ^ e *
+          ((rhoU hq0 hq1 : (Fib q)ˣ) : Fib q) ^ k
+        rw [hval, val_negU, hρv]
+        exact hsq
+      rw [hval2]
+      exact mul_mem (pow_mem (negU_mem hq0 hq1) e) (pow_mem (rhoU_mem hq0 hq1) k)
+    change ((theta z : U q) : U q ⧸ gluing q) = ((theta z : U q) : U q ⧸ gluing q)⁻¹
     rw [← QuotientGroup.mk_inv]
     refine QuotientGroup.eq.mpr ?_
     have h6 : (theta z)⁻¹ * (theta z)⁻¹ = (theta z * theta z)⁻¹ := by
       rw [mul_inv]
     rw [h6]
-    exact inv_mem hsq
+    exact inv_mem hsqm
   · -- no palindrome lies in it
     rintro ⟨L', hpal, hP⟩
-    rcases (leapfrogPalindromes (ZMod 11) 8 h2 hq0 hq1 _ ht).mp ⟨L', hpal, hP⟩ with
-      h | h | ⟨w, hw, h⟩
+    rcases (leapfrogPalindromes F q h2 hq0 hq1 _ ht).mp ⟨L', hpal, hP⟩ with h | h | ⟨w, hw', h⟩
     · have h4 := (classMap_eq_iff hq0 hq1 h2 phase_ungluedLaw ht).mpr h
       rw [classMap_eq hq0 hq1 h2 phase_ungluedLaw (classOf_ungluedLaw hq0 hq1), hmap] at h4
       exact absurd h4 (by simp)
     · have h4 := (classMap_eq_iff hq0 hq1 h2 phase_companionLaw ht).mpr h
       rw [classMap_eq hq0 hq1 h2 phase_companionLaw (classOf_companionLaw hq0 hq1), hmap] at h4
-      have h5 : ((theta z : U (8 : ZMod 11)) : U (8 : ZMod 11) ⧸ gluing (8 : ZMod 11)) = 1 :=
-        (Option.some.inj h4).symm
-      exact hsix (gluing_pow_six _ ((QuotientGroup.eq_one_iff _).mp h5))
-    · have hphase := phase_gluedLaw (q := (8 : ZMod 11)) (-(1 + w))
+      have h5 : ((theta z : U q) : U q ⧸ gluing q) = 1 := (Option.some.inj h4).symm
+      exact hne (hexp _ ((QuotientGroup.eq_one_iff _).mp h5))
+    · have hphase := phase_gluedLaw (q := q) (-(1 + w))
       have h4 := (classMap_eq_iff hq0 hq1 h2 hphase ht).mpr h
-      rw [classMap_eq hq0 hq1 h2 hphase (classOf_gluedLaw hq0 hq1 (kappa_ne hq0 hq1 h2 hw)),
+      rw [classMap_eq hq0 hq1 h2 hphase (classOf_gluedLaw hq0 hq1 (kappa_ne hq0 hq1 h2 hw')),
         hmap] at h4
-      have hm : (theta (zKappa hq0 hq1 h2 hw))⁻¹ * theta z ∈ gluing (8 : ZMod 11) :=
+      have hm : (theta (zKappa hq0 hq1 h2 hw'))⁻¹ * theta z ∈ gluing q :=
         QuotientGroup.eq.mp (Option.some.inj h4)
-      have h6 := gluing_pow_six _ hm
-      have hsq := theta_zKappa_sq hq0 hq1 h2 hw
-      have hρv : ((rhoU hq0 hq1 : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11)) = ⟨5, 5⟩ :=
-        (isUnit_one_add_rE hq1).mul_left_inj.mp ((val_rhoU hq0 hq1).trans (by decide +kernel))
-      have hρ3 : rhoU hq0 hq1 ^ 3 = 1 := by
+      have h6 := hexp _ hm
+      -- `κ^N = 1`
+      have hw0 : w ≠ 0 := by
+        rintro rfl
+        apply hq1
+        linear_combination hw'
+      have hWu : IsUnit (algebraMap F (Fib q) w ^ N) :=
+        ((IsUnit.mk0 w hw0).map (algebraMap F (Fib q))).pow N
+      have hk6 : theta (zKappa hq0 hq1 h2 hw') ^ N = 1 := by
         refine Subtype.ext (Units.ext ?_)
-        change ((rhoU hq0 hq1 : (Fib (8 : ZMod 11))ˣ) : Fib (8 : ZMod 11)) ^ 3 = 1
-        rw [hρv]
-        decide +kernel
-      have hk6 : theta (zKappa hq0 hq1 h2 hw) ^ 6 = 1 := by
-        calc theta (zKappa hq0 hq1 h2 hw) ^ 6 =
-            (theta (zKappa hq0 hq1 h2 hw) * theta (zKappa hq0 hq1 h2 hw)) ^ 3 := by
-              rw [mul_pow, ← pow_add]
-          _ = 1 := by rw [hsq, hρ3]
+        change thetaV (zKappa hq0 hq1 h2 hw') ^ N = 1
+        apply hWu.mul_left_inj.mp
+        rw [← mul_pow, theta_zKappa hq0 hq1 h2 hw', one_mul]
+        exact hw w hw'
       rw [mul_pow, inv_pow, hk6, inv_one, one_mul] at h6
-      exact hsix h6
+      exact hne h6
+
+theorem gap_11_8 : FixedNoPalindrome (8 : ZMod 11) 5 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨0, 9⟩ ⟨5, 5⟩
+    (by decide +kernel) (by decide +kernel) 6 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 0 (by decide +kernel) (by decide +kernel)
+
+theorem gap_13_10 : FixedNoPalindrome (10 : ZMod 13) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨2, 8⟩ ⟨6, 6⟩
+    (by decide +kernel) (by decide +kernel) 6 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 2 (by decide +kernel) (by decide +kernel)
+
+theorem gap_19_13 : FixedNoPalindrome (13 : ZMod 19) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨15, 8⟩ ⟨2, 16⟩
+    (by decide +kernel) (by decide +kernel) 10 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 2 (by decide +kernel) (by decide +kernel)
+
+theorem gap_19_15 : FixedNoPalindrome (15 : ZMod 19) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨0, 10⟩ ⟨7, 11⟩
+    (by decide +kernel) (by decide +kernel) 10 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 0 (by decide +kernel) (by decide +kernel)
+
+theorem gap_23_20 : FixedNoPalindrome (20 : ZMod 23) 6 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨15, 18⟩ ⟨11, 11⟩
+    (by decide +kernel) (by decide +kernel) 6 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 2 (by decide +kernel) (by decide +kernel)
+
+theorem gap_29_6 : FixedNoPalindrome (6 : ZMod 29) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨24, 27⟩ ⟨16, 12⟩
+    (by decide +kernel) (by decide +kernel) 14 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 3 (by decide +kernel) (by decide +kernel)
+
+theorem gap_29_7 : FixedNoPalindrome (7 : ZMod 29) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨6, 18⟩ ⟨18, 10⟩
+    (by decide +kernel) (by decide +kernel) 14 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 3 (by decide +kernel) (by decide +kernel)
+
+theorem gap_29_24 : FixedNoPalindrome (24 : ZMod 29) 3 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨21, 17⟩ ⟨9, 19⟩
+    (by decide +kernel) (by decide +kernel) 14 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 4 (by decide +kernel) (by decide +kernel)
+
+theorem gap_37_4 : FixedNoPalindrome (4 : ZMod 37) 3 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨10, 16⟩ ⟨23, 13⟩
+    (by decide +kernel) (by decide +kernel) 18 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 1 (by decide +kernel) (by decide +kernel)
+
+theorem gap_37_11 : FixedNoPalindrome (11 : ZMod 37) 3 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨27, 34⟩ ⟨21, 15⟩
+    (by decide +kernel) (by decide +kernel) 18 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 5 (by decide +kernel) (by decide +kernel)
+
+theorem gap_37_26 : FixedNoPalindrome (26 : ZMod 37) 2 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨2, 20⟩ ⟨30, 6⟩
+    (by decide +kernel) (by decide +kernel) 18 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 8 (by decide +kernel) (by decide +kernel)
+
+theorem gap_37_34 : FixedNoPalindrome (34 : ZMod 37) 4 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨26, 16⟩ ⟨18, 18⟩
+    (by decide +kernel) (by decide +kernel) 6 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 2 (by decide +kernel) (by decide +kernel)
+
+theorem gap_41_10 : FixedNoPalindrome (10 : ZMod 41) 3 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨22, 35⟩ ⟨17, 23⟩
+    (by decide +kernel) (by decide +kernel) 10 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 4 (by decide +kernel) (by decide +kernel)
+
+theorem gap_41_21 : FixedNoPalindrome (21 : ZMod 41) 4 :=
+  gap_of_checks (by decide) (by decide) (by decide) (by decide) ⟨9, 23⟩ ⟨3, 37⟩
+    (by decide +kernel) (by decide +kernel) 10 (by decide +kernel) (by decide +kernel)
+    (by decide +kernel) 1 1 (by decide +kernel) (by decide +kernel)
+
+/-- **T12** (a fixed class without a palindrome). -/
+@[ledger "T12"]
+theorem palindromeGap : Statement.palindromeGap :=
+  ⟨gap_11_8, gap_13_10, gap_19_13, gap_19_15, gap_23_20, gap_29_6, gap_29_7, gap_29_24, gap_37_4,
+    gap_37_11, gap_37_26, gap_37_34, gap_41_10, gap_41_21⟩
 
 end Gap
 

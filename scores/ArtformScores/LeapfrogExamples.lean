@@ -13,10 +13,6 @@ namespace Artform.Scores.Leapfrog
 
 open Matrix (SpecialLinearGroup)
 
-instance fact_prime_7 : Fact (Nat.Prime 7) := ⟨by norm_num⟩
-instance fact_prime_13 : Fact (Nat.Prime 13) := ⟨by norm_num⟩
-instance fact_prime_17 : Fact (Nat.Prime 17) := ⟨by norm_num⟩
-instance fact_prime_19 : Fact (Nat.Prime 19) := ⟨by norm_num⟩
 
 /-! ### The curve -/
 

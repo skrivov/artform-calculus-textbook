@@ -110,8 +110,8 @@ book states it.
       classes.
     - `MagicStep.lean`: the magic step, by the normal form `[[x, 0], [w, 1/x]]`.
     - `LeapfrogPalindromes.lean`: T12's correction. A palindrome lies in the unglued class, the
-      trivial class or the class of `κ = (1 - r)/w`, and each of them holds one; at `(11, 8)` a class
-      that time reversal fixes holds none.
+      trivial class or the class of `κ = (1 - r)/w`, and each of them holds one; at the correction's
+      fourteen pairs a class that time reversal fixes holds none.
     - `LeapfrogExamples.lean`: the finding's tables, computed from the theorems.
 - **Plan.** The rest of the ledger is out of this library's reach. T3, T5, T6, T9, T10 and T14's spectral gaps are
   literature theorems beyond Mathlib or open problems.

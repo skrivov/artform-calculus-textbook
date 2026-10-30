@@ -1008,7 +1008,15 @@ noncomputable def gluedLaw (y : F) : SpecialLinearGroup (Fin 2) (LaurentPolynomi
     simp only [kap0, kap1, deltaS]
     linear_combination (-((T 1 - 1) * LaurentPolynomial.C q)) * T_mul_T_neg (F := F)⟩
 
+instance fact_prime_7 : Fact (Nat.Prime 7) := ⟨by norm_num⟩
 instance fact_prime_11 : Fact (Nat.Prime 11) := ⟨by norm_num⟩
+instance fact_prime_13 : Fact (Nat.Prime 13) := ⟨by norm_num⟩
+instance fact_prime_17 : Fact (Nat.Prime 17) := ⟨by norm_num⟩
+instance fact_prime_19 : Fact (Nat.Prime 19) := ⟨by norm_num⟩
+instance fact_prime_23 : Fact (Nat.Prime 23) := ⟨by norm_num⟩
+instance fact_prime_29 : Fact (Nat.Prime 29) := ⟨by norm_num⟩
+instance fact_prime_37 : Fact (Nat.Prime 37) := ⟨by norm_num⟩
+instance fact_prime_41 : Fact (Nat.Prime 41) := ⟨by norm_num⟩
 
 variable (F) in
 /-- The schemes of the leapfrog phase, as scores of weights: the book's tick, `M K`, Strang and
@@ -1082,5 +1090,16 @@ def processingSetoid (t : S) : Setoid {T : SpecialLinearGroup (Fin 2) S // phase
       simp only [Units.val_mul, Matrix.mul_assoc]
 
 end Processing
+
+/-- The law `gluedLaw q y` is processed into its inverse, and no palindrome is processed into it:
+its class is fixed by time reversal and holds no palindrome. -/
+@[ledger "def:leapfrog"]
+def Leapfrog.FixedNoPalindrome {F : Type*} [Field F] (q y : F) : Prop :=
+  phase (Leapfrog.gluedLaw q y) = Leapfrog.phaseT q ∧
+  Processed (Leapfrog.gluedLaw q y) (Leapfrog.gluedLaw q y)⁻¹ ∧
+  ¬ ∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial F),
+    (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) 0 0 =
+      (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) 1 1 ∧
+    Processed L' (Leapfrog.gluedLaw q y)
 
 end Artform.Scores

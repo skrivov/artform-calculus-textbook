@@ -948,17 +948,26 @@ def leapfrogPalindromes : Prop :=
         (Processed (Leapfrog.ungluedLaw q) L ∨ Processed (Leapfrog.companionLaw q) L ∨
           ∃ w : F, w * w = 1 - q ∧ Processed (Leapfrog.gluedLaw q (-(1 + w))) L))
 
-/-- **T12** (a fixed class without a palindrome; the correction of 2026-10-30). On the dial `C₁₁` at
-`κλ = 8`, the law `gluedLaw 8 5` is processed into its own inverse, and no palindrome is processed
-into it: a class that time reversal fixes need not hold a palindrome. -/
+/-- **T12** (a fixed class without a palindrome; the correction of 2026-10-30). At each of the
+fourteen pairs `(p, κλ)` of the correction, a law of the phase on the dial `C_p` is processed into
+its own inverse, and no palindrome is processed into it: a class that time reversal fixes need not
+hold a palindrome. -/
 @[ledger "T12"]
 def palindromeGap : Prop :=
-  phase (Leapfrog.gluedLaw (8 : ZMod 11) 5) = Leapfrog.phaseT (8 : ZMod 11) ∧
-  Processed (Leapfrog.gluedLaw (8 : ZMod 11) 5) (Leapfrog.gluedLaw (8 : ZMod 11) 5)⁻¹ ∧
-  ¬ ∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod 11)),
-    (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 11))) 0 0 =
-      (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 11))) 1 1 ∧
-    Processed L' (Leapfrog.gluedLaw (8 : ZMod 11) 5)
+  Leapfrog.FixedNoPalindrome (8 : ZMod 11) 5 ∧
+  Leapfrog.FixedNoPalindrome (10 : ZMod 13) 2 ∧
+  Leapfrog.FixedNoPalindrome (13 : ZMod 19) 2 ∧
+  Leapfrog.FixedNoPalindrome (15 : ZMod 19) 2 ∧
+  Leapfrog.FixedNoPalindrome (20 : ZMod 23) 6 ∧
+  Leapfrog.FixedNoPalindrome (6 : ZMod 29) 2 ∧
+  Leapfrog.FixedNoPalindrome (7 : ZMod 29) 2 ∧
+  Leapfrog.FixedNoPalindrome (24 : ZMod 29) 3 ∧
+  Leapfrog.FixedNoPalindrome (4 : ZMod 37) 3 ∧
+  Leapfrog.FixedNoPalindrome (11 : ZMod 37) 3 ∧
+  Leapfrog.FixedNoPalindrome (26 : ZMod 37) 2 ∧
+  Leapfrog.FixedNoPalindrome (34 : ZMod 37) 4 ∧
+  Leapfrog.FixedNoPalindrome (10 : ZMod 41) 3 ∧
+  Leapfrog.FixedNoPalindrome (21 : ZMod 41) 4
 
 /-- **T13** (Theorem Q, part 3: the presentations; finding 037). A word in `K` and `M` is the
 identity law at the pull `μ` exactly when the relations of the table imply it: `K M K = M K M` and
