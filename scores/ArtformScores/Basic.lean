@@ -471,6 +471,18 @@ noncomputable def turn (N k : ℕ) (A B : ℝ) (t : ℕ) : Fin N → ℝ :=
 def law (n : ℕ) : FreeGroup (Fin n) →* Perm (Fin (n + 1)) :=
   FreeGroup.lift fun i => swap i.castSucc i.succ
 
+/-- An extent of a group `G` under the steps `A` and `B` (the ledger's finding 043): a run
+`x → A x` or `x → B x` that visits every element once and comes back, a Hamiltonian cycle of
+the Cayley digraph. As a permutation `σ`, each `σ x` is `A x` or `B x`, and the powers of `σ`
+carry any element to any other. -/
+@[ledger "def:extent"]
+def IsExtent {G : Type*} [Group G] (A B : G) (σ : Perm G) : Prop :=
+  (∀ x, σ x = A * x ∨ σ x = B * x) ∧ ∀ x y, ∃ k : ℕ, (σ ^ k) x = y
+
+/-- The Fibonacci rank of apparition `α(p)`: the least `k ≥ 1` with `p ∣ F_k`. -/
+@[ledger "def:extent"]
+noncomputable def fibRank (p : ℕ) : ℕ := sInf {k | 0 < k ∧ p ∣ Nat.fib k}
+
 end Bells
 
 end Artform.Scores

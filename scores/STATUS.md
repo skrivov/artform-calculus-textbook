@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 25 |
+| proved | 28 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **25** |
+| **total** | **28** |
 
 ## Statements
 
@@ -38,3 +38,6 @@
 | T15:plain-hunt | Plain hunt is light in a mirror box | proved | `Artform.Scores.Statement.plainHuntIsLight` / `Artform.Scores.plainHuntIsLight` | awaiting review |
 | T15:modes | The modes of the mirror box | proved | `Artform.Scores.Statement.mirrorModes` / `Artform.Scores.mirrorModes` | awaiting review |
 | T15:coxeter | The presentation of the bells | proved | `Artform.Scores.Statement.bellsPresentation` / `Artform.Scores.bellsPresentation` | awaiting review |
+| T15:rankin | Rankin's parity | proved | `Artform.Scores.Statement.rankinParity` / `Artform.Scores.rankinParity` | awaiting review |
+| T15:lifting | The lifting lemma | proved | `Artform.Scores.Statement.extentLifting` / `Artform.Scores.extentLifting` | awaiting review |
+| T15:fibonacci | The Fibonacci rule | proved | `Artform.Scores.Statement.fibonacciRule` / `Artform.Scores.fibonacciRule` | awaiting review |

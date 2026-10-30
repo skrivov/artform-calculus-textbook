@@ -61,6 +61,10 @@ book states it.
   - Coxeter's rules present `S_N` on the swaps of neighbours (Moore 1897), against Mathlib's
     `CoxeterMatrix.A`. The descending runs `s_m ⋯ s_k` are coset representatives, so the
     presented group has at most `N!` elements.
+  - Extents, the peals of all the rows (`Extents.lean`; finding 043): Rankin's parity, the
+    lifting lemma, and the Fibonacci rule, by which a forward extent of `SL(2, p)` or
+    `PSL(2, p)` under the leapfrog's `K` and `M` needs `4 ∣ α(p)`, the Fibonacci rank of
+    apparition. So `SL(2, 5)` has none.
 - **Plan.** The rest of Phase 4, as the author chooses.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

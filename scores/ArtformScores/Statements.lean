@@ -328,4 +328,49 @@ def bellsPresentation : Prop :=
       PresentedGroup.mk (CoxeterMatrix.A n).relationsSet v₁ =
         PresentedGroup.mk (CoxeterMatrix.A n).relationsSet v₂
 
+/-- **T15** (Rankin's parity; the ledger's finding 043, Lemma 1). Let `σ` be a permutation of a
+finite group `G` whose every step is `x → A x` or `x → B x`, and let `c = A⁻¹ B`.
+1. The step chosen at `c⁻¹ w` is the one chosen at `w`, so the choice is constant on each
+   coset `⟨c⟩ x`.
+2. So `σ = L_A ∘ ∏ ρ_C`, with one cycle `ρ_C` of length `ord c` for each of the `m` cosets `C`
+   that take `B`: `m · ord c` elements take `B`, and `sign σ = sign L_A · ((-1)^(ord c + 1))^m`.
+3. An extent is one cycle through all of `G`, so its sign is `(-1)^(|G| + 1)`, that of a
+   `|G|`-cycle. -/
+@[ledger "T15"]
+def rankinParity : Prop :=
+  ∀ (G : Type) [Group G] [Fintype G] [DecidableEq G] (A B : G) (σ : Equiv.Perm G),
+    (∀ x, σ x = A * x ∨ σ x = B * x) →
+      (∀ w, σ ((A⁻¹ * B)⁻¹ * w) = A * ((A⁻¹ * B)⁻¹ * w) ↔ σ w = A * w) ∧
+      (∃ m : ℕ, m * orderOf (A⁻¹ * B) = (Finset.univ.filter fun x => σ x ≠ A * x).card ∧
+        Equiv.Perm.sign σ =
+          Equiv.Perm.sign (Equiv.mulLeft A) * ((-1) ^ (orderOf (A⁻¹ * B) + 1)) ^ m) ∧
+      (Bells.IsExtent A B σ → Equiv.Perm.sign σ = (-1) ^ (Fintype.card G + 1))
+
+/-- **T15** (the lifting lemma; finding 043, Lemma 2). If a normal subgroup `N` of a finite
+group `G` lies in `⟨c⟩`, `c = A⁻¹ B`, every extent `σ` of `G` under `A` and `B` maps to an extent
+of `G/N` under the images of `A` and `B`: `x N ↦ σ(x) N` is well defined, and an extent. -/
+@[ledger "T15"]
+def extentLifting : Prop :=
+  ∀ (G : Type) [Group G] [Finite G] (A B : G) (N : Subgroup G) [N.Normal],
+    N ≤ Subgroup.zpowers (A⁻¹ * B) → ∀ σ : Equiv.Perm G, Bells.IsExtent A B σ →
+      ∃ σ' : Equiv.Perm (G ⧸ N), Bells.IsExtent (A : G ⧸ N) (B : G ⧸ N) σ' ∧
+        ∀ x : G, σ' (x : G ⧸ N) = (σ x : G ⧸ N)
+
+/-- **T15** (the Fibonacci rule; finding 043, Theorem S5.3, part 2). On one mode over `ZMod p`,
+`p` an odd prime, the leapfrog's steps are the kick `K = K(1) = [[1, 0], [1, 1]]` and the move
+`M = M(-1) = [[1, -1], [0, 1]]`. A forward extent of `SL(2, p)` or of `PSL(2, p)` under `K` and
+`M` needs `4 ∣ α(p)`, with `α(p)` the Fibonacci rank of apparition, the least `k ≥ 1` with
+`p ∣ F_k`. -/
+@[ledger "T15"]
+def fibonacciRule : Prop :=
+  ∀ p : ℕ, p.Prime → p ≠ 2 →
+    (∀ σ : Equiv.Perm (SpecialLinearGroup (Fin 2) (ZMod p)),
+      Bells.IsExtent (Step.kick (1 : ZMod p)).sl (Step.move (-1 : ZMod p)).sl σ →
+        4 ∣ Bells.fibRank p) ∧
+    ∀ σ : Equiv.Perm (Matrix.ProjectiveSpecialLinearGroup (Fin 2) (ZMod p)),
+      Bells.IsExtent
+        ((Step.kick (1 : ZMod p)).sl : Matrix.ProjectiveSpecialLinearGroup (Fin 2) (ZMod p))
+        ((Step.move (-1 : ZMod p)).sl : Matrix.ProjectiveSpecialLinearGroup (Fin 2) (ZMod p)) σ →
+        4 ∣ Bells.fibRank p
+
 end Artform.Scores.Statement
