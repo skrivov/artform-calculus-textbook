@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 9 |
+| proved | 10 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **9** |
+| **total** | **10** |
 
 ## Statements
 
@@ -17,6 +17,7 @@
 | R3 | Whitehead's rule | proved | `Artform.Scores.Statement.whiteheadRule` / `Artform.Scores.whiteheadRule` | awaiting review |
 | R4 | Balanced movers | proved | `Artform.Scores.Statement.balancedRule` / `Artform.Scores.balancedRule` | awaiting review |
 | R5 | Time reversal | proved | `Artform.Scores.Statement.timeReversal` / `Artform.Scores.timeReversal` | awaiting review |
+| T1:field | One dimension, every dial | proved | `Artform.Scores.Statement.everyLawIsAScore` / `Artform.Scores.everyLawIsAScore` | awaiting review |
 | T2 | The index | proved | `Artform.Scores.Statement.index` / `Artform.Scores.index` | awaiting review |
 | T12:reading | The reading | proved | `Artform.Scores.Statement.readingDetermines` / `Artform.Scores.readingDetermines` | awaiting review |
 | T12:palindromes | Palindromes | proved | `Artform.Scores.Statement.palindrome` / `Artform.Scores.palindrome` | awaiting review |

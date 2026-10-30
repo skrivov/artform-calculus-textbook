@@ -12,8 +12,10 @@ book states it.
 - **Phase 1** proves the rules R1 (merging), R3 (Whitehead's rule), R4 (balanced
   movers) and R5 (time reversal), and the theorems T2 (the index), T12 (the reading
   and palindromes), T13 (the crystallographic pulls) and T14 (the caller's cut).
-- **Plan.** Phase 2 is T1, every 1D two-channel law of determinant 1 as a score over
-  a field, by Euclid on Laurent polynomials. Phase 3 is T4, completeness on one mode,
-  by certificate.
+- **Phase 2** proves T1 over every field `F`: every law of determinant 1 on a dial,
+  in `SL(2, F[x, 1/x])`, is a score. The proof is Euclid's algorithm on the first
+  column, with polynomial division after a shift by a power of `x` (`Euclid.lean`).
+- **Plan.** The rest of Phase 2 lifts T1 to `Z/p^k` and `Z/n`. Phase 3 is T4,
+  completeness on one mode, by certificate.
 
 `STATUS.md` gives the state of each statement, and `manifest.toml` its text.

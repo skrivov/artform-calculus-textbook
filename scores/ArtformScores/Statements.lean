@@ -1,11 +1,11 @@
 import ArtformScores.Basic
 
 /-!
-# The statements of Phase 1
+# The statements
 
-Each statement of the algebra of scores that Phase 1 proves, as a `def … : Prop`
-tagged with its ledger label. The proofs are in the files that follow, each a
-theorem whose type is exactly its statement.
+Each statement of the algebra of scores that the library proves, as a
+`def … : Prop` tagged with its ledger label. The proofs are in the files that
+follow, each a theorem whose type is exactly its statement.
 -/
 
 namespace Artform.Scores.Statement
@@ -46,6 +46,13 @@ each inverted, realizes the inverse law. -/
 @[ledger "R5"]
 def timeReversal : Prop :=
   ∀ (S : Type) [CommRing S] (w : Score S), realize w.reverse = (realize w)⁻¹
+
+/-- **T1** (one dimension, every dial). Over a field `F`, every law of determinant 1
+on a dial, `A ∈ SL(2, F[x, 1/x])`, is the law of a score: `E₂ = SL₂` there. -/
+@[ledger "T1"]
+def everyLawIsAScore : Prop :=
+  ∀ (F : Type) [Field F] (A : SpecialLinearGroup (Fin 2) (LaurentPolynomial F)),
+    ∃ w : Score (LaurentPolynomial F), realize w = A
 
 /-- **T2** (the index). No score realizes a chiral mover `diag(a, 1)` with
 `a ≠ 1`: every law of a score has determinant 1. -/

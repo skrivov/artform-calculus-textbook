@@ -4,3 +4,4 @@ import ArtformScores.Rules
 import ArtformScores.Readings
 import ArtformScores.StepOrders
 import ArtformScores.Caller
+import ArtformScores.Euclid

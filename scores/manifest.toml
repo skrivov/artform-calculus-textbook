@@ -59,6 +59,18 @@ reviewed = ""
 review_text_sha256 = ""
 
 [[statement]]
+key = "T1:field"
+label = "T1"
+title = "One dimension, every dial"
+source = "ALGEBRA-OF-SCORES.md §4.1 (T1)"
+statement = """
+For d = 1, c = 2, and R = F_p, Z/p^k or Z/n: E_2(S) = SL_2(S), on the stencil ring S = R[x^±1]. Euclid's algorithm with the width writes every law of determinant 1 as a score. The Lean form is the case of a field, which includes F_p: over every field F, every A in SL(2, F[x, 1/x]) is the law of a score. The lifting to Z/p^k and the Chinese remainder theorem for Z/n are not in Lean."""
+lean_statement = "Artform.Scores.Statement.everyLawIsAScore"
+lean_proof = "Artform.Scores.everyLawIsAScore"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
 key = "T2"
 label = "T2"
 title = "The index"
