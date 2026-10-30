@@ -88,8 +88,11 @@ book states it.
     `|PSL| = V n = 2 E = 3 F`. For `n = 3, 4, 5` these are the counts of the tetrahedron, the
     octahedron and the icosahedron. A law that fixes a vertex, an edge or a face has the trace
     `±2`, `0` or `±1`.
+  - `StepPresentations.lean`, Theorem Q's table as presentations, by a ping-pong on the lines of
+    `ℤ²`: the table's relations imply every relation at `μ = 1, 2, 3`, `Γ¹(3) ≅ Z ∗ Z₃`, and
+    `Γ¹(4)` is free.
   - `TwoSquares.lean`, Theorem Y: the two squares generate `PGL(2, 5)` on the projective line over
-    `F₅`, which is `S₅`, and their labelling is forced.
+    `F₅`, which is `S₅`, and their labelling is forced. `PSL(2, 5) ≅ A₅`.
 - **Phase 4** continues with the smaller statements.
   - `Steinberg.lean`: R2, Steinberg's relations on `c` channels, with the sign of the commutator in
     time order; T1's fewest steps; and T2 as a group, `GL₂(S)/E₂(S) ≅ S*` over a field.

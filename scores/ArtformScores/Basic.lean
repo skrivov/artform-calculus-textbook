@@ -660,6 +660,28 @@ def gammaUpper (μ : ℕ) : Subgroup (SpecialLinearGroup (Fin 2) ℤ) where
     simp only [Set.mem_ofPred_eq, Matrix.SpecialLinearGroup.coe_inv, Matrix.adjugate_fin_two]
     simp [h1, h2, h3]
 
+/-- The word `K`. -/
+@[ledger "def:step-group"]
+abbrev wK : FreeGroup (Fin 2) := FreeGroup.of 0
+
+/-- The word `M`. -/
+@[ledger "def:step-group"]
+abbrev wM : FreeGroup (Fin 2) := FreeGroup.of 1
+
+/-- The relations of the table at `μ = 1`: `K M K = M K M` and `(K M K)⁴ = 1`. -/
+@[ledger "def:step-group"]
+def relsQ1 : Set (FreeGroup (Fin 2)) :=
+  {wK * wM * wK * (wM * wK * wM)⁻¹, (wK * wM * wK) ^ 4}
+
+/-- The relations of the table at `μ = 2`: `(M K)⁴ = 1` and `(M K)² K = K (M K)²`. -/
+@[ledger "def:step-group"]
+def relsQ2 : Set (FreeGroup (Fin 2)) :=
+  {(wM * wK) ^ 4, (wM * wK) ^ 2 * wK * (wK * (wM * wK) ^ 2)⁻¹}
+
+/-- The relation of the table at `μ = 3`: `(M K)³ = 1`. -/
+@[ledger "def:step-group"]
+def relsQ3 : Set (FreeGroup (Fin 2)) := {(wM * wK) ^ 3}
+
 /-- The growth per tick for `μ ≥ 5`: `ρ = (μ - 2 + √(μ² - 4μ))/2`. -/
 @[ledger "def:step-group"]
 noncomputable def growth (μ : ℝ) : ℝ := (μ - 2 + Real.sqrt (μ ^ 2 - 4 * μ)) / 2

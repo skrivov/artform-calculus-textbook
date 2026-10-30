@@ -960,4 +960,24 @@ def palindromeGap : Prop :=
       (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 11))) 1 1 ∧
     Processed L' (Leapfrog.gluedLaw (8 : ZMod 11) 5)
 
+/-- **T13** (Theorem Q, part 3: the presentations; finding 037). A word in `K` and `M` is the
+identity law at the pull `μ` exactly when the relations of the table imply it: `K M K = M K M` and
+`(K M K)⁴ = 1` at `μ = 1`, `(M K)⁴ = 1` and `(M K)² K = K (M K)²` at `μ = 2`, and `(M K)³ = 1` at
+`μ = 3`. And `Γ¹(3) ≅ Z ∗ Z₃`, and `Γ¹(4)` is free of rank two. -/
+@[ledger "T13"]
+def stepPresentations : Prop :=
+  (∀ w : FreeGroup (Fin 2), FreeGroup.lift ![StepGroup.Kz, StepGroup.Mz 1] w = 1 ↔
+    w ∈ Subgroup.normalClosure StepGroup.relsQ1) ∧
+  (∀ w : FreeGroup (Fin 2), FreeGroup.lift ![StepGroup.Kz, StepGroup.Mz 2] w = 1 ↔
+    w ∈ Subgroup.normalClosure StepGroup.relsQ2) ∧
+  (∀ w : FreeGroup (Fin 2), FreeGroup.lift ![StepGroup.Kz, StepGroup.Mz 3] w = 1 ↔
+    w ∈ Subgroup.normalClosure StepGroup.relsQ3) ∧
+  Nonempty (Monoid.Coprod (Multiplicative ℤ) (Multiplicative (ZMod 3)) ≃* StepGroup.gammaUpper 3) ∧
+  Nonempty (FreeGroup (Fin 2) ≃* StepGroup.gammaUpper 4)
+
+/-- **T13** (Theorem Y, part 4; finding 038). The products of an even number of turns of the two
+squares are rotations of the icosahedron, in `PSL(2, 5) ≅ A₅`. -/
+@[ledger "T13"]
+def pslAlternating : Prop := Nonempty (Bells.PSLZ 5 ≃* alternatingGroup (Fin 5))
+
 end Artform.Scores.Statement

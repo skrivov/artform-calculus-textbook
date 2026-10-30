@@ -438,6 +438,111 @@ theorem double_turns_square : IsSquare (matL * matL).1.det ∧ IsSquare (matL * 
 
 end Tick
 
+/-! ## `PSL(2, 5) ≅ A₅` -/
+
+section Alternating
+
+open Matrix (SpecialLinearGroup)
+
+/-- `SL(2, 5)` on the projective line. -/
+noncomputable abbrev rhoSL : SpecialLinearGroup (Fin 2) K5 →* Perm (OnePoint K5) :=
+  rho.comp Matrix.SpecialLinearGroup.toGL
+
+theorem rhoSL_apply (A : SpecialLinearGroup (Fin 2) K5) (x : OnePoint K5) :
+    rhoSL A x = mobOpt (A.1 0 0) (A.1 0 1) (A.1 1 0) (A.1 1 1) x :=
+  smul_eq_mobOpt _ x
+
+theorem mob_trivial : ∀ a b c d : K5, a * d - b * c = 1 →
+    (∀ x : Option K5, mobOpt a b c d x = x) →
+    (a = 1 ∧ b = 0 ∧ c = 0 ∧ d = 1) ∨ (a = -1 ∧ b = 0 ∧ c = 0 ∧ d = -1) := by
+  decide +kernel
+
+theorem mob_neg_one : ∀ x : Option K5, mobOpt (-1) 0 0 (-1) x = x := by
+  decide +kernel
+
+/-- The kernel of `SL(2, 5)` on the line is `±1`. -/
+theorem rhoSL_ker : rhoSL.ker = pmOne 5 := by
+  apply le_antisymm
+  · intro A hA
+    have hd := A.2
+    rw [Matrix.det_fin_two] at hd
+    have htriv : ∀ x : Option K5, mobOpt (A.1 0 0) (A.1 0 1) (A.1 1 0) (A.1 1 1) x = x := by
+      intro x
+      have h : rhoSL A x = x :=
+        congrArg (fun σ : Perm (OnePoint K5) => σ x) (MonoidHom.mem_ker.mp hA)
+      exact (rhoSL_apply A x).symm.trans h
+    rcases mob_trivial _ _ _ _ hd htriv with ⟨h1, h2, h3, h4⟩ | ⟨h1, h2, h3, h4⟩
+    · have : A = 1 := by
+        apply Subtype.ext
+        rw [Matrix.eta_fin_two A.1, h1, h2, h3, h4, Matrix.SpecialLinearGroup.coe_one,
+          Matrix.one_fin_two]
+      rw [this]
+      exact one_mem _
+    · have : A = -1 := by
+        apply Subtype.ext
+        rw [Matrix.eta_fin_two A.1, h1, h2, h3, h4, Matrix.SpecialLinearGroup.coe_neg,
+          Matrix.SpecialLinearGroup.coe_one, Matrix.one_fin_two]
+        ext i j
+        fin_cases i <;> fin_cases j <;> simp
+      rw [this]
+      exact Subgroup.mem_zpowers _
+  · refine (Subgroup.zpowers_le).mpr ?_
+    rw [MonoidHom.mem_ker]
+    ext x
+    rw [rhoSL_apply]
+    have hc : ((-1 : SpecialLinearGroup (Fin 2) K5)).1 = !![-1, 0; 0, -1] := by
+      rw [Matrix.SpecialLinearGroup.coe_neg, Matrix.SpecialLinearGroup.coe_one, Matrix.one_fin_two]
+      ext i j
+      fin_cases i <;> fin_cases j <;> simp
+    rw [hc]
+    exact mob_neg_one x
+
+theorem card_SL5 : Nat.card (SpecialLinearGroup (Fin 2) K5) = 120 := by
+  rw [Nat.card_eq_fintype_card]
+  decide +kernel
+
+/-- The rotations of the icosahedron: `PSL(2, 5) ≅ A₅`. -/
+theorem psl_alternating : Nonempty (PSLZ 5 ≃* alternatingGroup (Fin 5)) := by
+  obtain ⟨e₁⟩ := iso_S5
+  let e₂ : twoSquares ≃* rho.range :=
+    (toLine.subgroupMap twoSquares).trans (MulEquiv.subgroupCongr map_eq_range)
+  let E : rho.range ≃* Perm (Fin 5) := e₂.symm.trans e₁
+  have hle : rhoSL.range ≤ rho.range := by
+    rintro _ ⟨A, rfl⟩
+    exact ⟨_, rfl⟩
+  let K : Subgroup (Perm (Fin 5)) := (rhoSL.range.subgroupOf rho.range).map (E : _ →* _)
+  let e₃ : PSLZ 5 ≃* rhoSL.range :=
+    (QuotientGroup.quotientMulEquivOfEq rhoSL_ker.symm).trans
+      (QuotientGroup.quotientKerEquivRange rhoSL)
+  let e₄ : rhoSL.range ≃* K :=
+    (Subgroup.subgroupOfEquivOfLe hle).symm.trans (E.subgroupMap _)
+  -- `|PSL(2, 5)| = 60`
+  have hneg : orderOf (-1 : SpecialLinearGroup (Fin 2) K5) = 2 := by
+    have : Fact (Nat.Prime 2) := ⟨Nat.prime_two⟩
+    refine orderOf_eq_prime (by simp) ?_
+    decide +kernel
+  have hker : Nat.card rhoSL.ker = 2 := by
+    rw [rhoSL_ker, pmOne, Nat.card_zpowers]
+    exact hneg
+  have hrange : Nat.card rhoSL.range = 60 := by
+    have h := Subgroup.card_mul_index rhoSL.ker
+    rw [hker, Subgroup.index_ker, card_SL5] at h
+    omega
+  have hK : Nat.card K = 60 := by
+    rw [← hrange]
+    exact (Nat.card_congr e₄.toEquiv).symm
+  have hidx : K.index = 2 := by
+    have h := Subgroup.card_mul_index K
+    have hc : Nat.card (Perm (Fin 5)) = 120 := by
+      rw [Nat.card_eq_fintype_card, Fintype.card_perm]
+      decide
+    rw [hK, hc] at h
+    omega
+  exact ⟨e₃.trans (e₄.trans (MulEquiv.subgroupCongr
+    (Equiv.Perm.eq_alternatingGroup_of_index_eq_two hidx)))⟩
+
+end Alternating
+
 end Artform.Scores.Bells
 
 namespace Artform.Scores
@@ -455,6 +560,10 @@ theorem twoSquaresProjective : Statement.twoSquaresProjective := by
   · have := congrArg (fun σ : Equiv.Perm (OnePoint K5) => σ (corner i)) permCongr_squareR
     simpa [rho, Equiv.permCongr_apply] using this
 
+/-- **T13** (Theorem Y, part 4: `PSL(2, 5) ≅ A₅`). -/
+@[ledger "T13"]
+theorem pslAlternating : Statement.pslAlternating := psl_alternating
+
 /-! ## Non-vacuity
 
 The book's run of the two squares: the tick moves the corner `v₀` to `v₄`, and after five ticks
@@ -462,5 +571,11 @@ every corner is home.
 -/
 
 example : ((squareR * squareL) ^ 5) 0 = 0 ∧ (squareR * squareL) 0 = 4 := by decide
+
+/-- `PSL(2, 5)` has the sixty elements of `A₅`. -/
+example : Nat.card (PSLZ 5) = 60 := by
+  obtain ⟨e⟩ := pslAlternating
+  rw [Nat.card_congr e.toEquiv, nat_card_alternatingGroup]
+  simp [Nat.factorial]
 
 end Artform.Scores

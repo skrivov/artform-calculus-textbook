@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 61 |
+| proved | 63 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **61** |
+| **total** | **63** |
 
 ## Statements
 
@@ -74,3 +74,5 @@
 | T8:magic-schemes | The schemes at the magic step | proved | `Artform.Scores.Statement.magicSchemes` / `Artform.Scores.Leapfrog.magicSchemes` | awaiting review |
 | T12:palindromes | The palindromes of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogPalindromes` / `Artform.Scores.Leapfrog.leapfrogPalindromes` | awaiting review |
 | T12:gap | A fixed class without a palindrome | proved | `Artform.Scores.Statement.palindromeGap` / `Artform.Scores.Leapfrog.palindromeGap` | awaiting review |
+| T13:presentations | The presentations of the step groups | proved | `Artform.Scores.Statement.stepPresentations` / `Artform.Scores.StepGroup.stepPresentations` | awaiting review |
+| T13:psl-a5 | PSL(2, 5) is the alternating group | proved | `Artform.Scores.Statement.pslAlternating` / `Artform.Scores.pslAlternating` | awaiting review |

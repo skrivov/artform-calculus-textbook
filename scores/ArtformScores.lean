@@ -19,6 +19,7 @@ import ArtformScores.Certificates.Extents
 import ArtformScores.ExtentTable
 import ArtformScores.Transport
 import ArtformScores.StepGroups
+import ArtformScores.StepPresentations
 import ArtformScores.KleinMap
 import ArtformScores.TwoSquares
 import ArtformScores.Steinberg
