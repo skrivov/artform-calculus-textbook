@@ -4,10 +4,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 59 |
+| proved | 61 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **59** |
+| **total** | **61** |
 
 ## Statements
 
@@ -72,3 +72,5 @@
 | T8:magic | The magic step | proved | `Artform.Scores.Statement.magicClasses` / `Artform.Scores.Leapfrog.magicClasses` | awaiting review |
 | T8:magic-count | The count at the magic step | proved | `Artform.Scores.Statement.magicCount` / `Artform.Scores.Leapfrog.magicCount` | awaiting review |
 | T8:magic-schemes | The schemes at the magic step | proved | `Artform.Scores.Statement.magicSchemes` / `Artform.Scores.Leapfrog.magicSchemes` | awaiting review |
+| T12:palindromes | The palindromes of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogPalindromes` / `Artform.Scores.Leapfrog.leapfrogPalindromes` | awaiting review |
+| T12:gap | A fixed class without a palindrome | proved | `Artform.Scores.Statement.palindromeGap` / `Artform.Scores.Leapfrog.palindromeGap` | awaiting review |

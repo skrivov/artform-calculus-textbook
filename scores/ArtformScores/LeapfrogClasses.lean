@@ -792,17 +792,15 @@ theorem theta_star (z : (Fib q)ˣ) : theta (star z) = (theta z)⁻¹ := by
   change star z * (star (star z))⁻¹ = (z * (star z)⁻¹)⁻¹
   rw [star_star, mul_inv_rev, inv_inv, mul_comm]
 
-/-- Time reversal inverts the class. -/
-theorem ClassOf.inv (h : ClassOf hq0 hq1 L w) :
-    ClassOf hq0 hq1 L⁻¹ (w.map (·⁻¹)) := by
-  obtain ⟨u, he, hp, hd⟩ := h
+/-- `σ` takes an eigenvector of a law to an eigenvector of its inverse. -/
+theorem IsEigen.sigma_inv (he : IsEigen hq0 L.1 u) :
+    IsEigen hq0 (L⁻¹ : SpecialLinearGroup (Fin 2) (LaurentPolynomial F)).1
+      (fun i => sigma hq1 (u i)) := by
   obtain ⟨h0, h1⟩ := (isEigen_iff hq0).mp he
-  let u' : Fin 2 → Norm q := fun i => sigma hq1 (u i)
   have h0' := congrArg (sigma hq1) h0
   have h1' := congrArg (sigma hq1) h1
   simp only [map_add, map_mul, sigma_psi] at h0' h1'
   have hl := sigma_lam hq0 hq1
-  -- entries of the inverse
   have hdet := L.2
   rw [Matrix.det_fin_two] at hdet
   have hdet' := congrArg (psi hq0) hdet
@@ -810,19 +808,25 @@ theorem ClassOf.inv (h : ClassOf hq0 hq1 L w) :
   have hinv : (L⁻¹ : SpecialLinearGroup (Fin 2) (LaurentPolynomial F)).1 =
       !![L.1 1 1, -L.1 0 1; -L.1 1 0, L.1 0 0] := by
     rw [Matrix.SpecialLinearGroup.coe_inv, Matrix.adjugate_fin_two]
-  refine ⟨u', ?_, hp.map (sigma hq1), ?_⟩
-  · rw [isEigen_iff, hinv]
-    simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-      Matrix.cons_val_fin_one, map_neg, u']
-    constructor
-    · linear_combination (-(psi hq0 (L.1 1 1) * sigma hq1 (u 0) -
-          psi hq0 (L.1 1 0) * sigma hq1 (u 1))) * hl +
-        lamN hq0 * (-psi hq0 (L.1 1 1) * h0' + psi hq0 (L.1 1 0) * h1' +
-          sigma hq1 (u 0) * hdet')
-    · linear_combination (-(psi hq0 (L.1 0 0) * sigma hq1 (u 1) -
-          psi hq0 (L.1 0 1) * sigma hq1 (u 0))) * hl +
-        lamN hq0 * (sigma hq1 (u 1) * hdet' - psi hq0 (L.1 0 0) * h1' +
-          psi hq0 (L.1 0 1) * h0')
+  rw [isEigen_iff, hinv]
+  simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
+    Matrix.cons_val_fin_one, map_neg]
+  constructor
+  · linear_combination (-(psi hq0 (L.1 1 1) * sigma hq1 (u 0) -
+        psi hq0 (L.1 1 0) * sigma hq1 (u 1))) * hl +
+      lamN hq0 * (-psi hq0 (L.1 1 1) * h0' + psi hq0 (L.1 1 0) * h1' +
+        sigma hq1 (u 0) * hdet')
+  · linear_combination (-(psi hq0 (L.1 0 0) * sigma hq1 (u 1) -
+        psi hq0 (L.1 0 1) * sigma hq1 (u 0))) * hl +
+      lamN hq0 * (sigma hq1 (u 1) * hdet' - psi hq0 (L.1 0 0) * h1' +
+        psi hq0 (L.1 0 1) * h0')
+
+/-- Time reversal inverts the class. -/
+theorem ClassOf.inv (h : ClassOf hq0 hq1 L w) :
+    ClassOf hq0 hq1 L⁻¹ (w.map (·⁻¹)) := by
+  obtain ⟨u, he, hp, hd⟩ := h
+  let u' : Fin 2 → Norm q := fun i => sigma hq1 (u i)
+  refine ⟨u', he.sigma_inv hq0 hq1, hp.map (sigma hq1), ?_⟩
   · cases w with
     | none =>
       have hd1 : Spans hq0 hq1 u := hd

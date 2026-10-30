@@ -28,5 +28,6 @@ import ArtformScores.Callers
 import ArtformScores.LeapfrogCurve
 import ArtformScores.LeapfrogUnits
 import ArtformScores.LeapfrogClasses
+import ArtformScores.LeapfrogPalindromes
 import ArtformScores.MagicStep
 import ArtformScores.LeapfrogExamples

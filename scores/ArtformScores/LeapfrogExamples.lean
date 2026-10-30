@@ -1,4 +1,5 @@
 import ArtformScores.MagicStep
+import ArtformScores.LeapfrogPalindromes
 
 /-!
 # The class counts of finding 057
@@ -13,7 +14,6 @@ namespace Artform.Scores.Leapfrog
 open Matrix (SpecialLinearGroup)
 
 instance fact_prime_7 : Fact (Nat.Prime 7) := ⟨by norm_num⟩
-instance fact_prime_11 : Fact (Nat.Prime 11) := ⟨by norm_num⟩
 instance fact_prime_13 : Fact (Nat.Prime 13) := ⟨by norm_num⟩
 instance fact_prime_17 : Fact (Nat.Prime 17) := ⟨by norm_num⟩
 instance fact_prime_19 : Fact (Nat.Prime 19) := ⟨by norm_num⟩
@@ -194,6 +194,24 @@ example : Nat.card (Quotient (processingSetoid (phaseT (18 : ZMod 19)))) = 5 + 1
       (by decide +kernel) (by decide +kernel) (by norm_num)
       (fun m h0 h1 => by interval_cases m <;> decide +kernel)
   rw [h.1, hU, hH, Nat.card_zmod]
+
+/-! ### The palindromes -/
+
+/-- On `C₇` at `κλ = 2`, the companion tick is processed from a palindrome. -/
+example : ∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod 7)),
+    (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 7))) 0 0 =
+      (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 7))) 1 1 ∧
+    Processed L' (companionLaw (2 : ZMod 7)) :=
+  (leapfrogPalindromes (ZMod 7) 2 (by decide) (by decide) (by decide) _
+    phase_companionLaw).mpr (Or.inr (Or.inl ⟨1, by simp⟩))
+
+/-- On `C₁₃` at `κλ = 4`, `1 - q = 6²`, and the class of `κ` holds a palindrome. -/
+example : ∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod 13)),
+    (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 13))) 0 0 =
+      (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 13))) 1 1 ∧
+    Processed L' (gluedLaw (4 : ZMod 13) (-(1 + 6))) :=
+  (leapfrogPalindromes (ZMod 13) 4 (by decide) (by decide) (by decide) _
+    (phase_gluedLaw _)).mpr (Or.inr (Or.inr ⟨6, by decide, 1, by simp⟩))
 
 /-! ### The magic step -/
 

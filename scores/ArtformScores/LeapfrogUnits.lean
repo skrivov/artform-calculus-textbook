@@ -223,68 +223,75 @@ theorem uSq_mem : uSq q ∈ goodUnits hq0 hq1 := by
     Subgroup.subset_closure (Or.inl (theta_eps_s hq0 hq1))
   exact (Subgroup.mul_mem_cancel_left _ hs).mp hmem
 
-/-- The polynomials whose image is a unit in `goodUnits`. -/
+section UnitInduction
+
+variable (K : Subgroup (Norm q)ˣ)
+
+/-- The polynomials whose image is a unit in `K`. -/
 def InGood (P : F[X]) : Prop :=
-  ∃ w ∈ goodUnits hq0 hq1, (w : Norm q) = algebraMap F[X] (Norm q) P
+  ∃ w ∈ K, (w : Norm q) = algebraMap F[X] (Norm q) P
 
-theorem inGood_C {c : F} (hc : c ≠ 0) : InGood hq0 hq1 (C c) :=
-  ⟨constU (Units.mk0 c hc), constU_mem hq0 hq1 _, (map_C c).symm⟩
+variable {K}
 
-theorem inGood_mul {P Q : F[X]} (hP : InGood hq0 hq1 P) (hQ : InGood hq0 hq1 Q) :
-    InGood hq0 hq1 (P * Q) := by
+theorem inGood_C (hc : ∀ c : Fˣ, constU c ∈ K) {c : F} (hc0 : c ≠ 0) : InGood K (C c) :=
+  ⟨constU (Units.mk0 c hc0), hc _, (map_C c).symm⟩
+
+theorem inGood_mul {P Q : F[X]} (hP : InGood K P) (hQ : InGood K Q) : InGood K (P * Q) := by
   obtain ⟨w, hw, hw'⟩ := hP
   obtain ⟨w₁, hw₁, hw₁'⟩ := hQ
   exact ⟨w * w₁, mul_mem hw hw₁, by rw [Units.val_mul, hw', hw₁', map_mul]⟩
 
-theorem inGood_X : InGood hq0 hq1 (X : F[X]) := ⟨uS q, uS_mem hq0 hq1, rfl⟩
+theorem inGood_X (h1 : uS q ∈ K) : InGood K (X : F[X]) := ⟨uS q, h1, rfl⟩
 
-theorem inGood_X_sub_one : InGood hq0 hq1 (X - C 1 : F[X]) :=
-  ⟨uS1 q, uS1_mem hq0 hq1, by rw [val_uS1, map_sub, map_C, map_one]; rfl⟩
+theorem inGood_X_sub_one (h2 : uS1 q ∈ K) : InGood K (X - C 1 : F[X]) :=
+  ⟨uS1 q, h2, by rw [val_uS1, map_sub, map_C, map_one]; rfl⟩
 
-theorem inGood_X_sub_q : InGood hq0 hq1 (X - C q : F[X]) :=
-  ⟨uSq q, uSq_mem hq0 hq1, by rw [val_uSq, map_sub, map_C]; rfl⟩
+theorem inGood_X_sub_q (h3 : uSq q ∈ K) : InGood K (X - C q : F[X]) :=
+  ⟨uSq q, h3, by rw [val_uSq, map_sub, map_C]; rfl⟩
 
 /-- An irreducible factor of `s (s - 1) (s - q)` is one of the three, up to a constant. -/
-theorem inGood_irreducible {i : F[X]} (hi : Irreducible i) (hd : i ∣ poles q) :
-    InGood hq0 hq1 i := by
-  have key : ∀ a : F, i ∣ (X - C a) → InGood hq0 hq1 (X - C a) → InGood hq0 hq1 i := by
+theorem inGood_irreducible (hc : ∀ c : Fˣ, constU c ∈ K) (h1 : uS q ∈ K) (h2 : uS1 q ∈ K)
+    (h3 : uSq q ∈ K) {i : F[X]} (hi : Irreducible i) (hd : i ∣ poles q) : InGood K i := by
+  have key : ∀ a : F, i ∣ (X - C a) → InGood K (X - C a) → InGood K i := by
     intro a hda hg
     obtain ⟨u, hu⟩ := hi.associated_of_dvd (irreducible_X_sub_C a) hda
-    obtain ⟨c, hc, hcu⟩ := Polynomial.isUnit_iff.mp u.isUnit
+    obtain ⟨c, hc', hcu⟩ := Polynomial.isUnit_iff.mp u.isUnit
     have e : i = (X - C a) * C (c⁻¹) := by
-      have hc0 : c ≠ 0 := hc.ne_zero
+      have hc0 : c ≠ 0 := hc'.ne_zero
       rw [← hu, ← hcu, mul_assoc, ← C_mul, mul_inv_cancel₀ hc0, C_1, mul_one]
     rw [e]
-    exact inGood_mul hq0 hq1 hg (inGood_C hq0 hq1 (inv_ne_zero hc.ne_zero))
+    exact inGood_mul hg (inGood_C hc (inv_ne_zero hc'.ne_zero))
   have hp := hi.prime
   rcases (hp.dvd_or_dvd hd) with h | h
   · rcases (hp.dvd_or_dvd h) with h | h
     · have h' : i ∣ (X - C 0 : F[X]) := by simpa using h
       refine key 0 h' ?_
-      simpa using inGood_X hq0 hq1
+      simpa using inGood_X h1
     · have h' : i ∣ (X - C 1 : F[X]) := by simpa using h
-      exact key 1 h' (inGood_X_sub_one hq0 hq1)
-  · exact key q h (inGood_X_sub_q hq0 hq1)
+      exact key 1 h' (inGood_X_sub_one h2)
+  · exact key q h (inGood_X_sub_q h3)
 
-/-- Every factor of a power of `s (s - 1) (s - q)` is in `goodUnits`. -/
-theorem inGood_of_dvd (k : ℕ) (a : F[X]) (hd : a ∣ poles q ^ k) : InGood hq0 hq1 a := by
+/-- Every factor of a power of `s (s - 1) (s - q)` has its image in `K`. -/
+theorem inGood_of_dvd (hc : ∀ c : Fˣ, constU c ∈ K) (h1 : uS q ∈ K) (h2 : uS1 q ∈ K)
+    (h3 : uSq q ∈ K) (k : ℕ) (a : F[X]) (hd : a ∣ poles q ^ k) : InGood K a := by
   induction a using WfDvdMonoid.induction_on_irreducible with
   | zero =>
     exact absurd (zero_dvd_iff.mp hd) (pow_ne_zero _ poles_ne_zero)
   | unit u hu =>
-    obtain ⟨c, hc, rfl⟩ := Polynomial.isUnit_iff.mp hu
-    exact inGood_C hq0 hq1 hc.ne_zero
+    obtain ⟨c, hc', rfl⟩ := Polynomial.isUnit_iff.mp hu
+    exact inGood_C hc hc'.ne_zero
   | mul a i _ hi ih =>
     have hi' : i ∣ poles q := hi.prime.dvd_of_dvd_pow ((dvd_mul_right i a).trans hd)
-    exact inGood_mul hq0 hq1 (inGood_irreducible hq0 hq1 hi hi') (ih ((dvd_mul_left a i).trans hd))
+    exact inGood_mul (inGood_irreducible hc h1 h2 h3 hi hi') (ih ((dvd_mul_left a i).trans hd))
 
 /-- The unit `s (s - 1) (s - q)`. -/
 theorem val_poles :
     (uS q * uS1 q * uSq q : (Norm q)ˣ).val = algebraMap F[X] (Norm q) (poles q) := by
   simp only [Units.val_mul, val_uS, val_uS1, val_uSq, poles, map_mul, map_sub, map_one, map_C, sN]
 
-/-- Every unit of the normalization is in `goodUnits`. -/
-theorem goodUnits_eq_top (v : (Norm q)ˣ) : v ∈ goodUnits hq0 hq1 := by
+/-- Every unit of the normalization is a constant times powers of `s`, `s - 1` and `s - q`. -/
+theorem mem_of_generators (hc : ∀ c : Fˣ, constU c ∈ K) (h1 : uS q ∈ K) (h2 : uS1 q ∈ K)
+    (h3 : uSq q ∈ K) (v : (Norm q)ˣ) : v ∈ K := by
   obtain ⟨n, a, h⟩ := IsLocalization.Away.surj (poles q) (v : Norm q)
   obtain ⟨m, b, h'⟩ := IsLocalization.Away.surj (poles q) ((v⁻¹ : (Norm q)ˣ) : Norm q)
   have hab : a * b = poles q ^ (n + m) := by
@@ -293,15 +300,20 @@ theorem goodUnits_eq_top (v : (Norm q)ˣ) : v ∈ goodUnits hq0 hq1 := by
     have hv := Units.mul_inv v
     linear_combination (algebraMap F[X] (Norm q) (poles q) ^ n *
       algebraMap F[X] (Norm q) (poles q) ^ m) * hv
-  obtain ⟨w, hw, hw'⟩ := inGood_of_dvd hq0 hq1 (n + m) a ⟨b, hab.symm⟩
-  have hp : uS q * uS1 q * uSq q ∈ goodUnits hq0 hq1 :=
-    mul_mem (mul_mem (uS_mem hq0 hq1) (uS1_mem hq0 hq1)) (uSq_mem hq0 hq1)
+  obtain ⟨w, hw, hw'⟩ := inGood_of_dvd hc h1 h2 h3 (n + m) a ⟨b, hab.symm⟩
+  have hp : uS q * uS1 q * uSq q ∈ K := mul_mem (mul_mem h1 h2) h3
   have e : v = w * ((uS q * uS1 q * uSq q) ^ n)⁻¹ := by
     rw [eq_mul_inv_iff_mul_eq]
     ext
     rw [Units.val_mul, Units.val_pow_eq_pow_val, val_poles, h, hw']
   rw [e]
   exact mul_mem hw (inv_mem (pow_mem hp n))
+
+end UnitInduction
+
+/-- Every unit of the normalization is in `goodUnits`. -/
+theorem goodUnits_eq_top (v : (Norm q)ˣ) : v ∈ goodUnits hq0 hq1 :=
+  mem_of_generators (constU_mem hq0 hq1) (uS_mem hq0 hq1) (uS1_mem hq0 hq1) (uSq_mem hq0 hq1) v
 
 /-- The image of a unit of the normalization lies in `⟨-1, ρ⟩`. -/
 theorem theta_eps_mem (v : (Norm q)ˣ) : theta (epsU hq0 hq1 v) ∈ gluing q :=

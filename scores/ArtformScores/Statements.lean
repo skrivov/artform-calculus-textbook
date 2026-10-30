@@ -934,4 +934,30 @@ def magicSchemes : Prop :=
       !![LaurentPolynomial.T 1, 0; 0, LaurentPolynomial.T (-1)] ∧
     Leapfrog.ofPair (atZero F 0) (Leapfrog.atPi F 0) = Sum.inr 2
 
+/-- **T12** (the palindromes of the leapfrog phase; the correction of 2026-10-30). Over a field of
+characteristic not `2`, with `q` different from `0` and `1`, a law of the phase is processed from a
+palindrome exactly when it lies in the unglued class, in the trivial class, or, when `1 - q = w²`,
+in the class of `r - (1 + w)`, whose `z / z̄` is `κ = (1 - r) / w`, with `κ² = ρ`. -/
+@[ledger "T12"]
+def leapfrogPalindromes : Prop :=
+  ∀ (F : Type) [Field F] (q : F), (2 : F) ≠ 0 → q ≠ 0 → q ≠ 1 →
+    ∀ L : SpecialLinearGroup (Fin 2) (LaurentPolynomial F), phase L = Leapfrog.phaseT q →
+      ((∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial F),
+          (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) 0 0 =
+            (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial F)) 1 1 ∧ Processed L' L) ↔
+        (Processed (Leapfrog.ungluedLaw q) L ∨ Processed (Leapfrog.companionLaw q) L ∨
+          ∃ w : F, w * w = 1 - q ∧ Processed (Leapfrog.gluedLaw q (-(1 + w))) L))
+
+/-- **T12** (a fixed class without a palindrome; the correction of 2026-10-30). On the dial `C₁₁` at
+`κλ = 8`, the law `gluedLaw 8 5` is processed into its own inverse, and no palindrome is processed
+into it: a class that time reversal fixes need not hold a palindrome. -/
+@[ledger "T12"]
+def palindromeGap : Prop :=
+  phase (Leapfrog.gluedLaw (8 : ZMod 11) 5) = Leapfrog.phaseT (8 : ZMod 11) ∧
+  Processed (Leapfrog.gluedLaw (8 : ZMod 11) 5) (Leapfrog.gluedLaw (8 : ZMod 11) 5)⁻¹ ∧
+  ¬ ∃ L' : SpecialLinearGroup (Fin 2) (LaurentPolynomial (ZMod 11)),
+    (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 11))) 0 0 =
+      (L' : Matrix (Fin 2) (Fin 2) (LaurentPolynomial (ZMod 11))) 1 1 ∧
+    Processed L' (Leapfrog.gluedLaw (8 : ZMod 11) 5)
+
 end Artform.Scores.Statement

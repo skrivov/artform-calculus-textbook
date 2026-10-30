@@ -986,6 +986,8 @@ noncomputable def gluedLaw (y : F) : SpecialLinearGroup (Fin 2) (LaurentPolynomi
     simp only [kap0, kap1, deltaS]
     linear_combination (-((T 1 - 1) * LaurentPolynomial.C q)) * T_mul_T_neg (F := F)⟩
 
+instance fact_prime_11 : Fact (Nat.Prime 11) := ⟨by norm_num⟩
+
 variable (F) in
 /-- The schemes of the leapfrog phase, as scores of weights: the book's tick, `M K`, Strang and
 position Verlet. -/
