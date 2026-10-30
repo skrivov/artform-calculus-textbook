@@ -9,7 +9,7 @@ algorithm on the first column `(a, c)` of `A`.
 - Every Laurent polynomial is `p(x) xᵏ` with `p` a polynomial, and dividing by
   `p(x) xᵏ` is dividing by `p` in `F[X]`.
 - The move `M(-q)` with the quotient `q`, then the swap `w(1)`, turn the column
-  into `(c, -r)`, where the remainder `r` has a smaller degree than `c`.
+  into `(c, -r(x) xʲ)`, where the remainder `r` has a smaller degree than `p`.
 - When `c = 0`, the law is a balanced mover (R4) then a move.
 -/
 
