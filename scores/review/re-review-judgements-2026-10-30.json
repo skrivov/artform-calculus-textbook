@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-30",
+  "kind": "independent fidelity re-review; reviewer did not author the submitted repairs",
+  "submitted_commit": "a7fe9d49944fb2be9b98474725ebd0b9edcba47f",
+  "approved": 9,
+  "returned": 0,
+  "previous_approvals_retained": 54,
+  "judgements": [
+    {
+      "return": "J1",
+      "key": "R4",
+      "verdict": "approve",
+      "resolution": "The corrected time-order score realizes the preserved diagonal law; multiplicativity remains.",
+      "statement": "Artform.Scores.Statement.balancedRule",
+      "proof": "Artform.Scores.balancedRule",
+      "statement_surface_sha256": "77fd114b3f77da21512f944cc5cab233cb5c0e152022cee5486118396d1cfb71",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J2",
+      "key": "R2",
+      "verdict": "approve",
+      "resolution": "The corrected source bracket matches the positive law; both explicit Lean time-order signs remain.",
+      "statement": "Artform.Scores.Statement.steinbergRules",
+      "proof": "Artform.Scores.steinbergRules'",
+      "statement_surface_sha256": "109deb84447b656135b65a1f590d28f56dae5587f7324ab6d9d1ad4e265cd784",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J3",
+      "key": "T12:reading",
+      "verdict": "approve",
+      "resolution": "Unit-rest observational converse, real oscillatory closed form and both repeated-root cases are explicit; invariance remains.",
+      "statement": "Artform.Scores.Statement.readingComplete",
+      "proof": "Artform.Scores.readingComplete",
+      "statement_surface_sha256": "a99f9915623bfb5b0671c66bae3e78291afc767d29c41bb1e2aa956f186dfc2b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J4",
+      "key": "T14",
+      "verdict": "approve",
+      "resolution": "The full zero criterion includes fair weight, zero step and equal pulls; no degeneracy is divided away.",
+      "statement": "Artform.Scores.Statement.callerCutComplete",
+      "proof": "Artform.Scores.callerCutComplete",
+      "statement_surface_sha256": "40d5e3a9f5423f7273ab25b34e6772ae08298a5cdfce0250bc96d0edfc62f71c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J5",
+      "key": "T2:group",
+      "verdict": "approve",
+      "resolution": "Kernel equality and surjectivity cover every positive dial with its full Laurent unit group; field results remain.",
+      "statement": "Artform.Scores.Statement.indexGroupComplete",
+      "proof": "Artform.Scores.indexGroupComplete",
+      "statement_surface_sha256": "bb4a8df98c065e83c8737cd755bc199cdaf7a070ff414b3f04d4300ceaecd9bb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J6",
+      "key": "T11",
+      "verdict": "approve",
+      "resolution": "The nonzero total-kick condition is explicit; equality of normalized extended ideals up to nonzero D* proves the class comparison.",
+      "statement": "Artform.Scores.Statement.faceAndLinkNormalization",
+      "proof": "Artform.Scores.faceAndLinkNormalization",
+      "statement_surface_sha256": "1dbf424ba634a44ed324ef10665139eed9150ee35e1feb9a37147afb0cb32173",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J7",
+      "key": "T13:platonic",
+      "verdict": "approve",
+      "resolution": "Unique primitive sign-class representatives and adjacency iff identify all three graphs; their triangular faces agree with the actual map faces.",
+      "statement": "Artform.Scores.Statement.platonicIncidence",
+      "proof": "Artform.Scores.platonicIncidence",
+      "statement_surface_sha256": "9a69512a4fdd2523533f06b2166244fb4c4f0139cddda72534baa75c40d5409f",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J8",
+      "key": "T8:curve",
+      "verdict": "approve",
+      "resolution": "The actual curve ring embeds integrally and birationally in the normal target; the torus singularity and distinct geometric tangents are proved.",
+      "statement": "Artform.Scores.Statement.leapfrogNormalization",
+      "proof": "Artform.Scores.leapfrogNormalization",
+      "statement_surface_sha256": "6456f518b3e1b8def49ba4cc067e1fbd1797eccc6d53557286fe2544f90e19dd",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    },
+    {
+      "return": "J9",
+      "key": "T15:back-step",
+      "verdict": "approve",
+      "resolution": "The positive Z/5 permutation satisfies every forward-step and actual backward-branch hypothesis.",
+      "statement": "Artform.Scores.Statement.oneBackStep",
+      "proof": "Artform.Scores.oneBackStep",
+      "statement_surface_sha256": "aef444b017f07b5d9ff03ad4d0d53c7872f304b795956eaae992863d95ba03b7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "independent_audit": "re-review-2026-10-30.md#verdicts-one-by-one"
+    }
+  ]
+}

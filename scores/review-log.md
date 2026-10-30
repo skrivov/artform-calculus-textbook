@@ -67,3 +67,12 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `T8:curve` returned (J8): The parametrization identities are proved; nodality, uniqueness of the singularity and the normalization claim are not stated. See `scores/review/audit-2026-10-30.md`.
 
 - 2026-10-30: repairs submitted for `R4`, `R2`, `T12:reading`, `T14`, `T2:group`, `T11`, `T13:platonic`, `T8:curve` and `T15:back-step`. See `scores/review/repairs-2026-10-30.md`. This records an author submission, not an independent approval; the nine original returns are preserved.
+- 2026-10-30: `R4` approved as `Artform.Scores.Statement.balancedRule` (text 77fd114b3f77)
+- 2026-10-30: `R2` approved as `Artform.Scores.Statement.steinbergRules` (text 109deb84447b)
+- 2026-10-30: `T12:reading` approved as `Artform.Scores.Statement.readingComplete` (text a99f9915623b)
+- 2026-10-30: `T14` approved as `Artform.Scores.Statement.callerCutComplete` (text 40d5e3a9f542)
+- 2026-10-30: `T2:group` approved as `Artform.Scores.Statement.indexGroupComplete` (text bb4a8df98c06)
+- 2026-10-30: `T11` approved as `Artform.Scores.Statement.faceAndLinkNormalization` (text 1dbf424ba634)
+- 2026-10-30: `T13:platonic` approved as `Artform.Scores.Statement.platonicIncidence` (text 9a69512a4fdd)
+- 2026-10-30: `T8:curve` approved as `Artform.Scores.Statement.leapfrogNormalization` (text 6456f518b3e1)
+- 2026-10-30: `T15:back-step` approved as `Artform.Scores.Statement.oneBackStep` (text aef444b017f0)

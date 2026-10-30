@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 54 |
-| stated | 9 |
+| proved | 63 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **63** |
 
@@ -17,7 +17,7 @@
 |---|---|---|---|---|
 | R1 | Merging | proved | `Artform.Scores.Statement.merging` / `Artform.Scores.merging` | approved 2026-10-30 |
 | R3 | Whitehead's rule | proved | `Artform.Scores.Statement.whiteheadRule` / `Artform.Scores.whiteheadRule` | approved 2026-10-30 |
-| R4 | Balanced movers | stated | `Artform.Scores.Statement.balancedRule` / `Artform.Scores.balancedRule` | returned: 2026-10-30 J1: The product of laws is correct, but the ledger time-order word realizes diag(u^-1, u). Repair submitted 2026-10-30; independent re-review pending. |
+| R4 | Balanced movers | proved | `Artform.Scores.Statement.balancedRule` / `Artform.Scores.balancedRule` | approved 2026-10-30 |
 | R5 | Time reversal | proved | `Artform.Scores.Statement.timeReversal` / `Artform.Scores.timeReversal` | approved 2026-10-30 |
 | R6 | Blocking | proved | `Artform.Scores.Statement.blocking` / `Artform.Scores.blocking` | approved 2026-10-30 |
 | R6:red-black | Red-black on the blocked artform | proved | `Artform.Scores.Statement.redBlack` / `Artform.Scores.redBlack` | approved 2026-10-30 |
@@ -32,10 +32,10 @@
 | T7:trivial-class | The trivial class | proved | `Artform.Scores.Statement.trivialClass` / `Artform.Scores.trivialClass` | approved 2026-10-30 |
 | T7:one-to-one | One class, one law up to processing | proved | `Artform.Scores.Statement.classesOneToOne` / `Artform.Scores.classesOneToOne` | approved 2026-10-30 |
 | T7:onto | Every class is a law's | proved | `Artform.Scores.Statement.classesOnto` / `Artform.Scores.classesOnto` | approved 2026-10-30 |
-| T12:reading | The reading | stated | `Artform.Scores.Statement.readingComplete` / `Artform.Scores.readingComplete` | returned: 2026-10-30 J3: Only output invariance is stated; the submitted reading claim also requires completeness and its closed form. Repair submitted 2026-10-30; independent re-review pending. |
+| T12:reading | The reading | proved | `Artform.Scores.Statement.readingComplete` / `Artform.Scores.readingComplete` | approved 2026-10-30 |
 | T12:palindromes | Palindromes | proved | `Artform.Scores.Statement.palindrome` / `Artform.Scores.palindrome` | approved 2026-10-30 |
 | T13 | The crystallographic pulls | proved | `Artform.Scores.Statement.stepOrders` / `Artform.Scores.stepOrders` | approved 2026-10-30 |
-| T14 | The caller's cut | stated | `Artform.Scores.Statement.callerCutComplete` / `Artform.Scores.callerCutComplete` | returned: 2026-10-30 J4: The cut formula is correct, but the submitted cancellation iff is absent and needs nondegenerate or universal quantification. Repair submitted 2026-10-30; independent re-review pending. |
+| T14 | The caller's cut | proved | `Artform.Scores.Statement.callerCutComplete` / `Artform.Scores.callerCutComplete` | approved 2026-10-30 |
 | T15:methods | Every method is light | proved | `Artform.Scores.Statement.methodsAreLight` / `Artform.Scores.methodsAreLight` | approved 2026-10-30 |
 | T15:plain-hunt | Plain hunt is light in a mirror box | proved | `Artform.Scores.Statement.plainHuntIsLight` / `Artform.Scores.plainHuntIsLight` | approved 2026-10-30 |
 | T15:modes | The modes of the mirror box | proved | `Artform.Scores.Statement.mirrorModes` / `Artform.Scores.mirrorModes` | approved 2026-10-30 |
@@ -43,7 +43,7 @@
 | T15:rankin | Rankin's parity | proved | `Artform.Scores.Statement.rankinParity` / `Artform.Scores.rankinParity` | approved 2026-10-30 |
 | T15:lifting | The lifting lemma | proved | `Artform.Scores.Statement.extentLifting` / `Artform.Scores.extentLifting` | approved 2026-10-30 |
 | T15:fibonacci | The Fibonacci rule | proved | `Artform.Scores.Statement.fibonacciRule` / `Artform.Scores.fibonacciRule` | approved 2026-10-30 |
-| T15:back-step | One back-step | stated | `Artform.Scores.Statement.oneBackStep` / `Artform.Scores.oneBackStep` | returned: 2026-10-30 J9: The translation is faithful, but its Non-vacuity section only excludes a one-back-step example; it supplies no positive witness. Repair submitted 2026-10-30; independent re-review pending. |
+| T15:back-step | One back-step | proved | `Artform.Scores.Statement.oneBackStep` / `Artform.Scores.oneBackStep` | approved 2026-10-30 |
 | T15:cat-map | Kicks with back-moves never ring | proved | `Artform.Scores.Statement.catMapNeverRings` / `Artform.Scores.catMapNeverRings` | approved 2026-10-30 |
 | T15:balance | The balance of back-steps | proved | `Artform.Scores.Statement.backStepBalance` / `Artform.Scores.backStepBalance` | approved 2026-10-30 |
 | T15:two-squares | The two squares need two back-turns | proved | `Artform.Scores.Statement.twoSquaresBackTurns` / `Artform.Scores.twoSquaresBackTurns` | approved 2026-10-30 |
@@ -54,19 +54,19 @@
 | T13:step-groups | The step groups | proved | `Artform.Scores.Statement.stepGroups` / `Artform.Scores.stepGroups` | approved 2026-10-30 |
 | T13:free | The free step groups | proved | `Artform.Scores.Statement.stepGroupsFree` / `Artform.Scores.stepGroupsFree` | approved 2026-10-30 |
 | T13:regular-map | The regular map of a dial | proved | `Artform.Scores.Statement.regularMap` / `Artform.Scores.regularMap` | approved 2026-10-30 |
-| T13:platonic | The tetrahedron, the octahedron and the icosahedron | stated | `Artform.Scores.Statement.platonicIncidence` / `Artform.Scores.platonicIncidence` | returned: 2026-10-30 J7: The numerical counts are proved; no identification with the three named incidence structures is stated. Repair submitted 2026-10-30; independent re-review pending. |
+| T13:platonic | The tetrahedron, the octahedron and the icosahedron | proved | `Artform.Scores.Statement.platonicIncidence` / `Artform.Scores.platonicIncidence` | approved 2026-10-30 |
 | T13:turns | The steps are turns | proved | `Artform.Scores.Statement.stepsAreTurns` / `Artform.Scores.stepsAreTurns` | approved 2026-10-30 |
 | T13:cells | The cells that a tick fixes | proved | `Artform.Scores.Statement.tickCells` / `Artform.Scores.tickCells` | approved 2026-10-30 |
 | T13:two-squares | The two squares are the projective line over F₅ | proved | `Artform.Scores.Statement.twoSquaresProjective` / `Artform.Scores.twoSquaresProjective` | approved 2026-10-30 |
-| R2 | Commutation | stated | `Artform.Scores.Statement.steinbergRules` / `Artform.Scores.steinbergRules'` | returned: 2026-10-30 J2: The positive matrix commutator is correct; the ledger score commutator needs the opposite sign. Repair submitted 2026-10-30; independent re-review pending. |
+| R2 | Commutation | proved | `Artform.Scores.Statement.steinbergRules` / `Artform.Scores.steinbergRules'` | approved 2026-10-30 |
 | T1:fewest | The fewest steps | proved | `Artform.Scores.Statement.fewestSteps` / `Artform.Scores.fewestSteps` | approved 2026-10-30 |
-| T2:group | The index as a group | stated | `Artform.Scores.Statement.indexGroupComplete` / `Artform.Scores.indexGroupComplete` | returned: 2026-10-30 J5: The group statement is restricted to fields; the ledger also covers composite dials, whose units need not be monomials. Repair submitted 2026-10-30; independent re-review pending. |
-| T11 | Face and link | stated | `Artform.Scores.Statement.faceAndLinkNormalization` / `Artform.Scores.faceAndLinkNormalization` | returned: 2026-10-30 J6: Intertwining and ideal inclusions do not establish the claimed normalization/gluing map; arbitrary scores need not be glued. Repair submitted 2026-10-30; independent re-review pending. |
+| T2:group | The index as a group | proved | `Artform.Scores.Statement.indexGroupComplete` / `Artform.Scores.indexGroupComplete` | approved 2026-10-30 |
+| T11 | Face and link | proved | `Artform.Scores.Statement.faceAndLinkNormalization` / `Artform.Scores.faceAndLinkNormalization` | approved 2026-10-30 |
 | T12:criterion | The criterion for palindromes | proved | `Artform.Scores.Statement.palindromeCriterion` / `Artform.Scores.palindromeCriterion` | approved 2026-10-30 |
 | T14:rules | The caller's rule decides the cancellation | proved | `Artform.Scores.Statement.callerRules` / `Artform.Scores.callerRules` | approved 2026-10-30 |
 | T14:cue | One cue | proved | `Artform.Scores.Statement.oneCue` / `Artform.Scores.oneCue` | approved 2026-10-30 |
 | T16 | The duet | proved | `Artform.Scores.Statement.duet` / `Artform.Scores.duet` | approved 2026-10-30 |
-| T8:curve | The curve of the leapfrog phase | stated | `Artform.Scores.Statement.leapfrogNormalization` / `Artform.Scores.leapfrogNormalization` | returned: 2026-10-30 J8: The parametrization identities are proved; nodality, uniqueness of the singularity and the normalization claim are not stated. Repair submitted 2026-10-30; independent re-review pending. |
+| T8:curve | The curve of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogNormalization` / `Artform.Scores.leapfrogNormalization` | approved 2026-10-30 |
 | T8:classes | The classes of the leapfrog phase | proved | `Artform.Scores.Statement.leapfrogClasses` / `Artform.Scores.Leapfrog.leapfrogClasses` | approved 2026-10-30 |
 | T8:count | The count of the classes | proved | `Artform.Scores.Statement.leapfrogCount` / `Artform.Scores.Leapfrog.leapfrogCount` | approved 2026-10-30 |
 | T8:split | The split node | proved | `Artform.Scores.Statement.leapfrogSplit` / `Artform.Scores.Leapfrog.leapfrogSplit` | approved 2026-10-30 |

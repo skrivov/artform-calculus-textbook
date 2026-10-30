@@ -1,0 +1,986 @@
+{
+  "date": "2026-10-30",
+  "kind": "independent re-review validation, subsequent to repair author validation",
+  "submitted_inputs": {
+    "date": "2026-10-30",
+    "commit": "a7fe9d49944fb2be9b98474725ebd0b9edcba47f",
+    "review_scope": [
+      "R4",
+      "T12:reading",
+      "T14",
+      "T15:back-step",
+      "T13:platonic",
+      "R2",
+      "T2:group",
+      "T11",
+      "T8:curve"
+    ],
+    "approved_before": [
+      "R1",
+      "R3",
+      "R5",
+      "R6",
+      "R6:red-black",
+      "R6:cosets",
+      "R6:checkerboard",
+      "T1:field",
+      "T1:prime-power",
+      "T1:modulus",
+      "T2",
+      "T4",
+      "T7:invariance",
+      "T7:trivial-class",
+      "T7:one-to-one",
+      "T7:onto",
+      "T12:palindromes",
+      "T13",
+      "T15:methods",
+      "T15:plain-hunt",
+      "T15:modes",
+      "T15:coxeter",
+      "T15:rankin",
+      "T15:lifting",
+      "T15:fibonacci",
+      "T15:cat-map",
+      "T15:balance",
+      "T15:two-squares",
+      "T15:fewest",
+      "T15:table",
+      "T15:transport",
+      "T13:growth",
+      "T13:step-groups",
+      "T13:free",
+      "T13:regular-map",
+      "T13:turns",
+      "T13:cells",
+      "T13:two-squares",
+      "T1:fewest",
+      "T12:criterion",
+      "T14:rules",
+      "T14:cue",
+      "T16",
+      "T8:classes",
+      "T8:count",
+      "T8:split",
+      "T8:schemes",
+      "T8:magic",
+      "T8:magic-count",
+      "T8:magic-schemes",
+      "T12:leapfrog-palindromes",
+      "T12:gap",
+      "T13:presentations",
+      "T13:psl-a5"
+    ],
+    "repo_sha256": {
+      "scores/ArtformScores/BackSteps.lean": "352f80096ce21f4f89ee2440e64a899ee86c5e6ab9755fde5dd0f7222279f190",
+      "scores/ArtformScores/Basic.lean": "3f9c959f78307c5fbfda7b7758b9ded0ecbeb65c4b9d1ab23b637f3e9a9148c6",
+      "scores/ArtformScores/Caller.lean": "c36b32f749061e81e077e019b9bb6fba964c99fae7986dd536aa4bc652ab7e47",
+      "scores/ArtformScores/FaceLink.lean": "36318d7f28d29b857a872bc4658419e26f6bd301df1218afb7e32701bb518ec9",
+      "scores/ArtformScores/KleinMap.lean": "7cb07c1f4cb8681e2cf4630b0c6f0f63ff0bb943008562ac7bc960a1eeddc67f",
+      "scores/ArtformScores/LeapfrogClasses.lean": "1f4039f43c883a1a9f6a88a221f5fada9ee5456c3c9dce4e0be03a1b6d11a875",
+      "scores/ArtformScores/LeapfrogCurve.lean": "b112f21b06cc13ae4552ff492041076e4e5db00e03a30831aa4723d528ff7df7",
+      "scores/ArtformScores/Readings.lean": "d11ef7cf34bd0ecc6137e8d63b2c50300f1065caf1ced7df764a5dc3ccef8436",
+      "scores/ArtformScores/ReviewRepair/Elementary.lean": "2ceb374f2fda01a50595acd63b354dd0d7cae769905c867b60d49b22610eb112",
+      "scores/ArtformScores/ReviewRepair/FaceNormalization.lean": "cc340ef0005dd068396ad5a9b0acaf3eac1590fe309f9fa30fdfa6830febbee2",
+      "scores/ArtformScores/ReviewRepair/Normalization.lean": "cb41c8fb9b031f1d24ad7076626cbd1d58cff8f5396884472526599b82c5249b",
+      "scores/ArtformScores/ReviewRepair/Reading.lean": "bbbf2f3755b0e22e9f566ac795cb943746e6b3757f78fd46c8be8b5a413529cf",
+      "scores/ArtformScores/ReviewRepair/Statements.lean": "bf25e4a1e72cb53f0988d2965a63afbe5d48a3d04b5346bf0da9f82861d89b3a",
+      "scores/ArtformScores/Rules.lean": "aa92d9fc95b845a4d8f8fcc7e68a456203239e2c2a8697c25323e26ae7952859",
+      "scores/ArtformScores/Statements.lean": "484f130034c47eb978086bcb21c079142e16090ed53db9f5f07c4c15fe633c69",
+      "scores/ArtformScores/Steinberg.lean": "5acdaa96b4fff331fd8e72a0ec3aec948bb81e81d64de778e1d8517caa1defe0",
+      "scores/STATUS.md": "3717b0d1640eb54d5ef02dead86f84eadc9f808b8c78ca28acd0a3a1e2dcc648",
+      "scores/manifest.toml": "5c81be4476df1e43d21ed0ad0c790dffc3afec9b7314d53a89e95184e8cd8d1d",
+      "scores/review-log.md": "b81d7fd959a8e384e33cb70ebead2276112c7af21330312945991dcd67123e30",
+      "scores/review/JudgeChecks.lean": "3b7a590e66d8c32e67eb1398bd092e9d064778b6db5f932b096644aabcd53e1b",
+      "scores/review/audit-2026-10-30.md": "0f2ae617acfb04662bd36dc18f45ad75156fccb7d089a37cb8658c64e03dc188",
+      "scores/review/judgements-2026-10-30.json": "f71bee620db74fa00faa9f3010dc5be4706b2cb77252dd5081c848e7db9b5f30",
+      "scores/review/repair-validation-2026-10-30.json": "9f43caa8bc63132e126c3ee6b01a10a2109279f74c420e6de42e4f51d940d500",
+      "scores/review/repairs-2026-10-30.md": "48c84de146e934346f3607f08d5df92192216df40a1f200cdd0eefbbd6171890",
+      "scores/review/repairs-2026-10-30/source/README.md": "3c47bb8fa667436f55be50e8e5d528a505ccc631b293e7d2163a1c95d759ce89",
+      "scores/review/repairs-2026-10-30/source/after/ALGEBRA-OF-SCORES.md": "2a45579891ebff5c755babbc3bd71770a2cf0e430b3d46b977275e74a70f1223",
+      "scores/review/repairs-2026-10-30/source/after/findings/057-the-classes-of-a-phase.md": "42a00010eaa0e4bf954f159bc7fbaa42a781f5039bcf75ceef12092c72c80d79",
+      "scores/review/repairs-2026-10-30/source/after/findings/064-the-laws-of-a-higher-order-phase.md": "b141e818b873699fbf53bce64100d569a2200e8b06ffd5964518fbee49d82211",
+      "scores/review/repairs-2026-10-30/source/after/findings/080-random-orders-and-the-shared-cue.md": "36c5a0e16b1a44d2fc5beaa1e037f03064e17a416142faf456be584a0ac926a8",
+      "scores/review/repairs-2026-10-30/source/before/ALGEBRA-OF-SCORES.md": "6248fe8e274cc404dfe6dc88c175fb8185b1fca798bef3582de9574f89c6adfe",
+      "scores/review/repairs-2026-10-30/source/before/findings/057-the-classes-of-a-phase.md": "a4fa9bd20cb3f7fa1f7cae4d07b4efbc3c8e8be118ccf623195926687723fc09",
+      "scores/review/repairs-2026-10-30/source/before/findings/064-the-laws-of-a-higher-order-phase.md": "95baac7769b25fbe4585025301ea25cadaa609707d99066d192104e63bf079e0",
+      "scores/review/repairs-2026-10-30/source/before/findings/080-random-orders-and-the-shared-cue.md": "7ed631dcf0aa9591e5cf7d7213570f1c99ef69c4aac059ebc7ff63d10b00d56d",
+      "scores/review/validation-2026-10-30.json": "c3f26d4d5e6158225c9dc75a222697562a5e192af81735a1349037f5b6c5a36d"
+    },
+    "ledger_source_sha256": {
+      "ALGEBRA-OF-SCORES.md": "0fb215f087773d5f5223f08a624d5f3920ae6b9058549a9c530da5eed52c0df0",
+      "findings/057-the-classes-of-a-phase.md": "42a00010eaa0e4bf954f159bc7fbaa42a781f5039bcf75ceef12092c72c80d79",
+      "findings/064-the-laws-of-a-higher-order-phase.md": "b141e818b873699fbf53bce64100d569a2200e8b06ffd5964518fbee49d82211",
+      "findings/080-random-orders-and-the-shared-cue.md": "36c5a0e16b1a44d2fc5beaa1e037f03064e17a416142faf456be584a0ac926a8"
+    }
+  },
+  "commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 3.16,
+      "stdout": "build/scores-re-review/build.log",
+      "stderr": "build/scores-re-review/build.stderr.log"
+    },
+    {
+      "name": "textbook-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.44,
+      "stdout": "build/report.json",
+      "stderr": "build/scores-re-review/textbook-report.stderr.log"
+    },
+    {
+      "name": "ledger-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.52,
+      "stdout": "build/ledger-report.json",
+      "stderr": "build/scores-re-review/ledger-report.stderr.log"
+    },
+    {
+      "name": "textbook-status",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.31,
+      "stdout": "build/scores-re-review/textbook-status.log",
+      "stderr": "build/scores-re-review/textbook-status.stderr.log"
+    },
+    {
+      "name": "ledger-status",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09,
+      "stdout": "build/scores-re-review/ledger-status.log",
+      "stderr": "build/scores-re-review/ledger-status.stderr.log"
+    },
+    {
+      "name": "textbook-drift",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.31,
+      "stdout": "build/scores-re-review/textbook-drift.log",
+      "stderr": "build/scores-re-review/textbook-drift.stderr.log"
+    },
+    {
+      "name": "ledger-drift",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "stdout": "build/scores-re-review/ledger-drift.log",
+      "stderr": "build/scores-re-review/ledger-drift.stderr.log"
+    },
+    {
+      "name": "tree-identity",
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.24,
+      "stdout": "build/scores-re-review/tree-identity.log",
+      "stderr": "build/scores-re-review/tree-identity.stderr.log"
+    },
+    {
+      "name": "one-mode-certificates",
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19,
+      "stdout": "build/scores-re-review/one-mode-certificates.log",
+      "stderr": "build/scores-re-review/one-mode-certificates.stderr.log"
+    },
+    {
+      "name": "extent-certificates",
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.24,
+      "stdout": "build/scores-re-review/extent-certificates.log",
+      "stderr": "build/scores-re-review/extent-certificates.stderr.log"
+    },
+    {
+      "name": "script-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "stdout": "build/scores-re-review/script-tests.log",
+      "stderr": "build/scores-re-review/script-tests.stderr.log"
+    },
+    {
+      "name": "original-review-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "scores/review/JudgeChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 3.9,
+      "stdout": "build/scores-re-review/original-review-witnesses.log",
+      "stderr": "build/scores-re-review/original-review-witnesses.stderr.log"
+    },
+    {
+      "name": "repair-review-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "scores/review/RepairJudgeChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.18,
+      "stdout": "build/scores-re-review/repair-review-witnesses.log",
+      "stderr": "build/scores-re-review/repair-review-witnesses.stderr.log"
+    },
+    {
+      "name": "finite-checks",
+      "command": [
+        "python3",
+        "scores/review/repair_judge_checks.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/scores-re-review/finite-checks.log",
+      "stderr": "build/scores-re-review/finite-checks.stderr.log"
+    },
+    {
+      "name": "kernel-Basic",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 5.92,
+      "stdout": "build/scores-re-review/kernel-Basic.log",
+      "stderr": "build/scores-re-review/kernel-Basic.stderr.log"
+    },
+    {
+      "name": "kernel-Rules",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Rules"
+      ],
+      "exit_code": 0,
+      "seconds": 5.59,
+      "stdout": "build/scores-re-review/kernel-Rules.log",
+      "stderr": "build/scores-re-review/kernel-Rules.stderr.log"
+    },
+    {
+      "name": "kernel-Steinberg",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Steinberg"
+      ],
+      "exit_code": 0,
+      "seconds": 5.64,
+      "stdout": "build/scores-re-review/kernel-Steinberg.log",
+      "stderr": "build/scores-re-review/kernel-Steinberg.stderr.log"
+    },
+    {
+      "name": "kernel-BackSteps",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.BackSteps"
+      ],
+      "exit_code": 0,
+      "seconds": 5.7,
+      "stdout": "build/scores-re-review/kernel-BackSteps.log",
+      "stderr": "build/scores-re-review/kernel-BackSteps.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Statements",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Statements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.53,
+      "stdout": "build/scores-re-review/kernel-ReviewRepair-Statements.log",
+      "stderr": "build/scores-re-review/kernel-ReviewRepair-Statements.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Elementary",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Elementary"
+      ],
+      "exit_code": 0,
+      "seconds": 5.96,
+      "stdout": "build/scores-re-review/kernel-ReviewRepair-Elementary.log",
+      "stderr": "build/scores-re-review/kernel-ReviewRepair-Elementary.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Reading",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Reading"
+      ],
+      "exit_code": 0,
+      "seconds": 5.48,
+      "stdout": "build/scores-re-review/kernel-ReviewRepair-Reading.log",
+      "stderr": "build/scores-re-review/kernel-ReviewRepair-Reading.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-Normalization",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.Normalization"
+      ],
+      "exit_code": 0,
+      "seconds": 5.98,
+      "stdout": "build/scores-re-review/kernel-ReviewRepair-Normalization.log",
+      "stderr": "build/scores-re-review/kernel-ReviewRepair-Normalization.stderr.log"
+    },
+    {
+      "name": "kernel-ReviewRepair-FaceNormalization",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ReviewRepair.FaceNormalization"
+      ],
+      "exit_code": 0,
+      "seconds": 5.55,
+      "stdout": "build/scores-re-review/kernel-ReviewRepair-FaceNormalization.log",
+      "stderr": "build/scores-re-review/kernel-ReviewRepair-FaceNormalization.stderr.log"
+    },
+    {
+      "name": "final-ledger-status",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "stdout": "build/scores-re-review/final-ledger-status.log",
+      "stderr": "build/scores-re-review/final-ledger-status.stderr.log"
+    },
+    {
+      "name": "final-ledger-drift",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07,
+      "stdout": "build/scores-re-review/final-ledger-drift.log",
+      "stderr": "build/scores-re-review/final-ledger-drift.stderr.log"
+    },
+    {
+      "name": "final-textbook-status",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3,
+      "stdout": "build/scores-re-review/final-textbook-status.log",
+      "stderr": "build/scores-re-review/final-textbook-status.stderr.log"
+    },
+    {
+      "name": "final-tree-identity",
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.23,
+      "stdout": "build/scores-re-review/final-tree-identity.log",
+      "stderr": "build/scores-re-review/final-tree-identity.stderr.log"
+    },
+    {
+      "name": "final-repair-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "scores/review/RepairJudgeChecks.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.08,
+      "stdout": "build/scores-re-review/final-repair-witnesses.log",
+      "stderr": "build/scores-re-review/final-repair-witnesses.stderr.log"
+    },
+    {
+      "name": "final-finite-checks",
+      "command": [
+        "python3",
+        "scores/review/repair_judge_checks.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "stdout": "build/scores-re-review/final-finite-checks.log",
+      "stderr": "build/scores-re-review/final-finite-checks.stderr.log"
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0,
+      "stdout": "build/scores-re-review/diff-check.log",
+      "stderr": "build/scores-re-review/diff-check.stderr.log"
+    }
+  ],
+  "counts_before": {
+    "approved": 54,
+    "pending": 9
+  },
+  "counts_after": {
+    "approved": 63,
+    "pending": 0
+  },
+  "preservation": {
+    "previous_54_manifest_entries_unchanged": true,
+    "submitted_lean_sources_unchanged": true,
+    "original_review_and_repair_records_unchanged": true,
+    "review_log_only_appended": true,
+    "four_ledger_review_trees_unchanged": true,
+    "protected_ledger_files_unchanged": 1654,
+    "non_lean_packet_holds_retained": 7
+  },
+  "approved_surface_drift": [],
+  "review_artifact_sha256": {
+    "scores/review/re-review-2026-10-30.md": "4e245b4164e4e299073dc88c63006a85d2772cf3bdab0dbd98b6a9b4b648d1f3",
+    "scores/review/re-review-judgements-2026-10-30.json": "2cfa8d59dc8afb2bde81ed66e0ca4a160f0beef490f2aa158a53504f797054e2",
+    "scores/review/RepairJudgeChecks.lean": "9fd3a48ba6472a49ccfa2c94194bfffb3424a054c5a5017e808bd5acdeba661f",
+    "scores/review/repair_judge_checks.py": "301e7016dcdb957737972ae7485f9826c1f431ec6d34cf3ad14db3a2cc040985"
+  },
+  "independent_finite_witnesses": {
+    "kind": "independent finite fidelity witnesses",
+    "platonic": [
+      {
+        "n": 3,
+        "primitive_states": 8,
+        "vertices": 4,
+        "edges": 6,
+        "faces": 4,
+        "all_vertices_edges_and_faces_match": true
+      },
+      {
+        "n": 4,
+        "primitive_states": 12,
+        "vertices": 6,
+        "edges": 12,
+        "faces": 8,
+        "all_vertices_edges_and_faces_match": true
+      },
+      {
+        "n": 5,
+        "primitive_states": 24,
+        "vertices": 12,
+        "edges": 30,
+        "faces": 20,
+        "all_vertices_edges_and_faces_match": true
+      }
+    ],
+    "readings": [
+      {
+        "dial": 2,
+        "sl2_matrices": 6,
+        "four_tick_signatures": 4,
+        "repeated_root_instances": 4,
+        "passed": true
+      },
+      {
+        "dial": 3,
+        "sl2_matrices": 24,
+        "four_tick_signatures": 9,
+        "repeated_root_instances": 18,
+        "passed": true
+      },
+      {
+        "dial": 4,
+        "sl2_matrices": 48,
+        "four_tick_signatures": 16,
+        "repeated_root_instances": 40,
+        "passed": true
+      },
+      {
+        "dial": 5,
+        "sl2_matrices": 120,
+        "four_tick_signatures": 25,
+        "repeated_root_instances": 50,
+        "passed": true
+      },
+      {
+        "dial": 6,
+        "sl2_matrices": 144,
+        "four_tick_signatures": 36,
+        "repeated_root_instances": 72,
+        "passed": true
+      },
+      {
+        "dial": 7,
+        "sl2_matrices": 336,
+        "four_tick_signatures": 49,
+        "repeated_root_instances": 98,
+        "passed": true
+      },
+      {
+        "dial": 8,
+        "sl2_matrices": 384,
+        "four_tick_signatures": 64,
+        "repeated_root_instances": 320,
+        "passed": true
+      },
+      {
+        "dial": 9,
+        "sl2_matrices": 648,
+        "four_tick_signatures": 81,
+        "repeated_root_instances": 198,
+        "passed": true
+      }
+    ],
+    "singularities": [
+      {
+        "p": 3,
+        "q": 2,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 5,
+        "q": 2,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 5,
+        "q": 3,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 5,
+        "q": 4,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          2,
+          3
+        ]
+      },
+      {
+        "p": 7,
+        "q": 2,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          3,
+          4
+        ]
+      },
+      {
+        "p": 7,
+        "q": 3,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 7,
+        "q": 4,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          2,
+          5
+        ]
+      },
+      {
+        "p": 7,
+        "q": 5,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 7,
+        "q": 6,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 11,
+        "q": 2,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 11,
+        "q": 3,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          5,
+          6
+        ]
+      },
+      {
+        "p": 11,
+        "q": 4,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          2,
+          9
+        ]
+      },
+      {
+        "p": 11,
+        "q": 5,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          4,
+          7
+        ]
+      },
+      {
+        "p": 11,
+        "q": 6,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 11,
+        "q": 7,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 11,
+        "q": 8,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 11,
+        "q": 9,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          3,
+          8
+        ]
+      },
+      {
+        "p": 11,
+        "q": 10,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 2,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 3,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          4,
+          9
+        ]
+      },
+      {
+        "p": 13,
+        "q": 4,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          2,
+          11
+        ]
+      },
+      {
+        "p": 13,
+        "q": 5,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 6,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 7,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 8,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 9,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          3,
+          10
+        ]
+      },
+      {
+        "p": 13,
+        "q": 10,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          6,
+          7
+        ]
+      },
+      {
+        "p": 13,
+        "q": 11,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": []
+      },
+      {
+        "p": 13,
+        "q": 12,
+        "singular_points": [
+          [
+            1,
+            1
+          ]
+        ],
+        "rational_tangent_roots": [
+          5,
+          8
+        ]
+      }
+    ],
+    "back_step": {
+      "cycle": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ],
+      "increments_mod_5": [
+        1,
+        2,
+        4,
+        2,
+        1
+      ],
+      "unique_back_step": [
+        3,
+        2
+      ]
+    },
+    "passed": true
+  }
+}
