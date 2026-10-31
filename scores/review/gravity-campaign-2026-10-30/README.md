@@ -389,7 +389,7 @@ Zero additional material native applications are credited; M166's selected-band 
 
 ## E08/G01–G04: gauge-volume transfer and a specified matter/regulator calculation
 
-Five new pending claims: GAC:gaussian-gauge-volume, GAC:scalar-coframe-candidate,
+Five claims were independently approved in review12: GAC:gaussian-gauge-volume, GAC:scalar-coframe-candidate,
 GAC:clock-coupling-response, GAC:finite-regulator-symmetry and GAC:finite-gaussian-loop.
 Findings142–146 and literal section7 quotes state the scopes. All104 old approvals stand;
 the new GaugeVolume/Matter/Clock/Regulator/Loop Defs/Statements/proofs are new surfaces.
@@ -425,7 +425,11 @@ G01 is a candidate addition, G03/G04 a specified finite Euclidean regulator. The
 Lorentzian gravity/matter sector. The Collins primary-paper link motivates the test only. Full native
 coupling selection, regulator/symmetry/source identification and G05/G06 transfer remain separate.
 All five investigations propose zero additional material native application credit; E08's intended
-native quantum transfer is unsuccessful. Independent review12 is required before approval.
+native quantum transfer is unsuccessful.
 
 validation-E08-G01-G02-G03-G04.json records full required checks, certificates, both empty drifts
-and five separate kernel replays. The root agent does not self-approve these claims.
+and five separate kernel replays. All five claims were independently approved at freeze
+`ef731bfed4e627df07b67a14f212557cb515f381`; none returned. See the distinct
+[audit](audit-independent-12.md), [per-key verdicts](verdict-independent-12.json),
+[validation](validation-independent-12.json) and [exact regulator replay](regulator-arithmetic-independent-12.py).
+All104 earlier approvals stand. Zero additional material native applications are credited.

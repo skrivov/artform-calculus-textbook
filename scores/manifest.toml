@@ -1700,8 +1700,8 @@ See [finding 142](findings/142-unfixed-gaussian-volume-and-native-quantum-transf
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.gaugeVolumeLaw"
 lean_proof = "Artform.Scores.GravityBridge.gaugeVolumeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "6e505b17f7f7421314720b146dfa4e4da1591cac0213dd0c59a07c4103024c7a"
 
 [[statement]]
 key = "GAC:scalar-coframe-candidate"
@@ -1725,8 +1725,8 @@ See [finding 143](findings/143-scalar-coframe-candidate-and-source-variation.md)
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.matterLaw"
 lean_proof = "Artform.Scores.GravityBridge.matterLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "94085d72dfc976add9d1ba56643e77edc9d39e21166f5a8477245e2ec3e32f07"
 
 [[statement]]
 key = "GAC:clock-coupling-response"
@@ -1749,8 +1749,8 @@ See [finding 144](findings/144-clock-source-response-and-free-coupling.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.clockLaw"
 lean_proof = "Artform.Scores.GravityBridge.clockLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "c0dd0eb165203969855c06a57386f23d0b86e57718b28275701ca03c96281718"
 
 [[statement]]
 key = "GAC:finite-regulator-symmetry"
@@ -1777,8 +1777,8 @@ See [finding 145](findings/145-spatial-symmetry-and-exact-binary-regulator.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.regulatorLaw"
 lean_proof = "Artform.Scores.GravityBridge.regulatorLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "4257c23cb873f65f018c749dd628c3c6e9c59346f008256049edcfbd761930b0"
 
 [[statement]]
 key = "GAC:finite-gaussian-loop"
@@ -1804,5 +1804,5 @@ See [finding 146](findings/146-finite-gaussian-loop-response-and-analytic-error.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.loopLaw"
 lean_proof = "Artform.Scores.GravityBridge.loopLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "0be6567bdc209d6264f83ea4799a554f86f5a205bc77a2468ced0f51b4673b14"
