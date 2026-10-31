@@ -436,7 +436,7 @@ All104 earlier approvals stand. Zero additional material native applications are
 
 ## G05/G06/H01–H03: protection and route-specific transfer audits
 
-Five new pending claims: GAC:axis-exchange-protection, GAC:matter-transfer-obligations,
+Five independently approved claims: GAC:axis-exchange-protection, GAC:matter-transfer-obligations,
 GAC:boundary-anchoring, GAC:guarded-pivot-substitution and GAC:finite-response-audit.
 Findings147–151 and literal section7 quotes specify the scopes. All109 old approvals stand;
 Protection/MatterTransfer/BoundaryAnchoring/PivotAudit/RadiativeAudit triples are new surfaces.
@@ -466,5 +466,10 @@ protection or coupling selection. All five propose zero additional native materi
 
 Statement binders use underscore-prefixed proof names where the proposition does not depend on the
 proof term; these are alpha-renamings of the authored lemma types, not changed hypotheses.
-Independent review13 is required before approval. validation-G05-G06-H01-H02-H03.json records
-required checks, certificates, both empty drifts and five separate kernel replays.
+validation-G05-G06-H01-H02-H03.json records root checks, certificates, both empty drifts
+and five separate kernel replays. All five claims were independently approved at freeze
+`383d4baf1686956a81ecda7b484fe89199a4f85f`; none returned. See the distinct
+[audit](audit-independent-13.md), [per-key verdicts](verdict-independent-13.json),
+[validation](validation-independent-13.json) and [exact arithmetic replay](arithmetic-independent-13.py).
+All109 earlier approvals stand. Zero additional material native applications are credited;
+the guarded pivot result strengthens the same accepted R2 workflow.

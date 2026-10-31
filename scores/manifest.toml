@@ -1825,8 +1825,8 @@ See [finding 147](findings/147-axis-exchange-protection-and-native-symmetry-gap.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.protectionLaw"
 lean_proof = "Artform.Scores.GravityBridge.protectionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "c54c6a72b565f83599a582c2490b6b8dea7d171b5c7fb2e02ce98b214fc830ff"
 
 [[statement]]
 key = "GAC:matter-transfer-obligations"
@@ -1846,8 +1846,8 @@ See [finding 148](findings/148-clock-backreaction-and-regulator-domain-transfer.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.matterTransferLaw"
 lean_proof = "Artform.Scores.GravityBridge.matterTransferLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "25e230fc91c53b8c0f7fbc206e61c93b156b8a211f249a610dd167b014b4190b"
 
 [[statement]]
 key = "GAC:boundary-anchoring"
@@ -1868,8 +1868,8 @@ See [finding 149](findings/149-component-boundary-anchoring-and-native-gluing-au
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.boundaryAnchoringLaw"
 lean_proof = "Artform.Scores.GravityBridge.boundaryAnchoringLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "8a755e1cd9f764901ca9a9ce227f4a569fab55405b9e1fb8306e0edb70849800"
 
 [[statement]]
 key = "GAC:guarded-pivot-substitution"
@@ -1892,8 +1892,8 @@ See [finding 150](findings/150-native-r2-guarded-pivot-substitution-audit.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.pivotAuditLaw"
 lean_proof = "Artform.Scores.GravityBridge.pivotAuditLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "e3b284346785306c6e6e7a542c3d5aff70157e927af0df8f6745d5b3dc06e2e8"
 
 [[statement]]
 key = "GAC:finite-response-audit"
@@ -1914,5 +1914,5 @@ See [finding 151](findings/151-finite-amplitude-response-and-matching-freedom.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.radiativeAuditLaw"
 lean_proof = "Artform.Scores.GravityBridge.radiativeAuditLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "356d4a1fd0dbe7a7fe1dbe9f5d7bbf07b631d37e13750f1bb26f8fcf42b73dd3"

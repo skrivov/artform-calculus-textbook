@@ -122,3 +122,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:clock-coupling-response` approved as `Artform.Scores.GravityBridge.Statement.clockLaw` (text c0dd0eb16520)
 - 2026-10-30: `GAC:finite-regulator-symmetry` approved as `Artform.Scores.GravityBridge.Statement.regulatorLaw` (text 4257c23cb873)
 - 2026-10-30: `GAC:finite-gaussian-loop` approved as `Artform.Scores.GravityBridge.Statement.loopLaw` (text 0be6567bdc20)
+- 2026-10-30: `GAC:axis-exchange-protection` approved as `Artform.Scores.GravityBridge.Statement.protectionLaw` (text c54c6a72b565)
+- 2026-10-30: `GAC:matter-transfer-obligations` approved as `Artform.Scores.GravityBridge.Statement.matterTransferLaw` (text 25e230fc91c5)
+- 2026-10-30: `GAC:boundary-anchoring` approved as `Artform.Scores.GravityBridge.Statement.boundaryAnchoringLaw` (text 8a755e1cd9f7)
+- 2026-10-30: `GAC:guarded-pivot-substitution` approved as `Artform.Scores.GravityBridge.Statement.pivotAuditLaw` (text e3b284346785)
+- 2026-10-30: `GAC:finite-response-audit` approved as `Artform.Scores.GravityBridge.Statement.radiativeAuditLaw` (text 356d4a1fd0db)
