@@ -3128,8 +3128,8 @@ See [finding207](findings/207-native-cauchy-polynomial-lower-basis.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.cauchyLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.cauchyLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "888a12abf32299ab6542eccfa288b256ca898687296d11143aaa84341acb874b"
 
 [[statement]]
 key = "GAC2:native-companion-resolvent"
@@ -3149,8 +3149,8 @@ See [finding208](findings/208-native-companion-resolvent.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.resolventLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.resolventLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "518ca2fdcadc29ff34f50b8ef5917621e22c453622d5fcc3b47e04b340eb77e1"
 
 [[statement]]
 key = "GAC2:mixed-source-response-contacts"
@@ -3170,8 +3170,8 @@ See [finding209](findings/209-mixed-source-response-contacts.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.sourceResponseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.sourceResponseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f2c79f08c4ba3ced436a6bad7bd974fadf6ed93bfdbc2215de9473ea2c30a034"
 
 [[statement]]
 key = "GAC2:native-current-coordinate-factors"
@@ -3191,8 +3191,8 @@ See [finding210](findings/210-native-current-coordinate-factors.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.coordinatesLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.coordinatesLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f1967b785e416cc660af1f786e55ab82083a514c78fe6239a20cd86a7d5e0dde"
 
 [[statement]]
 key = "GAC2:complete-current-processing-defect"
@@ -3210,8 +3210,8 @@ See [finding211](findings/211-complete-current-processing-defect.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.processingLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.processingLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "4f84a024c3faffc754a1a03006ba61af6f371012cd31d404623cec3cc9e50777"
 
 [[statement]]
 key = "GAC2:admitted-source-current-radical"
@@ -3229,8 +3229,8 @@ See [finding212](findings/212-admitted-source-current-radical.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.radicalLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.radicalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "eeafac1aeb06234fd5c2bd96ee41db2563a0c7185668334c9c1dba83722f6d2f"
 
 [[statement]]
 key = "GAC2:source-observation-preparation-equivalence"
@@ -3249,8 +3249,8 @@ See [finding213](findings/213-source-observation-preparation-equivalence.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.equivalenceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.equivalenceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "428288c59d23a134352777d671170dd0634c1ede362beee5d08301605d555026"
 
 [[statement]]
 key = "GAC2:owned-window-incoming-boundary"
@@ -3268,8 +3268,8 @@ See [finding214](findings/214-owned-window-incoming-boundary.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.ownedWindowLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.ownedWindowLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "a0852c8deaa5867d24fa07aa82fb7b7108e41f54bf22de17154b154ad3a9dc05"
 
 [[statement]]
 key = "GAC2:declared-cost-quadratic-energy"
@@ -3289,8 +3289,8 @@ See [finding215](findings/215-declared-cost-quadratic-energy.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.costEnergyLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.costEnergyLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "bba57a4ee4034cdc8d7e5f8a913dbfbd50cf360ac36926035bb5fc6e95bad668"
 
 [[statement]]
 key = "GAC2:leading-preparation-trace-gap"
@@ -3309,5 +3309,5 @@ See [finding216](findings/216-leading-preparation-trace-gap.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leadingPreparationLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "2067e72fb55257ebb6b09362840c913e4a624ac4fc5354aa42fd6507647d4bfa"

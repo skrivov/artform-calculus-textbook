@@ -1,0 +1,361 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "80916e9292b0f11ea7f95ed203fa6ecde25baca4",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 169,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:native-cauchy-polynomial-lower-basis",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.cauchyLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.SlowCompanion.cauchyLaw",
+      "review_text_sha256": "888a12abf32299ab6542eccfa288b256ca898687296d11143aaa84341acb874b",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Complete original four-jet polynomial, positive C1*t0 contact and consistent involutive transformation of all G_j, jets and mixed column. Pointwise algebra; no complete-coframe chi/Phi or physical-history identification."
+    },
+    {
+      "key": "GAC2:native-companion-resolvent",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.resolventLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.SlowCompanion.resolventLaw",
+      "review_text_sha256": "518ca2fdcadc29ff34f50b8ef5917621e22c453622d5fcc3b47e04b340eb77e1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 7,
+      "new_material_native_application": false,
+      "reason": "Complete companion residual and reconstruction; corresponding G4/polynomial inverse guards retained separately for right solve and uniqueness. Nonzero quartic example actually meets all guards. No native coefficient or uniform contour inverse supplied."
+    },
+    {
+      "key": "GAC2:mixed-source-response-contacts",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.sourceResponseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.SlowCompanion.sourceResponseLaw",
+      "review_text_sha256": "f2c79f08c4ba3ced436a6bad7bd974fadf6ed93bfdbc2215de9473ea2c30a034",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Full mixed source inversion with both coordinate inverse directions and nonzero scalar pole guard. Complete preparation differences and conditional C1 contact; distinct from coordinate inversion at the TT light cones."
+    },
+    {
+      "key": "GAC2:native-current-coordinate-factors",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.coordinatesLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeCurrent.coordinatesLaw",
+      "review_text_sha256": "f1967b785e416cc660af1f786e55ab82083a514c78fe6239a20cd86a7d5e0dde",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Original full tensor/coframe q/2 and p normalization, correct q,v=2p factor and dyad pair-1. Bilinear physical-connection expansion retains both cross contacts; slot, measure, Hessian and integrated-cut binding remain separate."
+    },
+    {
+      "key": "GAC2:complete-current-processing-defect",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.processingLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeCurrent.processingLaw",
+      "review_text_sha256": "4f84a024c3faffc754a1a03006ba61af6f371012cd31d404623cec3cc9e50777",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "Exact pulled-current change retains quadratic contact with the operator-norm estimate in supplied spaces. Both ambient radical-slot hypotheses explicit; no physical radical or source/admission equivalence inferred."
+    },
+    {
+      "key": "GAC2:admitted-source-current-radical",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.radicalLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeCurrent.radicalLaw",
+      "review_text_sha256": "eeafac1aeb06234fd5c2bd96ee41db2563a0c7185668334c9c1dba83722f6d2f",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "Admitted left radical retains W and restricted test class. Generator preservation requires W-invariance and conservation; selected nondegeneracy and J-kernel restriction retain their scopes. No actual full native radical computation."
+    },
+    {
+      "key": "GAC2:source-observation-preparation-equivalence",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.equivalenceLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.SlowCompanion.equivalenceLaw",
+      "review_text_sha256": "428288c59d23a134352777d671170dd0634c1ede362beee5d08301605d555026",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "Admission plus complete force and readout agreement iff the difference lies in all three required subspaces. Full trace rigidity requires actual recovery on W and both maps admitted; readout-invisible force adverse example retained."
+    },
+    {
+      "key": "GAC2:owned-window-incoming-boundary",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.ownedWindowLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeCurrent.ownedWindowLaw",
+      "review_text_sha256": "a0852c8deaa5867d24fa07aa82fb7b7108e41f54bf22de17154b154ad3a9dc05",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "True incoming shift is x-s; owner difference remains. Constant full-group owner cancels and finite outgoing edge gives1. No whole40 finite geometric boundary assembly or erasure by full-space reindexing."
+    },
+    {
+      "key": "GAC2:declared-cost-quadratic-energy",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.costEnergyLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeCurrent.costEnergyLaw",
+      "review_text_sha256": "bba57a4ee4034cdc8d7e5f8a913dbfbd50cf360ac36926035bb5fc6e95bad668",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 7,
+      "new_material_native_application": false,
+      "reason": "Correct original leading selected quadratic coefficient7*a^2/2 with unchanged one-scale program and36*a/505 output. Exact unbounded rational amplitude coefficient; no nonlinear amplitude admission or finite-h physical energy theorem."
+    },
+    {
+      "key": "GAC2:leading-preparation-trace-gap",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leadingPreparationLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw",
+      "review_text_sha256": "2067e72fb55257ebb6b09362840c913e4a624ac4fc5354aa42fd6507647d4bfa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "Triangular leading graph criterion and original-space norm lower bound, zero-copy iffF0, and nonzero Sylvester graph with both inverse guards. Finite-h feedback and physical trace/history admission remain separate."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Cauchy.lean": "c1a40434cc505a8e07d7ed0fb12f9b0b6bfc6946ce23152ea18d3d47bbee06b3",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/CauchyDefs.lean": "43ca1d8f25420040e02f23d4b5be97ff2bb2305bf33e361acf9853eceaacde22",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/CauchyStatements.lean": "7e1b700adb97965e382e7c5c53e49f6b6ca69d098bcb0b728de4244d24124c11",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Equivalence.lean": "210e82e0113d33506b73e9ae0b93e4254e875decd9aca284f0c6aa81e54fb42b",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/EquivalenceDefs.lean": "324f3cfec7b88102931b850df43487b751d4b7d7e39177a84d1d9a0f2cf6dfda",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/EquivalenceStatements.lean": "055101a11a16af3fa3ce68fa5a1178545381a5cb91f04eda56c53a01d20a5d0e",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Resolvent.lean": "52687ee15648414b2cb80a722cb23c98efea3cc906f4eca1ae86465de74ce8e1",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/ResolventDefs.lean": "619129a379a85bbc7becf7c16a7411a974ce7809c129c04dd0a8adf0d0a6e8db",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/ResolventStatements.lean": "e9bdee37be13b2718cc6a934942fd4ef488b9eb51dfff394a7d1df57e8dfc36a",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponse.lean": "2f4496d57bac5c33933de7075ad9b54a37f446750696d2d324b2d88cf0810225",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponseDefs.lean": "5f8695a792019158c94f435f5272b286914e13838ffa2dbfb13c505915107656",
+    "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponseStatements.lean": "d4fc947720e6bf8cad69e9206d2e616ef683bb3b7f525b42a86b5bba6a2feb13",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Coordinates.lean": "166cb66ce78453b1c7ba42a5f556f7da5e00e6bba4b90e696eb959ce819e4363",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CoordinatesDefs.lean": "6c0bc4e68024fd156da1fea32c8ca3b04b2bc6a5e6d9a41006be634f06babeb4",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CoordinatesStatements.lean": "56a596e73fc05a77f6159791483f13fc737f4d003a3d2134cd8ecc95b363ef4e",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergy.lean": "10db75e4ed3fa09a838241325c04d1261233b02c7525f332e1a764c4626dee51",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergyDefs.lean": "d18bf517d0d857c906f966782c6fed663a62332bde652b8d6bdb15b5964f723e",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergyStatements.lean": "eb69888f6d4bace89830b09ca0e6cdacf6426e224b653a711a306465cd9594f8",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindow.lean": "f328bbc8252f9b27dce240728f62e26dba819bb39b0933a3f6ed9b92588f8709",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindowDefs.lean": "5b333326d0c51008aaf68fa8472dffff6e986e2ced44253d772d04bde321b8f9",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindowStatements.lean": "c203dc02a81bd9fb8708834d2258c9c4f2f161fdadae9cc12e9736cf77cae68a",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Processing.lean": "77bd3978a3201d8464ad3ff428bbf050727a12e84fac21d72df18c6f2810bc5d",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/ProcessingDefs.lean": "de5229ba7032422b6a5ba57bfe9cab5977631b7d8b9d8cdbdb82887d3c2e0eb8",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/ProcessingStatements.lean": "a73438dd2ccdd8bc494d6bf24d41d66beac157f834a5e574c40a1ee084eae4ff",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Radical.lean": "0bc72f5736d68f2c9ffccf8bf4beb625fb280f904b6d59f7c531db8df548f46e",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/RadicalDefs.lean": "8670491d048dea2e1d2a80d7e5c31eb597513f701b67d53cbab83092cba74a68",
+    "scores/ArtformScores/GravityBridge/Native/NativeCurrent/RadicalStatements.lean": "1892529091ff56d7b7a41cb1c5ff6f6b7aded6aceba6604ee0ab114b86bd6d26",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparation.lean": "a7c62c0e9c3c58e883ce8de1d327efcd0cbf07256a627be6366b320103d1f74b",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparationDefs.lean": "41a4bb6944ff87b4065b5be8c3f47cdfd34a412102d9eac91d0261f74781c903",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparationStatements.lean": "9cdbe65cfe24e143fc106b7cd52a5ab2ce1a91892f9ee91f96155cc5496996bf"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "add997f220831a8102c408ae764ece32ba397c050a2c7ac3631128ffbe6de262",
+    "physics/ledgers/lattice-waves/findings/207-native-cauchy-polynomial-lower-basis.md": "70162a272bbaa054d467355b644ff56d5a9d99ef2c9a50dc13aabb4484c360b0",
+    "physics/ledgers/lattice-waves/findings/208-native-companion-resolvent.md": "06c63890eb055b759234bf8f3a107287add193eeac8e68625fd3f0d8f1404a96",
+    "physics/ledgers/lattice-waves/findings/209-mixed-source-response-contacts.md": "cd59062d8fb1ffabd2edbfb87322236f24ea8c04bc181e835420a3145bdd5a0b",
+    "physics/ledgers/lattice-waves/findings/210-native-current-coordinate-factors.md": "b9ddc450134e65f83be1b97f15616281da7aafdbe1dd383b19373b779b36f4de",
+    "physics/ledgers/lattice-waves/findings/211-complete-current-processing-defect.md": "2a89ec049816d280ae84a09220cfe18f3273e6b6b30bdcc618934b6f3c548643",
+    "physics/ledgers/lattice-waves/findings/212-admitted-source-current-radical.md": "91d55caeb2aac5dc36b35056840ef22822d33df5a7d99788fbbf2d92b6222b1d",
+    "physics/ledgers/lattice-waves/findings/213-source-observation-preparation-equivalence.md": "a036ec329f5e80576f2180d58ce76d2dd8912875ab2c4d60a0b8b831600fd9fd",
+    "physics/ledgers/lattice-waves/findings/214-owned-window-incoming-boundary.md": "7b3c8e1a4bd7889fade5f1f0031592ed90d4a5257c22cb87b33151c0bd34dbb9",
+    "physics/ledgers/lattice-waves/findings/215-declared-cost-quadratic-energy.md": "2ce6e7ace2d4cbc7b1b18b12736fce0026c0676516dcb1166ac1088241d4c443",
+    "physics/ledgers/lattice-waves/findings/216-leading-preparation-trace-gap.md": "a42a8378387fd7de94d6f23303f527662b368d67a7c47967e4d98a3ca56ae292"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "de6aec250bdf279bbf8c7c4d3dfa92cdd7eeaaf2a0380a0c018fa0c677e026e1",
+  "exact_original_snapshot_pairs_authenticated": 39,
+  "new_original_scoped_texts_read": 8,
+  "scope_checks": {
+    "complete_Cauchy_G_j_and_all_four_jets": true,
+    "positive_C1_t0_contact_and_lower_basis": true,
+    "complete_coframe_chi_not_constructor_Phi": true,
+    "Fourier_reality_not_componentwise_evenness": true,
+    "G4_and_Gz_guard_directions_retained": true,
+    "quartic_reference_meets_guards": true,
+    "mixed_response_excludes_TT_poles": true,
+    "omitted_contact_nonzero_only_with_nonzero_vector": true,
+    "original_tensor_q_p_pair_factor": "-1/2",
+    "q_v_equals2p_factor": "-1/4",
+    "native_dyad_pair": -1,
+    "connection_bilinear_expansion_not_physical_slot_or_measure_identification": true,
+    "both_processing_cross_contacts_and_quadratic_term": true,
+    "same_supplied_norm_spaces": true,
+    "both_ambient_radical_slots_for_processing": true,
+    "admitted_radical_retains_W_and_J_kernel": true,
+    "generator_radical_descent_requires_W_invariance": true,
+    "source_readout_admission_all_required": true,
+    "full_trace_recovery_only_on_W": true,
+    "true_incoming_owned_shift_and_nonzero_boundary": true,
+    "quadratic_energy_coefficient_not_nonlinear_amplitude_admission": true,
+    "leading_triangular_not_finite_h_feedback_free": true
+  },
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-09.py",
+    "sha256": "f8023ff13974b11ed68a42df6a215a4899f3fb72694b5931d6bac4a2ceb57bf4",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-09.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.076,
+    "output_bytes": 5912,
+    "output_sha256": "aa856dfb64940cf12394d3ec144500333a10d29ddf2dbc0bbbe9ab9fd6c8d589",
+    "stderr": "",
+    "result": {
+      "status": "pass",
+      "method": "distinct Fraction Gaussian inversion of a16x16 generic noncommuting companion and6x6 full mixed symbol, with exact interface/adverse tests",
+      "source_sha256": {
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Cauchy.lean": "c1a40434cc505a8e07d7ed0fb12f9b0b6bfc6946ce23152ea18d3d47bbee06b3",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/CauchyDefs.lean": "43ca1d8f25420040e02f23d4b5be97ff2bb2305bf33e361acf9853eceaacde22",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/CauchyStatements.lean": "7e1b700adb97965e382e7c5c53e49f6b6ca69d098bcb0b728de4244d24124c11",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Equivalence.lean": "210e82e0113d33506b73e9ae0b93e4254e875decd9aca284f0c6aa81e54fb42b",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/EquivalenceDefs.lean": "324f3cfec7b88102931b850df43487b751d4b7d7e39177a84d1d9a0f2cf6dfda",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/EquivalenceStatements.lean": "055101a11a16af3fa3ce68fa5a1178545381a5cb91f04eda56c53a01d20a5d0e",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/Resolvent.lean": "52687ee15648414b2cb80a722cb23c98efea3cc906f4eca1ae86465de74ce8e1",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/ResolventDefs.lean": "619129a379a85bbc7becf7c16a7411a974ce7809c129c04dd0a8adf0d0a6e8db",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/ResolventStatements.lean": "e9bdee37be13b2718cc6a934942fd4ef488b9eb51dfff394a7d1df57e8dfc36a",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponse.lean": "2f4496d57bac5c33933de7075ad9b54a37f446750696d2d324b2d88cf0810225",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponseDefs.lean": "5f8695a792019158c94f435f5272b286914e13838ffa2dbfb13c505915107656",
+        "scores/ArtformScores/GravityBridge/Native/SlowCompanion/SourceResponseStatements.lean": "d4fc947720e6bf8cad69e9206d2e616ef683bb3b7f525b42a86b5bba6a2feb13",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Coordinates.lean": "166cb66ce78453b1c7ba42a5f556f7da5e00e6bba4b90e696eb959ce819e4363",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CoordinatesDefs.lean": "6c0bc4e68024fd156da1fea32c8ca3b04b2bc6a5e6d9a41006be634f06babeb4",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CoordinatesStatements.lean": "56a596e73fc05a77f6159791483f13fc737f4d003a3d2134cd8ecc95b363ef4e",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergy.lean": "10db75e4ed3fa09a838241325c04d1261233b02c7525f332e1a764c4626dee51",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergyDefs.lean": "d18bf517d0d857c906f966782c6fed663a62332bde652b8d6bdb15b5964f723e",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/CostEnergyStatements.lean": "eb69888f6d4bace89830b09ca0e6cdacf6426e224b653a711a306465cd9594f8",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindow.lean": "f328bbc8252f9b27dce240728f62e26dba819bb39b0933a3f6ed9b92588f8709",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindowDefs.lean": "5b333326d0c51008aaf68fa8472dffff6e986e2ced44253d772d04bde321b8f9",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/OwnedWindowStatements.lean": "c203dc02a81bd9fb8708834d2258c9c4f2f161fdadae9cc12e9736cf77cae68a",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Processing.lean": "77bd3978a3201d8464ad3ff428bbf050727a12e84fac21d72df18c6f2810bc5d",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/ProcessingDefs.lean": "de5229ba7032422b6a5ba57bfe9cab5977631b7d8b9d8cdbdb82887d3c2e0eb8",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/ProcessingStatements.lean": "a73438dd2ccdd8bc494d6bf24d41d66beac157f834a5e574c40a1ee084eae4ff",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/Radical.lean": "0bc72f5736d68f2c9ffccf8bf4beb625fb280f904b6d59f7c531db8df548f46e",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/RadicalDefs.lean": "8670491d048dea2e1d2a80d7e5c31eb597513f701b67d53cbab83092cba74a68",
+        "scores/ArtformScores/GravityBridge/Native/NativeCurrent/RadicalStatements.lean": "1892529091ff56d7b7a41cb1c5ff6f6b7aded6aceba6604ee0ab114b86bd6d26",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparation.lean": "a7c62c0e9c3c58e883ce8de1d327efcd0cbf07256a627be6366b320103d1f74b",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparationDefs.lean": "41a4bb6944ff87b4065b5be8c3f47cdfd34a412102d9eac91d0261f74781c903",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/LeadingPreparationStatements.lean": "9cdbe65cfe24e143fc106b7cd52a5ab2ce1a91892f9ee91f96155cc5496996bf"
+      },
+      "checks": {
+        "generic_companion_basis_sources": 16,
+        "companion_two_inverse_directions": true,
+        "full_mixed_basis_sources": 6,
+        "full_mixed_two_inverse_directions": true,
+        "all_four_lower_jets_on_all_basis_sources": true,
+        "nonzero_C1_contact_and_zero_contact_case": true,
+        "current_original_full_tensor_pair": -1,
+        "complete_quadratic_current_and_connection_contacts": true,
+        "admitted_radical_and_source_readout_criteria": true,
+        "owned_cyclic_shifts_tested": 5,
+        "owned_outgoing_edge_boundary": 1,
+        "constant_cost_quadratic_examples": 6,
+        "nonnilpotent_leading_preparation": true,
+        "adverse_cases": [
+          "scalar mixed pole",
+          "omitted C1 contact",
+          "omitted quadratic current term",
+          "one-slot radical only",
+          "missing admitted-subspace invariance",
+          "readout agreement without force agreement",
+          "force/readout kernels without admission",
+          "selected nondegeneracy versus full radical"
+        ]
+      },
+      "limitations": "All matrices here are declared generic interfaces. No actual native coefficient/contour/norm/physical trace or full radical identification is inferred."
+    }
+  },
+  "root_replay_reproduced_without_JSON_mutation": {
+    "script": "source-interfaces-root-09.py",
+    "script_sha256": "f14b5dff62eb4c5563a3fe9fe1153261040dc75b30ab760aaf7ac62373032a51",
+    "artifact_sha256": "2f8c22aac144f357c5901e049d12b3103e99d2fe1e31fa8bb148c666ae445dab",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/source-interfaces-root-09.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.032,
+    "output_bytes": 326,
+    "output_sha256": "42d019002d1495076ba39b32a5e9772835405f5c339cba1b2a60021e11267828",
+    "stderr": "",
+    "result": {
+      "status": "passed",
+      "full_noncommuting_companion_basis_tests": 8,
+      "two_inverse_directions": true,
+      "all_four_lower_basis_jets": true,
+      "complete_current_quadratic_contact": true,
+      "owned_corner": "1",
+      "constant_cost_energy_examples": [
+        "7/2",
+        "14"
+      ],
+      "source_pairs": 39,
+      "new_physical_gate": 0,
+      "historical_or_runtime_saving": 0
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_historical_runtime_or_prospective_efficiency_credit": 0,
+    "prior_C10_and_E08_prospective_comparisons_unchanged": true,
+    "generic_pointwise_interfaces_only": true,
+    "actual_native_companion_coefficients_and_norms_instantiated": false,
+    "actual_full_native_current_radical_computed": false,
+    "complete_physical_trace_admission_proved": false,
+    "uninstantiated_bridges": [
+      "actual full40 G_j/C_j coefficient and incoming-source identification",
+      "original G4 normalization and uniform band/contour/halo bounds",
+      "complete coframe chi versus constructor Phi and scalar/Navier physical trace",
+      "16/24 slot embeddings, h^-2 Hessian and native measure/current normalization",
+      "native admitted full radical, Ward/quotient and complete owned-corner assembly",
+      "physical frame/link/history and nonlinear finite-h preparation"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 60,
+  "campaign_target": 120,
+  "total_approvals_after_review": 179,
+  "audit": "audit-independent-09.md",
+  "validation": "validation-independent-09.json"
+}

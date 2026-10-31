@@ -288,3 +288,20 @@ These are exact original linear interfaces and adverse tests. The Cauchy polynom
 The current factors are original-1/2 for(q,p),-1/4 for(q,v=2p), with full tensor contraction and dyad pair-1. The generic B(f-hc,g-hd) expansion retains both cross contacts but is not an unproved identification of16/24 embeddings or native measure/Hessian/cut normalization. Current change retains its quadratic term and original-space norm. Radical/equivalence criteria retain admitted/source/readout conditions. The finite owner boundary is explicitly nonzero; no full-space reindexing erases it. The operation-count/energy counterexample is FORMAL quadratic amplitude dependence, not admission of arbitrary nonlinear amplitudes. Leading prepared graphs require changed coordinate traces under nonzero forcing, but complete coframe chi is NOT the constructor Phi at finite h.
 
 No new material native gate, uniform finite-spacing constructor, actual full physical quotient, historical/runtime or prospective efficiency saving is proposed. The actual full40 coefficient/analytic/frame/link/history bridge remains explicit. Root validation: validation-F01-F10.json; full8x8 noncommuting companion/basis/source/current/window replay: source-interfaces-root-09.py/json. Independently check every literal/definition/source scope and non-vacuity; run all required checks/drifts and10 separate kernels plus distinct adverse replay. Approve only passes, record audit/verdict/compact validation09 and publish/push autonomously.
+
+All ten review09 claims were independently approved on31 October2026 at freeze
+`80916e9292b0f11ea7f95ed203fa6ecde25baca4`; none returned. See the distinct
+[audit](audit-independent-09.md), [per-key verdicts](verdict-independent-09.json),
+[compact validation](validation-independent-09.json) and
+[exact/adverse replay](arithmetic-independent-09.py). All169 earlier approvals and
+all30 submitted Lean files remain unchanged, giving179 total approvals and60/120
+completed mathematical dispositions. The ten separate kernels and both replays pass.
+The distinct replay independently inverts a generic16-by16 noncommuting companion
+and a six-by-six full mixed source map, and tests admitted/source/radical/window
+failure cases. This is not an identification of actual native coefficients.
+The original lower-basis+C1 contact, inverse guards, q,p versus q,v current factors,
+full processing quadratic term and finite owner defect retain their scoped meaning.
+No new material native application or efficiency credit is assigned. Actual native
+coefficient/contour/current/radical and physical coframe/frame/link/history bindings
+remain separate; the inherited R2 workflow and earlier prospective C10/E08 program
+comparisons stand unchanged.
