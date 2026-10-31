@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 199 |
-| stated | 0 |
+| stated | 10 |
 | planned | 0 |
-| **total** | **199** |
+| **total** | **209** |
 
 ## Statements
 
@@ -214,3 +214,13 @@
 | GAC2:two-cell-three-output-programs | Matched exact programs for three component outputs | proved | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.programsLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.programsLaw` | approved 2026-10-31 |
 | GAC2:fourier-reality-temporal-halo | Fourier reality and required temporal halo | proved | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.realityHaloLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.realityHaloLaw` | approved 2026-10-31 |
 | GAC2:heldout-source-boundary-susceptibility | Held-out source response and mixed boundary contacts | proved | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.susceptibilityLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw` | approved 2026-10-31 |
+| GAC2:original-full24-tt-cross-source | Full original24-connection Hessian and TT cross source | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.sourceLaw` / `Artform.Scores.GravityBridge.Native.TTCross.sourceLaw` | awaiting review |
+| GAC2:native-paired-tt-preparation | Invariant paired TT dressing with all four preparation jets | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.preparedLaw` / `Artform.Scores.GravityBridge.Native.TTCross.preparedLaw` | awaiting review |
+| GAC2:paired-band-preparation-readout | Prepared read inverse on the native paired-band slice | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.readoutLaw` / `Artform.Scores.GravityBridge.Native.TTCross.readoutLaw` | awaiting review |
+| GAC2:native-tt-zero-preparation-response | Exact source-driven zero-preparation response | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.zeroResponseLaw` / `Artform.Scores.GravityBridge.Native.TTCross.zeroResponseLaw` | awaiting review |
+| GAC2:native-prepared-metric-cut-cost | Metric cost of the native TT dressing | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.metricLaw` / `Artform.Scores.GravityBridge.Native.TTCross.metricLaw` | awaiting review |
+| GAC2:native-full24-independent-return | Independent connection return on all original24 slots | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.independentLaw` / `Artform.Scores.GravityBridge.Native.TTCross.independentLaw` | awaiting review |
+| GAC2:native-bounded-history-ambiguity | A bounded coordinate history does not choose preparation | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.historyLaw` / `Artform.Scores.GravityBridge.Native.TTCross.historyLaw` | awaiting review |
+| GAC2:native-scalar-fourjet-current | Full scalar four-jet current and source contact | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.greenLaw` / `Artform.Scores.GravityBridge.Native.TTCross.greenLaw` | awaiting review |
+| GAC2:native-four-row-source-embedding | Embed the actual mixed source in all four coordinate rows | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.fullRowsLaw` / `Artform.Scores.GravityBridge.Native.TTCross.fullRowsLaw` | awaiting review |
+| GAC2:native-tt-source-range-budget | Actual source range and zero-frequency preparation test | stated | `Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw` / `Artform.Scores.GravityBridge.Native.TTCross.rangeLaw` | awaiting review |

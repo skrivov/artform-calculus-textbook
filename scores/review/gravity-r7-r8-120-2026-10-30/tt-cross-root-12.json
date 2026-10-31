@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "full24_nonreal_symbol_cases": 20,
+  "rational_preparation_current_history_cases": 96,
+  "forced_series_orders": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "checks_groups": 116,
+  "source_pins": 41,
+  "native_credit": "limiting actual source and paired sector only; finite-h/full40 physical gate0",
+  "efficiency_credit": "0; no historical or runtime claim"
+}

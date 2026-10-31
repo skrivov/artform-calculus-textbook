@@ -3711,3 +3711,215 @@ lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "1fb2628d5558d3867a622e188cda9508e89196f7fafcef22b06bf167fd6836b2"
+
+[[statement]]
+key = "GAC2:original-full24-tt-cross-source"
+label = "GAC2:original-full24-tt-cross-source"
+title = "Full original24-connection Hessian and TT cross source"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:original-full24-tt-cross-source)"
+statement = """
+**GAC2:original-full24-tt-cross-source (full original24-connection hessian and tt cross source).** The original rational homogeneous connection density has polarization
+<B,Bfull*A>, with the exact oriented24-coordinate partition, all four distinct
+and all four repeated blocks. Their full inverse is two-sided. The literal native
+flat torsion and its true coordinate adjoint give Q=M*(Z-2*kappa*T*Bfull^-1*T^T*M*Z),
+kappa=1/101. All24 entries for the symmetric transverse tracefree cross tensor at
+k=(a,-a,0) agree with the three supplied face blocks. On the leading TT wave
+z^2=-2a^2, its complete mixed source is-2*kappa*(9999/9991)*a^4*z*e3.
+The off-orbit cubic is the torsion mixed numerator only; curvature cancellation
+is used only on the leading TT wave. This is a pointwise limiting source result,
+not a finite-spacing solution, admitted packet, state count or instability theorem.
+See [finding237](findings/237-original-full24-tt-cross-source.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.sourceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.sourceLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-paired-tt-preparation"
+label = "GAC2:native-paired-tt-preparation"
+title = "Invariant paired TT dressing with all four preparation jets"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-paired-tt-preparation)"
+statement = """
+**GAC2:native-paired-tt-preparation (invariant paired tt dressing with all four preparation jets).** For a!=0, the actual limiting paired-coordinate equation is
+L_a*chi=d3(t), where L_a=d^4-a^2*d^2-2a^4 and t''=-2a^2*t.
+The particular dressing chi=-t'/(2a^2) has complete cut jet
+K_a(q,v)=(-v/(2a^2),q,v,-2a^2*q). Its full4-jet step intertwines the TT
+step(q,v)->(v,-2a^2*q), retaining the last mixed-source contact-2a^2*v.
+Reading jet entries1 and2 recovers(q,v); K_a is injective and its intersection
+with zero coordinate preparation contains only zero TT data. This is a leading
+triangular dressing, not a full-feedback finite-h invariant graph or permission
+to change the original physical preparation.
+See [finding238](findings/238-native-paired-tt-preparation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.preparedLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.preparedLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:paired-band-preparation-readout"
+label = "GAC2:paired-band-preparation-readout"
+title = "Prepared read inverse on the native paired-band slice"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:paired-band-preparation-readout)"
+statement = """
+**GAC2:paired-band-preparation-readout (prepared read inverse on the native paired-band slice).** The prepared graph has exact read inverse(q,v)=(chi',chi''). On the
+paired slice9/2<=a^2<=25/2 of the original compact reflected R7 band, a is nonzero,
+|chi|<=|v|/9 and |d3(chi)|<=25|q|. These are explicit component budgets
+for the complete prepared jet on that slice. The same two-entry read on an
+unrestricted4-jet is not injective: (1,0,0,0) and0 have the same read.
+This does not assert a read inverse on all native solutions or the whole
+three-dimensional selected band.
+See [finding239](findings/239-paired-band-preparation-readout.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.readoutLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.readoutLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-tt-zero-preparation-response"
+label = "GAC2:native-tt-zero-preparation-response"
+title = "Exact source-driven zero-preparation response"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-tt-zero-preparation-response)"
+statement = """
+**GAC2:native-tt-zero-preparation-response (exact source-driven zero-preparation response).** For real a!=0 and l^2=2a^2, the actual TT velocity profile
+ t=sin(l*tau)/l gives L_a*chi=-2a^2*cos(l*tau). The explicit response
+chi=(-3*cos(l*tau)-cosh(l*tau)+4*cos(a*tau))/(6a^2) has four zero initial
+coordinate jets. All four successive derivatives and the forced fourth-order
+identity are checked. Its cosh coefficient-1/(6a^2) is nonzero.
+For a>0 one may choose l=sqrt(2)*a. This is an exact limiting point-frequency
+response to the original on-TT mixed source, not a finite-h physical instability,
+L2-packet growth theorem or exclusion of the alternative dressed TT branch.
+See [finding240](findings/240-native-tt-zero-preparation-response.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.zeroResponseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.zeroResponseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-prepared-metric-cut-cost"
+label = "GAC2:native-prepared-metric-cut-cost"
+title = "Metric cost of the native TT dressing"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-prepared-metric-cut-cost)"
+statement = """
+**GAC2:native-prepared-metric-cut-cost (metric cost of the native tt dressing).** For j^2=-1,a!=0, the leading coordinate correction chi*e3 with prepared
+jet K_a(q,v) changes the complete-coframe metric cut by
+D_03=q,D_13=-j*v/(2a),D_23=j*v/(2a), symmetrically. That full metric-cut
+matrix is zero exactly when(q,v)=0. Adding a Lorentz correction whose metric
+variation is zero cannot cancel it. Thus a nonzero prepared TT dressing has a
+real metric-trace cost within this declared leading coordinate class. The
+complete-coframe coordinate chi is not identified with the finite-h constructor
+Phi, and other allowed physical corrections are not excluded.
+See [finding241](findings/241-native-prepared-metric-cut-cost.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.metricLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.metricLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-full24-independent-return"
+label = "GAC2:native-full24-independent-return"
+title = "Independent connection return on all original24 slots"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-full24-independent-return)"
+statement = """
+**GAC2:native-full24-independent-return (independent connection return on all original24 slots).** For every supplied face Z, the native Schur return
+Aret=Bfull^-1*(-2*kappa*T^T*M*Z) satisfies all24 connection block equations
+Bfull*Aret+2*kappa*T^T*M*Z=0. The on-TT cross face is reconstructed from(q,v)
+with both time blocks and the spatial block retained. At a=1,q=0,v=1 its first
+time-block coordinates are(-101*j/19982,2*j/9991,101*j/19982).
+The physical conversion Aret=-h*omega_ret retains its minus sign for h!=0.
+This is the homogeneous auxiliary block and declared mixed source; it does not
+solve independent finite-h link/history or the original R8 connection target.
+See [finding242](findings/242-native-full24-independent-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.independentLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.independentLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-bounded-history-ambiguity"
+label = "GAC2:native-bounded-history-ambiguity"
+title = "A bounded coordinate history does not choose preparation"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-bounded-history-ambiguity)"
+statement = """
+**GAC2:native-bounded-history-ambiguity (a bounded coordinate history does not choose preparation).** The actual paired coordinate row admits the nonzero homogeneous history
+chi=cos(a*tau). All four derivatives and L_a*chi=0 are checked, and |chi|<=1
+at every real time. Adding its full jet preserves the supplied row forcing but
+changes the coordinate value at the cut by1. Consequently bounded coordinate
+history alone cannot select a unique prepared response on this native slice.
+This is a limiting scalar-row ambiguity; it neither supplies nor excludes an
+admitted finite-h full40 history prescription.
+See [finding243](findings/243-native-bounded-history-ambiguity.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.historyLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.historyLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-scalar-fourjet-current"
+label = "GAC2:native-scalar-fourjet-current"
+title = "Full scalar four-jet current and source contact"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-scalar-fourjet-current)"
+statement = """
+**GAC2:native-scalar-fourjet-current (full scalar four-jet current and source contact).** For L_a=d^4-a^2*d^2-2a^4, the complete formal Green concomitant is
+J_a(x,y)=x0*y3-x1*y2+x2*y1-x3*y0-a^2*(x0*y1-x1*y0).
+Its differentiated jet identity is x0*L_a*y-(L_a*x)*y0, retaining both sources.
+On the actual prepared TT graph its pullback is-5/2*(q*V-v*Q), and the two
+prepared mixed-source contacts cancel. This is the scalar coordinate-sector
+Green identity with all four jets, not the full native40 cut current, physical
+energy, source-compatible quotient or a replacement for its Gram/measure contacts.
+See [finding244](findings/244-native-scalar-fourjet-current.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.greenLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.greenLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-four-row-source-embedding"
+label = "GAC2:native-four-row-source-embedding"
+title = "Embed the actual mixed source in all four coordinate rows"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-four-row-source-embedding)"
+statement = """
+**GAC2:native-four-row-source-embedding (embed the actual mixed source in all four coordinate rows).** The original native upper quartic coefficients at k=(a,-a,0), j^2=-1,
+have last column(2*kappa*H*a^6,0,kappa*H*a^4,0,-kappa*H*a^2)*e3,
+H=9999/9991. Conjugating EVERY coefficient by eta to the original lower basis
+and acting on a complete chi jet gives-kappa*H*a^2*(L_a*chi)*e3.
+Adding the actual on-TT source-2*kappa*H*a^4*v*e3 gives the full four-row
+residual-kappa*H*a^2*(L_a*chi+2*a^2*v)*e3. Hence either constructed scalar
+response satisfying L_a*chi=-2*a^2*v solves all four limiting coordinate rows
+for that supplied TT history. It does not solve the remaining native40 rows,
+finite-h contour problem or independent physical prescription.
+See [finding245](findings/245-native-four-row-source-embedding.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.fullRowsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.fullRowsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-tt-source-range-budget"
+label = "GAC2:native-tt-source-range-budget"
+title = "Actual source range and zero-frequency preparation test"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-tt-source-range-budget)"
+statement = """
+**GAC2:native-tt-source-range-budget (actual source range and zero-frequency preparation test).** For fixed a!=0, the actual mixed TT velocity source
+v->-2*kappa*(9999/9991)*a^4*v*e3 has range the full last coordinate axis
+and vanishes exactly when v=0. The source polarization has Frobenius square4.
+The prepared unit-velocity coordinate value is-1/(2a^2); for every B>=0 there
+is a nonzero real a with its absolute value at least B+1. Thus the actual TT
+source does not justify a frequency-uniform preparation budget as a approaches0.
+This enlarges the domain beyond the fixed original band and is an adverse test,
+not a failure of its guarded bounds, a nonlinear source-range theorem or a new
+physical mode count.
+See [finding246](findings/246-native-tt-source-range-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.rangeLaw"
+reviewed = ""
+review_text_sha256 = ""
