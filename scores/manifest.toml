@@ -2775,3 +2775,137 @@ lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarti
 lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.quarticLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "76d948f92fa5bbd53e75f5636c6624ad36312fe52ff6ac7c669c9af572bc8951"
+
+[[statement]]
+key = "GAC2:selected-jet-coupled-recurrences"
+label = "GAC2:selected-jet-coupled-recurrences"
+title = "Unique coupled selected-jet recurrences for the fixed reference"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:selected-jet-coupled-recurrences)"
+statement = """
+**GAC2:selected-jet-coupled-recurrences (supplied fixed-reference recursion).** At k=(1,2,3),
+let K=Hd I+(D-Hd)kk^T/14 with Hd=9999/9991,D=10201/10300. Its displayed
+rank-one inverse is certified on both sides. Set U=(31,2582,-1419)/103+
+2*(98,2716,-1218)/9991-(2059,3314,3765)/20600. The coupled selectedY/P1/P2/N1/N2
+recurrences of the supplied longitudinal recipe have one explicit solution and no other:
+K*y=101*U/490 first fixes y, and the four subsequent scalar recurrences uniquely fix
+P1,P2,N1,N2. The native principal and scalar inverse guards hold over Q. This solves the
+literal supplied recursion, not its missing derivation from the full40 constructor/forcing.
+See [finding191](findings/191-coupled-selected-reference-jet-recurrences.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.SelectedJets.Statement.recurrencesLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.SelectedJets.recurrencesLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:ordered-third-inverse-jets"
+label = "GAC2:ordered-third-inverse-jets"
+title = "Ordered noncommutative inverse jets through third order"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:ordered-third-inverse-jets)"
+statement = """
+**GAC2:ordered-third-inverse-jets (all noncommuting products retained).** For elements of
+any ring, H1=-H*N1*H, H2=H*N1*H*N1*H-H*N2*H and
+H3=-H*N1*H*N1*H*N1*H+H*N1*H*N2*H+H*N2*H*N1*H-H*N3*H.
+N0*H=I proves all three right inverse coefficient equations; H*N0=I proves all three
+left equations. With both inverses the third right coefficient is unique. On the original
+signed rational block, the explicit opposite cubic incoming-link products give
+N3=-N1(lambda^3,p^3,q^3)/12, and the native H3 obeys the full third equation.
+No products are commuted. These are exact coefficient identities for the supplied link jets,
+not an analytic native averaging inverse or a contour/history theorem.
+See [finding192](findings/192-ordered-third-inverse-and-incoming-link-product.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.thirdLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.thirdLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:normal-pair-incoming-contacts"
+label = "GAC2:normal-pair-incoming-contacts"
+title = "Original normal pair and independent cubic incoming test contacts"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:normal-pair-incoming-contacts)"
+statement = """
+**GAC2:normal-pair-incoming-contacts (literal rational differential symbols).** In the
+original signed distinct pair, the displayed Gamma0/Gamma2 formulas determine Z1/Z3
+from both symmetric metric shift slots. H1*Z1 has normal row
+-kappa*g*A*(lambda-p)*(lambda-q)*(p*N_j-q*N_i)/2. On a lower coordinate field,
+explicit degree2/degree4 polynomial identities give highest temporal coefficients
+Z1,2=(p*c_j,q*c_i,0)/2 and Z3,4=(q*c_i,p*c_j,0)/24.
+The combined H2*Z1 plus H0*Z3 highest contact is
+kappa*A^2*(q*c_i-p*c_j)/12. The independent Z3 normal test is retained: reflecting
+all differential variables gives its true bilinear incoming coefficients; its cut value is0
+if Q=0 and Q_t,A=Q_t,B. H0 maps symmetric electric(A,A,0) to equal first two entries.
+These are exact rational pair/jet identities, with no full40/native remainder asserted.
+See [finding193](findings/193-original-normal-pair-and-reflected-cubic-test.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.normalPairLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.normalPairLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:normal-divergence-physical-group"
+label = "GAC2:normal-divergence-physical-group"
+title = "Complete normal divergence and the supplied physical third group"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:normal-divergence-physical-group)"
+statement = """
+**GAC2:normal-divergence-physical-group (complete supplied normal torsion row).** For
+arbitrary electric covectors and their time derivatives, summing the three original normal
+momentum rows cancels BOTH electric sums exactly. The remaining divergence is
+kappa*sum_(i<j)(d_i-d_j)*d_i*d_j*Q_ij,0. On a curl source its pair polynomial equals
+kappa*(s3*(d.u)-Delta*(d^[2].u)). The physical cut N0=0,N1=s*d,N2=2J reduces the
+full H1 row to-kappa*g*A*(d_i*J_j-d_j*J_i). At d=i*(1,2,3), supplied
+J2=14*(101/39964)*(1,-68,45)/35 is transverse and its complete primary divergence
+is3752*kappa^2*g*A*(101/39964)/5, which is nonzero. This certifies the supplied
+physical-row/jet calculation; actual constructor/source identification remains separate.
+See [finding194](findings/194-complete-electric-divergence-and-physical-third-group.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NormalDivergence.Statement.physicalLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NormalDivergence.physicalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:four-group-recipe-exact-value"
+label = "GAC2:four-group-recipe-exact-value"
+title = "Exact value and regular-prime replay of the supplied four-group recipe"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:four-group-recipe-exact-value)"
+statement = """
+**GAC2:four-group-recipe-exact-value (complete supplied reference expression).** Evaluate
+ALL four groups of the pinned prospective longitudinal recipe, retaining its full third-source
+derivative and the coupled selected-jet equations. The rational total is exactly
+42464891403943157/1369394558168868000, hence nonzero. Its selected jet agrees with
+the unique solution of GAC2:selected-jet-coupled-recurrences. The same literal expression
+over F13 has group values(0,3,3,9) and total2; every listed division site and both Hd,D
+inverse values are certified nonzero there and over Q as stated. The Q nonzero proof is
+direct exact arithmetic, not an unproved rational-to-F13 homomorphism argument. This
+certifies the supplied expression; identifying it with the ACTUAL full40 fixed-N4 source
+and original terminal prescription remains unproved by this arithmetic certificate.
+See [finding195](findings/195-exact-four-group-recipe-value-and-regular-prime.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.valueLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.valueLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:fixed-recipe-contact-budget"
+label = "GAC2:fixed-recipe-contact-budget"
+title = "A quantitative temporal-contact test for the supplied fixed recipe"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:fixed-recipe-contact-budget)"
+statement = """
+**GAC2:fixed-recipe-contact-budget (explicit finite-spacing premise).** For the supplied
+reference recipe, d4=-(38/7)*Cstar and the first boost coefficient
+c=-V/(56*i*d4) are nonzero. For real h!=0 and a complex error with
+||error||<=M*|h|^3, the physical contact h^2*c+error has lower bound
+|h|^2*(||c||-M*|h|). If M*|h|<||c|| it is nonzero; the native log contact
+-h*(h^2*c+error) is also nonzero. These assertions apply to the reference c or any
+supplied c satisfying the displayed budget. The theorem does NOT identify an actual
+native correction with this expansion or supply its uniform M; those original source,
+constructor, contour, copied-frame and history duties remain separate.
+See [finding196](findings/196-quantitative-fixed-recipe-temporal-contact-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.contactLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw"
+reviewed = ""
+review_text_sha256 = ""

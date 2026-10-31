@@ -209,3 +209,35 @@ quartic returns passed independent fidelity and kernel checks. No implementation
 and no fidelity repair was needed after freeze. Zero additional native material application or
 efficiency saving is credited; actual coefficient/jet/target, contour/norm and physical
 frame/link/history identifications remain separate. D05–D10 are outside this review.
+
+## Review07 handoff: D05–D10
+
+Six new dispositions bring the campaign to40/120;34 have prior independent approval,
+with153 total score approvals before this review. Read findings191–196 and their six exact
+canonical/manifest literals. The24 pinned original/snapshot pairs include the compact
+normal-source recipe and mandatory lower-residual/centering/surface qualification.
+
+Review SelectedJets/Recurrences, InverseJets/{Third,NormalPair},
+NormalDivergence/Physical, LongitudinalRecipe/{Value,Contact}, all18 files.
+The unique coupled recursion has the full native spatial principal inverse. The third inverse
+keeps both mixed orderings and both coefficient directions; explicit incoming cubic link
+products are checked. NormalPair proves bounded-degree coordinate polynomials before
+finite-difference coefficient extraction, and separately reflects every differential variable
+in the independent cubic test. Physical cancels both complete electric sums and evaluates
+the supplied physical cut group without differentiating a cut-only source formula.
+
+Value certifies the complete SUPPLIED prospective recipe, agreeing definitionally with the
+unique coupled jet solution: exact Q total42464891403943157/1369394558168868000,
+F13 groups(0,3,3,9),total2 and all listed guards. The Q proof is direct exact arithmetic;
+no unproved localization/ring-hom argument is used. source-recipe-root-07.py/json provide
+an independent Fraction replay. Contact provides a quantitative error-bound criterion and
+the original physical/native sign; it does not supply that actual error bound.
+
+All six literals preserve the remaining full40-to-coefficient, actual forcing/high-jet,
+lower-return/terminal-constructor, analytic-contour and frame/link/history identification
+duties. A certified supplied formula is not accepted as the ACTUAL native functional solely
+because its arithmetic checks. No material native gate or efficiency saving is claimed.
+
+Root review07 validation passed all19 checks, including six separate kernel replays and
+the independent Fraction replay. All153 earlier manifest entries remain identical; approved
+text drifts are empty. No new native material or efficiency credit is assigned.

@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 153 |
-| stated | 0 |
+| stated | 6 |
 | planned | 0 |
-| **total** | **153** |
+| **total** | **159** |
 
 ## Statements
 
@@ -168,3 +168,9 @@
 | GAC2:metric-leading-range-return | The original leading normal range and visible source return | proved | `Artform.Scores.GravityBridge.Native.MetricCut.Statement.leadingLaw` / `Artform.Scores.GravityBridge.Native.MetricCut.leadingLaw` | approved 2026-10-31 |
 | GAC2:signed-ordered-inverse-contacts | Original signed physical block and ordered inverse contacts | proved | `Artform.Scores.GravityBridge.Native.InverseJets.Statement.signedLaw` / `Artform.Scores.GravityBridge.Native.InverseJets.signedLaw` | approved 2026-10-31 |
 | GAC2:quartic-two-return-coefficient | The supplied native quartic contacts with both elimination returns | proved | `Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarticLaw` / `Artform.Scores.GravityBridge.Native.MetricCut.quarticLaw` | approved 2026-10-31 |
+| GAC2:selected-jet-coupled-recurrences | Unique coupled selected-jet recurrences for the fixed reference | stated | `Artform.Scores.GravityBridge.Native.SelectedJets.Statement.recurrencesLaw` / `Artform.Scores.GravityBridge.Native.SelectedJets.recurrencesLaw` | awaiting review |
+| GAC2:ordered-third-inverse-jets | Ordered noncommutative inverse jets through third order | stated | `Artform.Scores.GravityBridge.Native.InverseJets.Statement.thirdLaw` / `Artform.Scores.GravityBridge.Native.InverseJets.thirdLaw` | awaiting review |
+| GAC2:normal-pair-incoming-contacts | Original normal pair and independent cubic incoming test contacts | stated | `Artform.Scores.GravityBridge.Native.InverseJets.Statement.normalPairLaw` / `Artform.Scores.GravityBridge.Native.InverseJets.normalPairLaw` | awaiting review |
+| GAC2:normal-divergence-physical-group | Complete normal divergence and the supplied physical third group | stated | `Artform.Scores.GravityBridge.Native.NormalDivergence.Statement.physicalLaw` / `Artform.Scores.GravityBridge.Native.NormalDivergence.physicalLaw` | awaiting review |
+| GAC2:four-group-recipe-exact-value | Exact value and regular-prime replay of the supplied four-group recipe | stated | `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.valueLaw` / `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.valueLaw` | awaiting review |
+| GAC2:fixed-recipe-contact-budget | A quantitative temporal-contact test for the supplied fixed recipe | stated | `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.contactLaw` / `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw` | awaiting review |

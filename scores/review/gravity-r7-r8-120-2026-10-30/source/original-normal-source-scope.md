@@ -1,0 +1,10 @@
+# Mandatory original-source sign and formal-trace scope
+
+This accompanies the frozen original-j2 source. With original path u+hY_u and centered first path u+h(0,c), the induced centered second coefficient is exactly z_ind=(0,-Dc). Since both lower original residuals vanish, multiplying the residual by the centering transpose does not change its h2 coefficient. Thus
+ j2_original=bar j2-J0(0,Dc),
+ j2_original,e+Omega^dagger j2_original,a=bar j2_e+Omega^dagger bar j2_a.
+The source's phrase “can differ by J0(0,Dc)” is this retained exact relation; no new coframe or cut is substituted. Its density term c.Bc/2 means c^T B c/2 with the FULL B, not c^T B_curvature c/2.
+
+The effective Euler identification is conditional on the actual leading homogeneous field and original first-lift equation: keep (DY)^dagger(F1+JY) before restriction, then use J0u=0 and J1u+J0Y_u=0 to remove its linearized lower-residual contribution. This is distinct from assuming an off-orbit effective-density identity. Every graph pullback uses the original incoming Omega^dagger, including its temporal column. Centering and integration by parts are compact interior operations; this note proves no equality of finite original potentials or free boundary data. Those exact finite surfaces remain obligations, not silently vanishing terms.
+
+The nonzero F example is the first seed derivative at a genuinely three-dimensional admitted real-even Schwartz geometry direction. It excludes equality of the deliberately zero-total-Coulomb trace with the formal physical scalar response at orderh2 on that data. It does not exclude an exact native family using the correct physical trace; the table supplies formal trace coefficients only. Source time derivatives use the normalized displacement jets chi4..6 from the actual compatibility equation, not a freely chosen coordinate history or an unflowed field. Full frame/link trace and exact-h existence remain open. All source files are unchanged, source calculation0/receiver0, no new custody incident and no live process.

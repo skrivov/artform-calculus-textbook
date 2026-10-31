@@ -130,3 +130,9 @@ import ArtformScores.GravityBridge.Native.MetricCut.Coordinates
 import ArtformScores.GravityBridge.Native.MetricCut.Leading
 import ArtformScores.GravityBridge.Native.InverseJets.Signed
 import ArtformScores.GravityBridge.Native.MetricCut.Quartic
+import ArtformScores.GravityBridge.Native.SelectedJets.Recurrences
+import ArtformScores.GravityBridge.Native.InverseJets.Third
+import ArtformScores.GravityBridge.Native.InverseJets.NormalPair
+import ArtformScores.GravityBridge.Native.NormalDivergence.Physical
+import ArtformScores.GravityBridge.Native.LongitudinalRecipe.Value
+import ArtformScores.GravityBridge.Native.LongitudinalRecipe.Contact

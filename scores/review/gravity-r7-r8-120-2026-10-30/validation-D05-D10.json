@@ -1,0 +1,203 @@
+{
+  "investigations": [
+    "G2-D05",
+    "G2-D06",
+    "G2-D07",
+    "G2-D08",
+    "G2-D09",
+    "G2-D10"
+  ],
+  "status": "passed",
+  "review": "pending independent fidelity review07 of120-round campaign",
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 3.018,
+      "stdout_bytes": 137,
+      "stdout_sha256": "a27fc989037ff4fc30a92fc04eed5e0c09920d4351308d24b59d9064e8f521c3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "\u2139 [3788/3838] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9503 jobs).\n"
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean > build/report.json",
+      "exit_code": 0,
+      "seconds": 13.005,
+      "stdout_bytes": 70493294,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.3,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.62,
+      "stdout_bytes": 32,
+      "stdout_sha256": "7c6782674c1c989202c2aec702756d59889007591569761b25faefa64498b4c3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "829 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json",
+      "exit_code": 0,
+      "seconds": 15.807,
+      "stdout_bytes": 18187074,
+      "stdout_sha256": "6eaaab691953ae231ad481f59207a68793536c082d42b6b7e99c87d926b9c9b7",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.101,
+      "stdout_bytes": 23,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.098,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.193,
+      "stdout_bytes": 44,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.263,
+      "stdout_bytes": 51,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/gravity_r2_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.074,
+      "stdout_bytes": 162,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": "python3 scripts/status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.291,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "0 approved statements changed since review\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scores/review/gravity-r7-r8-120-2026-10-30/source-recipe-root-07.py",
+      "exit_code": 0,
+      "seconds": 0.02,
+      "stdout_bytes": 775,
+      "stdout_sha256": "03a08ae67cf082669d1c1757e1e545c02d4ecd72efbf0275e66c963fd9c636b2",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\n  \"status\": \"passed\",\n  \"scope\": \"Independent exact replay of supplied fixed-reference recipe and coupled moment recurrences; actual full40/source/constructor identification not inferred.\",\n  \"y_residues\": [\n    5,\n    7,\n    12\n  ],\n  \"moment_residues\": [\n    3,\n    11,\n    8,\n    1,\n    0,\n    8,\n    12\n  ],\n  \"group_residues\": [\n    0,\n    3,\n    3,\n    9\n  ],\n  \"total_residue\": 2,\n  \"group_values\": [\n    \"17302888997669509/1027045918626651000\",\n    \"94738/499100405\",\n    \"-3535507764661/42352409015532000\",\n    \"601523512985887/42793579942777125\"\n  ],\n  \"total_value\": \"42464891403943157/1369394558168868000\",\n  \"total_bitlengths\": [\n    56,\n    61\n  ],\n  \"original_principal_equation_verified\": true,\n  \"new_physical_credit\": 0,\n  \"historical_saving_credit\": 0\n}\n"
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.SelectedJets.Recurrences",
+      "exit_code": 0,
+      "seconds": 5.38,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.InverseJets.Third",
+      "exit_code": 0,
+      "seconds": 5.412,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.InverseJets.NormalPair",
+      "exit_code": 0,
+      "seconds": 5.604,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NormalDivergence.Physical",
+      "exit_code": 0,
+      "seconds": 5.471,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.LongitudinalRecipe.Value",
+      "exit_code": 0,
+      "seconds": 5.418,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.LongitudinalRecipe.Contact",
+      "exit_code": 0,
+      "seconds": 5.356,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    }
+  ],
+  "proof_scope": "Unique coupled supplied reference jets, complete ordered third inverse and incoming link product, original normal pair/polynomial and reflected independent test contacts, complete electric divergence cancellation and supplied physical source, exact all-four-group recipe arithmetic with guards, quantitative conditional finite-spacing contact. Full40/operator/actual constructor and uniform native analytic error-bound identification remain separate; zero new material native gate or saving."
+}

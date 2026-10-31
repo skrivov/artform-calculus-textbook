@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "Independent exact replay of supplied fixed-reference recipe and coupled moment recurrences; actual full40/source/constructor identification not inferred.",
+  "y_residues": [
+    5,
+    7,
+    12
+  ],
+  "moment_residues": [
+    3,
+    11,
+    8,
+    1,
+    0,
+    8,
+    12
+  ],
+  "group_residues": [
+    0,
+    3,
+    3,
+    9
+  ],
+  "total_residue": 2,
+  "group_values": [
+    "17302888997669509/1027045918626651000",
+    "94738/499100405",
+    "-3535507764661/42352409015532000",
+    "601523512985887/42793579942777125"
+  ],
+  "total_value": "42464891403943157/1369394558168868000",
+  "total_bitlengths": [
+    56,
+    61
+  ],
+  "original_principal_equation_verified": true,
+  "new_physical_credit": 0,
+  "historical_saving_credit": 0
+}
