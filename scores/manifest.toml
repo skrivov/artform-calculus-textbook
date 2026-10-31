@@ -1157,8 +1157,8 @@ See [finding 117](findings/117-native-leading-metric-cut-angular-conditioning.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.angularConditioning"
 lean_proof = "Artform.Scores.GravityBridge.Native.R8.angularConditioning"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "26c764094c365af8f0b2b98a263efc3c02a1e5314afef203442c098e0c0d945a"
 
 [[statement]]
 key = "GAC:r8-leading-local-inverse"
@@ -1178,8 +1178,8 @@ See [finding 118](findings/118-native-leading-local-inverse-scope.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse"
 lean_proof = "Artform.Scores.GravityBridge.Native.R8.leadingLocalInverse"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "0e9bd231a36af50404702177835871f7aee7e72eff7af17f1a2641a29ddc91cf"
 
 [[statement]]
 key = "GAC:r8-gap-remainder"
@@ -1197,8 +1197,8 @@ See [finding 119](findings/119-native-scalar-inverse-with-explicit-remainder-bud
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder"
 lean_proof = "Artform.Scores.GravityBridge.Native.R8.gapRemainder"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "afa15c5d90d418bdbb35a2843b3326dcfbed1a164a24231ac3366013b3569aff"
 
 [[statement]]
 key = "GAC:r8-nonuniform-domain"
@@ -1217,5 +1217,5 @@ See [finding 120](findings/120-native-leading-inverse-ray-sequence-and-low-frequ
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain"
 lean_proof = "Artform.Scores.GravityBridge.Native.R8.nonuniformDomain"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "b976e3f3055a5afc06523eeb6f06a71efe441ed83b054b6d0de64078d732961b"

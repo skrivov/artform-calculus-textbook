@@ -93,3 +93,7 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:companion-readout` approved as `Artform.Scores.GravityBridge.Statement.companionReadout` (text 896a68d6fa91)
 - 2026-10-30: `GAC:local-processing` approved as `Artform.Scores.GravityBridge.Statement.localProcessing` (text f796c72b5ff5)
 - 2026-10-30: `GAC:source-response` approved as `Artform.Scores.GravityBridge.Statement.sourceResponse` (text d16420340cad)
+- 2026-10-30: `GAC:r8-angular-conditioning` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.angularConditioning` (text 26c764094c36)
+- 2026-10-30: `GAC:r8-leading-local-inverse` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse` (text 0e9bd231a36a)
+- 2026-10-30: `GAC:r8-gap-remainder` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder` (text afa15c5d90d4)
+- 2026-10-30: `GAC:r8-nonuniform-domain` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain` (text b976e3f3055a)

@@ -210,4 +210,9 @@ R8Defs and R8Statements are new surfaces; all80 prior approved entries are uncha
 required checks, certificates, empty drift and five separate kernel replays pass; see the compact
 validation-D05-D04-D06-D07-D08.json. A failed receipt packaging attempt is preserved by hash: its
 raw debug output contained an absolute machine path, then was compacted before the passing
-identity check. Independent fidelity review and publication of the four new keys are requested.
+identity check. All four new claims were independently approved at freeze
+`37c376c4e29034129305a8c5366c4c9fc800b349`; none returned. All80 earlier approvals stand.
+See the distinct [audit](audit-independent-07.md), [per-key verdicts](verdict-independent-07.json),
+[validation](validation-independent-07.json) and [exact arithmetic replay](arithmetic-independent-07.py).
+D08 remains an audited failed transfer, with no registered success theorem. Zero additional material
+native applications are credited.
