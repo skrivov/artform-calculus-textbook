@@ -261,7 +261,7 @@ All84 earlier approvals stand, and zero additional material native applications 
 
 ## C03–C07: canonical relations, actual finite reduction and native endpoint scope
 
-Five new claims await independent review09: GAC:canonical-composition, GAC:radical-reduction,
+Five claims were independently approved in review09: GAC:canonical-composition, GAC:radical-reduction,
 GAC:refinement-elimination, GAC:schedule-boundary and GAC:finite-boundary-adjoint. Ledger
 findings127–131 and literal section7 quotes state the scopes. All89 old approvals stand.
 
@@ -296,5 +296,10 @@ contacts, exact invariant Gram conversions, and metric/frame/link/history/source
 required. No native physical adjoint, energy or quotient is supplied by this example.
 
 All five *Defs.lean and five *Statements.lean surfaces are new; no prior approved Lean text changes.
-validation-C03-C04-C05-C06-C07.json will contain full required checks, certificates, empty drift and
-five separate kernel replays. Zero additional native material-application credit is proposed.
+validation-C03-C04-C05-C06-C07.json records full required checks, certificates, empty drift and
+five separate kernel replays. All five claims were independently approved at freeze
+`ae53e38e1562215e8c06e12cdd0caa7d9a4dd307`; none returned. See the distinct
+[audit](audit-independent-09.md), [per-key verdicts](verdict-independent-09.json)
+and [validation](validation-independent-09.json). All89 earlier approvals stand.
+Zero additional material native applications are credited; C07's historical full-source
+scope remains unchanged.

@@ -102,3 +102,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:quotient-compatibility` approved as `Artform.Scores.GravityBridge.Statement.quotientCompatibility` (text fe0d75e46a31)
 - 2026-10-30: `GAC:changing-geometry` approved as `Artform.Scores.GravityBridge.Statement.changingGeometry` (text 3d2091a7bddd)
 - 2026-10-30: `GAC:singular-action` approved as `Artform.Scores.GravityBridge.Statement.singularActionLaw` (text 1e7ea73ad553)
+- 2026-10-30: `GAC:canonical-composition` approved as `Artform.Scores.GravityBridge.Statement.canonicalLaw` (text 824e5b4646d5)
+- 2026-10-30: `GAC:radical-reduction` approved as `Artform.Scores.GravityBridge.Statement.radicalLaw` (text ad918abda2b7)
+- 2026-10-30: `GAC:refinement-elimination` approved as `Artform.Scores.GravityBridge.Statement.refinementLaw` (text 24ebdee853fe)
+- 2026-10-30: `GAC:schedule-boundary` approved as `Artform.Scores.GravityBridge.Statement.scheduleLaw` (text 49b816870584)
+- 2026-10-30: `GAC:finite-boundary-adjoint` approved as `Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw` (text eb1b0c5602d8)

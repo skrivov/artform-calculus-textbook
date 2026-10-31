@@ -1359,8 +1359,8 @@ See [finding 127](findings/127-canonical-linear-composition-and-nonlinear-inters
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.canonicalLaw"
 lean_proof = "Artform.Scores.GravityBridge.canonicalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "824e5b4646d5277ed82cdcbd4fd8a5b2e359c83c017192453ae83d6db79077be"
 
 [[statement]]
 key = "GAC:radical-reduction"
@@ -1382,8 +1382,8 @@ See [finding 128](findings/128-singular-action-radical-quotient-and-source-test.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.radicalLaw"
 lean_proof = "Artform.Scores.GravityBridge.radicalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "ad918abda2b7e12f3711aa4e13ea246566782904ddbc473f1a3d038d558c018a"
 
 [[statement]]
 key = "GAC:refinement-elimination"
@@ -1406,8 +1406,8 @@ See [finding 129](findings/129-refinement-detail-elimination-contact-and-memory.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.refinementLaw"
 lean_proof = "Artform.Scores.GravityBridge.refinementLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "24ebdee853fedce4ee82ce35fe13df435a1d80d7639312e311bae8478f8677be"
 
 [[statement]]
 key = "GAC:schedule-boundary"
@@ -1431,8 +1431,8 @@ See [finding 130](findings/130-shear-schedule-defects-and-endpoint-primitives.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.scheduleLaw"
 lean_proof = "Artform.Scores.GravityBridge.scheduleLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "49b8168705846307de412bb7feed2dd7cd563326e8abd5d9b5867fc12b43d760"
 
 [[statement]]
 key = "GAC:finite-boundary-adjoint"
@@ -1455,5 +1455,5 @@ See [finding 131](findings/131-native-open-cell-boundary-adjoint-transfer-test.m
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw"
 lean_proof = "Artform.Scores.GravityBridge.boundaryAdjointLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "eb1b0c5602d8696db0afbf9cbc4bc72e69626a05b3388295c87b47d6820eff5d"
