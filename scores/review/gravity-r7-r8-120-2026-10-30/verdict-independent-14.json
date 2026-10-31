@@ -1,0 +1,665 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "49a5bfdd672bbaaff8876d1009e0ede3a0d99d43",
+  "approved_count": 20,
+  "returned_count": 0,
+  "original_approvals_preserved": 219,
+  "implementation_modified_by_reviewer": false,
+  "post_freeze_fidelity_correction": false,
+  "entries": [
+    {
+      "key": "GAC2:verified-all24-rank-return",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.all24ProgramsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.all24ProgramsLaw",
+      "review_text_sha256": "c66826bb7524c78f27ddec6aba149e2029bb9fad4bbb409b765f4621ac7f756c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 45,
+      "new_material_native_application": false,
+      "reason": "Same arbitrary rational24 input/all outputs; actual fullHApply and both original inverse orders; all distinct/repeated blocks and signed wires retained. Executable valid programs72/48 versus32/40; narrow prospective fixed-coefficient arithmetic credit only."
+    },
+    {
+      "key": "GAC2:original-global-odd-inverse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.oddInverseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.oddInverseLaw",
+      "review_text_sha256": "1cfdea9e527c9855edc4a0b21d1843434863e3169adb06bb652d22fb9b5c0ca6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 31,
+      "new_material_native_application": false,
+      "reason": "Actual original B powers and all eight block returns, magnitudes194/101,103/101,200/101 with both signs; complete coordinate reconstruction and both inverse orders. No approximation or speed inference."
+    },
+    {
+      "key": "GAC2:native-modal-inverse-degree",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.modalDegreeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.modalDegreeLaw",
+      "review_text_sha256": "7ca04e800b25bf07873e71d19840524b15a4bdce5ab17686db4fb674f7281920",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 25,
+      "new_material_native_application": false,
+      "reason": "Six nonzero actual original24 eigenmodes with distinct eigenvalues; unique odd modal coefficients and nonzero fifth term. Lower bound only within stated odd polynomial interpolation class; no universal circuit or physical mode inference."
+    },
+    {
+      "key": "GAC2:native-two-template-certificate",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.templatesLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.templatesLaw",
+      "review_text_sha256": "15889c41608b22915b42c8227dd5790e14e57ad22fdd31e4c53465aba465d3f6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 23,
+      "new_material_native_application": false,
+      "reason": "Two candidate3x3 left inverses determine same complete24 return using approved original partition/inverse. Both orders follow;18 versus576 fresh scalar obligations are declared dense-checker counts, not historical/global Lean savings."
+    },
+    {
+      "key": "GAC2:native-source-only-certificate-audit",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.sourceAuditLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.sourceAuditLaw",
+      "review_text_sha256": "69c585fe1cded0da614934aa353fae478d49eb5d1b98b0a72da7e538004a7fdb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 36,
+      "new_material_native_application": false,
+      "reason": "Actual native-adjoint selected three-face sources pass wrong return, while explicit nonzero repeated source fails full original inverse. Correct adverse scope; no challenge to valid original inverse."
+    },
+    {
+      "key": "GAC2:native-polynomial-work-audit",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.polynomialCostLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.polynomialCostLaw",
+      "review_text_sha256": "bcf46f85cefacacbf1bbb356a64bdcf17c1406c049c4cee551979d633824b2f6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 49,
+      "new_material_native_application": false,
+      "reason": "Valid typed shared-power DAG evaluates exact full inverse. Every72 dense-B macro coefficient is nonzero;432/288 versus32/40 is the exact negative work comparison for these specified programs only."
+    },
+    {
+      "key": "GAC2:native-full-face-rank-partition",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.facePartitionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.facePartitionLaw",
+      "review_text_sha256": "e090276b0616a61b75fc94f161f9380794085debb965efb686f9f593cb9e6ce2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 38,
+      "new_material_native_application": false,
+      "reason": "Actual T, true transpose with signed Gram and H slots bound before Q composition. All24 face read/assembly slots retained, two-sided partition and all eight nonzero rank-one block guards/inverses. Homogeneous constitutive map only."
+    },
+    {
+      "key": "GAC2:native-full-constitutive-inverse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.constitutiveInverseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.constitutiveInverseLaw",
+      "review_text_sha256": "bfaad7d05a883e4f9d443fdecd57fdc8428ab835714cbdbc657f41077a860545",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 73,
+      "new_material_native_application": false,
+      "reason": "Complete two-sided homogeneous face inverse and literal original curvature-density polarization identify C0. Both C0 inverse orders and exact Woodbury with true-transpose Gram factors; C0 does not replace current-law B inverse."
+    },
+    {
+      "key": "GAC2:native-full-Q-program",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.forwardQLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.forwardQLaw",
+      "review_text_sha256": "182f37fb4e32f1f8c33f11c533d9eba9958c1040fdb25554b27bae8566bb1fed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 54,
+      "new_material_native_application": false,
+      "reason": "Same arbitrary rational24-face input/all original Q outputs; executable dense/rank codes valid including references/output slots.72/48 versus32/40 in equal free signed-wire/fixed-coefficient convention; prospective exact map only."
+    },
+    {
+      "key": "GAC2:native-full-Q-inverse-program",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.inverseQLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.RetroCertificates.inverseQLaw",
+      "review_text_sha256": "ae97967f147164a7f95ab7fc3d0a0c105067d0f3f0a200d4e8d7174201aec3da",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 56,
+      "new_material_native_application": false,
+      "reason": "Distinct actual Q inverse coefficients and both reconstruction orders on every24 input. Executable valid codes72/48 versus32/40; prospective exact inverse map only, not forward relabeling or physical source admission."
+    },
+    {
+      "key": "GAC2:native-constitutive-diagonal-signs",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signatureLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.signatureLaw",
+      "review_text_sha256": "79d9d9c45049461a375e1e835b3d53d8a545a93b8eca2737d4aafb9540de6f8a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 42,
+      "new_material_native_application": false,
+      "reason": "Complete actual Z^TQZ congruence and invertible rational coordinate map; exactly12 positive/12 negative nonzero coefficients, explicit opposite-sign original inputs. Constitutive algebra, not energy/quotient/mode signature."
+    },
+    {
+      "key": "GAC2:native-all-detail-coframe-source",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.coframeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.coframeLaw",
+      "review_text_sha256": "09e0cd0db08881926676c7207cecf089ff3a308bee761d059ee01611f89e32fc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 32,
+      "new_material_native_application": false,
+      "reason": "Literal source-bearing action derivative in b locally away from0 for every r and fixed j; negative for b,u>0. Retains-jr and independent coframe covector duty, not canonical boundary momentum or all-field no-go."
+    },
+    {
+      "key": "GAC2:native-negative-detail-discriminant",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signedLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.signedLaw",
+      "review_text_sha256": "e659eae24fea76e543f6447494a09589f912d062041128279e0f53b4694c0755",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 4,
+      "new_material_native_application": false,
+      "reason": "Exact original negative discriminant at proper real u=log(201/202) excludes every zero-source real detail with b nonzero. Positive-u existence not extended; no claim of original physical admission of this fixed signed point."
+    },
+    {
+      "key": "GAC2:native-source-envelope-contacts",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.envelopeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.envelopeLaw",
+      "review_text_sha256": "94ebc3392beca782a014a2aff31362b1ef2d03dacb34b2f99d85fe1be44a879d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 40,
+      "new_material_native_application": false,
+      "reason": "Literal envelope retains-j*r(j), actual HasDerivAt contacts Eprime=-r and positive susceptibility, actual zero-source covector mismatch if source term omitted. Negative eliminated-detail Hessian remains distinct; not positive Gaussian/quantum effective action."
+    },
+    {
+      "key": "GAC2:native-stationary-value-trace-budget",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.budgetLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.budgetLaw",
+      "review_text_sha256": "db041b3dae803fa290ab86c61fa781f8aab9ab8a2ce8a617bd53c669f2fa6b72",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 37,
+      "new_material_native_application": false,
+      "reason": "Literal stationary fine-minus-coarse binding and fixed-kappa quartic bounds. Separate declared omega=-phi/h half-step report has second difference8r/h3 and guarded4v/h lower bound; full uniform-coframe/physical admission bridge remains open."
+    },
+    {
+      "key": "GAC2:native-coarse-scalar-retuning",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.retuningLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.retuningLaw",
+      "review_text_sha256": "a96a845fab7ee75c5295e7b570271cdb1d08c9fa7bd52bf46952d50133114de6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 4,
+      "new_material_native_application": false,
+      "reason": "Two actual finite proper boost stationary tests exclude one constant coarse beta under deliberately enlarged comparison. Guards retained; no field-dependent counterterm, geometric-map or universal physical no-go inferred."
+    },
+    {
+      "key": "GAC2:native-global-source-detail",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.sourceBranchLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.sourceBranchLaw",
+      "review_text_sha256": "bf509d84c255fb413d4ef5b722493450885ffaa7c3c1acf9ede601b03c16720c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 9,
+      "new_material_native_application": false,
+      "reason": "For b,u>0 complete force strictly decreases with negative detail Hessian, unique real stationary detail for every real j, actual shifted action/force and arsinh return. Maximum in declared real family; no automatic physical/log-window admission."
+    },
+    {
+      "key": "GAC2:native-source-rapidity-window",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.windowLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.windowLaw",
+      "review_text_sha256": "f213ff22a608351daf31ce22d9cf0c7a01e7f94a4c3a9e652cee11d3b8cd99d3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "Exact endpoint sources and iff asymmetric source interval at stationary detail. Open window yields both children in(0,2u); outside-window and full physical boundary/preparation/history duties remain separate."
+    },
+    {
+      "key": "GAC2:native-unrestricted-positive-weight",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.unrestrictedLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.unrestrictedLaw",
+      "review_text_sha256": "5303e9b95b444ebef7dca146ad75e8df0b5af691d2ffbcd49646d3fa68833d79",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Actual zero-source restricted action continuous positive-real exp(-F) weight at least1 on deliberately enlarged real line; formal infinite Lebesgue lintegral. No Lorentzian/oscillatory/gauge measure inference."
+    },
+    {
+      "key": "GAC2:native-finite-detail-weight",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.finiteWindowLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NativeDetailTests.finiteWindowLaw",
+      "review_text_sha256": "8771f8b366b37a5c1944965862773a042b2e604823f552965c83da58c936d522",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 9,
+      "new_material_native_application": false,
+      "reason": "Actual positive-real finite interval lintegral upper bound and strictly positive finite mass for L>0, with zero-width case separated. No physical contour, gauge normalization or quantum state selected."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Budget.lean": "fe7c1129a19f1dbc1bc71978abc5f5887aff769939bc3039cedbf0f76ab891e6",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/BudgetDefs.lean": "82cd6db82a820e4cac33520a0136e0ef547ddaaeb3f1f9344c1e8b1d42703451",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/BudgetStatements.lean": "34ed55a8725b42c64a1dc44ab77cba0a4e1012b984de7424d1293b6da3f4b1e4",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Coframe.lean": "840d404c3a56a00c7ec5dfc248c7d26e77a9b68a8a3932d3707ac4e28f6a72e2",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/CoframeDefs.lean": "7ca588711d083b24c4c9193937a69993ddc2a612fa569dee7e6b776316b865c1",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/CoframeStatements.lean": "c67e39f8d71e573dad62e8dd7ca4736df79a1b0d8b5001c505dfd61bcc643fc1",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Envelope.lean": "04d3f51223bc78b212c73f8f7da14153591bb4eae0824cbf9afe475f55625dd6",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/EnvelopeDefs.lean": "f451b86bb3da055fc4a4b819e23a3c5d505f0342db33f4721c46d7aa399a4f2d",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/EnvelopeStatements.lean": "2b982d33e6dd649f8cc1a690511e638378751cd71218190b74d4af73c902225d",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/FiniteWindow.lean": "0cc5f1b6b40c4c36db681073ae8618afcc1c9867b5fdc02973de772b78eb39e4",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/FiniteWindowDefs.lean": "945d9fe606c40bc68a747d69957b215e747a25b163b496154cefa3137f9f159f",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/FiniteWindowStatements.lean": "2a99ba4ccf7817da5cc912f7aac1b9200f121c2468266191f61eabb7a8cb899b",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Retuning.lean": "0e6a8587ee6ed701418821ba9183b7148ca5ab2761ca9fe644426c7b79cafdb8",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/RetuningDefs.lean": "0003725e753feb2179977aa269a52be4035adbcbee6e8f73a910cd8134031bc7",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/RetuningStatements.lean": "fe75b74e33ca069e214c4f0d44fe9d6c67097fa1a19d072c178bd447d5f799c8",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Signature.lean": "183a912069b441263be57e0244e2da5d44621b3126d8e0094ecdc5d519f3f16c",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SignatureDefs.lean": "95c2fd34e1fc01db433573f4b49d34c3c07282975634cd07bea7becb211ecf7f",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SignatureStatements.lean": "cb8bd662532439aca9811040f4b88efecb9f1a5e4760153ce63a0f4115ca3ef5",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Signed.lean": "bfebc1485e17a713e98c764657ab8f15348d985d495cab312c01b36ec71f1292",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SignedDefs.lean": "a9c3ec5aedab06f7ae7236f34178bca77ad838ac2ca5bc4283fdc99a92210c0a",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SignedStatements.lean": "be2c13aa15bb144c60921fb34f6994a24f2037ddfc7144c2434bc071f01a04f5",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SourceBranch.lean": "e9525b8d6df5c0bbb1798e691bae0aadea71ed6d76ce8caceba0641e9c697948",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SourceBranchDefs.lean": "eb48b05d6bd46eca1c39e642afc9f77cb5c3eaef5c7d29b22f82f215679f9544",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/SourceBranchStatements.lean": "7538a1cc98babbdb3096ac5863864d07f03d12a8365117ae23f245a538815193",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Unrestricted.lean": "ebfc6b914a65778cd2a7fbf5af8f3be5f7aa4c9e50c571a35715be439937e7ae",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/UnrestrictedDefs.lean": "93605e887a3c2ec5cdb2e97e3e06a395a44a660a88759504d9b5d56600125767",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/UnrestrictedStatements.lean": "0e7635b4f6f2d874165d1dd96fc45d3777caef558ff2f9bd60bb9e56d0c76f23",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/Window.lean": "43b030ee0ce3dd7ded8e4a6fdd8c6eb8715a45bd3500011074038ca804965a58",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/WindowDefs.lean": "9528670f698c47270ce84160339c6b94c03ce6c86b7581d6e763a8f5e6d73621",
+    "scores/ArtformScores/GravityBridge/Native/NativeDetailTests/WindowStatements.lean": "0ed61d53311ef3ba475d164ec8b6e31b40179371fbdb59a80d09649222e0ccb6",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/All24Programs.lean": "837a31ae02c4e6db790479a259a7cda8e212f71784495b20ab6807b987d26a0e",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/All24ProgramsDefs.lean": "f40482a2b49a7faa5e555a0e67abbfa9704e44f367ea37d4d61fdef6ccf20395",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/All24ProgramsStatements.lean": "070fa796e2dbe12733b92f36998640cee7ecfaaece1f7d7423dddf9a0ce74812",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ConstitutiveInverse.lean": "1f663605789000f1834dcd8452c57b470f347aec9cb14c3c66379fb45b233664",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ConstitutiveInverseDefs.lean": "4cd495a56c10b5f028b39bd3f992b442d95c513c64a1aed20de881f7019ee842",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ConstitutiveInverseStatements.lean": "4c3832cda5e75423062761d951b1392655045f4921bcb49440ffd37b8b645476",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FaceCode.lean": "6db8597ac53e45c906a6a513bc23e7bfdb8994faf2b77a71abf080b847a904ed",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FacePartition.lean": "8c485f85cc961877547d70ad03aea58b89b9f2a2485152eeccdebd12f97c8afe",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FacePartitionDefs.lean": "5e202e99ba0de2155edd7d5ccfdf039eceb2bfa7d811183f6d0a1095657fa445",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FacePartitionStatements.lean": "28ec9d31f142f20edbc9b4427709ddbd39a12e2b76ec047e69fddd081c6bab88",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ForwardQ.lean": "698fe6c92f39773bdb3ed9a07de8b018fd793bb383b31b50bd903643c418fece",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ForwardQDefs.lean": "c46ca7af2cf94405cb5f355426d3fa5d3f6bfd8d813278d154b906565b6e493a",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ForwardQStatements.lean": "390f0ec96693b10e7724f65600adf8264f5ae245f0ea2cee0df9e288727c3658",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/InverseQ.lean": "10b85d9d9adaf92979e55bb2ae2f7baa6cf90dd1b9ddf0982b4e7b0c086f80a7",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/InverseQDefs.lean": "29839e2277b4b7753a4e9bb690275c036936624ff9c7fb4da645eb3bd8c785e0",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/InverseQStatements.lean": "ba242279dc0c0f715a237deea53793eafe1fa04138fb91ab67e28800253bf34c",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ModalDegree.lean": "8181c8154b44150af273a53ab1908260e6d81cfa12df2b93652efedb6a45a0a9",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ModalDegreeDefs.lean": "ef4407148fa2f1c944d1bea681f5a6bd5a66b64db548f9891090d59bd49d1e42",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/ModalDegreeStatements.lean": "94197aa9e5565273c53b5f94c3acf863807c2c632beefaa17796ac33537a4129",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/OddInverse.lean": "2146bafd1846d52b06afe0c363e97146a8e111b0b55e7c3f0db7452c29ed277d",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/OddInverseDefs.lean": "be109baf3ceef463d8bc066c5e7c33d6aa4e78742031ab074c87d67113587382",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/OddInverseStatements.lean": "a1c63f1334fb7bc54490c6b560a7c9b11da0eae477169b322404e9b547baad0b",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/PolynomialCost.lean": "e19cf210a8132f89cb1c5d1042ad4598d17983aa5787d9a05043ec01ab750662",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/PolynomialCostDefs.lean": "66f8851dbac11aff43b9ab8193c843c8ce843e4283a4e3b00bf503c607ece731",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/PolynomialCostStatements.lean": "194d9ca7559a388748d4dfe2826464351cc25f5de3ab82dbcd4b8262bd9805ec",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/Slots.lean": "f1b8894ed346d5cbde78beb4a68e0e9201c89755385f52d24031828e5b415a6e",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/SourceAudit.lean": "218207ef1a05b82445549d05014875878b8454a6a51fb90eab94111ae2e96b13",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/SourceAuditDefs.lean": "80be5a2ab70ddbb4f341d7966eca014281878b9eb47dcca90c95d60c8b1d81d1",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/SourceAuditStatements.lean": "5d96c0ce6305c8f8c1a7660d2a4b31e295413b1fcfc52011114a73608321d550",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/Templates.lean": "c0dcfbde66dd064d91ddac8ed1c1ae507d266217d64aaaeaed5349bb19124bfd",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/TemplatesDefs.lean": "e2c17452cced7301ef75b1209a54e9dc1a9a9d88cd93f845efde3bc5b171a97e",
+    "scores/ArtformScores/GravityBridge/Native/RetroCertificates/TemplatesStatements.lean": "77bfc1690007a1f17ccbf8c6b0ad729e6fd31dffe426ff85761cc4fcdf202481"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "8912061acb7326edfee93804888ca795563dcb05acc7eb0b8870709ba884ad32",
+    "physics/ledgers/lattice-waves/findings/257-verified-all24-rank-return.md": "eea9b30a28f5a913f2a70b8bbd8761285aa0912a53da51fac596ff83105d7fa7",
+    "physics/ledgers/lattice-waves/findings/258-original-global-odd-inverse.md": "25df1994233784ce8a0bc9f272c9f25d67ad5eb5e5f66111dcc0824da35cff41",
+    "physics/ledgers/lattice-waves/findings/259-native-modal-inverse-degree.md": "912c72cbf62883c8171890e876a3402ab78e6168cb4cbc6dcc365db38bf71a7c",
+    "physics/ledgers/lattice-waves/findings/260-native-two-template-certificate.md": "78aaae30ee99a4e6b8638a38bf86e462a97ade235a5fcfa96e73e6e5920d43e3",
+    "physics/ledgers/lattice-waves/findings/261-native-source-only-certificate-audit.md": "6a5a003e3717f2a20a02f6506b53fbe9d739eb68fdcb7c47d2eb7e83b1800a7f",
+    "physics/ledgers/lattice-waves/findings/262-native-polynomial-work-audit.md": "c7241b98065e085741ad7f2449b65715690bd12ce638526cccd35ecf491919db",
+    "physics/ledgers/lattice-waves/findings/263-native-full-face-rank-partition.md": "08db4498332123c2f4c90233b62ed893c27e18444f226bc684573b3d5b378ada",
+    "physics/ledgers/lattice-waves/findings/264-native-full-constitutive-inverse.md": "50dc2470c2ef2aef264c97a0a54e7a4886c3e66e71d14ff63b6e458b30811db8",
+    "physics/ledgers/lattice-waves/findings/265-native-full-Q-program.md": "1f9ee67054f3fc803707a2b843eb44cb291ab8340ede44c821fb47f36f4b3ad9",
+    "physics/ledgers/lattice-waves/findings/266-native-full-Q-inverse-program.md": "a1843ec747dcb8096e8a05ef454561187aaa45ed4bb922f55002e34135cf4bba",
+    "physics/ledgers/lattice-waves/findings/267-native-constitutive-diagonal-signs.md": "1f8b4af3e489ddd086716bcee507b9481e6a2885b4598ba4bb8a15efd1088d33",
+    "physics/ledgers/lattice-waves/findings/268-native-all-detail-coframe-source.md": "e93b2d8bdecf79e992bb1ce9d83952c9bf6c0d2a38116a4f3024c9e1a95efdb3",
+    "physics/ledgers/lattice-waves/findings/269-native-negative-detail-discriminant.md": "ebc29fc1d1fe812e0ebf1bc3cb404aee121f7c064a808fc857b9804292c61be9",
+    "physics/ledgers/lattice-waves/findings/270-native-source-envelope-contacts.md": "f6d088c4af09cce365f4fc6acebb670775f3431e61ce03d7023387c1809e146c",
+    "physics/ledgers/lattice-waves/findings/271-native-stationary-value-trace-budget.md": "a0bb8f1e716206cfb2ce3e99cf204ecb113e29c2e9fc1ed8027b6e46b4a72c3b",
+    "physics/ledgers/lattice-waves/findings/272-native-coarse-scalar-retuning.md": "7dcd30d54815ed8697375afe7ace6ea0cdbe7b609206d167d28e8e864eff3f7c",
+    "physics/ledgers/lattice-waves/findings/273-native-global-source-detail.md": "e601cddeff90bd78eef9245121d7b0d56d02615f7a4488efb2f64310b9aa69f7",
+    "physics/ledgers/lattice-waves/findings/274-native-source-rapidity-window.md": "eb07f1becdaef282ffcc6ddb73d247f50585e364a4187a4687544884c2e3c4a2",
+    "physics/ledgers/lattice-waves/findings/275-native-unrestricted-positive-weight.md": "280586011a2c6ad4b8cc62bcdd8ba16870121a8ed7e0f209aa8d7a8f513fe069",
+    "physics/ledgers/lattice-waves/findings/276-native-finite-detail-weight.md": "f30b0dd241cf4ab29820ea8e367720545a71609825c1a5e6c4c15732694f260c"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "7782d960421cab64f12dc3dd7a43d73a6d9125bcc766e0aa8f493ea8a7b87a42",
+  "exact_original_snapshot_pairs_authenticated": 45,
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-14.py",
+    "sha256": "36f95cf0c6d68d45bef4a5ce9062568afdeeb4c3b81117e22451dae8e4f83d73",
+    "command": "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-14.py",
+    "exit_code": 0,
+    "elapsed_seconds": 19.454,
+    "result": {
+      "actual_Lean_gate_lists_parsed": true,
+      "all_H_Q_Qinverse_outputs": 24,
+      "basis_and_heldout_inputs_per_map": 53,
+      "conditional_log_report_cases": 3,
+      "constitutive_diagonal_signs": [
+        12,
+        12
+      ],
+      "dense_rank_scales_adds": [
+        [
+          72,
+          48
+        ],
+        [
+          32,
+          40
+        ]
+      ],
+      "direct_original_density_Hessian_entries": 576,
+      "exact_source_branch_window_cases": 50,
+      "historical_runtime_globalLean_credit": 0,
+      "literal_two_cell_first_second_and_coframe_jets": 50,
+      "native_Q_partition_discovered_from_literal_map": [
+        [
+          0,
+          14,
+          19
+        ],
+        [
+          1,
+          6,
+          11
+        ],
+        [
+          2,
+          5,
+          12
+        ],
+        [
+          3,
+          9,
+          16
+        ],
+        [
+          4,
+          13,
+          23
+        ],
+        [
+          7,
+          10,
+          20
+        ],
+        [
+          8,
+          17,
+          22
+        ],
+        [
+          15,
+          18,
+          21
+        ]
+      ],
+      "native_eigenmodes": 6,
+      "negative_discriminant_exact": true,
+      "odd_full24_polynomial_and_modal_interpolation": true,
+      "original_full24_inverse_orders": true,
+      "peak_replay_num_den_bits": 27,
+      "physical_gate_credit": 0,
+      "source_adjoint_adverse_controls": 31,
+      "source_sha256": {
+        "scores/ArtformScores/GravityBridge/Native/RetroCertificates/All24ProgramsDefs.lean": "f40482a2b49a7faa5e555a0e67abbfa9704e44f367ea37d4d61fdef6ccf20395",
+        "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FaceCode.lean": "6db8597ac53e45c906a6a513bc23e7bfdb8994faf2b77a71abf080b847a904ed",
+        "scores/ArtformScores/GravityBridge/Native/Retrospective/BlockProgramsDefs.lean": "5a4efd7327f3c8330304394618f399e00d29b1e7dbfddb1675dcdaf48f9b44b4",
+        "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-12.py": "88bb8e00be8abfb66726faf93150c86fa5371e1762ada4db128dcd496a4c7a5c",
+        "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-13.py": "7354834682fc9df4d61b7e195ca59a733baeb861cb58794ee7b3d0e2a8fe418c",
+        "scores/review/gravity-r7-r8-120-2026-10-30/native-coordinate-root-10.py": "0539d488875a2d5945bbef5f8216bd0007856542f02823e92a21c8e73a0fbb17",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "7782d960421cab64f12dc3dd7a43d73a6d9125bcc766e0aa8f493ea8a7b87a42",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/original-nonlinear-torsion.md": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/original-transported-curvature.md": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da"
+      },
+      "status": "passed"
+    },
+    "stderr": ""
+  },
+  "root_replay_reproduced_without_published_JSON_mutation": {
+    "script": "final-native-root-14.py",
+    "script_sha256": "408fba9eb23be22dde680ef50966b2c6dd8cbae1d8e335e259b24e15819445d0",
+    "command": "Reproduce final-native-root-14.py with both receipt destinations redirected to private temporary files",
+    "exit_code": 0,
+    "elapsed_seconds": 4.077,
+    "result": {
+      "status": "passed",
+      "source_pairs": 45,
+      "matched_operator_replays": [
+        {
+          "operator": "H",
+          "arbitrary_heldout_inputs": 48,
+          "all_outputs": 24,
+          "dense_scales_adds": [
+            72,
+            48
+          ],
+          "rank_scales_adds": [
+            32,
+            40
+          ],
+          "emitted_dense_gates": 120,
+          "emitted_rank_gates": 72,
+          "serialized_program_bytes": 5088,
+          "max_coefficient_num_den_bits": 15,
+          "max_replayed_intermediate_bits": 25,
+          "program_sha256": "070c82c57201d6f1a146c862fd2c138ac81be21297bc89786b548ec3cb55215c"
+        },
+        {
+          "operator": "Q",
+          "arbitrary_heldout_inputs": 48,
+          "all_outputs": 24,
+          "dense_scales_adds": [
+            72,
+            48
+          ],
+          "rank_scales_adds": [
+            32,
+            40
+          ],
+          "emitted_dense_gates": 120,
+          "emitted_rank_gates": 72,
+          "serialized_program_bytes": 4892,
+          "max_coefficient_num_den_bits": 14,
+          "max_replayed_intermediate_bits": 23,
+          "program_sha256": "130f081af59c1a329817a12b8d7c88783dcdc71869e9d2930918d9dc44db2f74"
+        },
+        {
+          "operator": "Qinverse",
+          "arbitrary_heldout_inputs": 48,
+          "all_outputs": 24,
+          "dense_scales_adds": [
+            72,
+            48
+          ],
+          "rank_scales_adds": [
+            32,
+            40
+          ],
+          "emitted_dense_gates": 120,
+          "emitted_rank_gates": 72,
+          "serialized_program_bytes": 4552,
+          "max_coefficient_num_den_bits": 7,
+          "max_replayed_intermediate_bits": 17,
+          "program_sha256": "e9b858555c235fb78a5aa6ae6dba5c4eb445b6fe004e5064c23f800a56b69226"
+        }
+      ],
+      "actual_source_adjoint_control_cases": 24,
+      "literal_current_two_cell_cases": 60,
+      "original_native_eigenvalues": [
+        "194/101",
+        "-194/101",
+        "103/101",
+        "-103/101",
+        "200/101",
+        "-200/101"
+      ],
+      "constitutive_diagonal_signs": [
+        12,
+        12
+      ],
+      "polynomial_scales_adds": [
+        432,
+        288
+      ],
+      "generation_policy": "fixed coefficients supplied in both routes; emitted gates/serialized bytes/bitlength recorded separately from replay; no runtime saving claimed",
+      "measure_proof": "formal Lean continuous-weight, unrestricted lintegral and finite-window inequalities; no numeric improper-integral inference",
+      "credit": "prospective same-input/all24-output arithmetic comparisons only; historical, global Lean, full40 and physical-resource savings0; complete physical gates0"
+    },
+    "stderr": "",
+    "published_receipts_sha256_unchanged": {
+      "scores/review/gravity-r7-r8-120-2026-10-30/final-native-programs-14.json": "2e3e47407c38a96d319d4f7949f6e31fd387cc28f7d2e294427ad8001628f920",
+      "scores/review/gravity-r7-r8-120-2026-10-30/final-native-root-14.json": "140fe1e9381a82d792fd70aa5d8c9bbc0a4ce94d33c6e8e634555463d4d1c3a1"
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_admitted_native_physical_construction": false,
+    "new_historical_runtime_globalLean_full40_physical_resource_saving": 0,
+    "new_narrow_prospective_rational_DAG_comparisons": [
+      {
+        "key": "GAC2:verified-all24-rank-return",
+        "same_input": "arbitrary rational24 connection",
+        "all_outputs": 24,
+        "dense_scales_adds": [
+          72,
+          48
+        ],
+        "rank_scales_adds": [
+          32,
+          40
+        ]
+      },
+      {
+        "key": "GAC2:native-full-Q-program",
+        "same_input": "arbitrary rational24 face",
+        "all_outputs": 24,
+        "dense_scales_adds": [
+          72,
+          48
+        ],
+        "rank_scales_adds": [
+          32,
+          40
+        ]
+      },
+      {
+        "key": "GAC2:native-full-Q-inverse-program",
+        "same_input": "arbitrary rational24 face",
+        "all_outputs": 24,
+        "dense_scales_adds": [
+          72,
+          48
+        ],
+        "rank_scales_adds": [
+          32,
+          40
+        ]
+      }
+    ],
+    "cost_convention": "Both routes have same fixed precomputed rational coefficients and free signed reads/copy/negation. Exact specified DAGs; no universal optimality or bit/runtime asymptotics.",
+    "prior_C10_E08_H08_prospective_comparisons_unchanged": true,
+    "template_dense_checker_and_adverse_polynomial_comparisons_are_not_further_positive_savings": true,
+    "uninstantiated_bridges": [
+      "actual finite-h full40 feedback and physical source/Hessian identification",
+      "admitted reflected L2 packets, preparation and uniform analytic contours/remainders",
+      "physical source-compatible current and quotient identification",
+      "actual original terminal constructor and independent source target",
+      "cube/octahedron/stella comparison and full fine coframe/link/history/boundary admission",
+      "uniform coframe scaling and physical admission for conditional log-report diagnostic",
+      "original Lorentzian/oscillatory/gauge quantum measure and state normalization"
+    ]
+  },
+  "final_report_independently_assessed": true,
+  "final_report_changes": "approval/count/evidence-status metadata only; scientific boundaries preserved",
+  "campaign_dispositions_completed_after_review": 120,
+  "campaign_target": 120,
+  "total_approvals_after_review": 239,
+  "audit": "audit-independent-14.md",
+  "validation": "validation-independent-14.json",
+  "all_preexisting_Lean_files_identical_to_219_approval_baseline": true,
+  "frozen_plan_unique_mathematical_IDs": 120,
+  "support_modules_additional_rounds": 0,
+  "final_report_metadata_before_sha256": "9f05f2027173898c7d2104e2f64c90a0fedff938cb5db8a31efe48b133258797",
+  "final_report_metadata_after_sha256": "b3cec59b8829e382e06345353237bfb0dd3149eb39bdbffac77e1c52f75469f5",
+  "final_report_metadata_replacements": 3
+}

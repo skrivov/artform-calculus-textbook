@@ -1,0 +1,751 @@
+{
+  "date": "2026-10-31",
+  "reviewed_commit": "49a5bfdd672bbaaff8876d1009e0ede3a0d99d43",
+  "independent_review": true,
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.278,
+      "stdout": "\u2139 [3788/4042] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9757 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.876,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 19.658,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 29243475,
+      "output_sha256": "25ac8330347d316d797c4bc59f1c825adaef4e24c601e4f870c6f085c14e8eb6",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.316,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.876,
+      "stdout": "1192 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.145,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.196,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.218,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.078,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.296,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.141,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.All24Programs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.126,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.OddInverse"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.702,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.ModalDegree"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.991,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.Templates"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.685,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.SourceAudit"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.018,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.PolynomialCost"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.798,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.Slots"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.734,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.FacePartition"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.006,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.ConstitutiveInverse"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.781,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.FaceCode"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.809,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.ForwardQ"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.645,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.RetroCertificates.InverseQ"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.657,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Signature"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.092,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.SourceBranch"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.305,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Coframe"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.042,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Signed"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Envelope"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.221,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Budget"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.352,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Retuning"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.243,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Window"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.192,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.Unrestricted"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.241,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.NativeDetailTests.FiniteWindow"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.179,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.497,
+      "stdout": "\u2139 [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9757 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.395,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.275,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 29243475,
+      "output_sha256": "25ac8330347d316d797c4bc59f1c825adaef4e24c601e4f870c6f085c14e8eb6",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.37,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.926,
+      "stdout": "1194 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.157,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.203,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.255,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.083,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.362,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.154,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "supplemental_replays": [
+    {
+      "command": "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-14.py",
+      "exit_code": 0,
+      "elapsed_seconds": 19.454,
+      "result": {
+        "actual_Lean_gate_lists_parsed": true,
+        "all_H_Q_Qinverse_outputs": 24,
+        "basis_and_heldout_inputs_per_map": 53,
+        "conditional_log_report_cases": 3,
+        "constitutive_diagonal_signs": [
+          12,
+          12
+        ],
+        "dense_rank_scales_adds": [
+          [
+            72,
+            48
+          ],
+          [
+            32,
+            40
+          ]
+        ],
+        "direct_original_density_Hessian_entries": 576,
+        "exact_source_branch_window_cases": 50,
+        "historical_runtime_globalLean_credit": 0,
+        "literal_two_cell_first_second_and_coframe_jets": 50,
+        "native_Q_partition_discovered_from_literal_map": [
+          [
+            0,
+            14,
+            19
+          ],
+          [
+            1,
+            6,
+            11
+          ],
+          [
+            2,
+            5,
+            12
+          ],
+          [
+            3,
+            9,
+            16
+          ],
+          [
+            4,
+            13,
+            23
+          ],
+          [
+            7,
+            10,
+            20
+          ],
+          [
+            8,
+            17,
+            22
+          ],
+          [
+            15,
+            18,
+            21
+          ]
+        ],
+        "native_eigenmodes": 6,
+        "negative_discriminant_exact": true,
+        "odd_full24_polynomial_and_modal_interpolation": true,
+        "original_full24_inverse_orders": true,
+        "peak_replay_num_den_bits": 27,
+        "physical_gate_credit": 0,
+        "source_adjoint_adverse_controls": 31,
+        "source_sha256": {
+          "scores/ArtformScores/GravityBridge/Native/RetroCertificates/All24ProgramsDefs.lean": "f40482a2b49a7faa5e555a0e67abbfa9704e44f367ea37d4d61fdef6ccf20395",
+          "scores/ArtformScores/GravityBridge/Native/RetroCertificates/FaceCode.lean": "6db8597ac53e45c906a6a513bc23e7bfdb8994faf2b77a71abf080b847a904ed",
+          "scores/ArtformScores/GravityBridge/Native/Retrospective/BlockProgramsDefs.lean": "5a4efd7327f3c8330304394618f399e00d29b1e7dbfddb1675dcdaf48f9b44b4",
+          "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-12.py": "88bb8e00be8abfb66726faf93150c86fa5371e1762ada4db128dcd496a4c7a5c",
+          "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-13.py": "7354834682fc9df4d61b7e195ca59a733baeb861cb58794ee7b3d0e2a8fe418c",
+          "scores/review/gravity-r7-r8-120-2026-10-30/native-coordinate-root-10.py": "0539d488875a2d5945bbef5f8216bd0007856542f02823e92a21c8e73a0fbb17",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "7782d960421cab64f12dc3dd7a43d73a6d9125bcc766e0aa8f493ea8a7b87a42",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source/original-nonlinear-torsion.md": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source/original-transported-curvature.md": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da"
+        },
+        "status": "passed"
+      },
+      "stderr": ""
+    },
+    {
+      "command": "Reproduce final-native-root-14.py with both receipt destinations redirected to private temporary files",
+      "exit_code": 0,
+      "elapsed_seconds": 4.077,
+      "result": {
+        "status": "passed",
+        "source_pairs": 45,
+        "matched_operator_replays": [
+          {
+            "operator": "H",
+            "arbitrary_heldout_inputs": 48,
+            "all_outputs": 24,
+            "dense_scales_adds": [
+              72,
+              48
+            ],
+            "rank_scales_adds": [
+              32,
+              40
+            ],
+            "emitted_dense_gates": 120,
+            "emitted_rank_gates": 72,
+            "serialized_program_bytes": 5088,
+            "max_coefficient_num_den_bits": 15,
+            "max_replayed_intermediate_bits": 25,
+            "program_sha256": "070c82c57201d6f1a146c862fd2c138ac81be21297bc89786b548ec3cb55215c"
+          },
+          {
+            "operator": "Q",
+            "arbitrary_heldout_inputs": 48,
+            "all_outputs": 24,
+            "dense_scales_adds": [
+              72,
+              48
+            ],
+            "rank_scales_adds": [
+              32,
+              40
+            ],
+            "emitted_dense_gates": 120,
+            "emitted_rank_gates": 72,
+            "serialized_program_bytes": 4892,
+            "max_coefficient_num_den_bits": 14,
+            "max_replayed_intermediate_bits": 23,
+            "program_sha256": "130f081af59c1a329817a12b8d7c88783dcdc71869e9d2930918d9dc44db2f74"
+          },
+          {
+            "operator": "Qinverse",
+            "arbitrary_heldout_inputs": 48,
+            "all_outputs": 24,
+            "dense_scales_adds": [
+              72,
+              48
+            ],
+            "rank_scales_adds": [
+              32,
+              40
+            ],
+            "emitted_dense_gates": 120,
+            "emitted_rank_gates": 72,
+            "serialized_program_bytes": 4552,
+            "max_coefficient_num_den_bits": 7,
+            "max_replayed_intermediate_bits": 17,
+            "program_sha256": "e9b858555c235fb78a5aa6ae6dba5c4eb445b6fe004e5064c23f800a56b69226"
+          }
+        ],
+        "actual_source_adjoint_control_cases": 24,
+        "literal_current_two_cell_cases": 60,
+        "original_native_eigenvalues": [
+          "194/101",
+          "-194/101",
+          "103/101",
+          "-103/101",
+          "200/101",
+          "-200/101"
+        ],
+        "constitutive_diagonal_signs": [
+          12,
+          12
+        ],
+        "polynomial_scales_adds": [
+          432,
+          288
+        ],
+        "generation_policy": "fixed coefficients supplied in both routes; emitted gates/serialized bytes/bitlength recorded separately from replay; no runtime saving claimed",
+        "measure_proof": "formal Lean continuous-weight, unrestricted lintegral and finite-window inequalities; no numeric improper-integral inference",
+        "credit": "prospective same-input/all24-output arithmetic comparisons only; historical, global Lean, full40 and physical-resource savings0; complete physical gates0"
+      },
+      "stderr": "",
+      "published_receipts_sha256_unchanged": {
+        "scores/review/gravity-r7-r8-120-2026-10-30/final-native-programs-14.json": "2e3e47407c38a96d319d4f7949f6e31fd387cc28f7d2e294427ad8001628f920",
+        "scores/review/gravity-r7-r8-120-2026-10-30/final-native-root-14.json": "140fe1e9381a82d792fd70aa5d8c9bbc0a4ce94d33c6e8e634555463d4d1c3a1"
+      }
+    }
+  ],
+  "fidelity_and_preservation": {
+    "approved": 20,
+    "returned": 0,
+    "earlier_approved_entries_preserved": 219,
+    "all_preexisting_Lean_files_unchanged": true,
+    "submitted_Lean_files_unchanged": 62,
+    "canonical_quotes_exact": true,
+    "authenticated_original_snapshot_pairs": 45,
+    "total_approved_entries": 239,
+    "campaign_unique_mathematical_dispositions": 120,
+    "campaign_target": 120,
+    "support_modules_additional_rounds": 0,
+    "new_native_physical_gates": 0,
+    "inherited_scoped_R2_applications_unchanged": 1,
+    "new_narrow_prospective_rational_DAG_comparisons": 3,
+    "new_historical_runtime_globalLean_physical_resource_credit": 0,
+    "reviewer_implementation_changes": false,
+    "post_freeze_repair": false,
+    "required_checks": 44,
+    "separate_kernel_replays": 22,
+    "final_report_metadata_only": true
+  },
+  "final_artifact_tree_check": {
+    "command": [
+      "python3",
+      "scripts/check_tree.py",
+      "--identity"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.89,
+    "stdout": "1194 files checked; 0 problem(s)\n",
+    "stderr": ""
+  }
+}

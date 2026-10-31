@@ -1,6 +1,6 @@
 # Second R7/R8 campaign:120 mathematical investigations
 
-Review state:100 independently approved investigations;20 final K/L submissions pending review14. The approved score baseline at this cutoff is219; final approval would give239=119+120. Research, formalization and adverse tests consume the120 rounds. Source inventory, checking, review, handoffs and publication consume0 rounds.
+Review state:120 independently approved investigations;0 pending. The approved score count is239=119+120. Final independent review14 approved all20 K/L submissions, with0 returns; see [audit](audit-independent-14.md), [verdicts](verdict-independent-14.json) and [validation](validation-independent-14.json). Research, formalization and adverse tests consume the120 rounds. Source inventory, checking, review, handoffs and publication consume0 rounds.
 
 ## What is ready for reuse
 
@@ -26,7 +26,7 @@ Every row retains its stated original input, output, coefficient domain and guar
 | K09 | Original homogeneous Q, arbitrary rational24-face input/all24 outputs |72,48|32,40|
 | K10 | Original homogeneous Q inverse, arbitrary rational24-face input/all24 outputs |72,48|32,40|
 
-C10/E08/H08 were independently approved earlier; K01/K09/K10 await final review14. Each comparison applies to its specified arithmetic DAG. Historical discovery-time, matched whole-pipeline runtime, global Lean and physical-resource savings remain0. Generation, serialized code and coefficient/intermediate bitlength are recorded separately. Kernel replay timings are validation observations, not a matched Lean performance comparison.
+C10/E08/H08 were independently approved earlier; K01/K09/K10 were independently approved in final review14. Each comparison applies to its specified arithmetic DAG. Historical discovery-time, matched whole-pipeline runtime, global Lean and physical-resource savings remain0. Generation, serialized code and coefficient/intermediate bitlength are recorded separately. Kernel replay timings are validation observations, not a matched Lean performance comparison.
 
 The adverse comparisons are useful too. The exact full inverse as an odd degree-five polynomial gives432 scales and288 adds under its declared dense-B macro DAG, exceeding the32/40 rank return. Native modal interpolation requires its fifth-degree coefficient, but this is not a universal circuit lower bound. Two3x3 template identities can certify a new complete return using the approved original partition. Conversely, a wrong return that discards repeated blocks passes every selected three-block native source test and still fails an actual full-source equation.
 
@@ -55,4 +55,4 @@ The next material physical step should use these interfaces on one actual admitt
 
 All45 source original/snapshot pairs are authenticated. The final20 root replay checks48 arbitrary held-out inputs for each of H,Q,Q inverse, retaining all24 outputs; the actual source-adjoint adverse control; all six native eigenmodes; the original Woodbury identity and constitutive diagonal signs; and60 literal nonlinear current-law two-cell cases with exact source/window/branch controls. The positive-real integral claims are formal Lean measure proofs, not numerical extrapolations.
 
-The final packet contains62 new Lean files and22 proof/support modules, each scheduled for a separate kernel replay. Required build/report/status/tree/certificate and drift checks accompany publication. All219 earlier approved entries and proof texts are preserved. Canonical claims are findings257–276 and their literal manifest quotations. The independent audit, per-key verdicts and validation14 are authoritative for final fidelity approval.
+The final packet contains62 new Lean files and22 proof/support modules, each independently kernel-replayed successfully. Required build/report/status/tree/certificate and both empty drift checks passed; compact results are recorded in validation-independent-14.json. All219 earlier approved entries and proof texts are preserved. Canonical claims are findings257–276 and their literal manifest quotations. The independent audit, per-key verdicts and validation14 are authoritative for final fidelity approval.

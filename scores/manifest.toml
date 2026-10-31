@@ -4155,8 +4155,8 @@ See [finding257](findings/257-verified-all24-rank-return.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.all24ProgramsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.all24ProgramsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c66826bb7524c78f27ddec6aba149e2029bb9fad4bbb409b765f4621ac7f756c"
 
 [[statement]]
 key = "GAC2:original-global-odd-inverse"
@@ -4176,8 +4176,8 @@ See [finding258](findings/258-original-global-odd-inverse.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.oddInverseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.oddInverseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "1cfdea9e527c9855edc4a0b21d1843434863e3169adb06bb652d22fb9b5c0ca6"
 
 [[statement]]
 key = "GAC2:native-modal-inverse-degree"
@@ -4197,8 +4197,8 @@ See [finding259](findings/259-native-modal-inverse-degree.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.modalDegreeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.modalDegreeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "7ca04e800b25bf07873e71d19840524b15a4bdce5ab17686db4fb674f7281920"
 
 [[statement]]
 key = "GAC2:native-two-template-certificate"
@@ -4220,8 +4220,8 @@ See [finding260](findings/260-native-two-template-certificate.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.templatesLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.templatesLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "15889c41608b22915b42c8227dd5790e14e57ad22fdd31e4c53465aba465d3f6"
 
 [[statement]]
 key = "GAC2:native-source-only-certificate-audit"
@@ -4241,8 +4241,8 @@ See [finding261](findings/261-native-source-only-certificate-audit.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.sourceAuditLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.sourceAuditLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "69c585fe1cded0da614934aa353fae478d49eb5d1b98b0a72da7e538004a7fdb"
 
 [[statement]]
 key = "GAC2:native-polynomial-work-audit"
@@ -4263,8 +4263,8 @@ See [finding262](findings/262-native-polynomial-work-audit.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.polynomialCostLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.polynomialCostLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "bcf46f85cefacacbf1bbb356a64bdcf17c1406c049c4cee551979d633824b2f6"
 
 [[statement]]
 key = "GAC2:native-full-face-rank-partition"
@@ -4286,8 +4286,8 @@ See [finding263](findings/263-native-full-face-rank-partition.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.facePartitionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.facePartitionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "e090276b0616a61b75fc94f161f9380794085debb965efb686f9f593cb9e6ce2"
 
 [[statement]]
 key = "GAC2:native-full-constitutive-inverse"
@@ -4309,8 +4309,8 @@ See [finding264](findings/264-native-full-constitutive-inverse.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.constitutiveInverseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.constitutiveInverseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "bfaad7d05a883e4f9d443fdecd57fdc8428ab835714cbdbc657f41077a860545"
 
 [[statement]]
 key = "GAC2:native-full-Q-program"
@@ -4331,8 +4331,8 @@ See [finding265](findings/265-native-full-Q-program.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.forwardQLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.forwardQLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "182f37fb4e32f1f8c33f11c533d9eba9958c1040fdb25554b27bae8566bb1fed"
 
 [[statement]]
 key = "GAC2:native-full-Q-inverse-program"
@@ -4353,8 +4353,8 @@ See [finding266](findings/266-native-full-Q-inverse-program.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.inverseQLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.inverseQLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ae97967f147164a7f95ab7fc3d0a0c105067d0f3f0a200d4e8d7174201aec3da"
 
 [[statement]]
 key = "GAC2:native-constitutive-diagonal-signs"
@@ -4376,8 +4376,8 @@ See [finding267](findings/267-native-constitutive-diagonal-signs.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signatureLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.signatureLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "79d9d9c45049461a375e1e835b3d53d8a545a93b8eca2737d4aafb9540de6f8a"
 
 [[statement]]
 key = "GAC2:native-all-detail-coframe-source"
@@ -4398,8 +4398,8 @@ See [finding268](findings/268-native-all-detail-coframe-source.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.coframeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.coframeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "09e0cd0db08881926676c7207cecf089ff3a308bee761d059ee01611f89e32fc"
 
 [[statement]]
 key = "GAC2:native-negative-detail-discriminant"
@@ -4419,8 +4419,8 @@ See [finding269](findings/269-native-negative-detail-discriminant.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signedLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.signedLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "e659eae24fea76e543f6447494a09589f912d062041128279e0f53b4694c0755"
 
 [[statement]]
 key = "GAC2:native-source-envelope-contacts"
@@ -4442,8 +4442,8 @@ See [finding270](findings/270-native-source-envelope-contacts.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.envelopeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.envelopeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "94ebc3392beca782a014a2aff31362b1ef2d03dacb34b2f99d85fe1be44a879d"
 
 [[statement]]
 key = "GAC2:native-stationary-value-trace-budget"
@@ -4466,8 +4466,8 @@ See [finding271](findings/271-native-stationary-value-trace-budget.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.budgetLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.budgetLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "db041b3dae803fa290ab86c61fa781f8aab9ab8a2ce8a617bd53c669f2fa6b72"
 
 [[statement]]
 key = "GAC2:native-coarse-scalar-retuning"
@@ -4488,8 +4488,8 @@ See [finding272](findings/272-native-coarse-scalar-retuning.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.retuningLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.retuningLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "a96a845fab7ee75c5295e7b570271cdb1d08c9fa7bd52bf46952d50133114de6"
 
 [[statement]]
 key = "GAC2:native-global-source-detail"
@@ -4510,8 +4510,8 @@ See [finding273](findings/273-native-global-source-detail.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.sourceBranchLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.sourceBranchLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "bf509d84c255fb413d4ef5b722493450885ffaa7c3c1acf9ede601b03c16720c"
 
 [[statement]]
 key = "GAC2:native-source-rapidity-window"
@@ -4532,8 +4532,8 @@ See [finding274](findings/274-native-source-rapidity-window.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.windowLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.windowLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f213ff22a608351daf31ce22d9cf0c7a01e7f94a4c3a9e652cee11d3b8cd99d3"
 
 [[statement]]
 key = "GAC2:native-unrestricted-positive-weight"
@@ -4553,8 +4553,8 @@ See [finding275](findings/275-native-unrestricted-positive-weight.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.unrestrictedLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.unrestrictedLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "5303e9b95b444ebef7dca146ad75e8df0b5af691d2ffbcd49646d3fa68833d79"
 
 [[statement]]
 key = "GAC2:native-finite-detail-weight"
@@ -4574,5 +4574,5 @@ See [finding276](findings/276-native-finite-detail-weight.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.finiteWindowLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.finiteWindowLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "8771f8b366b37a5c1944965862773a042b2e604823f552965c83da58c936d522"
