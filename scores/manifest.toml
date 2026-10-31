@@ -2029,3 +2029,116 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.metricFrameLaw"
 lean_proof = "Artform.Scores.GravityBridge.metricFrameLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "65f126c20b3705f85f2450d87edd271a0bf5e5fcc63058b818f2b042c698f497"
+
+[[statement]]
+key = "GAC2:native-forty-coordinate-gram"
+label = "GAC2:native-forty-coordinate-gram"
+title = "Original forty coordinates Gram and Hodge data"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-forty-coordinate-gram)"
+statement = """
+**GAC2:native-forty-coordinate-gram (literal original coordinate conventions).** Over any
+characteristic-zero field K, the coframe4x4 and four six-coordinate independent connections
+pack and unpack bijectively through40 coordinate slots. In the ORIGINAL ordered bivector
+basis(01,02,03,23,31,12), lie(a) has symmetric boost entries and spatial entries
+(23,31,12)=(a3,a4,a5). Its six coordinates are recovered uniquely. These matrices are exactly
+the kernel of the linearized eta-metric map, eta=diag(-1,1,1,1).
+The pairing g(a,b)=sum_i s_i*a_i*b_i, s=(-1,-1,-1,1,1,1), equals
+-trace(lie(a)*lie(b))/2 and is nondegenerate. Its covector Gram map and the coframe eta Gram
+map square to identity. The ORIGINAL internal star maps(aK,aJ) to(-aJ,aK), squares to-Id,
+is g-self-adjoint and satisfies g(a,star b)=aK.bJ+aJ.bK. This certifies coordinate and
+pairing data, not a physical radical, force inverse or mode count.
+See [finding157](findings/157-original-forty-coordinates-gram-and-star.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.coordinatesLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.coordinatesLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-shift-adjoint"
+label = "GAC2:native-shift-adjoint"
+title = "Independent shifts and periodic incoming transpose"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-shift-adjoint)"
+statement = """
+**GAC2:native-shift-adjoint (periodic bilinear transpose).** For an additive commutative
+group X and commutative ring K, S_a f(x)=f(x+a) obeys S_a S_b=S_(a+b)=S_b S_a and
+S_(-a) S_a=Id. The differences D_a=S_a-Id commute. If X is finite, for every f,g,
+sum_x(S_a f)(x)*g(x)=sum_x f(x)*(S_(-a)g)(x), and likewise
+sum_x(D_a f)(x)*g(x)=sum_x f(x)*(D_(-a)g)(x).
+On the four-direction periodic grid(Z/3)^4, a delta field separates every pair of distinct
+positive unit shifts. This is the actual finite periodic bilinear transpose; no complex
+conjugation, infinite-background action sum or unproved Hilbert adjoint is substituted.
+See [finding158](findings/158-independent-periodic-shifts-and-incoming-transpose.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.shiftsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.shiftsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-ordered-plaquette-jet"
+label = "GAC2:native-ordered-plaquette-jet"
+title = "Ordered native plaquette through quadratic degree"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-ordered-plaquette-jet)"
+statement = """
+**GAC2:native-ordered-plaquette-jet (retain the original inverse reading).** Over any
+characteristic-zero field K, form degree-two matrix jets with the ordinary truncated product
+and expJet(X)=(I,X,X^2/2). The ordered fourfold product has first coefficient sum_a X_a
+and second coefficient(sum_a X_a^2)/2+sum_(a<b)X_a*X_b. A jet with constant I has two-sided
+inverse jet(I,-H1,H1^2-H2). For K(H)=-(H-H^-1)/2, its quadratic coefficient is
+-(1/2)*sum_(a<b)[X_a,X_b]. With the ORIGINAL plaquette letters
+(-A_l,-S_l A_k,S_k A_l,A_k), its linear coefficient is D_l A_k-D_k A_l.
+These are exact formal degree-two identities, with a noncommuting Lorentz-matrix witness;
+no analytic exponential remainder or nonlinear native solution is claimed here.
+See [finding159](findings/159-ordered-plaquette-quadratic-jet-and-inverse-reading.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.plaquetteLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-five-summand-complement"
+label = "GAC2:native-five-summand-complement"
+title = "Both diagonal paths in the native complement"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-five-summand-complement)"
+statement = """
+**GAC2:native-five-summand-complement (both original diagonal paths).** Over any
+characteristic-zero field K, write M(F)= (F0+Fk+Fl+Fkl)/4 and
+V=(3*A_k+S_l A_k+3*A_l+S_k A_l)/8. The five first-order summands with
+weights(1/4,1/4,1/4,1/8,1/8), transport contacts(0,A_k,A_l,A_k+S_k A_l,A_l+S_l A_k)
+and equal diagonal field values Fkl=Flk sum to M(F)-[V,C]. For any four gauge values,
+V(D omega)=M(omega)-omega0; consequently M([omega,C])-[V(D omega),C]=[omega0,C].
+In particular V(A_k,0,0,0)=3*A_k/8. These are literal first-order matrix identities for
+the original averaged complement, not a complete mixed40-row Ward or nonlinear gauge theorem.
+See [finding160](findings/160-five-summand-native-complement-and-gauge-contact.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.complementLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-flat-torsion-gauge"
+label = "GAC2:native-flat-torsion-gauge"
+title = "The full flat torsion map and Lorentz columns"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-flat-torsion-gauge)"
+statement = """
+**GAC2:native-flat-torsion-gauge (all original coframe and link directions).** On an
+additive commutative lattice group over any characteristic-zero field, keep the original
+coframe matrix f, four independent bivector links A_i and
+ theta_ij^a=D_i f_j^a-D_j f_i^a-lie(A_i)^a_j+lie(A_j)^a_i.
+It is antisymmetric. For arbitrary six-coordinate omega(x), f=lie(omega) and
+A_i=omega(x+d_i)-omega(x) give theta=0 and D_j A_i-D_i A_j=0 identically.
+With eta=diag(-1,1,1,1), the original unordered-face density
+T(theta)=kappa*sum_(i<j) eta_i*eta_j*etaPair(theta_ij,theta_ij) has exact variation
+T(theta+epsilon*t)=T(theta)+epsilon*2*kappa*sum_(i<j) eta_i*eta_j*
+etaPair(theta_ij,t_ij)+epsilon^2*T(t).
+The indefinite unit-face example at kappa=1/101 has T=-1/101 and self-test derivative-2/101.
+This is the full flat torsion contribution, not the complete curvature-plus-torsion force.
+See [finding161](findings/161-original-flat-torsion-and-six-lorentz-columns.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.torsionLaw"
+reviewed = ""
+review_text_sha256 = ""

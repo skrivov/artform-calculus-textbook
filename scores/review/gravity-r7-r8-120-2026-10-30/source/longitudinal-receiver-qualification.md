@@ -1,0 +1,3 @@
+# Mandatory longitudinal divJ5 receiver-preparation001 qualification
+
+A read-only display request assumed `complete_literal` in an existing extracted-literal wrapper and raised KeyError before displaying scientific content. It created no process handle, source change or mathematical result. The queried wrapper and an exact request/observed-error transcription were byte-copied before the successor shape inspection. The transcription is not an exported raw tool envelope. The second named wrapper was not reached. This is new receiver preparation1, source science0, distinct from inherited source scratch1 and all earlier custody. Two original/preserved pairs, no original-path guard. All live handles are empty.

@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 119 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **119** |
+| **total** | **124** |
 
 ## Statements
 
@@ -134,3 +134,8 @@
 | GAC:source-radical-audit | Source-compatible radical quotient audit | proved | `Artform.Scores.GravityBridge.Statement.sourceRadicalLaw` / `Artform.Scores.GravityBridge.sourceRadicalLaw` | approved 2026-10-30 |
 | GAC:controlled-phase-equivalence | Isolated and controlled-reference phase equivalence | proved | `Artform.Scores.GravityBridge.Statement.controlledPhaseLaw` / `Artform.Scores.GravityBridge.controlledPhaseLaw` | approved 2026-10-30 |
 | GAC:metric-frame-kinematics | Metric frame and connection kinematics audit | proved | `Artform.Scores.GravityBridge.Statement.metricFrameLaw` / `Artform.Scores.GravityBridge.metricFrameLaw` | approved 2026-10-30 |
+| GAC2:native-forty-coordinate-gram | Original forty coordinates Gram and Hodge data | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.coordinatesLaw` / `Artform.Scores.GravityBridge.Native.Full40.coordinatesLaw` | awaiting review |
+| GAC2:native-shift-adjoint | Independent shifts and periodic incoming transpose | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.shiftsLaw` / `Artform.Scores.GravityBridge.Native.Full40.shiftsLaw` | awaiting review |
+| GAC2:native-ordered-plaquette-jet | Ordered native plaquette through quadratic degree | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw` / `Artform.Scores.GravityBridge.Native.Full40.plaquetteLaw` | awaiting review |
+| GAC2:native-five-summand-complement | Both diagonal paths in the native complement | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw` / `Artform.Scores.GravityBridge.Native.Full40.complementLaw` | awaiting review |
+| GAC2:native-flat-torsion-gauge | The full flat torsion map and Lorentz columns | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw` / `Artform.Scores.GravityBridge.Native.Full40.torsionLaw` | awaiting review |

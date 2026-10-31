@@ -1,0 +1,114 @@
+{
+  "campaign_id": "gravity-calculus-r7-r8-120-2026-10-30",
+  "date": "2026-10-30",
+  "proof_baseline": "bec40a6c1941ba1df3e86840d2c0a02598bdf13b",
+  "source_read_policy": "exact known files; no recursive custody-forest traversal",
+  "sibling_chat": {
+    "id": "01a1374e-3bb2-76a3-bf7e-f8cbe9a80d44",
+    "title": "/goal Establish a mathematically and physically defensible\u2026",
+    "status_at_read": "notLoaded; latestturninterrupted",
+    "latest_substance": "M185 quartic metric matching and small-repair noninvariance reviewed; publication unfinished; later connection-target necessary condition separately reviewed, value remains unreviewed"
+  },
+  "sources": [
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-pattern-coframe-curvature-parent-and-retained-refinement/lorentz-invariant-parent-class-and-torsion-map.md",
+      "snapshot": "source/original-pairing.md",
+      "bytes": 5462,
+      "sha256": "5d0dfb52cb2472ce456152ab0afab4efd5564b293ead37bdcc380f6cc40b0c95",
+      "scope": "original ordered basis, metric and internal star; no unique physical law selected"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-covariant-cell-parent-and-smooth-source-limit/covariant-cell-action-and-source-consistency.md",
+      "snapshot": "source/original-cell-action.md",
+      "bytes": 12809,
+      "sha256": "b5863a9c5b91ab4cdebccbb07cb45dcb689b8f7c6204576ce7bb5778ebf46881",
+      "scope": "original matrix-bivector identification and action normalization; older one-sided quadrature, later transported average governs full40"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/unrestricted-flat-quadratic-and-complete-forty-force-for-review.md",
+      "snapshot": "source/full40-quadratic.md",
+      "bytes": 10394,
+      "sha256": "183dbf9399f5812af0cf6531725bda7319525b1303b0ec87d97e70d76be8463d",
+      "scope": "full flat quadratic and40-row finite-stencil specification; native coordinate and domain qualifications mandatory"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/exact-original-Ward-and-bounded-full-force-for-review.md",
+      "snapshot": "source/full40-Ward.md",
+      "bytes": 9748,
+      "sha256": "204998dca7e4ac4316e859ba4a5bb780bbb0f7b6bec79810f26324adf364c8b2",
+      "scope": "full coordinate Ward/projection derivation, not a refoliation or physical quotient theorem"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/exact-coordinate-force-and-pairing-qualification.md",
+      "snapshot": "source/coordinate-pairing-qualification.md",
+      "bytes": 2828,
+      "sha256": "d5b922cb4d8ae1e586e43eb784788d9c0e71a6b4303b1fadceb334a3285584ce",
+      "scope": "invariant Gram covectors and exact coordinate force conversion"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/mandatory-description001-background-and-operator-domains.md",
+      "snapshot": "source/background-operator-domain-qualification.md",
+      "bytes": 2717,
+      "sha256": "2bb75962d284b6d64cf457bb9cd50b92e85d8893161ac6c835b715cc1d04a1ec",
+      "scope": "background control onlysup; l2 applies to perturbation operators, not nondecaying background"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M185-reviewed-R2-slice-exclusion-and-patchwise-metric-realization-20261030.md",
+      "snapshot": "source/M185-draft.md",
+      "bytes": 2813,
+      "sha256": "678155a2c78c741c771524bd82893518b0578e0dfc337481453e57621f4879f0",
+      "scope": "reviewed manuscript with unfinished publication at this cutoff, not automatically published acceptance"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M185-mandatory-slice-exclusion-metric-realization-and-noninvariance-scope-20261030.md",
+      "snapshot": "source/M185-scope.md",
+      "bytes": 3597,
+      "sha256": "64520c3c83baeddfba93226c62006ce0f2e1e45d497fcf9454aacfa1075fe4a6",
+      "scope": "fixedN one-cut linear metric result; independent connection/history stillopen"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M186-R8-connection-target-independent-duty-review-20261030/independent-review.md",
+      "snapshot": "source/M186-review.md",
+      "bytes": 8913,
+      "sha256": "8a5be85703f1ad5c94e1a5a0a430a48ec73d0674ba88ddb0a37158f7d1bb56dd",
+      "scope": "scoped independent manual review of the reduction; targetdivJ5 unevaluated"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M186-R8-connection-target-independent-duty-review-20261030/MANDATORY-REVIEW-SCOPE.md",
+      "snapshot": "source/M186-review-scope.md",
+      "bytes": 1511,
+      "sha256": "28625753b730c06ba128c0def8eb4784936c093f10063aea17bab69884028270",
+      "scope": "inseparable review scope"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-actual-longitudinal-target-and-connection-cut-M157-M185-evidence-20261030/OPEN-actual-longitudinal-target-and-temporal-connection-value-condition.md",
+      "snapshot": "source/connection-target-reduction.md",
+      "bytes": 9383,
+      "sha256": "a0b0cd246928b4a02452215020b3a9851fe291fb232c121a23f6b9c4b6ddb10b",
+      "scope": "reviewed reduction underM186 scope; no coefficient nonzero assumed"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-actual-longitudinal-target-and-connection-cut-M157-M185-evidence-20261030/mandatory-target-functional-and-copied-frame-connection-scope.md",
+      "snapshot": "source/connection-target-scope.md",
+      "bytes": 1715,
+      "sha256": "4eb40517ae8136cf254b7a85de1ea4243abf64bf4d623a75391e91e3d4b9fb2b",
+      "scope": "copied all-time Lorentz profile and all original lower-source qualifications"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-actual-N4-longitudinal-divJ5-certificate-M157-M185-evidence-20261030/OPEN-actual-fixed-N4-longitudinal-source-four-group-nonzero-certificate.md",
+      "snapshot": "source/UNREVIEWED-longitudinal-value.md",
+      "bytes": 16128,
+      "sha256": "f165a22b87e56e3487c60b362482b0ce641669a5609e97b891ec549959e0bfa0",
+      "scope": "unreviewed prospective four-group evaluation; not accepted byM186 reduction review"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-longitudinal-divJ5-receiver001-evidence-20261030/mandatory-longitudinal-divJ5-receiver001-qualification.md",
+      "snapshot": "source/longitudinal-receiver-qualification.md",
+      "bytes": 715,
+      "sha256": "40403dc2b84e7cb3fc3062bb4be4d99877382d820b9408145e1054db883b6b41",
+      "scope": "source wrapper-display qualification; no new mathematical acceptance"
+    }
+  ],
+  "new_mathematical_acceptance": "none from this inventory; new Lean claims require independent fidelity approval",
+  "source_inventory_counts_as_research_round": false
+}

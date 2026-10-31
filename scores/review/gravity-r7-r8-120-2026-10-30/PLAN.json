@@ -1,0 +1,863 @@
+{
+  "campaign_id": "gravity-calculus-r7-r8-120-2026-10-30",
+  "date": "2026-10-30",
+  "allocation": 120,
+  "baseline_proof_commit": "bec40a6c1941ba1df3e86840d2c0a02598bdf13b",
+  "baseline_approved_score_entries": 119,
+  "retrospective_rounds_allocated": 40,
+  "native_target_rounds_allocated": 80,
+  "initial_order": [
+    "G2-A01",
+    "G2-A02",
+    "G2-A03",
+    "G2-A04",
+    "G2-A05",
+    "G2-C01",
+    "G2-C02",
+    "G2-C03",
+    "G2-C04",
+    "G2-C05"
+  ],
+  "rounds": [
+    {
+      "id": "G2-A01",
+      "package": "A",
+      "question": "Fix the literal16+24 coordinate basis and invariant-to-coordinate Gram conversions",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A02",
+      "package": "A",
+      "question": "Prove independent-shift and incoming-adjoint identities on declared tests",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A03",
+      "package": "A",
+      "question": "Derive the ordered plaquette second coefficient with its inverse-reading contact",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A04",
+      "package": "A",
+      "question": "Derive the five-summand transported complement and both diagonal paths",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A05",
+      "package": "A",
+      "question": "Derive the complete flat torsion map and its six Lorentz columns",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A06",
+      "package": "A",
+      "question": "Prove the complete quadratic directional variation on all forty coordinates",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A07",
+      "package": "A",
+      "question": "Identify the contact Hessian and both curvature cross blocks without normal rescaling",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A08",
+      "package": "A",
+      "question": "Check all six mixed Ward columns against the complete original operator",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A09",
+      "package": "A",
+      "question": "Construct the exact coframe Lorentz projector and retain compatible sources",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-A10",
+      "package": "A",
+      "question": "Test the full operator on nonzero independent four-direction inputs and audit source correspondence",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B01",
+      "package": "B",
+      "question": "Classify the metric plus coframe-Lorentz readout as an explicit isomorphism",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B02",
+      "package": "B",
+      "question": "Prove exact coframe value and velocity recovery from the declared cut data",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B03",
+      "package": "B",
+      "question": "Derive the independent connection residual return with its correct sign",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B04",
+      "package": "B",
+      "question": "Derive the centered versus physical connection sampling correction",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B05",
+      "package": "B",
+      "question": "Compute the boost sign from the original lower-coordinate Lorentz column",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B06",
+      "package": "B",
+      "question": "Recover the temporal connection contact from the actual lower jets",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B07",
+      "package": "B",
+      "question": "Keep the full torsion-plus-curvature inverse in that contact",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B08",
+      "package": "B",
+      "question": "Isolate the necessary actual longitudinal numerator without replacing it by lapse data",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B09",
+      "package": "B",
+      "question": "Test copied-frame matching against an allowed change of higher frame jets",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-B10",
+      "package": "B",
+      "question": "Decide the exact scope of a native connection-value obstruction or construction",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C01",
+      "package": "C",
+      "question": "Reconstruct the earlier distinct connection-block inverse by elimination rather than entry expansion",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C02",
+      "package": "C",
+      "question": "Compare signed and curvature-only elimination on the same original source",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C03",
+      "package": "C",
+      "question": "Derive a reusable block factorization retaining both elimination products",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C04",
+      "package": "C",
+      "question": "Reconstruct repeated and distinct native blocks from one index rule",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C05",
+      "package": "C",
+      "question": "Prove source-dependent effective action and reconstruction together",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C06",
+      "package": "C",
+      "question": "Test singular parameter strata before denominator clearing",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C07",
+      "package": "C",
+      "question": "Compare certificate size and rational arithmetic work for old and new block solves",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C08",
+      "package": "C",
+      "question": "Recover an earlier accepted TT forcing witness through the shorter factorization",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C09",
+      "package": "C",
+      "question": "Check that the shorter method retains every original sign and normalization",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-C10",
+      "package": "C",
+      "question": "Derive matched exact-operation and certificate-size bounds for direct and factorized Schur solves",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D01",
+      "package": "D",
+      "question": "Encode the original twenty-component metric Cauchy map and fixed prescription",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D02",
+      "package": "D",
+      "question": "Factor the visible-twelve and top-three eliminations in their original order",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D03",
+      "package": "D",
+      "question": "Retain the lower homogeneous returns and cubic field/test contacts",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D04",
+      "package": "D",
+      "question": "Rederive the native quartic scalar from the complete block product",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D05",
+      "package": "D",
+      "question": "Extract the actual fixed-N4 four-group longitudinal target",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D06",
+      "package": "D",
+      "question": "Compute the leading-source group with the actual normalized coordinate field",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D07",
+      "package": "D",
+      "question": "Compute the first-adjustment group with its full incoming terms",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D08",
+      "package": "D",
+      "question": "Compute physical scalar/Navier/harmonic groups retaining the terminal prescription",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D09",
+      "package": "D",
+      "question": "Combine the original target with exact arithmetic and its exceptional-domain guards",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-D10",
+      "package": "D",
+      "question": "Decide noncancellation or cancellation and transfer it to the copied-frame connection test",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E01",
+      "package": "E",
+      "question": "Recover the earlier graph criterion through a complete block defect",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E02",
+      "package": "E",
+      "question": "Separate visible closure from image invariance on the actual leading companion",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E03",
+      "package": "E",
+      "question": "Solve the forced prepared graph through a polynomial Sylvester identity",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E04",
+      "package": "E",
+      "question": "Keep feedback in the corresponding full native-step problem",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E05",
+      "package": "E",
+      "question": "Reproduce the original selected-TT noninvariance witness with exact coefficients",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E06",
+      "package": "E",
+      "question": "Reconstruct the whole-trace repair-gap proof with one quantitative residual certificate",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E07",
+      "package": "E",
+      "question": "Test whether a scalar witness suffices for the original operator-norm quantifiers",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E08",
+      "package": "E",
+      "question": "Compare symbolic and proof-certificate costs of direct and factorized gap methods",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E09",
+      "package": "E",
+      "question": "Audit the actual time-step and generator relation in the compressed proof",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-E10",
+      "package": "E",
+      "question": "Test the compressed invariant-gap certificate on a second native momentum and polarization",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F01",
+      "package": "F",
+      "question": "Extract the original allowed source and preparation classes from the current boundary data",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F02",
+      "package": "F",
+      "question": "Represent the complete source-response map on admitted native data",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F03",
+      "package": "F",
+      "question": "Compare two admitted prescriptions without treating reset data as a solution",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F04",
+      "package": "F",
+      "question": "Transport the original cut current with every Gram factor",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F05",
+      "package": "F",
+      "question": "Compute the candidate processing defect of that current",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F06",
+      "package": "F",
+      "question": "Test the native source-compatible null space before quotienting",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F07",
+      "package": "F",
+      "question": "Derive the actual observation and preparation restrictions for an equivalence claim",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F08",
+      "package": "F",
+      "question": "Test finite owned corners and the incoming boundary terms",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F09",
+      "package": "F",
+      "question": "Distinguish declared coefficient cost from a justified native physical resource",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-F10",
+      "package": "F",
+      "question": "Obtain a native separating experiment or record the exact remaining admissibility gap",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G01",
+      "package": "G",
+      "question": "Choose one explicit compact reflected momentum patch and retain its angular gap",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G02",
+      "package": "G",
+      "question": "Bound actual native numerator and denominator symbols on that patch",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G03",
+      "package": "G",
+      "question": "Derive a genuine finite-spacing remainder constant from the original blocks",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G04",
+      "package": "G",
+      "question": "Fund the spacing bound together with all source and inverse norms",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G05",
+      "package": "G",
+      "question": "Construct the actual bounded metric correction or a source-range obstruction",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G06",
+      "package": "G",
+      "question": "Reconstruct the independent connection using the retained residual",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G07",
+      "package": "G",
+      "question": "Test exceptional rays with the actual numerator rather than denominator alone",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G08",
+      "package": "G",
+      "question": "Test low-frequency enlargement with a concrete source family",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G09",
+      "package": "G",
+      "question": "Test a nonlinear amplitude budget derived from the actual source map",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-G10",
+      "package": "G",
+      "question": "Decide which native constructor class the estimates materially change",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H01",
+      "package": "H",
+      "question": "Reproduce an earlier accepted finite-panel Green identity by a factorized variation",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H02",
+      "package": "H",
+      "question": "Recover the exact native cut current from the complete quadratic operator",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H03",
+      "package": "H",
+      "question": "Test signs and coordinate pairings against the old current formula",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H04",
+      "package": "H",
+      "question": "Compress the controlled-exhaustion argument without assuming summable background action",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H05",
+      "package": "H",
+      "question": "Reproduce a solved source-bearing component gluing problem with all contacts",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H06",
+      "package": "H",
+      "question": "Compare retaining detail with integrating it in the same explicit measure",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H07",
+      "package": "H",
+      "question": "Test whether a reusable boundary relation removes repeated endpoint calculations",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H08",
+      "package": "H",
+      "question": "Compare expression size and replay cost for the old and new current derivations",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H09",
+      "package": "H",
+      "question": "Check the same physical test class and all domain qualifications",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-H10",
+      "package": "H",
+      "question": "Determine whether compressed Green composition preserves the full source contact on a held-out solved panel",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I01",
+      "package": "I",
+      "question": "Specify one alternative order-one dressing permitted by original source data",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I02",
+      "package": "I",
+      "question": "Derive its exact invariant-image equation with feedback",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I03",
+      "package": "I",
+      "question": "Test invertibility and retained observations on the whole selected band",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I04",
+      "package": "I",
+      "question": "Account for auxiliary preparation and source-dependent memory",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I05",
+      "package": "I",
+      "question": "Test whether a changed higher-jet Lorentz profile preserves the admitted frame prescription",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I06",
+      "package": "I",
+      "question": "Compare the actual independent connection and link targets",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I07",
+      "package": "I",
+      "question": "Test temporal history compatibility beyond one cut",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I08",
+      "package": "I",
+      "question": "Test current and any declared quotient under the same prescriptions",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I09",
+      "package": "I",
+      "question": "Construct an admitted alternative or prove an obstruction for its exact class",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-I10",
+      "package": "I",
+      "question": "Assign material R7 credit only after the original physical gate is instantiated",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J01",
+      "package": "J",
+      "question": "Extract the actual cube/octahedron/stella incidence and comparison map",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J02",
+      "package": "J",
+      "question": "Retain original boundary orientations and incoming link owners",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J03",
+      "package": "J",
+      "question": "Prove the relevant linear relation from the full force on one owned region",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J04",
+      "package": "J",
+      "question": "Test metric frame and connection matching on that region",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J05",
+      "package": "J",
+      "question": "Test independent link data and temporal history requirements",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J06",
+      "package": "J",
+      "question": "Compute the precise boundary defect of the geometric move",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J07",
+      "package": "J",
+      "question": "Test source support and gluing consistency with retained detail",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J08",
+      "package": "J",
+      "question": "Reconstruct all forty original rows for a candidate or expose the failed row",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J09",
+      "package": "J",
+      "question": "Test extension beyond the original fixed-band and fixed-N scope",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-J10",
+      "package": "J",
+      "question": "Assign material R8 credit only for a checked original compatibility result",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K01",
+      "package": "K",
+      "question": "Select an older solved R7/R8 polynomial or finite-symbol decision with a frozen answer",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K02",
+      "package": "K",
+      "question": "Reconstruct it by exact sparse certificate arithmetic under the same guards",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K03",
+      "package": "K",
+      "question": "Compare elimination order using the original row and source sparsity",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K04",
+      "package": "K",
+      "question": "Factor repeated Gram and symmetry transformations once with verified inverses",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K05",
+      "package": "K",
+      "question": "Test whether invariant relations reduce repeated case analysis without losing strata",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K06",
+      "package": "K",
+      "question": "Compare certificate generation and independent replay costs separately",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K07",
+      "package": "K",
+      "question": "Classify all zero-factor strata introduced by the compressed route and prove guarded reconstruction",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K08",
+      "package": "K",
+      "question": "Replay the method on a second solved instance to test reuse",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K09",
+      "package": "K",
+      "question": "Determine whether the improvement is mathematical compression or measured runtime saving",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-K10",
+      "package": "K",
+      "question": "Derive generation and replay work bounds for the reused certificate on the second native instance",
+      "retrospective": true,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L01",
+      "package": "L",
+      "question": "Test the strongest R7 result against the complete original experiment class",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L02",
+      "package": "L",
+      "question": "Test the strongest R8 result against all40 frame/link/history requirements",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L03",
+      "package": "L",
+      "question": "Test singular modes and exceptional momentum sets of the strongest construction",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L04",
+      "package": "L",
+      "question": "Test current source and quotient compatibility at the claimed boundary",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L05",
+      "package": "L",
+      "question": "Test spacing and nonlinear limits with the actual proved constants",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L06",
+      "package": "L",
+      "question": "Test retrospective improvements on a held-out solved source instance",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L07",
+      "package": "L",
+      "question": "Derive the exact intertwining or residual identity between the strongest new constructor and an inherited accepted one",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L08",
+      "package": "L",
+      "question": "Solve or exclude a held-out original connection and trace test outside the fitting seed",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L09",
+      "package": "L",
+      "question": "Complete a substantive adverse transfer calculation at the weakest remaining bridge",
+      "retrospective": false,
+      "status": "planned"
+    },
+    {
+      "id": "G2-L10",
+      "package": "L",
+      "question": "Determine the range or exact unsupported component of a fixed residual block at the strongest remaining R7/R8 bridge",
+      "retrospective": false,
+      "status": "planned"
+    }
+  ]
+}

@@ -96,3 +96,8 @@ import ArtformScores.GravityBridge.StateTopology
 import ArtformScores.GravityBridge.SourceRadical
 import ArtformScores.GravityBridge.ControlledPhase
 import ArtformScores.GravityBridge.MetricFrame
+import ArtformScores.GravityBridge.Native.Full40.Coordinates
+import ArtformScores.GravityBridge.Native.Full40.Shifts
+import ArtformScores.GravityBridge.Native.Full40.Plaquette
+import ArtformScores.GravityBridge.Native.Full40.Complement
+import ArtformScores.GravityBridge.Native.Full40.Torsion

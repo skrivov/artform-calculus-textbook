@@ -1,0 +1,22 @@
+{
+  "frozen_before_retrospective_results": true,
+  "problem_match": [
+    "same original equations and coefficient domain",
+    "same source and target",
+    "same exceptional strata and reconstruction predicates",
+    "same input/output and admissible experiment class"
+  ],
+  "exact_algebra_counts": {
+    "rational_operation": "one exact addition/subtraction/multiplication/division after reduction to a specified expression DAG; division guarded",
+    "bit_cost": "record numerator/denominator maximum bitlength and total serialized certificate bytes; rational-operation count alone is not bit complexity",
+    "symbolic_size": "record DAG nodes, monomials and peak intermediate support under a specified representation",
+    "proof_cost": "record literal registered statement scope, auxiliary lemmas, certificate size and independent kernel replay time; line count is secondary"
+  },
+  "execution": {
+    "generation": "timed separately from certificate replay, no search-time saving inferred from replay alone",
+    "matched_runtime": "same frozen inputs, Python/Lean/toolchain/environment and cache state; repeat measurements and report median/range",
+    "counterfactual": "no claim about how fast historical agents would have finished",
+    "saving_credit": "exact fewer operations/size is mathematical compression; measured runtime must meet matched execution conditions"
+  },
+  "baseline": "preserve the earlier solved result and published proof; new method must reproduce answer and guards on held-out instance"
+}
