@@ -137,3 +137,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC2:native-ordered-plaquette-jet` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw` (text 5bf9b0d4f4c4)
 - 2026-10-30: `GAC2:native-five-summand-complement` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw` (text d79f999fad3d)
 - 2026-10-30: `GAC2:native-flat-torsion-gauge` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw` (text b23d1022f215)
+- 2026-10-30: `GAC2:signed-block-polynomial-inverse` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw` (text 6683e21ccea7)
+- 2026-10-30: `GAC2:curvature-only-force-residual` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw` (text ff9c56451924)
+- 2026-10-30: `GAC2:guarded-schur-source-reconstruction` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw` (text be4640b216e0)
+- 2026-10-30: `GAC2:complete-flat-quadratic-variation` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw` (text 5515a430bdd7)
+- 2026-10-30: `GAC2:full-coordinate-variational-force` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw` (text 1bd7968e32b5)

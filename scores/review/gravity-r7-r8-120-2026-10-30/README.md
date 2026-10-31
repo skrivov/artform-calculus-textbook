@@ -1,4 +1,4 @@
-# R7/R8 120-round campaign: independent review01
+# R7/R8 120-round campaign: independent reviews
 
 First five substantive rounds G2-A01–A05; findings157–161; five new GAC2 claims. The119 prior approvals stand. [Plan](PLAN.md), [allocation](PLAN.json), [source pins](source-pins.json) and [efficiency ruler](efficiency-ruler.json) are included. Initial plan/source review was read-only, by the same distinct reviewer; it approved no mathematical claim.
 
@@ -54,3 +54,14 @@ proposed. Judge scope especially carefully before any promotion. Required checks
 both drift checks and separate kernels are recorded in validation-C01-C03-A06-A07.json.
 Record distinct audit/verdict/compact independent validation02, approve passing literal claims
 through tooling, preserve124 prior entries, and publish/push. One reviewer; root authors.
+
+All five review02 claims were independently approved at freeze
+`7c1988f1d54e022950100a8ca0d5286097d86ebe`; none returned. See the distinct
+[audit](audit-independent-02.md), [per-key verdicts](verdict-independent-02.json),
+[validation](validation-independent-02.json) and [exact rational replay](arithmetic-independent-02.py).
+All124 earlier approvals stand unchanged, giving129 approved entries in total.
+The actual older selected r/w proof and complete-density baseline are authenticated and retained.
+The complete declared periodic flat quadratic action and coordinate force are reconstructed,
+including the explicit force/Hessian matrix identity and real derivative without a half force.
+Mixed Ward, analytic/domain and physical prescription bridges remain open. Zero additional
+material native application or retrospective efficiency saving is assigned.

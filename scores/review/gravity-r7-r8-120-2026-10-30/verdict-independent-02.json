@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-30",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "7c1988f1d54e022950100a8ca0d5286097d86ebe",
+  "approved_count": 5,
+  "returned_count": 0,
+  "original_approvals_preserved": 124,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:signed-block-polynomial-inverse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.polynomialInverseLaw",
+      "review_text_sha256": "6683e21ccea7339452385eb451c0232a651d285d86a2c5493dd660ac1f27875c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 9,
+      "new_material_native_application": false,
+      "reason": "Actual original signed matrices, quadratic relation and both polynomial-product identities. Both singular factors retained before inversion; verified two-sided and actual matrix inverse, exact native specialization. No output-mismatched efficiency claim."
+    },
+    {
+      "key": "GAC2:curvature-only-force-residual",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.curvatureOnlyLaw",
+      "review_text_sha256": "ff9c5645192460cf70bacac2d4b7695b29a469c8155cdc57977c09076bf32c83",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 14,
+      "new_material_native_application": false,
+      "reason": "Original source eigenspace, curvature-only and full residuals, source-restricted nonzero guard and native preparation identity. Complete input-dependent density retained with exact signed substitution error; no energy/minimum inference."
+    },
+    {
+      "key": "GAC2:guarded-schur-source-reconstruction",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw",
+      "review_text_sha256": "be4640b216e054d8f5646af04001217990a7bbca782530e616a0fb5d395d7a92",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Both inverse hypotheses and both block coupling products, shifted source and auxiliary reconstruction retained in a full iff over modules over a ring. Nonzero eliminated source/couplings example; no native inverse/domain assumed proved."
+    },
+    {
+      "key": "GAC2:complete-flat-quadratic-variation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.quadraticLaw",
+      "review_text_sha256": "5515a430bdd76409147156b66da2a9e6342c8984c126b433596a26eed8db5414",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 46,
+      "new_material_native_application": false,
+      "reason": "Complete declared original periodic flat quadratic formula with all16+24 components, original oriented wedge/Gram/star, four-corner and both-path transport, ordered inverse-reading contact and all torsion faces. Exact bilinearity/variation, no nonlinear analytic remainder or mixed Ward theorem claimed."
+    },
+    {
+      "key": "GAC2:full-coordinate-variational-force",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.forceLaw",
+      "review_text_sha256": "1bd7968e32b54a8060c3447572ee062fcdb8773eb6438e77a19c301f80c1936a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 46,
+      "new_material_native_application": false,
+      "reason": "Actual40*card(X) coordinate-test force and arbitrary-test equivalence, explicit fullForce=fullJacobian.mulVec, symmetric coordinate Hessian, complete direct variation with both contact polarizations/cross terms and2*kappa. Actual real HasDerivAt, without half force or physical quotient/positivity inference."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/PolynomialInverseDefs.lean": "6d7b6b1ba5f8c27f86875fe50546f275fcc0aa450d2b89715a7969e995384d99",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/PolynomialInverseStatements.lean": "964f20484b1fa11ddfa6f1db697def9c8117449590c6836bb18a5c5dc1094248",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/PolynomialInverse.lean": "614bd9a3712946a278d6d14e6bfe2f63cd35fdd049e5bb939d952d8a3ff463ee",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/CurvatureOnlyDefs.lean": "87e0dec381076ec6a4c7556ff124d8325dc490197868fb39c662cacb1ae70bc6",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/CurvatureOnlyStatements.lean": "f614e992bddb08a66b0a14b7ae4460341e5782d81ca7725ae8b17c9d72d4c11f",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/CurvatureOnly.lean": "9940fb89971e1221b718f1a29380f4553bf8aa5b9625a750885dce6deb625219",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SchurSourceDefs.lean": "bbd704fcbcd7e4a53b257e0d56198eb54efdc69f5a0c8440ea9df7e97f55b60f",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SchurSourceStatements.lean": "0d69181e9df4b0343d8462aa776b53c07cf2733e4de851b6af9550e721684eb1",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SchurSource.lean": "d77acad9b415bd5c0420a476141e203e5f53587bedbbd5816c077201420715b0",
+    "scores/ArtformScores/GravityBridge/Native/Full40/QuadraticDefs.lean": "2bea8d1b0be757198d9c16bb29ad69dca3b7a356d034a1b8cc7d6a07e0bf6aae",
+    "scores/ArtformScores/GravityBridge/Native/Full40/QuadraticStatements.lean": "99fcd975bff0dc6dae45793a4403de44776d04dbf1529799f5a3d5fd61bf9193",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Quadratic.lean": "342efe505d70540c66ca84a4f6c02a5d522def88a153d230a4a592ee9bbe56c8",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ForceDefs.lean": "c82168b96a74c8ec99d1622992d98971d43e7a68da886cfef0e1e5b289549fcc",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ForceStatements.lean": "5791f64e8cfdcc615ea03f3d488613c58aa4b9d6f80ffa2214126e280b6ba79d",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Force.lean": "c76da44e342dfca76facf841dc49bfa1fb6a150e641f582fc5369ec015f506ff"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "289e36fc74809397e0c5866206b20815b1355d121193b277d1c90cc675ccec0f",
+    "physics/ledgers/lattice-waves/findings/162-signed-connection-minimal-polynomial-inverse.md": "6fe628e68ad514321f934f494e216969ef4ecf399911bd3a912060242a6b6580",
+    "physics/ledgers/lattice-waves/findings/163-curvature-only-connection-full-force-error.md": "454a6abf9acb71cbba8be6dc30a643383cea61ed3af3110214f82e5ea77136a2",
+    "physics/ledgers/lattice-waves/findings/164-guarded-schur-source-and-exact-reconstruction.md": "363f97b31f9bf1c6ce8474ba7409e994c2d956966e81067c174ee26ac4d0dc38",
+    "physics/ledgers/lattice-waves/findings/165-complete-original-flat-quadratic-variation.md": "dd8fa38277eea3c379f7acbacca91a7edc7424512489c8414b88d41130e50b9c",
+    "physics/ledgers/lattice-waves/findings/166-full-original-coordinate-force-and-hessian.md": "9c97aa378bef28b986b18a8041471bca497161847221618fa15d071b4a63acf2"
+  },
+  "source_pins_sha256": "b872842695bda5491174b1175425541df80b191dc43714371f61e329b8ae3100",
+  "source_pins_authenticated": true,
+  "exact_original_snapshot_pairs_authenticated": 14,
+  "retrospective_baseline": {
+    "file": "retrospective-baseline-02.json",
+    "sha256": "d8400d23d0790faa8a88f9c769351c262cc35772d4e17441ac1b10ff36eb5f5f",
+    "four_actual_original_files_authenticated_to_commit": "2cc03100955a87c38d85b1753683a1ae63460dd9",
+    "selected_source_rw_solve_preserved": true,
+    "global_inverse_output_stronger_than_baseline": true,
+    "efficiency_saving_established": false
+  },
+  "force_matrix_identity_explicitly_present": true,
+  "actual_real_derivative_without_half_force": true,
+  "independent_arithmetic": "arithmetic-independent-02.py",
+  "independent_arithmetic_sha256": "9cc4bc5cd039ea2f0a1bff65b868177e58dd463c5d964b349d43af1910808b26",
+  "independent_arithmetic_result": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-02.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.031,
+    "parameter_samples": [
+      {
+        "t": "0",
+        "inverse_denominator": "2",
+        "determinant": "2"
+      },
+      {
+        "t": "1/101",
+        "inverse_denominator": "19982/10201",
+        "determinant": "2058146/1030301"
+      },
+      {
+        "t": "1/4",
+        "inverse_denominator": "0",
+        "determinant": "0"
+      },
+      {
+        "t": "-1/2",
+        "inverse_denominator": "0",
+        "determinant": "0"
+      },
+      {
+        "t": "1/3",
+        "inverse_denominator": "-10/9",
+        "determinant": "-50/27"
+      },
+      {
+        "t": "-2",
+        "inverse_denominator": "-54",
+        "determinant": "162"
+      }
+    ],
+    "native_preparation": [
+      "0",
+      "-2/103",
+      "2/103"
+    ],
+    "native_effective_density": "-2/103",
+    "native_curvature_only_action_error": "-16/106121003",
+    "complementary_pairs": [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "complementary_signs": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "full_source_schur_example": true,
+    "efficiency_benchmark": false,
+    "source_sha256": {
+      "scores/ArtformScores/GravityBridge/Native/Defs.lean": "5f04523624d4d7dc2c8f0182d9fa44c4a2d308234d81bf117b47f37fd97c1876",
+      "scores/ArtformScores/GravityBridge/Native/PreparationDefs.lean": "5ea243a030e1b56c63b04b43e333849b40432e5bb738fb746a6219e9529d94e7",
+      "scores/ArtformScores/GravityBridge/Native/Full40/QuadraticDefs.lean": "2bea8d1b0be757198d9c16bb29ad69dca3b7a356d034a1b8cc7d6a07e0bf6aae",
+      "scores/ArtformScores/GravityBridge/Native/Full40/ForceDefs.lean": "c82168b96a74c8ec99d1622992d98971d43e7a68da886cfef0e1e5b289549fcc"
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "retrospective_efficiency_saving_established": false,
+    "classification": "Exact solved-block reconstruction, generic source-complete elimination, and complete declared periodic flat quadratic force.",
+    "uninstantiated_bridges": [
+      "nonlinear original exponential/action analytic identification beyond the declared coefficient",
+      "compact-test/infinite-domain and finite-boundary extension",
+      "mixed six-column Ward and constrained inverse",
+      "actual longitudinal target and finite-spacing/native source domains",
+      "physical source/preparation/current/quotient and independent frame/link/history prescriptions"
+    ]
+  },
+  "audit": "audit-independent-02.md",
+  "validation": "validation-independent-02.json"
+}

@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 124 |
-| stated | 5 |
+| proved | 129 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **129** |
 
@@ -139,8 +139,8 @@
 | GAC2:native-ordered-plaquette-jet | Ordered native plaquette through quadratic degree | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw` / `Artform.Scores.GravityBridge.Native.Full40.plaquetteLaw` | approved 2026-10-30 |
 | GAC2:native-five-summand-complement | Both diagonal paths in the native complement | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw` / `Artform.Scores.GravityBridge.Native.Full40.complementLaw` | approved 2026-10-30 |
 | GAC2:native-flat-torsion-gauge | The full flat torsion map and Lorentz columns | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw` / `Artform.Scores.GravityBridge.Native.Full40.torsionLaw` | approved 2026-10-30 |
-| GAC2:signed-block-polynomial-inverse | The original signed block through a quadratic matrix relation | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.polynomialInverseLaw` | awaiting review |
-| GAC2:curvature-only-force-residual | Curvature-only elimination fails the original signed force | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.curvatureOnlyLaw` | awaiting review |
-| GAC2:guarded-schur-source-reconstruction | Full source Schur reduction with exact reconstruction | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw` | awaiting review |
-| GAC2:complete-flat-quadratic-variation | Complete original flat quadratic variation on periodic fields | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw` / `Artform.Scores.GravityBridge.Native.Full40.quadraticLaw` | awaiting review |
-| GAC2:full-coordinate-variational-force | The original full coordinate force from the complete quadratic action | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw` / `Artform.Scores.GravityBridge.Native.Full40.forceLaw` | awaiting review |
+| GAC2:signed-block-polynomial-inverse | The original signed block through a quadratic matrix relation | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.polynomialInverseLaw` | approved 2026-10-30 |
+| GAC2:curvature-only-force-residual | Curvature-only elimination fails the original signed force | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.curvatureOnlyLaw` | approved 2026-10-30 |
+| GAC2:guarded-schur-source-reconstruction | Full source Schur reduction with exact reconstruction | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw` | approved 2026-10-30 |
+| GAC2:complete-flat-quadratic-variation | Complete original flat quadratic variation on periodic fields | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw` / `Artform.Scores.GravityBridge.Native.Full40.quadraticLaw` | approved 2026-10-30 |
+| GAC2:full-coordinate-variational-force | The original full coordinate force from the complete quadratic action | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw` / `Artform.Scores.GravityBridge.Native.Full40.forceLaw` | approved 2026-10-30 |

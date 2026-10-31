@@ -2161,8 +2161,8 @@ See [finding162](findings/162-signed-connection-minimal-polynomial-inverse.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.polynomialInverseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "6683e21ccea7339452385eb451c0232a651d285d86a2c5493dd660ac1f27875c"
 
 [[statement]]
 key = "GAC2:curvature-only-force-residual"
@@ -2183,8 +2183,8 @@ See [finding163](findings/163-curvature-only-connection-full-force-error.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.curvatureOnlyLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "ff9c5645192460cf70bacac2d4b7695b29a469c8155cdc57977c09076bf32c83"
 
 [[statement]]
 key = "GAC2:guarded-schur-source-reconstruction"
@@ -2203,8 +2203,8 @@ See [finding164](findings/164-guarded-schur-source-and-exact-reconstruction.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "be4640b216e054d8f5646af04001217990a7bbca782530e616a0fb5d395d7a92"
 
 [[statement]]
 key = "GAC2:complete-flat-quadratic-variation"
@@ -2228,8 +2228,8 @@ See [finding165](findings/165-complete-original-flat-quadratic-variation.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.quadraticLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "5515a430bdd76409147156b66da2a9e6342c8984c126b433596a26eed8db5414"
 
 [[statement]]
 key = "GAC2:full-coordinate-variational-force"
@@ -2253,5 +2253,5 @@ See [finding166](findings/166-full-original-coordinate-force-and-hessian.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.forceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "1bd7968e32b54a8060c3447572ee062fcdb8773eb6438e77a19c301f80c1936a"
