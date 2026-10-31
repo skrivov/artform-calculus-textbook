@@ -1,0 +1,11 @@
+# Checkpoint07: all-four-group recipe certified, actual native binding retained
+
+31 October2026. **40/120 substantive dispositions;40 new independent approvals;159 approved score entries.** All119 baseline approvals stand unchanged. Campaign active;80 dispositions remain. New material native R7/R8 gates and historical/overall efficiency savings remain0. C10's separately reviewed prospective general-input program reduction stands.
+
+D05–D10 certify a unique coupled fixed-reference jet recursion, ordered third inverse with both mixed products, original normal pair and independent reflected cubic test, full electric divergence cancellation, exact supplied four-group arithmetic and a quantitative conditional finite-spacing contact bound. The recipe total is42464891403943157/1369394558168868000; its F13 groups are(0,3,3,9),total2. This is a direct exact rational proof, not an unsupported prime-homomorphism inference.
+
+Independent review07 approved6, returned0, preserved153 old entries and18 submitted modules, and passed all28 required initial/publication checks, six kernels and two exact replays; tree833files,0issues. Its distinct7x7 linear solves over Q and F13 reproduce all selected moments and four groups without reusing the author's rank-one solution. All24 division sites and adverse polynomial/ordered-product/electric/budget tests pass. [Publicationced98ba](https://github.com/skrivov/artform-calculus-textbook/commit/ced98ba581cf090910d5962e6f193e65afbba397).
+
+The missing native binding is explicit: the complete original40-to-E2..E5 derivation, actual selected forcing/high jets/lower returns and terminal constructor, plus a funded uniform original analytic remainder M, have not been completed by certifying the supplied f165 expression. No actual full physical connection obstruction is credited from arithmetic alone. All original copied-frame/link/history conditions remain.
+
+Next:E01–E10, retrospective R7 invariant-image/repair-gap reconstruction. Freeze the old norms, source, native step and quantifiers. Test complete Riccati feedback, a quadratic-resolvent Sylvester formula retaining full N, and a projection/exponential-series alternative to the original local logarithm. Report partial or negative comparisons honestly; source inventories and review/publication earn no research rounds.

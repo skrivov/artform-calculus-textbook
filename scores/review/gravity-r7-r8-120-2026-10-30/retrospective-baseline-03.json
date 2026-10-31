@@ -1,0 +1,45 @@
+{
+  "status": "baseline frozen before prospective proof/cost comparison",
+  "old_result": "Reviewed M179 uniform native-step graph gap and M182 whole-trace repair bound; source filenames retain pre-review wording",
+  "baseline_sources": [
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r7-M179-bounded-frontier-duty-research-20261030/UNREVIEWED-M179-R7-uniform-coordinate-trace-gap-for-native-step-invariant-graphs.md",
+      "bytes": 8563,
+      "sha256": "ccb125af8796d26c91d3d0f99e52b1680b16adc57fb062da4389f49e81bfcf5b"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r7-M179-bounded-frontier-duty-research-20261030/MANDATORY-SCOPE.md",
+      "bytes": 1705,
+      "sha256": "38619d49ae10ecb71dc285af1cc736ebf10656cecc2d5d1db146a73c769e65e7"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M182-R7-small-trace-repairs-and-TT-reparametrization-UNREVIEWED-20261030.md",
+      "bytes": 3978,
+      "sha256": "a3be2b2da2260de3de3a5ed2151d94cd599dc49ec91ec162a5680fe142915e0d"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M182-R7-whole-trace-repair-distinct-duty-review-20261030/independent-review.md",
+      "bytes": 4232,
+      "sha256": "5021d01dc7a9732694c67be4972a52e72a338e432483a9490317c96694643e49"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M182-R7-whole-trace-repair-distinct-duty-review-20261030/MANDATORY-REVIEW-SCOPE.md",
+      "bytes": 1015,
+      "sha256": "c64adc95e7223c221d31a769c34bd5071dc39c7baebfe860f71fd5cb85ab5050"
+    }
+  ],
+  "problem_match": [
+    "same real Fourier-real TT Y and sixteen lower-coordinate Z",
+    "same fixed packet-containing compact annulus and unweighted Hilbert trace norms",
+    "same actual native U_h=exp(h A_h) and operator-norm convergence",
+    "forward invariant closed graphs with own propagator; frequency mixing allowed",
+    "same local smallness guard exp(h*a)-1<1 and positive lower witness; no small-graph assumption",
+    "same finiteN dependence and non-graph/energy/nonlinear exclusions"
+  ],
+  "original_proof": "Use norm-convergent local log(U_h), closed-graph preservation and log(exp(hA))=hA; then full Riccati estimate d*/2<=2a||K||+a||K||^2 and c*=sqrt(1+d*/(2a))-1; normalize arbitrary repaired TT head by Neumann inverse and derive delta>=(c*-||KN||)/(1+c*) with large-delta case separate.",
+  "new_candidate": "Orthogonal projection power recursion and exp-series estimate may recover the same single-step-to-generator implication without an operator logarithm. This is not proved yet. A stricter guard, omitted feedback, changed norm or missing admitted packet cannot be credited as the same theorem.",
+  "cost_comparison_limits": "Original manual source has no Lean log certificate available here; no matched kernel/runtime saving can be inferred from new proof size or historical agent time. Record failed/partial transfer and mathematical restructuring honestly.",
+  "research_rounds_for_admin": 0,
+  "new_native_credit": 0,
+  "demonstrated_saving": 0
+}

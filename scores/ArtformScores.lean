@@ -136,3 +136,13 @@ import ArtformScores.GravityBridge.Native.InverseJets.NormalPair
 import ArtformScores.GravityBridge.Native.NormalDivergence.Physical
 import ArtformScores.GravityBridge.Native.LongitudinalRecipe.Value
 import ArtformScores.GravityBridge.Native.LongitudinalRecipe.Contact
+import ArtformScores.GravityBridge.Native.R7Blocks.Complete
+import ArtformScores.GravityBridge.Native.R7Blocks.Visible
+import ArtformScores.GravityBridge.Native.R7Blocks.Sylvester
+import ArtformScores.GravityBridge.Native.R7Blocks.Feedback
+import ArtformScores.GravityBridge.Native.R7Blocks.Repair
+import ArtformScores.GravityBridge.Native.R7Blocks.Packet
+import ArtformScores.GravityBridge.Native.R7Blocks.NativeStep
+import ArtformScores.GravityBridge.Native.TTCoordinates.Original
+import ArtformScores.GravityBridge.Native.TTCoordinates.Programs
+import ArtformScores.GravityBridge.Native.TTCoordinates.Heldout

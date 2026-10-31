@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "TT_inputs": 49,
+  "heldout_force": "59/505",
+  "full_tensor_square": 2,
+  "noncommutative_projection_recursions": 8,
+  "non_nilpotent_Sylvester": true,
+  "two_sided_head_reparameterization": true,
+  "zero_step_adverse_case": true,
+  "source_pairs": 31,
+  "cost": "specified literal3scales2adds versus original full-TT one-scale output; no historical/runtime saving"
+}

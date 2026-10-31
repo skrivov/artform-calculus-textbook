@@ -2909,3 +2909,203 @@ lean_statement = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Stateme
 lean_proof = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "f78bdd0d6fc398dbc9629278c5e62727c15c499d63f0df018e29791a5ce4dd77"
+
+[[statement]]
+key = "GAC2:complete-graph-riccati"
+label = "GAC2:complete-graph-riccati"
+title = "Complete bounded graph defect"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:complete-graph-riccati)"
+statement = """
+**GAC2:complete-graph-riccati (complete bounded graph defect).** For arbitrary bounded real blocks A11,A12,A21,A22 and K:Y->Z, the complete
+graph image is invariant exactly when A21+A22*K-K*(A11+A12*K)=0. Its own data
+propagator is A11+A12*K. The explicit defect splits the full image into the graph
+and a vertical remainder. The quadratic term-K*A12*K is retained. These are bounded
+block algebra identities; the default product norm is not identified with a physical
+Hilbert norm.
+See [finding197](findings/197-complete-graph-riccati.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.completeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.completeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:visible-closure-image-gap"
+label = "GAC2:visible-closure-image-gap"
+title = "Visible closure versus complete image invariance"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:visible-closure-image-gap)"
+statement = """
+**GAC2:visible-closure-image-gap (visible closure versus complete image invariance).** The artform realization of a bounded graph has visible closure A11+A12*K
+for every K, while its complete linear defect is(0,Riccati(K)). Intertwining is equivalent
+to vanishing of that full defect. For any supplied bounded detector with
+phi(A21*y)=36/505, the zero-coordinate graph is not invariant, independently of the
+other three blocks. The supplied scalar witness premise does not construct the
+original admitted packet or identify the actual native A21.
+See [finding198](findings/198-visible-closure-image-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.visibleLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.visibleLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:quadratic-resolvent-sylvester"
+label = "GAC2:quadratic-resolvent-sylvester"
+title = "Quadratic-resolvent prepared graph"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:quadratic-resolvent-sylvester)"
+statement = """
+**GAC2:quadratic-resolvent-sylvester (quadratic-resolvent prepared graph).** If S*S=-r*I and L is a two-sided inverse of N*N+r*I on the original
+normed spaces, K=-L*(F*S+N*F) solves K*S-N*K=F. With the left inverse and
+S*S=-r*I, that solution is unique. Its norm is at most
+||L||*||F||*(||S||+||N||). No nilpotence of N is assumed. The explicit r=14 scalar
+reference solves a nonzero forcing. Identifying the inverse of the actual sixteen-jet
+native companion and its uniform band guards remains a separate duty.
+See [finding199](findings/199-quadratic-resolvent-sylvester.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.sylvesterLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.sylvesterLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:full-riccati-feedback"
+label = "GAC2:full-riccati-feedback"
+title = "Complete graph recentering with feedback"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:full-riccati-feedback)"
+statement = """
+**GAC2:full-riccati-feedback (complete graph recentering with feedback).** For the full four-block Riccati defect, Ric(K+D)=Ric(K)+
+(A22-K*A12)*D-D*(A11+A12*K)-D*A12*D. The exact remainder after its linearized
+term is-D*A12*D and has norm at most||A12||*||D||^2. This retains both changed
+propagators and the quadratic feedback; it does not identify finite-h native blocks
+or solve the nonlinear graph equation.
+See [finding200](findings/200-full-riccati-feedback.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.feedbackLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.feedbackLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:original-native-tt-plane"
+label = "GAC2:original-native-tt-plane"
+title = "The complete original TT plane"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:original-native-tt-plane)"
+statement = """
+**GAC2:original-native-tt-plane (the complete original tt plane).** At k=(1,2,3), every rational symmetric traceless transverse matrix is the
+displayed parametricTT(x,y), uniquely determined by x=q00,y=q11; conversely every
+x,y gives such a TT matrix. The original unit-dyad polarization is recovered, and its
+full nine-entry Frobenius square is2. The original real temporal coefficient is
+(14/101)*q00+(7/101)*q11 and equals36/505 on that dyad. The physical Fourier
+response includes its original factor i; no L2 packet follows from one matrix alone.
+See [finding201](findings/201-original-native-tt-plane.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.originalLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.originalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:whole-trace-repair-gap"
+label = "GAC2:whole-trace-repair-gap"
+title = "The complete whole-trace repair bound"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:whole-trace-repair-gap)"
+statement = """
+**GAC2:whole-trace-repair-gap (the complete whole-trace repair bound).** For full Riccati-zero blocks with||A11||,||A12||,||A22||<=a>0 and
+||A21||>=d/2,d>0, every graph has||K||>=c=sqrt(1+d/(2a))-1>0. A prepared graph
+of norm at most c/2 is at distance at least c/2. On a Banach nontrivial data space,
+a head perturbation D with||D||<=delta<1 has a two-sided Neumann inverse of I+D,
+of norm at most1/(1-delta). Whole-trace repairs normalize exactly, preserving the
+full repaired image. Contractive head/coordinate readouts give normalized graph norm
+at most(||K||+delta)/(1-delta). If the existing graph gap applies to every such
+normalization, delta>=(c-||K||)/(1+c), including delta>=1 without a graph claim.
+For||K||<=c/2 this is at least c/(2*(1+c)). All norms are the supplied spaces;
+actual native blocks, packet lower bound and invariance are explicit upstream duties.
+See [finding202](findings/202-whole-trace-repair-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.repairLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.repairLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:packet-operator-witness"
+label = "GAC2:packet-operator-witness"
+title = "Admitted packet and detector quantifiers"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:packet-operator-witness)"
+statement = """
+**GAC2:packet-operator-witness (admitted packet and detector quantifiers).** For bounded A:Y->Z, a supplied packet with||y||<=1 and bounded detector
+with||phi||<=1 satisfies d<=|phi(A*y)| only if d<=||A||. If||A-A0||<=epsilon,
+a lower witness d for A0 gives d-epsilon<=||A||. Without normalization the bound is
+|phi(A*y)|<=||phi||*||A||*||y||. These are estimates on the supplied normed spaces;
+a nonzero value of a Fourier symbol at a single frequency supplies neither a bounded
+L2 point detector nor an admitted unit packet.
+See [finding203](findings/203-packet-operator-witness.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.packetLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.packetLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-tt-forcing-programs"
+label = "GAC2:native-tt-forcing-programs"
+title = "Matched exact original forcing programs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-tt-forcing-programs)"
+statement = """
+**GAC2:native-tt-forcing-programs (matched exact original forcing programs).** For the same freely readable full rational TT matrix at k=(1,2,3), the
+original temporal coefficient also equals(84/505)*q12. Two explicit typed expression
+programs are evaluated: literal three-diagonal compilation uses3 scalar multiplications
+and2 additions, while the off-diagonal program uses1 multiplication and0 additions.
+Both equal the original coefficient on every symmetric traceless transverse input.
+No signed freely copied matrix entry or constant equals it on that whole TT plane,
+so a zero-operation output cannot realize it in this declared model. Precomputed
+coefficients, reads/copies and negation are free. This is a prospective fixed-momentum
+program comparison, not historical, bit-complexity, runtime or physical resource credit.
+See [finding204](findings/204-native-tt-forcing-programs.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:hilbert-single-step-generator"
+label = "GAC2:hilbert-single-step-generator"
+title = "Single native step to generator through projection"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:hilbert-single-step-generator)"
+statement = """
+**GAC2:hilbert-single-step-generator (single native step to generator through projection).** On any real Hilbert space, a closed subspace invariant under exp(h*A)
+is invariant under A when h>0,||A||<=a and exp(h*a)-1<1. Orthogonal projection
+P and its complement are contractive in that same norm. The proof derives the full
+noncommutative off-block power recurrence and sums the exponential tail to bound
+||(I-P)*exp(h*A)*P-h*(I-P)*A*P|| by
+h*||(I-P)*A*P||*(exp(h*a)-1). This forces the generator off-block to vanish.
+A bounded graph equation R*w=K*(Q*w) is a closed kernel, so the result applies without
+frequency-preservation or graph-size assumptions. h=0 is excluded. This is an alternative
+proof of the old implication under its original guard, not a new native physical gate.
+See [finding205](findings/205-hilbert-single-step-generator.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:heldout-native-tt-force"
+label = "GAC2:heldout-native-tt-force"
+title = "Held-out off-axis native temporal witness"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:heldout-native-tt-force)"
+statement = """
+**GAC2:heldout-native-tt-force (held-out off-axis native temporal witness).** At k=(1,2,4), the displayed rational polarization equals uu^T/5-vv^T/105,
+with u=(2,-1,0),v=(4,8,-5). It is symmetric, traceless and transverse, and its full
+Frobenius square is2. The original temporal coefficient is59/505, hence nonzero.
+For every trace-zero matrix at that momentum it is
+(63/202)*q00+(42/202)*q11. The momentum differs from(1,2,3). These are original
+symbol identities; admitted packets, common angular bands and uniform operator-norm
+constants must still be supplied before applying a native gap theorem.
+See [finding206](findings/206-heldout-native-tt-force.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw"
+reviewed = ""
+review_text_sha256 = ""

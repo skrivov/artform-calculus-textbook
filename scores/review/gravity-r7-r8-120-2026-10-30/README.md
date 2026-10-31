@@ -252,3 +252,13 @@ seven-variable linear solve in each field and all denominator checks. No impleme
 was edited or fidelity repair needed. The actual full40/forcing/high-jet/terminal binding
 and uniform native remainder M remain unproved by this certificate. Zero additional
 native material application or efficiency saving is credited.
+
+## Review08 submission: E01–E10
+
+Ten mathematical dispositions, findings197–206 and31 consumed source/snapshot pairs. Preserve all159 previous approvals and their literal manifest entries; preservation-root-08.json records that baseline. The seven R7Blocks modules and three TTCoordinates modules have10 exact registered laws; ExponentialEstimates is a separately kernel-replayed dependency, not an extra round or approval.
+
+Review the complete own-propagator Riccati identity, visible/image distinction, guarded quadratic Sylvester formula without nilpotence, full feedback, whole-trace Neumann normalization and image equality, original TT plane/full Frobenius contraction, bounded packet quantifiers, same-guard Hilbert projection/exp-series proof and held-out original symbol. The final graph equation is a closed kernel on the supplied ambient Hilbert space, so no raw product max norm replaces the original fixed trace norm. The arbitrary whole-repair gap uses the existing normalized graph gap explicitly. Native generator, actual packet and uniform band identification remain upstream source duties.
+
+The frozen old manual logarithm proof has no matched Lean baseline; no historical/runtime or global proof-size improvement is claimed. E08 instead compares two specified programs on the SAME freely readable full TT matrix at k=(1,2,3): literal3scales2adds and off-diagonal1scale0adds. A signed free matrix wire or constant cannot give that output for all TT inputs. Coefficients/copies/negation are free. A three-gate optimum on x,y would be false for this original input interface and is not claimed. Held-out k=(1,2,4) has original force59/505; one-read optimization is not claimed there.
+
+Root validation receipt: validation-E01-E10.json; exact root replay: r7-root-replay-08.py/json. Judge independently against canonical section8, the literal manifest, findings and original pinned scopes; run all required checks/drifts and11 separate kernels plus a distinct mathematical replay. Approve only passing claims, record audit/verdict/compact validation08 and publish. No material native R7/R8 gate is proposed from this reconstruction.
