@@ -243,3 +243,5 @@ import ArtformScores.NonabelianGravity.BoundaryTheorems
 import ArtformScores.NonabelianGravity.HistoryTheorems
 
 import ArtformScores.NonabelianGravity.HistoryQuantumTheorems
+
+import ArtformScores.NonabelianGravity.NonlinearTheorems

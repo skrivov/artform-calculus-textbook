@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "scope": "exploratory exact formal jets; not a Lean analytic Taylor or nonlinear existence theorem",
+  "isotropic_inactive_force": "40501/53868",
+  "curvature": "10000/13467",
+  "torsion": "167/17956",
+  "all40_linear_owned_rows_zero": true,
+  "dense_full_quadratic_and_affine_binding_controls": 3,
+  "asymmetric_crosscheck": "77063/124542816"
+}

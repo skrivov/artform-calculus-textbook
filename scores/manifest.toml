@@ -5159,3 +5159,17 @@ lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeContourRefere
 lean_proof = "Artform.Scores.NonabelianGravity.nativeContourReference"
 reviewed = "2026-10-31"
 review_text_sha256 = "2d391acf840c73a6b2155658cbac3565b84076de876e54b229b8e71e7b8dcc01"
+
+[[statement]]
+key = "NGB:native-isotropic-lapse-constraint"
+label = "NGB:native-isotropic-lapse-constraint"
+title = "Exact native isotropic nonlinear lapse constraint and matched linear control"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-isotropic-lapse-constraint)"
+statement = """
+For the pinned original nonlinear spatial-zero-character candidate at unit spacing, lambda=alpha=0,beta=1 and kappa=1/101, retain both incident density cells and fixed endpoint frames. The old frame and links are identities; the middle frame is diag(N,a,a,a), its time link is identity and its three spatial links are the declared boosts C,S; the future frame is diag(1,c,c,c) with identity links. Retain all six curvature faces, the five transported corner weights 1/4,1/4,1/4,1/8,1/8, both diagonal paths, the ordered -(H-H^-1)/2 reading, detE and both inverse metrics in the full forward-torsion contraction. The frames have determinant N*a^3 and the declared inverses/inverse metric. Under C^2-S^2=1 the links have the explicit reverse inverse, preserve the Minkowski metric and have determinant1. The preceding incident cell is retained and is independent of the middle lapse. The original positive coframe/time branch requires N,a,c>0; formulas at other nonsingular values are algebraic extensions. Writing f=(3/2)*S^2*(1+2*C-C^2), the exact total-action difference from N=1 is (N-1)*a*f-3*kappa*a*((c-a)^2/N-(c-a)^2+2*(N-1)*(C-1)). For every N!=0,a!=0 and Lorentz boost relation, its actual real lapse derivative is a*f+3*kappa*a*((c-a)^2/N^2-2*(C-1)). At kappa=1/101,a>0,1<=C<=3/2 it vanishes exactly when S=0 and c=a. Nevertheless the complete original40-row affine linear matching admits x=0,z=e5+e10+e15 and middle coframe spatial entries101/402 with boost coordinates22,29,36 equal to-100/201. The actual Cayley curve t=-50*epsilon/201, C=(1+t^2)/(1-t^2), S=2*t/(1-t^2), a=1+101*epsilon/402,c=1+epsilon has exactly those coframe and link tangents in every coordinate. Its native lapse force divided by epsilon^2 tends analytically to40501/53868. At epsilon=1/100 the displayed boosts and positive spatial scales give an algebraically nonzero lapse derivative for every N!=0, in particular for every admitted positive lapse. This is an exact finite-boundary nonlinear constraint in the specified isotropic domain. It does not exclude arbitrary40-coordinate nonlinear corrections, identify a continuum Taub charge, contradict differently bounded bulk constructions or select a physical gravitational law or completed R7/R8 route.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLapseConstraint"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeIsotropicLapseConstraint"
+reviewed = "2026-10-31"
+review_text_sha256 = "cf9f43c23b06b0194ecb462254bd9270fca941aff4d9519e0904ecf2f2125d7c"

@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "0304df05244a1fea2eeab12755666cb6ab8a826c",
+  "modules": [
+    "NonlinearIsotropicSource",
+    "NonlinearIsotropicCurvature",
+    "NonlinearIsotropicIncoming",
+    "NonlinearIsotropicTorsion",
+    "NonlinearIsotropicAction",
+    "NonlinearIsotropicConstraint",
+    "NonlinearIsotropicLinks",
+    "NonlinearIsotropicWitness",
+    "NonlinearIsotropicLeading",
+    "NonlinearStatements",
+    "NonlinearTheorems"
+  ],
+  "entry_module": "NonlinearTheorems",
+  "total_scores": 284,
+  "approved_scores": 280,
+  "ngb_claims": 26,
+  "key": "NGB:native-isotropic-lapse-constraint",
+  "replays": [
+    "nonlinear-isotropic-root.py",
+    "nonlinear-isotropic-independent.py"
+  ],
+  "validation_output": "validation-nonlinear-root.json"
+}

@@ -1,0 +1,520 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_sol61_transport_review",
+  "contribution_disclosure": "Sole user-authorized Sol6.1 reviewer ngb_sol61_transport_review supplied prior native-source/convention advice, independent nonlinear matrix jets, exact isotropic lapse reduction and positivity suggestions. Root authored all11 production Lean modules; reviewer authored none. Reviewer inspected final sources/proofs, corrected-domain canonical English and substantive assessment/handoff/status prose. Prior exploratory arbitrary40 nonlinear-nonextension wording in reviewer artifacts was explicitly qualified as unproved without full correction/Taylor/domain binding before review12. Reviewer artifacts only were authored here; no claim of no prior formulation involvement. Standalone12 transcribes original source with no root/helper imports or /tmp dependency; fidelity12 explicitly reruns reviewer source and authenticates pinned snapshots/data.",
+  "reviewed_base_commit": "0304df05244a1fea2eeab12755666cb6ab8a826c",
+  "reviewed_freeze": "eleven final F3 Nonlinear modules, positive-original-branch clarified canonical literal, exact original-source snapshots and final result/assessment/handoff/status prose; prepared fullbuild and both fresh reports",
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicAction.lean": "26569ce6c8e8af8354e8778043fdf31093d8922d8746a51dd0f8f5b774e20177",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicConstraint.lean": "586f1cfca0b5ed8c92a2ec1b1dfa5fb8e1d84eea787a4108a20d34f26c0bb0b7",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicCurvature.lean": "13870ef50f01aff2a09848766583bc6fd9cb74f1caf8cf137898f38cbf8360a9",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicIncoming.lean": "334a45543b8e54cb06d9503c8cff3bbe417d8a4a6eb23f8a2da8524b89b7329e",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicLeading.lean": "ac27a3224849eabf413394d66fdcfdb287dc1997a7f23ccae2c577fc8e94f6ed",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicLinks.lean": "2d459947c4ff73da6c67222e3a8c0728bb6c595280e730b557ce7d4ddc39d73e",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicSource.lean": "c8a6d86f8de652da9a778fd155f666f9cbc09da730c57ea150255878365052f7",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicTorsion.lean": "1c5889c35d8165b1bdfa962c24a2a15aad6e024e89a3eed7e6e62080d52271b8",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsotropicWitness.lean": "19c623475d22046613d93f94daa0127b96e976013b9230acf5dae76865b4ca4b",
+    "scores/ArtformScores/NonabelianGravity/NonlinearStatements.lean": "1aba6e5315d8643e3e6ba34800c8d67291d192f315880daf242f4ee8271902a8",
+    "scores/ArtformScores/NonabelianGravity/NonlinearTheorems.lean": "4eda03e7f70a8c20c2ad17c155cb7074f33972ffdaf2f22b0fbb6d9efdcb7dbe",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/FOLLOWUP-ASSESSMENT.md": "e12ef23cb75d6c11c8cd0b10f7074e5a4a47adacd814181a703e49e6b941d89e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/FOLLOWUP-CONTRACT.md": "795b0632a88544df79a698320746bdf797f279cba87584b0c2bf8907b7bdb1e1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/GRAVITY-HANDOFF-FOLLOWUP.md": "48b141795440b73d69ed8461109e956d5405ca632f7744c341bf165cc4d03ade",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NONLINEAR-ISOTROPIC-RESULTS.md": "dab954003eee9513670c8dd4199d445a2c14f8ec1af60032aa2f46ca66a42638",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/PRIOR-ART-FOLLOWUP.md": "c3180de9cf789976e9a1eba6d67c4056bd1dceaac6cad89ff27e6a21dd9f2e6f",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/README.md": "0cd083ce599a8a923d2ee6e5aa86e9027eeb8e8b41398e75e0a0e4dc2a900f1b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/STATUS.md": "d86e4a951c45533ae60d0958c455f13454c03ad4cccc4e998f78568caead1479",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-12.py": "0f14a38403bece7b656a986c9b75407a51cf146b69f1e83920c9ac7f172c56f1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/followup-source-pins.json": "5321700104a187cb7bf506f990df240795ce30f16aa28e282eee005b4a1233de",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/followup-stage-12.json": "d94e893030decc9bd72e4c3052d44c49b33915bbce49d393d149faf1bd77f814",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-independent-data.json": "ebe623d2a2fed23695d8a1e8a6ac571ca4457cdc886f11bbc5a7305d3a91e181",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-independent.md": "0ec190e08f27b5903e5fc50d66d39e62dee7b2451d8d3bdc2568dfa30667a939",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-independent.py": "e851b1f92745ed3b3a83a3dcf08dae17f556439bfea5fcb939c08fb51ad26bb2",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-root-data.json": "d9299a6676907a1ccfa64e1ff4f1aa0cbaf7b48a5b16ad85b0058c63521f23ae",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-root.py": "e93667ce1f49a441a15c537b212d32286eaccae8c111551471efbdf207918703",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-12.py": "5cb0bbcaba9efe45f6734d576447e44ea6c56bb2a1eb5eaa3194c75a91275c16",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-Q-M-data.json": "12df2a52f867d0ca1ab81ec6b077f31427cfe2c30d13756e641332dad7cf4ad1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-curvature-action.md": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-forward-torsion.md": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-followup-root.py": "44cc8fc4365647a7c672cb43be3d29712a1876da2807a712b644367acf85f1ae"
+  },
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "b818d7deecf21245b984cad60726db49a1ed0152d5cc9cb732caf9e1cfab029e",
+  "claims_file_preapproval_snapshot_sha256": "d6e5e962fe426048f57a9888163f4aefe8ead92a9ae3bb69eddf4d94ae638f84",
+  "independent_replay_sha256": "5cb0bbcaba9efe45f6734d576447e44ea6c56bb2a1eb5eaa3194c75a91275c16",
+  "independent_data_fidelity_sha256": "0f14a38403bece7b656a986c9b75407a51cf146b69f1e83920c9ac7f172c56f1",
+  "new_material_native_gravity_applications": 0,
+  "root_prepared_receipt": {
+    "path": "build/ngb-followup-12-prepared.json",
+    "sha256": "52230e11d06f702a8afe7876412b1e668a18cf46044dae76967ea42b361e5534",
+    "source_fingerprint_entries_verified": 965,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "b3d6caca3a27d89b002b5a5be1ca21a0f487fe70ec92a84140cf1e23b1134c90"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 6.712,
+        "stdout_sha256": "cc79ed04c27e05d0683014bf96cebb061fa1d0e30cca47672d36a5e0ae43829c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 14.187,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 24.387,
+        "stdout_sha256": "b3d6caca3a27d89b002b5a5be1ca21a0f487fe70ec92a84140cf1e23b1134c90",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "full_warning_free_build": "Authenticated fresh full --wfail build and both reports against all965 source fingerprints; all11 new modules separately kernel-replayed without repeating old F1/F2 proofs.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.291,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.175,
+      "stdout": "1516 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.199,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.194,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.077,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.29,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.176,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-12.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.207,
+      "stdout": "curvature lapse force/a Laurent {-4: Fraction(-3, 32), -3: Fraction(3, 8), -2: Fraction(3, 8), -1: Fraction(-3, 8), 0: Fraction(-9, 16), 1: Fraction(-3, 8), 2: Fraction(3, 8), 3: Fraction(3, 8), 4: Fraction(-3, 32)}\n{\n  \"source\": \"standalone independent full nonlinear five-corner curvature and complete forward-torsion source\",\n  \"all40_owned_first_order_forces_zero\": true,\n  \"exact_isotropic_curvature_laurent_identity\": true,\n  \"both_incident_cells_finite_checks\": 3,\n  \"full_determinant_two_inverse_metrics\": true,\n  \"cayley_tangent_boost\": \"-100/201\",\n  \"cayley_tangent_scale\": \"101/402\",\n  \"exact_cayley_force_factor\": true,\n  \"analytic_removable_value\": \"40501/53868\",\n  \"exp_jet_curvature\": \"10000/13467\",\n  \"exp_jet_torsion\": \"167/17956\",\n  \"legal_positive_branch_witness\": \"epsilon1/100,N=1,a=40301/40200,c=101/100,C=161605/161603,S=-804/161603\",\n  \"algebraic_nonzero_negative_lapse_control\": true,\n  \"scope\": \"exact isotropic source/constraint and actual prepared rational curve; arbitrary40 nonlinear correction/nonextension remains unproved; no physical gravity selection\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/nonlinear-isotropic-independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.024,
+      "stdout": "curvature lapse force/a Laurent {-4: Fraction(-3, 32), -3: Fraction(3, 8), -2: Fraction(3, 8), -1: Fraction(-3, 8), 0: Fraction(-9, 16), 1: Fraction(-3, 8), 2: Fraction(3, 8), 3: Fraction(3, 8), 4: Fraction(-3, 32)}\n{\n  \"source\": \"complete nonlinear equal-weight transported curvature plus forward torsion; unit-spacing amplitude chart\",\n  \"fixture\": \"x=0,z=e5+e10+e15,y5=y10=y15=101/402,y22=y29=y36=-100/201\",\n  \"inactive0_force\": \"40501/53868\",\n  \"curvature\": \"10000/13467\",\n  \"torsion\": \"167/17956\",\n  \"other_inactive_forces_zero\": true,\n  \"all40_owned_first_order_force_zero\": true,\n  \"curvature_closed_formula\": \"(3a/2)*sinh(b)^2*(1+2cosh(b)-cosh(b)^2)\",\n  \"torsion_lapse_action\": \"-3*kappa*a*((c-a)^2/ell+2*(c-a)*sinh(b)+2*ell*(cosh(b)-1))\",\n  \"lapse_force\": \"a*f(b)+3*kappa*a*((c-a)^2+2*(1-cosh(b)))\",\n  \"force_quadratic_coefficient\": \"3*((1-kappa)*B^2+kappa*(1-A)^2)\",\n  \"scope\": \"exact finite native two-cell amplitude-jet and isotropic scalar controls; arbitrary40 nonlinear nonextension is exploratory/unproved pending correction/Taylor/domain binding; no selected physical gravity dynamics\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-12.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS17 original/native pins and exact snapshot bytes; independent stored jet evidence and root40501/curvature/torsion controls agree with scope retained\n",
+      "provenance": "Direct independent tool replay completed successfully in session28904 before sealing."
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-12.py"
+      ],
+      "exit_code": 0,
+      "source_sha256": "5cb0bbcaba9efe45f6734d576447e44ea6c56bb2a1eb5eaa3194c75a91275c16",
+      "provenance": "Final current-source direct tool rerun session9586 completed exit0 after adding silent asymmetric77063/124542816 control; same printed source/Cayley output as previous successful replay."
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "NonlinearIsotropicSource",
+      "source_sha256": "c8a6d86f8de652da9a778fd155f666f9cbc09da730c57ea150255878365052f7",
+      "olean_sha256": "85c227ba9cab54efe39703e9761e5cd01e6c2c4e457fbb201f37852133082fa0",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicSource"
+      ],
+      "exit_code": 0,
+      "seconds": 5.843,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicCurvature",
+      "source_sha256": "13870ef50f01aff2a09848766583bc6fd9cb74f1caf8cf137898f38cbf8360a9",
+      "olean_sha256": "d6f86cbcb83c9c8a86b111ccbaa94afef4f7fd28bc0e47e7a2f80fe3a6afd98a",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicCurvature"
+      ],
+      "exit_code": 0,
+      "seconds": 7.144,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicIncoming",
+      "source_sha256": "334a45543b8e54cb06d9503c8cff3bbe417d8a4a6eb23f8a2da8524b89b7329e",
+      "olean_sha256": "50f7831fb048f7ab56f612f219fe4ef5342fd5525728713b6ffe6fdbe136b157",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicIncoming"
+      ],
+      "exit_code": 0,
+      "seconds": 6.188,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicTorsion",
+      "source_sha256": "1c5889c35d8165b1bdfa962c24a2a15aad6e024e89a3eed7e6e62080d52271b8",
+      "olean_sha256": "d5dbd089776685b1756c57bdb47b438416753d2ea3e6ea8190c063d773a31582",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicTorsion"
+      ],
+      "exit_code": 0,
+      "seconds": 6.146,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicAction",
+      "source_sha256": "26569ce6c8e8af8354e8778043fdf31093d8922d8746a51dd0f8f5b774e20177",
+      "olean_sha256": "7d799059e84acd2ca3e492d5b0fa458ac89d4a142a667ac31ecbc5779ca64765",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicAction"
+      ],
+      "exit_code": 0,
+      "seconds": 6.101,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicConstraint",
+      "source_sha256": "586f1cfca0b5ed8c92a2ec1b1dfa5fb8e1d84eea787a4108a20d34f26c0bb0b7",
+      "olean_sha256": "a01968956cacfe331b77a44c961860e3b51e8ef0e99c76e8f1ceeef18febf03a",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicConstraint"
+      ],
+      "exit_code": 0,
+      "seconds": 6.038,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicLinks",
+      "source_sha256": "2d459947c4ff73da6c67222e3a8c0728bb6c595280e730b557ce7d4ddc39d73e",
+      "olean_sha256": "45b377d1f0ae56d911d25749b36f2b801fd400489c233978f52a5a4fc17e66b2",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicLinks"
+      ],
+      "exit_code": 0,
+      "seconds": 6.322,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicWitness",
+      "source_sha256": "19c623475d22046613d93f94daa0127b96e976013b9230acf5dae76865b4ca4b",
+      "olean_sha256": "4e302a171da35805fec5d5b88afd2ae21d66aad2c8237e8c43fa39ee1fc62ab3",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicWitness"
+      ],
+      "exit_code": 0,
+      "seconds": 10.661,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearIsotropicLeading",
+      "source_sha256": "ac27a3224849eabf413394d66fdcfdb287dc1997a7f23ccae2c577fc8e94f6ed",
+      "olean_sha256": "ef2c649921a6b834c2f413eeb8020690e69b5563db07d06a263ceb416d4edf0b",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsotropicLeading"
+      ],
+      "exit_code": 0,
+      "seconds": 6.063,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearStatements",
+      "source_sha256": "1aba6e5315d8643e3e6ba34800c8d67291d192f315880daf242f4ee8271902a8",
+      "olean_sha256": "38fb469f840b31c6ca009e366597108cee39874e5ae8eafe8a5c206e397ed62c",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.901,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "NonlinearTheorems",
+      "source_sha256": "4eda03e7f70a8c20c2ad17c155cb7074f33972ffdaf2f22b0fbb6d9efdcb7dbe",
+      "olean_sha256": "7265eacd9fddd1dc79931271ce55ff54aa06cd92af75745f34812fde0a77ec4e",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.927,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "all90_previous_NGB_modules_unchanged": true,
+  "all_preexisting_Lean_except_import_aggregator_unchanged": true,
+  "prior_module_hashes_checked": {
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/BoundaryCircle.lean": "040b00432f8dab8d7ebc7c231f986d04395a38930285332c7e8752006744e3c9",
+    "scores/ArtformScores/NonabelianGravity/BoundaryConditioning.lean": "24d3b0500de1fb51c74746e5e9d9914db677ccb2d0d73851c84c28a69f086457",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryColumns.lean": "306a8df5fc9103c2a6f01d1ee0eb70fff217f17696185264f8fa44f2cb60e785",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryDefs.lean": "b817128f880769a15e99616d92a0aa008aeeb81d963b88592d17f6e276537cb3",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryKernel.lean": "0bc9c37356ae34455c82eff6eaeab79c0e0f2bbdceb965e5192f5303cf019901",
+    "scores/ArtformScores/NonabelianGravity/BoundaryQuantum.lean": "f109291af1a1d28f2f59c6d300d90c6724fca2b65a666a02b9b40fd15d7647ea",
+    "scores/ArtformScores/NonabelianGravity/BoundaryRotation.lean": "4235968bbc38171ee20607a249c1e0c7b8fdf00e741750261c1d4d1ab38e8109",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStatements.lean": "c0eccfa305af7ed27195002343d092491dd0212b78e8c28de1b60afcc299de9c",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStencil.lean": "a887c3772c7eeb3952cc296783270f1990d52f43388da6a0f3599fb24b98419c",
+    "scores/ArtformScores/NonabelianGravity/BoundarySymbol.lean": "e4d553ba00e6f51525ecfc12b20101f92b3ba97cef1010e8c353228eea32a82b",
+    "scores/ArtformScores/NonabelianGravity/BoundaryTheorems.lean": "83f3f6cd0e79b3dc1a0ed933c2fab4721fe73213b46de259073cda364bc7f9f1",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/HistoryAction.lean": "b9254642c5f0430b69a2e26bcb06a804e66019d8eb77f4d42cbb6118545bb572",
+    "scores/ArtformScores/NonabelianGravity/HistoryBinding.lean": "518bb11c1bd1cc3e2eedffb8d107059dfc6f02959527c72838d394bdfd5d774b",
+    "scores/ArtformScores/NonabelianGravity/HistoryCertificate.lean": "be86499495ae38e5c77fdbfe6bdefda3f99be7a0d66bfdb9bd601825b77a4a17",
+    "scores/ArtformScores/NonabelianGravity/HistoryComplex.lean": "305a1180e7c01f6c5c8b0fb141ddbec3da93be134b710cd72c74fc7ed3ff7c4a",
+    "scores/ArtformScores/NonabelianGravity/HistoryContour.lean": "94e373cca37c98596cf3c7ef63c0579a64c08b008e5a2b7f714247442e37174b",
+    "scores/ArtformScores/NonabelianGravity/HistoryContourIntegral.lean": "f050bfacf469fdf0e0bb29c807133820596ef681714e6ac3e2fdea9cbba01f91",
+    "scores/ArtformScores/NonabelianGravity/HistoryGaussian.lean": "62d6aef12cd89072d090aaf652f0ffa970a04335f9eeb56cecaecd1c618ba484",
+    "scores/ArtformScores/NonabelianGravity/HistoryMatrix.lean": "0b5f84d60d7e670ac67e3f7a5264de24de75aaf69a037ec3cc6f93f9cf2408bf",
+    "scores/ArtformScores/NonabelianGravity/HistoryQuantumStatements.lean": "fdbf2eebd9a8ce0558334843349e648cc83f4a1a7f9046d6429d0e0ceb8046c0",
+    "scores/ArtformScores/NonabelianGravity/HistoryQuantumTheorems.lean": "e5d9c4502edbe0a1ca5c7bf5614a879d42429af6ba904937d927d1231417aa26",
+    "scores/ArtformScores/NonabelianGravity/HistoryReference.lean": "158156a4b775746d3ad4f643eac334fae9a8952edeb64b27a69c2c6dc0c65ea7",
+    "scores/ArtformScores/NonabelianGravity/HistoryReferenceSample.lean": "6501936f323ac6abdb5f44e10a20b368ff4be2efb49270438e384613160403ea",
+    "scores/ArtformScores/NonabelianGravity/HistorySample.lean": "1e9577efef26cb50b7bf97fbd3e97a25854877ebf4eea662539304b826a0a197",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleData.lean": "dbcaaae404e9a8021e56357be618ed66a4a4f1b3c942636c4420b2dc90ee1325",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleDiagonal.lean": "d24c3fa2880d38f8f859eafe3050b7aba0bff5655c70a94f323f4f9015edd2a9",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleLeft.lean": "0796593a26eea1448c11deb18bea437a26428bf6b94383e4c9a81fdc2edc5b1b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleProduct.lean": "fe7725e47d32d1435814a572f903b66914388a8f35a5fc4af8300251a2fba36b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleRight.lean": "ca820e7ce61f4ba1a694782b2e883cd11d560e324206fe0d5b0a41872f92ca6e",
+    "scores/ArtformScores/NonabelianGravity/HistorySolve.lean": "f5b42e42cb5e0f4ed3f18dcc533907aa1daa44814a51f7b532f6869d6ec79fbb",
+    "scores/ArtformScores/NonabelianGravity/HistoryStatements.lean": "7b86ceb15c9c6ab3181c65fcd31d827be901f20b9cf3636bf46464ea2901d5f8",
+    "scores/ArtformScores/NonabelianGravity/HistoryTheorems.lean": "25c80166b437e3e453276157db4f7ddb46d3fb91188e3dedd03ee6c7b49d1577",
+    "scores/ArtformScores/NonabelianGravity/HistoryThreeAction.lean": "b10786b06c4529d1904ebcb97d07f033362be75ce7b3429daa307d5a39f7f438",
+    "scores/ArtformScores/NonabelianGravity/HistoryWick.lean": "2adfa9fc8d7fc9897ab8a590fee40849430119116aa2f40a5b05cc0b27853e18",
+    "scores/ArtformScores/NonabelianGravity/LegendreBinding.lean": "7000b2c5ca5cd730613ed5e38947a5b573a61652cb9a57018ee601e0707779ff",
+    "scores/ArtformScores/NonabelianGravity/LegendreBoundary.lean": "2c6e0400484944f85a59ea796ff6e0e41e371e1d64ea3ef54e0005aad975bcd3",
+    "scores/ArtformScores/NonabelianGravity/LegendreComposition.lean": "23ea4bf89561e462bddbad3a22014a3bcd7bf75d525e4a19dd06daa6ed2850ab",
+    "scores/ArtformScores/NonabelianGravity/LegendreCompositionData.lean": "83653650dd98dc598ab82b41c96abafdc1761cda55f4006678e1026e41a48a34",
+    "scores/ArtformScores/NonabelianGravity/LegendreGluing.lean": "75f6fa3fca4031142b73bdb574ba16835ba23fd2d8deeeb65d8ef766ae4d6bc4",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrix.lean": "ed58fc6310f31a6f63b5cc0e31bdaad8f33d0f50f344e9c57e22bd78f1152898",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrixData.lean": "691a602803e19908f2179a027a9cbf36b9c847f82662b91e40522d6cd35209d3",
+    "scores/ArtformScores/NonabelianGravity/LegendrePolynomial.lean": "216dc50bdb9e45d7e77a077d0d2fec18b2871ff3bbfd8bcfe51e8f68b4cd23d0",
+    "scores/ArtformScores/NonabelianGravity/LegendreRows.lean": "309787faa2149708c56d2269b049daa3fb65d3a41057206ab185f6fef4daab90",
+    "scores/ArtformScores/NonabelianGravity/LegendreSchur.lean": "3ed5518ea11d0d2491d1bca200409d2fb2931db32442b17f0ec6ceb15385bb53",
+    "scores/ArtformScores/NonabelianGravity/LegendreSource.lean": "148fce7b33e22cd2d29d12b73fc036c88d265760b92ad052eae3df190ebce692",
+    "scores/ArtformScores/NonabelianGravity/LegendreStatements.lean": "3453bb58899a9ce43ff34f436b06cf036ffc40fa5dca8672942b767d83124a25",
+    "scores/ArtformScores/NonabelianGravity/LegendreTheorems.lean": "1cd621557c49a5546697beaa2642238871db42287aef25cd91bfc5bb59d84800",
+    "scores/ArtformScores/NonabelianGravity/LegendreVariation.lean": "115faea1f07f369301fe19955188e2e1eae65959bebb53c4db80d84b6a241418",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/NativeBoundary.lean": "1a1f2dcb045839f923716e3239ff28bc14d7f68582f339191998325cde0ecad0",
+    "scores/ArtformScores/NonabelianGravity/NativeRotation.lean": "4c5af2253b6c1c406cce4255d560cf21a381eba3c0d19a51626c080955683a46",
+    "scores/ArtformScores/NonabelianGravity/NativeStatements.lean": "4d86694dbeeb1ac65ef1d4ccaf84c99a8e23bd99f2e0ec1cfe39befc7caf9114",
+    "scores/ArtformScores/NonabelianGravity/NativeTheorems.lean": "06a7463d002d8863781aa5a147ae2f064725247e14bc40bd74791f0f1e99ae5d",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108"
+  },
+  "prior_manifest_entries_preserved": 283,
+  "prior_approvals_preserved": 279,
+  "source_pins_verified": 17,
+  "original_snapshot_copies_verified": 3,
+  "source_pin_mismatches": [],
+  "per_key_report_surfaces": [
+    {
+      "key": "NGB:native-isotropic-lapse-constraint",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLapseConstraint",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeIsotropicLapseConstraint",
+      "review_text_sha256": "cf9f43c23b06b0194ecb462254bd9270fca941aff4d9519e0904ecf2f2125d7c",
+      "canonical_literal_sha256": "903491888772e992f1fc8101c4d2fcab7e01a3c7caa611793b0e575fe8d72dee",
+      "reachable_definition_count": 60,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "The actual pinned original five-corner nonlinear curvature and full forward-torsion source retain both incident cells, ordered transports/readings, determinant and both inverse metrics. Exact action reduction yields an actual real lapse derivative at every nonsingular algebraic point. On the admitted positive coframe/small proper-boost branch, positivity gives the exact isotropic lapse zero criterion. Complete40-row affine linear matching and every coframe/link matrix tangent bind the prepared Cayley curve to that linear history. Analytic factorization/continuity prove the actual40501/53868 leading force and a legal positive-N finite witness. Independent source jets, exact finite action/Cayley controls and all17 pins agree. The iff concerns the lapse equation only; arbitrary40 nonlinear corrections, bulk allorder domains and physical gravity selection remain open.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "analytic_force_leading": "40501/53868",
+  "independent_curvature_torsion_split": [
+    "10000/13467",
+    "167/17956"
+  ],
+  "original_admitted_branch": "N,a,c>0;1<=C<=3/2;C^2-S^2=1",
+  "algebraic_domain_extension": "Nonzero N,a derivative identities do not imply positive coframe admission at negative lapse/scale.",
+  "arbitrary40_nonlinear_nonextension_proved": false,
+  "prose_scope_and_final_publication_target_counts_audited": true,
+  "audit_sha256": "26c5ce9435bdf9a6b30db42d2551b86112690ee1cd4f694030bc3f922d4a07a0"
+}

@@ -1,0 +1,14 @@
+{
+  "source": "complete nonlinear equal-weight transported curvature plus forward torsion; unit-spacing amplitude chart",
+  "fixture": "x=0,z=e5+e10+e15,y5=y10=y15=101/402,y22=y29=y36=-100/201",
+  "inactive0_force": "40501/53868",
+  "curvature": "10000/13467",
+  "torsion": "167/17956",
+  "other_inactive_forces_zero": true,
+  "all40_owned_first_order_force_zero": true,
+  "curvature_closed_formula": "(3a/2)*sinh(b)^2*(1+2cosh(b)-cosh(b)^2)",
+  "torsion_lapse_action": "-3*kappa*a*((c-a)^2/ell+2*(c-a)*sinh(b)+2*ell*(cosh(b)-1))",
+  "lapse_force": "a*f(b)+3*kappa*a*((c-a)^2+2*(1-cosh(b)))",
+  "force_quadratic_coefficient": "3*((1-kappa)*B^2+kappa*(1-A)^2)",
+  "scope": "exact finite native two-cell amplitude-jet and isotropic scalar controls; arbitrary40 nonlinear nonextension is exploratory/unproved pending correction/Taylor/domain binding; no selected physical gravity dynamics"
+}

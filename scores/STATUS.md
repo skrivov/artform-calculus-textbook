@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 279 |
+| proved | 280 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **283** |
+| **total** | **284** |
 
 ## Statements
 
@@ -298,3 +298,4 @@
 | NGB:native-quantum-kernel-tests | Native real negative ray and flat-output tests for an explicit naive phase kernel | proved | `Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests` / `Artform.Scores.NonabelianGravity.nativeQuantumKernelTests` | approved 2026-10-31 |
 | NGB:native-complete-history | Complete finite native history compatibility and certified elimination | proved | `Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory` / `Artform.Scores.NonabelianGravity.nativeCompleteHistory` | approved 2026-10-31 |
 | NGB:native-contour-reference | Source-admitted native contour reference with explicit measure and normalization | proved | `Artform.Scores.NonabelianGravity.Statement.nativeContourReference` / `Artform.Scores.NonabelianGravity.nativeContourReference` | approved 2026-10-31 |
+| NGB:native-isotropic-lapse-constraint | Exact native isotropic nonlinear lapse constraint and matched linear control | proved | `Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLapseConstraint` / `Artform.Scores.NonabelianGravity.nativeIsotropicLapseConstraint` | approved 2026-10-31 |

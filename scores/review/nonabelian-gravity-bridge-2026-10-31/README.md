@@ -1,3 +1,15 @@
+Current publication: the three-target continuation, independently reviewed
+as10/11/12. Start with [status](STATUS.md), [reassessment](FOLLOWUP-ASSESSMENT.md)
+and the [gravity handoff](GRAVITY-HANDOFF-FOLLOWUP.md). It adds complete finite
+native source compatibility, an actual fixed-measure contour reference and an
+exact isotropic nonlinear lapse test. There are26approved NGB claims in101
+modules, with280approved scores and4unrelated CNI entries pending. Physical
+measure/order and arbitrary nonlinear-correction gates remain explicit; all8
+physical gravity routes remain open. The sections below are historical stage
+snapshots with their original counts and receipts.
+
+---
+
 Current stage: independent09 native boundary continuation. See STATUS.md,
 BOUNDARY-CONTINUATION-CONTRACT.md, GRAVITY-HANDOFF-BOUNDARY.md and
 SUCCESSOR-ASSESSMENT.md. The bounded campaign found useful native tools;

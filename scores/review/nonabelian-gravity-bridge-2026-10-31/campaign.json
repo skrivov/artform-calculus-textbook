@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "followup_three_target_campaign_in_progress",
+  "research_status": "bounded_followup_complete_relevant_native_tools_found",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_active_user_authorized_independent_reviewer",
   "additional_workers_launched": 2,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 25,
-  "new_independent_approvals": 25,
+  "new_registered_claims": 26,
+  "new_independent_approvals": 26,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -460,7 +460,7 @@
   },
   "analytic_extension_claims": 3,
   "analytic_extension_review": "approved_independent_02",
-  "latest_checkpoint": "NATIVE-RESULTS.md",
+  "latest_checkpoint": "FOLLOWUP-ASSESSMENT.md",
   "preflight_findings": [
     "no_four_valent_vertex_on_current_canvas",
     "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
@@ -499,7 +499,7 @@
     "model": "gpt-6.1-sol",
     "authorization": "User explicitly authorized one Sol6.1 reviewer for this continuation.",
     "prior_reviewer_state": "Not used for this continuation; prior reviews01-05 retained.",
-    "state": "final_independent_11_review_completed"
+    "state": "final_independent_12_review_completed"
   },
   "transport_extension_claims": 2,
   "transport_extension_review": "approved_independent_06",
@@ -564,9 +564,18 @@
     "baseline_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
     "F1": "approved_independent_10_complete_finite_source_criterion",
     "F2": "approved_independent_11_fixed_certificate_reference_order_comparison_partial",
-    "F3": "lean_compiled_exact_isotropic_lapse_constraint_pending_independent_12",
+    "F3": "approved_independent_12_exact_isotropic_lapse_constraint_general40_corrections_open",
     "old_C_D_activated": false,
     "new_counted_round_allocation": 0,
-    "selected_physical_gravity_applications": 0
+    "selected_physical_gravity_applications": 0,
+    "completion_branch": "relevant_native_research_tools_found_with_explicit_order_correction_and_physical_gates",
+    "new_independently_approved_claims": 3,
+    "new_lean_modules": 34,
+    "new_source_bound_tool_bundles": 3,
+    "opposite_Schur_order_comparison": "exact_independent_host_controls_not_a_Lean_common_carrier_integral_theorem",
+    "assessment": "FOLLOWUP-ASSESSMENT.md",
+    "handoff": "GRAVITY-HANDOFF-FOLLOWUP.md",
+    "all17_original_source_pins_preserved": true,
+    "all8_physical_routes_remain_open": true
   }
 }
