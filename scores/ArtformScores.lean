@@ -86,3 +86,8 @@ import ArtformScores.GravityBridge.Matter
 import ArtformScores.GravityBridge.Clock
 import ArtformScores.GravityBridge.Regulator
 import ArtformScores.GravityBridge.Loop
+import ArtformScores.GravityBridge.Protection
+import ArtformScores.GravityBridge.MatterTransfer
+import ArtformScores.GravityBridge.BoundaryAnchoring
+import ArtformScores.GravityBridge.PivotAudit
+import ArtformScores.GravityBridge.RadiativeAudit

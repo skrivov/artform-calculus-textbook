@@ -1806,3 +1806,113 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.loopLaw"
 lean_proof = "Artform.Scores.GravityBridge.loopLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "0be6567bdc209d6264f83ea4799a554f86f5a205bc77a2468ced0f51b4673b14"
+
+[[statement]]
+key = "GAC:axis-exchange-protection"
+label = "GAC:axis-exchange-protection"
+title = "Specified axis exchange protection"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:axis-exchange-protection)"
+statement = """
+**GAC:axis-exchange-protection (protection in the declared symmetry class).** For the quadratic
+form diag(ct,cs,cs,cs), invariance under exchange of temporal and first spatial variables holds
+exactly when ct=cs. The finite regulator response of GAC:finite-regulator-symmetry obeys
+R_i(c,c)=R_0(c,c) for every rational c and each axis i. This is an algebraic identity;
+using it for a convergent quantum model still requires the positive Gaussian hypotheses.
+Spatial symmetry alone permits R_0(2,1)-R_1(2,1)=-11/30, whereas the full equal-axis model
+has identical axis responses. This is specified Euclidean axis exchange, not an identified native
+Lorentz, refoliation or gravitational protective symmetry.
+See [finding 147](findings/147-axis-exchange-protection-and-native-symmetry-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.protectionLaw"
+lean_proof = "Artform.Scores.GravityBridge.protectionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:matter-transfer-obligations"
+label = "GAC:matter-transfer-obligations"
+title = "Clock backreaction and Gaussian domain obligations"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:matter-transfer-obligations)"
+statement = """
+**GAC:matter-transfer-obligations (necessary model transfer tests).** For real nonzero lambda,
+the unit-clock density lambda/(2*N) is not stationary in N at N=1: its derivative is-lambda/2.
+The illustrative compensated density lambda/(2*N)+c*(N-1) has derivative c-lambda/2 there,
+and is stationary exactly when c=lambda/2. This is a declared compensation model, not a native
+counterterm or a selected gravitational coefficient.
+The actual Gaussian block of GAC:finite-gaussian-loop with A=B=1,s=2 is not integrable on R^2.
+Thus the external-background positive-determinant domain cannot be dropped. These tests do not
+prove nonexistence of backreacted native solutions or supply a full joint matter/gravity measure.
+See [finding 148](findings/148-clock-backreaction-and-regulator-domain-transfer.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.matterTransferLaw"
+lean_proof = "Artform.Scores.GravityBridge.matterTransferLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:boundary-anchoring"
+label = "GAC:boundary-anchoring"
+title = "Boundary anchoring of the source-bearing component"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:boundary-anchoring)"
+statement = """
+**GAC:boundary-anchoring (a component prescription with source).** Keep the pinned
+kappa=1/101 and two-cell effective action E(a,b,j)=kappa*(b-a)^2/2-j*(a+b)/2-j^2/(8*kappa).
+Its two free endpoint momenta kappa*(b-a)+j/2 and kappa*(b-a)-j/2 both vanish exactly
+when a=b and j=0. Add the declared endpoint anchor rho*(a^2+b^2)/2 and put
+M=-j^2/(4*rho)-j^2/(8*kappa). For rho nonzero the anchored action equals
+M+rho*((a+b)/2-j/(2*rho))^2+(kappa/2+rho/4)*(b-a)^2.
+For rho>0 it has unique endpoint minimum a=b=j/(2*rho), with value M.
+Anchoring changes the boundary prescription. This is one source-pinned torsion contribution,
+not the original full40 boundary covector or an admitted native gravitational gluing law.
+See [finding 149](findings/149-component-boundary-anchoring-and-native-gluing-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.boundaryAnchoringLaw"
+lean_proof = "Artform.Scores.GravityBridge.boundaryAnchoringLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:guarded-pivot-substitution"
+label = "GAC:guarded-pivot-substitution"
+title = "Guard-preserving native R2 pivot substitution"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:guarded-pivot-substitution)"
+statement = """
+**GAC:guarded-pivot-substitution (normal, minors and every retained guard).** For real four-row
+affine coefficients l,n and a nonzero pivot l_i, put s_i=-n_i/l_i and
+C_i=n_i^2-nu*n_i*l_i+k*l_i^2. For every predicate P on s,
+there exists s with s^2+nu*s+k=0, all l_j*s+n_j=0 and P(s), exactly when
+C_i=0, all l_i*n_j-l_j*n_i=0 and P(s_i).
+Apply this to the literal native l_j=ell(a,G,rowPolys(R,a,G,j)), n_j=remainderConst(...),
+nu=5-8*a+6*G,k=2*(2-3*a)^2. The same test is equivalent to the normal equation plus
+all four original row zeros and P. Under q^2=103/2,gamma^2=G,q and gamma nonzero,
+it is also equivalent to the normal equation, both original signed J zeros and P.
+The predicate is retained at the exact candidate; no interval, phase, determinant, norm or
+reconstruction guard is dropped. This does not establish a feasible native root or global finiteness.
+See [finding 150](findings/150-native-r2-guarded-pivot-substitution-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.pivotAuditLaw"
+lean_proof = "Artform.Scores.GravityBridge.pivotAuditLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-response-audit"
+label = "GAC:finite-response-audit"
+title = "Finite amplitude response audit and matching freedom"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-response-audit)"
+statement = """
+**GAC:finite-response-audit (finite amplitudes and the remaining free parameters).** In the
+specified regulator of GAC:finite-gaussian-loop, for real s nonzero with s^2<=1/10000,
+Gamma_0(s)-Gamma_1(s)>=(9/100)*s^2>0. Thus the finite response difference cannot be
+canceled by the proved fourth-order remainders at these actual amplitudes.
+For arbitrary real bare response coefficients bt,bs and coupling g,
+bt+g^2*C0=bs+g^2*C1 exactly when bt-bs=-(11/120)*g^2.
+Equal bare coefficients therefore give unequal corrected coefficients whenever g is nonzero.
+This is a finite background-response matching law. A compensating choice is not a proved native
+protective symmetry, physical parameter selection, continuum speed or gravity/matter transfer.
+See [finding 151](findings/151-finite-amplitude-response-and-matching-freedom.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.radiativeAuditLaw"
+lean_proof = "Artform.Scores.GravityBridge.radiativeAuditLaw"
+reviewed = ""
+review_text_sha256 = ""

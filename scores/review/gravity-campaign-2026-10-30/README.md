@@ -433,3 +433,38 @@ and five separate kernel replays. All five claims were independently approved at
 [audit](audit-independent-12.md), [per-key verdicts](verdict-independent-12.json),
 [validation](validation-independent-12.json) and [exact regulator replay](regulator-arithmetic-independent-12.py).
 All104 earlier approvals stand. Zero additional material native applications are credited.
+
+## G05/G06/H01–H03: protection and route-specific transfer audits
+
+Five new pending claims: GAC:axis-exchange-protection, GAC:matter-transfer-obligations,
+GAC:boundary-anchoring, GAC:guarded-pivot-substitution and GAC:finite-response-audit.
+Findings147–151 and literal section7 quotes specify the scopes. All109 old approvals stand;
+Protection/MatterTransfer/BoundaryAnchoring/PivotAudit/RadiativeAudit triples are new surfaces.
+
+Protection proves the exact additional temporal/spatial exchange condition and full-axis equality
+of the specified rational finite response. Algebraic division is totalized, so actual Gaussian use
+still requires positivity; no native Lorentz/refoliation symmetry is identified.
+MatterTransfer quantifies the unit-clock lapse variation and an illustrative compensation term;
+it supplies no native counterterm or full coupled solution. The actual A=B=1,s=2 block is proved
+nonintegrable by the growing outer Schur Gaussian, retaining the finite background domain limit.
+
+BoundaryAnchoring tests both original component endpoint momenta against free endpoint conditions,
+then completes the anchored action square and proves its unique positive-rho minimum. The endpoint
+anchor is an added prescription, not a selected native law; full40 contacts/covectors remain.
+PivotAudit audits the native nonzero-pivot substitution. The normal is quadratic, the original four
+row products are cubic, and their remainders affine. Check the pivot-square clearing, every minor,
+arbitrary guard predicate P at the exact candidate, and both directions for actual native rows and
+both original signed J values under q/gamma guards. No coefficient input is replaced. The native
+nonzero-pivot example is not a feasible force witness; no phase/norm/reconstruction guard is dropped.
+This strengthens the same scoped R2 workflow without a new feasibility/global-finiteness claim.
+
+RadiativeAudit uses actual free-energy error bounds to prove a strictly positive finite-amplitude
+axis gap for nonzero s^2<=1/10000, with an explicit9/100 lower coefficient. Matching corrected
+quadratic response requires the stated bare-difference condition; it leaves independent parameters.
+No claim equates finite axis response with continuum speed, full all-source equivalence, native
+protection or coupling selection. All five propose zero additional native material application credit.
+
+Statement binders use underscore-prefixed proof names where the proposition does not depend on the
+proof term; these are alpha-renamings of the authored lemma types, not changed hypotheses.
+Independent review13 is required before approval. validation-G05-G06-H01-H02-H03.json records
+required checks, certificates, both empty drifts and five separate kernel replays.

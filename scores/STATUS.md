@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 109 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **109** |
+| **total** | **114** |
 
 ## Statements
 
@@ -124,3 +124,8 @@
 | GAC:clock-coupling-response | Clock response and independent coupling | proved | `Artform.Scores.GravityBridge.Statement.clockLaw` / `Artform.Scores.GravityBridge.clockLaw` | approved 2026-10-30 |
 | GAC:finite-regulator-symmetry | Signed spatial classification and exact finite regulator | proved | `Artform.Scores.GravityBridge.Statement.regulatorLaw` / `Artform.Scores.GravityBridge.regulatorLaw` | approved 2026-10-30 |
 | GAC:finite-gaussian-loop | Convergent finite Gaussian loop and controlled response | proved | `Artform.Scores.GravityBridge.Statement.loopLaw` / `Artform.Scores.GravityBridge.loopLaw` | approved 2026-10-30 |
+| GAC:axis-exchange-protection | Specified axis exchange protection | stated | `Artform.Scores.GravityBridge.Statement.protectionLaw` / `Artform.Scores.GravityBridge.protectionLaw` | awaiting review |
+| GAC:matter-transfer-obligations | Clock backreaction and Gaussian domain obligations | stated | `Artform.Scores.GravityBridge.Statement.matterTransferLaw` / `Artform.Scores.GravityBridge.matterTransferLaw` | awaiting review |
+| GAC:boundary-anchoring | Boundary anchoring of the source-bearing component | stated | `Artform.Scores.GravityBridge.Statement.boundaryAnchoringLaw` / `Artform.Scores.GravityBridge.boundaryAnchoringLaw` | awaiting review |
+| GAC:guarded-pivot-substitution | Guard-preserving native R2 pivot substitution | stated | `Artform.Scores.GravityBridge.Statement.pivotAuditLaw` / `Artform.Scores.GravityBridge.pivotAuditLaw` | awaiting review |
+| GAC:finite-response-audit | Finite amplitude response audit and matching freedom | stated | `Artform.Scores.GravityBridge.Statement.radiativeAuditLaw` / `Artform.Scores.GravityBridge.radiativeAuditLaw` | awaiting review |
