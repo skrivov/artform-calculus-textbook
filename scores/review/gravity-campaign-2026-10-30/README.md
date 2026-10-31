@@ -99,5 +99,8 @@ Check finding109 and M178's explicit retained all-zero stratum against the new c
 excludes this stratum off b=0, and hence on the original normal G>=0,s>1/3 chart. For simultaneous J zeros
 it guarantees a nonzero affine pivot. The original remaining double-norm chart has the stronger reviewed
 latitude bound; all its other original guards still apply. Nonzero-pivot feasibility, single-sign feasibility,
-physical selection, full40 history and R7/R8 are open. This is a proposed new native R2 reduction, not a
-claim of a complete gravity solution. The original71 approvals stand.
+physical selection, full40 history and R7/R8 are open. This is a scoped new native R2 reduction, not a
+claim of a complete gravity solution. Both additions were independently approved at freeze
+`207183698798dc782dc1b0a30aaab727544e327b`; none returned. The original71 approvals stand.
+See the distinct [audit](audit-independent-03.md), [per-key verdicts](verdict-independent-03.json),
+[validation](validation-independent-03.json) and [integer replay](integer-replay-independent-03.py).

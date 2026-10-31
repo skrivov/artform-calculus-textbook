@@ -946,8 +946,8 @@ See [finding 108](findings/108-native-r2-zero-row-and-factor-cases.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases"
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.exceptionCases"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "5cf5ac82d707cd2b4e30c686c01a19fed4808309b64e8e77dd2ff816bee72839"
 
 [[statement]]
 key = "GAC:r2-zero-row-exclusion"
@@ -971,5 +971,5 @@ See [finding 109](findings/109-native-r2-zero-row-exclusion-certificate.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion"
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "82a918f547754c41dacb561b9f739cc8c5f22f54318f462c75ae994f8b080507"

@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 71 |
-| stated | 2 |
+| proved | 73 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **73** |
 
@@ -86,5 +86,5 @@
 | GAC:connection-preparation | Native connection preparation and source term | proved | `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` / `Artform.Scores.GravityBridge.Native.connectionPreparationLaw` | approved 2026-10-30 |
 | GAC:finite-processing | Complete processing of finite source kernels | proved | `Artform.Scores.GravityBridge.Statement.finiteProcessing` / `Artform.Scores.GravityBridge.finiteProcessing` | approved 2026-10-30 |
 | GAC:r2-trace-reduction | Original R2 trace and monic normal remainder | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction` / `Artform.Scores.GravityBridge.Native.R2.traceReduction` | approved 2026-10-30 |
-| GAC:r2-exception-cases | Native common factor and complete affine alternatives | stated | `Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases` / `Artform.Scores.GravityBridge.Native.R2.exceptionCases` | awaiting review |
-| GAC:r2-zero-row-exclusion | Exact native all-zero-stratum exclusion | stated | `Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion` / `Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion` | awaiting review |
+| GAC:r2-exception-cases | Native common factor and complete affine alternatives | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases` / `Artform.Scores.GravityBridge.Native.R2.exceptionCases` | approved 2026-10-30 |
+| GAC:r2-zero-row-exclusion | Exact native all-zero-stratum exclusion | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion` / `Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion` | approved 2026-10-30 |

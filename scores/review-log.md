@@ -84,3 +84,5 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:connection-preparation` approved as `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` (text 68d4c114fee8)
 - 2026-10-30: `GAC:finite-processing` approved as `Artform.Scores.GravityBridge.Statement.finiteProcessing` (text 5052198e1522)
 - 2026-10-30: `GAC:r2-trace-reduction` approved as `Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction` (text d602deac6e50)
+- 2026-10-30: `GAC:r2-exception-cases` approved as `Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases` (text 5cf5ac82d707)
+- 2026-10-30: `GAC:r2-zero-row-exclusion` approved as `Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion` (text 82a918f54775)

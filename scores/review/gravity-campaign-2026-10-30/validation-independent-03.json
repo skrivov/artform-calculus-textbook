@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-30",
+  "reviewed_commit": "207183698798dc782dc1b0a30aaab727544e327b",
+  "independent_review": true,
+  "full_build": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail"
+    ],
+    "exit_code": 0,
+    "result": "Build completed successfully (9254 jobs)."
+  },
+  "reports": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    }
+  ],
+  "kernel_replays": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.R2Exceptions"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.R2ZeroRow"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "442 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/integer-replay-independent-03.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"identity_verified\": true, \"integer_products\": 14912, \"collected_monomials\": 294, \"nonzero_monomials\": 1, \"positive_constant_digits\": 302, \"certificate_sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    }
+  ],
+  "source_authentication": "All six F01 original hashes and three R2 snapshots match; both manifest quotations are literal ledger text; repository and ledger certificate bytes identical.",
+  "independent_integer_identity": {
+    "integer_products": 14912,
+    "collected_monomials": 294,
+    "nonzero_monomials": 1,
+    "remaining_term": "positive 302-digit certificate constant",
+    "certificate_sha256": "92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e"
+  },
+  "approved_surface_drift": [],
+  "earlier_manifest_entries_unchanged": 71,
+  "proof_target_and_axioms": "Both exact tagged targets; only allowed axioms.",
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "stdout": "ℹ [3788/3858] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9254 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "444 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/integer-replay-independent-03.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"identity_verified\": true, \"integer_products\": 14912, \"collected_monomials\": 294, \"nonzero_monomials\": 1, \"positive_constant_digits\": 302, \"certificate_sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    }
+  ]
+}
