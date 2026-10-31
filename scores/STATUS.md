@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 77 |
-| stated | 0 |
+| stated | 3 |
 | planned | 0 |
-| **total** | **77** |
+| **total** | **80** |
 
 ## Statements
 
@@ -92,3 +92,6 @@
 | GAC:stencil-support | Exact stencil support and restricted-field agreement | proved | `Artform.Scores.GravityBridge.Statement.stencilSupport` / `Artform.Scores.GravityBridge.stencilSupport` | approved 2026-10-30 |
 | GAC:r2-norm-chart | Original odd norm and broader chart | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.normChart` / `Artform.Scores.GravityBridge.Native.R2.normChart` | approved 2026-10-30 |
 | GAC:r2-phase-transfer | Guarded original phase and norm transfer | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer` / `Artform.Scores.GravityBridge.Native.R2.phaseTransfer` | approved 2026-10-30 |
+| GAC:companion-readout | Triangular companion readout and full-state invariance | stated | `Artform.Scores.GravityBridge.Statement.companionReadout` / `Artform.Scores.GravityBridge.companionReadout` | awaiting review |
+| GAC:local-processing | Two-channel inverse and orbit support bounds | stated | `Artform.Scores.GravityBridge.Statement.localProcessing` / `Artform.Scores.GravityBridge.localProcessing` | awaiting review |
+| GAC:source-response | Declared impulse responses and a separating experiment | stated | `Artform.Scores.GravityBridge.Statement.sourceResponse` / `Artform.Scores.GravityBridge.sourceResponse` | awaiting review |

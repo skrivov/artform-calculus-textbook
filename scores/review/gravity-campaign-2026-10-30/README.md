@@ -149,3 +149,31 @@ independently approved at freeze `b3aed56aa9a985e831a1aed9308a00ee5405347a`; non
 The original75 approvals stand. See the distinct [audit](audit-independent-05.md),
 [per-key verdicts](verdict-independent-05.json), [validation](validation-independent-05.json)
 and [exact norm replay](norm-arithmetic-independent-05.py).
+
+## B04, D02 and B02 additions: leading readout, local processing and source response
+
+GAC:companion-readout is a leading triangular operator theorem. Compare the M162eq2 source
+pinned in source-pins-B04.json. It separates closed TT head readings from an invariant full
+zero-auxiliary image. Its iterates are companion powers, not native lattice time translations.
+The rational36/505 is an amplitude-row example only. A_h extraction, feedback, physical source
+class and full40/independent frame-link-history obligations remain open. Finding114 records
+the partial native attempt; no new material application is claimed.
+
+GAC:local-processing proves the same entry-radius bound for an SL2 stencil matrix and inverse,
+and the orbit bound n*t+2*r, retaining the exact end processing identity. It uses no
+one-dimensional expressiveness result outside its scope. The explicit3-channel inverse
+contains p² and is not radius1 even though the forward matrix is. Check both products and
+the displacement2 support witness. The nonzero one-shift old move score witnesses local
+forward/inverse processing with no radius0 forward bound. Finding115 states the channel limit.
+
+GAC:source-response proves finite response from the original forced recurrence, and equality
+of all impulse coefficients iff equality of all finite zero-state source experiments. Different
+state spaces are allowed; input and output modules remain fixed. Move1 and identity have
+equal characteristic polynomial and all prepared (x,0) free iterates, but their same auxiliary
+input/visible output lag1 response is1 versus0. Check source timing, the actual move-score
+matrix example, and no inference of native admissibility. Finding116 gives scope.
+
+The six new Defs/Statements surfaces are CompanionDefs/CompanionStatements, LocalityDefs/
+LocalityStatements and SourceDefs/SourceStatements. No approved surface is changed. All
+required checks, R2 certificate check, both drift checks and three separate kernel replays
+pass; see validation-B04-D02-B02.json. Original77 approvals stand. Independent review requested.

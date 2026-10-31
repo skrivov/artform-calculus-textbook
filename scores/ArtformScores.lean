@@ -52,3 +52,6 @@ import ArtformScores.GravityBridge.Memory
 import ArtformScores.GravityBridge.Stencil
 import ArtformScores.GravityBridge.Native.R2NormChart
 import ArtformScores.GravityBridge.Native.R2PhaseTransfer
+import ArtformScores.GravityBridge.Companion
+import ArtformScores.GravityBridge.Locality
+import ArtformScores.GravityBridge.Sources

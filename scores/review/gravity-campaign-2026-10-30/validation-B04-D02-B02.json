@@ -1,0 +1,189 @@
+{
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "returncode": 0,
+      "seconds": 5.724,
+      "output_bytes": 180,
+      "output_sha256": "b2520c4add7812ccd2921a3a9b28e411fe5fa0138657ed4d74451849c1eadec5",
+      "output": "\u2139 [3788/3838] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\n\u2714 [9272/9273] Built ArtformScores (2.7s)\nBuild completed successfully (9273 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "returncode": 0,
+      "seconds": 12.969,
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.295,
+      "output_bytes": 87,
+      "output_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "returncode": 0,
+      "seconds": 1.387,
+      "output_bytes": 32,
+      "output_sha256": "810dba9cacf2c1ed5345522b811502212c34bc50269a9c3306c4cab3aa721643",
+      "output": "473 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "returncode": 0,
+      "seconds": 13.084,
+      "output_bytes": 9567947,
+      "output_sha256": "92f277117654aeadf257adfae15df412bebc6ea5e8c7408f0a6a7ee20c74fe44"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "returncode": 0,
+      "seconds": 0.069,
+      "output_bytes": 23,
+      "output_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.066,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.197,
+      "output_bytes": 44,
+      "output_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 2.167,
+      "output_bytes": 51,
+      "output_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.075,
+      "output_bytes": 162,
+      "output_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "returncode": 0,
+      "seconds": 0.285,
+      "output_bytes": 43,
+      "output_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "output": "0 approved statements changed since review\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "returncode": 0,
+      "seconds": 0.066,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Companion"
+      ],
+      "returncode": 0,
+      "seconds": 5.295,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Locality"
+      ],
+      "returncode": 0,
+      "seconds": 5.413,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Sources"
+      ],
+      "returncode": 0,
+      "seconds": 5.267,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    }
+  ]
+}

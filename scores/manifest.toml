@@ -1068,3 +1068,71 @@ lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.phaseTransfer"
 reviewed = "2026-10-30"
 review_text_sha256 = "56b15afec4d758a95d1257c2259bef7f3f79e4e507a5b13f85b4aab761df8f97"
+
+[[statement]]
+key = "GAC:companion-readout"
+label = "GAC:companion-readout"
+title = "Triangular companion readout and full-state invariance"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:companion-readout)"
+statement = """
+**GAC:companion-readout (triangular companion readout and full-state invariance).** Let K be a
+commutative ring, Y,Z be K-modules with additive commutative groups, r in K, F:Y^2 to Z linear and
+D:Z^4 to Z linear. Put O_r(q,v)=(v,-r*q) and
+L(y,z)=(O_r(y),(z_1,z_2,z_3,F(y)+D(z))). For every natural n and every y,z,
+the Y^2 head of L^n(y,z) is O_r^n(y), independently of all initial auxiliary jets.
+The zero-auxiliary graph is preserved with that head map if and only if F(y)=0 for every y.
+Thus closed selected readings and full-image invariance are different properties even in a linear
+companion system. These are operator powers, not an identification with n native lattice time steps.
+The native leading trace interpretation and finite-spacing obligations are stated in
+[finding 114](findings/114-native-leading-triangular-readout-and-memory-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.companionReadout"
+lean_proof = "Artform.Scores.GravityBridge.companionReadout"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:local-processing"
+label = "GAC:local-processing"
+title = "Two-channel inverse and orbit support bounds"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:local-processing)"
+statement = """
+**GAC:local-processing (two-channel inverse and orbit support bounds).** Over any commutative ring K,
+on Z^d, let P be a two-by-two determinant-one matrix of finite-support kernels, with coordinate radius
+at most r in every entry. Its inverse has radius at most r in every entry. If a two-channel matrix law T
+has entry radius at most t, every natural n satisfies radius((P*T*P^-1)^n)<=n*t+2*r.
+Processing is accounted once at each end of the orbit, using (P*T*P^-1)^n=P*T^n*P^-1.
+The same-radius inverse statement does not extend to three channels: there are explicit rational
+one-dimensional matrices A,Q with A*Q=Q*A=I, radius(A)<=1 and radius(Q)>1.
+The witness has A=[[1,p,0],[0,1,p],[0,0,1]] and Q=[[1,-p,p^2],[0,1,-p],[0,0,1]], where p is one shift.
+No one-dimensional expressiveness theorem is applied to other dimensions or to native gravity's twenty
+trace channels. See [finding 115](findings/115-local-processing-inverse-and-channel-scope.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.localProcessing"
+lean_proof = "Artform.Scores.GravityBridge.localProcessing"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:source-response"
+label = "GAC:source-response"
+title = "Declared impulse responses and a separating experiment"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:source-response)"
+statement = """
+**GAC:source-response (declared impulse responses and a separating experiment).** Let K be a semiring
+and X,Y,J be K-modules with additive commutative monoids. For linear evolution T, input B:J to X and
+output O:X to Y, put H_n(j)=O*T^n*B(j). If x_0=0 and x_(n+1)=T*x_n+B*u_n, then
+O*x_n=sum_(j<n) H_(n-1-j)(u_j). For two such models, possibly with different state spaces but the same
+input/output modules, equality of every H_n is equivalent to equality of every finite zero-state response
+to every input sequence. The input/output class is part of this assertion.
+The rational move score (x,z) maps to (x+z,z) and the identity have the same characteristic polynomial,
+and both fix every prepared (x,0) for all times. For the same auxiliary input B(j)=(0,j) and visible
+output O(x,z)=x, their lag-one unit-impulse responses are 1 and 0 respectively.
+Neither equal dispersion nor those selected free readings imply this declared source equivalence.
+No native physical input/output class is inferred from this example. See
+[finding 116](findings/116-source-response-and-equal-spectrum-counterexample.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.sourceResponse"
+lean_proof = "Artform.Scores.GravityBridge.sourceResponse"
+reviewed = ""
+review_text_sha256 = ""

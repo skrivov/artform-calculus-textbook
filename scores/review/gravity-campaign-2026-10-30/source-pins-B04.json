@@ -1,0 +1,16 @@
+{
+  "investigation": "GAC-B04",
+  "scope": "M162 equation2 leading triangular trace split only; A_h/native-step/full40 extraction remains open",
+  "sources": [
+    {
+      "path": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M162-R7-explicit-coordinate-forcing-and-selected-TT-noninvariance-UNREVIEWED-20261030.md",
+      "sha256": "f8c8769129b03d210185e642dad1501f226c785eeac31b6b3898c273b57272f9",
+      "bytes": 12302
+    },
+    {
+      "path": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-M162-selected-TT-noninvariance-distinct-review-evidence-20261030/finished-distinct-manual-selected-TT-noninvariance-review.md",
+      "sha256": "3d82b32a55a29f5870cb46108e1a4a127a60a65604b616a01c548c7d681120ef",
+      "bytes": 9393
+    }
+  ]
+}
