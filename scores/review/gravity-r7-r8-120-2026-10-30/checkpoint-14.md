@@ -1,0 +1,11 @@
+# Checkpoint14: complete source-bearing boundary benchmarks
+
+31 October2026. **80/120 substantive dispositions;70 new approvals;189 approved score entries;10 H submissions pending review11.** Forty mathematical investigations remain. Campaign active. All189 preceding manifest entries and approved Lean text are preserved.
+
+H01–H10 reconstruct finite owned-panel variation, the full incoming temporal stencil and source term, literal16+24 physical/Gram contacts, controlled L2 spatial exhaustion, the original source-bearing two-cell covector, its actual Lebesgue integration and Jacobian, independent-source affine composition, complete three-output programs, Fourier-reality/halo adverse cases and held-out source susceptibility. Positive scalar component integration is not a Lorentzian native path integral. The generic temporal pairings retain M160's native-coefficient and domain identification duties. Component gluing is not a full40 geometric move.
+
+The same rational three-output task uses4 scales+4 additions in the literal program and3 scales+4 additions in the reused program. Both return the stationary middle and both endpoint momenta for all inputs, with valid references. The fresh local Python-interpreter benchmark uses514 cases, both old/held-out source examples, nine alternating warmed repeats, and records timing ranges and intermediate bit/certificate sizes separately from input/certificate construction and correctness validation. This narrow prospective comparison awaits review. It gives no historical discovery, global Lean/full40 or physical-resource saving.
+
+The warning-free library build and root exact source/current replay pass.41 original/snapshot pairs now include the two earlier independently approved component benchmark findings with their original native-transfer exclusions. All checking, review, source intake and publication count0 research rounds.
+
+I research now tests actual full24-derived cross-TT forcing and alternative preparation/history. A new private exact calculation reproduces the old123 temporal source and supplies a transverse coordinate-row forcing; it remains unregistered and receives no scientific or round credit until its full source/proof binding is checked. The outstanding finite-h remainder, nonlinear compatibility-source range and complete physical cut/link/history duties remain.

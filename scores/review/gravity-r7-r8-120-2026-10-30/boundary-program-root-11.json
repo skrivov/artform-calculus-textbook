@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "frozen_problem": "same original two-cell torsion contribution, kappa1/101; freely supplied rational endpoints a,b and source j; output stationary m and both endpoint momenta",
+  "input_count": 514,
+  "heldout": [
+    "0,2,2/101",
+    "-1,3,4/101"
+  ],
+  "cost_model": "ScalarGate: precomputed rational coefficients; input/slot reads, copies and unary negations free; each scale/add charged once; no global optimality assertion",
+  "literal_cost": {
+    "scale": 4,
+    "add": 4
+  },
+  "reused_cost": {
+    "scale": 3,
+    "add": 4
+  },
+  "peak_intermediate_bitlength": {
+    "literal": 55,
+    "reused": 55
+  },
+  "serialized_problem_output_certificate": {
+    "literal": {
+      "bytes": 83199,
+      "sha256": "dee72a832ba82bafe1b7eced0ffa05323a11dcf650754a9424021ee680b22884"
+    },
+    "reused": {
+      "bytes": 83159,
+      "sha256": "033a54d92e8da3bcc6a3ae6674053ac6da71cf4206f612f2b4d1c7935db535d5"
+    }
+  },
+  "python": "3.12.3",
+  "input_certificate_generation_and_validation_ms": 29.461,
+  "timing_protocol": {
+    "repeats": 9,
+    "warmup_each_program": 514,
+    "evaluations_per_batch": 2056,
+    "alternating_program_order": true,
+    "same_interpreter": true
+  },
+  "timings_ms": {
+    "literal": {
+      "samples": [
+        15.634,
+        14.904,
+        14.945,
+        14.895,
+        15.481,
+        14.879,
+        14.861,
+        14.896,
+        14.882
+      ],
+      "median": 14.896,
+      "min": 14.861,
+      "max": 15.634
+    },
+    "reused": {
+      "samples": [
+        13.256,
+        13.083,
+        13.069,
+        13.135,
+        13.324,
+        13.046,
+        13.156,
+        13.094,
+        13.117
+      ],
+      "median": 13.117,
+      "min": 13.046,
+      "max": 13.324
+    }
+  },
+  "scope": "fresh local Python-interpreter microbenchmark and exact operation comparison; no historical discovery, Lean compilation, full40 computation or physical resource/time credit"
+}

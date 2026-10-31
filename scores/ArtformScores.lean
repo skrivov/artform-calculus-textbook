@@ -166,3 +166,13 @@ import ArtformScores.GravityBridge.Native.CoordinateSymbol.Axis
 import ArtformScores.GravityBridge.Native.CoordinateSymbol.Scaling
 import ArtformScores.GravityBridge.Native.CoordinateSymbol.Growing
 import ArtformScores.GravityBridge.Native.CoordinateSymbol.ForcedRow
+import ArtformScores.GravityBridge.Native.GreenComposition.Panel
+import ArtformScores.GravityBridge.Native.GreenComposition.Temporal
+import ArtformScores.GravityBridge.Native.GreenComposition.FortyContacts
+import ArtformScores.GravityBridge.Native.GreenComposition.Exhaustion
+import ArtformScores.GravityBridge.Native.GreenComposition.SourceBoundary
+import ArtformScores.GravityBridge.Native.GreenComposition.DetailIntegral
+import ArtformScores.GravityBridge.Native.GreenComposition.AffineSource
+import ArtformScores.GravityBridge.Native.GreenComposition.Programs
+import ArtformScores.GravityBridge.Native.GreenComposition.RealityHalo
+import ArtformScores.GravityBridge.Native.GreenComposition.Susceptibility

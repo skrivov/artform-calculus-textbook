@@ -1,0 +1,39 @@
+{
+  "frozen_problem": "original source-bearing two-cell torsion contribution kappa1/101; arbitrary a,b,j over Q; three outputs m and both endpoint momenta",
+  "older_publications": {
+    "finite-panel": "febd2b419a704e1d4a8cacfecbefdce7d180ca13",
+    "two-cell": "5a57a4e648c323ff7d70afa986114a3b34d6ab05"
+  },
+  "literal_program": [
+    "m=(a+b)/2+101*j/4",
+    "pin=(2/101)*(m-a)",
+    "pout=(2/101)*(b-m)"
+  ],
+  "literal_cost": {
+    "scale": 4,
+    "add": 4
+  },
+  "candidate_program": [
+    "delta=(b-a)/101",
+    "halfsource=j/2",
+    "pin=delta+halfsource",
+    "pout=delta-halfsource",
+    "m=a+(101/2)*pin"
+  ],
+  "candidate_cost": {
+    "scale": 3,
+    "add": 4
+  },
+  "rules": "frozen campaign ruler; fixed coefficients and free reads/copies/unary negation; exact outputs and all source contacts retained; no global optimality claim",
+  "historical_runtime_baseline": null,
+  "new_local_microbenchmark": "same Python interpreter/DAG inputs and cache protocol; separate fresh timing receipt, no old discovery/runtime inference",
+  "heldout": {
+    "a": "-1",
+    "b": "3",
+    "j": "4/101",
+    "m": "2",
+    "pin": "6/101",
+    "pout": "2/101",
+    "effective": "2/101"
+  }
+}

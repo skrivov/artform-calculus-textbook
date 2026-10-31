@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "complete_source_covector_cases": 64,
+  "composed_independent_source_cases": 64,
+  "full_coordinate_carrier": 40,
+  "full_mixed_contacts_retained": true,
+  "noncommuting_stencil_cuts": 7,
+  "sourced_cut_not_conserved": true,
+  "halo_adverse_case": true,
+  "heldout": [
+    "2",
+    "6/101",
+    "2/101",
+    "2/101"
+  ],
+  "matched_program_inputs": 514,
+  "same_cost_model": true,
+  "source_pairs": 41,
+  "new_physical_gate": 0,
+  "historical_discovery_or_runtime_credit": 0,
+  "scope": "component/source and finite-stencil tests; original full40 current coefficients, physical/geometric move and uniform-h source estimates not inferred"
+}

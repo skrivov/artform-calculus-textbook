@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 189 |
-| stated | 0 |
+| stated | 10 |
 | planned | 0 |
-| **total** | **189** |
+| **total** | **199** |
 
 ## Statements
 
@@ -204,3 +204,13 @@
 | GAC2:native-frequency-response-scaling | Frequency degrees of symbol and forced response | proved | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.scalingLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.scalingLaw` | approved 2026-10-31 |
 | GAC2:native-coordinate-extra-real-root | Extra real root of an actual coordinate column | proved | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.growingLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.growingLaw` | approved 2026-10-31 |
 | GAC2:native-forced-row-zero-four-jet | Unit-row forcing with zero initial four-jet | proved | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.forcedRowLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw` | approved 2026-10-31 |
+| GAC2:factorized-owned-panel-variation | Factorized finite-panel variation with owned endpoints | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.panelLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.panelLaw` | awaiting review |
+| GAC2:complete-temporal-cut-stencil | Finite-range temporal cut and complete incoming source term | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.temporalLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.temporalLaw` | awaiting review |
+| GAC2:literal-full40-current-contacts | Literal full-coordinate current scaling and Gram conversion | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.fortyContactsLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.fortyContactsLaw` | awaiting review |
+| GAC2:controlled-l2-current-exhaustion | Controlled spatial L2 exhaustion without summable background | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.exhaustionLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.exhaustionLaw` | awaiting review |
+| GAC2:two-cell-complete-source-covector | Complete source and endpoint covector of the solved component | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.sourceBoundaryLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.sourceBoundaryLaw` | awaiting review |
+| GAC2:two-cell-source-detail-measure | The same retained source detail with its Lebesgue measure | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.detailIntegralLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.detailIntegralLaw` | awaiting review |
+| GAC2:source-complete-affine-boundary-composition | Affine boundary composition with independent sources | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.affineSourceLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.affineSourceLaw` | awaiting review |
+| GAC2:two-cell-three-output-programs | Matched exact programs for three component outputs | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.programsLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.programsLaw` | awaiting review |
+| GAC2:fourier-reality-temporal-halo | Fourier reality and required temporal halo | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.realityHaloLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.realityHaloLaw` | awaiting review |
+| GAC2:heldout-source-boundary-susceptibility | Held-out source response and mixed boundary contacts | stated | `Artform.Scores.GravityBridge.Native.GreenComposition.Statement.susceptibilityLaw` / `Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw` | awaiting review |

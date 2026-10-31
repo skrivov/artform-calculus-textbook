@@ -282,6 +282,20 @@
       "bytes": 11151,
       "sha256": "acb95d614111ecf39e622f77bdc01ede1777890a8a0109d1a2ed7ededcc6ddf9",
       "scope": "Exact full-space lattice cut current with original scaling and incoming transpose; declared selected trace, finite owned corners and full radical remain separate"
+    },
+    {
+      "original": "physics/ledgers/lattice-waves/findings/131-native-open-cell-boundary-adjoint-transfer-test.md",
+      "snapshot": "source/accepted-component-boundary-benchmark.md",
+      "bytes": 3309,
+      "sha256": "5bcb43441140a586ac1090a67a54f473daccb0e55822023a6b4a74c5b5508b83",
+      "scope": "previous independently approved component benchmark, with all full40/native geometric/physical-transfer exclusions retained; no full40 solution or native geometric move follows"
+    },
+    {
+      "original": "physics/ledgers/lattice-waves/findings/132-two-cell-torsion-source-and-native-refinement-gap.md",
+      "snapshot": "source/accepted-two-cell-source-benchmark.md",
+      "bytes": 2186,
+      "sha256": "90a942f1bbb77c9b38d3ec10d7c5f3c623c37f1157d8085ea011af4716e51af7",
+      "scope": "previous independently approved component benchmark, with all full40/native geometric/physical-transfer exclusions retained; no full40 solution or native geometric move follows"
     }
   ],
   "new_mathematical_acceptance": "none from this inventory; new Lean claims require independent fidelity approval",

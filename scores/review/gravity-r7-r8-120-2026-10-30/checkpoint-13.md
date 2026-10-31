@@ -1,0 +1,7 @@
+# Checkpoint13: native coordinate bridge independently published
+
+31 October2026. **70/120 investigations;70 new approvals;189 approved score entries;50 investigations remain.** Campaign active. [Review10 publication](https://github.com/skrivov/artform-calculus-textbook/commit/052ddd8b013be2c9fa5e1616da61502bbd1c981e) approves10/returns0, preserving all179 earlier entries and32 new Lean files. All34 initial/publication checks pass, including12 separate kernels, certificates and both zero drifts;39 original/snapshot pairs authenticate.
+
+The distinct replay interpolates every native coefficient and checks held-out124 at z=3/2+i/3 through32x32 rational realification on all32 real basis sources. It also confirms both inverse/source bases, angular and axis strata, scaling, the a² growing-row factor and native forced normalization. The extra adverse frequency p=(3,0,3,4) has d0 with a nonzero face, so a physical light-cone band guard must not be used at every temporal frequency.
+
+No new full physical R7/R8 gate or G-block efficiency saving is credited. The native leading coefficient/companion bridge is now certified; finite-h remainder, original nonlinear compatibility-source range and full physical cut/link/history remain additional duties. No point-mode or generic forcing input is promoted to an admitted L2/nonlinear source. H continues on complete source-bearing boundary benchmarks; source/check/review/publication intake earns0 research rounds.

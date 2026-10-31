@@ -3510,3 +3510,204 @@ lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "1bdae3c3ec091e651490e73fdad8b4abf073bcab81ddd79340345772aa9b6576"
+
+[[statement]]
+key = "GAC2:factorized-owned-panel-variation"
+label = "GAC2:factorized-owned-panel-variation"
+title = "Factorized finite-panel variation with owned endpoints"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:factorized-owned-panel-variation)"
+statement = """
+**GAC2:factorized-owned-panel-variation (factorized finite-panel variation with owned endpoints).** For a finite panel L=c*sum_i(u_(i+1)-u_i)^2, the exact variation retains
+its linear flux term and quadratic e^2 remainder. The factorized Green identity
+retains both endpoint covectors and the interior flux difference. For N+1 owned
+edges the actual outgoing covector is p_N at v_(N+1), not an unowned extension.
+This reproduces the published torsion contribution at c=1/101 and every finite
+panel length. It is not the full native40-row boundary primitive.
+See [finding227](findings/227-factorized-owned-panel-variation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.panelLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.panelLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:complete-temporal-cut-stencil"
+label = "GAC2:complete-temporal-cut-stencil"
+title = "Finite-range temporal cut and complete incoming source term"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:complete-temporal-cut-stencil)"
+statement = """
+**GAC2:complete-temporal-cut-stencil (finite-range temporal cut and complete incoming source term).** For arbitrary finite-range edges, the original cut sum over r and j<r has
+cut difference sum_r(edge(n,r)-edge(n-r,r)). Substituting an operator pairing
+B_r(x_n,y_(n+r))-B_r(y_n,x_(n+r)) gives exactly the forward and true incoming
+paired-stencil skew. With sources the cut difference retains h*(x:g-y:f); it is
+not generally zero. The r0 antisymmetric contribution cancels. This is the exact
+finite-stencil M160 telescoping identity; identifying its B_r with the original full
+Hessian and the spatial domain remains a separate native input.
+See [finding228](findings/228-complete-temporal-cut-stencil.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.temporalLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.temporalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:literal-full40-current-contacts"
+label = "GAC2:literal-full40-current-contacts"
+title = "Literal full-coordinate current scaling and Gram conversion"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:literal-full40-current-contacts)"
+statement = """
+**GAC2:literal-full40-current-contacts (literal full-coordinate current scaling and gram conversion).** In the original16+24 coordinate carrier, physicalForty(h,f,omega)=(f,-h*omega)
+is exactly frameOnly-h*connectionOnly. Every bilinear form therefore retains
+its frame/frame, both mixed frame/connection and h^2 connection/connection terms.
+The full coordinate dual with the original Gram map is exactly the eta-weighted
+sixteen-frame contraction plus the four signed six-bivector contractions. The
+literal h*(h^3 pairing)*cut=h^4*(pairing*cut) measure factor is retained.
+These identities do not identify an arbitrary B with the native integrated cut current
+or omit its Hessian, transport or owned-corner contacts.
+See [finding229](findings/229-literal-full40-current-contacts.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.fortyContactsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.fortyContactsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:controlled-l2-current-exhaustion"
+label = "GAC2:controlled-l2-current-exhaustion"
+title = "Controlled spatial L2 exhaustion without summable background"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:controlled-l2-current-exhaustion)"
+statement = """
+**GAC2:controlled-l2-current-exhaustion (controlled spatial l2 exhaustion without summable background).** For any spatial index type, two real l2 fields have a summable product,
+and their finite-subset pairing sums converge to the full sum. Any fixed finite
+stencil of such pairs, with fixed real coefficients, is summable as well. A nonzero
+single-site l2 seed meets the hypotheses. The constant-one background on Z is not
+summable, so this argument concerns perturbation pairings, not an infinite total
+background action. It gives no uniform-in-h bound by separately estimating singular
+stencil coefficients.
+See [finding230](findings/230-controlled-l2-current-exhaustion.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.exhaustionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.exhaustionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:two-cell-complete-source-covector"
+label = "GAC2:two-cell-complete-source-covector"
+title = "Complete source and endpoint covector of the solved component"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:two-cell-complete-source-covector)"
+statement = """
+**GAC2:two-cell-complete-source-covector (complete source and endpoint covector of the solved component).** For c!=0, the original two-cell component c*(m-a)^2+c*(b-m)^2-j*m
+has stationary middle(a+b)/2+j/(4c), effective action
+c*(b-a)^2/2-j*(a+b)/2-j^2/(8c), and the exact2c completed square.
+The full simultaneous endpoint/source variation has linear covector
+(-pin,pout,-middle), pin=c*(b-a)+j/2,pout=c*(b-a)-j/2, plus the displayed
+quadratic remainder. At c=1/101 it equals the published native contribution.
+No full40 solution or geometric refinement equivalence is asserted.
+See [finding231](findings/231-two-cell-complete-source-covector.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.sourceBoundaryLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.sourceBoundaryLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:two-cell-source-detail-measure"
+label = "GAC2:two-cell-source-detail-measure"
+title = "The same retained source detail with its Lebesgue measure"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:two-cell-source-detail-measure)"
+statement = """
+**GAC2:two-cell-source-detail-measure (the same retained source detail with its lebesgue measure).** For the same real two-cell action and c>0, exp(-L) is integrable over
+Lebesgue dm and its integral is exp(-L_eff)*sqrt(pi/(2c)). Integrating the
+retained detail therefore differs from replacing it by its stationary value unless
+the normalization factor is1. At c=1/101 that factor is not1. Rescaling the
+integration coordinate by m=2z gives integral f(2z) dz=(1/2)*integral f(m) dm;
+its Jacobian must be charged. This is a convergent component Gaussian statement,
+not a Lorentzian native path integral or a quantum gravity measure construction.
+See [finding232](findings/232-two-cell-source-detail-measure.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.detailIntegralLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.detailIntegralLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:source-complete-affine-boundary-composition"
+label = "GAC2:source-complete-affine-boundary-composition"
+title = "Affine boundary composition with independent sources"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:source-complete-affine-boundary-composition)"
+statement = """
+**GAC2:source-complete-affine-boundary-composition (affine boundary composition with independent sources).** The source-bearing boundary relation is exactly
+(a,pin)->(a+(pin-j/2)/c,pin-j), c!=0. Two such steps with independent j,l
+compose to the displayed affine map. Direct elimination of the common endpoint
+has the exact square c*(m-mstar)^2 and the displayed effective action, retaining
+both individual source squares and the(j+l)^2 contact. Matching the two boundary
+momenta gives precisely mstar=(a+b)/2+(j+l)/(4c). Equal total source alone
+need not give the same boundary/source action.
+See [finding233](findings/233-source-complete-affine-boundary-composition.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.affineSourceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.affineSourceLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:two-cell-three-output-programs"
+label = "GAC2:two-cell-three-output-programs"
+title = "Matched exact programs for three component outputs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:two-cell-three-output-programs)"
+statement = """
+**GAC2:two-cell-three-output-programs (matched exact programs for three component outputs).** For every freely supplied rational(a,b,j) at c=1/101, the displayed valid
+literal and reused straight-line programs return the same three outputs: stationary
+middle and both endpoint momenta. In the declared ScalarGate ruler with precomputed
+coefficients and free input/slot reads, copies and unary negation, the literal program
+uses4 multiplications and4 additions; the reused program uses3 multiplications and4
+additions. Every output reference is valid. This is a prospective matched component
+comparison, with no global optimality, historical discovery, full40 or physical-resource
+saving claim.
+See [finding234](findings/234-two-cell-three-output-programs.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.programsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.programsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:fourier-reality-temporal-halo"
+label = "GAC2:fourier-reality-temporal-halo"
+title = "Fourier reality and required temporal halo"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:fourier-reality-temporal-halo)"
+statement = """
+**GAC2:fourier-reality-temporal-halo (fourier reality and required temporal halo).** An explicit real even scalar spectrum exp(-k^2) yields a derived vector
+I*k*exp(-k^2) that is Fourier-real under reflection and complex conjugation but is
+odd and not even. A separate range-two cut example has identical current/next-cut
+field values with different supplied temporal halo and different cut current. Thus
+neither componentwise evenness nor cut data without its halo can replace the original
+M160 domain. These are adverse logical-domain tests, not an assertion that the scalar
+example or arbitrary stencil is the original admitted TT/full40 solution.
+See [finding235](findings/235-fourier-reality-temporal-halo.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.realityHaloLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.realityHaloLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:heldout-source-boundary-susceptibility"
+label = "GAC2:heldout-source-boundary-susceptibility"
+title = "Held-out source response and mixed boundary contacts"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:heldout-source-boundary-susceptibility)"
+statement = """
+**GAC2:heldout-source-boundary-susceptibility (held-out source response and mixed boundary contacts).** For the same component, changing j by dj changes the stationary middle by
+dj/(4c) and the effective action by-middle*dj-dj^2/(8c). Simultaneous endpoint
+and source changes have the exact mixed difference-dj*(da+db)/2. Omitting the
+source shifts the stationary middle correctly only when j=0, c!=0. The nonzero
+held-out a=-1,b=3,j=4/101 test retains its source susceptibility and mixed
+endpoint/source contact. This verifies full source-bearing component composition,
+not the full original native geometric move.
+See [finding236](findings/236-heldout-source-boundary-susceptibility.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.susceptibilityLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw"
+reviewed = ""
+review_text_sha256 = ""
