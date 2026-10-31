@@ -124,3 +124,25 @@ Both foundations were independently approved at freeze
 `4fc465dc188cf764eb8be326e231c84b6539f59b`; none returned. Original73 approvals stand.
 See the distinct [audit](audit-independent-04.md), [per-key verdicts](verdict-independent-04.json)
 and [validation](validation-independent-04.json).
+
+## F05–F06 additions: broader norm chart and original regular phase
+
+GAC:r2-norm-chart proves the literal odd norm identity, and excludes b=0 using only N=0, G>=0,
+s>0, R>0 and the necessary odd norm constraint at q²=103/2. The b=0 contradiction compares
+(3-s)*d>64/3 with (412/9)*s<=412/27. It then reuses the approved unit certificate. A simultaneous
+sign full norm/trace candidate has a nonzero affine pivot without a large-latitude assumption.
+The at-most-one latitude statement fixes R,a,G and requires b!=0; no existence or global count follows.
+The exact positive necessary-constraint point is not asserted to satisfy full phase norms or force.
+
+GAC:r2-phase-transfer checks the original P/Q signs, norm determinant and conjugate numerator,
+the real-linear inverse, K²=s / KH=h norm equivalence, and phase+norm+unmultiplied affine-trace
+equivalence with Vreg+F=0+J=0. Delta may have either sign but is nonzero. Trace clearing retains
+s,D,E,Delta, and normal reconstruction is not asserted. Source pins are the existing corrected
+original force5edba7e6 and four-row/review pins in source-pins-R2.json. Findings112–113 specify
+precise application scope. These strengthen the same R2 reduction; no second direction or new
+smaller-latitude physical candidate is claimed.
+
+R2PhaseDefs.lean and R2PhaseStatements.lean are new; prior approved entries are unchanged.
+Validation-F05-F06.json records required checks, empty drift, the R2 certificate check and both
+separate kernel replays using compact hashes/sizes for the generated reports. Independent review
+is requested; the original75 approvals stand.

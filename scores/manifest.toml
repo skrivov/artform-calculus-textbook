@@ -1021,3 +1021,50 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.stencilSupport"
 lean_proof = "Artform.Scores.GravityBridge.stencilSupport"
 reviewed = "2026-10-30"
 review_text_sha256 = "45f701bc5b6669dbcb0eff42d0ac36979e91d5ccef20c2de873f9798f189a30c"
+
+[[statement]]
+key = "GAC:r2-norm-chart"
+label = "GAC:r2-norm-chart"
+title = "Original odd norm and broader chart"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r2-norm-chart)"
+statement = """
+**GAC:r2-norm-chart (the original odd norm excludes the shared factor).** Put
+h=a*s+2-3a, d=(1+q^2)*(1+R)^2*(a^2+G)-[1+q^2*(2a-1)^2+4*q^2*G], and
+F(gamma)=4*h^2*normSq(T(gamma))-R*s*(3-s)*Delta(gamma)^2 with the original T and Delta.
+For all real q,R,a,gamma,s, F(gamma)-F(-gamma)=16*q*R*gamma*[2*q^2*h^2-s*(3-s)*d], where G=gamma^2.
+For q^2=103/2, R>0, G>=0, s>0 and the original normal equation N=0, the necessary norm constraint
+s*(3-s)*d=2*q^2*h^2 implies 2-3a is nonzero and excludes all four ell_i=n_i=0.
+Consequently if gamma is nonzero, both original phase norms and both original J traces vanish,
+and R>0, s>0, N(a,gamma^2,s)=0, at least one ell_i is nonzero, without assuming s>1/3.
+For fixed R,a,G with 2-3a nonzero, two normal latitudes satisfying all four real rows must coincide.
+This is a fixed-parameter fibre statement, with no existence or global-finiteness conclusion, and no
+single-sign feasibility or physical phase-selection verdict. See
+[finding 112](findings/112-native-r2-odd-norm-and-broader-chart.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.normChart"
+lean_proof = "Artform.Scores.GravityBridge.Native.R2.normChart"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:r2-phase-transfer"
+label = "GAC:r2-phase-transfer"
+title = "Guarded original phase and norm transfer"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r2-phase-transfer)"
+statement = """
+**GAC:r2-phase-transfer (guarded original phase and norm transfer).** Use zeta=1-a+i*gamma,
+P=(1+R)*(1-i*q)*(1-zeta), Q=1+i*q-2*i*q*conjugate(zeta), and the original L,T,Delta.
+For all real q,R,a,gamma, normSq(P)-normSq(Q)=Delta and conjugate(P)*L-Q*conjugate(L)=T.
+For Delta nonzero the original real-linear phase equation P*V+Q*conjugate(V)=-2*H*L
+is equivalent to V=-2*H*T/Delta, denoted Vreg. If K^2=s, K*H=a*s+2-3a and K is nonzero,
+then normSq(Vreg)=R*(3-s) is equivalent to the phase-norm polynomial F(gamma)=0.
+If also s,3-s,E=1-zeta and Delta are nonzero, the conjunction of the original phase equation,
+its norm equation and the unmultiplied affine trace is equivalent to V=Vreg, F=0 and J=0.
+Every clearing guard is retained. This is the reduced original polynomial/phase system, not a proof
+of normal cubic reconstruction, singular-phase or zero-K sectors, native full40 histories, or a
+physical phase-selection rule. See [finding 113](findings/113-native-r2-guarded-original-phase-transfer.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer"
+lean_proof = "Artform.Scores.GravityBridge.Native.R2.phaseTransfer"
+reviewed = ""
+review_text_sha256 = ""
