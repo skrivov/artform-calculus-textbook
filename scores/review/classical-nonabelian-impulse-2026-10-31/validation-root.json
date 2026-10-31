@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-31",
+  "author": "root",
+  "additional_workers": 0,
+  "independent_fidelity_review": false,
+  "new_approvals": 0,
+  "baseline": "af36dc2024d00af61589ddfae5416edfab00dc58",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scores/review/classical-nonabelian-impulse-2026-10-31/replay-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.873,
+      "stdout_sha256": "43f1111a899e84a69e3eff4858266b682e5d638702f1a0a9b256cc95973da9ce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 41.543,
+      "stdout_sha256": "705db0b8a84a0026c433630f411694fb56698ee23dc848fd1ad5768b0275da91",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 18.458,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 31.134,
+      "stdout_sha256": "b35d4f77d43a413b6befa80e402e104e9da67d54542616cabe6bf071b45257b2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.209,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.46,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.055,
+      "stdout_sha256": "c05083a2664082469dbd8e0b5ddbedf25358f91ad724c2de425aa55c691f17b9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.175,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.208,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.334,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.086,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.44,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.178,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Geometry"
+      ],
+      "exit_code": 0,
+      "seconds": 7.151,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Dynamics"
+      ],
+      "exit_code": 0,
+      "seconds": 6.981,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Descent"
+      ],
+      "exit_code": 0,
+      "seconds": 6.724,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Process"
+      ],
+      "exit_code": 0,
+      "seconds": 6.596,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Controls"
+      ],
+      "exit_code": 0,
+      "seconds": 6.425,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Statements"
+      ],
+      "exit_code": 0,
+      "seconds": 6.37,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.ClassicalNonabelian.Theorems"
+      ],
+      "exit_code": 0,
+      "seconds": 6.462,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "prior_approvals_preserved": 254,
+  "prior_statement_definition_hashes_preserved": true,
+  "old_lean_modules_unchanged": true,
+  "umbrella_import_additive": true,
+  "new_checked_claims": 4,
+  "new_manifest_status": "stated_pending_independent_review",
+  "new_proof_axioms": {
+    "CNI:geometry-gauss": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CNI:legal-native": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CNI:noncommuting-control": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "CNI:two-shear-score": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "files": {
+    "scores/ArtformScores/ClassicalNonabelian/Controls.lean": "46a75311e63905c1530c288f67a1f8bcde101420d9395616e7b11ba9ed663e27",
+    "scores/ArtformScores/ClassicalNonabelian/Descent.lean": "e3584f761df70fb4abb7c1c5b0eaac0f080b40ce4bb4985c83838bcbb2bd5292",
+    "scores/ArtformScores/ClassicalNonabelian/Dynamics.lean": "287cfc19925cab0b7330f26148ec0505348bf38b0aab2608f28d71e7f6ea8cb3",
+    "scores/ArtformScores/ClassicalNonabelian/Geometry.lean": "317c5e2c5b1e4cbea8c040ba555005fbf4d7f288294b155448a980d2ad3098d8",
+    "scores/ArtformScores/ClassicalNonabelian/Process.lean": "545dddf32f901995e53a41a2b217d4c77771a697be119a52774edccb903d35e1",
+    "scores/ArtformScores/ClassicalNonabelian/Statements.lean": "af584fe6b0de3fe9ac37d65aead347021925ddcea488b065d80d1bf27d4b717c",
+    "scores/ArtformScores/ClassicalNonabelian/Theorems.lean": "d6a8504102c1d6b788d22d5d2d92e0564af63e6711bdca9db45c1302269fab81",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/ALGEBRA-OF-SCORES.md": "155f0aef5e5bbd28325c6285cd2e651fdf431071559420db0df0087832478415",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/HANDOFF.md": "39eb7df1b9b176a94baa3c9116e5f0300aa2d5dccc0c154b519bfff149f9f788",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/README.md": "5f30ec22e6d24e4458d2b00b1af689ff96ad6494bfa04b771320d338355693d2",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/RESULTS.md": "8cea4a2615b47e74195d775e65e21c23b70c69ffaffe9752e6fa03828a7eb20f",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/claims.json": "e278093eebbe663e25419e91ad18a79edefb49dbc40035808dbef533d6968599",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/replay-root.json": "9d35a604d49f91b497f9642836bc5bd1128c1e260acf8254e3e4263d4adcd373",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/replay-root.py": "f5edfd86eb098f083786b4a6302420f41bc821dec903c05a1a62b5e9c07a44b3",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/source/classical-dynamics.tex": "ebdc03fd2b2f51dffc8a7d4b8d2116d85f491123c412f4b71cf9455833d236f3",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/source/nonabelian-frontiers.tex": "ebd84a464385740a402afce9c50725830b85fedf306497eda9e6f83a44b796da",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/source-pins.json": "2260d334fcb5d2e9ec7032cb11ec771b69e169f317adf4e169d7520842d4b7c7",
+    "scores/review/classical-nonabelian-impulse-2026-10-31/validate-root.py": "c39dcff980458b1121ff0b9df559c526f3793544a6fe9205a83856d3eb2768fa"
+  }
+}

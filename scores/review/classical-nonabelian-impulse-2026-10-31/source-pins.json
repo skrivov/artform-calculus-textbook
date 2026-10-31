@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-31",
+  "baseline": "af36dc2024d00af61589ddfae5416edfab00dc58",
+  "local_sources": [
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/nonabelian-frontiers.tex",
+      "snapshot": "scores/review/classical-nonabelian-impulse-2026-10-31/source/nonabelian-frontiers.tex",
+      "sha256": "ebd84a464385740a402afce9c50725830b85fedf306497eda9e6f83a44b796da",
+      "bytes": 9919
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/classical-dynamics.tex",
+      "snapshot": "scores/review/classical-nonabelian-impulse-2026-10-31/source/classical-dynamics.tex",
+      "sha256": "ebdc03fd2b2f51dffc8a7d4b8d2116d85f491123c412f4b71cf9455833d236f3",
+      "bytes": 78283
+    }
+  ],
+  "contextual_primary_literature": [
+    {
+      "title": "Lie Group Valued Moment Maps",
+      "authors": "Alekseev, Malkin, Meinrenken",
+      "url": "https://arxiv.org/abs/dg-ga/9707021",
+      "use": "Context only; no quasi-Hamiltonian form or physical identification is imported into the submitted proofs."
+    },
+    {
+      "title": "Time evolution of linearized gauge field fluctuations on a real-time lattice",
+      "authors": "Kurkela, Lappi, Peuron",
+      "url": "https://arxiv.org/abs/1610.01355",
+      "use": "Context only; distinguishes existing Lie-algebra electric-field Gauss-preserving discretizations from the declared group-impulse model."
+    }
+  ]
+}

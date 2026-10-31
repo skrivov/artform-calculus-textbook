@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 254 |
-| stated | 0 |
+| stated | 4 |
 | planned | 0 |
-| **total** | **254** |
+| **total** | **258** |
 
 ## Statements
 
@@ -269,3 +269,7 @@
 | NQS:physical-carrier | Complete eleven-orbit physical Hilbert carrier | proved | `Artform.Scores.Nonabelian.Statement.physicalCarrier` / `Artform.Scores.Nonabelian.physicalCarrier` | approved 2026-10-31 |
 | NQS:physical-descent | Full physical score descent and scalar extension | proved | `Artform.Scores.Nonabelian.Statement.physicalDescent` / `Artform.Scores.Nonabelian.physicalDescent` | approved 2026-10-31 |
 | NQS:two-tick-curvature | Normalized curvature probability and same-cadence control | proved | `Artform.Scores.Nonabelian.Statement.twoTickCurvature` / `Artform.Scores.Nonabelian.twoTickCurvature` | approved 2026-10-31 |
+| CNI:geometry-gauss | Ordered non-Abelian Gauss on the branched plaquette | stated | `Artform.Scores.ClassicalNonabelian.Statement.geometryGauss` / `Artform.Scores.ClassicalNonabelian.geometryGauss` | awaiting review |
+| CNI:two-shear-score | Exact classical impulse score and physical descent | stated | `Artform.Scores.ClassicalNonabelian.Statement.twoShearScore` / `Artform.Scores.ClassicalNonabelian.twoShearScore` | awaiting review |
+| CNI:legal-native | Owned atomic face and compatible drift realization | stated | `Artform.Scores.ClassicalNonabelian.Statement.legalNative` / `Artform.Scores.ClassicalNonabelian.legalNative` | awaiting review |
+| CNI:noncommuting-control | Noncommuting curvature change and failure controls | stated | `Artform.Scores.ClassicalNonabelian.Statement.noncommutingControl` / `Artform.Scores.ClassicalNonabelian.noncommutingControl` | awaiting review |

@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-31",
+  "author": "root",
+  "independent_fidelity_review": false,
+  "group_order": 6,
+  "raw_states": 60466176,
+  "gauss_admitted_states": 104976,
+  "admitted_state_trace_sha256": "1a88355898efac4eb2c2a42f887962c1966afd8b21599dbc4c3436d9dd728dab",
+  "raw_defect_samples": 216,
+  "vertex_gauges_checked": 1296,
+  "drift_orders_checked": 120,
+  "drift_inputs_per_order": 7,
+  "d3_group_table_crosscheck": true,
+  "a5_even_permutation_control": true,
+  "initial": {
+    "U": [
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "P": [
+      2,
+      2,
+      0,
+      0,
+      2
+    ]
+  },
+  "final": {
+    "U": [
+      5,
+      5,
+      3,
+      4,
+      2
+    ],
+    "P": [
+      5,
+      5,
+      3,
+      3,
+      2
+    ]
+  },
+  "initial_nonflat": true,
+  "final_flat": true,
+  "noncommuting_impulses": true,
+  "partial_kick_rejected": true,
+  "wrong_star_order_rejected": true,
+  "gauss_preservation": true,
+  "both_shear_inverse_orders": true
+}

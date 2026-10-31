@@ -1,0 +1,1640 @@
+\section{Matter carriers, Gauss constraints, and defect fusion}
+\label{sec:matter-textbook}
+
+\subsection{Matter fields and covariant transport}
+
+Chapter~\ref{ch:1} introduced a representation on a finite-dimensional vector space $W$
+over a field $k$ as a homomorphism
+$\rho:G\to\operatorname{GL}(W)$.  When $k=\mathbb C$ and $W$ carries an inner
+product, a unitary representation lands in $U(W)$, the group of linear maps
+preserving that inner product.
+
+Finite-dimensional does not mean finite as a set when $k$ is infinite.  The
+representation carrier $W$ is parameter data on which linear calculations are
+performed.  When a profile is required to have a finite state type, it must
+separately declare a finite $G$-stable palette $P\subseteq W$, a finite union
+of $G$-orbits in $W$, or another finite $G$-set equipped with an equivariant
+map to $W$.  The full vector space may instead be retained, in a profile
+that Definition~\ref{def:gauge-profile} calls finite-base: its canvas and
+gauge group are finite, while its state type need not be.  A profile whose
+state type is finite as well is finite-state.
+
+The intrinsic matter carrier at $v$ is the \emph{associated fibre}
+\[
+ E_v\defeq T_v\times_G W,
+\]
+the set of equivalence classes $[t,w]$ under
+$(t\cdot g,w)\sim(t,\rho(g)w)$.  An intrinsic site matter field is a choice
+$\Psi_v\in E_v$.  After choosing $t_v\in T_v$, write
+$\Psi_v=[t_v,\psi_v]$ with coordinate $\psi_v\in W$.  If the reference changes
+passively to $t_v\cdot h_v^{-1}$, the same intrinsic vector has coordinate
+$\rho(h_v)\psi_v$.  An active torsor automorphism $\alpha_v$ induces the
+well-defined associated-fibre map
+$[t,w]\mapsto[\alpha_v(t),w]$.  If
+$\alpha_v(t_v)=t_v\cdot h_v$, its image in the fixed trivialization also has
+coordinate
+\begin{equation}
+\psi_v^h=\rho(h_v)\psi_v.
+ \label{eq:matter-gauge-action}
+\end{equation}
+The connection induces an intrinsic map
+$[t,w]\mapsto[\mathcal U_e(t),w]$ from $E_u$ to $E_v$.  In local coordinates,
+transport along $e:u\to v$ therefore sends the source vector to
+\[
+ \rho(U_e)\psi_u\in W.
+\]
+This transported vector belongs to the target frame:
+\begin{equation}
+\rho(U_e^h)\psi_u^h
+ =\rho(h_v)\rho(U_e)\psi_u.
+ \label{eq:matter-covariance}
+\end{equation}
+The equality is \emph{covariance}, not invariance.  Both sides change, but
+they change in the same target-frame manner.
+
+\begin{example}[The one-link $C_3$ calculation with matter]
+Let $\omega=e^{2\pi i/3}$ and use the one-dimensional representation
+$\rho(r)=\omega$.  In the coordinates of Example~\ref{ex:c3-two-readings}, take
+$U_e=r$ and $\psi_u=1$.  The transported vector is $\omega$.  Under
+$h_u=r^2$ and $h_v=r$, the new link coordinate is $U_e^h=1$ and the new
+source coordinate is $\psi_u^h=\omega^2$.  Transport now gives $\omega^2$.
+This agrees with transforming the old target vector:
+$\rho(h_v)\omega=\omega^2$.  The numerical coordinate changed, while the
+covariant transport statement did not.
+\end{example}
+
+\subsection{Invariant vertex couplings}
+
+Retain the chosen orientation set $E^+(X)$.  From here on the letter $W$ is
+kept for edge carriers: the matter carrier at a vertex, written $W$ with
+representation $\rho$ in the preceding subsection, is written $M_v$ with
+representation $\mu_v$.  Assign a
+declared representation
+\[
+ \rho_e:G\longrightarrow\operatorname{GL}(W_e)
+\]
+to each $e\in E^+(X)$, and assign a declared matter representation
+$\mu_v:G\to\operatorname{GL}(M_v)$ to each vertex.  The represented link
+transport is a linear map from the
+source copy of $W_e$ to the target copy, and therefore has tensor type
+\[
+ \rho_e(U_e)\in\Hom(W_e,W_e)\cong W_e\otimes W_e^*.
+\]
+The first factor is read at the target and the dual factor at the source.
+Thus an incoming edge contributes $W_e$ at $v$, while an outgoing edge
+contributes the dual representation $W_e^*$, whose action is contragredient.
+Explicitly, if $\ell\in W_e^*$, then
+$(g\cdot\ell)(w)=\ell(\rho_e(g)^{-1}w)$.
+The total carrier seen at $v$ is
+\[
+ \mathcal K_v=
+ \left(\bigotimes_{\substack{e\in E^+(X)\\t(e)=v}}W_e\right)
+ \otimes
+ \left(\bigotimes_{\substack{e\in E^+(X)\\s(e)=v}}W_e^*\right)
+ \otimes M_v.
+\]
+The group acts diagonally on this tensor product, using $\rho_e$ on incoming
+factors, the contragredient representation on outgoing factors, and $\mu_v$
+on matter.  For two $G$-representations $A,B$, the notation $\Hom_G(A,B)$
+means the vector space of equivariant linear maps $A\to B$.
+
+\begin{definition}[Vertex-invariance witness types]
+The \emph{invariant-tensor type} at $v$ is
+\begin{equation}
+\mathcal I_v\defeq\Hom_G(\mathbf 1,\mathcal K_v)
+ \cong \mathcal K_v^G,
+ \label{eq:gauss-intertwiner}
+\end{equation}
+where $\mathbf 1$ is the trivial one-dimensional representation and
+$\mathcal K_v^G$ is the subspace fixed by the diagonal $G$-action.
+An inhabitant $i_v\in\mathcal I_v$ is an invariant tensor joining the incident
+edge and matter carriers.  When a covector is required for contraction, its
+type is
+\[
+ \mathcal I_v^{\vee}\defeq\Hom_G(\mathcal K_v,\mathbf1).
+\]
+A declared invariant inner product on $\mathcal K_v$ identifies
+$\mathcal I_v$ with $\mathcal I_v^{\vee}$; without one the two types stay
+distinct.  These tensors are also called
+\emph{Gauss intertwiners}; a graph whose edges carry representations and
+whose vertices carry such intertwiners is a spin network in the sense of
+Baez \cite{BaezSpinNetworks}; below, ``Gauss constraint'' will mean a predicate on
+the full state rather than an intertwiner type.
+\end{definition}
+
+\begin{example}[$C_2$ parity at one vertex]
+\label{ex:c2-vertex-parity}
+Let $G=C_2$ and let $\varepsilon$ be its one-dimensional sign
+representation.  The tensor power $\varepsilon^{\otimes n}$ is trivial
+exactly when $n$ is even.  Thus three incident sign-labeled edges with no
+matter give
+$\Hom_G(\mathbf1,\varepsilon^{\otimes3})=0$: no invariant vertex witness
+exists.  Adding
+one sign-labeled matter carrier gives
+$\varepsilon^{\otimes4}\cong\mathbf1$, so the witness space is
+one-dimensional.  In this example kinematic gauge neutrality is even
+parity.
+\end{example}
+
+\begin{example}[A non-Abelian invariant contraction]
+Let $S_3$ act on
+\[
+ V_{\rm st}=\{(x_1,x_2,x_3)\in\mathbb C^3:x_1+x_2+x_3=0\}
+\]
+by permuting coordinates.  This is the two-dimensional standard
+representation.  The bilinear map
+\[
+ \beta:V_{\rm st}\otimes V_{\rm st}\longrightarrow\mathbb C,
+ \qquad
+ \beta(x,y)=x_1y_1+x_2y_2+x_3y_3
+\]
+is $S_3$-equivariant when $\mathbb C$ carries the trivial action, because a
+permutation merely reorders the three summands.  Hence
+$\beta\in\Hom_{S_3}(V_{\rm st}\otimes V_{\rm st},\mathbf1)$.  For example,
+$\beta((1,-1,0),(0,1,-1))=-1$, and applying any common permutation to both
+vectors leaves that scalar unchanged.  This is an explicit non-Abelian
+vertex-invariance witness; it is still not, by itself, a predicate on a full
+field state.
+\end{example}
+
+A \emph{finite tensor network} here means a finite collection of tensors whose
+paired carrier and dual-carrier indices are joined by evaluation maps.  It is
+a scalar network when no unpaired index remains.
+
+\begin{proposition}[Invariant matter contraction]
+\label{prop:matter-transport}
+\status{PROVED-LOCAL}
+Let the declared edge and vertex representations be finite-dimensional over
+one fixed coefficient field.  Representation-valued edge transport is gauge
+covariant.  Any finite scalar
+tensor network built from these transport tensors, vertex-invariance witnesses
+$i_v\in\mathcal I_v$ or $i_v^{\vee}\in\mathcal I_v^{\vee}$, and $G$-equivariant
+evaluation or contraction maps is
+gauge invariant.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:matter-covariance} proves covariance on each transported
+edge.  At a vertex, all remaining factors of $h_v$ act diagonally on
+$\mathcal K_v$.  Both $i_v:\mathbf1\to\mathcal K_v$ and
+$i_v^{\vee}:\mathcal K_v\to\mathbf1$ are intertwiners.  Equivariant evaluation
+and contraction maps commute with the action, so paired carrier and
+dual-carrier factors cancel.  After all indices have been contracted to the trivial
+representation, no local gauge factor remains; the resulting scalar is
+constant on gauge orbits.
+\end{proof}
+
+\subsection{Gauss constraints are predicates on states}
+
+\begin{definition}[Gauss-constraint profile]
+Let a state type $\mathcal S$ carry an action of the intrinsic gauge
+group $\mathscr G_X$.  A \emph{Gauss-constraint profile} is a family of
+predicates
+\[
+ \mathsf{Gauss}_v:\mathcal S\longrightarrow\mathsf{Prop}
+ \qquad(v\in V(X))
+\]
+together with coherent witness transports
+\[
+ \gamma_{\alpha,x,v}:\mathsf{Gauss}_v(x)
+   \xrightarrow{\sim}\mathsf{Gauss}_v(\alpha\cdot x),
+ \qquad
+ \gamma_{1,x,v}=\id,
+ \qquad
+ \gamma_{\alpha\beta,x,v}
+ =\gamma_{\alpha,\beta x,v}\circ\gamma_{\beta,x,v}.
+\]
+Thus gauge invariance means an isomorphism of witness types, not only equality
+of truth values.  In particular,
+$\mathsf{Gauss}_v(\alpha\cdot x)$ holds exactly when
+$\mathsf{Gauss}_v(x)$ holds.  Its admitted state type is
+\[
+ \mathcal S_{\mathsf G}
+ \defeq
+ \{x\in\mathcal S:\mathsf{Gauss}_v(x)\text{ for every }v\}.
+\]
+An inhabitant of $\mathsf{Gauss}_v(x)$ is a \emph{Gauss-state witness}.  For an
+update $F$, a family of implications
+\[
+ \mathsf{Gauss}_v(x)\Longrightarrow\mathsf{Gauss}_v(F(x))
+\]
+is a separate \emph{Gauss-preservation witness}.
+
+For a relation $R\subseteq\mathcal S\times\mathcal S$, Gauss preservation
+means
+\[
+ x\in\mathcal S_{\mathsf G},\ (x,y)\in R
+ \quad\Longrightarrow\quad y\in\mathcal S_{\mathsf G}.
+\]
+For a Markov kernel $K$ on the finite state type, it means
+\[
+ x\in\mathcal S_{\mathsf G}
+ \quad\Longrightarrow\quad
+ \sum_{y\in\mathcal S_{\mathsf G}}K(x,y)=1.
+\]
+Equivalently, an admitted input assigns zero probability to every
+nonadmitted output.  These are the relational and stochastic
+Gauss-preservation obligations used below.
+\end{definition}
+
+\begin{proposition}[Constraint descent and preservation]
+\label{prop:gauss-constraint}
+\status{PROVED-LOCAL}
+The admitted state type $\mathcal S_{\mathsf G}$ of a Gauss-constraint profile
+is stable under gauge transformations.  If a gauge-covariant update $F$
+comes with Gauss-preservation witnesses, its restriction to
+$\mathcal S_{\mathsf G}$ is gauge covariant and descends to an update on
+$\mathcal S_{\mathsf G}/\mathscr G_X$.  An equivariant Gauss-preserving
+relation restricts to an equivariant relation on
+$\mathcal S_{\mathsf G}$, and an equivariant Gauss-preserving Markov kernel
+restricts to a Markov kernel on $\mathcal S_{\mathsf G}$.  Their orbit
+descents are given in Theorem~\ref{thm:quotient-dynamics}.
+\end{proposition}
+
+\begin{proof}
+Gauge invariance of every predicate sends an admitted state to another
+admitted state.  The preservation witnesses make $F$ a self-map of
+$\mathcal S_{\mathsf G}$, and the covariance equation remains true after this
+restriction.  Hence gauge-equivalent inputs have gauge-equivalent outputs,
+which defines the quotient update.  The relational preservation implication
+removes every transition from an admitted state to a nonadmitted state.  The
+stochastic preservation equality puts total probability one on admitted
+outputs.  Equivariance is unchanged by either restriction.
+\end{proof}
+
+The three notions have different types.  A Gauss intertwiner is a
+representation-theoretic vertex tensor.  A Gauss-state witness proves that a
+complete field state satisfies a local constraint.  A Gauss-preservation
+witness proves that a law carries such states to such states.  For example, a
+finite field model may declare a gauge-invariant charge-balance function
+$q_v:\mathcal S\to A$ into a finite Abelian tally group $A$, and take
+$\mathsf{Gauss}_v(x)$ to mean $q_v(x)=0$.  In
+Chapter~\ref{ch:5} the incidence operator $\dvg$ will be defined and the specialization
+will be $q_v=\dvg E-\rho$, where $\rho$ is the charge of that chapter, not a
+representation.  In a quantum representation model, the analogous
+admissibility condition can be presented by projection to the invariant
+subspace.  These are related realizations of local gauge neutrality, not one
+untyped object.
+
+\subsection{Why class labels of non-Abelian defects do not multiply}
+
+A face defect may be labeled by the conjugacy class of its holonomy, that is,
+by its image under the class map $\kappa:G\to\operatorname{Conj}(G)$ to the
+set of conjugacy classes.  To fuse two defects, however, one must first choose
+paths transporting their holonomy representatives to a common basepoint and
+then multiply the transported representatives.  Class labels alone do not
+retain this information \cite{PatternGeometry}.  The order of two factors does
+not affect the class of their product, since $xy$ and $yx=x^{-1}(xy)x$ are
+conjugate; from three defects on, the class can depend on their cyclic order.
+
+\begin{example}[Why class labels do not multiply]
+\label{ex:class-labels-do-not-multiply}
+Let $A_5$ be the group of even permutations of five symbols.  Its fifteen
+double transpositions form one conjugacy class, conventionally called $2A$.
+Take $a=(12)(34)$ and $c=(12)(35)$.  Both therefore lie in $2A$.  Choosing
+representatives $(a,a)$ gives product $1$, whereas $(a,c)$ gives a
+three-cycle.  The input pair of class labels $(2A,2A)$ does not determine an
+output class.  Transported representatives at a common basepoint are
+indispensable: exchanging the two factors of either pair does not change the
+class of the product, but replacing one representative by a conjugate, as a
+different transport path does, can.
+\end{example}
+
+\begin{definition}[Witnessed defect fusion]
+\label{def:defect-fusion-witness}
+Let $f_1,f_2$ be oriented defect faces with selected boundary basepoints
+$b_1,b_2$, let $\operatorname{Conj}(G)$ be the set of conjugacy classes, and
+put $H_i=F_U^{b_i}(f_i)$.  A fusion witness over a chosen
+comparison vertex $v_*$ is the record
+\[
+ w=(b_1,b_2,v_*,p_1,p_2,\epsilon):
+   \AFFusionWitness_U(f_1,f_2;v_*),
+\]
+where $p_i:b_i\leadsto v_*$ are oriented transport paths and
+$\epsilon$ is one of the two orders on $\{1,2\}$.  It determines transported
+representatives and an output label
+\[
+ \widetilde H_i
+ =\Hol_U(p_i)H_i\Hol_U(p_i)^{-1},
+ \qquad
+ \operatorname{Fuse}_U(w)
+ =\bigl[\widetilde H_{\epsilon(2)}
+         \widetilde H_{\epsilon(1)}\bigr]
+ \in\operatorname{Conj}(G).
+\]
+The rightmost factor is fused first.  The basepoints, paths, and order are
+fields of the WITNESS; the conjugacy class is its derived gauge-invariant
+readout and therefore has RENDERING role.
+\end{definition}
+
+The class $\operatorname{Fuse}_U(w)$ does not depend on $\epsilon$, since
+$\widetilde H_1\widetilde H_2
+ =\widetilde H_1(\widetilde H_2\widetilde H_1)\widetilde H_1^{-1}$; the order
+is kept because the ordered product
+$\widetilde H_{\epsilon(2)}\widetilde H_{\epsilon(1)}$ itself depends on it.
+The class does depend on the paths.  Replacing $p_1$ by another path $p_1'$
+from $b_1$ to $v_*$ conjugates $\widetilde H_1$ by the holonomy of the loop
+$p_1'p_1^{-1}$ at $v_*$, and this can change the class of the product, as the
+representatives $a$ and $c$ of Example~\ref{ex:class-labels-do-not-multiply}
+show.
+
+\begin{proposition}[Gauge invariance of witnessed fusion]
+\label{prop:defect-fusion-covariance}
+\status{PROVED-LOCAL}
+Gauge transformation carries a fusion witness to a witness on the transformed
+state with the same paths and order, and
+\[
+ \operatorname{Fuse}_{\alpha U}(\alpha_*w)
+ =\operatorname{Fuse}_U(w).
+\]
+If $G$ is Abelian, the result is independent of the chosen basepoints, paths,
+and order and reduces to multiplication of the two defect labels.  For a
+general group, forgetting those witness fields is not licensed.
+\end{proposition}
+
+\begin{proof}
+Write $h_v$ for the coordinate value of $\alpha$ at $v$.  Endpoint covariance
+of path holonomy and conjugation covariance of $H_i$ give
+\[
+ \widetilde H_i\longmapsto
+ h_{v_*}\widetilde H_i h_{v_*}^{-1}.
+\]
+Their ordered product is therefore conjugated by the same $h_{v_*}$, so its
+conjugacy class is unchanged.  In an Abelian group conjugation is trivial and
+the two factors commute, proving all independence claims.  The converse, that
+class labels alone determine the fused class for every pair only when $G$ is
+Abelian, is Theorem~\ref{thm:centrality-package}\textup{(iv)}.
+\end{proof}
+
+When a dynamics joins defects, this record becomes the evidence field
+of an application witness.  The application must still supply its geometric
+match, guard, affected support, state update, and trace event.  Naming a fusion
+observable does not by itself define that SCRIPT.
+
+\section{The affine semidirect profile}
+\label{sec:affine-textbook}
+
+The preceding construction used one internal group.  Several gauge channels
+may sometimes form a direct product, but they need not do so.  The affine
+profile is the basic counterexample: a frame rotation acts on the meaning of
+a translation, so the two channels must be coupled by a semidirect product.
+The affine group and its covariance theorem are taken from
+\cite{PatternGeometry}.  That source writes the affine group $\mathcal A$;
+here $\mathcal A$ denotes the coefficient profile of
+Definition~\ref{def:coefficient-profile-part1}, so the affine group is
+written $\AffG$ and its translation group $\Lambda$.  In this section
+$\Lambda$ is a group of translations, not the channel index of a coefficient
+profile.
+
+Let $\Lambda$ be a finite Abelian translation group, written additively;
+let $F$ be a finite frame group acting by
+$\rho_F:F\to\Aut(\Lambda)$; and let $G$ be a finite internal group.  Put
+$K=F\times G$ and let $\rho:K\to\Aut(\Lambda)$ factor through $F$.
+
+\begin{definition}[Affine semidirect gauge group]
+The \emph{affine gauge group} is
+\begin{equation}
+\AffG=\Lambda\rtimes_\rho K,
+ \qquad
+ (t,k)(t',k')=(t+\rho(k)t',kk').
+ \label{eq:affine-group}
+\end{equation}
+The first component records translation, while $k=(f,g)$ records frame and
+internal data.  The action $\rho(k)$ in the multiplication rule says that the
+first frame determines how the second translation is read.
+\end{definition}
+
+An $\AffG$-connection is no new kind of connection: it is the construction
+of Section~\ref{sec:connections-local} with structure group $\AffG$.
+Its loop holonomy jointly records failure of translational closure, frame
+return, and internal-pose return.
+
+\begin{example}[A finite translation--frame coupling]
+\label{ex:affine-triangle}
+Take $\Lambda=C_3$ additively, $F=C_2=\{0,1\}$, and let the nontrivial frame
+element act by inversion, $\rho(1)t=-t$.  With trivial internal group,
+$\AffG=C_3\rtimes C_2$ is the six-element symmetry group of a triangle.
+Let $a=(1,0)$ be a unit translation and $b=(0,1)$ a frame reflection.  Then
+\[
+ bab^{-1}=(-1,0)=(2,0).
+\]
+Changing the frame has reversed the translation label.  Recording an
+independent pair ``translation $1$, frame reflection'' would miss this
+covariance and therefore would not define a stable raw defect label.
+\end{example}
+
+The following theorem is proved in \cite{PatternGeometry}; we prove it again
+in the present notation.
+
+\begin{theorem}[Affine covariance]
+\label{thm:affine-covariance}
+\status{PROVED-SOURCE+PROVED-LOCAL}
+Conjugation in \eqref{eq:affine-group} is
+\begin{equation}
+(t,k)(t',k')(t,k)^{-1}
+ =\bigl(t+\rho(k)t'-\rho(kk'k^{-1})t,\;kk'k^{-1}\bigr).
+ \label{eq:affine-conjugation}
+\end{equation}
+Consequently the projected $K$-curvature transforms by conjugation, while the
+translation component transforms affinely.  There is no general
+gauge-invariant reading of the raw translation component as an independent
+channel.  When $\rho$ is trivial, the channels decouple.
+\end{theorem}
+
+\begin{proof}
+The inverse of $(t,k)$ is $(-\rho(k^{-1})t,k^{-1})$.  Hence
+\[
+\begin{aligned}
+ (t,k)(t',k')(t,k)^{-1}
+ &=(t+\rho(k)t',kk')(-\rho(k^{-1})t,k^{-1})\\
+ &=\bigl(t+\rho(k)t'-\rho(kk'k^{-1})t,kk'k^{-1}\bigr).
+\end{aligned}
+\]
+The second component is ordinary conjugation in $K$; the first mixes the old
+translation $t'$, the gauge translation $t$, and the projected element $k'$.
+For trivial $\rho$ this mixing becomes $t+t'-t=t'$.
+\end{proof}
+
+The correct invariant is the conjugacy class of the full
+$\AffG$-holonomy.  A more refined description can be given after a
+representative $k'$ of the projected $K$-class has been fixed.  Conjugation by
+a pure translation changes $t'$ by an element of
+$(1-\rho(k'))\Lambda$, meaning the image subgroup
+\[
+ (1-\rho(k'))\Lambda
+ =\{s-\rho(k')s:s\in\Lambda\}.
+\]
+Thus its residual class lies in the
+\emph{coinvariant quotient}
+\[
+ \Lambda_{k'}\defeq
+ \Lambda/(1-\rho(k'))\Lambda.
+\]
+The \emph{centralizer}
+$C_K(k')=\{k\in K:kk'=k'k\}$ still acts on this quotient, so the final datum is
+a $C_K(k')$-orbit in $\Lambda_{k'}$.  Both the quotient and the residual
+action are required; neither was visible in an independent-channel tuple.
+
+\begin{example}[Coinvariants in $C_3\rtimes C_2$]
+Return to the six-element triangle group of
+Example~\ref{ex:affine-triangle}.  Over the projected
+identity $k'=0$, the subgroup
+$(1-\rho(0))C_3$ is $0$, so the coinvariant quotient is $C_3$.  The centralizer
+$C_2$ acts by inversion and leaves two residual orbits,
+$\{0\}$ and $\{1,2\}$.  Over the projected reflection $k'=1$,
+$1-\rho(1)$ is multiplication by $2$.  This is a bijection of $C_3$, so the
+image subgroup is all of $C_3$ and the quotient has one element.  Consequently
+all three affine elements whose frame component is a reflection lie in one
+conjugacy class.  The quotient calculation recovers the familiar conjugacy
+classes of triangle rotations and reflections without treating translation
+as an independent label.
+\end{example}
+
+\section{Gauge-covariant classical laws and profiles}
+\label{sec:complete-gauge-profile}
+
+\subsection{Coefficient profiles in intrinsic form}
+
+Definition~\ref{def:coefficient-profile-part1} specifies how typed fields are
+anchored to gauge sites.  A general gauge profile must import that interface,
+not hide every nonconnection variable in an undifferentiated auxiliary factor
+\cite{ArtC,PatternGeometry}.  What is added here is the intrinsic
+associated-fibre form of the field type and the reduct that produces it.
+
+\begin{definition}[Intrinsic field type and coefficient realization]
+\label{def:coefficient-bridge}
+Let
+\[
+ Q_X=(S_X,L_X,s,t,\overline{(-)})
+\]
+be a chosen transport skeleton of $X$ in the sense of
+Definition~\ref{def:transport-skeleton-general}, and let
+\[
+ \mathcal A=
+ \bigl(Q_X,G,(k_\lambda,A_\lambda,S_\lambda,
+                    a_\lambda,\rho_\lambda)_{\lambda\in\Lambda}\bigr)
+ :\AFCoefficientProfile(Q_X,G)
+\]
+be a coefficient profile on it (Definition~\ref{def:coefficient-profile-part1}):
+each channel $\lambda$ of the finite index $\Lambda$ has cell dimension
+$k_\lambda$, support $S_\lambda\subseteq C_{k_\lambda}(X)$, value object
+$A_\lambda$, gauge-frame anchor $a_\lambda:S_\lambda\to S_X$, and declared
+action $\rho_\lambda:G\to\Aut(A_\lambda)$.  Given a localization
+$\mathcal T=(T_v)_v$, its intrinsic field type is
+\[
+ \AFField_{\mathcal T}(\mathcal A)
+ =\AFDepFun_{\lambda:\Lambda}
+   \AFDepFun_{x: S_\lambda}
+   \bigl(T_{a_\lambda(x)}\times_G A_\lambda\bigr).
+\]
+The intrinsic gauge action on each factor is
+$[t,b]\mapsto[\alpha_{a_\lambda(x)}(t),b]$ and acts componentwise on the
+product.  This is the action meant by ``gauge-equivariant'' below.
+Let $\mathcal M$ be any declared gauge-stable matter-state type and let
+$\mathcal S_{\rm aux}$ be any declared auxiliary state type with a specified
+gauge action.  A \emph{coefficient realization} of those two factors is a
+gauge-equivariant reduct
+\[
+ r_{\mathcal A}:\mathcal M\times\mathcal S_{\rm aux}
+       \longrightarrow\AFField_{\mathcal T}(\mathcal A).
+\]
+Its fibres state exactly which distinctions are forgotten by the coefficient
+view.  When $r_{\mathcal A}$ is a bijection onto a declared admitted field
+subtype, it is instead a coordinate-free PRESENTATION of all nonconnection
+field state.
+\end{definition}
+
+\begin{definition}[Coefficient interpretation witness]
+\label{def:coefficient-intwit}
+Put $Z_{\mathcal A}=\mathcal M\times\mathcal S_{\rm aux}$.  For a typed map
+$r:Z_{\mathcal A}\to\AFField_{\mathcal T}(\mathcal A)$, let
+$\mathsf{CoeffLaw}_{\mathcal A}(r)$ contain its gauge-equivariance proof and
+the kernel-pair receipt
+\[
+ z\sim_r z'\quad\Longleftrightarrow\quad r(z)=r(z').
+\]
+The typed codomain of $r$ certifies that it lands in the intrinsic field
+type, and the kernel pair $\sim_r$ records exactly the distinctions that the
+coefficient view forgets; both are determined by $r$.  Define
+\[
+ \AFCoeffIntWit_{\mathcal A}
+   (Z_{\mathcal A},\AFField_{\mathcal T}(\mathcal A))
+ \defeq
+ \AFDepPair_{r:Z_{\mathcal A}\to\AFField_{\mathcal T}(\mathcal A)}
+ \mathsf{CoeffLaw}_{\mathcal A}(r)
+ =\AFIntWit_{\mathcal C^{\mathrm{coeff}}_{\mathcal A}}
+   (Z_{\mathcal A},\AFField_{\mathcal T}(\mathcal A)).
+\]
+The coefficient profile $\mathcal A$ fixes the species of endpoint and law;
+the actual reduct $r$ is the realizer field of an inhabitant and is not hidden
+inside the profile index.
+\end{definition}
+
+\begin{proposition}[Coefficient-realization bridge]
+\label{prop:coefficient-intwit-bridge}
+First projection gives a canonical equivalence between coefficient
+interpretation witnesses and the gauge-equivariant coefficient realizations
+of Definition~\ref{def:coefficient-bridge}, with the target type and
+forgotten fibres retained.  Write
+$r_{\mathcal A}\defeq\operatorname{real}(\kappa_{\mathcal A})$ for this
+projection from an inhabitant $\kappa_{\mathcal A}$.
+\end{proposition}
+
+\begin{proof}
+A coefficient witness projects to its typed equivariant map.  Conversely,
+such a map supplies the equivariance field, its codomain supplies target
+agreement, and its equality fibres supply the uniquely determined kernel-pair
+receipt.  These operations are inverse on the map and all extensional law
+fields.
+\end{proof}
+
+This chapter and the next use the full skeleton,
+\[
+ Q_X=\mathsf T(X),\qquad S_X=V(X),\qquad L_X=E^{\rm or}(X),
+\]
+which is boundary-complete for every declared face of $X$.  Smaller transport
+skeletons, and transfer of fields between different canvases, belong to a
+typed geometric transition receipt, not to the fixed-canvas profile of
+Definition~\ref{def:gauge-profile}.  In particular, scale transfer is neither
+assumed nor discarded; it is additional data on an epoch or refinement arrow.
+
+\begin{proposition}[Coefficient-interface compatibility]
+\label{prop:coefficient-compatibility}
+\status{PROVED-LOCAL}
+Let $\kappa_{\mathcal A}$ be a coefficient interpretation witness and write
+$r_{\mathcal A}=\operatorname{real}(\kappa_{\mathcal A})$.  Choose a local
+trivialization of $\mathcal T$.  Then every intrinsic field in
+$\AFField_{\mathcal T}(\mathcal A)$ has unique coordinates
+$\phi_\lambda:S_\lambda\to A_\lambda$, and passive or active change acts by
+\[
+ (h\cdot\phi)_\lambda(x)
+ =\rho_\lambda(h_{a_\lambda(x)})\phi_\lambda(x).
+\]
+Thus $(\mathcal A,\kappa_{\mathcal A})$, through its $r_{\mathcal A}$
+projection, is exactly the coefficient interface of
+Definition~\ref{def:coefficient-profile-part1} on the fixed canvas $X$.  In
+particular, vertex
+matter representations give the specialization
+$k_v=0$, $S_v=\{v\}$, $a_v(v)=v$, and $A_v=M_v$.
+\end{proposition}
+
+\begin{proof}
+For each associated fibre, a chosen $t_{a_\lambda(x)}$ writes its unique member
+as $[t_{a_\lambda(x)},\phi_\lambda(x)]$.  The coordinate-change calculation is
+the same one as Equation~\eqref{eq:matter-gauge-action}.  Taking the indicated
+products proves the formula channel by channel.  The vertex specialization is
+obtained by substituting the displayed support and anchor data.
+\end{proof}
+
+\subsection{Connecting the gauge state to the process language}
+
+Let $\mathcal C\subseteq\Conn_G(X;(T_v)_v)$ be an admitted connection state
+type stable under the intrinsic action of $\mathscr G_X$.  Let $\mathcal M$ be
+a stable type of matter configurations in declared associated fibres, and let
+$\mathcal S_{\rm aux}$ be an auxiliary state factor.  Every auxiliary
+factor has a specified $\mathscr G_X$-action, which may be trivial.  The total
+state type and action are
+\begin{equation}
+\mathcal S
+ =\mathcal C\times\mathcal M\times\mathcal S_{\rm aux},
+ \qquad
+ \alpha\cdot(\mathcal U,\Psi,z)
+ =(\alpha\cdot\mathcal U,\alpha\cdot\Psi,\alpha\cdot z).
+ \label{eq:total-gauge-state}
+\end{equation}
+A finite palette, in the sense of Section~\ref{sec:matter-textbook}, makes a
+representation-valued matter model finite-state in the sense of
+Definition~\ref{def:gauge-profile}; a full nonzero complex vector space does
+not.
+
+Definition~\ref{def:controlled-law-local} defined a controlled law specification
+$\mathfrak L=(\mathcal S,\mathcal I,\Theta,\lambda,\chi,\mathcal P)$ and kept
+its scheduler policy separate from the specification.  State-level covariance
+is necessary, but the retained process data require a finer definition.
+
+\begin{definition}[Located application witness]
+\label{def:located-gauge-application}
+Let $\mathsf{Addr}(\mathcal S)$ be the finite type of addressable canvas and
+field components of a fixed gauge state.  In the local presentation used by
+this chapter, an inhabitant
+$w\in\mathsf{App}_a(x)$ is the record
+\[
+ w=(p,\ell,R_w,W_w,A_w,g_w,r_w,q_w,c_w,y_w),
+\]
+where $p$ is a phase-$a$ rule name; $\ell$ is its located geometric match;
+$R_w,W_w\subseteq\mathsf{Addr}(\mathcal S)$ are finite read and write
+footprints; $A_w\supseteq R_w\cup W_w$ is its declared affected support;
+$g_w$ proves the guard at $(x,\ell)$; $r_w=x|_{R_w}$ is the read receipt;
+$q_w$ is the proposed assignment on $W_w$; and $c_w$ proves that committing
+that proposal gives a legal state $y_w$ agreeing with $x$ outside $W_w$.
+The semantics is $\operatorname{apply}_{a,x}(w)=y_w$, and
+$\operatorname{foot}(w)=(R_w,W_w,A_w)$.
+\end{definition}
+
+This record specializes the application witnesses of
+Definition~\ref{def:process-profile} to gauge states; it is not a second process formalism.
+Figure~\ref{fig:c2-kick} shows its fields for the application of
+Example~\ref{ex:complete-c2-profile}.  A batch
+contains such witnesses together with its compatibility evidence.  Gauge
+transport of an application preserves $p$, the underlying spatial location,
+and the address sets, transports the match $\ell$ and
+$g_w,r_w,q_w,c_w$ in their dependent fibres, and sends $y_w$ to
+$\alpha y_w$.  A purely geometric match may transport by the identity; a
+decorated match may do so only through its declared gauge-safe recognition
+witness.  Thus a law is local when the finite footprint
+$\operatorname{foot}(w)$ of each of its applications is exposed in the record.
+
+\begin{definition}[Gauge action on a process profile]
+\label{def:gauge-process-action}
+Let $\mathcal P=(A,\mathsf{App},\operatorname{apply},
+\mathsf{Batch},\operatorname{ApplyBatch})$ be a process profile over
+$\mathcal S$.  The control alphabet and control tapestry are taken to be
+gauge neutral.  A \emph{gauge action on $\mathcal P$} assigns, for every
+$\alpha\in\mathscr G_X$, phase $a$, and state $x$, bijections
+\[
+ \alpha_*:\mathsf{App}_a(x)\longrightarrow
+ \mathsf{App}_a(\alpha\cdot x),
+ \qquad
+ \alpha_*:\mathsf{Batch}_a(x)\longrightarrow
+ \mathsf{Batch}_a(\alpha\cdot x).
+\]
+The application maps preserve rule and underlying location indices and the
+three spatial footprints of
+Definition~\ref{def:located-gauge-application}; they transport the located
+match, guard, read, proposal, and commit receipts in their dependent fibres.  The
+batch maps preserve the empty batch, order, and compatibility witnesses.
+On both application and batch fibres the assignments obey
+\[
+ (1)_{*,x}=\id,
+ \qquad
+ (\alpha\beta)_{*,x}
+ =\alpha_{*,\beta x}\circ\beta_{*,x},
+\]
+and they satisfy
+\begin{align}
+\operatorname{apply}_{a,\alpha x}(\alpha_*w)
+   &=\alpha\cdot\operatorname{apply}_{a,x}(w), \label{eq:app-naturality}\\
+ \operatorname{ApplyBatch}_{a,\alpha x}(\alpha_*B)
+   &=\alpha\cdot\operatorname{ApplyBatch}_{a,x}(B).
+ \label{eq:batch-naturality}
+\end{align}
+Thus gauge transformation transports not only the output state but also the
+witness that licensed the update.
+\end{definition}
+
+\begin{definition}[Classical semantic modes]
+\label{def:three-realizer-modes}
+Fix a process profile with the action above.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item A deterministic policy $\sigma_a^{\rm det}$ induces
+\[
+ F_a(x)=\operatorname{ApplyBatch}_{a,x}
+          \bigl(\sigma_a^{\rm det}(x)\bigr).
+\]
+\item A nondeterministic policy $\sigma_a^{\rm nd}(x)$, a nonempty subset of
+$\mathsf{Batch}_a(x)$, induces the relation
+\[
+ (x,y)\in R_a
+ \quad\Longleftrightarrow\quad
+ \exists B\in\sigma_a^{\rm nd}(x)\ \
+ \operatorname{ApplyBatch}_{a,x}(B)=y.
+\]
+\item A finitely supported stochastic policy
+$\sigma_a^{\rm stoch}(x)\in
+\mathsf{Dist}(\mathsf{Batch}_a(x))$ induces, on a finite state type, the
+Markov kernel
+\begin{equation}
+K_a(x,y)=
+ \sum_{\substack{B\in\mathsf{Batch}_a(x)\\
+       \operatorname{ApplyBatch}_{a,x}(B)=y}}
+       \sigma_a^{\rm stoch}(x)(B).
+ \label{eq:batch-pushforward-kernel}
+\end{equation}
+\end{enumerate}
+The \emph{classical semantic mode} records which of these three objects is
+retained.  They are not three names for one untyped realizer.
+\end{definition}
+
+The three modes above exhaust the classical semantics used in Part~I.
+Phase-weighted alternatives are not a fourth kind of classical policy.  They
+are introduced only after the quantization bridge, in
+Definition~\ref{def:coherent-realizer} of Chapter~\ref{ch:8}.
+
+\begin{definition}[Process-level gauge covariance]
+\label{def:process-gauge-covariance}
+A policy is \emph{process-gauge-covariant} when, for all $\alpha,a,x$,
+\begin{align*}
+\sigma_a^{\rm det}(\alpha x)
+   &=\alpha_*\sigma_a^{\rm det}(x),\\
+ \sigma_a^{\rm nd}(\alpha x)
+   &=\{\alpha_*B:B\in\sigma_a^{\rm nd}(x)\},\\
+ \sigma_a^{\rm stoch}(\alpha x)(\alpha_*B)
+   &=\sigma_a^{\rm stoch}(x)(B),
+\end{align*}
+using the line appropriate to its semantic mode.  If the realizer emits a
+trace event $\operatorname{emit}_{a,x}(B)$, the trace encoder must additionally
+carry a gauge action and satisfy
+\[
+ \operatorname{emit}_{a,\alpha x}(\alpha_*B)
+ =\alpha_*\operatorname{emit}_{a,x}(B).
+\]
+A \emph{gauge-covariant realized law} consists of the process action, a
+process-gauge-covariant policy, an equivariant trace encoder when traces are
+retained, and the locality, totality, invariant-preservation, and
+Gauss-preservation witnesses required by its mode and declared invariant
+profile.  Batch-independence and realizer-independence are additional claims;
+they belong to the run-contract slots below and are not consequences of gauge
+covariance.
+\end{definition}
+
+\begin{proposition}[Process covariance implies extensional covariance]
+\label{prop:process-covariance}
+\status{PROVED-LOCAL}
+A process-gauge-covariant deterministic policy induces
+\begin{equation}
+F_a(\alpha\cdot x)=\alpha\cdot F_a(x).
+ \label{eq:law-gauge-covariance}
+\end{equation}
+A process-gauge-covariant nondeterministic policy induces
+\[
+ (x,y)\in R_a
+ \quad\Longleftrightarrow\quad
+ (\alpha\cdot x,\alpha\cdot y)\in R_a,
+\]
+and a process-gauge-covariant stochastic policy induces
+\[
+ K_a(\alpha\cdot x,\alpha\cdot y)=K_a(x,y).
+\]
+The converses need not hold if application witnesses, policies, or traces are
+retained as structural data.
+\end{proposition}
+
+\begin{proof}
+For the deterministic case, policy covariance followed by
+Equation~\eqref{eq:batch-naturality} gives the displayed equation.  In the
+relational case, a selected witness batch $B$ from $x$ is carried bijectively
+to $\alpha_*B$ from $\alpha x$, whose output is $\alpha y$; applying
+$\alpha^{-1}$ proves the converse implication.  In the stochastic case,
+Equation~\eqref{eq:batch-pushforward-kernel} is unchanged after the bijective
+reindexing $B\mapsto\alpha_*B$.
+
+For failure of the converse, let two distinct application witnesses have the
+same identity state update and let a scheduler choose between them by
+inspecting a raw link coordinate.  The extensional update is the
+gauge-covariant identity, while the retained choice and its trace can change
+under gauge transformation.
+\end{proof}
+
+\begin{example}[A nontrivial gauge-covariant holonomy kick]
+Fix a loop $\gamma$ based at $v$ and a representation $\rho:G\to\operatorname{GL}(W)$.
+Let the state contain a connection and a matter vector at $v$.  Define a
+one-step law that leaves the connection fixed and updates
+\[
+ \psi_v\longmapsto\rho(\Hol_U(\gamma))\psi_v,
+\]
+leaving all other matter coordinates fixed.  Under a gauge transformation,
+Theorem~\ref{thm:holonomy-descent} gives
+\[
+ \rho(h_v\Hol_U(\gamma)h_v^{-1})\rho(h_v)\psi_v
+ =\rho(h_v)\rho(\Hol_U(\gamma))\psi_v.
+\]
+Thus the update satisfies Equation~\eqref{eq:law-gauge-covariance}.  It is
+nontrivial whenever the loop holonomy acts nontrivially, and it is reversible
+because $\rho(\Hol_U(\gamma))$ is invertible.  Intrinsically, this is the
+endomorphism of the associated fibre induced by the loop transport
+$\mathcal U_\gamma:T_v\to T_v$.  A complete realized version must additionally
+give the application, batch, policy, and trace actions of
+Definition~\ref{def:process-gauge-covariance}.
+\end{example}
+
+\begin{definition}[Run contract]
+\label{def:run-contract}
+For a controlled realized law, a term
+\[
+ \mathfrak R:\AFRunContract(\mathfrak L,\mathsf{Real})
+\]
+contains a declared initial boundary
+$\mathcal S_0\subseteq\mathcal S$; a mode-correct run assignment; its
+$\AFTraceTapestry$ event type and encoder;
+and the resulting solution-tapestry type synchronizing control, states,
+events, and invariant witnesses.  In deterministic mode the run assignment
+is the trajectory function $x_0\mapsto(x_0,\ldots,x_n)$; in relational mode
+it is the nonempty type of admitted trajectories; and in stochastic mode it
+is the finitely supported path distribution induced along the finite reading.
+It also contains four explicit claim slots
+\[
+ \mathsf{CadFair},\quad \mathsf{AppFair},\quad
+ \mathsf{BatchInd},\quad \mathsf{RealizerInd}.
+\]
+Each slot is either $\AFNoClaim$ or an inhabitant of the corresponding witness
+type.  The first two certify cadence and application fairness; the third
+certifies independence from the linear presentation of every compatible
+batch; the fourth certifies confluence or observational equivalence across the
+declared class of realizers.  A fairness witness must name the cyclic or
+infinite extension on which recurrence is quantified; a finite reading by
+itself proves neither kind of fairness.  Every independence witness also
+states its class of batches, realizers, initial states, and observations.
+Absence of a claim is therefore data, not a silently assumed theorem.
+\end{definition}
+
+Definition~\ref{def:run-contract} admits order-sensitive realized processes.
+The deterministic \emph{physical realizer} of \cite{ToyElectrodynamics} is
+stronger: it requires phasewise locality, selected-step totality,
+batch-presentation independence, and invariant preservation.  In the present
+profile such a model must inhabit $\mathsf{BatchInd}$ as well as the
+locality, totality, and preservation fields.  Recording $\AFNoClaim$ widens
+the class of admitted laws, and a law whose $\mathsf{BatchInd}$ slot is
+$\AFNoClaim$ is not covered by the well-posedness theorem of
+\cite{ToyElectrodynamics}.
+
+The class of observations in $\mathsf{RealizerInd}$ must be stated.  In the
+coherent theory, equality at every fixed physical background need not give
+equality on a coherent joint input (Theorem~\ref{plaw:joint-channel-gluing}
+in Chapter~\ref{ch:17}), and a restricted instrument library can leave
+different states indistinguishable
+(Theorem~\ref{plaw:finite-observation-history} in Chapter~\ref{ch:15}).
+These criteria carry their own quantum hypotheses and do not follow from
+locality or totality.
+
+\begin{proposition}[Gauge covariance lifts to realized runs]
+\label{prop:gauge-run-covariance}
+\status{PROVED-LOCAL}
+For a process-gauge-covariant realizer with equivariant trace encoder and a
+finite control reading, gauge action lifts to its mode-correct run object:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item in deterministic mode it sends the run from $x_0$ to the run from
+$\alpha\cdot x_0$ column by column;
+\item in relational mode it gives a bijection between the admitted trajectory
+and trace types from those two initial states;
+\item in stochastic mode it pushes the path distribution from $x_0$ to the
+path distribution from $\alpha\cdot x_0$, preserving the probability of each
+gauge-related cylinder event.
+\end{enumerate}
+The configuration row is transformed pointwise.  In every mode
+the event row uses its declared event action and every gauge-invariant
+observable row is unchanged.  Hence a classical solution tapestry descends to
+the initial-state gauge orbit, while its event-bearing tapestry need only
+transform equivariantly.  This conclusion does not supply any fairness,
+batch-independence, or realizer-independence witness absent from
+$\mathfrak R$.
+\end{proposition}
+
+\begin{proof}
+Induct over the chosen finite reading.  At one column, policy covariance maps
+the selected batch, selected-batch set, or batch distribution according to the
+mode; Equation~\eqref{eq:batch-naturality} maps its committed state, and trace
+equivariance maps its emitted event.  In deterministic mode this gives the
+next column.  In relational mode the bijection on selected batches gives a
+bijection on one-step extensions, with inverse induced by $\alpha^{-1}$.  In
+stochastic mode the same bijective reindexing preserves every one-step
+conditional weight.  Iteration proves the trajectory statements; multiplying
+the finitely many conditional weights proves the path-distribution statement.
+Gauge invariance makes each observable row equal before and after transport.
+The final warning follows because the induction uses none of the four claim
+slots of Definition~\ref{def:run-contract}.
+\end{proof}
+
+Gauge covariance does not replace the other process obligations.  Conversely,
+locality, totality, and invariant preservation do not imply gauge covariance.
+An energy, action, or harmony score used by the scheduler must be a
+gauge-invariant function of the admitted configuration, computed by the
+policy with values in a declared formal type (the codomain criterion of
+Section~\ref{sec:holonomy-textbook}); a displayed reading of the same
+function is a RENDERING and cannot be consumed.  The score may rank already
+legal applications, but the harmony firewall of Section~\ref{sec:harmony-firewall} forbids the ranking
+from replacing the application witness or repairing an ill-typed update.  A
+score may occur inside a guard only when that guard is independently declared
+and its gauge covariance and other admissibility obligations are proved; it is
+then part of the witness type, not a post hoc exception made by the scheduler.
+
+\subsection{Assembling the finite classical gauge profile}
+
+Before packaging the fields, one optional decoration must be typed.  A
+\emph{pointed channel datum} for $G$ is either absent or consists of groups
+$N,Q$ and maps
+\[
+ 1\longrightarrow N\xrightarrow{i}G\xrightarrow{q}Q\longrightarrow1
+\]
+for which $i$ is injective, $q$ is surjective, and
+$i(N)=\ker q$.  It may additionally retain a homomorphism
+$s:Q\to G$ with $q\circ s=\id_Q$.  Section~\ref{sec:intrinsic-strata} will
+classify these data as direct-split, genuinely semidirect-split, or nonsplit.
+
+\begin{definition}[Finite-base and finite-state classical gauge profiles]
+\label{def:gauge-profile}
+A \emph{finite-base classical gauge profile} is the dependent record
+\[
+ \mathfrak G=(\mathfrak K,\mathfrak M,\mathfrak A,\mathfrak D;
+                    \mathfrak P_G)
+\]
+with the following fields.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item The \emph{kinematic layer}
+\[
+ \mathfrak K=\bigl(X,Q_X=\mathsf T(X),G,
+          \mathcal T=(T_v)_{v\in V(X)},
+          \mathscr G_X,\mathcal C,\mathfrak E_{\bullet}\bigr)
+\]
+contains a finite oriented cellular canvas $X:\AFOrientedCellForm$, its full
+transport skeleton, a finite group, a localization receipt
+$\mathcal T:\AFLocalization_G(X)$, the intrinsic gauge group
+$\mathscr G_X=\prod_v\Aut_G(T_v)$, a $\mathscr G_X$-stable connection type
+$\mathcal C\subseteq\Conn_G(X;\mathcal T)$, and an optional pointed channel
+datum $\mathfrak E_{\bullet}$.
+
+\item The optional \emph{matter layer}
+\[
+ \mathfrak M=
+ \bigl(\boldsymbol\rho,(E_v)_v,\mathcal M,
+              (\mathcal I_v,\mathcal I_v^{\vee})_v\bigr),
+ \qquad
+ \boldsymbol\rho=
+ \bigl((\rho_e)_{e\in E^+(X)},(\mu_v)_{v\in V(X)}\bigr),
+\]
+contains the declared edge and vertex representations, the associated fibres,
+a $\mathscr G_X$-stable admitted matter-state type, and the invariant tensor
+and contraction types.  A pure gauge model takes singleton matter state and
+trivial carriers.  A finite-state representation model declares the finite
+palette whose associated configurations form $\mathcal M$.
+
+\item The \emph{coefficient layer}
+\[
+ \mathfrak A=(\mathcal S_{\rm aux},\mathcal A,\kappa_{\mathcal A})
+\]
+contains an auxiliary state type with its declared gauge action, a coefficient
+profile on $Q_X$ with internal group exactly $G$, and
+the coefficient interpretation witness
+\[
+ \kappa_{\mathcal A}:
+ \AFCoeffIntWit_{\mathcal A}
+  (\mathcal M\times\mathcal S_{\rm aux},
+   \AFField_{\mathcal T}(\mathcal A))
+\]
+of Definition~\ref{def:coefficient-intwit}.  Its projection
+$r_{\mathcal A}=\operatorname{real}(\kappa_{\mathcal A})$ is the coefficient
+reduct of Proposition~\ref{prop:coefficient-intwit-bridge}, used below.  The
+empty channel family is allowed.
+Thus auxiliary state is never called a coefficient field without a declared
+support, value object, anchor, action, and reduct map.
+
+\item The \emph{observation and dynamics layer}
+\[
+ \mathfrak D=
+ \bigl(\mathcal S,\mathsf{Rec},\mathsf{Obs},
+       \mathsf{Gauss},\nu,
+       \mathfrak L,\mathsf{Real},\mathfrak R\bigr)
+\]
+contains the required identity
+\[
+ \mathcal S=\mathcal C\times\mathcal M\times\mathcal S_{\rm aux}.
+\]
+The observable field is a typed family with a finite declared index type,
+$\mathsf{Obs}=((Y_i,\omega_i))_{i\in I_{\rm obs}}$ with
+\[
+ \omega_i:\AFGaugeObsIntWit(\mathcal S,Y_i),
+ \qquad O_i\defeq\operatorname{real}(\omega_i):\mathcal S\to Y_i.
+\]
+The recognition field is the finite family
+\[
+ \mathsf{Rec}=((\AFRecognitionProfile[j],\eta_j))_{j\in I_{\rm rec}},\qquad
+ \eta_j:\AFGaugeSafeRecIntWit_{\AFRecognitionProfile[j],\mathcal S}.
+\]
+Definition~\ref{def:gauge-safe-recognition} gives the receipt
+$w_j:\AFGaugeSafe(\AFRecognitionProfile[j],\mathcal S)$.  Either family may be empty.  The Gauss
+field is a constraint profile on $\mathcal S$.  The field
+$\nu\in\{\mathsf{det},\mathsf{rel},\mathsf{stoch}\}$ is the semantic mode of
+Definition~\ref{def:three-realizer-modes}.  The controlled
+law $\mathfrak L$ is required to have
+configuration field exactly $\mathcal S$, and $\mathsf{Real}$ is a realizer
+of mode $\nu$ carrying the process action, policy, trace encoder, and all
+covariance and preservation witnesses required by that mode.  Finally,
+$\mathfrak R:\AFRunContract(\mathfrak L,\mathsf{Real})$ exposes the trajectory,
+trace, solution-tapestry, and optional fairness or independence claims.
+\end{enumerate}
+The final field is a typed source witness
+$\mathfrak P_G:\AFGroupSource(G)$ from
+Definition~\ref{def:group-source-receipt}.  It is retained in the construction
+history but not used to compute the gauge action.
+
+The profile is a \emph{finite-state classical gauge profile} when its total state type
+$\mathcal S$ is finite.  Throughout Part~I, the unqualified phrase
+\emph{finite classical gauge profile} means finite-base: it asserts finiteness of the
+canvas and internal group, not of a vector-valued state space.  Every theorem
+that counts states, forms a finite Markov sum, or uses finite-state dynamics
+states the additional finite-state hypothesis explicitly.
+\end{definition}
+
+\begin{proposition}[Classical-profile compatibility projections]
+\label{prop:gauge-profile-intwit-compatibility}
+Projecting $\kappa_{\mathcal A}$ to $r_{\mathcal A}$, each $\omega_i$ to
+$O_i$, and each $\eta_j$ to its receipt $w_j$ recovers an equivariant
+coefficient reduct, a gauge-invariant observable family, and a gauge-safe
+recognition family.  Conversely, such a reduct and such families package
+canonically into the three interpretation-witness fields.  These operations
+are mutually inverse on extensional data, preserve empty families, and leave
+$\mathfrak K$, $\mathfrak M$, $\mathsf{Gauss}$, $\nu$, $\mathfrak L$,
+$\mathsf{Real}$, $\mathfrak R$, and $\mathfrak P_G$ unchanged.
+\end{proposition}
+
+\begin{proof}
+Apply Propositions~\ref{prop:coefficient-intwit-bridge}
+and~\ref{prop:gauge-observable-intwit-bridge} componentwise and use the
+definitional equality in Definition~\ref{def:gauge-safe-recognition}.  Finite
+dependent products preserve these inverse maps, including the empty product.
+All unlisted fields are copied literally.
+\end{proof}
+
+\begin{table}[!tb]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.15\textwidth}
+  >{\raggedright\arraybackslash}p{0.22\textwidth}
+  >{\raggedright\arraybackslash}p{0.28\textwidth}
+  >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Field} & \textbf{From Chapter~\ref{ch:1}} &
+\textbf{Added in Chapters~\ref{ch:2}--\ref{ch:3}} &
+\textbf{In Example~\ref{ex:complete-c2-profile}}\\
+\midrule
+$X,Q_X=\mathsf T(X)$ & cellular canvas, orientation, boundary words & full
+site/link transport specialization & the one-face square with $v_0,\ldots,v_3$,
+$e_0,\ldots,e_3$, and $f$\\
+$G,\mathfrak P_G,\mathcal T,\mathscr G_X$ & profiled automorphism group and
+one marked-pose torsor & typed group source, independent local torsors, and
+active fibre automorphisms & $C_2=\{1,z\}$; $\mathsf{Declared}(d_{C_2})$; a
+regular torsor at each vertex; $\mathscr G_X\cong C_2^4$\\
+$\mathcal C,\mathfrak E_{\bullet}$ & state-type vocabulary and declared
+carried data & gauge-alignment witnesses, admitted connection states, and an
+optional pointed channel & all $16$ connections; no pointed channel\\
+$\boldsymbol\rho,\mathcal M,\mathcal I_v,\mathcal I_v^{\vee}$ &
+representation and intertwiner vocabulary & associated matter fibres, finite
+palettes, transport, invariant tensors, and contractions & the sign
+representation at $v_0$ with palette $\{\pm1\}$, trivial elsewhere;
+$\mathcal I_{v_0}=0$\\
+$\mathcal A,\kappa_{\mathcal A}$ & coefficient profiles as parameter data,
+not variable state & supports, anchors, values, actions, intrinsic field
+type, and coefficient interpretation witness with reduct projection & a
+matter channel and a charge channel at $v_0$; a bijective reduct\\
+$\mathcal S_{\rm aux},\mathcal S$ & typed products and declared actions & the
+total diagonal gauge action and its state-type equality & $q\in C_2$ with
+trivial action; $16\cdot2\cdot2=64$ states\\
+$\mathsf{Rec},\mathsf{Gauss},\mathsf{Obs}$ & recognition profiles, invariant
+predicates, observables, and checkpoint witnesses & gauge-safe-recognition
+and gauge-observable interpretation families, local constraints, and their
+realizer projections & a profile reading incidence, curvature, and charge;
+$q=F^{v_0}_{\mathcal U}(f)$ at $v_0$; $O_{\rm flux}$ and $O_{\rm charge}$\\
+$\nu,\mathfrak L,\mathsf{Real},\mathfrak R$ & process, cadence, policy,
+trace, and invariants & mode-correct process action, gauge covariance, runs,
+fairness claim slots, and Gauss preservation & $\mathsf{det}$; the one phase
+$\mathsf{KICK}$ and the singleton batch $(w_x)$; a one-step run whose two
+fairness slots are $\AFNoClaim$\\
+\bottomrule
+\end{tabularx}
+\caption{The fields of Definition~\ref{def:gauge-profile}: what
+Chapter~\ref{ch:1} provides for each, what Chapters~\ref{ch:2}
+and~\ref{ch:3} add, and the value of each in the complete $C_2$ profile of
+Example~\ref{ex:complete-c2-profile}.}
+\label{tab:gauge-profile-fields}
+\end{table}
+
+Table~\ref{tab:gauge-profile-fields} lists the fields of the record, with
+what each chapter contributes and their values in the complete $C_2$ example.
+The dependencies in this record are part of its type.  In particular,
+$\mathfrak L$ cannot silently use a state type different from
+Equation~\eqref{eq:total-gauge-state}, a stochastic realizer cannot inhabit a
+deterministic mode, and a pointed channel cannot be inferred from the abstract
+group merely because the group has a normal subgroup.  Likewise, a raw
+recognition profile cannot enter $\mathsf{Rec}$ without its gauge-safety
+witness, and an auxiliary value does not enter $\mathcal A$ without an anchor,
+action, and explicit coefficient reduct.
+
+\begin{definition}[Artform gauge-frame enrichment]
+\label{def:artform-gauge-frame}
+For a finite-base classical gauge profile $\mathfrak G$, the expression
+\[
+ \widehat{\mathfrak G}=\AFGaugeFrame(\mathfrak G):\AFArtformFrame
+\]
+is the frame enrichment whose constructed carrier is the already formed canvas
+$X$, whose carried structure is the dependent profile record, and whose
+construction history is
+\[
+ \AFHistory(\widehat{\mathfrak G})
+ =\bigl(\AFHistory(X),
+        \mathsf{GaugeProfileNode}(\mathfrak G)\bigr).
+\]
+The dependent profile is installed PRESENTATION structure on $X$.  Its
+dynamical state type is
+\[
+ \AFState(\widehat{\mathfrak G})=\mathcal S.
+\]
+Thus $\mathcal S$ is the typed configuration state consumed by located
+applications; its inhabitants are not additional role indices.  Its WITNESS
+fields include group-source and torsor receipts, alignment, covariance,
+constraint, recognition, compatibility, preservation, and run certificates
+when applicable.
+Its SCRIPT fields are active gauge transformations, admitted process
+applications, realized classical updates when they have SCRIPT type, and the
+forgetful reduct maps defined below.  PRESENTATION data
+also include installed local trivializations, coordinate conventions, state
+types, and the realizer policy once installed; link and coefficient tables are
+inhabitants of those state types.  The realizer projections of
+$\mathsf{Obs}$ and the
+descended occurrence statistics licensed by $\mathsf{Rec}$ are terminal
+readouts with RENDERING role.  A diagram or table displaying them is likewise
+a RENDERING; nothing in the formal profile may read either result back as
+input.
+\end{definition}
+
+Figure~\ref{fig:gauge-five-roles} sorts these fields by role.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=black!50,rounded corners=2pt,align=center,
+              minimum width=40mm,minimum height=10mm,font=\scriptsize}]
+\node[box,fill=tealrod!12] (form) at (0,0)
+  {FORM / FRAME\\$X,\widehat{\mathfrak G}$};
+\node[box,fill=purplerod!10] (pres) at (0,1.55)
+  {PRESENTATION\\profile, $\mathcal S$, coordinates, policy};
+\node[box,fill=goldrod!13] (wit) at (-3.45,3.1)
+  {WITNESS\\source, alignment, guards};
+\node[box,fill=paperbg] (script) at (3.45,3.1)
+  {SCRIPT\\gauge/update/reduct maps};
+\node[box,fill=greenrod!12] (render) at (0,4.65)
+  {RENDERING\\class, character, tally, display};
+\draw[artarrow] (form)--(pres);
+\draw[artarrow] (pres)--(wit);
+\draw[artarrow] (pres)--(script);
+\draw[artarrow] (wit)--(render);
+\draw[artarrow] (script)--(render);
+\draw[designarrow,rounded corners=5pt]
+  (wit.west)--(-5.55,3.1)--(-5.55,0)--
+  node[below,font=\scriptsize]{registered gate} (form.west);
+\end{tikzpicture}
+\caption{The five Artform roles specialized to a gauge frame.  Solid arrows
+show selected ordinary dependencies and the dashed return is gate-mediated.
+Configuration variables such as $\mathcal U,\Psi,z$ are not role nodes: they
+inhabit state types carried by the PRESENTATION.  A policy moves from
+WITNESS to installed PRESENTATION structure, reduct maps remain SCRIPTS, and
+all readouts are terminal RENDERINGS.  No arrow leaves RENDERING.}
+\label{fig:gauge-five-roles}
+\end{figure}
+
+Define the base reduct
+\[
+ \operatorname{ForgetGauge}(\widehat{\mathfrak G})=X
+\]
+and the configuration-level coefficient reduct $\operatorname{Chr}$, which
+sends a state of $\widehat{\mathfrak G}$ to
+\[
+ \operatorname{Chr}(\mathcal U,\Psi,z)=
+ (X,\mathcal A,r_{\mathcal A}(\Psi,z),\mathcal U).
+\]
+We call its target $\mathfrak C_{\mathfrak G}$ the \emph{coefficient
+presentation} of $\mathfrak G$ and write
+$\operatorname{Chr}:\widehat{\mathfrak G}\to\mathfrak C_{\mathfrak G}$.  A
+value of $\operatorname{Chr}$ is the intrinsic fixed-canvas version of a
+$\AFChromoForm$ state (Definition~\ref{def:coefficient-profile-part1}); a
+local trivialization presents its field and connection coordinates.  The
+reduct forgets information exactly when $r_{\mathcal A}$ has nontrivial
+fibres.
+
+\begin{theorem}[Gauge-frame formation and base section]
+\label{thm:gauge-frame-conservativity}
+\status{PROVED-LOCAL}
+Every record satisfying Definition~\ref{def:gauge-profile} forms the Artform
+frame $\widehat{\mathfrak G}$.  The base reduct preserves literally the cell
+inventory, grading, incidence, orientation, boundary words, and construction
+history of $X$.  Moreover every finite oriented canvas has a trivial gauge
+enrichment $\operatorname{TrivGauge}(X)$ for which
+\[
+ \operatorname{ForgetGauge}(\operatorname{TrivGauge}(X))=X.
+\]
+Consequently gauge-frame formation adds no new core FORM constructor: the
+canvas layer is a retract of the gauge layer at the level of objects.
+\end{theorem}
+
+\begin{proof}
+The first statement is dependent-record introduction using the fields already
+listed.  The forgetful map is projection to the first field, so all listed
+canvas data and $\AFHistory(X)$ are unchanged.  For the section, take the
+trivial group, its declared source receipt, the unique one-point torsor at
+every vertex, the singleton connection, matter, and auxiliary state types, the
+empty coefficient and recognition families, true Gauss predicates, and a
+one-phase identity process with an empty invariant profile, its unique
+deterministic realizer, and a run contract making no fairness or independence
+claim.  Every required equation has its unique witness.  Projection returns
+$X$.  No field of the record is a cell, an incidence, or a boundary word of
+$X$, so no core FORM constructor was used to build it.
+\end{proof}
+
+\subsection{Syntactic conservativity of the gauge increment}
+
+A section on objects is not yet a conservativity theorem.  Whether the
+enrichment can prove a new equation \emph{between paths of the canvas
+fragment} is a question about syntax, and the foundational calculus answers
+it with a declared finite check rather than an appeal to the shape of the
+construction \cite{ArtC}.  In this subsection $\mathcal M$ and $\mathcal M'$
+denote equational theories and $\rho$ denotes a shadow map; they are
+unrelated to the matter-state type $\mathcal M$ and to representations.  The
+criterion for a language extension
+$\mathcal M\subseteq\mathcal M'$ asks for a typed graph map
+\[
+ \rho:\mathcal G_{\mathcal M'}\longrightarrow
+      \mathsf{Path}(\mathcal G_{\mathcal M}),
+\]
+the \emph{old shadow}, subject to two conditions: \textup{(R1)} $\rho$ is the
+identity on old vertices and old generators, and \textup{(R2)} the induced
+functor $\rho^\sharp$ sends both sides of every equation of the increment to
+paths that are already provably equal in the old theory.  Such a $\rho$
+exhibits the old syntactic category as a retract of the new one and therefore
+makes the extension syntactically conservative.  The criterion is sufficient,
+not necessary; and it consults no state algebra, a point we return to below.
+Definition~\ref{def:gauge-increment} lists the increment so that the
+criterion can be checked.
+
+\begin{definition}[The gauge increment $\Delta\mathcal M_{\rm gauge}$]
+\label{def:gauge-increment}
+Let $\mathcal M_{\rm can}$ be the canvas fragment built from the constructors
+of Chapter~\ref{ch:1}: its vertices are
+the oriented cellular-canvas expressions, and its generators are the
+FORM-producing constructors $\AFAttachCell,\AFRefine,\AFQuotient$ together
+with the forgetful reducts between them.  The increment
+$\Delta\mathcal M_{\rm gauge}$ adjoins, over each canvas expression $X$, the
+following data and nothing else.
+
+\emph{Vertices.}  For every finite-base classical gauge profile $\mathfrak G$ over $X$,
+the frame $\widehat{\mathfrak G}$; its coordinate presentation
+$\widehat{\mathfrak G}_t$ for each local trivialization $t$; its extensional
+structural reduct $\widehat{\mathfrak G}^{\rm ext}$; and the coefficient
+presentation $\mathfrak C_{\mathfrak G}$, the target of $\operatorname{Chr}$.
+Here $\widehat{\mathfrak G}_t$ and $\widehat{\mathfrak G}^{\rm ext}$ are the
+targets of the maps $R_{\rm coord}^t$ and $R_{\rm ext}$ of the reduct ladder
+(Definition~\ref{def:gauge-reduct-ladder}).
+
+\emph{Generators.}  The enrichment $\operatorname{TrivGauge}_X$; the base
+reducts $\pi_A:A\to X$ from each new vertex $A$, with
+$\pi_{\widehat{\mathfrak G}}=\operatorname{ForgetGauge}$; the ladder maps
+$R_{\rm ext}$, $R_{\rm coord}^t$ and its inverse $\Phi_t^{-1}$, where $\Phi_t$
+is the coordinate presentation of Theorem~\ref{thm:localization}, and the
+coefficient reduct $\operatorname{Chr}$; one active gauge script
+$\gamma_\alpha:\widehat{\mathfrak G}\to\widehat{\mathfrak G}$ for each
+$\alpha\in\mathscr G_X$; and, in deterministic mode, one realized update
+$\AFStep_a:\widehat{\mathfrak G}\to\widehat{\mathfrak G}$ for each phase $a$.
+In relational and stochastic mode the realized law is not an endomorphism
+script edge and contributes no such generator; every clause below is
+unaffected.
+
+\emph{Equations.}  Writing $A,B$ for new vertices and $e:A\to B$ for a new
+generator between them,
+\[
+\begin{aligned}
+ &\text{(V1)}&\pi_B\circ e&\equiv\pi_A,&
+ &\text{(V2)}&\operatorname{ForgetGauge}\circ\operatorname{TrivGauge}_X
+   &\equiv 1_X,\\
+ &\text{(V3)}&\gamma_1&\equiv 1_{\widehat{\mathfrak G}},&
+ &\text{(V4)}&\gamma_\alpha\circ\gamma_\beta&\equiv\gamma_{\alpha\beta},\\
+ &\text{(V5)}&\AFStep_a\circ\gamma_\alpha&\equiv\gamma_\alpha\circ\AFStep_a,&
+ &\text{(V6)}&\Phi_t^{-1}\circ R_{\rm coord}^t
+   &\equiv 1_{\widehat{\mathfrak G}},\\
+ &\text{(V7)}&R_{\rm coord}^t\circ\Phi_t^{-1}
+   &\equiv 1_{\widehat{\mathfrak G}_t}.&&&&
+\end{aligned}
+\]
+Clause (V1) is the content of
+Proposition~\ref{prop:localization-formation} and of the rule that only an
+operation on the state of an already fixed frame is a SCRIPT: no new generator
+moves the canvas.  Clauses (V3)--(V4) say that
+Equation~\eqref{eq:intrinsic-gauge-action} is a group action, (V5) is
+Equation~\eqref{eq:law-gauge-covariance} in deterministic mode; (V6)--(V7) are
+Theorem~\ref{thm:localization}\textup{(i)}.
+
+No observable, occurrence tally, character, or orbit count is a generator of
+$\Delta\mathcal M_{\rm gauge}$.  That is not an omission but the readback
+firewall: a RENDERING is terminal, so no composite may leave it, and a
+terminal readout can never occur in a parallel pair of old paths.
+\end{definition}
+
+\begin{proposition}[The gauge increment is syntactically conservative]
+\label{prop:gauge-retraction}
+\status{PROVED-LOCAL}
+Send every new vertex over $X$ to $X$, and every new generator to the empty
+path at its shadow:
+\[
+ \rho_0(\widehat{\mathfrak G})
+ =\rho_0(\widehat{\mathfrak G}_t)
+ =\rho_0(\widehat{\mathfrak G}^{\rm ext})
+ =\rho_0(\mathfrak C_{\mathfrak G})
+ =X,
+ \qquad
+ \rho_1(e)=1_X .
+\]
+Then $\rho$ is a reduct retraction of
+$\mathcal M_{\rm can}\subseteq\mathcal M_{\rm can}+\Delta\mathcal M_{\rm gauge}$.
+Consequently the gauge increment is syntactically conservative over the canvas
+fragment: two parallel paths of $\mathcal M_{\rm can}$ become equal in the
+extended theory only if they were already equal in $\mathcal M_{\rm can}$.
+\end{proposition}
+
+\begin{proof}
+Typing first.  Every generator listed in
+Definition~\ref{def:gauge-increment} has both endpoints over the same canvas
+expression $X$: the ladder maps, the coefficient reduct, and the gauge and
+update scripts run between new vertices over $X$, while
+$\operatorname{TrivGauge}_X$ and the base reducts $\pi_A$ have $X$ at one end
+and a new vertex over $X$ at the other.  After shadowing, each therefore runs
+from $X$ to $X$, which is the domain and codomain of the empty path $1_X$.
+Condition~\textup{(R1)} holds by construction, since $\rho$ was declared only
+on the new vertices and generators.
+
+For~\textup{(R2)}, apply $\rho^\sharp$ to each equation of the increment.  A
+composite of new generators maps to a composite of empty paths, hence to
+$1_X$.  Both sides of (V1)--(V7) are such composites, or are an identity
+already, so in every case both images are literally $1_X$.  Literal equality
+of paths is in particular provable equality in $E_{\mathcal M_{\rm can}}$.  The
+inherited old equations are mapped to themselves by~\textup{(R1)} and are old
+provable equalities.  Thus $\rho$ is a reduct retraction, and the foundational
+retraction theorem gives the syntactic conclusion \cite{ArtC}.
+\end{proof}
+
+\begin{remark}[The retraction is not state-sound]
+\label{rem:not-state-sound}
+The foundational criterion consults no state algebra, and this retraction
+would fail the stricter \emph{state-sound} condition, which additionally
+demands a bijection between the legal states of a new expression and those of
+its old shadow.  Here $\AFState(\widehat{\mathfrak G})$ is the configuration
+state $\mathcal S$, while the bare canvas $X$ carries no gauge state at all;
+the one-square $C_2$ profile of
+Example~\ref{ex:complete-c2-profile} has $64$ total states over a canvas with
+none.  So the gauge increment is a genuine addition of state that is
+nevertheless syntactically conservative on the canvas fragment.  That is the exact
+content of the claim, and it is weaker than a re-presentation of old states:
+Proposition~\ref{prop:gauge-retraction} licenses no transfer of a canvas-level
+theorem to gauge states, and no state-level completeness.  The criterion is
+also only sufficient, so a failure to produce $\rho$ for some later increment
+would be evidence about the method, not about that increment.
+\end{remark}
+
+Table~\ref{tab:gauge-enrichment-stages} lists what each stage of the
+construction adds.  On a fixed canvas $\AFGaugeFrame$ is an enrichment and
+adds no carrier constructor; only a change of canvas uses $\AFAttachCell$ or
+$\AFRefine$.  The conservativity claim is Proposition~\ref{prop:gauge-retraction},
+and Remark~\ref{rem:not-state-sound} states its limits.  $\AFGaugeFrame$ is a
+named enrichment because it exposes an important domain reading, not because
+gauge theory needs a new universal carrier constructor.
+
+\begin{table}[!tbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\raggedright\arraybackslash}p{.14\textwidth}
+  >{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X
+  >{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Stage & Added structure & Added FORM constructors & Witnesses / scripts & Derived public operators\\
+\midrule
+source and localization & $\mathfrak P_G$, $\mathcal T$, tagged fibre support & none on $X$; dependent frame enrichment only & source, torsor, and localization receipts & $\mathscr G_X$, local frame types\\
+connection and coefficients & $\mathcal C$, $\mathcal A$, matter and auxiliary actions & none & gauge alignments, invariant tensors, coefficient interpretation witnesses & holonomy, curvature, associated transport\\
+recognition and observation & $\mathsf{Rec}$, $\mathsf{Obs}$, Gauss profile & none & gauge-safe-recognition, gauge-observable, and constraint witnesses & descended occurrences, tallies, orbit readings\\
+process and runs & law, realizer, $\mathfrak R$ & none & applications, guards, footprints, compatibility, covariance, preservation & trajectories, trace and solution tapestries, quotient laws\\
+canvas or scale transition & not a fixed-frame field & $\AFAttachCell$ or $\AFRefine$ when declared & geometric and field-transfer receipt & transported profile at the target epoch\\
+\bottomrule
+\end{tabularx}
+\caption{What gauge enrichment adds at each stage of the construction.  Only
+a change of canvas uses a FORM-producing constructor.}
+\label{tab:gauge-enrichment-stages}
+\end{table}
+
+\subsection{A complete finite example}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,
+  vtx/.style={circle,fill=platenavy,inner sep=1.5pt},
+  rd/.style={draw=tealrod,line width=2.2pt,-{Latex[length=2.4mm]}},
+  tok/.style={draw=orangerod,line width=1.2pt,fill=orangerod!18,rounded corners=2pt,
+              font=\scriptsize,inner sep=2pt},
+  aux/.style={draw=plategray,dashed,rounded corners=2pt,fill=white,font=\scriptsize,inner sep=2pt}]
+\fill[tealrod!7] (0,0) rectangle (2.6,2.3);
+\draw[rd] (0,0)--(2.6,0) node[midway,below,plate label]{$e_0$};
+\draw[rd] (2.6,0)--(2.6,2.3) node[midway,right,plate label]{$e_1$};
+\draw[rd] (2.6,2.3)--(0,2.3) node[midway,above,plate label]{$e_2$};
+\draw[rd] (0,2.3)--(0,0) node[midway,left,plate label]{$e_3$};
+\foreach \p in {(0,0),(2.6,0),(2.6,2.3),(0,2.3)}{\node[vtx] at \p {};}
+\node[font=\scriptsize,anchor=south west] at (2.6,2.3) {$v_2$};
+\node[font=\scriptsize,anchor=south east] at (0,2.3) {$v_3$};
+\node[font=\scriptsize,anchor=north west] at (2.6,0) {$v_1$};
+\node[font=\small] at (1.3,1.15) {$f$};
+\node[tok,anchor=north east] (psi) at (-.12,-.12) {$\psi_{v_0}\in\{+1,-1\}$};
+\node[font=\scriptsize,anchor=south east] at (-.05,.05) {$v_0$};
+\node[aux,anchor=north] at (1.3,-.72) {charge $q\in C_2$};
+\node[font=\scriptsize,anchor=west,align=left] at (4.0,2.25)
+  {\textbf{rule} $\mathsf{KICK}$ at $(\partial_{v_0}f,v_0)$; guard true};
+\node[font=\scriptsize,anchor=west,align=left,text=tealrod!80!black] at (4.0,1.6)
+  {\textbf{read} $R_w$: the four boundary links\\and the matter value at $v_0$};
+\node[font=\scriptsize,anchor=west,align=left,text=orangerod!85!black] at (4.0,.8)
+  {\textbf{write} $W_w$: the matter value at $v_0$;\\proposal $\psi_{v_0}\mapsto\varepsilon(F^{v_0}_U(f))\,\psi_{v_0}$};
+\node[font=\scriptsize,anchor=west,align=left,text=plategray] at (4.0,-.05)
+  {\textbf{untouched}: the links and the charge $q$;\\so $\mathsf{Gauss}_{v_0}:\ q=F^{v_0}_{\mathcal U}(f)$ is preserved};
+\end{tikzpicture}
+\caption{The $\mathsf{KICK}$ application of Example~\ref{ex:complete-c2-profile}
+on its square. Teal links form the read footprint; the orange token at
+$v_0$ is read and written; the charge $q$, drawn dashed, belongs to the state
+but not to the application's footprint. The proposal multiplies the sign
+matter value by the character of the face curvature. Links and charge are
+not written, so the Gauss predicate that compares them survives the commit.}
+\label{fig:c2-kick}
+\end{figure}
+
+\begin{example}[A complete finite $C_2$ profile with a nontrivial law]
+\label{ex:complete-c2-profile}
+Take the one-face square with vertices $v_0,\ldots,v_3$, edges
+$e_i:v_i\to v_{i+1}$ (indices modulo $4$) and face $f$ with boundary word
+$(e_0e_1e_2e_3)$; Figure~\ref{fig:c2-kick} draws it with the data below.
+Take $G=C_2=\{1,z\}$, the receipt $\mathfrak P_G=\mathsf{Declared}(d_{C_2})$,
+the localization consisting of one regular torsor at every vertex, and all
+torsor connections as $\mathcal C$; take the pointed-channel field to be
+absent.  Choose a boundary vertex $v_0$ and the sign
+representation $\varepsilon(z)=-1$ on $M_{v_0}=\mathbb C$.  Its finite stable
+palette $P=\{+1,-1\}$ supplies a two-element associated matter fibre at
+$v_0$; take $\mu_{v_0}=\varepsilon$ and all edge and other vertex
+representations to be trivial.  All other matter-state factors are
+singletons.  Let the auxiliary state be $q\in C_2$ with trivial gauge action.
+The total state is
+\[
+ \mathcal S=\mathcal C\times
+ (T_{v_0}\times_{C_2}P)\times C_2.
+\]
+Take two coefficient channels.  The matter channel has
+$k_{\rm m}=0$, support $\{v_0\}$, value object $P$, anchor $v_0$, and sign
+action.  The charge channel has the same support and anchor, value object
+$C_2$, and trivial action.  The coefficient reduct sends $(\Psi,q)$ to these
+two intrinsic associated-fibre values; it is a bijection here.  Together with
+its equivariance and kernel-pair receipt it supplies
+$\kappa_{\mathcal A}$, whose realizer projection is this same reduct.
+
+Because $C_2$ is Abelian, the loop automorphism of $T_{v_0}$ has a canonical
+value $F_{\mathcal U}^{v_0}(f)\in C_2$, independent of a local origin.  At
+$v_0$ impose the nontrivial Gauss predicate
+\[
+ \mathsf{Gauss}_{v_0}(\mathcal U,\Psi,q)
+ \quad\Longleftrightarrow\quad
+ q=F_{\mathcal U}^{v_0}(f),
+\]
+and take the other vertex predicates to be true.  Both sides are gauge
+invariant because $C_2$ is Abelian, and both are formal data of the state:
+$q$ is a state component and $F_{\mathcal U}^{v_0}(f)$ a derived state.  The
+predicate compares the auxiliary charge with the curvature value in $C_2$, not
+with any reading of it.  This is what licenses the Gauss-preservation
+obligation below to depend on the clause.
+
+Let $\mathsf{Obs}$ contain two gauge-observable interpretation witnesses
+whose realizer projections are the terminal readings
+\[
+ O_{\rm flux}=\kappa\circ F_{\mathcal U}^{v_0}(f),
+ \qquad
+ O_{\rm charge}=\kappa\circ q,
+\]
+into $\operatorname{Conj}(C_2)$, with their gauge-invariance proofs as law
+certificates.  Here $\kappa$ is the class map of
+Section~\ref{sec:matter-textbook}, not the witness $\kappa_{\mathcal A}$.  Let
+$\mathsf{Rec}$ contain the recognition profile that sees
+incidence, the curvature value, and the charge value but no raw link
+coordinate, paired with its gauge-safe-recognition interpretation witness.
+Both selected decorations are formal state data, so the profile may consume
+them; neither $O_{\rm flux}$ nor $O_{\rm charge}$ is consumed anywhere.  The
+identity position match is gauge-safe, so
+Proposition~\ref{prop:gauge-recognition-descent} applies.
+
+For the process data, take the one-element phase alphabet
+$A=\{\mathsf{KICK}\}$, a one-tick control tapestry whose only column decodes
+to $\mathsf{KICK}$, the reading $\lambda=(0)$, and the corresponding constant
+decoder $\chi$.  Declare the semantic mode to be deterministic.  Let the
+controlled-law invariant profile require the joint Gauss-state witness
+$\AFDepFun_v\mathsf{Gauss}_v$ at the input and output checkpoints.  At every state let
+$\mathsf{App}_{\mathsf{KICK}}(x)$ contain one witnessed application
+$w_x$ with the following exposed fields:
+\begin{itemize}[leftmargin=2.2em]
+\item the rule is $\mathsf{KICK}$ and its location is the pair
+      $(\partial_{v_0}f,v_0)$;
+\item the guard is true; the read footprint consists of the four boundary
+      connection components and the matter component at $v_0$; the write
+      footprint is that matter component; and the affected support is their
+      union;
+\item the read receipt is the indicated restriction of $x$, and the proposal
+      replaces $\Psi_{v_0}$ by the intrinsic associated-fibre transport
+      $(\mathcal U_{\partial f})_*\Psi_{v_0}$ while fixing every other
+      component;
+\item the commit witness certifies that this proposal is in $\mathcal S$ and
+      agrees with $x$ outside the write footprint.
+\end{itemize}
+In any local trivialization the same SCRIPT is
+\[
+ \operatorname{apply}(w_x):
+ \psi_{v_0}\longmapsto
+ \varepsilon(F_U^{v_0}(f))\psi_{v_0},
+\]
+with $U$ and $q$ fixed.  The batch type contains the required empty batch and
+the singleton batch $(w_x)$; the deterministic policy selects $(w_x)$.
+Compatibility and batch-presentation independence are immediate because no
+batch contains two nonempty applications.  Gauge transformation sends every
+field of $w_x$ to the corresponding field of $w_{\alpha x}$ while leaving its
+spatial footprints fixed, so application and batch naturality hold.  The trace
+event is
+\[
+ (0,\mathsf{KICK},w_x,\operatorname{foot}(w_x),x,
+                  \operatorname{apply}(w_x));
+\]
+it retains the intrinsic loop transport rather than a preferred raw link
+table.  Figure~\ref{fig:c2-seven-lane-run} reads this tick through the seven
+lanes of the process reading of Section~\ref{sec:cadence-policy}.
+
+\begin{figure}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{.94\textwidth}{@{}>{\bfseries\raggedright\arraybackslash}p{.17\textwidth}X@{}}
+\toprule
+Clock & tick $0$ of the one-point reading $\lambda$\\
+Control & decoded phase $\mathsf{KICK}$\\
+Enabled witness & $w_x$ with true guard and located loop $\partial_{v_0}f$\\
+Policy & select the singleton batch $(w_x)$\\
+Proposal & multiply the $v_0$ matter coordinate by the intrinsic face transport\\
+Atomic commit & replace only $\Psi_{v_0}$; preserve $\mathcal U$, $q$, and Gauss\\
+Trace & record time, phase, witness, footprints, and the two committed states\\
+\bottomrule
+\end{tabularx}
+\caption{The realized run of the complete $C_2$ profile of
+Example~\ref{ex:complete-c2-profile}, read through the seven lanes of the
+process reading of Section~\ref{sec:cadence-policy}.  Each row is a different
+typed component even though all seven refer to the same tick; several
+components may occupy the same one of the five Artform roles.}
+\label{fig:c2-seven-lane-run}
+\end{figure}
+
+These data define the deterministic realizer: locality is the displayed
+affected support, totality is supplied by the unique witnessed application at
+every state, batch independence is the singleton argument, gauge covariance
+is the preceding naturality square, and invariant and Gauss preservation hold
+because the SCRIPT changes neither $\mathcal U$ nor $q$.
+
+For the run contract take $\mathcal S_0=\mathcal S_{\mathsf G}$.  It assigns
+the one-step trajectory, the displayed one-event trace tapestry, and their
+solution tapestry.  Its cadence- and application-fairness slots are
+$\AFNoClaim$, because a one-tick reading makes no recurrence assertion.  Its
+batch-independence slot contains the preceding singleton proof, and its
+realizer-independence slot is witnessed relative to the declared singleton
+class containing this policy.
+
+The law is reversible, is nonidentity on states with flux $z$, and preserves
+the Gauss predicate because both $\mathcal U$ and $q$ remain fixed.  It is
+nevertheless gauge-vertical: the constant gauge transformation $z$ fixes every
+$C_2$ link and flips the sign matter coordinate, so the pre- and post-kick
+states lie in one gauge orbit.  This example inhabits every field of
+Definition~\ref{def:gauge-profile}, and Table~\ref{tab:gauge-profile-fields}
+collects the values.  After all classifiers have been
+introduced, Example~\ref{ex:complete-c2-dossier} will compute its intrinsic
+dossier without using any additional profile data.
+\end{example}
+

@@ -1,0 +1,175 @@
+\section{Field-law and group-comparison boundaries}
+
+Table~\ref{tab:finite-color-results} lists the results of this chapter
+with the model, group and regime in which each holds. None is a
+confinement theorem on an extended canvas, and the Fermi statistics,
+Dirac slots, number of flavors, electric normalization and mass
+coefficients remain inputs. For the declared laws the comparison of
+$S(1080)$ with $SU(3)$ is quantitative: their tensor moments agree below
+the sextic invariant (Lemma~\ref{lem:finite-color-low-degree}), their
+one-edge dynamics first differ at eighth order in the hopping
+(Proposition~\ref{prop:finite-color-eighth-order}), and only an electric
+law that imports the continuous charge restores the $SU(3)$ rotor, on a
+selected sector (Proposition~\ref{prop:finite-color-one-link-completion}).
+A physical identification still needs a light vacuum preparation,
+calibrated mass and current observables, a controlled spatial comparison
+with dynamical matter, an origin for the spin and flavor assignments and
+a hadron spectrum. A broader equivalence claim also needs the observable
+map and constraint whose absence
+Proposition~\ref{prop:finite-color-loop-obstruction} and
+Remark~\ref{rem:finite-color-loop-momentum} expose.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.235\textwidth}%
+>{\raggedright\arraybackslash}p{.115\textwidth}%
+>{\raggedright\arraybackslash}p{.12\textwidth}%
+>{\raggedright\arraybackslash}p{.12\textwidth}%
+>{\raggedright\arraybackslash}p{.12\textwidth}%
+>{\raggedright\arraybackslash}X@{}}
+\toprule
+Result & Canvas & Group & Regime & Control & Leaves open\\
+\midrule
+Golden-energy descent, \ref{prop:a5-energy}
+ & any & $A_5$ & kinematic & exact & a field law\\
+Fermionic census, \ref{prop:finite-color-fock-census}
+ & one vertex & $S(1080)$, $SU(3)$ & all occupations & exact & particles, the vacuum\\
+Casimir floors, low-degree moments, charge conjugation,
+ \ref{prop:finite-color-casimir-floor}--\ref{prop:finite-color-charge-conjugation}
+ & none & four groups; $S(1080)$ & kinematic & exact & dynamics\\
+Exchange census and parent bound,
+ \ref{prop:finite-color-exchange-spectrum}--\ref{prop:finite-color-parent-bound}
+ & one edge & $S(1080)$, $SU(3)$ & $M=0$; bound for $\kappa C_F>12$
+ & exact leading order, explicit bounds & many-edge vacuum, confinement, hadrons\\
+Heavy-mass decoupling, \ref{prop:finite-color-heavy-decoupling}
+ & finite graph & $S(1080)$ & $8M>w^{\ast}_x$ & leading model & unique ground, mass gap\\
+Collinear bonds, \ref{prop:finite-color-collinear}
+ & straight chain & any & no on-site term & exact & propagation with on-site or transverse terms\\
+Heavy one-edge vacuum, \ref{thm:finite-color-heavy-vacuum}
+ & one edge & $S(1080)$, $SU(3)$ & $\mu>21/4$ & leading model, to $O(\mu^{-2})$ & finite $\kappa$, a light vacuum\\
+Mass selection and compressed sources,
+ \ref{prop:finite-color-mass-selection}--\ref{prop:finite-color-band-sources}
+ & one edge & $S(1080)$, $SU(3)$ & small $\mu$ & order $\mu^4$; exact source identities & hadron masses, spatial spin\\
+Axial source transport, \ref{prop:finite-color-axial-source}
+ & one edge & $S(1080)$, $SU(3)$ & $M=0$, large $\kappa$ & $O(\kappa^{-3})$ & the physical axial renormalization\\
+Source contacts, band curvature, report bounds,
+ \ref{prop:finite-color-source-contacts}--\ref{prop:finite-color-atomic-source}
+ & any finite system & any & declared preparation & exact & the preparation itself\\
+Ward identity, mass reflection, axial contacts,
+ \ref{prop:finite-color-ward-insertion}--\ref{lem:finite-color-axial-contacts}
+ & finite graph; one edge & $S(1080)$, $SU(3)$ & any $M$; bipartite for reflection & exact & physical currents, a pion\\
+Raw-loop limitation, \ref{prop:finite-color-loop-obstruction}
+ & any loop & four finite groups & kinematic & exact identity & dressed readouts\\
+Eighth-order difference, \ref{prop:finite-color-eighth-order}, \ref{rem:finite-color-massive-difference}
+ & one edge, twelve particles & $S(1080)$ against $SU(3)$ & $M=0$ (massive: external input) & $\xi^8/\kappa^7$, asymptotic & finite-$\kappa$ remainder\\
+One-link completion, \ref{prop:finite-color-one-link-completion}
+ & one edge & $S(1080)$ with imported charge & any & exact on $P$ & equivalence of the parent\\
+Cube, triangle and transfer coefficients,
+ \ref{mp:thm-cube-coefficient}--\ref{mp:prop-transfer-corrections}
+ & cube, triangle, path, bend & $SU(3)$; matched finite groups & fixed $M>0$ & through $\kappa^{-3}$ or $\kappa^{-4}$ & light vacuum, $M\to0$, large volume\\
+Static screening, \ref{mp:prop-static-screening}
+ & finite graph & $SU(3)$, $S(1080)$ & no hopping & exact & screening with hopping\\
+\bottomrule
+\end{tabularx}
+\caption{What the results of Chapter~\ref{ch:21} establish: canvas, color
+group, regime, order of control, and what each leaves open. Numbers refer
+to the propositions, lemmas, theorems and remarks of this chapter.}
+\label{tab:finite-color-results}
+\end{table}
+
+The probability foundation of Chapter~\ref{ch:15} supplies conditional
+record probabilities under its content, compatibility and resource
+premises. It does not choose a gauge Hamiltonian or Gibbs preparation.
+A proposed atomic gauge update still needs its own source and record
+contracts, as Proposition~\ref{prop:finite-color-atomic-source}
+illustrates.
+
+The finite groups, flux observables and invariant carriers of this
+chapter are kinematic data. No native non-Abelian gauge law with
+constraint-preservation, reversibility and covariance witnesses is
+constructed; in particular, the Abelian two-shear Maxwell law does not
+transfer by treating noncommuting fluxes as additive values. The one-edge
+parent of Section~\ref{sec:finite-color-exchange} is a declared
+Hamiltonian, not such a law, and serves as a benchmark for the native
+construction problem.
+
+A possible multiplicative update carries a link $U_e$ and an impulse
+$\mathcal P_e\in G$ based at the target vertex of $e$, so that $U'_e$
+transforms like $U_e$, and has the ordered form
+\begin{equation}
+ \mathcal P'_e=\mathcal K_e(U)\,\mathcal P_e,\qquad U'_e=\mathcal P'_eU_e.
+ \label{eq:nonabelian-shears}
+\end{equation}
+The plaquette inputs to the kick $\mathcal K_e$ must first be transported to a common
+basepoint. Covariance and invertibility of individual shears do not
+prove that the batch is independent of its presentation or preserves
+the declared non-Abelian Gauss predicate. The unresolved construction
+problem is to supply a nontrivial curvature-dependent local $\mathcal K_e$, its
+admitted impulse carrier, and all these contracts simultaneously.
+\label{conj:a5-law}
+No selection theorem for such a law is asserted here. Declaring a
+weighted Cayley-graph electric operator instead also requires a
+generator set and weights; the finite group alone does not supply
+those choices \cite{MarianiPradhanErcolessi}.
+
+\begin{remark}[Positive central jump laws cannot match both Casimirs]
+\label{rem:finite-color-central-jumps}
+A weighted Cayley-graph operator is a central jump generator
+$L=\sum_{g\neq e}r_g(1-R_g)$ with rates $r_g\geq0$ constant on
+conjugacy classes and $r_g=r_{g^{-1}}$, where $R_g$ is right
+translation. Its eigenvalue on the isotypic block of an irreducible
+character $\chi$ of dimension $d$ is $\lambda_\chi=\sum_gr_g(1-\chi(g)/d)$.
+For the triplet and the adjoint of $S(1080)$, since
+$\chi_8=|\Tr g|^2-1$,
+\begin{equation}
+ \frac94\lambda_3-\lambda_8=\sum_{g\neq e}r_g\frac{|3-\Tr g|^2}8>0,
+ \label{eq:finite-color-central-jump}
+\end{equation}
+so no such generator has the $SU(3)$ ratio $\lambda_8/\lambda_3=9/4$
+of the Casimirs $3$ and $4/3$; the class table bounds the ratio by
+$3(7+\sqrt5)/16<1.7318$, attained on the class of trace
+$(1+\sqrt5)/2$. A positive quantum electric operator is not thereby
+excluded: assigning the Casimir energies to the matched rows of
+Proposition~\ref{prop:finite-color-eighth-order} and positive energies to
+the rest gives a nonnegative central operator, and
+the step-one law of Section~\ref{qa:color} is even a positive class
+kernel, with least class weight about $1.56\cdot10^{-4}$, so that its
+integer convolution powers define a positive fixed-step transfer whose
+eigenvalues on the matched rows are exactly $e^{-nC_2}$. Its energies also
+respect the charge symmetry of
+Proposition~\ref{prop:finite-color-charge-conjugation}
+(Section~\ref{qa:color}). A fixed step is a state-transfer parameter. Identifying it with an elapsed
+physical duration requires the independent reference and association
+contracts of Section~\ref{qmeas:spacetime}.
+\end{remark}
+
+One might hope that the order $60$ of $A_5$ ties it to a sixty-tick clock
+and so gives the color group a temporal origin. Equal orders construct no
+$A_5$ decoder: a temporal origin would need a map from events into
+marked-pose automorphisms, the presentation relations and a generation
+proof, that is, a generator-derived receipt in the sense of
+Definition~\ref{def:group-source-receipt}.\label{conj:a5-forcing}
+This is an instance of the clock/group separation in
+Chapter~\ref{ch:19}.
+
+Two different finite $SU(3)$ subgroup comparisons are available from
+the classification literature \cite{GrimusLudl}:
+\begin{equation}
+ A_5=\Sigma(60)<\Sigma(360\times3)\cong S(1080),
+ \qquad [S(1080):A_5]=18,
+ \label{eq:a5-s1080}
+\end{equation}
+and
+\begin{equation}
+ C_3\triangleleft\Delta(27)\triangleleft\Delta(54)
+ \triangleleft\Sigma(36\times3)\triangleleft\Sigma(72\times3).
+ \label{eq:triadic-lineage}
+\end{equation}
+The groups of the second chain contain the center of $SU(3)$ from
+$\Delta(27)$ on, so they have central triality, but none contains $A_5$:
+$60$ divides none of their orders. In particular an
+$A_5$-to-$\Sigma(36\times3)$ comparison cannot be a subgroup inclusion;
+it requires a different interface. These imported embedding and
+representation data do not construct a temporal decoder or a native
+field law.

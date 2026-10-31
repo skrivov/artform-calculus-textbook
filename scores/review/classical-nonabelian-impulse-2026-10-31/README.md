@@ -1,0 +1,11 @@
+# Classical non-Abelian impulse and Gauss submission
+
+Four new CNI packets have exact-type Lean proofs and await independent fidelity review. Work was done by the authoring agent alone, as requested. No new approval is claimed or recorded; all 254 baseline approved entries and their statement/definition surfaces are preserved. RESULTS.md gives the construction, cancellation proof, noncommuting example and remaining scope.
+
+The implementation uses a genuine square face with a spectator link and complete ordered stars at its four vertices. It proves preservation of the entire group-valued defect on every raw state, not only a chosen admitted preparation. Arbitrary fixed words have exact inverses and descend to the complete classical gauge-orbit quotient of the full mu=1 carrier. The native realizer performs one atomic complete-face kick and five compatible individual link drifts, with Gauss checked at every boundary.
+
+Modules under ClassicalNonabelian are Geometry, Dynamics, Descent, Process, Controls, Statements and Theorems. Statements contains the four literal tagged Props; Theorems proves exactly them and gives actual-canvas non-vacuity controls. The ordered stars and the all-positive face are part of the declared model. The result is not a general arbitrary-face constructor or a Hamiltonian/Poisson, energy or continuum theorem. In particular, reversed occurrences require the left/right interface proved in Controls.
+
+The baseline is af36dc2024d00af61589ddfae5416edfab00dc58. The source pins identify the monograph frontier and Gauss-profile definitions, and distinguish contextual primary literature from formal dependencies. The canonical claim text is identical in the dedicated campaign lane, this packet, claims.json and scores/manifest.toml. No textbook, monograph or shared top-level lattice-wave source is edited.
+
+Run replay-root.py --check for exact permutation arithmetic, all admitted S3 states, the raw sample controls, all drift permutations and the noncommuting witness. Run validate-root.py for the full build/report/status/tree/certificate/drift checks, all seven individual module kernels and exact baseline preservation. The receipt is author validation, not independent approval. HANDOFF.md is prepared for a future independent reviewing agent; it is not an executed review.
