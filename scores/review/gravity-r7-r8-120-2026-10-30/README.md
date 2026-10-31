@@ -241,3 +241,14 @@ because its arithmetic checks. No material native gate or efficiency saving is c
 Root review07 validation passed all19 checks, including six separate kernel replays and
 the independent Fraction replay. All153 earlier manifest entries remain identical; approved
 text drifts are empty. No new native material or efficiency credit is assigned.
+
+All six review07 claims were independently approved on31 October2026 at freeze
+`316bf57d79962b01e420db6111c08f7040311f5e`; none returned. See the distinct
+[audit](audit-independent-07.md), [per-key verdicts](verdict-independent-07.json),
+[validation](validation-independent-07.json) and [independent coupled-system/field replay](arithmetic-independent-07.py).
+All153 earlier approvals stand unchanged, giving159 approved entries in total.
+The supplied recipe's exact Q total and direct F13 expression pass, including a distinct
+seven-variable linear solve in each field and all denominator checks. No implementation
+was edited or fidelity repair needed. The actual full40/forcing/high-jet/terminal binding
+and uniform native remainder M remain unproved by this certificate. Zero additional
+native material application or efficiency saving is credited.

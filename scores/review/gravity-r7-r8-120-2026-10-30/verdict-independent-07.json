@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "316bf57d79962b01e420db6111c08f7040311f5e",
+  "approved_count": 6,
+  "returned_count": 0,
+  "original_approvals_preserved": 153,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:selected-jet-coupled-recurrences",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.SelectedJets.Statement.recurrencesLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.SelectedJets.recurrencesLaw",
+      "review_text_sha256": "3322164a10b6a56348780083231ee4c98463f34a8c976c06bfcd156a9f6f8a11",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 19,
+      "new_material_native_application": false,
+      "reason": "Both native principal inverses and existence/uniqueness of the full supplied coupled selected jet. All later moments bind to the same y; no actual forcing/constructor high-jet identification inferred."
+    },
+    {
+      "key": "GAC2:ordered-third-inverse-jets",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.InverseJets.Statement.thirdLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.InverseJets.thirdLaw",
+      "review_text_sha256": "61604e6e247036391d7e33f3ed7d0484329fecfed5a0128fe2b50e7c91c7e54c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 22,
+      "new_material_native_application": false,
+      "reason": "Third noncommutative inverse retains both mixed orders, separate left/right inverse duties and uniqueness. Original opposite cubic incoming link products and native convolution checked; no analytic averaging/contour inverse."
+    },
+    {
+      "key": "GAC2:normal-pair-incoming-contacts",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.InverseJets.Statement.normalPairLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.InverseJets.normalPairLaw",
+      "review_text_sha256": "5a7f862b39010be63304d54471ac87c62941bbcc0cdf9b96ea11f7eb16c037ef",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 21,
+      "new_material_native_application": false,
+      "reason": "Original Gamma normal slots and signed Z1/Z3 primitives, explicit bounded-degree polynomials before extraction, full H2 plus sourceZ3 contact and independently reflected cubic test with exact cut cancellation guards."
+    },
+    {
+      "key": "GAC2:normal-divergence-physical-group",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.NormalDivergence.Statement.physicalLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.NormalDivergence.physicalLaw",
+      "review_text_sha256": "31349805cf2bcc8108ae389bc54a5d7bcfd6a4c7ba1ee09679506d921de67c7d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 11,
+      "new_material_native_application": false,
+      "reason": "Both entire electric sums cancel before specialization; original pair divergence/curl identity and supplied physical shift jets yield all-component nonzero group. No differentiation of a cut-only formula or actual native-source identification."
+    },
+    {
+      "key": "GAC2:four-group-recipe-exact-value",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.valueLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.valueLaw",
+      "review_text_sha256": "a71ebbdcba9f5ea94eda54c14aca90f654b6864c81b7f1c4242bc5ae265295ca",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 68,
+      "new_material_native_application": false,
+      "reason": "Complete supplied recipe agrees with unique coupled jet, all listed division sites plus Hd/D guards checked. Direct Q value/nonzero and independent F13 groups/total; no unproved field homomorphism and no actual full40/terminal identification."
+    },
+    {
+      "key": "GAC2:fixed-recipe-contact-budget",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.contactLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw",
+      "review_text_sha256": "f78bdd0d6fc398dbc9629278c5e62727c15c499d63f0df018e29791a5ce4dd77",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 58,
+      "new_material_native_application": false,
+      "reason": "Correct supplied quartic and first boost56 normalization, nonzero coefficients and quantitative complex error-budget lower bound with strict threshold. Native negativeh factor retained; actual expansion/uniformM not supplied."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/SelectedJets/RecurrencesDefs.lean": "21d9dd29f65f6f1959fd879c0eff4eef3ff1567f614bbeddfde2eac762a5047f",
+    "scores/ArtformScores/GravityBridge/Native/SelectedJets/RecurrencesStatements.lean": "6510e859c0f2283812da1e8e4397cd4b12d658b3e85a6bb1a71e5a781209158c",
+    "scores/ArtformScores/GravityBridge/Native/SelectedJets/Recurrences.lean": "fc27226d2ec4d158d46a27deb82483bf7c5b58469a6e79e6bf3d7272daaeaa4a",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/ThirdDefs.lean": "f160d2c6e8b99a60aa7d5831fc8a378f9dfe5e54a1465a1e74ea1625bfe894a8",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/ThirdStatements.lean": "f76595303652dca32e70679eecf19cbef413134c1277142fc7708f16aa5b910b",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/Third.lean": "c9800e2454fb98c5d38e20c99e325a0b0075a07674d89264de6bfa5d43ba798d",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/NormalPairDefs.lean": "8abad1db9299d7ce79948dfaf46ba9ee543b1eb30decb28a37c5f7b04c1de4b6",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/NormalPairStatements.lean": "c4c67a13f130b5ce0e8d21cad8c0e5ba412920f5e7a88b955cb9beb4e5c48183",
+    "scores/ArtformScores/GravityBridge/Native/InverseJets/NormalPair.lean": "f96bdcc434275e13ccfc5ab112cf3dcf2cd7d3fa76468b95cfa0cba3ff50a9c9",
+    "scores/ArtformScores/GravityBridge/Native/NormalDivergence/PhysicalDefs.lean": "0d2d6e1e6de284bb9867f6f0e72f171ce944a8c6d68e501f3eca54ac5d18384c",
+    "scores/ArtformScores/GravityBridge/Native/NormalDivergence/PhysicalStatements.lean": "58cc7feea7d8f4ce5cffcab15662f9ea73dda0b4daefa6183b950f6753b559ae",
+    "scores/ArtformScores/GravityBridge/Native/NormalDivergence/Physical.lean": "20b55a3430a15376d1af04c72c744a3b15635e07a0b2a3d9bae9c8f6ce44c1a8",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ValueDefs.lean": "91fbc7dcce8aad1ef031dec13cd5638521d3c8811d5152f7e6fc188b34e8ebd8",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ValueStatements.lean": "f0d98a5969c47ebab71b4d33f550d5eb6a2cd3638c18cc7b078ed40123f53eab",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/Value.lean": "664f4b2ee2c531fccdee8563afc495dc131a0c486d8703e23503bb8e7e076bbe",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ContactDefs.lean": "592ea708003929a8e5e30df4af8004bb2eb423a7ee34a4ce59e8bb32ac14fa3c",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ContactStatements.lean": "87da7522b66b91eadcb3333a8e6e0570288009186057e52f5793185f0f08af60",
+    "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/Contact.lean": "72cbe19ebe3468b0193f724d1ee00830f48c3ad7d997247c56a5624f28c389be"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "15c3a6ca63af75e4bf1a951e575c2a89aa37f7d13953157d6d7ea58048a52f3a",
+    "physics/ledgers/lattice-waves/findings/191-coupled-selected-reference-jet-recurrences.md": "84eb5d44729bf290ee22c8356f7fcce6b5c7d4815520fd6871c785e559c5684b",
+    "physics/ledgers/lattice-waves/findings/192-ordered-third-inverse-and-incoming-link-product.md": "4c35ff74a1ec796193c4f2a553cac606c99f06af7186fe2d49b0541c93af1ed8",
+    "physics/ledgers/lattice-waves/findings/193-original-normal-pair-and-reflected-cubic-test.md": "5b9b48791810c8bd2005620e89d80bc76c4d85e37e0be7424f1f67d06c749f5d",
+    "physics/ledgers/lattice-waves/findings/194-complete-electric-divergence-and-physical-third-group.md": "c11eb1c800a732929080cfda1db058873893c09e7551efed9eb6afceffb54ed0",
+    "physics/ledgers/lattice-waves/findings/195-exact-four-group-recipe-value-and-regular-prime.md": "7deb8fca700abfe9d15b036759f462692490e2a35f2bcd7963105486c0a88c13",
+    "physics/ledgers/lattice-waves/findings/196-quantitative-fixed-recipe-temporal-contact-budget.md": "42cec935cd54a794be0c3c9f2e272225c8edb009c86ba223ab42301620e9ebfa"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "497b991713f60e0e0bbc330806ade12c042d4141ab6ca0e50ba883e387b8e5cc",
+  "exact_original_snapshot_pairs_authenticated": 24,
+  "new_compact_normal_source_scope_files_read": 2,
+  "scope_checks": {
+    "coupled_y_P_N_unique_not_free": true,
+    "third_inverse_both_mixed_orders_and_inverse_directions": true,
+    "bounded_degree_polynomials_before_coefficient_extraction": true,
+    "independent_cubic_test_reflects_all_variables": true,
+    "both_whole_electric_sums_cancel_before_cut_specialization": true,
+    "recipe_direct_Q_proof_no_unproved_Q_to_F13_hom": true,
+    "listed_denominator_sites_checked": 24,
+    "Hd_D_inversions_guarded_in_Q_and_F13": true,
+    "full_third_source_derivative_retained": true,
+    "reference_contact_first_boost_denominator": 56,
+    "error_budget_is_explicit_unsupplied_native_premise": true,
+    "native_negative_h_factor_retained": true
+  },
+  "independent_arithmetic": "arithmetic-independent-07.py",
+  "independent_arithmetic_sha256": "3bebf7adebfc2214a1d5284e4a7c0ef30f32017e632d5a4b20a37f075191aa00",
+  "independent_arithmetic_result": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-07.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": null,
+    "timing_note": "Replay completed successfully; elapsed process time not separately instrumented.",
+    "independent7by7_coupled_linear_solves": [
+      "Q",
+      "F13"
+    ],
+    "all_denominator_sites_checked": 24,
+    "Q_group_values": [
+      "17302888997669509/1027045918626651000",
+      "94738/499100405",
+      "-3535507764661/42352409015532000",
+      "601523512985887/42793579942777125"
+    ],
+    "Q_total": "42464891403943157/1369394558168868000",
+    "F13_groups": [
+      0,
+      3,
+      3,
+      9
+    ],
+    "F13_total": 2,
+    "omitting_full_third_source_contact_changes_value": true,
+    "bounded_degree_Z1_Z3_polynomial_construction": true,
+    "noncommuting_third_inverse_both_coefficient_directions": true,
+    "whole_electric_cancellation_and_supplied_physical_group": true,
+    "reference_d4": "-7519082059/1676935398600",
+    "reference_boost_imaginary_part": "-7346426212882166161/59485514186547212960",
+    "strict_error_budget_needed": true,
+    "actual_full40_functional_or_uniform_M_identified": false,
+    "source_sha256": {
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-06.py": "379b5041574073967d178f60e7644f11ee835537d0eeab4c1a9a6323b4d0f15f",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-03.py": "11587ba655d800a7294d6188154191f5912a0017b98140c55f81be39e12e634a",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-01.py": "5c48b33e49fb5b4f5ca49f0dfc217272704459a58c49f8ccf041ee97e028fcba",
+      "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ValueDefs.lean": "91fbc7dcce8aad1ef031dec13cd5638521d3c8811d5152f7e6fc188b34e8ebd8",
+      "scores/ArtformScores/GravityBridge/Native/SelectedJets/RecurrencesDefs.lean": "21d9dd29f65f6f1959fd879c0eff4eef3ff1567f614bbeddfde2eac762a5047f",
+      "scores/ArtformScores/GravityBridge/Native/InverseJets/ThirdDefs.lean": "f160d2c6e8b99a60aa7d5831fc8a378f9dfe5e54a1465a1e74ea1625bfe894a8",
+      "scores/ArtformScores/GravityBridge/Native/InverseJets/NormalPairDefs.lean": "8abad1db9299d7ce79948dfaf46ba9ee543b1eb30decb28a37c5f7b04c1de4b6",
+      "scores/ArtformScores/GravityBridge/Native/NormalDivergence/PhysicalDefs.lean": "0d2d6e1e6de284bb9867f6f0e72f171ce944a8c6d68e501f3eca54ac5d18384c",
+      "scores/ArtformScores/GravityBridge/Native/LongitudinalRecipe/ContactDefs.lean": "592ea708003929a8e5e30df4af8004bb2eb423a7ee34a4ce59e8bb32ac14fa3c"
+    }
+  },
+  "root_Fraction_replay": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/source-recipe-root-07.py"
+    ],
+    "exit_code": 0,
+    "all_JSON_fields_reproduced": true,
+    "script_sha256": "be5ca68413674c99ad66c6d4156f636c14f9a554dcf28ae3e70f9e1ac0f4fb80",
+    "artifact_sha256": "03a08ae67cf082669d1c1757e1e545c02d4ecd72efbf0275e66c963fd9c636b2",
+    "result": {
+      "status": "passed",
+      "scope": "Independent exact replay of supplied fixed-reference recipe and coupled moment recurrences; actual full40/source/constructor identification not inferred.",
+      "y_residues": [
+        5,
+        7,
+        12
+      ],
+      "moment_residues": [
+        3,
+        11,
+        8,
+        1,
+        0,
+        8,
+        12
+      ],
+      "group_residues": [
+        0,
+        3,
+        3,
+        9
+      ],
+      "total_residue": 2,
+      "group_values": [
+        "17302888997669509/1027045918626651000",
+        "94738/499100405",
+        "-3535507764661/42352409015532000",
+        "601523512985887/42793579942777125"
+      ],
+      "total_value": "42464891403943157/1369394558168868000",
+      "total_bitlengths": [
+        56,
+        61
+      ],
+      "original_principal_equation_verified": true,
+      "new_physical_credit": 0,
+      "historical_saving_credit": 0
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_efficiency_saving_credit": 0,
+    "prior_C10_prospective_program_compression_unchanged": true,
+    "supplied_expression_value_certified": true,
+    "actual_full40_fixed_N4_functional_identified": false,
+    "actual_uniform_M_supplied": false,
+    "uninstantiated_bridges": [
+      "actual full40-to-E2..E5 incoming source/field coefficient extraction",
+      "actual forcing, normalized high jets and coupled compatibility identification",
+      "complete lower returns and original fixed-N4 terminal constructor branch",
+      "native analytic contour/halo class and uniform error bound",
+      "copied Lorentz frame/link/history and physical prescription admission"
+    ]
+  },
+  "audit": "audit-independent-07.md",
+  "validation": "validation-independent-07.json"
+}

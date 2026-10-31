@@ -2794,8 +2794,8 @@ See [finding191](findings/191-coupled-selected-reference-jet-recurrences.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.SelectedJets.Statement.recurrencesLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.SelectedJets.recurrencesLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "3322164a10b6a56348780083231ee4c98463f34a8c976c06bfcd156a9f6f8a11"
 
 [[statement]]
 key = "GAC2:ordered-third-inverse-jets"
@@ -2816,8 +2816,8 @@ See [finding192](findings/192-ordered-third-inverse-and-incoming-link-product.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.thirdLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.thirdLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "61604e6e247036391d7e33f3ed7d0484329fecfed5a0128fe2b50e7c91c7e54c"
 
 [[statement]]
 key = "GAC2:normal-pair-incoming-contacts"
@@ -2840,8 +2840,8 @@ See [finding193](findings/193-original-normal-pair-and-reflected-cubic-test.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.normalPairLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.normalPairLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "5a7f862b39010be63304d54471ac87c62941bbcc0cdf9b96ea11f7eb16c037ef"
 
 [[statement]]
 key = "GAC2:normal-divergence-physical-group"
@@ -2862,8 +2862,8 @@ See [finding194](findings/194-complete-electric-divergence-and-physical-third-gr
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.NormalDivergence.Statement.physicalLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.NormalDivergence.physicalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "31349805cf2bcc8108ae389bc54a5d7bcfd6a4c7ba1ee09679506d921de67c7d"
 
 [[statement]]
 key = "GAC2:four-group-recipe-exact-value"
@@ -2885,8 +2885,8 @@ See [finding195](findings/195-exact-four-group-recipe-value-and-regular-prime.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.valueLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.valueLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "a71ebbdcba9f5ea94eda54c14aca90f654b6864c81b7f1c4242bc5ae265295ca"
 
 [[statement]]
 key = "GAC2:fixed-recipe-contact-budget"
@@ -2907,5 +2907,5 @@ See [finding196](findings/196-quantitative-fixed-recipe-temporal-contact-budget.
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.contactLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f78bdd0d6fc398dbc9629278c5e62727c15c499d63f0df018e29791a5ce4dd77"
