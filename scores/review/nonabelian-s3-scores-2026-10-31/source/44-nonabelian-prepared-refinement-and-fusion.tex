@@ -1,0 +1,556 @@
+\section{Non-Abelian prepared refinement and fusion}\label{res:44-nonabelian-prepared-refinement-and-fusion}
+The rooted operator of Section~\ref{sec:tree-refinement-boundary} fixes the
+gauge at the root.  For $C_2\le S_3$ it therefore gives the transposition
+sector the norm squared $1/3$, and for $C_3\le S_3$ it merges the orbits of
+$r$ and $r^2$ (Proposition~\ref{prop:three-refinement-tests}).  This section
+keeps a $K$-valued gauge workspace at every vertex, including the root, and
+derives a weighted comparison that repairs the first case and states exactly
+what the second admits.
+
+The comparisons are prepared gauge boundaries in the sense of
+Section~\ref{res:43-prepared-gauge-boundaries-and-composition}.  Such a
+boundary admits a subspace $D_e$ of the source physical space, prepares fresh
+resources by an owned source run, and supplies an isometry $b_e$ from $D_e$
+into the target physical space together with an environment vector $\eta_e$
+that does not depend on the input: the raw comparison sends each prepared
+input $x$ to $j_Yb_ex\otimes\eta_e$
+(Equation~\eqref{eq:43-prepared-gauge-boundaries-and-composition:C8.2}).  The
+tag FullJoint requires $\eta_e$ to be invariant under the full target action.
+Two boundaries compose on the maximal domain $\{x\in D_f:b_fx\in D_g\}$
+(Equation~\eqref{eq:43-prepared-gauge-boundaries-and-composition:C8.12}).  We
+write $\mathcal Q_H$ and $\mathcal Q_K$ for the physical spaces of the pure $H$-
+and $K$-profiles (written $Q_X$ in
+Section~\ref{res:43-prepared-gauge-boundaries-and-composition}).  All optional
+fairness, scheduling and independence slots of the profiles and phases in this
+chapter are $\AFNoClaim$.
+
+\subsection{The finite gauge-action correspondence}\label{md:44-nonabelian-prepared-refinement-and-fusion:the-finite-gauge-action-correspondence}
+
+Fix a finite connected oriented graph $X$ with $v$ vertices and finite groups
+$H\le K$.  Connections are $U\in H^E$, with gauge convention
+\begin{equation}
+(U^h)_{u\to w}=h_wU_{u\to w}h_u^{-1}.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.1}
+\end{equation}
+
+Let $O_i$ be the full $H^V$ gauge orbits, $n_i=|O_i|$, and $C$ the full $K^V$
+orbits meeting $H^E$.  Write $p(i)=C$ when $O_i\subseteq C$, $m_C=|C|$, and
+$\kappa_C=|\Stab_{K^V}(U)|$ for $U$ in $C$.  For a connected graph $\kappa_C$
+is the cardinality of the simultaneous centralizer of its based chord tuple.
+Thus $m_C=|K|^v/\kappa_C$.  We say that $p$ \emph{fuses} two source orbits
+$i\ne i'$ when $p(i)=p(i')$.
+
+The comparison carrier contains \textbf{all vertex gauges}, including the root:
+\begin{equation}
+\mathcal A=H^E\times K^V,\qquad t(U,k)=U^k.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.2}
+\end{equation}
+
+The source profile action is
+\begin{equation}
+h\cdot(U,k)=(U^h,hkh^{-1}),\quad h\in H^V,
+ \qquad t(h\cdot(U,k))=t(U,k)^h.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3}
+\end{equation}
+
+In particular, a constant source gauge can act nontrivially on the gauge
+workspace by conjugation.  Treating that workspace as neutral would lose
+the residual symmetry needed in a non-Abelian example.
+
+There is also a full target action on the comparison set $\mathcal A$ by
+$(U,k)\mapsto(U,gk)$, with $t(U,gk)=t(U,k)^g$.  Its restriction is not
+identical to \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3}.
+The discrepancy is the fibre-preserving transformation
+$(U,k)\mapsto(U^h,kh^{-1})$.  Both actions and the fibre relation are retained;
+no pullback through a nonexistent inverse of $t$ is asserted.
+
+\subsubsection{Fibre normalization}\label{md:44-nonabelian-prepared-refinement-and-fusion:fibre-normalization}
+
+Put
+\begin{equation}
+N_C=\sum_{i:p(i)=C}n_i,\qquad \ell_C=N_C\kappa_C.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.4}
+\end{equation}
+
+\begin{proposition}\label{prop:fibre-normalization}
+Every $Y\in C$ has exactly $\ell_C$ preimages under $t$.  The weighted
+linearization
+\begin{equation}
+F|U,k\rangle=\ell_{p(i(U))}^{-1/2}|U^k\rangle
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.5}
+\end{equation}
+is a coisometry onto the raw target saturation $S=K^V\cdot H^E$.  It
+intertwines the source action
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3} with the embedded
+target action.  Its initial projection $F^\dagger F$ averages coefficients
+uniformly within each $t$-fibre.
+\end{proposition}
+
+\begin{proof}
+For a fixed $U$ in $O_i\subseteq C$, the solutions of $U^k=Y$ form a coset of
+$\Stab_{K^V}(U)$, of size $\kappa_C$.  Sum over the $N_C$ available source
+configurations.  Distinct target rows have disjoint fibres; every row has
+$\ell_C$ entries of size $\ell_C^{-1/2}$, so $FF^\dagger=P_S$.  The coefficient
+depends only on $C$, and
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3} preserves that
+class, proving the intertwiner.
+\end{proof}
+
+This normalization is not ordinary group averaging.  The unweighted
+pushforward of a uniform source and workspace state amplifies fibres.  Nor is
+$F$ a deterministic basis pushforward in the sense of
+Definition~\ref{def:quantum-gauge-profile-morphism}.  It is an explicitly
+weighted correspondence in a prepared boundary of
+Section~\ref{res:43-prepared-gauge-boundaries-and-composition}.
+
+\subsection{A legal preparation, with its coefficient boundary exposed}\label{md:44-nonabelian-prepared-refinement-and-fusion:a-legal-preparation-with-its-coefficient-boundary-exposed}
+
+\begin{definition}[Gauge workspace]\label{def:gauge-workspace}
+The finite profiles $\AFName{GaugeWorkspace}[H,K,X]$ have the following
+fields.  The kinematic field is $H$ connections on canonical $H$ torsors.  At
+every vertex $w$, the fresh workspace palette is $K$ with source action
+$k_w\mapsto h_wk_wh_w^{-1}$, realized as the standard basis of the
+permutation representation $R[K]$; edge coefficient carriers are trivial, with
+the usual finite tensor products and evaluation maps.  There is a $0$-cell
+coefficient channel at each vertex, supported and anchored there, with this
+palette and action and the identity coefficient reduct.  Its
+$\AFCoeffIntWit$ has equivariance
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3} and a diagonal
+loss relation.  Auxiliary state is a singleton; observation and recognition
+families are empty; classical Gauss predicates are true.  The group-source
+receipts for $H$ and $K$ are declared finite multiplication tables, the
+subgroup map is displayed, and the induced-torsor identification is
+$[h,a]\mapsto ha$ from $H\times_HK$ to the target canonical $K$ torsor.  No
+temporal-origin inheritance is claimed.
+\end{definition}
+
+The pure target has $K$ connections; a tagged target is constructed in
+Section~\ref{md:44-nonabelian-prepared-refinement-and-fusion:retaining-a-physical-record-changes-the-target-not-the-no-go}.
+
+The full augmented quantum physical carrier is the invariant subspace of
+$\mathbb C[H^E\times K^V]$ under
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.3}, with one
+normalized vector per complete orbit.  It is not replaced by the smaller ready
+subspace.  The declared fresh resource is $|1\rangle$ at every vertex, fixed
+by conjugation.  Thus $j_H|\psi\rangle\otimes|1\rangle^{V}$ is a valid
+invariant ready input.
+
+For $d=|K|>1$, let $u=d^{-1/2}\sum_a|a\rangle$ and define the real Householder
+matrix $Q_d$ by
+\begin{equation}
+(Q_d)_{1a}=(Q_d)_{a1}=d^{-1/2},\qquad
+ (Q_d)_{ab}=\delta_{ab}-\frac1{d-\sqrt d}\quad(a,b\ne1).
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.6}
+\end{equation}
+
+This is $I-2ww^\dagger/\langle w,w\rangle$ for $w=|1\rangle-u$.  Consequently
+$Q_d^2=I$ and $Q_d|1\rangle=u$.  Conjugation fixes both $|1\rangle$ and $u$,
+so $Q_d$ commutes with it.
+
+The owned phase $\AFName{WorkspacePrepare}[w]$ has, at each input, one
+application for every proposed output $a\in K$.  It reads and writes only
+$k_w$; its guard is true, its proposal is $k_w:=a$, and its commit law is
+finite membership and identity elsewhere.  Legal batches are empty and
+singleton; the empty coefficient is zero and the singleton coefficient is
+$(Q_d)_{a,k_w}$.  Gauge transport conjugates both labels, preserving the
+coefficient.  The trace retains the level, vertex, read, proposal, commit and
+coefficient.  The ordered run of the $v$ phases has full raw and physical
+unitarity; its reverse is its inverse.
+
+The pure $H$ and $K$ endpoint profiles retain their full raw connection bases,
+full normalized gauge-orbit physical bases and inclusions, and an identity run
+before any separately named continuation law.  Their other channels are
+trivial, with the same declared source receipts and identity reducts.  All
+separately owned phases below use the same empty and singleton batch policy,
+zero empty coefficient and displayed singleton kernel coefficient.  Every event
+retains its phase, read, proposal, commit and coefficient; a preparation
+sequence retains each intermediate event.
+
+The run prepares
+\begin{equation}
+j_H|\psi\rangle\otimes|1\rangle^{V}
+   \xrightarrow{\prod_w Q_{d,w}}
+ j_H|\psi\rangle\otimes|+_K\rangle^V.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.7}
+\end{equation}
+
+No unknown workspace is reset.  No branch is sampled or copied into an
+additional physical record by the trace encoder.
+
+For the concrete groups of orders $2,3,4,6,8,12,24$ used below, the displayed
+normalizers and preparation matrices are available in the declared real field
+$R=\mathbb Q(\sqrt2,\sqrt3)$, with its positive real embedding into $\mathbb C$
+and identity involution.  This is an explicit new scalar choice, not a
+conclusion that the dyadic ring $R^{\rm gr}_8$ of
+Equation~\eqref{eq:octagonal-ring} already contains the required coefficients.
+In particular, \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.6} can
+require rational denominators beyond powers of two and three.  General finite
+groups require separately sufficient scalars.
+
+\subsection{The normalized physical comparison and its maximal domain}\label{md:44-nonabelian-prepared-refinement-and-fusion:the-normalized-physical-comparison-and-its-maximal-domain}
+
+Let $A$ be the physical map obtained from $F$ and the preparation
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.7}:
+\begin{equation}
+F\bigl(j_H|i\rangle\otimes|+_K\rangle^V\bigr)
+   =j_K A|i\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.8}
+\end{equation}
+
+\subsubsection{Weighted fusion}\label{md:44-nonabelian-prepared-refinement-and-fusion:weighted-fusion}
+
+\begin{proposition}\label{prop:weighted-fusion}
+For every source orbit label,
+\begin{equation}
+A|i\rangle=\sqrt{\frac{n_i}{N_{p(i)}}}\,|p(i)\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.9}
+\end{equation}
+Its maximal isometric domain is
+\begin{equation}
+D=\operatorname{span}\{|s_C\rangle:C\text{ covered}\},\qquad
+ |s_C\rangle=\sum_{i:p(i)=C}\sqrt{\frac{n_i}{N_C}}\,|i\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.10}
+\end{equation}
+The vectors $|s_C\rangle$ are orthonormal, $A|s_C\rangle=|C\rangle$, and
+$A^\dagger A=P_D$.  Thus the entire source physical space is admitted exactly
+when $p$ has no fusion.
+\end{proposition}
+
+\begin{proof}
+At a fixed $Y\in C$, an input orbit $i$ contributes $n_i\kappa_C$ source pairs,
+each with amplitude $1/\sqrt{n_i|K|^v\ell_C}$.  Comparison with the target
+amplitude $1/\sqrt{m_C}$ gives
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.9}.  Each row of $A$
+has squared norm one, because its weights sum to $N_C/N_C$.  Different rows
+have disjoint source supports.  Therefore $A^\dagger A$ is the projector onto
+their adjoint row vectors, which are
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.10}.  Norm is
+preserved exactly on that image.
+\end{proof}
+
+The comparison has an exact coherent inverse on this prepared image:
+\begin{equation}
+F^{\dagger} j_K|C\rangle
+     =j_H|s_C\rangle\otimes|+_K\rangle^V.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.11}
+\end{equation}
+
+This makes the role of compression explicit.  The admitted preparation is
+already uniform on the fibres, so no projection or postselection is used.  An
+arbitrary nonready vector can lose norm under $F$ and is not licensed by the
+boundary.  The comparison is still a WITNESS with a legal preceding
+preparation, not an automatically installed active quotient SCRIPT.
+
+The source averages are weighted by the numbers of configurations, not by a
+uniform count of orbit names.  Write $D_4$ for the dihedral group of order
+eight, a Sylow $2$-subgroup of $S_4$.  On one loop, the inclusion
+$D_4\subset S_4$ fuses two source classes of sizes one and two.  Their surviving vector has
+coefficients $\sqrt{1/3}$ and $\sqrt{2/3}$.  Replacing them by equal weights
+fails \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.9}.
+
+\subsection{\texorpdfstring{$C_2\subset S_3$}{C2 in S3}: conjugacy growth without loss of source information}\label{md:44-nonabelian-prepared-refinement-and-fusion:c2s3-conjugacy-growth-without-loss-of-source-information}
+
+Use $H=\{1,(12)\}$ and the square.  Both $H$ orbits have size eight.  The
+covered target sectors are the identity and the transposition class
+(Table~\ref{tab:c2s3-sectors}).
+
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Sector & Source orbit $n_i$ & Target orbit $m_C$ & Stabilizer $\kappa_C$
+  & Fibre $\ell_C$ & Coefficient in $F$\\
+\midrule
+Identity & $8$ & $216$ & $6$ & $48$ & $1/\sqrt{48}$\\
+Transposition & $8$ & $648$ & $2$ & $16$ & $1/4$\\
+\bottomrule
+\end{tabular}
+\caption{The covered sectors of $C_2\subset S_3$ on the square: source and
+target orbit sizes, the order $\kappa_C$ of the target stabilizer, the span
+fibre size $\ell_C=N_C\kappa_C$ and the coefficient $\ell_C^{-1/2}$ of the
+linearization \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.5}.}
+\label{tab:c2s3-sectors}
+\end{table}
+
+The two target labels are distinct, so $D=\mathcal Q_H$ and
+\begin{equation}
+A|1\rangle=|[1]_{S_3}\rangle,\qquad
+ A|(12)\rangle=|[\text{transposition}]_{S_3}\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.12}
+\end{equation}
+
+Together with the preparation of
+Section~\ref{md:44-nonabelian-prepared-refinement-and-fusion:a-legal-preparation-with-its-coefficient-boundary-exposed}
+this supplies a FullJoint prepared boundary
+(Section~\ref{res:43-prepared-gauge-boundaries-and-composition}) on the whole original
+\textbf{source physical space}.  Its separate environment is the tensor unit.
+The augmented source profile still has additional physical states; no
+whole-augmented-profile morphism is asserted.
+
+The rooted operator of Section~\ref{sec:tree-refinement-boundary}, built on the
+tree charts of Section~\ref{res:40-gauge-fixing-and-refinement-correspondences},
+fixes the root gauge and so omits the residual conjugations; it gives the
+transposition sector the norm $\sqrt{\rho_a}=1/\sqrt3$.  The root workspace
+supplies those conjugations, and the fibre normalization, not a rescaling of
+$1/\sqrt3$ to one, restores norm one.  The square calculation enumerates all
+$20{,}736=2^4\cdot6^4$ source and workspace pairs and both full target orbits.
+
+\subsection{\texorpdfstring{$C_3\subset S_3$}{C3 in S3}: a fusion boundary and an owned preparation}\label{md:44-nonabelian-prepared-refinement-and-fusion:c3s3-a-genuine-fusion-boundary-and-an-owned-preparation}
+
+Let $r=(123)$.  The three source square orbits have size $27$.  The target
+identity orbit has size $216$ and stabilizer six.  The target three-cycle orbit
+has size $432$ and stabilizer three; it receives both source labels $r$ and
+$r^2$, which $p$ therefore fuses (Figure~\ref{fig:c3s3-fusion}).  In both
+target sectors $\ell_C=162$.  Hence
+\begin{equation}
+A|1\rangle=|[1]\rangle,\quad
+ A|r\rangle=2^{-1/2}|[r]\rangle,\quad
+ A|r^2\rangle=2^{-1/2}|[r]\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.13}
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,
+  vtx/.style={circle,fill=platenavy,inner sep=1.6pt},
+  same/.style={draw=platenavy,thick,-{Latex[length=2mm]}},
+  moved/.style={draw=platered,line width=1.3pt,-{Latex[length=2mm]}}]
+\newcommand{\fusq}[3]{% #1 x shift, #2 style of e_3, #3 label of e_3
+  \begin{scope}[shift={(#1,0)}]
+    \fill[tealrod!8] (0,0) rectangle (2.3,2.0);
+    \draw[same] (0,0)--(2.3,0) node[midway,below,plate label]{$1$};
+    \draw[same] (2.3,0)--(2.3,2.0) node[midway,right,plate label]{$1$};
+    \draw[same] (2.3,2.0)--(0,2.0) node[midway,above,plate label]{$1$};
+    \draw[#2] (0,2.0)--(0,0) node[midway,left,plate label]{#3};
+    \foreach \x/\y in {0/0,2.3/0,2.3/2.0,0/2.0}{\node[vtx] at (\x,\y) {};}
+    \node[font=\scriptsize] at (1.15,1.0) {$f$};
+    \node[font=\scriptsize,anchor=north east] at (0,-.05) {$v_0$};
+    \node[font=\scriptsize,anchor=north west] at (2.3,-.05) {$v_1$};
+    \node[font=\scriptsize,anchor=south west] at (2.3,2.05) {$v_2$};
+    \node[font=\scriptsize,anchor=south east] at (0,2.05) {$v_3$};
+  \end{scope}}
+\fusq{0}{same}{$r$}
+\fusq{6.3}{moved}{\textcolor{platered}{$r^2$}}
+\foreach \x/\y in {6.3/0,8.6/0,8.6/2.0,6.3/2.0}{\draw[purplerod,thick] (\x,\y) circle (.18);}
+\draw[script arrow] (3.35,1.0)--(5.25,1.0);
+\node[font=\scriptsize,align=center,anchor=south] at (4.3,1.1)
+  {constant gauge $(12)$\\in $S_3$, not in $C_3$};
+\node[font=\scriptsize,text=greenrod!70!black] at (1.15,-.7)
+  {$\Hol=r=(123)$};
+\node[font=\scriptsize,text=platered] at (7.45,-.7)
+  {$\Hol=(12)\,r\,(12)=r^2$};
+\node[font=\scriptsize] (sr) at (1.15,-1.55) {$|r\rangle$ in $\mathcal Q_{C_3}$};
+\node[font=\scriptsize] (sq) at (7.45,-1.55) {$|r^2\rangle$ in $\mathcal Q_{C_3}$};
+\node[font=\scriptsize] (tc) at (4.3,-2.75)
+  {$|[r]\rangle$ in $\mathcal Q_{S_3}$, class $\{r,r^2\}$};
+\draw[witness arrow] (sr.south east)--(tc.north west)
+  node[midway,below left=-1pt,font=\scriptsize]{$A$: $2^{-1/2}$};
+\draw[witness arrow] (sq.south west)--(tc.north east)
+  node[midway,below right=-1pt,font=\scriptsize]{$A$: $2^{-1/2}$};
+\node[font=\scriptsize,align=center,text=plategray] at (4.3,-3.45)
+  {admitted domain $D=\operatorname{span}\{|1\rangle,\,(|r\rangle+|r^2\rangle)/\sqrt2\}$};
+\end{tikzpicture}
+\caption{Fusion of $r=(123)$ and $r^2$ for $C_3\subset S_3$ on the square.
+Top: a $C_3$ connection with holonomy $r$ and its image under the constant
+gauge change $(12)$, which lies in $S_3$ but not in $C_3$; it conjugates
+every link and sends the holonomy to $r^2$.  Source: $C_3$ connections, whose
+holonomy is gauge invariant, so $r$ and $r^2$ label different source orbits.
+Target: $S_3$ connections, where the two orbits lie in one class.  Law: the
+physical comparison $A$ of Equation~\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.8},
+on the same square; bottom: $A|r\rangle=A|r^2\rangle=2^{-1/2}|[r]\rangle$ by
+Equation~\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.13}, so $A$
+is isometric only on the domain $D$ of
+Equation~\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.14}.}
+\label{fig:c3s3-fusion}
+\end{figure}
+
+The prescribed map sending each source basis state to its normalized target
+class cannot be an isometry: it sends the orthogonal states $|r\rangle$ and
+$|r^2\rangle$ to the same state.  The canonical comparison instead has exact
+initial domain
+\begin{equation}
+D=\operatorname{span}\{|1\rangle,(|r\rangle+|r^2\rangle)/\sqrt2\}.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.14}
+\end{equation}
+
+Its antisymmetric complement maps to zero.  This is a restriction of the
+admitted boundary, not a claim that an antisymmetric source state ceases to be
+physical.
+
+A source preparation supplies
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.14}.  The owned phase
+$\AFName{ClassMix}$ fixes flux $1$ and applies the ordinary $2\times2$ Hadamard
+to the flux labels $r,r^2$.  In raw square coordinates it reads all links,
+preserves the three tree links, and proposes the chord $30$ that gives the
+chosen nonidentity output flux.  If $T=U_{23}U_{12}U_{01}$ and the proposed
+holonomy is $a$, set $U'_{30}=aT^{-1}$.  The identity-flux branch is the
+identity application.  The other two branches have Hadamard coefficients
+$\pm1/\sqrt2$.
+
+Guards specify these alternatives; write support is the chord, affected
+support is the square, and commit and trace data retain the displayed
+assignment and coefficient.  $C_3$ is Abelian, so the flux is invariant and the
+proposal commutes with every source gauge.  The matrix is the identity on
+identity flux plus a Hadamard on each fixed tree-coordinate block.  With the
+gauge workspace present it acts as the identity on that workspace.
+
+Starting in the ready code $\operatorname{span}\{|1\rangle,|r\rangle\}$, first
+run $\AFName{ClassMix}$, then the four workspace preparations of
+Section~\ref{md:44-nonabelian-prepared-refinement-and-fusion:a-legal-preparation-with-its-coefficient-boundary-exposed}.
+Equation~\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.8} maps this
+ready code isometrically onto the two covered target classes.  The other ready
+input $|r^2\rangle$ is sent by $\AFName{ClassMix}$ to the rejected antisymmetric
+sector.  This is a second, nontrivial prepared boundary; its admitted input is
+smaller than the three-dimensional source physical space.
+
+\subsection{Retaining a physical record changes the target, not the no-go}\label{md:44-nonabelian-prepared-refinement-and-fusion:retaining-a-physical-record-changes-the-target-not-the-no-go}
+
+To preserve all source labels, give the target a neutral physical register
+$i$ identifying the source $H$-orbit.
+
+\begin{definition}[Tagged target]\label{def:tagged-target}
+The \emph{tagged target} is the pure $K$-profile with one more finite neutral
+coefficient channel at the root, supported and anchored there, with standard
+basis $R[I]$ indexed by the set $I$ of source orbit labels, trivial gauge
+action and identity reduct.  Auxiliary state remains a singleton.  The target
+retains the full physical basis $|C,i\rangle$, including pairs outside the
+comparison image, and an identity run.  Its span endpoint and linearization
+are
+\begin{equation}
+t_{\rm tag}(U,k)=(U^k,i(U)),\qquad
+ \ell_i=n_i\kappa_{p(i)},\qquad
+ F_{\rm tag}|U,k\rangle=\ell_i^{-1/2}|U^k,i(U)\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.15}
+\end{equation}
+\end{definition}
+
+The fibres of $t_{\rm tag}$ no longer merge distinct source orbit labels.  The
+counting in the proof of Proposition~\ref{prop:weighted-fusion} gives
+\begin{equation}
+F_{\rm tag}(j_H|i\rangle\otimes|+_K\rangle^V)
+     =j_K|p(i)\rangle\otimes|i\rangle.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.16}
+\end{equation}
+
+This is an isometry on the whole source physical space, including fusion
+examples, \textbf{into the enlarged physical target}.  The labels of the
+register persist.  The register is part of the target profile of the boundary
+map $b_e$, not a fixed independent environment $\eta_e$ in the system-only
+factorization of Section~\ref{res:43-prepared-gauge-boundaries-and-composition}.
+
+For a superposition of $r$ and $r^2$, the joint record retains their relative
+phase.  Tracing that record gives the same system state for the symmetric and
+antisymmetric superpositions.  Thus
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.16} does not repair
+an isometry to the original system-only target.  Nor does it assert an actual
+outcome or an observer interpretation for that register.
+
+The normalizer in \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.15}
+differs from \eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.5} when
+fusion occurs.  One cannot attach an external record and keep using the
+untagged comparison $F$ without rechecking its domain.  $F$ preserves norm on
+vectors constant within its complete fibres; physical copies distinguishing
+members of a fibre can destroy that condition.  For example, copy every pair
+$(U,k)$ into an orthogonal external register before applying the original $F$
+to the source.  On either normalized $C_2$ square sector the resulting squared
+norm is $1/\ell_C$, namely $1/48$ or $1/16$; that recorded input is outside the
+admitted domain.  Proof and history witnesses are retained separately and do
+not create such copies.  No record is erased through a forgetful map.
+
+\subsection{Continuation laws and the locality boundary}\label{md:44-nonabelian-prepared-refinement-and-fusion:continuation-laws-and-the-locality-boundary}
+
+Also define $\AFName{ClassSign}[\chi]$, for a specified $\pm1$ function $\chi$
+on target conjugacy-orbit labels.  The source coefficient is $\chi(p(i(U)))$
+and the target coefficient is $\chi(C(Y))$.  The application is the identity,
+with read support all connections, no writes, true guard, and a singleton
+weight equal to that sign; empty batches have zero weight.  Its event retains
+the read and sign.  Gauge covariance, closed unitarity and preservation of the
+ready fusion code follow immediately from constancy on each covered target
+class.  It commutes with workspace preparation.
+
+Coefficientwise, $F\,\AFName{ClassSign}_H=\AFName{ClassSign}_K\,F$.  The
+history comparison sends the source sign event at $U$ to the target sign event
+at $U^k$, retaining the span witness $(U,k)$ and the normalizing coefficient.
+It preserves the complete source and target provenance; it does not identify
+different source events merely because their target sign agrees.  This is the
+selected law-qualified family for the untagged boundary.  A source sign that
+distinguishes fused classes does not descend to this family; the tagged target
+can instead read its retained register $i$.
+
+A naive noncentral target link write is not gauge covariant.  For example,
+left multiplication of one $S_3$ link by $(12)$ fails covariance under a
+constant three-cycle gauge.  The cyclic native write rule cannot simply be
+reused with the same name.
+
+There is a separately constructible finite coherent alternative.  For
+normalized target orbit vectors $u_0,u_t$ of identity and transposition,
+\begin{equation}
+K_{\rm swap}=I-|u_0\rangle\langle u_0|-|u_t\rangle\langle u_t|
+       +|u_t\rangle\langle u_0|+|u_0\rangle\langle u_t|
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.17}
+\end{equation}
+is a raw unitary commuting with every gauge transformation.  The owned phase
+$\AFName{OrbitSwap}$ has one application for each output configuration in the
+supported row of this kernel, reads and writes the full graph, and uses the
+displayed matrix coefficient.  Its guards, proposals and commits are finite
+membership; its traces keep all coefficients, including negative same-orbit
+terms.  On other orbits it is the identity.  Its complete physical kernel swaps
+the two selected labels and fixes the others.
+
+This is a full-support finite law, not a single-link write.  It satisfies the
+corresponding physical kernel square for
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.12}, but that
+equality does not supply a conservative comparison of the complete histories
+of the cyclic write.  Such a stronger law interface is not claimed here.
+Direct computation checks the one-loop raw matrix; the projector formula
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.17} proves the
+statement on the square.
+
+\subsection{Composition: one positive tower and one readiness failure}\label{md:44-nonabelian-prepared-refinement-and-fusion:composition-one-positive-tower-and-one-real-readiness-failure}
+
+For $C_2\subset S_3\subset S_3\times C_2$, use the subgroup in the first factor
+at each stage.  Both orbit maps have no fusion.  The prepared physical maps
+therefore compose as the direct inclusion of labels.  Each stage keeps its
+independently supplied gauge workspace, preparation events, span and
+normalizer in the staged comparison.  The second stage accepts the three-cycle
+class absent from the first landing.  The finite checks use one loop; the
+no-fusion statement for the first inclusion also holds for simultaneous
+tuples, since conjugating a nonidentity tuple entry $(12)$ back into $C_2$
+fixes it.  The direct-product second inclusion creates no new conjugacy
+identifications.
+
+In contrast, take $C_2\subset V_4\subset S_4$, where $V_4$ is the Klein
+subgroup of double transpositions.  The first map sends its nonidentity basis
+vector to one of the three nonidentity $V_4$ labels.  The unadapted canonical
+second map accepts only their uniform superposition and sends that one label
+with amplitude $1/\sqrt3$.  The direct $C_2\subset S_4$ comparison has no
+fusion and sends it with amplitude one.  Thus
+\begin{equation}
+A_{V_4,S_4}A_{C_2,V_4}\ne A_{C_2,S_4}.
+ \label{eq:44-nonabelian-prepared-refinement-and-fusion:C9.18}
+\end{equation}
+
+The exact staged ready domain, without an adapter, is only the identity line.
+The apparent norm squared $1/3$ on the other line is failed readiness, not a
+success probability for a licensed refinement run.
+
+An explicit source preparation repairs that selected path.  On the three
+nonidentity $V_4$ flux labels, use $Q_3$ from
+\eqref{eq:44-nonabelian-prepared-refinement-and-fusion:C9.6}, fixing identity
+flux.  This phase $\AFName{V4ClassMix}$ has the same finite chord-proposal
+construction as $\AFName{ClassMix}$, with three alternatives and the $Q_3$
+coefficients.  $V_4$ is Abelian, so it is an owned covariant unitary.  It maps
+the particular incoming double-transposition label to the required uniform
+combination.  With this extra preparation, the two-dimensional incoming code
+is admitted and the physical staged map equals the direct map.  The added
+process and its events remain part of the path; they are not inferred from the
+subgroup inclusions alone.
+
+This is a group-theoretic instance of the guarded composition of prepared
+boundaries (Section~\ref{res:43-prepared-gauge-boundaries-and-composition},
+Equation~\eqref{eq:43-prepared-gauge-boundaries-and-composition:C8.12}).  It
+also explains why a universal refinement tower cannot be inferred from
+successful individual normalized comparisons.
+Table~\ref{tab:inclusion-summary} compares these towers with the single
+inclusions of this chapter.

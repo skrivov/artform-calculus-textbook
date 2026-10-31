@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-31",
+  "author": "root",
+  "baseline": "f8c89bacbc4f7df649f0d117f2c7b5cb104c1d1e",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-s3-scores-2026-10-31/replay-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.585,
+      "stdout_sha256": "9a264498cdad4ccc0492d6e3d16eda6ac467a3610d63322a9f4ffb9be2bd00ae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 105.463,
+      "stdout_sha256": "11efe27193cb27318008d372cb067c2b376a97b9763e32f17c6ea45ffb6ce10c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 18.672,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 27.222,
+      "stdout_sha256": "fa9ad9c5434339456c8c02a35d9e82f6a67470a9e2765b9779c8837b92b98f23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.201,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.428,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.16,
+      "stdout_sha256": "7893b15a17e42973bf647a8a5adaecbcb2ad350f9d3f5192532fd2902f3eaf1e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.171,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.209,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.354,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.094,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.41,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.182,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Theorems"
+      ],
+      "exit_code": 0,
+      "seconds": 6.832,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "old_approved_entries": 248,
+  "old_manifest_entries_unchanged": true,
+  "old_lean_modules_unchanged": true,
+  "umbrella_additive_import": true,
+  "new_labels": [
+    "NQS:geometry",
+    "NQS:legal-coherent",
+    "NQS:unitary-score",
+    "NQS:physical-carrier",
+    "NQS:physical-descent",
+    "NQS:two-tick-curvature"
+  ],
+  "new_proof_axioms": {
+    "NQS:geometry": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NQS:legal-coherent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NQS:physical-carrier": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NQS:physical-descent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NQS:two-tick-curvature": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NQS:unitary-score": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "files": {
+    "scores/ArtformScores/Nonabelian/ProbabilityData.lean": "8ff2293ccc0781105af73b4d3ad1ddab9861dd99b9b27837d481e7996b4c22cd",
+    "scores/ArtformScores/Nonabelian/Probability.lean": "4c428b2e2050ca45c8ced99ea9ef8124f179d0187bd9e85733613935577bcac1",
+    "scores/ArtformScores/Nonabelian/Kernels.lean": "52175bd841a9d0d98bb5d930bc0dac1e2ea172084539a62d3145449d91bf689c",
+    "scores/ArtformScores/Nonabelian/Statements.lean": "9008a3e1329d5d08029cb9f4511060d4e1c9eef4ffd217d519938abb0d96e2f9",
+    "scores/ArtformScores/Nonabelian/OrbitData.lean": "ad70c825e0f90231cc9081c8286ff63f1f4e117261eed100060beab72f013624",
+    "scores/ArtformScores/Nonabelian/Process.lean": "29ec6640f01e8ca3ecb54b09b6037813cf54557c3fab23de8c2f98efca4494a3",
+    "scores/ArtformScores/Nonabelian/Theorems.lean": "4459ee07e64e11252661c142d446e2fe621426178b76e4432978aec2c040cb48",
+    "scores/ArtformScores/Nonabelian/Geometry.lean": "f9dae0ef98a08cfbbf4fbac3bdbbad35ac2fbd1f0b2f78403c2d630e0ca3f480",
+    "scores/ArtformScores/Nonabelian/Physical.lean": "c6c5c16cdc81359b528c8fa6a96f31491207a00b72c4d30ab3607d30d0b7e5f3",
+    "scores/ArtformScores/Nonabelian/Orbits.lean": "932ead502188bb0d2eccb7368693864258ca1978d3694bf18092b49a356b77c3",
+    "scores/ArtformScores/Nonabelian/Descent.lean": "fc66486ae7b252f3ee872567d14ea8e7a1456d376db4d2281fb7f0bd7e9740f1",
+    "scores/review/nonabelian-s3-scores-2026-10-31/ALGEBRA-OF-SCORES.md": "1e4650e694e41d9d4f55857adf3b648c645de79e8abbfa9f5edb91dc72b2000f",
+    "scores/review/nonabelian-s3-scores-2026-10-31/claims.json": "ef817fe273e6dd5d5d079ebcd23576c13e1a43c29f66114937eec3d0c757e07f",
+    "scores/review/nonabelian-s3-scores-2026-10-31/source-pins.json": "0311d22ffb08b5cb22fd2fa241d3f10482fa872e6d88fad087fb6e92a620ff4b",
+    "scores/review/nonabelian-s3-scores-2026-10-31/RESULTS.md": "9cebc16b93d28a077761d5d2acead5cd0bdd9d272194fc6fb5513015c3ebe046",
+    "scores/review/nonabelian-s3-scores-2026-10-31/README.md": "cd779dff35ccae88c20fe9683179ebf18d2384f68b24c4283e29e98103b34658",
+    "scores/review/nonabelian-s3-scores-2026-10-31/validate-root.py": "9db87a9b3d7fcf0200ac76d68e47dd9e059574c72c8074dbb8f8173a3a65f864",
+    "scores/review/nonabelian-s3-scores-2026-10-31/replay-root.py": "93ad63159e2017f713bb8ddf8bc9d7227ddea2bb30bfe8bbb8fa2e194537cfdc",
+    "scores/review/nonabelian-s3-scores-2026-10-31/replay-root.json": "639e1bb30ab425e08226a665a74921dca49d7b5e62d9966d2304e8baba65b3f1"
+  }
+}

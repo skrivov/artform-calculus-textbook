@@ -1,0 +1,504 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "/root/gravity_fidelity_review_01",
+  "baseline": "f8c89bacbc4f7df649f0d117f2c7b5cb104c1d1e",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-s3-scores-2026-10-31/replay-independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.615,
+      "stdout_bytes": 96,
+      "stdout_sha256": "eda0c2928a09f9b5e5759f9db6a319624d3597cbaa4f1325d3adc16e6ac20e57",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "Independent D3 replay passed:36 raw,11 orbits,32/81 versus0; all fourteen stage states checked.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-s3-scores-2026-10-31/replay-independent.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.612,
+      "stdout_bytes": 96,
+      "stdout_sha256": "eda0c2928a09f9b5e5759f9db6a319624d3597cbaa4f1325d3adc16e6ac20e57",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "Independent D3 replay passed:36 raw,11 orbits,32/81 versus0; all fourteen stage states checked.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-s3-scores-2026-10-31/replay-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.593,
+      "stdout_bytes": 78,
+      "stdout_sha256": "9a264498cdad4ccc0492d6e3d16eda6ac467a3610d63322a9f4ffb9be2bd00ae",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "Exact S3 replay passed:36 raw,11 physical; normalized curvature32/81 versus0.\n"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 4.445,
+      "stdout_bytes": 137,
+      "stdout_sha256": "bf9d29ae43df1a409349ca3c2be71530bd65dc553a6fb77103682a189bfe5826",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "\u2139 [3788/3899] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9776 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 18.825,
+      "stdout_bytes": 70493294,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_file": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 27.874,
+      "stdout_bytes": 31389199,
+      "stdout_sha256": "fa9ad9c5434339456c8c02a35d9e82f6a67470a9e2765b9779c8837b92b98f23",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_file": "build/ledger-report.json"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.446,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.066,
+      "stdout_bytes": 33,
+      "stdout_sha256": "c763703bdf2addffa2acabc6ffe381c84e57a68745823a32ce78746edf13f24b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "1249 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.211,
+      "stdout_bytes": 44,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.329,
+      "stdout_bytes": 51,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.095,
+      "stdout_bytes": 162,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.402,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "0 approved statements changed since review\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.197,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Geometry"
+      ],
+      "exit_code": 0,
+      "seconds": 7.262,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.OrbitData"
+      ],
+      "exit_code": 0,
+      "seconds": 6.749,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Orbits"
+      ],
+      "exit_code": 0,
+      "seconds": 14.539,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Kernels"
+      ],
+      "exit_code": 0,
+      "seconds": 6.764,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Process"
+      ],
+      "exit_code": 0,
+      "seconds": 6.884,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Descent"
+      ],
+      "exit_code": 0,
+      "seconds": 54.728,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Physical"
+      ],
+      "exit_code": 0,
+      "seconds": 6.858,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.ProbabilityData"
+      ],
+      "exit_code": 0,
+      "seconds": 9.254,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Probability"
+      ],
+      "exit_code": 0,
+      "seconds": 7.481,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Statements"
+      ],
+      "exit_code": 0,
+      "seconds": 6.823,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Nonabelian.Theorems"
+      ],
+      "exit_code": 0,
+      "seconds": 7.014,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--approve",
+        "NQS:geometry",
+        "NQS:legal-coherent",
+        "NQS:unitary-score",
+        "NQS:physical-carrier",
+        "NQS:physical-descent",
+        "NQS:two-tick-curvature",
+        "--date",
+        "2026-10-31"
+      ],
+      "exit_code": 0,
+      "seconds": 0.332,
+      "stdout_bytes": 153,
+      "stdout_sha256": "fd7b62bdf47803b88dcefcbd23dc5681be722fef983bd4a629db14893bebee3c",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "approved: NQS:geometry, NQS:legal-coherent, NQS:unitary-score, NQS:physical-carrier, NQS:physical-descent, NQS:two-tick-curvature\nwrote scores/STATUS.md\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.399,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.052,
+      "stdout_bytes": 33,
+      "stdout_sha256": "da0aa3bfd19f9de733812316d9bc36509a10dd1dcee03ea7c9dd291617d4aea6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "1251 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.446,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "0 approved statements changed since review\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.183,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-s3-scores-2026-10-31/replay-independent.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.591,
+      "stdout_bytes": 96,
+      "stdout_sha256": "eda0c2928a09f9b5e5759f9db6a319624d3597cbaa4f1325d3adc16e6ac20e57",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "Independent D3 replay passed:36 raw,11 orbits,32/81 versus0; all fourteen stage states checked.\n"
+    }
+  ],
+  "complete": true,
+  "preapproval_complete": true,
+  "all_checks_pass": true,
+  "approved_count": 6,
+  "returned_count": 0,
+  "prior_approved_count": 248,
+  "total_approved_count": 254,
+  "command_count": 32,
+  "separate_kernel_replays": 11,
+  "integrity_assertions": {
+    "all_frozen_implementation_literals_and_sources_unchanged": true,
+    "all248_old_entries_and_approved_surfaces_preserved": true,
+    "new_manifest_changes_are_review_metadata_only": true,
+    "all254_statement_surface_hashes_match_approval": true,
+    "all7_original_sources_still_authenticate": true,
+    "all_new_proofs_exact_type_and_allowed_axioms": true,
+    "approved_surface_drifts_empty": true
+  },
+  "artifacts": {
+    "freeze-independent.json": {
+      "sha256": "db35dc75e396d114010b08f85bce014fe0ba8dcb6db38e3d25df059a20fc0e82",
+      "bytes": 43090
+    },
+    "verdict-independent.json": {
+      "sha256": "467ba1f81a2d3e801d7c2ce22c8767a0d78afa8eebb4bc744504761510dee46d",
+      "bytes": 2099
+    },
+    "audit-independent.md": {
+      "sha256": "b73b132611d3c8a7969181ee0b151c39d3185907829eb582277434ecbce69e86",
+      "bytes": 7910
+    },
+    "replay-independent.py": {
+      "sha256": "e4815497a9597ec6f9c163d8058512e477bdf44a95ebddfd32b0003e3b46b202",
+      "bytes": 8043
+    },
+    "replay-independent.json": {
+      "sha256": "7a36568867488a1cb5c5aea19283d27142c405eb33d67a7e04be20388cf22c1e",
+      "bytes": 1371
+    }
+  },
+  "publication": "Review and approvals left in the isolated worktree for the author to publish; no commit or push by reviewer.",
+  "custody": "Returned to author after final independent validation."
+}

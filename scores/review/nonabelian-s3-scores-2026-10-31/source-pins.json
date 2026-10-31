@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-31",
+  "base_proof_commit": "f8c89bacbc4f7df649f0d117f2c7b5cb104c1d1e",
+  "source_root": "artforms workspace",
+  "sources": [
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/nonabelian-frontiers.tex",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/nonabelian-frontiers.tex",
+      "sha256": "ebd84a464385740a402afce9c50725830b85fedf306497eda9e6f83a44b796da",
+      "bytes": 9919,
+      "snapshot_sha256": "ebd84a464385740a402afce9c50725830b85fedf306497eda9e6f83a44b796da"
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/44-nonabelian-prepared-refinement-and-fusion.tex",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/44-nonabelian-prepared-refinement-and-fusion.tex",
+      "sha256": "b45b2e0bfb006b8f3ad85964acceff1f1a25f0dc9f65d3b74492a34bd6a8117b",
+      "bytes": 30082,
+      "snapshot_sha256": "b45b2e0bfb006b8f3ad85964acceff1f1a25f0dc9f65d3b74492a34bd6a8117b"
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/assessment.md",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/assessment.md",
+      "sha256": "b54784b8e04e6916a8ec77eebbf7cb84f3eebd0a15b2c09fae27ee26f0c65696",
+      "bytes": 12771,
+      "snapshot_sha256": "f236de2db7d317b01f36aec389e494b640879b1f2bc19da34db90aac0adab338",
+      "snapshot_note": "Local absolute link prefix removed; content otherwise preserved."
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/pilot_checks.py",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/pilot_checks.py",
+      "sha256": "631f7bd9c877caf59f359a11502c3e0580b3834e23064de4ee1df5f742586517",
+      "bytes": 7263,
+      "snapshot_sha256": "631f7bd9c877caf59f359a11502c3e0580b3834e23064de4ee1df5f742586517"
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/pilot_checks.json",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/pilot_checks.json",
+      "sha256": "81ff86d6ef3c825ca4c924ec09c0c14ecb013658741c3ad6ed05c80c74f27994",
+      "bytes": 2574,
+      "snapshot_sha256": "81ff86d6ef3c825ca4c924ec09c0c14ecb013658741c3ad6ed05c80c74f27994"
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/pilot_independent.py",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/pilot_independent.py",
+      "sha256": "1771e9c2a13f21e61bcecdacfbf9173aa9a6619b8e9a8023252c5e906cd6cfe9",
+      "bytes": 4066,
+      "snapshot_sha256": "1771e9c2a13f21e61bcecdacfbf9173aa9a6619b8e9a8023252c5e906cd6cfe9"
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/pilot_independent.json",
+      "snapshot": "scores/review/nonabelian-s3-scores-2026-10-31/source/pilot_independent.json",
+      "sha256": "bd8155211ed47711bf160db0112277b76fb8c76f57e478c5486fa1210bf1ce74",
+      "bytes": 470,
+      "snapshot_sha256": "bd8155211ed47711bf160db0112277b76fb8c76f57e478c5486fa1210bf1ce74"
+    }
+  ]
+}

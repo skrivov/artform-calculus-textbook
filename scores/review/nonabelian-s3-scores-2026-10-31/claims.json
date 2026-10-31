@@ -1,0 +1,38 @@
+[
+  {
+    "key": "NQS:geometry",
+    "title": "Geometric S3 torus and actual curvature",
+    "name": "geometry",
+    "statement": "Take G=Perm(Fin3) and the actual one-vertex Canvas with two oriented loop edges and one face whose ordered signed boundary occurrences are a,b,a^-1,b^-1. Its configuration frame is G on each edge, with36 raw states. The face holonomy is the left-to-right product of those actual occurrences, hence H(a,b)=aba^-1b^-1. A vertex gauge h acts by simultaneous conjugation, and H transforms by conjugation. H=1 exactly when a and b commute. There are18 raw states with H not1, including the pair of distinct transpositions(01),(02). Each additive incidence coefficient of this face is0; ordered multiplicative curvature is retained despite that cancellation. This constructor concerns this one-vertex torus and its declared attaching-word convention."
+  },
+  {
+    "key": "NQS:legal-coherent",
+    "title": "Actual legal batches and finite coherent realization",
+    "name": "legalCoherent",
+    "statement": "On that configuration frame an electric branch proposes a value c in G for one loop e, with true guard, reads=writes={e}, and applies the actual replacement update(x,e,c). Its coefficient is1/3 minus1 when c equals the old link value and1/3 otherwise, so it reads the old value even though the proposal is constant. The curvature branch has true guard, reads both loops, writes none, applies identity, and has coefficient+1 on flat configurations and-1 otherwise; the disabled phase has coefficient+1 everywhere. In each opening the admitted batches are exactly the empty batch and one enabled singleton branch. Empty batches have weight0. This includes same-value replacements and a witnessed no-write curvature event even when the phase is disabled. The displayed branch enumeration is injective and exhausts that explicit policy; other compatible batches are not admitted by this realizer. Coefficients depend only on declared reads. Gauge relabeling transports c to hch^-1, and transports committed states and coefficients accordingly. Summing amplitudes over these actual batch events gives exactly M_e=2P_e-I, where P_e averages uniformly over six link values, or the curvature diagonal K. The period-three native LawInSteps opens K,M0,M1 in that chronological order; its finite coherent realizer selects legal batches and preserves its empty classical invariant list. Its three kernel factors give U=M1 M0 K. For every finite gate word, the coherent sum over all its branch histories equals its compiled matrix entry. Branch histories are summed amplitudes, not sampled paths or retained which-branch records. Individual branches are not asserted invertible or quantum-Gauss preserving, and this is not a classical multiplicative impulse law."
+  },
+  {
+    "key": "NQS:unitary-score",
+    "title": "Raw coherent score reversibility and quantum Gauss",
+    "name": "unitaryScore",
+    "statement": "Compile any fixed finite word of the two electric gates and either curvature phase by multiplying the actual rational matrices in chronological execution order. Compilation of u followed by v equals compile(v)compile(u). Every letter is real symmetric and involutive. Every compiled word, embedded in complex amplitudes on all36 raw configurations, is unitary in both inverse orders; the compiled reversed word is its adjoint. The two matrix indices are simultaneously conjugation-covariant. Consequently every fixed word and every complete-letter prefix sends every vacuum amplitude psi(hah^-1,hbh^-1)=psi(a,b) to another vacuum amplitude. Reversal reverses the order of the letters; a complete tick is not asserted involutive. No classical score relator quotient, charged sector, continuum or Yang-Mills identification is assumed."
+  },
+  {
+    "key": "NQS:physical-carrier",
+    "title": "Complete eleven-orbit physical Hilbert carrier",
+    "name": "physicalCarrier",
+    "statement": "The explicit orbit index on all36 actual configurations agrees exactly with simultaneous-conjugation equivalence, reaches every declared representative, and gives a bijection of the physical orbit quotient with Fin11. In representative order the orbit sizes are(1,3,2,3,3,6,6,2,6,2,2); every size is positive and equals its actual raw fiber count. The unnormalized orbit-indicator inclusion has Gram diag(size). For J(x,i)=1/sqrt(size_i) on orbit i and0 otherwise, with positive real roots embedded in C, J-adjoint J=I and its image is exactly all vacuum amplitudes. The raw matrix JJ-adjoint is a self-adjoint idempotent, and it fixes exactly those vacuum amplitudes. Thus the physical basis is orthonormal with all11 orbit states retained, rather than raw orbit representatives treated as equally normalized raw vectors."
+  },
+  {
+    "key": "NQS:physical-descent",
+    "title": "Full physical score descent and scalar extension",
+    "name": "physicalDescent",
+    "statement": "For every finite gate word w, its explicit rational11-by11 orbit matrix T(w) intertwines the full raw indicator inclusion and preserves the orbit-size weighted Gram. Put N=diag(1/sqrt(size_i)) and V(w)=N^-1 T(w) N in complex amplitudes. Then U(w)J=JV(w), J-adjoint U(w)J=V(w), and V(w) is unitary in both inverse orders on all11 physical states. V(reverse(w)) is its adjoint. Every entry of V(w), as well as every orbit normalizer, belongs to the declared embedded field Q(sqrt2,sqrt3) generated using positive real roots; no claim of a minimal coefficient field is made. The explicit electric and curvature orbit matrices are checked against the actual36-state kernels, not postulated on a selected physical subspace."
+  },
+  {
+    "key": "NQS:two-tick-curvature",
+    "title": "Normalized curvature probability and same-cadence control",
+    "name": "twoTickCurvature",
+    "statement": "Prepare the normalized physical basis state of the orbit of(identity,(01)), namely psi0=J delta_1, uniform with amplitude1/sqrt3 on that three-state orbit and0 elsewhere. It is vacuum, has total squared norm1 and zero nontrivial-curvature mass. Measure nontrivial commutator curvature with the raw diagonal projector C(x)=0 if H(x)=1 and1 otherwise. C is gauge-covariant, self-adjoint and idempotent, and its projected squared norm equals the sum of raw squared amplitudes over H not1. After two chronological K,M0,M1 ticks, the state is vacuum and normalized and its Born probability for C is exactly32/81. Disabling K by replacing its coefficient with+1, while retaining both witnessed no-write phase openings and the same six-slot cadence, returns the initial state and gives probability0. The comparison uses the same source, electric coefficients, physical normalization and curvature observable. Integer stage certificates are checked against all six actual orbit-matrix transitions and then lifted through the full raw/physical intertwiner. This establishes a curvature-dependent finite non-Abelian quantum score, not the open classical non-Abelian impulse/Gauss law or a continuum gauge theory."
+  }
+]

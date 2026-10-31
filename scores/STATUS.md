@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 248 |
+| proved | 254 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **248** |
+| **total** | **254** |
 
 ## Statements
 
@@ -263,3 +263,9 @@
 | GSM:block-source | Exact even-odd blocks and original observable | proved | `Artform.Scores.Gauge.Statement.blockedSource` / `Artform.Scores.Gauge.blockedSource` | approved 2026-10-31 |
 | GSM:forced-memory | Exact source memory and constructive reconstruction | proved | `Artform.Scores.Gauge.Statement.forcedMemory` / `Artform.Scores.Gauge.forcedMemory` | approved 2026-10-31 |
 | GSM:coarse-obstruction | Gauss-valid C8 coarse nonautonomy | proved | `Artform.Scores.Gauge.Statement.coarseObstruction` / `Artform.Scores.Gauge.coarseObstruction` | approved 2026-10-31 |
+| NQS:geometry | Geometric S3 torus and actual curvature | proved | `Artform.Scores.Nonabelian.Statement.geometry` / `Artform.Scores.Nonabelian.geometry` | approved 2026-10-31 |
+| NQS:legal-coherent | Actual legal batches and finite coherent realization | proved | `Artform.Scores.Nonabelian.Statement.legalCoherent` / `Artform.Scores.Nonabelian.legalCoherent` | approved 2026-10-31 |
+| NQS:unitary-score | Raw coherent score reversibility and quantum Gauss | proved | `Artform.Scores.Nonabelian.Statement.unitaryScore` / `Artform.Scores.Nonabelian.unitaryScore` | approved 2026-10-31 |
+| NQS:physical-carrier | Complete eleven-orbit physical Hilbert carrier | proved | `Artform.Scores.Nonabelian.Statement.physicalCarrier` / `Artform.Scores.Nonabelian.physicalCarrier` | approved 2026-10-31 |
+| NQS:physical-descent | Full physical score descent and scalar extension | proved | `Artform.Scores.Nonabelian.Statement.physicalDescent` / `Artform.Scores.Nonabelian.physicalDescent` | approved 2026-10-31 |
+| NQS:two-tick-curvature | Normalized curvature probability and same-cadence control | proved | `Artform.Scores.Nonabelian.Statement.twoTickCurvature` / `Artform.Scores.Nonabelian.twoTickCurvature` | approved 2026-10-31 |

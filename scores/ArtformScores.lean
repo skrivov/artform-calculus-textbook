@@ -219,3 +219,5 @@ import ArtformScores.GravityBridge.Native.NativeDetailTests.Unrestricted
 import ArtformScores.GravityBridge.Native.NativeDetailTests.FiniteWindow
 
 import ArtformScores.Gauge.Theorems
+
+import ArtformScores.Nonabelian.Theorems

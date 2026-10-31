@@ -1,0 +1,112 @@
+{
+  "status": "exact exploratory controls passed",
+  "canonical_processing": {
+    "carrier": "five periodic canonical pairs over C3",
+    "original_tick": "E+=gA; A-=E, g=2-S-S^-1",
+    "processor": "diag(S,S^-1), determinant1 as a Laurent matrix",
+    "witness_input_labels": [
+      "A0",
+      "A1"
+    ],
+    "commutator_exponent_before": 0,
+    "commutator_exponent_after_mod3": 2,
+    "processed_images_mod3": [
+      [
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2
+      ]
+    ],
+    "common_shift_canonical": true,
+    "scope": "Necessary Weyl-label condition; no complete gauge-profile lift asserted."
+  },
+  "spatial_memory": {
+    "carrier": "C8 transverse Maxwell sector, periodic width4",
+    "fine_potential": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "fine_electric": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "fine_curvature": [
+      1,
+      7,
+      0,
+      0
+    ],
+    "common_initial_coarse_read": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "zero_state_next_read": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "hidden_curvature_state_next_read": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    "conclusion": "No autonomous one-tick map on exactly this coarse reading for all fine states.",
+    "scope": "Declared gauge-invariant reading, zero source; no claim about all coarse maps or cadences."
+  },
+  "nonabelian_score": {
+    "carrier": "two S3 loop coordinates; one-vertex torus word aba^-1b^-1",
+    "raw_states": 36,
+    "physical_simultaneous_conjugacy_orbits": 11,
+    "noncommuting_raw_states": 18,
+    "electric_gate": "M_e=2P_e-I; P_e averages all six replacements of edge e",
+    "curvature_gate": "K=+1 on commuting pairs and -1 otherwise",
+    "score": "U=M2 M1 K, rightmost gate first",
+    "raw_two_sided_orthogonal": true,
+    "gauge_commutes_exactly": true,
+    "physical_orbit_source_size": 3,
+    "two_tick_noncommuting_curvature_probability": "32/81",
+    "same_probability_with_K_identity": "0",
+    "coefficient_scope": "raw gates rational; normalized physical orbit columns require square roots",
+    "scope": "Finite quantum prototype; constructor/legal-process packaging and Lean validation outstanding; not a classical impulse law or QCD claim."
+  },
+  "new_registered_or_approved_scores": 0
+}

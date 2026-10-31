@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "/root/gravity_fidelity_review_01",
+  "passed": true,
+  "representation": "D3 semidirect product, exact Fraction arithmetic",
+  "imported_author_code": false,
+  "group_order": 6,
+  "raw_states": 36,
+  "physical_orbits": 11,
+  "orbit_weights": [
+    1,
+    3,
+    2,
+    3,
+    3,
+    6,
+    6,
+    2,
+    6,
+    2,
+    2
+  ],
+  "nonflat_states": 18,
+  "full_raw_gate_orthogonality": true,
+  "gauge_covariance": true,
+  "branch_endpoint_and_transport_tests": 2592,
+  "full_weighted_descent": true,
+  "normalized_projector_equals_gauge_average": true,
+  "reverse_tick_both_orders_all_raw_basis": true,
+  "tick_is_not_involutive": true,
+  "results": {
+    "false": {
+      "normalized_mass": "1",
+      "curvature_probability": "0",
+      "all_seven_stages_match": true
+    },
+    "true": {
+      "normalized_mass": "1",
+      "curvature_probability": "32/81",
+      "all_seven_stages_match": true
+    }
+  },
+  "negative_controls": {
+    "averaging_column_norm_squared": "1/6",
+    "incorrect_unweighted_orbit_probability": "16/85"
+  },
+  "source_hashes": {
+    "source-pins.json": "0311d22ffb08b5cb22fd2fa241d3f10482fa872e6d88fad087fb6e92a620ff4b",
+    "replay-root.json": "639e1bb30ab425e08226a665a74921dca49d7b5e62d9966d2304e8baba65b3f1"
+  },
+  "script_sha256": "e4815497a9597ec6f9c163d8058512e477bdf44a95ebddfd32b0003e3b46b202"
+}

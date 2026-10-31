@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scalar_det_one_controls_Z4_Z6": 192,
+  "five_site_Weyl_pairing": [
+    0,
+    2
+  ],
+  "coarse_C8_hidden_next_electric": [
+    7,
+    7
+  ],
+  "raw_S3_states": 36,
+  "physical_orbits": 11,
+  "noncommuting_raw_pairs": 18,
+  "all3_gates_individually_covariant": true,
+  "all_raw_orthogonality_and_weighted_physical_columns": true,
+  "physical_two_tick_probability": "32/81",
+  "without_curvature": "0",
+  "production_approvals_changed": false
+}
