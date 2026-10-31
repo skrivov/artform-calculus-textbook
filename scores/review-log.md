@@ -142,3 +142,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC2:guarded-schur-source-reconstruction` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw` (text be4640b216e0)
 - 2026-10-30: `GAC2:complete-flat-quadratic-variation` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw` (text 5515a430bdd7)
 - 2026-10-30: `GAC2:full-coordinate-variational-force` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw` (text 1bd7968e32b5)
+- 2026-10-31: `GAC2:full-mixed-lorentz-ward` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.wardLaw` (text cc9ffab43e88)
+- 2026-10-31: `GAC2:coframe-projector-compatible-sources` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.projectorLaw` (text 25e4ec6d57f0)
+- 2026-10-31: `GAC2:four-shift-original-force-test` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw` (text 83254c6c9a87)
+- 2026-10-31: `GAC2:indexed-original-connection-blocks` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw` (text f360ba2d43b4)
+- 2026-10-31: `GAC2:source-dependent-action-reconstruction` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw` (text 284ff03d30cb)

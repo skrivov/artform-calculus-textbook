@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "8907280c69592cbeadf563853508c1eb0d3e703d",
+  "approved_count": 5,
+  "returned_count": 0,
+  "original_approvals_preserved": 129,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:full-mixed-lorentz-ward",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.wardLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.wardLaw",
+      "review_text_sha256": "cc9ffab43e8849cb307515423f359ea3b6e6c284cfb0325508db30c078ee4e16",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 46,
+      "new_material_native_application": false,
+      "reason": "Complete original mixed periodic Ward with arbitrary independent second field, exact nonlinear link correction and both ordered contact polarizations. Actual periodic residual curl sum, full coordinate force kernel and injective gauge column; original fixed-log sign retained, no physical quotient/boundary extension."
+    },
+    {
+      "key": "GAC2:coframe-projector-compatible-sources",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.projectorLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.projectorLaw",
+      "review_text_sha256": "25e4ec6d57f01379dccf3e7c180594bcb91095e93f46681f49eb4e04f148dfc5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 49,
+      "new_material_native_application": false,
+      "reason": "Exact original eta-skew extraction and full frame-plus-connection projector, left inverse/idempotence/fixed-space/kernel criteria. Arbitrary linear-source compatibility iff and actual first-variation compatibility; metric variation and full force preserved, no physical quotient/inverse inferred."
+    },
+    {
+      "key": "GAC2:four-shift-original-force-test",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.fourDirectionLaw",
+      "review_text_sha256": "83254c6c9a875173ce5847584822d480d5022e0b94f06ac6e4401f87f412c41d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 48,
+      "new_material_native_application": false,
+      "reason": "Actual cyclic Fin17 four-stencil pulse, noncollapse guards and complete action/variation values with two explicit coordinate-unit force identifications. Cartesian independence, physical solution and same-problem benchmark claims explicitly excluded."
+    },
+    {
+      "key": "GAC2:indexed-original-connection-blocks",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.indexedBlocksLaw",
+      "review_text_sha256": "f360ba2d43b4867808d4658acffddc68019f641e8f0144131559384d1139e207",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 48,
+      "new_material_native_application": false,
+      "reason": "All four distinct and four repeated homogeneous restriction densities derived from complete original action with exact wedge/index/eta signs. Actual old B_t and repeated matrices recovered, no full24 cross-block diagonalization or frequency inverse asserted."
+    },
+    {
+      "key": "GAC2:source-dependent-action-reconstruction",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw",
+      "review_text_sha256": "284ff03d30cb4026fed34df526dc4c4a30bfff5a550faf251ea903358a945a6a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Complete auxiliary source action with symmetric D, dual inverse symmetry, right-inverse completion and both-inverse reconstruction iff. Shifted source and-v(Ev)/2 retained with nonzero-source example; no positivity, energy or native inverse assumed."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/Full40/WardDefs.lean": "65c5ca181966062b9472e73c7b0db09380d292ff98aa3f7412e457291e30cdc7",
+    "scores/ArtformScores/GravityBridge/Native/Full40/WardStatements.lean": "cc6d0ff5f202c372b148abaf6e395733af9f4f8265f28148d7cd6b38e0d7009f",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Ward.lean": "e1a78fd2e483092794117958bacf7eee84eff81c02a29dbf55db9393a5d83c3a",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ProjectorDefs.lean": "fed61750976e004ed7e3ac108277c93a1c8fda640e9a881f30c14fbfb185e0c1",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ProjectorStatements.lean": "01ff1d69043adeee411a0ba69d9f50e3b03282a42ef7640d1641e21d0b3285ec",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Projector.lean": "139e994a85cd5da46f7a4912ffca2bce3391212e0502a49e8636e907c6e946c3",
+    "scores/ArtformScores/GravityBridge/Native/Full40/FourDirectionDefs.lean": "15b701e6b776390924d04c134b3e5a01a7dd45d4ed2e160f405f5e5a010a6c08",
+    "scores/ArtformScores/GravityBridge/Native/Full40/FourDirectionStatements.lean": "bcb5ea27e74cb7d97ed47d32194ef45c9f6243b46bf12c8d99651d15df631a7c",
+    "scores/ArtformScores/GravityBridge/Native/Full40/FourDirection.lean": "03a56ebba8845a3a15c32841a3337a8fa2ada2e58302f2db38edc8f126f3103e",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/IndexedBlocksDefs.lean": "0aa62ce90ae956a567686b6fd83c225bf512d994e43e68d5777886095a56441a",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/IndexedBlocksStatements.lean": "e40b47a7aebd6f32212dbac9467d8ac6ef360e9940a54313d3cbc1a8fe0af999",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/IndexedBlocks.lean": "6231fa02bbb9c4798537ebf766db28343538ebce55922c2fec6f7b81c0bd5bc4",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SourceActionDefs.lean": "467b7c602c23c5d69a5217e7a4fc6842ecda29d4902a6ae3dc17228d9a7ea268",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SourceActionStatements.lean": "e6df0bf8cd146b374b4c58a62dc59ccc696a9fdc351a01754ed0b71127c0181c",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SourceAction.lean": "65b0c6c2fc2fb2029c146e12c8f3d847af4236f2cdb5c48a351684e7748acb17"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "881eb18b8c85560f5ad6ee8cde5e04ba8ba6dbc2375c93750341b0f1538d9c70",
+    "physics/ledgers/lattice-waves/findings/167-full-original-mixed-lorentz-ward.md": "d04b2ef69dcbeabd2c19f7441e4ce94f0a9fa0a34f6b088944ddc6e6dbbdda4a",
+    "physics/ledgers/lattice-waves/findings/168-coframe-projector-and-compatible-sources.md": "13eb05bd752aad74a53fd3bdc6ac723443a7ca4d7cf60775a985d901a505677c",
+    "physics/ledgers/lattice-waves/findings/169-noncollapsed-four-shift-full-force-probe.md": "2ffb2d93e192792c4777bc836b1ba86ba0407eb6a4a7dca2852d42a312040253",
+    "physics/ledgers/lattice-waves/findings/170-indexed-original-connection-density-blocks.md": "c02664b1f08a4cc55853ca1c677e777aaa9ab37e248e2907fbe3a7fdc10adb0f",
+    "physics/ledgers/lattice-waves/findings/171-source-dependent-action-and-exact-return.md": "20002bdc76ecf8099257f99c652426c34c7abf71c21488df3711609807c65751"
+  },
+  "source_pins_sha256": "b872842695bda5491174b1175425541df80b191dc43714371f61e329b8ae3100",
+  "source_pins_authenticated": true,
+  "exact_original_snapshot_pairs_authenticated": 14,
+  "retrospective_baseline_02_preserved": true,
+  "mixed_Ward_arbitrary_second_test_and_R1_retained": true,
+  "gauge_coordinate_convention": {
+    "original_log_links": "+D*w",
+    "physical_conversion": "If P=-h*omega with nonzero spacing, delta(omega)=-D*w/h; no physical connection-cut inference is made here."
+  },
+  "pulse_scope": {
+    "carrier": "cyclic Fin17",
+    "steps": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "Cartesian_generator_independence_claim": false,
+    "abandoned_changed_inputs_are_benchmarks": false
+  },
+  "indexed_scope": {
+    "homogeneous_restrictions_proved": 8,
+    "full24_block_diagonalization_claim": false
+  },
+  "source_action_scope": {
+    "right_inverse_suffices_for_completion": true,
+    "both_inverse_identities_retained_for_reconstruction_iff": true,
+    "eliminated_source_constant_retained": "-v(Ev)/2",
+    "positivity_or_minimum_claim": false
+  },
+  "independent_arithmetic": "arithmetic-independent-03.py",
+  "independent_arithmetic_sha256": "11587ba655d800a7294d6188154191f5912a0017b98140c55f81be39e12e634a",
+  "independent_arithmetic_result": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-03.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.138,
+    "cyclic_sites": 17,
+    "steps": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "Cartesian_independence_claim": false,
+    "pulse_action": "12/101",
+    "pulse_variations": [
+      "12/101",
+      "-2/101",
+      "0"
+    ],
+    "mixed_Ward_matrix_replay": "0",
+    "eight_restriction_samples": [
+      "-523/101",
+      "-523/101",
+      "-523/101",
+      "721/101",
+      "-721/101",
+      "721/101",
+      "721/101",
+      "721/101"
+    ],
+    "source_action_positive_and_indefinite_completion": true,
+    "full24_block_diagonalization_claim": false,
+    "efficiency_benchmark": false,
+    "source_sha256": {
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-01.py": "5c48b33e49fb5b4f5ca49f0dfc217272704459a58c49f8ccf041ee97e028fcba",
+      "scores/ArtformScores/GravityBridge/Native/Full40/QuadraticDefs.lean": "2bea8d1b0be757198d9c16bb29ad69dca3b7a356d034a1b8cc7d6a07e0bf6aae",
+      "scores/ArtformScores/GravityBridge/Native/Full40/WardDefs.lean": "65c5ca181966062b9472e73c7b0db09380d292ff98aa3f7412e457291e30cdc7",
+      "scores/ArtformScores/GravityBridge/Native/Full40/FourDirectionDefs.lean": "15b701e6b776390924d04c134b3e5a01a7dd45d4ed2e160f405f5e5a010a6c08",
+      "scores/ArtformScores/GravityBridge/Native/Retrospective/IndexedBlocksDefs.lean": "0aa62ce90ae956a567686b6fd83c225bf512d994e43e68d5777886095a56441a",
+      "scores/ArtformScores/GravityBridge/Native/Retrospective/SourceActionDefs.lean": "467b7c602c23c5d69a5217e7a4fc6842ecda29d4902a6ae3dc17228d9a7ea268"
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "retrospective_efficiency_saving_established": false,
+    "classification": "Frozen original periodic mixed Ward/projector reconstruction, cyclic pulse probe, eight homogeneous restrictions and generic source-action completion.",
+    "uninstantiated_bridges": [
+      "nonlinear original action/Ward analytic remainder and nonconstant domains",
+      "finite-boundary/current and allowed physical source/preparation class",
+      "physical quotient, norm/energy and constrained inverse",
+      "actual native metric/independent connection/link/history matching",
+      "actual longitudinal value and finite-spacing target/source estimates"
+    ]
+  },
+  "audit": "audit-independent-03.md",
+  "validation": "validation-independent-03.json",
+  "review_started_on": "2026-10-30"
+}

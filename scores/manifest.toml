@@ -2276,8 +2276,8 @@ See [finding167](findings/167-full-original-mixed-lorentz-ward.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.wardLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.wardLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "cc9ffab43e8849cb307515423f359ea3b6e6c284cfb0325508db30c078ee4e16"
 
 [[statement]]
 key = "GAC2:coframe-projector-compatible-sources"
@@ -2298,8 +2298,8 @@ See [finding168](findings/168-coframe-projector-and-compatible-sources.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.projectorLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.projectorLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "25e4ec6d57f01379dccf3e7c180594bcb91095e93f46681f49eb4e04f148dfc5"
 
 [[statement]]
 key = "GAC2:four-shift-original-force-test"
@@ -2320,8 +2320,8 @@ See [finding169](findings/169-noncollapsed-four-shift-full-force-probe.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.fourDirectionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "83254c6c9a875173ce5847584822d480d5022e0b94f06ac6e4401f87f412c41d"
 
 [[statement]]
 key = "GAC2:indexed-original-connection-blocks"
@@ -2344,8 +2344,8 @@ See [finding170](findings/170-indexed-original-connection-density-blocks.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.indexedBlocksLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f360ba2d43b4867808d4658acffddc68019f641e8f0144131559384d1139e207"
 
 [[statement]]
 key = "GAC2:source-dependent-action-reconstruction"
@@ -2367,5 +2367,5 @@ See [finding171](findings/171-source-dependent-action-and-exact-return.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "284ff03d30cb4026fed34df526dc4c4a30bfff5a550faf251ea903358a945a6a"
