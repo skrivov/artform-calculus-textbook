@@ -343,7 +343,7 @@ Zero additional material native applications are credited; the campaign's R7/R8 
 
 ## B07/B08/E05–E07: prepared data, algebraic states and a fixed-band limit
 
-Five new pending submissions: GAC:prepared-connection-cost, GAC:forced-jet-graph,
+Five submissions were independently approved in review11: GAC:prepared-connection-cost, GAC:forced-jet-graph,
 GAC:algebraic-state-transport, GAC:uncertainty-noise and GAC:gaussian-band-limit.
 Findings137–141 and literal section7 quotes specify the claims. All99 prior approvals stand.
 The fifteen Defs/Statements/proof files are new surfaces; no old text is intentionally changed.
@@ -354,7 +354,8 @@ prescriptions. Check the exact minimum over the broader odd-matching class and i
 The cost is a rational coefficient norm, not native energy or a whole-band repair norm.
 ForcedGraph constructs a nonzero prepared leading-jet graph and all-natural operator intertwining,
 including a complex approved-coefficient instance. Nonzero tail values need not be independent
-memory. Leading operator powers are not actual native time steps, and altered preparation requires
+memory. This graph uses the declared last-row tail functional D=0; the full native lower-coordinate operator is not extracted.
+Leading operator powers are not actual native time steps, and altered preparation requires
 its own physical admissibility. M179/M182's accepted native graph gap remains unchanged.
 
 StateTransport constructs actual algebraic positive pullbacks and invariance under intertwining.
@@ -377,7 +378,11 @@ BandLimit is an actual continuous-linear multiplication operator on C([-R,R],rea
 norm error h*R^2/2 and a one-sided spacing limit for fixed R. The explicit h_n->0/escaping-frequency
 sequence has constant nonzero error. Check that no native, strong-resolvent, Weyl-label or nonlinear
 limit is inferred. All five investigations record failed/unverified full native transfers and propose
-zero additional material application credit. Independent review11 is required before approval.
+zero additional material application credit.
 
 validation-B07-B08-E05-E06-E07.json records required checks, certificates, both drifts and five
-separate kernel replays. The root agent does not self-approve these claims.
+separate kernel replays. All five claims were independently approved at freeze
+`fd3dffb022b6dcfc4789780d64bf71c2ec4df425`; none returned. See the distinct
+[audit](audit-independent-11.md), [per-key verdicts](verdict-independent-11.json)
+and [validation](validation-independent-11.json). All99 earlier approvals stand.
+Zero additional material native applications are credited; M166's selected-band result is inherited.

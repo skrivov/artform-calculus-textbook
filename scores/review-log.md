@@ -112,3 +112,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:gaussian-schur-integral` approved as `Artform.Scores.GravityBridge.Statement.gaussianLaw` (text f86bd69c78c0)
 - 2026-10-30: `GAC:finite-gaussian-phase` approved as `Artform.Scores.GravityBridge.Statement.phaseLaw` (text 77cdcbed735a)
 - 2026-10-30: `GAC:normalized-gaussian-gluing` approved as `Artform.Scores.GravityBridge.Statement.heatLaw` (text 26fd09847c19)
+- 2026-10-30: `GAC:prepared-connection-cost` approved as `Artform.Scores.GravityBridge.Statement.preparedCostLaw` (text f186b85a5849)
+- 2026-10-30: `GAC:forced-jet-graph` approved as `Artform.Scores.GravityBridge.Statement.forcedGraphLaw` (text ad9b3fc40c82)
+- 2026-10-30: `GAC:algebraic-state-transport` approved as `Artform.Scores.GravityBridge.Statement.stateTransportLaw` (text ad26488ad750)
+- 2026-10-30: `GAC:uncertainty-noise` approved as `Artform.Scores.GravityBridge.Statement.quantumNoiseLaw` (text 1681120b3a52)
+- 2026-10-30: `GAC:gaussian-band-limit` approved as `Artform.Scores.GravityBridge.Statement.bandLimitLaw` (text 070bd3a22cf6)

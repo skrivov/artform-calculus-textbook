@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 99 |
-| stated | 5 |
+| proved | 104 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **104** |
 
@@ -114,8 +114,8 @@
 | GAC:gaussian-schur-integral | Convergent Gaussian Schur integral with sources | proved | `Artform.Scores.GravityBridge.Statement.gaussianLaw` / `Artform.Scores.GravityBridge.gaussianLaw` | approved 2026-10-30 |
 | GAC:finite-gaussian-phase | Finite quadratic Gauss phase and the Weyl bridge | proved | `Artform.Scores.GravityBridge.Statement.phaseLaw` / `Artform.Scores.GravityBridge.phaseLaw` | approved 2026-10-30 |
 | GAC:normalized-gaussian-gluing | Normalized Gaussian gluing and discarded-detail test | proved | `Artform.Scores.GravityBridge.Statement.heatLaw` / `Artform.Scores.GravityBridge.heatLaw` | approved 2026-10-30 |
-| GAC:prepared-connection-cost | Prepared native connection coefficient cost | stated | `Artform.Scores.GravityBridge.Statement.preparedCostLaw` / `Artform.Scores.GravityBridge.preparedCostLaw` | awaiting review |
-| GAC:forced-jet-graph | Invariant prepared graph for forced leading jets | stated | `Artform.Scores.GravityBridge.Statement.forcedGraphLaw` / `Artform.Scores.GravityBridge.forcedGraphLaw` | awaiting review |
-| GAC:algebraic-state-transport | Algebraic state pullback and finite CCR scope | stated | `Artform.Scores.GravityBridge.Statement.stateTransportLaw` / `Artform.Scores.GravityBridge.stateTransportLaw` | awaiting review |
-| GAC:uncertainty-noise | Uncertainty form and retained environment noise | stated | `Artform.Scores.GravityBridge.Statement.quantumNoiseLaw` / `Artform.Scores.GravityBridge.quantumNoiseLaw` | awaiting review |
-| GAC:gaussian-band-limit | Fixed-band Gaussian operator norm limit | stated | `Artform.Scores.GravityBridge.Statement.bandLimitLaw` / `Artform.Scores.GravityBridge.bandLimitLaw` | awaiting review |
+| GAC:prepared-connection-cost | Prepared native connection coefficient cost | proved | `Artform.Scores.GravityBridge.Statement.preparedCostLaw` / `Artform.Scores.GravityBridge.preparedCostLaw` | approved 2026-10-30 |
+| GAC:forced-jet-graph | Invariant prepared graph for forced leading jets | proved | `Artform.Scores.GravityBridge.Statement.forcedGraphLaw` / `Artform.Scores.GravityBridge.forcedGraphLaw` | approved 2026-10-30 |
+| GAC:algebraic-state-transport | Algebraic state pullback and finite CCR scope | proved | `Artform.Scores.GravityBridge.Statement.stateTransportLaw` / `Artform.Scores.GravityBridge.stateTransportLaw` | approved 2026-10-30 |
+| GAC:uncertainty-noise | Uncertainty form and retained environment noise | proved | `Artform.Scores.GravityBridge.Statement.quantumNoiseLaw` / `Artform.Scores.GravityBridge.quantumNoiseLaw` | approved 2026-10-30 |
+| GAC:gaussian-band-limit | Fixed-band Gaussian operator norm limit | proved | `Artform.Scores.GravityBridge.Statement.bandLimitLaw` / `Artform.Scores.GravityBridge.bandLimitLaw` | approved 2026-10-30 |

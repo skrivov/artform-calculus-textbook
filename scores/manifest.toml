@@ -1589,8 +1589,8 @@ See [finding 137](findings/137-prepared-connection-cost-and-admissible-experimen
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.preparedCostLaw"
 lean_proof = "Artform.Scores.GravityBridge.preparedCostLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "f186b85a5849d044a927341a2ee59f7a18ca14f1d66a161025615f64d6be94a3"
 
 [[statement]]
 key = "GAC:forced-jet-graph"
@@ -1611,8 +1611,8 @@ See [finding 138](findings/138-forced-leading-jet-graph-and-memory-transfer-gap.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.forcedGraphLaw"
 lean_proof = "Artform.Scores.GravityBridge.forcedGraphLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "ad9b3fc40c82f8741042c0893c09ee51041561b2dba7037bf0e034a2f2d72639"
 
 [[statement]]
 key = "GAC:algebraic-state-transport"
@@ -1634,8 +1634,8 @@ See [finding 139](findings/139-algebraic-state-transport-and-native-domain-audit
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.stateTransportLaw"
 lean_proof = "Artform.Scores.GravityBridge.stateTransportLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "ad26488ad75018b9b392d554341b98b12e40627ceb7c28ab831a3becd14cb903"
 
 [[statement]]
 key = "GAC:uncertainty-noise"
@@ -1658,8 +1658,8 @@ See [finding 140](findings/140-uncertainty-noise-and-native-boundary-consistency
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.quantumNoiseLaw"
 lean_proof = "Artform.Scores.GravityBridge.quantumNoiseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "1681120b3a5228ca5d679f61aa7972c327ca6c3f1d877ff23492b81107bc771a"
 
 [[statement]]
 key = "GAC:gaussian-band-limit"
@@ -1680,5 +1680,5 @@ See [finding 141](findings/141-fixed-band-gaussian-limit-and-escaping-frequency.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.bandLimitLaw"
 lean_proof = "Artform.Scores.GravityBridge.bandLimitLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "070bd3a22cf66726d3dba3e0129aaa75a5d1c8420d6da1581dc5e8ce7355cea6"
