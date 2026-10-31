@@ -1,0 +1,887 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_sol61_transport_review",
+  "contribution_disclosure": "Sole user-authorized Sol6.1 reviewer supplied prior source/convention advice, ambient-criticality/contact and native-chart guidance, independent four-cell witness and quantum Ward/inactive reduction advice. Root authored all38 production Lean modules; reviewer authored none. Independent arithmetic uses separate source transcription with no root evaluator imports. Reviewer independently inspected source/proof/domain and English fidelity, checked baseline/pins/report surfaces, and separately kernel-replayed every38module. Prior formulation involvement is disclosed; no claim of absence of conceptual collaboration.",
+  "reviewed_base_commit": "79e9ce11d21c737d1c955dc8c92e6b1ba71b0e2f",
+  "reviewed_freeze": "38 final successor modules, three canonical literals, complete actual source/domain bindings, fresh fullbuild and both reports; named final successor prose",
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/NonlinearActionSmooth.lean": "6b9e24009883a03211a986932e3809a42331d2c3597e77169a3c04bb8ca4b246",
+    "scores/ArtformScores/NonabelianGravity/NonlinearAdmission.lean": "7b031a5b09aebc23b282458b89fc9a14500c39960746b0a6373211f88e1ee2de",
+    "scores/ArtformScores/NonabelianGravity/NonlinearAmbient.lean": "97539aab1a89f8c598970adf71501f047def2c50d65b855fc48c4b351a6c2e5f",
+    "scores/ArtformScores/NonabelianGravity/NonlinearContact.lean": "d7772cb010092bec8880c319e28d0baece01f8db786e762af89754400ac5c66d",
+    "scores/ArtformScores/NonabelianGravity/NonlinearCorrection.lean": "9810c4265c738f813a23e9528f1bd8434f1eeb3b3165d5f637b69d69856ff4ab",
+    "scores/ArtformScores/NonabelianGravity/NonlinearCorrectionCoefficients.lean": "28e8e5db8e4efd90dcf2e5112cbfd6bdc3604efea5efa75151039838fde451da",
+    "scores/ArtformScores/NonabelianGravity/NonlinearDifferential.lean": "74f84fcfb5b6c645ab422301fcff802030d6302978534fae69852f928ea60545",
+    "scores/ArtformScores/NonabelianGravity/NonlinearForceBinding.lean": "13eef0cb4d2a2b5d55e7a18f0ce7695f404999a3355f2ecb5da60f41e6b82d4f",
+    "scores/ArtformScores/NonabelianGravity/NonlinearForceData.lean": "7c5052c3e2ca9f8ac4faa46a16dc76b65e1005bee4a65e2707b8e1cb9472bf43",
+    "scores/ArtformScores/NonabelianGravity/NonlinearFull40.lean": "1c9e83e174acfa9a9bb771e4503d77eef7830b255c7e5008284fdba5941371dc",
+    "scores/ArtformScores/NonabelianGravity/NonlinearHistoryLocality.lean": "50cc55e13c6930d93042aba79bc8744ccb066a0b6773df2e2522c7e42ed572ca",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIncidence.lean": "3a68912ded238e3ee5efc9b8dbc86b599116fb710e7d4aee6d5306a739e2a376",
+    "scores/ArtformScores/NonabelianGravity/NonlinearIsoBinding.lean": "f63f20f195eb17fe4033bfeb398daaf6ab5d76b9adb4e0ef2bae7529cb4698c4",
+    "scores/ArtformScores/NonabelianGravity/NonlinearLocality.lean": "30ef11ed4e984c01620fc507288df3476a6b04ef00dd54a09a3a981a767cfa29",
+    "scores/ArtformScores/NonabelianGravity/NonlinearLongCorrection.lean": "77d59608481f0fd341a760a3ea0f76503925b57abc7200c48e6f7f4a658121d5",
+    "scores/ArtformScores/NonabelianGravity/NonlinearLongHistory.lean": "9ceba6b1a9a96c81a1ce6c403b376be45ab8e21161adbbf601eb2115b8c9cf3f",
+    "scores/ArtformScores/NonabelianGravity/NonlinearMatrixCritical.lean": "7421aa12e693ed7db637a5bd34625538c56cd34fe4565403c5d98579e5847f08",
+    "scores/ArtformScores/NonabelianGravity/NonlinearNativeChart.lean": "8251f198a4a234afd3b96fbea9477c1511572e69a434843043b7ae716f76b6d0",
+    "scores/ArtformScores/NonabelianGravity/NonlinearRateLimit.lean": "3e0b7fbe6740bfd191db4f8275c830e9b114744cd43dc4b62b03e3771468085a",
+    "scores/ArtformScores/NonabelianGravity/NonlinearSmooth.lean": "aa9ed7f2f81fda8c5e8a14a6c2890e30c8a2857501c56ad20f4301b2e3af2a4f",
+    "scores/ArtformScores/NonabelianGravity/NonlinearSpatialCritical.lean": "ec6f02737f0b4dbe2b1f9efc4f672894c36db90ae6531aaf03a2c244af3f2859",
+    "scores/ArtformScores/NonabelianGravity/QuantumCarrier.lean": "6e6adae3f1b9152e4eacbaf21ca6432934ca8e84f57a13f1cf4e52b999000516",
+    "scores/ArtformScores/NonabelianGravity/QuantumCarrierDefs.lean": "263376a9a5e7262766e92a425e33a552ea1d4ff418ed4f3a1471e918ce2efe25",
+    "scores/ArtformScores/NonabelianGravity/QuantumCarrierSlice.lean": "fd027d16f18b88f2eb5a4e477cf5768e442dc81024ecc10cfac5e3edac810919",
+    "scores/ArtformScores/NonabelianGravity/QuantumNative.lean": "494d8b790ab4248ca62cab080f2d9dd683aeeb2d305a997873936a3bd46b5ff9",
+    "scores/ArtformScores/NonabelianGravity/QuantumPhase.lean": "289b6160012ee97dca50abeafd523ff1bb312cd8202047c7191edf977abb4aec",
+    "scores/ArtformScores/NonabelianGravity/QuantumSchur.lean": "255af4ebae53c9d81b8761e501178df8b1d44d17fbdbfa72cb30e7217ffa63f0",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceAP.lean": "be6e1a0256c9cba44dd61fd717a13c0129e00039c7c5cdced10f3002f7cf7469",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceBinding.lean": "d8f2d0793ceb6d5f4c12baf3408cff089c316da28267df8f57bfe8d58dd8b94b",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceDQ.lean": "5130efd5110cdd8321fff983965cd220c98e2657ad2331a9c847c13143d07454",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceData.lean": "14e6b2b05d8569129060e28ab5bff4f43a8b2e3fbd066adf952351f7a0bfbe2e",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceLeft.lean": "10fcb2c11cbd3cc7e43f57b0b995d35d65e23f89585c548624a15d60daef302e",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceLower.lean": "dc833dd12b61c75e2052f7b8fdec39c3b5a739c31dc7c3ea2dd9227061b9d5c4",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceRight.lean": "0777b83216d87a5ba93dae1fdd2f9cf8d00e78497e9029e851935418aafd5869",
+    "scores/ArtformScores/NonabelianGravity/QuantumSliceUpper.lean": "ac318209e2b59d079a35877455303bbff5eacc2c42c46d515e29ba9d31cd99f3",
+    "scores/ArtformScores/NonabelianGravity/QuantumVolume.lean": "394bf17871986b3aef54bbb313db9db60743dccda85943264f18dcbe751bfc60",
+    "scores/ArtformScores/NonabelianGravity/SuccessorStatements.lean": "8453ce32be08c9c5ec0b2324730206ef47a7e375aaab1498ad142132804d3c52",
+    "scores/ArtformScores/NonabelianGravity/SuccessorTheorems.lean": "d18465b5f1f621d54a096d3ba922c7f8bf366694de0dcc49b86119b15542524a",
+    "scores/ArtformScores.lean": "d5d23b63002462317e74c733603a3aff244fd45675fe5848eb78d8259a037365",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/SUCCESSOR-CONTRACT.md": "d220a2c2978a74900ec2b7c510da97dd2fbcf6fa833978588b4f3fba0b6c11ae",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/SUCCESSOR-RESULTS.md": "83d90834c3fc0c5f0c25fa8f186c55a2c3b1f0245c56e4eaebe2a7b85b2be673",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/GRAVITY-HANDOFF-SUCCESSOR.md": "b4844279707208fa8ec435d69cd8ffd6c1a1bacbe31a7a4df4ca43311ba061e9",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/README.md": "af1aec12f0237e678d9f44bb61c4758831cb160e7fe294e2204d220254f37f18",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/STATUS.md": "cf9ba17b3bf87c369264aa11ddc16990f04fe1a9fa39e6ced17e88da7f520635",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/followup-source-pins.json": "5321700104a187cb7bf506f990df240795ce30f16aa28e282eee005b4a1233de",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-curvature-action.md": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-forward-torsion.md": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-Q-M-data.json": "12df2a52f867d0ca1ab81ec6b077f31427cfe2c30d13756e641332dad7cf4ad1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-stage-13.json": "9d6c03352b9a01aea032d16ed3c68973a2f6082bb4c31a2dd6fdee3dea93ed1b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-quantum-emitter.py": "f8708d54369f087359e13f4a4fea8fd9b2f89fffa14bd38dd6625cf994aac224",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-successor-root.py": "540063c26eeebf2df82036533fe67e4c9bb4be2376473d1be49a408585e3c447",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-13.py": "a7ab4c5220c54fb39d104098ec8d3eebcfc8f94aa6f96da6c301db922244a103",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-13-data.json": "7d2a71815024bafb820c5599f0ed36b6a300842ab33e1a6d91dae95c0b60aa41",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-13.py": "8ffc55b5ef76c464708c37e4508176ff5c0335df0c69009ba5e7d95aaaf580d6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-13-data.json": "6b299c273c7236b8d096dc6119c14bab584d7fe302e8ab1641a38ec05a4150af",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-14.py": "b69f9f7b925fcae4268b50d4ca2890f0505f8d69385255760857df5c6e4b9efb",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-14-data.json": "cd2ce77137d95ae9dac030779ed44c66ab0a2ff7a668dac7a2f7d9e45559081a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-full40-jet-independent.py": "5fbc0c4928d9cff5f61d225ce4960b191ba7fcf023c74b86e154cd7fcadb8238",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-history-independent.py": "6a63f8abc029e0e35a777b06d2dce5edd7da9ff66d4a3e25bfcd3378a89be930"
+  },
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "f8d5b0366be6198e7a1d439c07f8a6de5348dc677b695941be05298cd1e12bc2",
+  "claims_file_preapproval_snapshot_sha256": "57eb0b1ebce17f79e95fd813f552780222f9398122d331f63650fcd0c3e99ebe",
+  "independent_replay_sha256": "a7ab4c5220c54fb39d104098ec8d3eebcfc8f94aa6f96da6c301db922244a103",
+  "independent_data_fidelity_sha256": "8ffc55b5ef76c464708c37e4508176ff5c0335df0c69009ba5e7d95aaaf580d6",
+  "new_material_native_gravity_applications": 0,
+  "root_prepared_receipt": {
+    "path": "build/ngb-successor-13-prepared.json",
+    "sha256": "c11dbf33de79a9cf0b031d36d2cb5f2fc445fa74234ae61cb04451704072561a",
+    "source_fingerprint_entries_verified": 1003,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "2b6f98a56cafd61741f900bc0465a2278344daf3caeea46d407c4c85622916f7"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 13.077,
+        "stdout_sha256": "69778f90a2aef6b2a8d34f974ea8c98e940901ac6f7549b932d006a606b23584",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 14.113,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 24.963,
+        "stdout_sha256": "2b6f98a56cafd61741f900bc0465a2278344daf3caeea46d407c4c85622916f7",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "full_warning_free_build": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-13.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "7d2a71815024bafb820c5599f0ed36b6a300842ab33e1a6d91dae95c0b60aa41"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-13.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "6b299c273c7236b8d096dc6119c14bab584d7fe302e8ab1641a38ec05a4150af"
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "NonlinearActionSmooth",
+      "source_sha256": "6b9e24009883a03211a986932e3809a42331d2c3597e77169a3c04bb8ca4b246",
+      "olean_sha256": "5587aca3d4b7c567b083f039f71ae36df53599f309d089449e0aa1f8682c8d17",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearActionSmooth"
+      ],
+      "exit_code": 0,
+      "seconds": 6.08,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearAdmission",
+      "source_sha256": "7b031a5b09aebc23b282458b89fc9a14500c39960746b0a6373211f88e1ee2de",
+      "olean_sha256": "7d98d0cb3499b299e6f86d67b1ee22e66bb9904cc5f5998703bc4c182385b9a9",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearAdmission"
+      ],
+      "exit_code": 0,
+      "seconds": 6.19,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearAmbient",
+      "source_sha256": "97539aab1a89f8c598970adf71501f047def2c50d65b855fc48c4b351a6c2e5f",
+      "olean_sha256": "a1f206601224f0608a4012a7f3c066c531d554eb44b4685df3ad1661d187e212",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearAmbient"
+      ],
+      "exit_code": 0,
+      "seconds": 5.797,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearContact",
+      "source_sha256": "d7772cb010092bec8880c319e28d0baece01f8db786e762af89754400ac5c66d",
+      "olean_sha256": "b8fd7010f0ea88f385af70acec133dbe701ee0e3c76b71412d9cfd446092f148",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearContact"
+      ],
+      "exit_code": 0,
+      "seconds": 5.765,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearCorrection",
+      "source_sha256": "9810c4265c738f813a23e9528f1bd8434f1eeb3b3165d5f637b69d69856ff4ab",
+      "olean_sha256": "cc749d71b1af0973bf0029fc62466c7e382126ae5fbd657224e2e5c991e4d837",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearCorrection"
+      ],
+      "exit_code": 0,
+      "seconds": 6.035,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearCorrectionCoefficients",
+      "source_sha256": "28e8e5db8e4efd90dcf2e5112cbfd6bdc3604efea5efa75151039838fde451da",
+      "olean_sha256": "5a52d88d2a966b777e3613482ed8051625935ce034995ab10de4cb98430dc689",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearCorrectionCoefficients"
+      ],
+      "exit_code": 0,
+      "seconds": 5.802,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearDifferential",
+      "source_sha256": "74f84fcfb5b6c645ab422301fcff802030d6302978534fae69852f928ea60545",
+      "olean_sha256": "658a864f240a19713c80c2a72cfb2eea2e7becf1f614907011b211609473f4c5",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearDifferential"
+      ],
+      "exit_code": 0,
+      "seconds": 5.853,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearForceBinding",
+      "source_sha256": "13eef0cb4d2a2b5d55e7a18f0ce7695f404999a3355f2ecb5da60f41e6b82d4f",
+      "olean_sha256": "afcd79772c99d63beeaa4c7f5838d640c3e6d64fa392f13dba60688ac7b34013",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearForceBinding"
+      ],
+      "exit_code": 0,
+      "seconds": 6.082,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearForceData",
+      "source_sha256": "7c5052c3e2ca9f8ac4faa46a16dc76b65e1005bee4a65e2707b8e1cb9472bf43",
+      "olean_sha256": "a2f319caa7b4170633ada9f610e0c471074684fe3d15c8f849c56383f7ea26ce",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearForceData"
+      ],
+      "exit_code": 0,
+      "seconds": 6.558,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearFull40",
+      "source_sha256": "1c9e83e174acfa9a9bb771e4503d77eef7830b255c7e5008284fdba5941371dc",
+      "olean_sha256": "7cbb8258ceeece2657711c7ad0b85f691a49a8af4ab277f8de5828a2459edd88",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearFull40"
+      ],
+      "exit_code": 0,
+      "seconds": 5.964,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearHistoryLocality",
+      "source_sha256": "50cc55e13c6930d93042aba79bc8744ccb066a0b6773df2e2522c7e42ed572ca",
+      "olean_sha256": "f167c2e0b2e967c71fb4b7b55b88b9e6577bb50a0c933316150a993b0dccfef9",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearHistoryLocality"
+      ],
+      "exit_code": 0,
+      "seconds": 6.92,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearIncidence",
+      "source_sha256": "3a68912ded238e3ee5efc9b8dbc86b599116fb710e7d4aee6d5306a739e2a376",
+      "olean_sha256": "edd651ea17911c06da1c2f87622a78fe596ee0083afa2d968330499c3933bdef",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIncidence"
+      ],
+      "exit_code": 0,
+      "seconds": 6.321,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearIsoBinding",
+      "source_sha256": "f63f20f195eb17fe4033bfeb398daaf6ab5d76b9adb4e0ef2bae7529cb4698c4",
+      "olean_sha256": "776d8fdd6e04b6af0dc80474bdccc4e8346252b9416de68f647678e5d8db57aa",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearIsoBinding"
+      ],
+      "exit_code": 0,
+      "seconds": 5.884,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearLocality",
+      "source_sha256": "30ef11ed4e984c01620fc507288df3476a6b04ef00dd54a09a3a981a767cfa29",
+      "olean_sha256": "abe3d1f12c54ad973539a6f0ebb572bd0e1ddc02bab0dd6b2468c8e4492fe701",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearLocality"
+      ],
+      "exit_code": 0,
+      "seconds": 5.981,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearLongCorrection",
+      "source_sha256": "77d59608481f0fd341a760a3ea0f76503925b57abc7200c48e6f7f4a658121d5",
+      "olean_sha256": "cb4e4ec08f39e78530a4fb4864fc4d2775f910ee0259218cdb09ad7930668c0d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearLongCorrection"
+      ],
+      "exit_code": 0,
+      "seconds": 6.263,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearLongHistory",
+      "source_sha256": "9ceba6b1a9a96c81a1ce6c403b376be45ab8e21161adbbf601eb2115b8c9cf3f",
+      "olean_sha256": "b946957695e474490a55d3b870c38c650b815c7bae638021d0841a7c767fb576",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearLongHistory"
+      ],
+      "exit_code": 0,
+      "seconds": 19.435,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearMatrixCritical",
+      "source_sha256": "7421aa12e693ed7db637a5bd34625538c56cd34fe4565403c5d98579e5847f08",
+      "olean_sha256": "1694d864700aecea67a8e0794df292546e2c5568019ef252bd444fd91d0041a3",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearMatrixCritical"
+      ],
+      "exit_code": 0,
+      "seconds": 6.059,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearNativeChart",
+      "source_sha256": "8251f198a4a234afd3b96fbea9477c1511572e69a434843043b7ae716f76b6d0",
+      "olean_sha256": "5171dc5e64765f49fae830142860a9d204255a4ebe3cc3525199e641048903df",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearNativeChart"
+      ],
+      "exit_code": 0,
+      "seconds": 7.058,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearRateLimit",
+      "source_sha256": "3e0b7fbe6740bfd191db4f8275c830e9b114744cd43dc4b62b03e3771468085a",
+      "olean_sha256": "6579fd33af7581c74c4859d212e76775fd8142591a0010769687b904ffb7e4e6",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearRateLimit"
+      ],
+      "exit_code": 0,
+      "seconds": 5.949,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearSmooth",
+      "source_sha256": "aa9ed7f2f81fda8c5e8a14a6c2890e30c8a2857501c56ad20f4301b2e3af2a4f",
+      "olean_sha256": "554e3ae0ea3f774363fc48d0b46e54713509911cf4db37e37ec96de2b801e651",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearSmooth"
+      ],
+      "exit_code": 0,
+      "seconds": 6.299,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "NonlinearSpatialCritical",
+      "source_sha256": "ec6f02737f0b4dbe2b1f9efc4f672894c36db90ae6531aaf03a2c244af3f2859",
+      "olean_sha256": "5c0b04668284bababf4206b903faaba3e30bc925c45b938f584dfddcefc2b165",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.NonlinearSpatialCritical"
+      ],
+      "exit_code": 0,
+      "seconds": 6.105,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumCarrier",
+      "source_sha256": "6e6adae3f1b9152e4eacbaf21ca6432934ca8e84f57a13f1cf4e52b999000516",
+      "olean_sha256": "5d28a9a1127cb683e58037006a9891ff9d6d861282bc266dc1800cbd621d7845",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumCarrier"
+      ],
+      "exit_code": 0,
+      "seconds": 5.916,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumCarrierDefs",
+      "source_sha256": "263376a9a5e7262766e92a425e33a552ea1d4ff418ed4f3a1471e918ce2efe25",
+      "olean_sha256": "8d97d77ab18c854ebd9301d94f9a09567c9b18b8ec6d63897d0d8bc11fc10561",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumCarrierDefs"
+      ],
+      "exit_code": 0,
+      "seconds": 6.127,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumCarrierSlice",
+      "source_sha256": "fd027d16f18b88f2eb5a4e477cf5768e442dc81024ecc10cfac5e3edac810919",
+      "olean_sha256": "546a9a5b988069afa5b0b26b8a721f030548124523ff048c48051930eff40d35",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumCarrierSlice"
+      ],
+      "exit_code": 0,
+      "seconds": 7.379,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumNative",
+      "source_sha256": "494d8b790ab4248ca62cab080f2d9dd683aeeb2d305a997873936a3bd46b5ff9",
+      "olean_sha256": "d238d0f81fb2e58ab93bc31e4f0508da3922b24517bc594cc81b559c6ab97a94",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumNative"
+      ],
+      "exit_code": 0,
+      "seconds": 6.16,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumPhase",
+      "source_sha256": "289b6160012ee97dca50abeafd523ff1bb312cd8202047c7191edf977abb4aec",
+      "olean_sha256": "cf9dde960fcb2c5e9f9fc194299810ad0fd5db95b2bbc0ad63190f3025fde05b",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumPhase"
+      ],
+      "exit_code": 0,
+      "seconds": 6.878,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSchur",
+      "source_sha256": "255af4ebae53c9d81b8761e501178df8b1d44d17fbdbfa72cb30e7217ffa63f0",
+      "olean_sha256": "5aa001af4ae8d847279eaca5ce680bf314e0999e17f7342b4d1f9a637fd29502",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSchur"
+      ],
+      "exit_code": 0,
+      "seconds": 7.304,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceAP",
+      "source_sha256": "be6e1a0256c9cba44dd61fd717a13c0129e00039c7c5cdced10f3002f7cf7469",
+      "olean_sha256": "ca0e530b88a1ca443348605c23cd333e34e39531e64286152119ba7c2272183e",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceAP"
+      ],
+      "exit_code": 0,
+      "seconds": 36.109,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceBinding",
+      "source_sha256": "d8f2d0793ceb6d5f4c12baf3408cff089c316da28267df8f57bfe8d58dd8b94b",
+      "olean_sha256": "7ceff8b778a0df9171908fda3bcadf1250cc29c9b136f4eabc303394a79fa003",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceBinding"
+      ],
+      "exit_code": 0,
+      "seconds": 24.696,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceDQ",
+      "source_sha256": "5130efd5110cdd8321fff983965cd220c98e2657ad2331a9c847c13143d07454",
+      "olean_sha256": "08ed1cd92a2135a814b32678bd612fa8f27ca37cafdbe360b510ab5ff0fc4fe7",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceDQ"
+      ],
+      "exit_code": 0,
+      "seconds": 30.785,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceData",
+      "source_sha256": "14e6b2b05d8569129060e28ab5bff4f43a8b2e3fbd066adf952351f7a0bfbe2e",
+      "olean_sha256": "1094e3432ae1a3229bf253bc661f36068f087e8ebafcee1a03667d6134c2f921",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceData"
+      ],
+      "exit_code": 0,
+      "seconds": 5.843,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceLeft",
+      "source_sha256": "10fcb2c11cbd3cc7e43f57b0b995d35d65e23f89585c548624a15d60daef302e",
+      "olean_sha256": "eb76211a29ba591951c88e9c254510926bb7fd37689280648ce7769f36506c26",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceLeft"
+      ],
+      "exit_code": 0,
+      "seconds": 569.038,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceLower",
+      "source_sha256": "dc833dd12b61c75e2052f7b8fdec39c3b5a739c31dc7c3ea2dd9227061b9d5c4",
+      "olean_sha256": "f9589f1d8edc628f0ec058cbeda4f1c6a76b9b3675bb30b510b4641097ed31b2",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceLower"
+      ],
+      "exit_code": 0,
+      "seconds": 39.54,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceRight",
+      "source_sha256": "0777b83216d87a5ba93dae1fdd2f9cf8d00e78497e9029e851935418aafd5869",
+      "olean_sha256": "9a4575f4742f4146e5e8dda71e638da23e953f234af8b1b0fe8ddb35731c33d4",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceRight"
+      ],
+      "exit_code": 0,
+      "seconds": 570.256,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumSliceUpper",
+      "source_sha256": "ac318209e2b59d079a35877455303bbff5eacc2c42c46d515e29ba9d31cd99f3",
+      "olean_sha256": "aa1c32e4bbec7b641c4f052325889fc0387cbd5ab15e66b9809c4696e0a8168d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceUpper"
+      ],
+      "exit_code": 0,
+      "seconds": 30.897,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "QuantumVolume",
+      "source_sha256": "394bf17871986b3aef54bbb313db9db60743dccda85943264f18dcbe751bfc60",
+      "olean_sha256": "b5576de67b4a43894571183a8fab44f819d32c83980c4e580bc6c3848744bb85",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumVolume"
+      ],
+      "exit_code": 0,
+      "seconds": 6.267,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "SuccessorStatements",
+      "source_sha256": "8453ce32be08c9c5ec0b2324730206ef47a7e375aaab1498ad142132804d3c52",
+      "olean_sha256": "853c4bdc7462b549f8ef7269471b99b048f17a30a79cb768f387ee7aba142812",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SuccessorStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.871,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "SuccessorTheorems",
+      "source_sha256": "d18465b5f1f621d54a096d3ba922c7f8bf366694de0dcc49b86119b15542524a",
+      "olean_sha256": "95faa0c7553d60b5866bde4ecf2f7cd7086ed5a7ad4b503f6bf0cad5a0b1f80b",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SuccessorTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.975,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scheduling_cancellations": [
+    {
+      "module": "QuantumSliceRight",
+      "source_sha256": "0777b83216d87a5ba93dae1fdd2f9cf8d00e78497e9029e851935418aafd5869",
+      "olean_sha256": "9a4575f4742f4146e5e8dda71e638da23e953f234af8b1b0fe8ddb35731c33d4",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuantumSliceRight"
+      ],
+      "exit_code": -15,
+      "seconds": 0.015,
+      "stdout": "",
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "old_Lean_files_unchanged": 963,
+  "old_import_aggregator_change": "only exact new SuccessorTheorems import appended",
+  "prior_approvals_preserved": 280,
+  "prior_manifest_entries_preserved": 284,
+  "previous_claim_objects_preserved": 26,
+  "source_pins_verified": 17,
+  "original_snapshot_copies_verified": 3,
+  "source_pin_mismatches": [],
+  "per_key_report_surfaces": [
+    {
+      "key": "NGB:native-full40-obstruction",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeFull40Obstruction",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeFull40Obstruction",
+      "review_text_sha256": "80c87758ec64f3a578c7a6605cdc366f4ba039a32943f08f3aba11c86813d265",
+      "canonical_literal_sha256": "83a6ff2b593f2a0de1f9ead04693153c7d03243b9405381e93bd4241c4023ac0",
+      "reachable_definition_count": 72,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "The actual complete original lapse derivative is bound on an open regular96-coordinate ambient domain and is strictly critical at flat space. The proved analytic contact theorem transfers its normalized leading limit to all declared ambient O(epsilon^2) corrections. An explicit genuine Cayley chart includes arbitrary16 frame and24 connection second-order coefficients with the exact future boundary retained, and proves eventual positive/proper/time-oriented physical admission. Every such correction retains40501/53868 and an eventually nonzero original force. Independent source jets and all120 correction controls agree. Scope remains the specified first tangent, fixed boundaries and spatial character.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:native-common-volume-schur",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeCommonVolumeSchur",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeCommonVolumeSchur",
+      "review_text_sha256": "216f7373ac99ff129e6abcb650188220365087fe5752e205c92493fd5eee6dff",
+      "canonical_literal_sha256": "ea06ef29498ad4199473b628818348f5560b8b041bfa1e910f15b436a7dc7fa9",
+      "reachable_definition_count": 76,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "Both exact triangular congruences are genuine opposite native36/30 Schur eliminations of one fixed66-coordinate principal carrier. Compact Ward plus inactive normalization preserves every original80-row source equation; stationary source contact and affine endpoints are retained. The references are actual convergent contour integrals with one native Lebesgue volume transported using the proved absolute real determinant. Exact determinant, signature, stationary-contact and Gaussian identities give equality of the two specified amplitudes and the native adapter retains full source admission. Independent complete source arithmetic matches all12 emitted tables, both congruences, inertia37/29, determinant normalization and nonzero contact4/101. No undeformed real oscillatory or physical-measure theorem is inferred.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:native-long-history-obstruction",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeLongHistoryObstruction",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeLongHistoryObstruction",
+      "review_text_sha256": "d8a7285b9621233573ab3a17670abeb02393121ac99519300b4f28ea0e818ed9",
+      "canonical_literal_sha256": "67d9f9a536782ac33513678d8214b7453228c85ff8a3792f3e9200c87e0c4a9d",
+      "reachable_definition_count": 77,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "The concrete four-cell first-order history satisfies all120 original linear matching equations. One globally consistent native correction permits all120 independent second-order coefficients with fixed endpoint frames. Exact finite differences and derivative binding retain incoming/nonincident contributions and arbitrary future links. Each actual original full-history lapse derivative has the independently reproduced positive coefficient; hence every fixed global corrector fails the source-free lapse equations for sufficiently small nonzero amplitude. This proves the specified longer-history robustness, not a nonzero-character or all-length theorem.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "scope": {
+    "arbitrary_owned40_second_order_coefficients": true,
+    "longer_history_owned120_second_order_coefficients": true,
+    "nonzero_spatial_character_robustness": false,
+    "all_history_lengths_obstruction": false,
+    "same_native_carrier_transported_volume": true,
+    "undeformed_real_oscillatory_integral": false,
+    "physical_gravity_applications": 0
+  },
+  "prose_scope_audited": true,
+  "audit_sha256": "714f83ba371f1ad31a40d7b1b4557c9db682f38cb3819bf8002746ce3e7cbeb1",
+  "scheduling_cancellation_provenance": {
+    "action": "cancel subsequently launched duplicate Right in original serial stream",
+    "reason": "Right moved to independent free stream with root authorization",
+    "original_runner_pid": 1249969,
+    "cancelled_command": "lake env leanchecker ArtformScores.NonabelianGravity.QuantumSliceRight",
+    "semantic_failure": false
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-31",
+  "stage": "13",
+  "baseline_commit": "79e9ce11d21c737d1c955dc8c92e6b1ba71b0e2f",
+  "result": "passed",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 13.077,
+      "stdout_sha256": "69778f90a2aef6b2a8d34f974ea8c98e940901ac6f7549b932d006a606b23584",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.113,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 24.963,
+      "stdout_sha256": "2b6f98a56cafd61741f900bc0465a2278344daf3caeea46d407c4c85622916f7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.202,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.389,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.248,
+      "stdout_sha256": "2819544ad939929bf635cd28d304deffe6658cf582de5fe16b661dfc95624f17",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.202,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.196,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.288,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.335,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.205,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-full40-jet-independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 8.49,
+      "stdout_sha256": "eda79a360b62f4969697c6256cd245c5fc902c67cc5cd398855622529419c560",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/successor-history-independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 16.604,
+      "stdout_sha256": "59ef4471d6865c5af4e7f344904f9a5b71428a7e95c9ee9646f7aac58dcd95b3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-14.py"
+      ],
+      "exit_code": 0,
+      "seconds": 21.724,
+      "stdout_sha256": "1c0c7af5d045652f7980b617fbd24057e7a1f4bc32e4be80f8a3a47836541cd6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.061,
+      "stdout_sha256": "dba227ee6a4e9684e0e0a8640d4b437b6c52359f772b9dc31d7f48de202a6c0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.522,
+      "stdout_sha256": "06da12662975dbf07f32cdf79a78969b4447c68011c67c0d8295cca0ca7f8648",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/history-emitter-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.46,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "separate_kernel_replays_reused_from_exact_independent_receipt": 38,
+  "review_receipt_sha256": "ca845f23a471028d523b0350b8d6062de96a32bd697e1ed7ea0e37ee3e1fb886",
+  "prior_approved_production_changed": false,
+  "scores": {
+    "total": 287,
+    "approved": 283,
+    "pending_CNI": 4
+  },
+  "new_material_physical_gravity_applications": 0
+}

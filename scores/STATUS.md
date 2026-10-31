@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 280 |
+| proved | 283 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **284** |
+| **total** | **287** |
 
 ## Statements
 
@@ -299,3 +299,6 @@
 | NGB:native-complete-history | Complete finite native history compatibility and certified elimination | proved | `Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory` / `Artform.Scores.NonabelianGravity.nativeCompleteHistory` | approved 2026-10-31 |
 | NGB:native-contour-reference | Source-admitted native contour reference with explicit measure and normalization | proved | `Artform.Scores.NonabelianGravity.Statement.nativeContourReference` / `Artform.Scores.NonabelianGravity.nativeContourReference` | approved 2026-10-31 |
 | NGB:native-isotropic-lapse-constraint | Exact native isotropic nonlinear lapse constraint and matched linear control | proved | `Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLapseConstraint` / `Artform.Scores.NonabelianGravity.nativeIsotropicLapseConstraint` | approved 2026-10-31 |
+| NGB:native-full40-obstruction | Arbitrary Full40 corrections cannot repair the prepared nonlinear history | proved | `Artform.Scores.NonabelianGravity.Statement.nativeFull40Obstruction` / `Artform.Scores.NonabelianGravity.nativeFull40Obstruction` | approved 2026-10-31 |
+| NGB:native-common-volume-schur | Opposite native Schur contour references agree on one transported volume | proved | `Artform.Scores.NonabelianGravity.Statement.nativeCommonVolumeSchur` / `Artform.Scores.NonabelianGravity.nativeCommonVolumeSchur` | approved 2026-10-31 |
+| NGB:native-long-history-obstruction | The nonlinear obstruction survives a consistent four-cell Full120 history | proved | `Artform.Scores.NonabelianGravity.Statement.nativeLongHistoryObstruction` / `Artform.Scores.NonabelianGravity.nativeLongHistoryObstruction` | approved 2026-10-31 |

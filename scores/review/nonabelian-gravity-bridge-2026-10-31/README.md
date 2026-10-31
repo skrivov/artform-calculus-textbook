@@ -58,3 +58,13 @@ in the publication workspace. This packet is its public repository copy.
 Production lives under scores/ArtformScores/NonabelianGravity. Publication
 receipts remain separate in the working lane. Shared ledger files, other
 campaigns, the gravity programme, textbook and monograph stay untouched.
+
+## Three-question successor
+
+The current successor results are in SUCCESSOR-RESULTS.md and
+GRAVITY-HANDOFF-SUCCESSOR.md. The three new claim keys are
+NGB:native-full40-obstruction, NGB:native-common-volume-schur and
+NGB:native-long-history-obstruction. They extend the earlier isotropic and
+fixed-certificate results without changing those historical claims. The
+stage13 independent verdict, validation receipts and successor-stage-13.json
+bind the new surfaces and publication checks. Physical gravity credit remains0.

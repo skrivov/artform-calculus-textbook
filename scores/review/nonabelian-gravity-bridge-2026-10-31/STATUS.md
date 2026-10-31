@@ -78,3 +78,18 @@ physical measure/state or selected quantum gravity law is claimed. The
 successor register records these as distinct contracts; the completion
 branch is relevant tools found, not universal mathematical exhaustion.
 Historical validators and publication receipts retain their own scopes.
+
+## Three-question successor inventory
+
+The successor resolves the unrestricted Full40 correction question negatively,
+the common-volume opposite-Schur reference question positively, and the
+four-cell/Full120 robustness question by a persistent positive lapse obstruction.
+See SUCCESSOR-RESULTS.md for domains and interpretation. The native spatial
+character remains fixed; no eight-route physical closure is credited.
+
+Three appended claim keys bring the inventory to287 score entries and29 NGB
+claims. The four inherited CNI entries remain separate from this campaign.
+The manifest and verdict-independent-13.json are the approval authority;
+successor-stage-13.json and validation-successor-root.json give the exact new
+proof inventory and preservation checks. Earlier result sections above retain
+their historical scope and evidence.

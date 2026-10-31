@@ -1,0 +1,30 @@
+{
+  "result": "passed",
+  "scope": "Independent finite native source, second-order jet controls and Schur rational data; universal analytic/domain theorems separately Lean reviewed.",
+  "checks": [
+    {
+      "script": "successor-full40-jet-independent.py",
+      "sha256": "5fbc0c4928d9cff5f61d225ce4960b191ba7fcf023c74b86e154cd7fcadb8238",
+      "exit_code": 0,
+      "stdout": "{\n  \"source\": \"full original two-cell nonlinear matrix source, not isotropic corrections\",\n  \"middle_correction_directions\": 40,\n  \"all_three_site_correction_directions\": 120,\n  \"dense_noncommuting_correction\": true,\n  \"coefficient\": \"40501/53868\",\n  \"scope\": \"exact finite amplitude-jet correction controls; arbitrary-field analytic Taylor/domain binding remains a separate proof obligation\"\n}\n",
+      "stdout_sha256": "eda79a360b62f4969697c6256cd245c5fc902c67cc5cd398855622529419c560",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "successor-history-independent.py",
+      "sha256": "6a63f8abc029e0e35a777b06d2dce5edd7da9ff66d4a3e25bfcd3378a89be930",
+      "exit_code": 0,
+      "stdout": "{\n  \"source\": \"independent complete native quadratic and original nonlinear two-incident-cell source\",\n  \"cells\": 4,\n  \"owned_sites\": 3,\n  \"owned_coordinates\": 120,\n  \"all_owned_linear_rows_zero\": true,\n  \"spatial_coframe_coefficients\": [\n    \"0\",\n    \"30401/82804\",\n    \"20501/41402\",\n    \"31803/82804\",\n    \"1\"\n  ],\n  \"spatial_boost_coefficients\": [\n    \"0\",\n    \"-5150/20701\",\n    \"-200/20701\",\n    \"-5150/20701\",\n    \"0\"\n  ],\n  \"original_source_lapse_jet_coefficients\": [\n    \"1263813303/6856502416\",\n    \"4414503/6856502416\",\n    \"1337735703/6856502416\"\n  ],\n  \"dense_arbitrary_full_coordinate_second_order_control\": true,\n  \"scope\": \"exact finite longer-history source and nonlinear jets; analytic arbitrary-correction binding must be proved separately\"\n}\n",
+      "stdout_sha256": "59ef4471d6865c5af4e7f344904f9a5b71428a7e95c9ee9646f7aac58dcd95b3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "replay-independent-14.py",
+      "sha256": "b69f9f7b925fcae4268b50d4ca2890f0505f8d69385255760857df5c6e4b9efb",
+      "exit_code": 0,
+      "stdout": "{\n  \"result\": \"passed\",\n  \"production_data_sha256\": \"14e6b2b05d8569129060e28ab5bff4f43a8b2e3fbd066adf952351f7a0bfbe2e\",\n  \"source\": \"standalone independent full native quadratic transcription\",\n  \"matrices_compared\": 12,\n  \"orders\": [\n    [\n      36,\n      30\n    ],\n    [\n      30,\n      36\n    ]\n  ],\n  \"signature\": [\n    37,\n    29\n  ],\n  \"scope\": \"Exact Schur/native-data and source-contact controls; analytic contour measure theorem requires separate Lean review.\"\n}\n",
+      "stdout_sha256": "1c0c7af5d045652f7980b617fbd24057e7a1f4bc32e4be80f8a3a47836541cd6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

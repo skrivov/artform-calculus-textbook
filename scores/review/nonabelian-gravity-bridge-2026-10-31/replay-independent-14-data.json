@@ -1,0 +1,22 @@
+{
+  "result": "passed",
+  "production_data_sha256": "14e6b2b05d8569129060e28ab5bff4f43a8b2e3fbd066adf952351f7a0bfbe2e",
+  "source": "standalone independent full native quadratic transcription",
+  "matrices_compared": 12,
+  "orders": [
+    [
+      36,
+      30
+    ],
+    [
+      30,
+      36
+    ]
+  ],
+  "signature": [
+    37,
+    29
+  ],
+  "scope": "Exact Schur/native-data and source-contact controls; analytic contour measure theorem requires separate Lean review.",
+  "replay_sha256": "b69f9f7b925fcae4268b50d4ca2890f0505f8d69385255760857df5c6e4b9efb"
+}

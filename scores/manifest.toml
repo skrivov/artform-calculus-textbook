@@ -5173,3 +5173,45 @@ lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLaps
 lean_proof = "Artform.Scores.NonabelianGravity.nativeIsotropicLapseConstraint"
 reviewed = "2026-10-31"
 review_text_sha256 = "cf9f43c23b06b0194ecb462254bd9270fca941aff4d9519e0904ecf2f2125d7c"
+
+[[statement]]
+key = "NGB:native-full40-obstruction"
+label = "NGB:native-full40-obstruction"
+title = "Arbitrary Full40 corrections cannot repair the prepared nonlinear history"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-full40-obstruction)"
+statement = """
+For the pinned original nonlinear spatial-zero-character candidate at kappa=1/101, retain the five-corner curvature, both diagonal transports, the ordered antisymmetric holonomy reading, determinant and both inverse metrics in torsion, and both incident cells. On the open ambient96-coordinate space of middle/future coframes and four unrestricted middle link matrices, the actual lapse derivative equals the complete product-contact formula on the regular set and has strict derivative zero at flat space. The proved analytic second-order-contact theorem preserves its leading force under every ambient O(epsilon^2) correction approaching flat space. In the actual native Cayley chart U=(I+lie(A)/2)*(I-lie(A)/2)^-1, allow every one of the16 middle coframe and24 middle connection second-order coefficients independently; retain the old flat boundary and exact future coframe diag(1,1+epsilon,1+epsilon,1+epsilon). For the previously matched first-order history, every such corrector has actual lapse force divided by epsilon^2 tending to40501/53868. Every fixed corrector is admitted near zero: the coframe determinants are positive, links preserve the Minkowski metric, have determinant1 and positive00 entry. The force is eventually nonzero for nonzero epsilon, so no such correction repairs the source-free equation. This is a finite-boundary obstruction on the stated spatial character and correction class, not an identified continuum Taub charge, universal gravity no-go or completed physical R7/R8 route.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeFull40Obstruction"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeFull40Obstruction"
+reviewed = "2026-10-31"
+review_text_sha256 = "80c87758ec64f3a578c7a6605cdc366f4ba039a32943f08f3aba11c86813d265"
+
+[[statement]]
+key = "NGB:native-common-volume-schur"
+label = "NGB:native-common-volume-schur"
+title = "Opposite native Schur contour references agree on one transported volume"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-common-volume-schur)"
+statement = """
+For the approved rational three-cell Full40 Taylor candidate retain the full80 source equations, all three cut actions and affine endpoint representative. Fix the native66-coordinate principal slice:36 first-site coordinates excluding0,4,8,12 and30 second-site coordinates additionally excluding1,2,3,6,7,11. The explicit compact Ward correction followed by the inactive-coordinate projector puts every full vector in this slice without changing H2 times that vector. For every compatible original source the inserted unique slice solution satisfies all80 original equations and its stationary source contact equals the original full contact. The two declared triangular congruences are genuine opposite36/30 and30/36 Schur orders, with their native solve and off-diagonal-product identities checked in Lean; all66 pivots are nonzero, with37 positive and29 negative in each order and rotation phase1. Declare ordinary Lebesgue volume once on this native slice. Each real congruence transports that volume with the proved absolute-determinant Jacobian; multiply the existing absolutely convergent complex-contour reference integral by this real Jacobian. Determinant congruence, stationary-contact invariance and the nonnegative Gaussian normalization prove equality of these two specified actual contour reference amplitudes for every positive hbar and every slice source, retaining determinant magnitude, signature phase, affine endpoint and source contacts. The native adapter admits exactly positive hbar and existence of an original full matched history. The nonzero source H2*e_(0,25) remains admitted with contact4/101. This is a source-faithful common-volume reference composition, not physical measure selection, equality with an unreduced real oscillatory integral, an unrestricted Fubini law, unitary propagation or a selected quantum gravity theory.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeCommonVolumeSchur"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeCommonVolumeSchur"
+reviewed = "2026-10-31"
+review_text_sha256 = "216f7373ac99ff129e6abcb650188220365087fe5752e205c92493fd5eee6dff"
+
+[[statement]]
+key = "NGB:native-long-history-obstruction"
+label = "NGB:native-long-history-obstruction"
+title = "The nonlinear obstruction survives a consistent four-cell Full120 history"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-long-history-obstruction)"
+statement = """
+For the same original nonlinear spatial-zero-character candidate, use four density cells with three40-coordinate interior sites and fixed endpoint coframes I and diag(1,1+epsilon,1+epsilon,1+epsilon), with initial identity links. The interior first-order spatial coframe rates are(30401/82804,20501/41402,31803/82804) and the three equal spatial boost rates are(-5150/20701,-200/20701,-5150/20701), with all other first-order entries zero. All120 original affine linear matching rows hold with zero source. A single globally consistent corrected history admits every16 coframe and24 native Cayley connection second-order coefficients at each interior site, all120 independent; neighboring corrections are retained. An exact finite-difference identity for arbitrary neighboring coframes and links binds each original full-history lapse variation to the ambient two-cell force. Incoming and nonincident contributions are proved lapse-independent; the outgoing identity retains arbitrary future links. Each fixed global corrector is physically admitted near flat space at every owned local chart. The three actual full-history lapse derivatives divided by epsilon^2 tend respectively to1263813303/6856502416,4414503/6856502416,1337735703/6856502416. All are positive, so every one of these lapse derivatives is eventually nonzero for nonzero epsilon for every global corrector; this history has no source-free second-order repair in the declared class. This resolves the longer-history alternative, not nonzero-spatial-character robustness, an all-length theorem, continuum stability classification or a physical quantum gravity application.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeLongHistoryObstruction"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeLongHistoryObstruction"
+reviewed = "2026-10-31"
+review_text_sha256 = "d8a7285b9621233573ab3a17670abeb02393121ac99519300b4f28ea0e818ed9"

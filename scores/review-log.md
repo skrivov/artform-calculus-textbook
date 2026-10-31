@@ -293,3 +293,6 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `NGB:native-complete-history` approved as `Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory` (text 88af08615323)
 - 2026-10-31: `NGB:native-contour-reference` approved as `Artform.Scores.NonabelianGravity.Statement.nativeContourReference` (text 2d391acf840c)
 - 2026-10-31: `NGB:native-isotropic-lapse-constraint` approved as `Artform.Scores.NonabelianGravity.Statement.nativeIsotropicLapseConstraint` (text cf9f43c23b06)
+- 2026-10-31: `NGB:native-full40-obstruction` approved as `Artform.Scores.NonabelianGravity.Statement.nativeFull40Obstruction` (text 80c87758ec64)
+- 2026-10-31: `NGB:native-common-volume-schur` approved as `Artform.Scores.NonabelianGravity.Statement.nativeCommonVolumeSchur` (text 216f7373ac99)
+- 2026-10-31: `NGB:native-long-history-obstruction` approved as `Artform.Scores.NonabelianGravity.Statement.nativeLongHistoryObstruction` (text d8a7285b9621)

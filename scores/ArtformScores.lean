@@ -245,3 +245,5 @@ import ArtformScores.NonabelianGravity.HistoryTheorems
 import ArtformScores.NonabelianGravity.HistoryQuantumTheorems
 
 import ArtformScores.NonabelianGravity.NonlinearTheorems
+
+import ArtformScores.NonabelianGravity.SuccessorTheorems

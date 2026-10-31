@@ -1,0 +1,8 @@
+{
+  "result": "passed",
+  "baseline": "79e9ce11d21c737d1c955dc8c92e6b1ba71b0e2f",
+  "old_Lean_files_byte_identical": 963,
+  "original_pins": 17,
+  "previous_claim_objects": 26,
+  "canonical_and_manifest_prefixes_preserved": true
+}
