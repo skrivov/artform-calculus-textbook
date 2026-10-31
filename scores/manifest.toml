@@ -1088,8 +1088,8 @@ The native leading trace interpretation and finite-spacing obligations are state
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.companionReadout"
 lean_proof = "Artform.Scores.GravityBridge.companionReadout"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "896a68d6fa91cd6148d917fafc65565c17aac0caf6deb1791dfcb52bbc98301d"
 
 [[statement]]
 key = "GAC:local-processing"
@@ -1110,8 +1110,8 @@ trace channels. See [finding 115](findings/115-local-processing-inverse-and-chan
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.localProcessing"
 lean_proof = "Artform.Scores.GravityBridge.localProcessing"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "f796c72b5ff534ad1519bc9014462f9b0d8fd7ab9b45be88552094b8e5d5a253"
 
 [[statement]]
 key = "GAC:source-response"
@@ -1134,5 +1134,5 @@ No native physical input/output class is inferred from this example. See
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.sourceResponse"
 lean_proof = "Artform.Scores.GravityBridge.sourceResponse"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "d16420340cad57a0543e761b47298485e9b13dbb3747f151de7d98c87c9caf29"

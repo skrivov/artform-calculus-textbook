@@ -90,3 +90,6 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:stencil-support` approved as `Artform.Scores.GravityBridge.Statement.stencilSupport` (text 45f701bc5b66)
 - 2026-10-30: `GAC:r2-norm-chart` approved as `Artform.Scores.GravityBridge.Native.R2.Statement.normChart` (text 510047da614f)
 - 2026-10-30: `GAC:r2-phase-transfer` approved as `Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer` (text 56b15afec4d7)
+- 2026-10-30: `GAC:companion-readout` approved as `Artform.Scores.GravityBridge.Statement.companionReadout` (text 896a68d6fa91)
+- 2026-10-30: `GAC:local-processing` approved as `Artform.Scores.GravityBridge.Statement.localProcessing` (text f796c72b5ff5)
+- 2026-10-30: `GAC:source-response` approved as `Artform.Scores.GravityBridge.Statement.sourceResponse` (text d16420340cad)

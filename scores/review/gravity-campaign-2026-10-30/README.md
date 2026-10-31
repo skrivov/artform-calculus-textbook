@@ -176,4 +176,7 @@ matrix example, and no inference of native admissibility. Finding116 gives scope
 The six new Defs/Statements surfaces are CompanionDefs/CompanionStatements, LocalityDefs/
 LocalityStatements and SourceDefs/SourceStatements. No approved surface is changed. All
 required checks, R2 certificate check, both drift checks and three separate kernel replays
-pass; see validation-B04-D02-B02.json. Original77 approvals stand. Independent review requested.
+pass; see validation-B04-D02-B02.json. All three additions were independently approved at
+freeze `56f724062c57b04113508158281e72cf774f2a2f`; none returned. Original77 approvals
+stand. See the distinct [audit](audit-independent-06.md), [per-key verdicts](verdict-independent-06.json)
+and [validation](validation-independent-06.json). These add no material native application.
