@@ -1936,8 +1936,8 @@ See [finding 152](findings/152-joint-angular-spacing-and-nonlinear-budget.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.jointBudgetLaw"
 lean_proof = "Artform.Scores.GravityBridge.jointBudgetLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "f9156cc964fd4080c34a758ddb895436229a00d404aefd29c0f7ec0e8335b536"
 
 [[statement]]
 key = "GAC:state-topology-audit"
@@ -1958,8 +1958,8 @@ See [finding 153](findings/153-positive-state-topology-and-native-limit-scope.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.stateTopologyLaw"
 lean_proof = "Artform.Scores.GravityBridge.stateTopologyLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "2afe9efe5293df59df35b528cfe7f21f0587412943fe9038b7485a886d29d77f"
 
 [[statement]]
 key = "GAC:source-radical-audit"
@@ -1980,8 +1980,8 @@ See [finding 154](findings/154-source-compatible-radical-and-nondegenerate-quoti
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.sourceRadicalLaw"
 lean_proof = "Artform.Scores.GravityBridge.sourceRadicalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "59acb847a2462c351bf981fdc44e4fb600fd1db9b771b0fc76e327c3a0f6c873"
 
 [[statement]]
 key = "GAC:controlled-phase-equivalence"
@@ -2002,8 +2002,8 @@ See [finding 155](findings/155-isolated-channel-and-controlled-reference-experim
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.controlledPhaseLaw"
 lean_proof = "Artform.Scores.GravityBridge.controlledPhaseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "3d6ac7e5d3f2f2c7ed562389bc5afb039bf4ffd2568f48db1fcc003e68603d7e"
 
 [[statement]]
 key = "GAC:metric-frame-kinematics"
@@ -2027,5 +2027,5 @@ See [finding 156](findings/156-metric-frame-connection-and-full-forty-obligation
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.metricFrameLaw"
 lean_proof = "Artform.Scores.GravityBridge.metricFrameLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "65f126c20b3705f85f2450d87edd271a0bf5e5fcc63058b818f2b042c698f497"

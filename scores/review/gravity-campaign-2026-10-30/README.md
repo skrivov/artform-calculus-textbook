@@ -476,7 +476,7 @@ the guarded pivot result strengthens the same accepted R2 workflow.
 
 ## H04–H08 final additions and all-eight assessment
 
-Final submission14 contains five new claims in findings152–156. The previous114 approvals
+Final submission14 contains five independently approved claims in findings152–156. The previous114 approvals
 stand. JointBudget, StateTopology, SourceRadical, ControlledPhase and MetricFrame each have
 new Defs and Statements surfaces. No approved surface is edited. Literal claims are in
 scores/manifest.toml and ledger ALGEBRA-OF-SCORES.md section7.
@@ -506,19 +506,21 @@ scores/manifest.toml and ledger ALGEBRA-OF-SCORES.md section7.
   physical gauge equivalence, all40 reconstruction or physical mode counting.
 
 The [final scientific assessment](final-assessment.md) and [proposed continuation](continuation.md)
-are part of this final independent review. Assess all eight directions, causal usefulness of
-OutlookOf, counting and every claimed native transfer. The intended final accounting is60
-investigations and56 new approved claims,119 total including original63. A01,A08,F01,D08
+were independently reviewed with all eight directions, causal usefulness of OutlookOf, counting
+and every claimed native transfer. Final accounting is60 investigations and56 new approved
+claims,119 total including original63. A01,A08,F01,D08
 carry research dispositions without separate registered new claims. Exactly one accepted
 material native application remains the scoped R2 all-zero coefficient-stratum reduction;
 its later extensions do not earn extra applications. The material R7/R8 target is unmet,
 all eight routes and the full parent remain open, and scientific outcome is partially successful.
 The twelve continuation duties are proposed future work, outside the completed allocation.
 
-Validation-H04-H05-H06-H07-H08.json records all required checks, certificates, both drift checks
-and five separate kernel replays with compact output hashes. Independently replay the proof
-and source/fidelity checks. Approve only passing literal claims through ledger_status.py,
-write audit/verdict/validation14, and publish. If the final assessment passes, replace its draft
-header with final approved counts and your review14 reference as part of your publication.
-The root will then close ledger checkpoint12 and the goal after publication. No additional
-material native credit is proposed, and no human technical approval is a gate.
+validation-H04-H05-H06-H07-H08.json records root checks, certificates, both drift checks
+and five separate kernel replays with compact output hashes. All five literal claims were
+independently approved at freeze `19b178f4cc6da2d5614b92505ffa895242850b74`; none returned.
+See the distinct [audit](audit-independent-14.md), [per-key verdicts](verdict-independent-14.json),
+[validation](validation-independent-14.json) and [exact arithmetic replay](arithmetic-independent-14.py).
+The final assessment is independently approved with final counts, the baseline direction names
+and explicit R2 refinement/R6 native scheduling limitations. The twelve continuation duties are
+proposed and unstarted. All114 prior approvals and the original63 baseline entries stand unchanged.
+Zero additional material native credit is assigned; the accepted scoped R2 application remains one.
