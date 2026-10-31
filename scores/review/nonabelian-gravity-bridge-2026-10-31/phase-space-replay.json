@@ -1,0 +1,23 @@
+{
+  "scope": "exact rational unit-quaternion tangent probes at two Gauss-admitted regular points; not a global pullback theorem",
+  "results": [
+    {
+      "gauge_rank": 18,
+      "restricted_two_form_rank": 6,
+      "point": 0,
+      "constraint_rank": 18,
+      "constraint_tangent_dimension": 24,
+      "gauge_null_errors": [],
+      "pullback_defects": []
+    },
+    {
+      "gauge_rank": 18,
+      "restricted_two_form_rank": 6,
+      "point": 1,
+      "constraint_rank": 18,
+      "constraint_tangent_dimension": 24,
+      "gauge_null_errors": [],
+      "pullback_defects": []
+    }
+  ]
+}

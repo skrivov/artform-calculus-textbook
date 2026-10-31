@@ -1,19 +1,21 @@
 # Campaign status
 
-31 October 2026: **organized; research execution not started**.
+31 October 2026: **initial research checkpoint reached; continuation decision unpassed**.
 
 | Item | State |
 |---|---|
-| Initial research allocation | 12 investigations, A01-A06 and B01-B06 |
-| Conditional extension | Up to 12, C01-C06 and D01-D06 |
-| Completed investigations | 0 |
-| Initial continuation decision | Unassessed |
-| Geometric continuation decision | Unassessed |
-| New registered Lean claims | 0 |
+| Initial investigations with research dispositions | 12 of12 |
+| Fully answered model/algebra questions | 7: A01-A06 and B01 |
+| Scoped partial results | 4: B02-B05 |
+| Continuation assessment | B06: unpassed |
+| Conditional geometric/native investigations | 12 unstarted |
+| New checked Lean submissions | 8, all pending independent fidelity review |
 | New independent approvals | 0 |
-| New material gravity applications | 0 |
-| Inherited score baseline | 254 approved; 4 checked CNI submissions pending review |
+| New material native gravity applications | 0 |
+| Preserved approvals | 254 |
+| Inherited pending CNI submissions | 4 |
+| Total score claims after this batch | 266: 254 proved,12 stated |
 | Additional workers launched | 0 |
-| Next research question | A01: actual two-face signed Canvas and complete stars |
+| Next scientific duties | Analytic Maurer/reduction binding and independent fidelity review |
 
-Setup includes the ordered queue, constructor contract, physical comparison, source freeze and review/publication instructions. These are organization, not research rounds. The current request completes organization; the campaign's scientific objectives remain unattempted. See VALIDATION.json for publication checks and the dedicated ledger lane's PUBLICATION.json for the eventual published commit.
+A recorded disposition does not mean that an original physical obligation is solved. The first-stage model works algebraically; finite formal two-form and conditional norm results retain their stated limits. No geometric stage is activated. See RESULTS.md, HANDOFF.md and validation-research-root.json. The original organization receipt VALIDATION.json remains historical and is not the research validation.

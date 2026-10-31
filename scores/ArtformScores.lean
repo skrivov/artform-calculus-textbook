@@ -223,3 +223,5 @@ import ArtformScores.Gauge.Theorems
 import ArtformScores.Nonabelian.Theorems
 
 import ArtformScores.ClassicalNonabelian.Theorems
+
+import ArtformScores.NonabelianGravity.Theorems

@@ -1,0 +1,21 @@
+{
+  "scope": "formal invariant-pairing Maurer word algebra, not an analytic or reduced-manifold theorem",
+  "baseline_normal_terms": 55,
+  "results": [
+    {
+      "map": "face0",
+      "normal_defect_terms": 0,
+      "omitted_fusion_defect_terms": 36
+    },
+    {
+      "map": "face1",
+      "normal_defect_terms": 0,
+      "omitted_fusion_defect_terms": 37
+    },
+    {
+      "map": "drift",
+      "normal_defect_terms": 0,
+      "omitted_fusion_defect_terms": 0
+    }
+  ]
+}

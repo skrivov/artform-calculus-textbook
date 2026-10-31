@@ -3,15 +3,15 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "not_started",
+  "research_status": "initial_allocation_investigated_gate_unpassed",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "single_researcher_no_additional_workers",
   "additional_workers_launched": 0,
   "initial_investigations": 12,
   "conditional_investigations": 12,
   "maximum_investigations": 24,
-  "completed_investigations": 0,
-  "new_registered_claims": 0,
+  "completed_investigations": 12,
+  "new_registered_claims": 8,
   "new_independent_approvals": 0,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
@@ -35,11 +35,15 @@
   ],
   "decisions": {
     "decision12": {
-      "status": "unassessed",
+      "status": "unpassed",
       "requires": [
         "actual_oriented_two_face_process",
         "physical_phase_space_preservation",
         "independent_fidelity_review"
+      ],
+      "unmet": [
+        "independent_fidelity_review",
+        "analytic_Maurer_exterior_form_and_regular_reduction_binding"
       ]
     },
     "decision18": {
@@ -59,10 +63,18 @@
       "depends_on": "baseline",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Actual closed seven-edge two-face Canvas and complete ordered stars.",
+      "lean_claims": [
+        "NGB:two-face-geometry"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "A02",
@@ -70,10 +82,19 @@
       "depends_on": "A01",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Reversed shared traversal uses the exact right multiplier; no commutation restriction.",
+      "lean_claims": [
+        "NGB:oriented-score",
+        "NGB:neighbor-scaling"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "A03",
@@ -81,10 +102,18 @@
       "depends_on": "A02",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Both signed face commits preserve the complete raw defect and have exact inverses.",
+      "lean_claims": [
+        "NGB:oriented-score"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "A04",
@@ -92,10 +121,19 @@
       "depends_on": "A03",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Fixed-link face maps commute but overlapping-write profiles are incompatible; sequential realization supplied.",
+      "lean_claims": [
+        "NGB:oriented-score",
+        "NGB:legal-overlap"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "A05",
@@ -103,10 +141,18 @@
       "depends_on": "A04",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Actual noncommuting S3 Gauss state has a changed conjugacy invariant; specified adverse controls fail.",
+      "lean_claims": [
+        "NGB:noncommuting-controls"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "A06",
@@ -114,10 +160,19 @@
       "depends_on": "A05",
       "stage": "A",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Fixed instruction words have both inverse orders, legal prefixes, full gauge descent and actual period-three realization.",
+      "lean_claims": [
+        "NGB:oriented-score",
+        "NGB:legal-overlap"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B01",
@@ -125,10 +180,18 @@
       "depends_on": "baseline",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Exact AMM endpoint/action/drift dictionary, with no native field identification asserted.",
+      "lean_claims": [
+        "NGB:double-dictionary"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": true,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B02",
@@ -136,10 +199,18 @@
       "depends_on": "B01",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Consistent AMM edge-plus-fusion form selected; exact rational tangent data pass. Analytic axioms/reduction remain external and unformalized.",
+      "lean_claims": [
+        "NGB:formal-two-form"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": false,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B03",
@@ -147,10 +218,19 @@
       "depends_on": "B02, A03",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Universal finite formal pullback certificates and actual group-word binding pass. Analytic Maurer interpretation remains open.",
+      "lean_claims": [
+        "NGB:formal-two-form",
+        "NGB:word-binding"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": false,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B04",
@@ -158,10 +238,18 @@
       "depends_on": "B03",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Drift identified with the known AMM target moment-map twist; selected gravitational Hamiltonian, face-flow generator and real-time domain remain open.",
+      "lean_claims": [
+        "NGB:double-dictionary"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": false,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B05",
@@ -169,10 +257,18 @@
       "depends_on": "B03, B04",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
-      "lean_claims": [],
-      "independent_review": "not_submitted"
+      "status": "research_disposition_recorded",
+      "result": "Exact noncommutative neighbour cancellation and conditional norm/rescaled estimates; actual native matching, uniform constants and time normalization remain open.",
+      "lean_claims": [
+        "NGB:neighbor-scaling"
+      ],
+      "independent_review": "pending",
+      "model_question_fully_answered": false,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "B06",
@@ -180,10 +276,16 @@
       "depends_on": "A06, B05",
       "stage": "B",
       "activation": "initial",
-      "status": "planned",
-      "result": null,
+      "status": "research_disposition_recorded",
+      "result": "Continuation unpassed pending independent fidelity review and the analytic interpretation/domain contract; no geometric stage activated.",
       "lean_claims": [],
-      "independent_review": "not_submitted"
+      "independent_review": "not_a_theorem_submission",
+      "model_question_fully_answered": false,
+      "physical_gate_discharged": false,
+      "evidence": [
+        "RESULTS.md",
+        "ALGEBRA-OF-SCORES.md"
+      ]
     },
     {
       "id": "C01",
@@ -317,5 +419,21 @@
       "lean_claims": [],
       "independent_review": "not_submitted"
     }
-  ]
+  ],
+  "investigations_with_disposition": 12,
+  "new_checked_submissions": 8,
+  "fully_answered_model_algebra_questions": 7,
+  "scoped_partial_results": 4,
+  "continuation_assessments": 1,
+  "completion_count_meaning": "A substantive research disposition, not proof of every original mathematical or physical goal.",
+  "native_direction_status": {
+    "R1": "open_no_new_material_application",
+    "R2": "open_no_new_material_application",
+    "R3": "open_no_new_material_application",
+    "R4": "open_no_new_material_application",
+    "R5": "open_no_new_material_application",
+    "R6": "open_no_new_material_application",
+    "R7": "open_no_new_material_application",
+    "R8": "open_no_new_material_application"
+  }
 }

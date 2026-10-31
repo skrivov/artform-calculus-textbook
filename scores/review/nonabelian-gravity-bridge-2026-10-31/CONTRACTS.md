@@ -1,6 +1,6 @@
 # First constructor and physical comparison contracts
 
-Everything below specifies a proposed investigation. This file submits no new theorem and does not certify the proposed two-face update.
+This is the original planning contract. The two-face implementation and exact submitted scope are now recorded in RESULTS.md and ALGEBRA-OF-SCORES.md. Analytic, geometric and native comparison duties below remain separate; this planning file does not certify them.
 
 ## Two-face test canvas
 
