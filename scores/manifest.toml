@@ -2492,8 +2492,8 @@ See [finding177](findings/177-original-temporal-boost-quarter-contact.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.boostContactLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.boostContactLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "6f5914f01a8312f51f4b5101fc13f85be33468578fde1f8053e0769ef10a13bc"
 
 [[statement]]
 key = "GAC2:full-inverse-first-contact"
@@ -2512,8 +2512,8 @@ See [finding178](findings/178-full-signed-inverse-first-return-contact.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.firstContactLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.firstContactLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "7d4fc2f8d8c3ba40709d6ec5323ce6fb87d84b1611fb6c8740fd449988d902da"
 
 [[statement]]
 key = "GAC2:guarded-four-group-target"
@@ -2532,8 +2532,8 @@ See [finding179](findings/179-complete-four-group-longitudinal-target-criterion.
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.fourGroupLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.fourGroupLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "2f1ad21923570080ddcb8d7baebf1d42edcfea4f282beaebda55983e1dfc5c9d"
 
 [[statement]]
 key = "GAC2:higher-temporal-profile-budget"
@@ -2553,8 +2553,8 @@ See [finding180](findings/180-higher-temporal-profile-and-real-norm-budget.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.temporalProfileLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.temporalProfileLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "1a725002b48056cbe19d699172031652d30e28d85b4d4b18d9223cf034e31454"
 
 [[statement]]
 key = "GAC2:native-cut-gauge-readouts"
@@ -2574,8 +2574,8 @@ See [finding181](findings/181-six-component-native-cut-gauge-readouts.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.cutGaugeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.cutGaugeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "129a0325346fb27d3278907c1fafc403c9801312483cd531019d517a3c244018"
 
 [[statement]]
 key = "GAC2:native-singular-source-strata"
@@ -2587,15 +2587,16 @@ statement = """
 distinct B_t has nonzero null vectors at t=1/4 and-1/2; the indexed repeated R_b(t)
 has nonzero null vectors at t=1 and-1/2 for every b. At t=1/4 the particular r(z) source
 still has its certified spectral solve, although the global distinct inverse is singular.
-The denominator-cleared polynomial inverse becomes0 there and is NOT a matrix inverse.
+The displayed rational inverse formula evaluates to zero there under totalized inversion
+and is NOT a matrix inverse.
 Every repeated b=0 source in the range at t=1 has component sum0; every distinct source
 in the range at t=1/4 obeys r0-r1-r2=0. Native t=1/101 satisfies the original inverse guards.
 See [finding182](findings/182-native-singular-strata-and-source-range-tests.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.singularLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.singularLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "8e3ef97376fcadbc51b7643de077dd514c4db92672e0034b0b6526e784691d33"
 
 [[statement]]
 key = "GAC2:selected-source-work-audit"
@@ -2616,8 +2617,8 @@ See [finding183](findings/183-matched-selected-source-proof-and-work-audit.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceCostLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.sourceCostLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "0e413e8f9e2e8ff538754350fb3219febe65e20ed58d9a279ff03abc0a0216ac"
 
 [[statement]]
 key = "GAC2:temporal-forcing-factor-cancellation"
@@ -2635,8 +2636,8 @@ See [finding184](findings/184-original-temporal-tt-forcing-factor-cancellation.m
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.tTForceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.tTForceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "adcc7f6fd61f7f8b71dcd60cfa22071e0463e5aade08a3c8cd9abc6da56c0b56"
 
 [[statement]]
 key = "GAC2:full24-homogeneous-decomposition"
@@ -2656,8 +2657,8 @@ See [finding185](findings/185-full24-original-homogeneous-connection-decompositi
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.homogeneousLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.homogeneousLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "78e41413dd598bcbd9496bef34e9fbc5296e3debed8aaa311c07391274e25255"
 
 [[statement]]
 key = "GAC2:verified-native-block-programs"
@@ -2678,5 +2679,5 @@ See [finding186](findings/186-verified-native-block-exact-arithmetic-programs.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.blockProgramsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.blockProgramsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "6277358e9683e3832b21a3086a1edfa0f50e27a06d84c6870624ab7bc278869c"

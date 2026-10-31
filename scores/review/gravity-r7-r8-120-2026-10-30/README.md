@@ -152,3 +152,18 @@ Required checks/certificates,both drifts and10 separate kernels must pass. Appro
 literal claims through tooling; preserve139 entries; record independent audit/verdict/compact
 validation05 and publish/push. Assign no new physical gate; judge any narrow prospective
 operation saving separately from historical/retrospective credit. Same one independent reviewer.
+
+All ten review05 claims were independently approved on31 October2026 from freeze
+`155a7fd5ae68658e9d7f35e38aa8669e8c33c60d`; none returned. See the distinct
+[audit](audit-independent-05.md), [per-key verdicts](verdict-independent-05.json),
+[validation](validation-independent-05.json) and [original-matrix/program replay](arithmetic-independent-05.py).
+All139 earlier approvals stand unchanged, giving149 approved entries in total.
+One author-authorized terminology repair was applied to C06's manifest, canonical quote and finding:
+the totalized rational inverse formula is zero at the singular point; its numerator is nonzero.
+No Lean surface or implementation was edited. All ten kernels, original-matrix cross-block checks,
+both proof-metric rows and all five literal-program output/bit traces independently pass.
+Zero additional material native application and zero historical/overall retrospective efficiency
+saving are credited. The general-input programs do establish the declared prospective gate reduction
+(9 scales/6 adds to4 scales/5 adds); this does not improve the already optimal old selected source.
+The actual longitudinal numerator, nonfinite native stationarity/profile admission, contour and
+physical source/boundary/history transfers remain open.
