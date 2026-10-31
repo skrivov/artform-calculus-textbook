@@ -1,0 +1,372 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "635db5e093149fc77b3e41fc51925cc9eafc126e",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 179,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:native-reflected-band-inverse-guards",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.bandLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.bandLaw",
+      "review_text_sha256": "8a52ed46501a5553a2e618a143e9e9c3ae6c142597ed56ad068f460da2e6a6ca",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 19,
+      "new_material_native_application": false,
+      "reason": "Actual original light-cone discriminant identified for both signs, explicit reflected compact band and numeric separation, followed by both native inverse orders. No finite-h or physical source/history bound inferred."
+    },
+    {
+      "key": "GAC2:native-coordinate-two-sided-inverse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.inverseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.inverseLaw",
+      "review_text_sha256": "f812e7d814adae154b39379f8b1382b930b07e82b8dda586e8e0d75986f2851c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 17,
+      "new_material_native_application": false,
+      "reason": "Original componentwise simple-face relation derived, both polynomial and guarded inverse products with correct constants/eta restored. Both lower-basis inverse orders; no division at d0."
+    },
+    {
+      "key": "GAC2:native-quartic-leading-inverse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.leadingLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.leadingLaw",
+      "review_text_sha256": "a2ab10537e714fca8f6d7ee96775545742970d88c3841a544df260d49f128d06",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 22,
+      "new_material_native_application": false,
+      "reason": "Full temporal face and all five native quartic coefficient matrices, original G4 normalization and temporal/transverse/longitudinal inverse with nonzeroR. No finite-spacing remainder or variable-background theorem."
+    },
+    {
+      "key": "GAC2:native-quartic-companion-binding",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.companionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.companionLaw",
+      "review_text_sha256": "d23c8cac09e927b0991848193ca262f58bed835ee67828cb73c9b5e52c46661d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 31,
+      "new_material_native_application": false,
+      "reason": "Actual native matrices mapped to linear maps and original polynomial bound to the full sixteen-coordinate companion. Both native inverse guards instantiate existence and uniqueness; upper basis explicit and no nilpotent truncation."
+    },
+    {
+      "key": "GAC2:native-angular-exceptional-domains",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.exceptionalLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.exceptionalLaw",
+      "review_text_sha256": "16721b21f1a341280d99985b4141d20e180f348841cc02db7a53e2a5d36d2607",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "Exact angular numerator and complete real zero strata; same R7 band includes both Psi0 andPsi162. Does not infer full numerator/finite-h failure or exclude smaller common regular subbands."
+    },
+    {
+      "key": "GAC2:native-angular-zero-connection-return",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.pairedConnectionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.pairedConnectionLaw",
+      "review_text_sha256": "05baef39750a3b6da4e70f2f1f301f5b937c800d5db3cef91aad60da2bd2c360",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 11,
+      "new_material_native_application": false,
+      "reason": "Full TT polarization/norm, original real temporal coefficient and correctly oriented spatial12 first return with full signed inverse and curvature-only difference. No full prescribed connection failure inferred."
+    },
+    {
+      "key": "GAC2:native-axis-complete-source-numerator",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.axisLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.axisLaw",
+      "review_text_sha256": "c3e0f3a4e95d9b288bcbf42daa741336af9ffd2d9926deb723f992494e1c9f4d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 15,
+      "new_material_native_application": false,
+      "reason": "Both axis branches distinguished, all six lower mixed face contractions retained and zero aligned numerator for arbitrary Q. Opposite discriminant-a6 with nonzeroa gives both inverse orders; no admitted-source/finite-h transfer."
+    },
+    {
+      "key": "GAC2:native-frequency-response-scaling",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.scalingLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.scalingLaw",
+      "review_text_sha256": "cb86f585ce419cb3424b43aa464ca1eedcacfeabf5696a41718c25dc00bb8433",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 17,
+      "new_material_native_application": false,
+      "reason": "Exact cubic/sixth/fifth frequency degrees, both inverse bases and complete lower response degree-minus1. Real coefficient and physical imaginary factor remain separate; explicit face family not admitted nonlinear/TT source or packet."
+    },
+    {
+      "key": "GAC2:native-coordinate-extra-real-root",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.growingLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.growingLaw",
+      "review_text_sha256": "41c0b1ea1335f40809790bf9274ac9770edbdb48d110d4098f13b8208e83c99f",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 10,
+      "new_material_native_application": false,
+      "reason": "Original paired-axis discriminant and whole unused column retain essentiala2. Root condition and positivea interpretation correct; extra leading coordinate root is not selected TT or physical instability."
+    },
+    {
+      "key": "GAC2:native-forced-row-zero-four-jet",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.forcedRowLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw",
+      "review_text_sha256": "1bdae3c3ec091e651490e73fdad8b4abf073bcab81ddd79340345772aa9b6576",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Native unit prefactor, successive actual derivatives, four zero initial jets and exact unit forcing withl2=2. No source-range admission or all-time norm reserve presumed."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Axis.lean": "810dbf959eab5a22c9e6667466bf6a0d66e9f04c5e323a6a3ede2ad714dde2ba",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/AxisDefs.lean": "cf81786b3a0cbee86fbac84d407493fea6fe731924a32f8e82836e69792b4de9",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/AxisStatements.lean": "c85c9c3036a5e3bedae363fb2295758a0f71de1f1c302a10ee538daaa6ecabaf",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Band.lean": "a54ec3ee63105d9a3ad24f592966f5913c14def45930ba8c3ee1eee06ad4d4ee",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/BandDefs.lean": "6060660d9b7775d75a886d023679667864beab807e1a7d9b4f2fe09521c5f69e",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/BandStatements.lean": "72a8e1ea443e9a7b01368da7a41ffc96ad99ce7479411fdecd81ebdba75fda90",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Companion.lean": "2977784676eef000711ebbf1d0e086b76c9dee07f4c633f4046f75ec788317c4",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/CompanionDefs.lean": "873465494fb90097b558d75a87812e77512a7a04d4caad68da752b2c7b3fd193",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/CompanionStatements.lean": "c59326dea5a80c37e74e3c2dcf697a8dea3dfec3593c9a989b43ac472736a6e0",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Exceptional.lean": "2504cc5811b005a8c61a1b8f7f279c3f57d0954a9f780f304fe08231843bd152",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ExceptionalDefs.lean": "a809d274d99cd68fbfc2de8a921c6502028f7235f3d661326c20a94940688117",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ExceptionalStatements.lean": "be7ac2f7e59efd7a227eec79d749360d71add446a90611e7bebfed91ac1364d4",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRow.lean": "aaadc88d722656b42cf0426af9416e1407332ce584af10156f2d9296aa4e771f",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRowDefs.lean": "c186dc11aa0434705117aa59dfac80b419df578e038db118ed2cef432e0376e6",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRowStatements.lean": "70c1d978ca90055e8c2b0bdfc5cad5f616b743b5c07fcefcb78f0bac9d89d4e2",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Growing.lean": "ae4fc54ecb7c65a8df1ae0112f89eceebbfb65e7ba2923963d8016a44a99e8bf",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/GrowingDefs.lean": "e08146e66880468017d532c7a11d6ffd5d9337dd7a2378e7ee74270822a5bfac",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/GrowingStatements.lean": "b3da44e6be74b54e731868f8898842e6a4e238fb5a7b27e832f05ab458eb4f15",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Inverse.lean": "0d1dda118d9d158305c89612f5166178790285932b00088f92b91f9f72da21a8",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/InverseDefs.lean": "751406dd8ac5cbfbdf5288c039ba8a68e475a608de463949fa3e5dc6b5d36e1d",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/InverseStatements.lean": "fcc4e90b77219aa13fc7854de526364a0fcc057b147c38d005966b5b035deb90",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Leading.lean": "884948d3599e0e22a647a3fffa7d67f08ca5807608ee00612a8a465f2dbda32d",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/LeadingDefs.lean": "aa22882a75902d1ea39abbe17735f08b1156a1b6a749b45e643a0bac6502c3fa",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/LeadingStatements.lean": "2924a358e3b2b8741b3fe886c0e965467a41452a27b58a59cd58a0e988661376",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnection.lean": "9cb1f5b509af37f6054b13860ecc78feb02c3e08d07069f99648e9efb70a1866",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnectionDefs.lean": "2f28f0d748769c84fb826344d90b36170f2ad354116524bbe8e98485789bff27",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnectionStatements.lean": "39e03fa7231908142905e023d230d352d7c406edec1f2b4bd23005e813a19c9d",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Quartic.lean": "45e6e02f3dd0059aaff27f1bc3680c884029d1b7ef4d3b1d6898febd8b774425",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Scaling.lean": "22ff9264a63b72af3f50d20dffb86e113003c753967be1702b8e06d3599e6c42",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ScalingDefs.lean": "03bc9952ef6ba98cdf9cde2da77dade14e25729150be77531041fb7f0bb44f24",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ScalingStatements.lean": "f50bcfbb2f7696cd6ce558df4419a1e80def0e0bc82db19ddb0bde7de0d8d56d",
+    "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Simple.lean": "52050fcabe946406dadfaaf30bf1ef5689e34f23a4b364ddac0b18f533ffa49e"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "3ac83066aa5f8fcc6971ad32eeb4aa9d39cc331b69b7fc7da92488dffeace1eb",
+    "physics/ledgers/lattice-waves/findings/217-native-reflected-band-inverse-guards.md": "9d0bac605b20f35795e74e202c2104828557721c898db104be1381f7e7589374",
+    "physics/ledgers/lattice-waves/findings/218-native-coordinate-two-sided-inverse.md": "a56502080424db8e4d6270ee0361e851fee490a127482e9efc54021e052892ce",
+    "physics/ledgers/lattice-waves/findings/219-native-quartic-leading-inverse.md": "a8bc3287e5b16c1a790e6b2e5bb6e1b3027cfcde427cdc05e9c36992ac87275a",
+    "physics/ledgers/lattice-waves/findings/220-native-quartic-companion-binding.md": "12f10acceb8dcbe8519f27dde80cdc23d4d4f3b9504492b0331476573dad249c",
+    "physics/ledgers/lattice-waves/findings/221-native-angular-exceptional-domains.md": "62e2357cc5b9b40d1c07b8093502de1704d6ee836b942ed9247fc8434f23ffe5",
+    "physics/ledgers/lattice-waves/findings/222-native-angular-zero-connection-return.md": "aa9a058088aea830088c1eb79b51183beea87ea7c1cf06e603e54b13c3fa1d3a",
+    "physics/ledgers/lattice-waves/findings/223-native-axis-complete-source-numerator.md": "2c8520ae2366be60ee09d6e7b2f08b632dfa0b0948727039ea96d604c497946b",
+    "physics/ledgers/lattice-waves/findings/224-native-frequency-response-scaling.md": "cde7f81c852acd6ee65390df6e2f2a30382b774ec11677be0613af6de7653ebb",
+    "physics/ledgers/lattice-waves/findings/225-native-coordinate-extra-real-root.md": "e258c633b9f80aafed5743bd551cd2461c49d2052d7ee6caee762f9f55f0501e",
+    "physics/ledgers/lattice-waves/findings/226-native-forced-row-zero-four-jet.md": "5bb9f3d5757a106325d7aeac598083b6f032fa2df17b7661c0e1d74eab871bb2"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "de6aec250bdf279bbf8c7c4d3dfa92cdd7eeaaf2a0380a0c018fa0c677e026e1",
+  "exact_original_snapshot_pairs_authenticated": 39,
+  "scope_checks": {
+    "original_componentwise_face_and_bilinear_Lorentz_Gram": true,
+    "C2_dC_derived_not_native_assumption": true,
+    "both_generic_and_native_inverse_orders": true,
+    "both_lower_eta_inverse_orders": true,
+    "both_light_cones_and_same_reflected_compact_band": true,
+    "native_discriminant_budget": "-729/400",
+    "complete_five_native_quartic_coefficients": true,
+    "original_G4_and_actual_two_sided_inverse": true,
+    "full_sixteen_coordinate_native_companion_bound": true,
+    "upper_companion_all_jet_lower_conversion_explicit": true,
+    "actual_native_companion_coefficients_instantiated": true,
+    "same_R7_band_contains_R8_zero": true,
+    "angular_zero_not_complete_source_failure": true,
+    "full_signed_spatial12_first_return": "(0,-9/206,9/206)",
+    "all_six_lower_mixed_faces_and_incoming_i_factor": true,
+    "aligned_axis_zero_numerator_opposite_axis_inverse": true,
+    "degrees_face_symbol_source_inverse_response": [
+      3,
+      6,
+      5,
+      -6,
+      -1
+    ],
+    "generic_face_Q_not_admitted_nonlinear_or_TT_source": true,
+    "essential_growing_row_a2_retained": true,
+    "positive_growth_uses_positive_a": true,
+    "native_forced_row_scale": "-101*9991/9999",
+    "actual_derivatives_and_zero_four_jet": true,
+    "unit_force_not_native_compatibility_range_assertion": true
+  },
+  "pre_submission_correction": "Independent private assessment found a missinga2 factor and distinguished normalized versus native unit forcing. Author corrected these before registration/freeze; no post-freeze correction and no reviewer proof authorship.",
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-10.py",
+    "sha256": "a1bce907cbe1d4ffa445db0e27ea63dd60093ac703c551e77dbae152f42332a1",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-10.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.64,
+    "output_bytes": 6059,
+    "output_sha256": "43efd052fc79d3aa9446f183fb5578572e3d1ac03961050f398ed0cc1dc379ce",
+    "stderr": "",
+    "result": {
+      "status": "pass",
+      "method": "independent full-symbol Gram formula, exact five-point coefficient interpolation,8x8/32x32 rational realification, held-out124 complex-frequency companion",
+      "source_sha256": {
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Axis.lean": "810dbf959eab5a22c9e6667466bf6a0d66e9f04c5e323a6a3ede2ad714dde2ba",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/AxisDefs.lean": "cf81786b3a0cbee86fbac84d407493fea6fe731924a32f8e82836e69792b4de9",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/AxisStatements.lean": "c85c9c3036a5e3bedae363fb2295758a0f71de1f1c302a10ee538daaa6ecabaf",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Band.lean": "a54ec3ee63105d9a3ad24f592966f5913c14def45930ba8c3ee1eee06ad4d4ee",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/BandDefs.lean": "6060660d9b7775d75a886d023679667864beab807e1a7d9b4f2fe09521c5f69e",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/BandStatements.lean": "72a8e1ea443e9a7b01368da7a41ffc96ad99ce7479411fdecd81ebdba75fda90",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Companion.lean": "2977784676eef000711ebbf1d0e086b76c9dee07f4c633f4046f75ec788317c4",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/CompanionDefs.lean": "873465494fb90097b558d75a87812e77512a7a04d4caad68da752b2c7b3fd193",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/CompanionStatements.lean": "c59326dea5a80c37e74e3c2dcf697a8dea3dfec3593c9a989b43ac472736a6e0",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Exceptional.lean": "2504cc5811b005a8c61a1b8f7f279c3f57d0954a9f780f304fe08231843bd152",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ExceptionalDefs.lean": "a809d274d99cd68fbfc2de8a921c6502028f7235f3d661326c20a94940688117",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ExceptionalStatements.lean": "be7ac2f7e59efd7a227eec79d749360d71add446a90611e7bebfed91ac1364d4",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRow.lean": "aaadc88d722656b42cf0426af9416e1407332ce584af10156f2d9296aa4e771f",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRowDefs.lean": "c186dc11aa0434705117aa59dfac80b419df578e038db118ed2cef432e0376e6",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ForcedRowStatements.lean": "70c1d978ca90055e8c2b0bdfc5cad5f616b743b5c07fcefcb78f0bac9d89d4e2",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Growing.lean": "ae4fc54ecb7c65a8df1ae0112f89eceebbfb65e7ba2923963d8016a44a99e8bf",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/GrowingDefs.lean": "e08146e66880468017d532c7a11d6ffd5d9337dd7a2378e7ee74270822a5bfac",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/GrowingStatements.lean": "b3da44e6be74b54e731868f8898842e6a4e238fb5a7b27e832f05ab458eb4f15",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Inverse.lean": "0d1dda118d9d158305c89612f5166178790285932b00088f92b91f9f72da21a8",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/InverseDefs.lean": "751406dd8ac5cbfbdf5288c039ba8a68e475a608de463949fa3e5dc6b5d36e1d",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/InverseStatements.lean": "fcc4e90b77219aa13fc7854de526364a0fcc057b147c38d005966b5b035deb90",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Leading.lean": "884948d3599e0e22a647a3fffa7d67f08ca5807608ee00612a8a465f2dbda32d",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/LeadingDefs.lean": "aa22882a75902d1ea39abbe17735f08b1156a1b6a749b45e643a0bac6502c3fa",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/LeadingStatements.lean": "2924a358e3b2b8741b3fe886c0e965467a41452a27b58a59cd58a0e988661376",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnection.lean": "9cb1f5b509af37f6054b13860ecc78feb02c3e08d07069f99648e9efb70a1866",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnectionDefs.lean": "2f28f0d748769c84fb826344d90b36170f2ad354116524bbe8e98485789bff27",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/PairedConnectionStatements.lean": "39e03fa7231908142905e023d230d352d7c406edec1f2b4bd23005e813a19c9d",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Quartic.lean": "45e6e02f3dd0059aaff27f1bc3680c884029d1b7ef4d3b1d6898febd8b774425",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Scaling.lean": "22ff9264a63b72af3f50d20dffb86e113003c753967be1702b8e06d3599e6c42",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ScalingDefs.lean": "03bc9952ef6ba98cdf9cde2da77dade14e25729150be77531041fb7f0bb44f24",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/ScalingStatements.lean": "f50bcfbb2f7696cd6ce558df4419a1e80def0e0bc82db19ddb0bde7de0d8d56d",
+        "scores/ArtformScores/GravityBridge/Native/CoordinateSymbol/Simple.lean": "52050fcabe946406dadfaaf30bf1ef5689e34f23a4b364ddac0b18f533ffa49e"
+      },
+      "checks": {
+        "native_inverse_cases": 5,
+        "quartic_interpolation_points": 5,
+        "native_companion_real_basis_sources": 32,
+        "heldout_native_companion_spatial_momentum": [
+          1,
+          2,
+          4
+        ],
+        "heldout_native_companion_frequency": "3/2+i/3",
+        "angular_exact_integer_cases": 728,
+        "both_heldout_band_light_cones": true,
+        "excluded_nonzero_face_discriminant_zero_point": [
+          3,
+          0,
+          3,
+          4
+        ],
+        "all_six_mixed_faces_and_two_Fourier_factors": true,
+        "frequency_source_scalings": 6,
+        "signed_connection_solved_by_Gaussian_elimination": true,
+        "growing_column_all_five_coefficients": true,
+        "omitted_a2_factor_rejected": true,
+        "actual_derivative_basis_and_native_unit_force": true
+      },
+      "limitations": "Interpolation uses the proved degree bound. Exact pointwise native algebra does not establish finite-h remainder, uniform physical-source/history budgets, admission or a new physical gate."
+    }
+  },
+  "root_replay_reproduced_without_JSON_mutation": {
+    "script": "native-coordinate-root-10.py",
+    "script_sha256": "0539d488875a2d5945bbef5f8216bd0007856542f02823e92a21c8e73a0fbb17",
+    "artifact_sha256": "e646d86d5bf86cc446d985fde7035f13883295b5c85cc5bf468a71bba9c4d2f3",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/native-coordinate-root-10.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.335,
+    "output_bytes": 392,
+    "output_sha256": "732a02fc9097c47d34f6763d4b47699be29965826b08fc8cc173331f00c11a9e",
+    "stderr": "",
+    "result": {
+      "status": "passed",
+      "native_two_sided_instances": 5,
+      "native_quartic_samples": 4,
+      "complete_native_companion_basis_sources": 16,
+      "lower_source_scaling_instances": 3,
+      "growing_row_samples": 15,
+      "native_unit_row_normalization": true,
+      "source_pairs": 39,
+      "finite_h_remainder_funded": false,
+      "admitted_nonlinear_source_binding": false,
+      "new_physical_gate": 0,
+      "historical_or_runtime_saving": 0
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_historical_runtime_or_prospective_efficiency_credit": 0,
+    "prior_C10_and_E08_prospective_comparisons_unchanged": true,
+    "actual_pointwise_native_coordinate_coefficients_and_companion_now_instantiated": true,
+    "new_admitted_native_finite_h_construction": false,
+    "actual_nonlinear_compatibility_source_bound": false,
+    "finite_h_remainder_or_uniform_physical_source_history_norm_funded": false,
+    "uninstantiated_bridges": [
+      "native finite-word Taylor remainder and inverse perturbation reserve",
+      "uniform original physical-source/packet/halo and history norms",
+      "actual nonlinear or TT compatibility-source projection/admission",
+      "finite-h contour and original independent coframe/frame/link/history prescription",
+      "full physical quotient/energy interpretation and parent completion"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 70,
+  "campaign_target": 120,
+  "total_approvals_after_review": 189,
+  "audit": "audit-independent-10.md",
+  "validation": "validation-independent-10.json"
+}

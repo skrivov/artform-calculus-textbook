@@ -3329,8 +3329,8 @@ See [finding217](findings/217-native-reflected-band-inverse-guards.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.bandLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.bandLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "8a52ed46501a5553a2e618a143e9e9c3ae6c142597ed56ad068f460da2e6a6ca"
 
 [[statement]]
 key = "GAC2:native-coordinate-two-sided-inverse"
@@ -3349,8 +3349,8 @@ See [finding218](findings/218-native-coordinate-two-sided-inverse.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.inverseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.inverseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "f812e7d814adae154b39379f8b1382b930b07e82b8dda586e8e0d75986f2851c"
 
 [[statement]]
 key = "GAC2:native-quartic-leading-inverse"
@@ -3369,8 +3369,8 @@ See [finding219](findings/219-native-quartic-leading-inverse.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.leadingLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.leadingLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "a2ab10537e714fca8f6d7ee96775545742970d88c3841a544df260d49f128d06"
 
 [[statement]]
 key = "GAC2:native-quartic-companion-binding"
@@ -3389,8 +3389,8 @@ See [finding220](findings/220-native-quartic-companion-binding.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.companionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.companionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "d23c8cac09e927b0991848193ca262f58bed835ee67828cb73c9b5e52c46661d"
 
 [[statement]]
 key = "GAC2:native-angular-exceptional-domains"
@@ -3409,8 +3409,8 @@ See [finding221](findings/221-native-angular-exceptional-domains.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.exceptionalLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.exceptionalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "16721b21f1a341280d99985b4141d20e180f348841cc02db7a53e2a5d36d2607"
 
 [[statement]]
 key = "GAC2:native-angular-zero-connection-return"
@@ -3429,8 +3429,8 @@ See [finding222](findings/222-native-angular-zero-connection-return.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.pairedConnectionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.pairedConnectionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "05baef39750a3b6da4e70f2f1f301f5b937c800d5db3cef91aad60da2bd2c360"
 
 [[statement]]
 key = "GAC2:native-axis-complete-source-numerator"
@@ -3449,8 +3449,8 @@ See [finding223](findings/223-native-axis-complete-source-numerator.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.axisLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.axisLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c3e0f3a4e95d9b288bcbf42daa741336af9ffd2d9926deb723f992494e1c9f4d"
 
 [[statement]]
 key = "GAC2:native-frequency-response-scaling"
@@ -3469,8 +3469,8 @@ See [finding224](findings/224-native-frequency-response-scaling.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.scalingLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.scalingLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "cb86f585ce419cb3424b43aa464ca1eedcacfeabf5696a41718c25dc00bb8433"
 
 [[statement]]
 key = "GAC2:native-coordinate-extra-real-root"
@@ -3488,8 +3488,8 @@ See [finding225](findings/225-native-coordinate-extra-real-root.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.growingLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.growingLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "41c0b1ea1335f40809790bf9274ac9770edbdb48d110d4098f13b8208e83c99f"
 
 [[statement]]
 key = "GAC2:native-forced-row-zero-four-jet"
@@ -3508,5 +3508,5 @@ See [finding226](findings/226-native-forced-row-zero-four-jet.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.forcedRowLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "1bdae3c3ec091e651490e73fdad8b4abf073bcab81ddd79340345772aa9b6576"
