@@ -219,7 +219,7 @@ native applications are credited.
 
 ## D03/B05/B06/C01/C02: memory, contact jets and constrained changing geometry
 
-Five new foundation submissions await independent review08: GAC:reversible-memory,
+Five foundation submissions were independently approved in review08: GAC:reversible-memory,
 GAC:source-contact-jets, GAC:quotient-compatibility, GAC:changing-geometry and GAC:singular-action.
 Ledger findings122–126 and the literal canonical statements in section7 specify their scope.
 All84 previous approvals stand; no approved definition or statement is edited.
@@ -252,5 +252,9 @@ New definition surfaces: ContactJetDefs.lean, ChangingGeometryDefs.lean, Constra
 new definitions occur only in the positive/caution examples. New statement surfaces:
 ReversibleMemoryStatements.lean, ContactJetStatements.lean, QuotientStatements.lean,
 ChangingGeometryStatements.lean, ConstraintStatements.lean. No native material-application credit is
-proposed for these foundations. Final validation-D03-B05-B06-C01-C02.json will record required checks,
+proposed for these foundations. Validation-D03-B05-B06-C01-C02.json records required checks,
 certificates, drift and five separate kernel replays with compact hashes/byte counts.
+All five were independently approved at freeze `1894f9b16d0ce882fe98f06610e2954ad3014386`;
+none returned. See the distinct [audit](audit-independent-08.md),
+[per-key verdicts](verdict-independent-08.json) and [validation](validation-independent-08.json).
+All84 earlier approvals stand, and zero additional material native applications are credited.

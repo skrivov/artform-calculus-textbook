@@ -97,3 +97,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:r8-leading-local-inverse` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse` (text 0e9bd231a36a)
 - 2026-10-30: `GAC:r8-gap-remainder` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder` (text afa15c5d90d4)
 - 2026-10-30: `GAC:r8-nonuniform-domain` approved as `Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain` (text b976e3f3055a)
+- 2026-10-30: `GAC:reversible-memory` approved as `Artform.Scores.GravityBridge.Statement.reversibleMemory` (text 584002917a12)
+- 2026-10-30: `GAC:source-contact-jets` approved as `Artform.Scores.GravityBridge.Statement.sourceContactJets` (text 7c23e38e32a6)
+- 2026-10-30: `GAC:quotient-compatibility` approved as `Artform.Scores.GravityBridge.Statement.quotientCompatibility` (text fe0d75e46a31)
+- 2026-10-30: `GAC:changing-geometry` approved as `Artform.Scores.GravityBridge.Statement.changingGeometry` (text 3d2091a7bddd)
+- 2026-10-30: `GAC:singular-action` approved as `Artform.Scores.GravityBridge.Statement.singularActionLaw` (text 1e7ea73ad553)

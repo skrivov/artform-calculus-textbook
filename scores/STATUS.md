@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 84 |
-| stated | 5 |
+| proved | 89 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **89** |
 
@@ -99,8 +99,8 @@
 | GAC:r8-leading-local-inverse | Leading metric-cut polynomial inverse obstruction | proved | `Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse` / `Artform.Scores.GravityBridge.Native.R8.leadingLocalInverse` | approved 2026-10-30 |
 | GAC:r8-gap-remainder | Angular and h budget with an explicit remainder hypothesis | proved | `Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder` / `Artform.Scores.GravityBridge.Native.R8.gapRemainder` | approved 2026-10-30 |
 | GAC:r8-nonuniform-domain | Native leading inverse loss on an annular ray sequence | proved | `Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain` / `Artform.Scores.GravityBridge.Native.R8.nonuniformDomain` | approved 2026-10-30 |
-| GAC:reversible-memory | Reversibility and finite retained information | stated | `Artform.Scores.GravityBridge.Statement.reversibleMemory` / `Artform.Scores.GravityBridge.reversibleMemory` | awaiting review |
-| GAC:source-contact-jets | Complete polynomial source jets and the native input contact Hessian | stated | `Artform.Scores.GravityBridge.Statement.sourceContactJets` / `Artform.Scores.GravityBridge.sourceContactJets` | awaiting review |
-| GAC:quotient-compatibility | Evolution, source and boundary-form quotient compatibility | stated | `Artform.Scores.GravityBridge.Statement.quotientCompatibility` / `Artform.Scores.GravityBridge.quotientCompatibility` | awaiting review |
-| GAC:changing-geometry | Incidence-compatible edge subdivision and retained detail | stated | `Artform.Scores.GravityBridge.Statement.changingGeometry` / `Artform.Scores.GravityBridge.changingGeometry` | awaiting review |
-| GAC:singular-action | Singular quadratic action, constraints and relational gluing | stated | `Artform.Scores.GravityBridge.Statement.singularActionLaw` / `Artform.Scores.GravityBridge.singularActionLaw` | awaiting review |
+| GAC:reversible-memory | Reversibility and finite retained information | proved | `Artform.Scores.GravityBridge.Statement.reversibleMemory` / `Artform.Scores.GravityBridge.reversibleMemory` | approved 2026-10-30 |
+| GAC:source-contact-jets | Complete polynomial source jets and the native input contact Hessian | proved | `Artform.Scores.GravityBridge.Statement.sourceContactJets` / `Artform.Scores.GravityBridge.sourceContactJets` | approved 2026-10-30 |
+| GAC:quotient-compatibility | Evolution, source and boundary-form quotient compatibility | proved | `Artform.Scores.GravityBridge.Statement.quotientCompatibility` / `Artform.Scores.GravityBridge.quotientCompatibility` | approved 2026-10-30 |
+| GAC:changing-geometry | Incidence-compatible edge subdivision and retained detail | proved | `Artform.Scores.GravityBridge.Statement.changingGeometry` / `Artform.Scores.GravityBridge.changingGeometry` | approved 2026-10-30 |
+| GAC:singular-action | Singular quadratic action, constraints and relational gluing | proved | `Artform.Scores.GravityBridge.Statement.singularActionLaw` / `Artform.Scores.GravityBridge.singularActionLaw` | approved 2026-10-30 |
