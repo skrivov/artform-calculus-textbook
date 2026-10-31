@@ -113,3 +113,15 @@ C01-D06 are not activated by this novelty assessment.
 ## Follow-through in this step
 
 The five new Surface modules implement the exact dictionary and both signed face substitutions. The full warning-free build passes. Fidelity review04 and its final receipt determine approval; see SURFACE-RESULTS.md and STATUS.md. This implementation follows the assessment above and does not change the novelty classification or activate the geometric/native allocation.
+
+## Specific admission diagnostic after the known-action identification
+
+The next frozen test is DIPOLE-CONTRACT.md, implemented in DIPOLE-RESULTS.md.
+It uses a known dipole and an elementary orthant tetrahedron to decide a
+specific domain question for our proposed kick. The unrestricted-link
+face-collapse argument is an explicit checked consequence of that map;
+we make no priority or first-formalization claim. Its value is excluding
+a premature interpretation and identifying the missing cross-cell
+transport condition. It proves no new result about the native gravity
+programme, no matched two-cell reconstruction and no general prohibition
+on transport-restricted dynamics.

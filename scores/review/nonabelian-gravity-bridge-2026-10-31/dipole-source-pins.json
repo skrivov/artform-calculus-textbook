@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "27677cb7903508c39aef1f0142c24d48eee43dc9",
+  "frozen_contract": "DIPOLE-CONTRACT.md",
+  "sources": [
+    {
+      "authors": "Haggard-Han-Riello",
+      "url": "https://arxiv.org/html/1506.03053v1",
+      "locators": [
+        "section2 equations12,17,24,32,33",
+        "Theorem1"
+      ],
+      "use_and_limit": "Known guarded curved-tetrahedron reconstruction and reduced bending flows."
+    },
+    {
+      "authors": "Freidel-Speziale",
+      "url": "https://arxiv.org/html/1001.2748v1",
+      "locators": [
+        "section1.3",
+        "section5.1"
+      ],
+      "use_and_limit": "Flat holonomy-flux distinction of intrinsic gluing and connection data; not proof of a curved group-valued gluing dictionary."
+    },
+    {
+      "authors": "Rovelli-Vidotto",
+      "url": "https://arxiv.org/html/0805.4585v1",
+      "locators": [
+        "§IV"
+      ],
+      "use_and_limit": "Existing four-link dipole/two-tetrahedron setting, not our new graph invention."
+    }
+  ],
+  "novelty_credit": "A checked explicit geometric admission diagnostic; no priority claim, no new native gravity application.",
+  "analytic_interpretation": "The quarter-circle parallel-vector derivative is normal to S3; finite endpoints and holonomy/quaternion/Gram identities are checked in Lean; global manifold/LC theorem not formalized."
+}

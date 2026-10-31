@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "novelty_assessed_known_surface_twists_identified_native_bridge_open",
+  "research_status": "dipole_one_cell_admission_obstruction_approved_matched_transport_open",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_user_authorized_independent_reviewer",
   "additional_workers_launched": 1,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 13,
-  "new_independent_approvals": 13,
+  "new_registered_claims": 15,
+  "new_independent_approvals": 15,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -285,19 +285,23 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Novelty audit identifies known AMM/Riello framework and standard genus-two face twists. Full presentation-orbit dictionary and signed face intertwining checked; no new physical dynamics or regular symplectic binding claimed.",
+      "result": "Novelty audit identifies known AMM/Riello framework and standard genus-two face twists. Full presentation-orbit dictionary and signed face intertwining checked; no new physical dynamics or regular symplectic binding claimed. The unrestricted four-edge dipole now has a genuine one-cell spherical face-collapse control; actual cross-cell transport admission remains open.",
       "lean_claims": [
         "NGB:geometric-preflight",
         "NGB:stabilizer-preservation",
         "NGB:surface-orbit-dictionary",
-        "NGB:surface-face-twists"
+        "NGB:surface-face-twists",
+        "NGB:dipole-oriented-score",
+        "NGB:spherical-face-collapse"
       ],
-      "independent_review": "approved_independent_01_02_04_at_literal_scope; novelty_assessed_independent_03",
+      "independent_review": "approved_independent_01_02_04_05_at_literal_scope; novelty_assessed_independent_03",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
         "RESULTS.md",
-        "ALGEBRA-OF-SCORES.md"
+        "ALGEBRA-OF-SCORES.md",
+        "DIPOLE-CONTRACT.md",
+        "DIPOLE-RESULTS.md"
       ]
     },
     {
@@ -451,7 +455,7 @@
   },
   "analytic_extension_claims": 3,
   "analytic_extension_review": "approved_independent_02",
-  "latest_checkpoint": "SURFACE-RESULTS.md",
+  "latest_checkpoint": "DIPOLE-RESULTS.md",
   "preflight_findings": [
     "no_four_valent_vertex_on_current_canvas",
     "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
@@ -463,7 +467,25 @@
     "assessment": "known_framework_and_twist_operations; concrete_checked_artifacts; no_new_native_gravity_result",
     "root": "NOVELTY.md",
     "independent": "novelty-review-independent-03.md",
-    "next_step": "exact_full_Gauss_orbit_and_standard_twist_identification",
-    "priority_after_identification": "specific_native_compatibility_obstruction_or_matched_efficiency_question"
+    "next_step": "specific_dipole_admission_obstruction_with_explicit_one_cell_fixture",
+    "priority_after_identification": "actual_two_cell_geometric_transport_prescription_and_nonstationary_domain_test"
+  },
+  "dipole_extension_claims": 2,
+  "dipole_extension_review": "approved_independent_05",
+  "geometric_diagnostic": {
+    "contract": "DIPOLE-CONTRACT.md",
+    "results": "DIPOLE-RESULTS.md",
+    "ordering": "B06 compatibility diagnostic before supporting smooth reduction; C/D not activated",
+    "question": "Can full Gauss preservation and independent links protect noncentral geometric faces?",
+    "answer": "No target-only domain saturated over all Gauss-admitted link lifts can protect P0 nonidentity.",
+    "geometric_witness": "Explicit one-cell positive spherical orthant; actual finite simple-path/Gram/quaternion data.",
+    "not_established": [
+      "matched_two_cell_metric_and_transport",
+      "Levi_Civita_admission_of_erasing_cross_cell_links",
+      "Lean_global_sphere_connection_reconstruction",
+      "native_R7_R8_application"
+    ],
+    "restricted_positive_control": "Every identity-link closed-tuple lift is stationary.",
+    "next_question": "Pin actual face pairing, metrics and labelled tangent-frame transport; test whether a nonstationary score preserves that admitted domain."
   }
 }

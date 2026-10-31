@@ -1,3 +1,5 @@
+Current continuation: DIPOLE-RESULTS.md records the subsequent geometric admission diagnostic; STATUS.md has current counts. The results below retain their original scope.
+
 # Exact identification after the novelty assessment
 
 The novelty assessment was completed before implementing this step. It

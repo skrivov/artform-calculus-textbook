@@ -1,3 +1,5 @@
+Current continuation: DIPOLE-RESULTS.md records the subsequent geometric admission diagnostic; STATUS.md has current counts. The results below retain their original scope.
+
 > The first-batch findings below are retained as history. The current analytic extension and review state are in ANALYTIC-RESULTS.md and checkpoint-analytic.md. Original production statements are unchanged.
 
 # Initial research: a two-face score and a formal canonical test

@@ -30,3 +30,13 @@ The initial twelve entries now have research dispositions: A01-A06 and B01 answe
 | D06 | Publish the bounded campaign assessment with independent-review state, native usefulness and unresolved obligations; decide whether a separate larger allocation is justified. | D05 |
 
 For each activated entry record: question, source hashes, literal result or failed target, actual carrier and hypotheses, calculation/proof paths, non-vacuity/adverse evidence, Lean state, independent-review state, effect on an original physical decision and next dependency. Reuse one claim across multiple investigations when appropriate; do not count the same theorem repeatedly.
+
+## Further B06 diagnostic, no extra investigation count
+
+DIPOLE-RESULTS.md supplies a genuine one-cell spherical fixture and proves
+that a complete dipole kick can preserve Gauss while collapsing a face
+when every independent link lift is allowed. A target-only noncentral-face
+domain saturated over all such lifts cannot be invariant. An identity-link
+stationary domain is an explicit positive control, so restricted geometric
+flows are not excluded. C01-D06 remain unstarted: cross-cell geometric
+transport admission and the faithful regular-reduction binding remain open.

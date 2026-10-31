@@ -61,3 +61,16 @@ Use only the dedicated ledger lane during development. Do not edit shared top-le
 ## Novelty checkpoint before the next implementation
 
 NOVELTY.md and the independent novelty review03 identify the existing AMM/Riello, Dehn-twist, dipole and curved-tetrahedron literature. The exact surface-presentation identification in SURFACE-RESULTS.md is a checked specialization of known mathematics, not a new gravitational mechanism. General regular reduction and reconstruction remain formalization dependencies when needed; do not present them as open research discoveries. Before a physics-oriented continuation, freeze one compatibility, obstruction or matched-efficiency question not already supplied by these sources. Existing approvals stand and no additional research rounds or native application are credited by this checkpoint.
+
+## Geometric admission diagnostic after the surface identification
+
+DIPOLE-CONTRACT.md freezes a specific obstruction test before further
+supporting smooth-reduction work. DIPOLE-RESULTS.md records complete Gauss
+preservation with a collapsed face on a genuine spherical target fixture.
+This is a B06 diagnostic with no added round count: decision12 remains
+unpassed, C01-D06 stay unactivated, and native application credit remains0.
+The order change avoids treating already-known reduction machinery as a
+physics discovery before geometric admission is even specified. Next bind
+the actual cross-cell geometric transport and test a nonstationary admitted
+score. The regular-reduction contract still applies whenever a reduced
+symplectic form or quantization is used.

@@ -1,21 +1,50 @@
-# Handoff after novelty assessment and exact surface identification
+# Handoff after the dipole geometric admission diagnostic
 
-Read NOVELTY.md and novelty-review-independent-03.md first. The novelty assessment preceded the next implementation. General AMM/Riello reduction, twist operations, dipole graphs and curved-tetrahedron quantization already exist. Scientific credit remains zero new native gravity applications; correct Lean proofs do not establish originality.
+Read DIPOLE-CONTRACT.md and DIPOLE-RESULTS.md. The new result is a specific
+obstruction for our score on the unrestricted four-edge dipole: complete
+Gauss preservation and independent links do not ensure noncentral
+geometric faces. It is not a new gravitational law or a general no-go for
+transport-restricted dynamics. Current review/counts are in STATUS.md.
 
-SURFACE-RESULTS.md describes the next completed implementation. Five additive modules SurfaceCoordinates, SurfaceQuotient, SurfaceTwists, SurfaceStatements and SurfaceTheorems give the complete Gauss/presentation-orbit dictionary and both signed face substitutions. The old twenty NGB production modules and all265 prior approvals are unchanged. Two additional literals undergo fidelity review04, with final state recorded in STATUS.md and verdict-independent-04.json. The four inherited CNI claims remain pending.
+Six additive modules Dipole, DipoleErasure, SphericalOrthant,
+SphericalFixture, DipoleStatements and DipoleTheorems implement two literal
+claims. The prior25 NGB modules and all267 baseline approvals are unchanged.
+The same one authorized reviewer checks review05, disclosing its earlier
+conceptual convention/analytic advice but no production authorship.
 
-The tree is edges0,1,2,4,5. Every admitted state normalizes to U=(1,1,1,a,1,1,b) and P=(x,a^-1*x*a*z^-1,a^-1*x*a,x,b^-1*z*b,b^-1*z*b,z). Full Gauss is exactly R=(x^-1*a^-1*x*a)*(z^-1*b^-1*z*b)=1. Residual gauges are precisely simultaneous conjugations. Explicit quotient maps have both inverse orders. Under A1=x^-1,B1=a^-1,A2=z^-1,B2=b^-1, forward faces give A1->A1*B1 and A2->A2*B2, and backward faces use inverse B. Lean checks the exact complete-carrier/orbit algebra, not a surface diffeomorphism, GIT quotient, smooth/symplectic identification or a classification of the full drift-containing tick.
+For every closed target tuple P, erasingLift uses U=(P0^-1,1,1,1), closes
+both stars and gives P'=(1,P1*P0,P2,P3). The quantified result excludes
+any target-only nontrivial-face restriction saturated over all admitted
+independent links. It does not exclude restricted domains: identity-link
+closed-tuple lifts are fixed by the same score, as checked in Lean.
 
-The same one user-authorized reviewer was reused. It supplied the earlier conceptual/literature dictionary during novelty assessment, authored none of the five production modules, and independently checked root's implementation and source fidelity. Its review04 discloses that contribution and records exact surface/source hashes, independent arithmetic and kernel checks. Do not launch additional workers or ask for human technical approval.
+The nonvacuity target is a genuine spherical orthant. Vertices are the
+four coordinate vectors, with positive unit interior(1/2,1/2,1/2,1/2).
+Quarter-circle transports along HHR equation12 paths have quaternion
+lifts r(1+i),r(1+j),r(1+k),r(1-j), r=sqrt(1/2). Use tangent frame
+(-e1,-e2,-e3) at e4. The corrected normal Gram is I, with all four convexity
+triples+1. The exceptional pair24 needs transport by face1; the naive Gram
+is singular. All finite matrices, quaternion actions, norms, closure and
+collapse are checked; the analytic Levi-Civita interpretation is explained
+and reviewed separately, not a Lean global sphere-manifold theorem.
 
-The physical decision remains unpassed. Distinguish the known existence of regular symplectic reduction from the remaining faithful Lean binding. Before more physics-oriented work, freeze one source-specific compatibility, obstruction or matched-efficiency question beyond known surface operations. NEXT-CONTRACT.md is retained as a conditional supporting-formalization specification, with the novelty checkpoint taking priority. Do not promote closure or a four-valent graph to a reconstructed cell or native R7/R8 dynamics.
+Do not infer matched two-cell geometry or actual Levi-Civita cross-cell
+link admission. NEXT-CONTRACT.md specifies the next task: exact face pairing,
+full metrics, labelled frames and a declared independent or Levi-Civita
+connection, then a nonstationary update test. A stationary identity-link
+family is only a control. Known reduction must be faithfully bound when
+using reduced forms or quantization. Decision12 remains unpassed,
+C01-D06 remain unactivated, no rounds are added and native credit is0.
 
-The current validator is:
+Use validate-dipole-root.py for the current stage. Its --prepare-only
+freezes fresh build/reports, and --reuse-prepared-reports accepts them
+only with unchanged hashes of every repository Lean source and both reports.
+It also checks all old proof bytes, approvals, canonical literals and
+review verdicts, required tree/status/certificates/drift and six new-module
+kernel replays. Earlier validators/receipts are historical, not current.
 
-```sh
-python3 scores/review/nonabelian-gravity-bridge-2026-10-31/validate-surface-root.py
-```
-
-It runs the required full build/reports, status/tree/certificate/drift checks, five new-module kernel replays, all prior production/approval preservation checks, canonical fidelity and per-key verdict agreement. During review, --prepare-only can freeze fresh reports. --reuse-prepared-reports is accepted only when every repository Lean-source hash and report hash remains identical, so approval metadata can be finalized without repeating the unchanged reports. The prepared snapshot stays in build/. Older first-batch and analytic validators/receipts are historical and intentionally retain their earlier counts.
-
-Use only this dedicated ledger lane and additive proof files. Keep shared top-level lattice-wave files, other campaigns, the gravity programme and textbook/monograph sources unchanged. Preserve Q1 and the actual independent coframe/connection, boundary/halo, source and history restrictions. Publish completed checked work and mirror the dedicated packet; use separate publication receipts for each stage.
+Publish checked work, mirror the packet into the owned campaign lane and
+write a separate PUBLICATION-DIPOLE.json receipt there. Keep shared ledger,
+other campaigns, gravity programme, textbook and monograph unchanged.
+Preserve Q1 and native independent coframe/connection, source, boundary/halo
+and history restrictions. No human approval or additional worker is needed.

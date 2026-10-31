@@ -4994,3 +4994,29 @@ lean_statement = "Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists"
 lean_proof = "Artform.Scores.NonabelianGravity.surfaceFaceTwists"
 reviewed = "2026-10-31"
 review_text_sha256 = "c7a79b7b40e67fb5e20b4dd129aea2c62c39200db7ad022d015c2b14742b4a59"
+
+[[statement]]
+key = "NGB:dipole-oriented-score"
+label = "NGB:dipole-oriented-score"
+title = "Complete dipole digon and unrestricted-link admission obstruction"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:dipole-oriented-score)"
+statement = """
+The dipole Canvas has two vertices, four links from source0 to target1, and three closed adjacent digon boundaries (i+, (i+1)-). Its complete duplicate-free ordered stars have valence4, with raw defects Q0*Q1*Q2*Q3 and P3*P2*P1*P0, where Qe=Ue^-1*Pe^-1*Ue. For the first digon set k=U0*U1^-1. The forward kick fixes U,P2,P3 and sends P0 to k*P0 and P1 to P1*k^-1; the backward kick uses k^-1. Both signs preserve both complete raw defects, are exact mutual inverses and commute with every independent two-vertex gauge. For every target tuple with P3*P2*P1*P0=1, its erasingLift U=(P0^-1,1,1,1) satisfies both Gauss equations. The full forward kick gives P=(1,P1*P0,P2,P3), and every subsequent gauge fixes the collapsed P0=1. Consequently no set of target tuples containing a closed tuple and requiring P0 nonidentity is preserved when all Gauss-admitted independent link lifts are included. This does not exclude transport-restricted invariant domains: the identity-link lift of every closed tuple satisfies Gauss and is fixed by either kick. No two-cell reconstruction, geometric link matching, symplectic reduction or native gravitational law is asserted.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.dipoleOrientedScore"
+lean_proof = "Artform.Scores.NonabelianGravity.dipoleOrientedScore"
+reviewed = "2026-10-31"
+review_text_sha256 = "a345de5ac1a5e9c425e8d4bc7ce2fbf7ed166fac517bb1351f5e90ec9fe560ec"
+
+[[statement]]
+key = "NGB:spherical-face-collapse"
+label = "NGB:spherical-face-collapse"
+title = "Orthant spherical holonomies and a Gauss-preserving collapsed face"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:spherical-face-collapse)"
+statement = """
+For the positive orthant of the unit three-sphere, declare the four coordinate vertices and interior vector (1/2,1/2,1/2,1/2). Lean checks vertex Gram I and unit positive interior, the rational ambient quarter-turn edge matrices, inverse and endpoint identities, and the four simple loop products of Haggard-Han-Riello equation12 with special edge(24). Their tangent restrictions are rotations through pi/2 about i,j,k,-j, fix the base vertex and close in reverse face order. The correctly transported normal Gram is I with determinant1, and all four declared convexity triple products equal1. For r=sqrt(1/2), the explicit real-quaternion units P=(r(1+i),r(1+j),r(1+k),r(1-j)) have these tangent actions on each basis vector, these normal components, unit norm, reverse-order closure and squared real parts less than1. Their dipole erasingLift has all U/P unit norm and both Gauss equations satisfied. Its full forward digon kick still satisfies both Gauss equations but has P0=1, which remains1 under every gauge. The standard analytic interpretation of the quarter-circle matrices as spherical Levi-Civita transports and each right triangular face area pi/2 is explained separately, not formalized as a Lean sphere-manifold theorem. This supplies genuine one-cell geometric endpoint data and an unrestricted-link admission obstruction. It does not show that the chosen cross-cell links are Levi-Civita transports, reconstruct matched two-cell geometry, exclude restricted or small-step flows, or solve a native R7/R8 obligation.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse"
+lean_proof = "Artform.Scores.NonabelianGravity.sphericalFaceCollapse"
+reviewed = "2026-10-31"
+review_text_sha256 = "ea482243ac8c2de3064a24b8e39884796185dab6419837c3d0c0c01f73d5c90a"

@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "same independently authorized ngb_independent_review worker; no production implementation authorship",
+  "contribution_disclosure": "Reviewer previously discussed the obstruction, quantifiers, positive control and geometric path/frame conventions with root. Root authored all six submitted production modules; this worker authored none of them and independently checked concrete source/proof/literal fidelity. No claim of no prior involvement in problem formulation.",
+  "reviewed_base_commit": "27677cb7903508c39aef1f0142c24d48eee43dc9",
+  "reviewed_freeze": "six additive working-tree modules, bound by exact source hashes below",
+  "approved_count": 2,
+  "returned_count": 0,
+  "prior_approved_count_preserved": 267,
+  "four_CNI_claims_still_pending": true,
+  "entries": [
+    {
+      "key": "NGB:dipole-oriented-score",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.dipoleOrientedScore",
+      "lean_proof": "Artform.Scores.NonabelianGravity.dipoleOrientedScore",
+      "review_text_sha256": "a345de5ac1a5e9c425e8d4bc7ce2fbf7ed166fac517bb1351f5e90ec9fe560ec",
+      "canonical_literal_sha256": "a282028e5ad973e4614b6e88fd9f73e419d5b70975954df63967bb47c1b6faa8",
+      "reachable_definition_count": 18,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "The actual four-valent Canvas and complete ordered stars give both full raw defects. Both signed first-digon maps are inverse, gauge covariant and raw-defect preserving. For every closed target tuple the unrestricted erasing lift is admitted and erases P0 in every gauge. The quantified no_saturated_domain theorem excludes only target domains saturated over all admitted links; the identity-link positive control is proved. No geometric link restriction, legal-process packaging or general flow no-go is asserted.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:spherical-face-collapse",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse",
+      "lean_proof": "Artform.Scores.NonabelianGravity.sphericalFaceCollapse",
+      "review_text_sha256": "ea482243ac8c2de3064a24b8e39884796185dab6419837c3d0c0c01f73d5c90a",
+      "canonical_literal_sha256": "efa9d2c5b3bd517280096824c6bd57e0282663f16af3afe123556f6dbf8c61a2",
+      "reachable_definition_count": 39,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual finite ambient matrices, HHR simple paths with special edge24, corrected Gram, convexity signs and positive-branch unit quaternion actions match the declared orthant data. The erasing fixture has all unit U/P values and both Gauss equations before and after the kick, with a gauge-invariant identity face after. The separate standard analytic quarter-circle argument supports genuine one-cell LC holonomies. No matched two-cell LC transport, general Lean sphere-manifold theorem, restricted-flow obstruction or native R7/R8 success is asserted.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c"
+  },
+  "canonical_file_sha256": "ec55309c596185c3d399f4660ca0b7eaf89523fcb5f89b476f22799b4a85e21f",
+  "independent_replay_sha256": "998e1c3c26d7ee03bb037730758bd154861e4c11cd68628accdf7d6249920d98",
+  "audit": "audit-independent-05.md",
+  "validation": "validation-independent-05.json",
+  "new_material_native_gravity_applications": 0,
+  "scope": "Exact full-carrier dipole updates, universal unrestricted-link face-erasure obstruction, finite orthant matrix/quaternion endpoint data and a separately reviewed analytic one-cell interpretation. No matched cross-cell LC links, general Lean sphere-manifold theorem, restricted-flow no-go or native gravity dynamics."
+}

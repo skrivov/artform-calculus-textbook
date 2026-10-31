@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 267 |
+| proved | 269 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **271** |
+| **total** | **273** |
 
 ## Statements
 
@@ -286,3 +286,5 @@
 | NGB:geometric-preflight | Valence gap and changed flux conjugacy class | proved | `Artform.Scores.NonabelianGravity.Statement.geometricPreflight` / `Artform.Scores.NonabelianGravity.geometricPreflight` | approved 2026-10-31 |
 | NGB:surface-orbit-dictionary | Complete Gauss and genus-two presentation orbit sets | proved | `Artform.Scores.NonabelianGravity.Statement.surfaceOrbitDictionary` / `Artform.Scores.NonabelianGravity.surfaceOrbitDictionary` | approved 2026-10-31 |
 | NGB:surface-face-twists | Actual face kicks as standard genus-two handle substitutions | proved | `Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists` / `Artform.Scores.NonabelianGravity.surfaceFaceTwists` | approved 2026-10-31 |
+| NGB:dipole-oriented-score | Complete dipole digon and unrestricted-link admission obstruction | proved | `Artform.Scores.NonabelianGravity.Statement.dipoleOrientedScore` / `Artform.Scores.NonabelianGravity.dipoleOrientedScore` | approved 2026-10-31 |
+| NGB:spherical-face-collapse | Orthant spherical holonomies and a Gauss-preserving collapsed face | proved | `Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse` / `Artform.Scores.NonabelianGravity.sphericalFaceCollapse` | approved 2026-10-31 |

@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "same authorized ngb_independent_review worker",
+  "contribution_disclosure": "Reviewer previously discussed the obstruction, quantifiers, positive control and geometric path/frame conventions with root. Root authored all six submitted production modules; this worker authored none of them and independently checked concrete source/proof/literal fidelity. No claim of no prior involvement in problem formulation.",
+  "reviewed_base_commit": "27677cb7903508c39aef1f0142c24d48eee43dc9",
+  "reviewed_freeze": "six additive working-tree modules; exact source and reachable-surface hashes recorded",
+  "full_warning_free_build": "Root completed full --wfail build and refreshed reports before freeze. Reviewer independently verified all prepared source/report hashes and separately replayed all six module kernels.",
+  "root_prepared_receipt": {
+    "path": "build/ngb-dipole-prepared.json",
+    "sha256": "096db92cf85b892786b77f5750668cabb90f7cf5647523c2be5998c65277240c",
+    "source_fingerprint_entries_verified": 895,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "258c8a249a1b71343f79a3ae2d66685149b6da549ac39314a9370a6b8a3aa139"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 3.166,
+        "stdout_sha256": "5042d94fca12962d002cd022a3297ae4f737bc590180c58840c4c757e0e97afd",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 13.47,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 21.25,
+        "stdout_sha256": "258c8a249a1b71343f79a3ae2d66685149b6da549ac39314a9370a6b8a3aa139",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.301,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.058,
+      "stdout": "1354 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.297,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.162,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "Dipole",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.Dipole"
+      ],
+      "exit_code": 0,
+      "seconds": 5.765,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "DipoleErasure",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.DipoleErasure"
+      ],
+      "exit_code": 0,
+      "seconds": 5.772,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "SphericalOrthant",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SphericalOrthant"
+      ],
+      "exit_code": 0,
+      "seconds": 6.66,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "SphericalFixture",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SphericalFixture"
+      ],
+      "exit_code": 0,
+      "seconds": 5.957,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "DipoleStatements",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.DipoleStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.745,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "DipoleTheorems",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.DipoleTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.749,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "independent_replay": {
+    "script": "replay-independent-05.py",
+    "script_sha256": "998e1c3c26d7ee03bb037730758bd154861e4c11cd68628accdf7d6249920d98",
+    "exit_code": 0,
+    "result": {
+      "scope": "exact finite/group data; sphere LC interpretation reviewed analytically, not replayed as a manifold theorem",
+      "free_words": {
+        "raw_defects_inverse_gauges_both_signs": true,
+        "universal_closed_tuple_erasure": true,
+        "identity_link_positive_control": true
+      },
+      "orthant": {
+        "coefficient_field": "Q(r), r^2=1/2",
+        "actual_HHR_loop_paths": 4,
+        "inverse_endpoint_pairs": 12,
+        "quaternion_basis_action_checks": 12,
+        "corrected_Gram_determinant": "1",
+        "ordinary_Gram_determinant": "0",
+        "convexity_triples": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "unit_closed_noncentral_faces": 4,
+        "erasing_fixture_Gauss_before_after": true,
+        "collapsed_face": "identity"
+      },
+      "S3": {
+        "all_S3_closed_target_tuples": 216,
+        "erasing_and_identity_lifts": true
+      }
+    },
+    "routine_replay_detail": "Converted exact Fraction convexity values to integers solely for JSON serialization, then reran all checks successfully; no production correction."
+  },
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c"
+  },
+  "all25_previous_NGB_modules_unchanged": true,
+  "prior_module_hashes_checked": {
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b"
+  },
+  "baseline_manifest_entries_preserved": 271,
+  "baseline_approvals_preserved": 267,
+  "all267_approved_reachable_surface_hashes_match": true,
+  "four_CNI_submissions_still_pending": true,
+  "reviewer_changed_production_or_approval_metadata": false,
+  "canonical_file_sha256": "ec55309c596185c3d399f4660ca0b7eaf89523fcb5f89b476f22799b4a85e21f",
+  "claims_file_sha256": "9a20d056d0a1e1d22ad00775fd36b264cc6821e2b11d484609dbfaa48b47824c",
+  "ledger_report_sha256": "258c8a249a1b71343f79a3ae2d66685149b6da549ac39314a9370a6b8a3aa139",
+  "dipole_results_sha256": "34f6b4a6febf29fae3da4ae082b5568745d36a9fdab915277b26b158b8350792",
+  "dipole_contract_sha256": "f51353a942455f159eb6e3e4a00a38e5fd6a26a2a3f898decc5f8d4fb24031d6",
+  "dipole_source_pins_sha256": "e722def15a5b2672a2f868fa59a7e0051f48e7fc79d84bb40580dcf6e49bfe28",
+  "axiom_whitelist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "approval_recommendations": 2,
+  "returns": 0,
+  "new_material_native_gravity_applications": 0
+}
