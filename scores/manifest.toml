@@ -3527,8 +3527,8 @@ See [finding227](findings/227-factorized-owned-panel-variation.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.panelLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.panelLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "2cfbd44017d775315241fc5cd748b936f4003db0866ca2159e8d47bb6d78d226"
 
 [[statement]]
 key = "GAC2:complete-temporal-cut-stencil"
@@ -3547,8 +3547,8 @@ See [finding228](findings/228-complete-temporal-cut-stencil.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.temporalLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.temporalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ff80358449b16822e6c1b51b64206e87b49ba47e1d2ff723e3e0a03c5ff69e1c"
 
 [[statement]]
 key = "GAC2:literal-full40-current-contacts"
@@ -3568,8 +3568,8 @@ See [finding229](findings/229-literal-full40-current-contacts.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.fortyContactsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.fortyContactsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "044e28d1381ff8f83cd8cfb90979c95547292bfec53dbfb59c50917f43536a84"
 
 [[statement]]
 key = "GAC2:controlled-l2-current-exhaustion"
@@ -3588,8 +3588,8 @@ See [finding230](findings/230-controlled-l2-current-exhaustion.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.exhaustionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.exhaustionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c45864e7fe5e449c8424c53f98b8f1909ac8912205aaa2fc8f8a94da361608eb"
 
 [[statement]]
 key = "GAC2:two-cell-complete-source-covector"
@@ -3608,8 +3608,8 @@ See [finding231](findings/231-two-cell-complete-source-covector.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.sourceBoundaryLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.sourceBoundaryLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "9ca0cba7227dfb34d6e2ffc80cbc1ce41d18d98667ea5ecdb794acd5eebb70ad"
 
 [[statement]]
 key = "GAC2:two-cell-source-detail-measure"
@@ -3628,8 +3628,8 @@ See [finding232](findings/232-two-cell-source-detail-measure.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.detailIntegralLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.detailIntegralLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "28c4b4a573b559facf6c121e1cd5b0281d358e745fd654c27f7faa1da64f67c8"
 
 [[statement]]
 key = "GAC2:source-complete-affine-boundary-composition"
@@ -3648,8 +3648,8 @@ See [finding233](findings/233-source-complete-affine-boundary-composition.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.affineSourceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.affineSourceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ce2d4c5b3207071a1aaabf3426c429fff66e65e9580fce6908c7ae24321a59b4"
 
 [[statement]]
 key = "GAC2:two-cell-three-output-programs"
@@ -3669,8 +3669,8 @@ See [finding234](findings/234-two-cell-three-output-programs.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.programsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.programsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c1f200aea922f6206dc55a0e43ea50d322af349a54221ef7a9a016b06dc64f69"
 
 [[statement]]
 key = "GAC2:fourier-reality-temporal-halo"
@@ -3689,8 +3689,8 @@ See [finding235](findings/235-fourier-reality-temporal-halo.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.realityHaloLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.realityHaloLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "8b369d1ba22ef940b338f2d364cedd24d78165279b91ded3348dbd357dd0e9c2"
 
 [[statement]]
 key = "GAC2:heldout-source-boundary-susceptibility"
@@ -3709,5 +3709,5 @@ See [finding236](findings/236-heldout-source-boundary-susceptibility.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.susceptibilityLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "1fb2628d5558d3867a622e188cda9508e89196f7fafcef22b06bf167fd6836b2"

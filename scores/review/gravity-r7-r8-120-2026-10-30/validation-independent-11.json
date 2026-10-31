@@ -1,0 +1,579 @@
+{
+  "date": "2026-10-31",
+  "reviewed_commit": "6c8ed24781bd97b551ac973e81207732872cbc3f",
+  "independent_review": true,
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.122,
+      "stdout": "\u2139 [3788/4169] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9626 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.222,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.841,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 24252254,
+      "output_sha256": "8f52fc26f33a6f0a8003cb5df6165927825496ade816ead44b08667709a98001",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.296,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.739,
+      "stdout": "1015 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.117,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.194,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.173,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.075,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.282,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.115,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.Panel"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.38,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.Temporal"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.427,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.FortyContacts"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.337,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.Exhaustion"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.423,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.SourceBoundary"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.451,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.DetailIntegral"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.319,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.AffineSource"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.41,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.Programs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.439,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.RealityHalo"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.427,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.GreenComposition.Susceptibility"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.43,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.124,
+      "stdout": "\u2139 [3788/3838] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9626 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.028,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.478,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 24252254,
+      "output_sha256": "8f52fc26f33a6f0a8003cb5df6165927825496ade816ead44b08667709a98001",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.289,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.731,
+      "stdout": "1019 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.118,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.192,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.218,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.076,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.282,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.119,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "supplemental_replays": [
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-11.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.06,
+      "result": {
+        "both_mixed_contacts_nonzero_and_unequal": true,
+        "direct_original_four_edge_schur_solves": 57,
+        "full40_asymmetric_three_range_cuts": 9,
+        "halo_adverse": true,
+        "historical_runtime_credit": 0,
+        "independent_finite_arithmetic_checks": 491,
+        "invalid_slot_read_ruled_out": true,
+        "native_heldout_source_retained": true,
+        "new_physical_gate": 0,
+        "nonzero_positive_and_negative_c": true,
+        "owned_lengths": 13,
+        "program_costs": [
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "signed_gram_negative_directions": 16,
+        "source_sha256": {
+          "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-11.py": "fb12c6dbe167a51b7ffa1cc5d9b2b181e89a708e81fe4e662ca1ef3977c5577a",
+          "scores/review/gravity-r7-r8-120-2026-10-30/boundary-program-root-11.py": "0a628bd39b80669319f71dba37bb5b34fde39c5ea4855d28bb29c3c9e3483a0e",
+          "scores/review/gravity-r7-r8-120-2026-10-30/retrospective-baseline-04.json": "1e75e27f1b0bf9e9148ba86f717ffe39ced620c942621288820235b05cb9bce2",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "f4f782fc74afb61698fe0f3a3ed2b9ba7facaccb3f64ef99fd4428f28163e211",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source/accepted-component-boundary-benchmark.md": "5bcb43441140a586ac1090a67a54f473daccb0e55822023a6b4a74c5b5508b83",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source/accepted-two-cell-source-benchmark.md": "90a942f1bbb77c9b38d3ec10d7c5f3c623c37f1157d8085ea011af4716e51af7",
+          "scores/review/gravity-r7-r8-120-2026-10-30/source/native-original-cut-form.md": "acb95d614111ecf39e622f77bdc01ede1777890a8a0109d1a2ed7ededcc6ddf9"
+        },
+        "status": "passed",
+        "symbolic_program_equality_for_all_rational_inputs": true,
+        "wrong_incoming_transpose_detected": true
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "green-composition-root-11.py (identical code; receipt destinations redirected to temporary files)"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.749,
+      "result": {
+        "status": "passed",
+        "complete_source_covector_cases": 64,
+        "composed_independent_source_cases": 64,
+        "full_coordinate_carrier": 40,
+        "full_mixed_contacts_retained": true,
+        "noncommuting_stencil_cuts": 7,
+        "sourced_cut_not_conserved": true,
+        "halo_adverse_case": true,
+        "heldout": [
+          "2",
+          "6/101",
+          "2/101",
+          "2/101"
+        ],
+        "matched_program_inputs": 514,
+        "same_cost_model": true,
+        "source_pairs": 41,
+        "new_physical_gate": 0,
+        "historical_discovery_or_runtime_credit": 0,
+        "scope": "component/source and finite-stencil tests; original full40 current coefficients, physical/geometric move and uniform-h source estimates not inferred"
+      },
+      "published_receipt_hashes_unchanged": {
+        "boundary-program-root-11.json": "f69731e9566c876535717df29e4cd532792ebb64d4312facfe34a32a33f994ed",
+        "green-composition-root-11.json": "ef600178abe73c6308718d766750ff66028f08fef854f830e26cb76d3f141636"
+      },
+      "benchmark_replay": {
+        "status": "passed",
+        "frozen_problem": "same original two-cell torsion contribution, kappa1/101; freely supplied rational endpoints a,b and source j; output stationary m and both endpoint momenta",
+        "input_count": 514,
+        "heldout": [
+          "0,2,2/101",
+          "-1,3,4/101"
+        ],
+        "cost_model": "ScalarGate: precomputed rational coefficients; input/slot reads, copies and unary negations free; each scale/add charged once; no global optimality assertion",
+        "literal_cost": {
+          "scale": 4,
+          "add": 4
+        },
+        "reused_cost": {
+          "scale": 3,
+          "add": 4
+        },
+        "peak_intermediate_bitlength": {
+          "literal": 55,
+          "reused": 55
+        },
+        "serialized_problem_output_certificate": {
+          "literal": {
+            "bytes": 83199,
+            "sha256": "dee72a832ba82bafe1b7eced0ffa05323a11dcf650754a9424021ee680b22884"
+          },
+          "reused": {
+            "bytes": 83159,
+            "sha256": "033a54d92e8da3bcc6a3ae6674053ac6da71cf4206f612f2b4d1c7935db535d5"
+          }
+        },
+        "python": "3.12.3",
+        "input_certificate_generation_and_validation_ms": 30.452,
+        "timing_protocol": {
+          "repeats": 9,
+          "warmup_each_program": 514,
+          "evaluations_per_batch": 2056,
+          "alternating_program_order": true,
+          "same_interpreter": true
+        },
+        "timings_ms": {
+          "literal": {
+            "samples": [
+              15.582,
+              15.302,
+              15.479,
+              15.665,
+              15.145,
+              15.062,
+              15.007,
+              15.042,
+              15.986
+            ],
+            "median": 15.302,
+            "min": 15.007,
+            "max": 15.986
+          },
+          "reused": {
+            "samples": [
+              13.307,
+              13.222,
+              13.146,
+              13.25,
+              13.363,
+              13.426,
+              13.254,
+              13.445,
+              13.402
+            ],
+            "median": 13.307,
+            "min": 13.146,
+            "max": 13.445
+          }
+        },
+        "scope": "fresh local Python-interpreter microbenchmark and exact operation comparison; no historical discovery, Lean compilation, full40 computation or physical resource/time credit"
+      }
+    }
+  ],
+  "fidelity_and_preservation": {
+    "approved_count": 10,
+    "returned_count": 0,
+    "earlier_parsed_manifest_entries_preserved": 189,
+    "submitted_Lean_files_preserved": 30,
+    "canonical_quotes_exact": true,
+    "original_snapshot_pairs_authenticated": 41,
+    "total_approvals": 199,
+    "completed_campaign_dispositions": 80,
+    "new_native_material_application_credit": 0,
+    "historical_Lean_full40_or_physical_resource_credit": 0,
+    "prospective_component_program_scale_add": [
+      [
+        4,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "implementation_or_claim_surface_modified": false,
+    "post_freeze_fidelity_correction": false,
+    "all_prior_proofs_unchanged": true
+  },
+  "final_artifact_tree_check": {
+    "command": [
+      "python3",
+      "scripts/check_tree.py",
+      "--identity"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.793,
+    "stdout": "1019 files checked; 0 problem(s)\n",
+    "stderr": ""
+  }
+}

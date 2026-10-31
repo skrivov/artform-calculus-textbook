@@ -1,0 +1,440 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "6c8ed24781bd97b551ac973e81207732872cbc3f",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 189,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:factorized-owned-panel-variation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.panelLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.panelLaw",
+      "review_text_sha256": "2cfbd44017d775315241fc5cd748b936f4003db0866ca2159e8d47bb6d78d226",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Exact finite variation includes the quadratic remainder, telescoping Green identity and actual N+1-edge outgoing p_N*v_(N+1). Correct original coefficient and nonzero contribution; no full40 boundary primitive claimed."
+    },
+    {
+      "key": "GAC2:complete-temporal-cut-stencil",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.temporalLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.temporalLaw",
+      "review_text_sha256": "ff80358449b16822e6c1b51b64206e87b49ba47e1d2ff723e3e0a03c5ff69e1c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 4,
+      "new_material_native_application": false,
+      "reason": "Complete finite-range telescoping, true incoming swapped pairing and retained source skew. Zero-range contribution cancels in the skew; native full-Hessian/spatial and halo identification remains an input."
+    },
+    {
+      "key": "GAC2:literal-full40-current-contacts",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.fortyContactsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.fortyContactsLaw",
+      "review_text_sha256": "044e28d1381ff8f83cd8cfb90979c95547292bfec53dbfb59c50917f43536a84",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 16,
+      "new_material_native_application": false,
+      "reason": "Literal16+24 carrier, physical native A=-h*omega, both distinct mixed bilinear contacts and quadratic connection term, complete indefinite Gram and h4 measure factor. Arbitrary B is not identified with the native current."
+    },
+    {
+      "key": "GAC2:controlled-l2-current-exhaustion",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.exhaustionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.exhaustionLaw",
+      "review_text_sha256": "c45864e7fe5e449c8424c53f98b8f1909ac8912205aaa2fc8f8a94da361608eb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "Actual lp2 fields on arbitrary spatial type, summable product and finite-subset net convergence, finite fixed coefficient sum and nonzero single-site seed. Background nonsummability and lack of separate uniform-h coefficient control remain explicit."
+    },
+    {
+      "key": "GAC2:two-cell-complete-source-covector",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.sourceBoundaryLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.sourceBoundaryLaw",
+      "review_text_sha256": "9ca0cba7227dfb34d6e2ffc80cbc1ce41d18d98667ea5ecdb794acd5eebb70ad",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 10,
+      "new_material_native_application": false,
+      "reason": "Original two-cell source action identified definitionally at kappa1/101. Complete square, stationary jump iff and full endpoint/source covector with exact quadratic remainder and nonzero held-out source all retained."
+    },
+    {
+      "key": "GAC2:two-cell-source-detail-measure",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.detailIntegralLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.detailIntegralLaw",
+      "review_text_sha256": "28c4b4a573b559facf6c121e1cd5b0281d358e745fd654c27f7faa1da64f67c8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Actual real Lebesgue integrability under c>0 and exact Gaussian factor, positive exponential cancellation, nonunit original normalization and coordinate factor1/2. No Lorentzian/native measure transfer."
+    },
+    {
+      "key": "GAC2:source-complete-affine-boundary-composition",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.affineSourceLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.affineSourceLaw",
+      "review_text_sha256": "ce2d4c5b3207071a1aaabf3426c429fff66e65e9580fce6908c7ae24321a59b4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "Guarded affine boundary relation, independent-source two-step map, direct common-endpoint elimination with individual and total source contacts, matching iff and unequal same-total-source example. No full40 gluing inferred."
+    },
+    {
+      "key": "GAC2:two-cell-three-output-programs",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.programsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.programsLaw",
+      "review_text_sha256": "c1f200aea922f6206dc55a0e43ea50d322af349a54221ef7a9a016b06dc64f69",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 16,
+      "new_material_native_application": false,
+      "reason": "Both actual straight-line programs are valid, all output slots in range and all three outputs equal the original expressions for every rational input. Declared cost4scale4add to3scale4add is prospective only; no global optimum or historical/full40/physical resource claim."
+    },
+    {
+      "key": "GAC2:fourier-reality-temporal-halo",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.realityHaloLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.realityHaloLaw",
+      "review_text_sha256": "8b369d1ba22ef940b338f2d364cedd24d78165279b91ded3348dbd357dd0e9c2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "Genuine nonzero real-even Gaussian spectrum gives a conjugate-reflected odd vector; range2 halo example has identical present/next values and unequal cut. These are adverse domain examples, not native admitted solutions."
+    },
+    {
+      "key": "GAC2:heldout-source-boundary-susceptibility",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.GreenComposition.Statement.susceptibilityLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.GreenComposition.susceptibilityLaw",
+      "review_text_sha256": "1fb2628d5558d3867a622e188cda9508e89196f7fafcef22b06bf167fd6836b2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Exact source susceptibility, full mixed endpoint/source difference, source-omission iff j0 and nonzero held-out values. Original component source contact preserved; no native geometric move asserted."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/AffineSource.lean": "b0561526c6dfeddee1620e1015e4189e256fea7516fc822f623197b5fe570bad",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/AffineSourceDefs.lean": "bf68a112a1954c33df3f68f869cbfef26d740000d808759b1f48fbe9ba02b5ac",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/AffineSourceStatements.lean": "fe437cfd62eb4c33ae8f7cf8485412a14b738226fb42baa7954151cd0da79026",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/DetailIntegral.lean": "52217f0977e2eeb8b8289724315bc8429a045c8365568622d7beeea851c6e0a9",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/DetailIntegralDefs.lean": "12b3de168e3e323abfa366a0232543587fe9341fbfc9e00a3c3598bc480838c5",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/DetailIntegralStatements.lean": "1c161a3c3af710f0e6e3fb78182c6178b7077823cd212280a37c4239506022cd",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/Exhaustion.lean": "8b5637d55c1bde846840d73eb15bf9d4a712ec097ffbecb738b531e79ab07c6c",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/ExhaustionDefs.lean": "413a5b0b10bc9009c44327ec5bfc1be3faba30dac3c71a91c4addd1a16a0d122",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/ExhaustionStatements.lean": "29ab77ee48762dfbfe483f7d4a06559e0353d65726514273499223d46c38b2ef",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/FortyContacts.lean": "737a1a71d4b48cf83afe75ea766c4a04e7469f9bcb0dde0977811a830efb7fc6",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/FortyContactsDefs.lean": "b6cdfa6f03a1a8efa75dbce775c8bf7f41bce4b85bd1ae40b1d01006c88b9924",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/FortyContactsStatements.lean": "0a8001f2f90335d3d2e8423c4d1b93407ac12ca8cee5b12d5151a83009e946d2",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/Panel.lean": "78abb402a6489048a5254458ef7796312dc8a119e522ca2a3e59817c39cad4f0",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/PanelDefs.lean": "024f067b21426e9aad894d72ebe29f5d68ae246e0b41f29c18fa74f8c47dc06e",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/PanelStatements.lean": "d7c4c142e5fc8745f33184a6cf3de5cba42966f18a0aa70265e00ef4511a1503",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/Programs.lean": "6e173dfc37e3d5723607a07372686957bc38bd9d7dab8c4093c890e3ad20aa89",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/ProgramsDefs.lean": "3b1b6139130e45928cef8387f100b1a0a9a6fa4b8ac9880c3c340dce9af369af",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/ProgramsStatements.lean": "fe061bbcd292d2027c4a0a8a4b7283bf819e71a390091d6ad3e7d02a4460bd04",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/RealityHalo.lean": "844bfd8dccc966c617292e64069d82bf9da005fbd108837254fad4953ed5df37",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/RealityHaloDefs.lean": "c3fb60c257d559577823c7cc1f91d8d3b6551816f4a0b2d10572ce6e3773da95",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/RealityHaloStatements.lean": "3a7777a98b51d5af546039182a7afd56d58d85fe1d5550dd103cc7dce578093d",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/SourceBoundary.lean": "9574c70cebafd1f97e5ae5881a59558fa2eaffaeea383712dc2a9b543890b1e5",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/SourceBoundaryDefs.lean": "145390b6c16363272d4af108e849bcbf0d15699d41c42384336203e9c1e3b16b",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/SourceBoundaryStatements.lean": "c659cf63a069b02098a006b2f7c7bc3fc4e6e580c9cb9971d6ce655a5d8d3561",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/Susceptibility.lean": "fb0886e440589f8c46699a958b522eae1c55be51e4573bb67fd111deb83246fa",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/SusceptibilityDefs.lean": "dc061b4ea98aa3612b4a769c9dfc023942d0253b9bef846d76951c8808717e05",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/SusceptibilityStatements.lean": "da948339dbdfa69cac4888510bb42599848202f4c2c291c0d059a8d8a7d7a230",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/Temporal.lean": "b2552f84fdb35f7583094a65b6d4af082bdc9b289fd8402f52095f3fb8f2472f",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/TemporalDefs.lean": "322352ff358ed244d30d4c8d8961aacbc96f7f06165348a7ab170f2179f4f174",
+    "scores/ArtformScores/GravityBridge/Native/GreenComposition/TemporalStatements.lean": "674c63600ca78e10f1ff01590e6dee854f1fc9e8522de558902c164b5fc16bb9"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "c59813f5699d29a7a9fbb37d82bca0a1e7a136c649a254959f3a3286102c046d",
+    "physics/ledgers/lattice-waves/findings/227-factorized-owned-panel-variation.md": "5c523cb6e8a60ea13ac9add6e64a594fbd4dea80d5a8c40d0c122ab8f32791d0",
+    "physics/ledgers/lattice-waves/findings/228-complete-temporal-cut-stencil.md": "a9e71f2904afacd8983674ffe46a70849b301011798f310ae2f33f631a2cab4b",
+    "physics/ledgers/lattice-waves/findings/229-literal-full40-current-contacts.md": "d6d2a16d4b46532aca0f0658ea64c75654eb5a710f1b0c6295082de561f749f5",
+    "physics/ledgers/lattice-waves/findings/230-controlled-l2-current-exhaustion.md": "9c17fa0a5ce60519069fb924a2993a005fbd2ae705db2d86e01c06eaa2946257",
+    "physics/ledgers/lattice-waves/findings/231-two-cell-complete-source-covector.md": "f4acd6d8e7db318db27565b44c9ee1ff3da5300fc15dac69a663fb8fa0aa2b1d",
+    "physics/ledgers/lattice-waves/findings/232-two-cell-source-detail-measure.md": "c7b1d038e57f7d1ef9f68f9b76e23dd0a1b6be948b9a675cd0878bfaaaee5b15",
+    "physics/ledgers/lattice-waves/findings/233-source-complete-affine-boundary-composition.md": "ff5d6bdd5af6b0197477c318b17dbd7333211403990d59dd5e810cceb19040c4",
+    "physics/ledgers/lattice-waves/findings/234-two-cell-three-output-programs.md": "c10db11f15cc8e0ec37e3e27b5374c9ace94de160b2a2c9da9de8c176f65b3de",
+    "physics/ledgers/lattice-waves/findings/235-fourier-reality-temporal-halo.md": "631214b9b1e14649870d2880bcdd87799267d964192ae35a17ad2babaecf000c",
+    "physics/ledgers/lattice-waves/findings/236-heldout-source-boundary-susceptibility.md": "999ddb8baff74a461ee15205638606044cb6acbb806e2a3d13e71691ffa4bd0e"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "f4f782fc74afb61698fe0f3a3ed2b9ba7facaccb3f64ef99fd4428f28163e211",
+  "exact_original_snapshot_pairs_authenticated": 41,
+  "scope_checks": {
+    "owned_outgoing_p_N_at_v_Nplus1": true,
+    "linear_flux_and_quadratic_variation": true,
+    "complete_forward_true_incoming_and_source_skew": true,
+    "r0_skew_cancels": true,
+    "all16plus24_slots_and_original_indefinite_Gram": true,
+    "physical_native_minus_h_and_both_mixed_contacts": true,
+    "measure_h_times_h3_equals_h4": true,
+    "arbitrary_real_lp2_type_and_finite_subset_net": true,
+    "nonzero_lp_seed_and_nonsummable_background": true,
+    "fixed_h_not_uniform_singular_coefficient_bound": true,
+    "full_source_endpoint_covector_and_quadratic_remainder": true,
+    "native_component_identification_at_kappa1over101": true,
+    "positive_real_Lebesgue_Gaussian_integral_and_Jacobian": true,
+    "both_independent_source_squares_and_total_square_retained": true,
+    "direct_original_four_edge_elimination_replayed": true,
+    "complete_three_output_programs_valid_for_every_rational_vector": true,
+    "prospective_cost_scale_add": [
+      [
+        4,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "no_global_program_optimum_asserted": true,
+    "conjugate_Fourier_reality_not_componentwise_evenness": true,
+    "actual_temporal_halo_counterexample": true,
+    "heldout_nonzero_source_and_mixed_susceptibility": true
+  },
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-11.py",
+    "sha256": "fb12c6dbe167a51b7ffa1cc5d9b2b181e89a708e81fe4e662ca1ef3977c5577a",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-11.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.06,
+    "result": {
+      "both_mixed_contacts_nonzero_and_unequal": true,
+      "direct_original_four_edge_schur_solves": 57,
+      "full40_asymmetric_three_range_cuts": 9,
+      "halo_adverse": true,
+      "historical_runtime_credit": 0,
+      "independent_finite_arithmetic_checks": 491,
+      "invalid_slot_read_ruled_out": true,
+      "native_heldout_source_retained": true,
+      "new_physical_gate": 0,
+      "nonzero_positive_and_negative_c": true,
+      "owned_lengths": 13,
+      "program_costs": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "signed_gram_negative_directions": 16,
+      "source_sha256": {
+        "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-11.py": "fb12c6dbe167a51b7ffa1cc5d9b2b181e89a708e81fe4e662ca1ef3977c5577a",
+        "scores/review/gravity-r7-r8-120-2026-10-30/boundary-program-root-11.py": "0a628bd39b80669319f71dba37bb5b34fde39c5ea4855d28bb29c3c9e3483a0e",
+        "scores/review/gravity-r7-r8-120-2026-10-30/retrospective-baseline-04.json": "1e75e27f1b0bf9e9148ba86f717ffe39ced620c942621288820235b05cb9bce2",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "f4f782fc74afb61698fe0f3a3ed2b9ba7facaccb3f64ef99fd4428f28163e211",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/accepted-component-boundary-benchmark.md": "5bcb43441140a586ac1090a67a54f473daccb0e55822023a6b4a74c5b5508b83",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/accepted-two-cell-source-benchmark.md": "90a942f1bbb77c9b38d3ec10d7c5f3c623c37f1157d8085ea011af4716e51af7",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/native-original-cut-form.md": "acb95d614111ecf39e622f77bdc01ede1777890a8a0109d1a2ed7ededcc6ddf9"
+      },
+      "status": "passed",
+      "symbolic_program_equality_for_all_rational_inputs": true,
+      "wrong_incoming_transpose_detected": true
+    }
+  },
+  "root_replay_reproduced_without_published_JSON_mutation": {
+    "script": "green-composition-root-11.py",
+    "script_sha256": "159e1e2fbc0326183a9175768128df92c8126b5e1795f4ac703e97d0e81a63e6",
+    "artifact_sha256": "ef600178abe73c6308718d766750ff66028f08fef854f830e26cb76d3f141636",
+    "command": [
+      "python3",
+      "green-composition-root-11.py (identical code; receipt destinations redirected to temporary files)"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.749,
+    "result": {
+      "status": "passed",
+      "complete_source_covector_cases": 64,
+      "composed_independent_source_cases": 64,
+      "full_coordinate_carrier": 40,
+      "full_mixed_contacts_retained": true,
+      "noncommuting_stencil_cuts": 7,
+      "sourced_cut_not_conserved": true,
+      "halo_adverse_case": true,
+      "heldout": [
+        "2",
+        "6/101",
+        "2/101",
+        "2/101"
+      ],
+      "matched_program_inputs": 514,
+      "same_cost_model": true,
+      "source_pairs": 41,
+      "new_physical_gate": 0,
+      "historical_discovery_or_runtime_credit": 0,
+      "scope": "component/source and finite-stencil tests; original full40 current coefficients, physical/geometric move and uniform-h source estimates not inferred"
+    },
+    "published_receipt_hashes_unchanged": {
+      "boundary-program-root-11.json": "f69731e9566c876535717df29e4cd532792ebb64d4312facfe34a32a33f994ed",
+      "green-composition-root-11.json": "ef600178abe73c6308718d766750ff66028f08fef854f830e26cb76d3f141636"
+    },
+    "benchmark_replay": {
+      "status": "passed",
+      "frozen_problem": "same original two-cell torsion contribution, kappa1/101; freely supplied rational endpoints a,b and source j; output stationary m and both endpoint momenta",
+      "input_count": 514,
+      "heldout": [
+        "0,2,2/101",
+        "-1,3,4/101"
+      ],
+      "cost_model": "ScalarGate: precomputed rational coefficients; input/slot reads, copies and unary negations free; each scale/add charged once; no global optimality assertion",
+      "literal_cost": {
+        "scale": 4,
+        "add": 4
+      },
+      "reused_cost": {
+        "scale": 3,
+        "add": 4
+      },
+      "peak_intermediate_bitlength": {
+        "literal": 55,
+        "reused": 55
+      },
+      "serialized_problem_output_certificate": {
+        "literal": {
+          "bytes": 83199,
+          "sha256": "dee72a832ba82bafe1b7eced0ffa05323a11dcf650754a9424021ee680b22884"
+        },
+        "reused": {
+          "bytes": 83159,
+          "sha256": "033a54d92e8da3bcc6a3ae6674053ac6da71cf4206f612f2b4d1c7935db535d5"
+        }
+      },
+      "python": "3.12.3",
+      "input_certificate_generation_and_validation_ms": 30.452,
+      "timing_protocol": {
+        "repeats": 9,
+        "warmup_each_program": 514,
+        "evaluations_per_batch": 2056,
+        "alternating_program_order": true,
+        "same_interpreter": true
+      },
+      "timings_ms": {
+        "literal": {
+          "samples": [
+            15.582,
+            15.302,
+            15.479,
+            15.665,
+            15.145,
+            15.062,
+            15.007,
+            15.042,
+            15.986
+          ],
+          "median": 15.302,
+          "min": 15.007,
+          "max": 15.986
+        },
+        "reused": {
+          "samples": [
+            13.307,
+            13.222,
+            13.146,
+            13.25,
+            13.363,
+            13.426,
+            13.254,
+            13.445,
+            13.402
+          ],
+          "median": 13.307,
+          "min": 13.146,
+          "max": 13.445
+        }
+      },
+      "scope": "fresh local Python-interpreter microbenchmark and exact operation comparison; no historical discovery, Lean compilation, full40 computation or physical resource/time credit"
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_historical_runtime_or_physical_resource_credit": 0,
+    "prior_C10_and_E08_prospective_comparisons_unchanged": true,
+    "new_prospective_component_program_comparison": {
+      "same_inputs": "arbitrary rational a,b,j at fixed kappa1/101",
+      "same_outputs": [
+        "stationary middle",
+        "input momentum",
+        "output momentum"
+      ],
+      "literal_scale_add": [
+        4,
+        4
+      ],
+      "reused_scale_add": [
+        3,
+        4
+      ],
+      "fixed_precomputation_and_free_reads_copies_negation": true,
+      "global_optimality_claim": false
+    },
+    "fresh_interpreter_timing_scope": "nine warm alternating repeats, same514 cases; evidence only for this Python microbenchmark, not historical discovery/Lean compilation/full40/physical cost",
+    "new_admitted_native_finite_h_construction": false,
+    "uninstantiated_bridges": [
+      "original complete native Hessian and transport/contact identification for supplied finite stencil",
+      "full physical integrated current and finite spatial-corner ownership",
+      "actual physical radical/quotient and complete frame/link/history prescription",
+      "uniform combined boundary-symbol and nonlinear source/history norm estimates",
+      "native geometric refinement/gluing and oscillatory or infinite-dimensional measure"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 80,
+  "campaign_target": 120,
+  "total_approvals_after_review": 199,
+  "audit": "audit-independent-11.md",
+  "validation": "validation-independent-11.json"
+}
