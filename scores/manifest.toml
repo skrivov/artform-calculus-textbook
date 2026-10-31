@@ -1478,8 +1478,8 @@ See [finding 132](findings/132-two-cell-torsion-source-and-native-refinement-gap
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.twoCellLaw"
 lean_proof = "Artform.Scores.GravityBridge.twoCellLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "7bc2a057e9ae921f2d2cff0d7a01288db09b690f940d6535cd7394a55e578276"
 
 [[statement]]
 key = "GAC:weighted-kernel-algebra"
@@ -1500,8 +1500,8 @@ See [finding 133](findings/133-weighted-kernel-gluing-and-normalized-identity.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.kernelAlgebraLaw"
 lean_proof = "Artform.Scores.GravityBridge.kernelAlgebraLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "fe6c4b63bafb1006edee70f46b9fdca345c432921bf1609375e80cf848f0cec6"
 
 [[statement]]
 key = "GAC:gaussian-schur-integral"
@@ -1521,8 +1521,8 @@ See [finding 134](findings/134-convergent-gaussian-schur-integral-and-sources.md
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.gaussianLaw"
 lean_proof = "Artform.Scores.GravityBridge.gaussianLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "f86bd69c78c0ec4c1dc8988bdbfdaed487ac1a310fe4d47ebb86a14a6c3fe7d5"
 
 [[statement]]
 key = "GAC:finite-gaussian-phase"
@@ -1544,8 +1544,8 @@ See [finding 135](findings/135-finite-quadratic-phase-loop-and-weyl-bridge.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.phaseLaw"
 lean_proof = "Artform.Scores.GravityBridge.phaseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "77cdcbed735a7d21bc2c5974bcbd2d130b7e0d6ce486b7034c852e7e838c640c"
 
 [[statement]]
 key = "GAC:normalized-gaussian-gluing"
@@ -1567,5 +1567,5 @@ See [finding 136](findings/136-normalized-gaussian-gluing-and-detail-measure.md)
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.heatLaw"
 lean_proof = "Artform.Scores.GravityBridge.heatLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "26fd09847c19263786f488a51194fb4414e4ec5879d235bd2769cd5611e93edf"

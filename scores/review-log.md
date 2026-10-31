@@ -107,3 +107,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:refinement-elimination` approved as `Artform.Scores.GravityBridge.Statement.refinementLaw` (text 24ebdee853fe)
 - 2026-10-30: `GAC:schedule-boundary` approved as `Artform.Scores.GravityBridge.Statement.scheduleLaw` (text 49b816870584)
 - 2026-10-30: `GAC:finite-boundary-adjoint` approved as `Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw` (text eb1b0c5602d8)
+- 2026-10-30: `GAC:two-cell-torsion` approved as `Artform.Scores.GravityBridge.Statement.twoCellLaw` (text 7bc2a057e9ae)
+- 2026-10-30: `GAC:weighted-kernel-algebra` approved as `Artform.Scores.GravityBridge.Statement.kernelAlgebraLaw` (text fe6c4b63bafb)
+- 2026-10-30: `GAC:gaussian-schur-integral` approved as `Artform.Scores.GravityBridge.Statement.gaussianLaw` (text f86bd69c78c0)
+- 2026-10-30: `GAC:finite-gaussian-phase` approved as `Artform.Scores.GravityBridge.Statement.phaseLaw` (text 77cdcbed735a)
+- 2026-10-30: `GAC:normalized-gaussian-gluing` approved as `Artform.Scores.GravityBridge.Statement.heatLaw` (text 26fd09847c19)

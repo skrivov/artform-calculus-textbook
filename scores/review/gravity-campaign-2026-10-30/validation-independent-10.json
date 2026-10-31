@@ -1,0 +1,338 @@
+{
+  "date": "2026-10-30",
+  "reviewed_commit": "1e774a8c37656c2e1d39431765f6493abdbfad23",
+  "independent_review": true,
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.013,
+      "stdout": "\u2139 [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9323 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.97,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.45,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 11221610,
+      "output_sha256": "85557f4700b3b74f5881edd0226efea66aa4ee95dea9c7331a217aec52ece7c4",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.289,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.425,
+      "stdout": "550 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.071,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.193,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.203,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.075,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.288,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.073,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.TwoCell"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.34,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.KernelAlgebra"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.222,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Gaussian"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.272,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Phase"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.482,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Heat"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.376,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "source_authentication": "All five manifest quotations are literal ledger text; inherited four C07 originals and snapshots authenticate by hash/bytecount.",
+  "earlier_manifest_entries_unchanged": 94,
+  "proof_targets_and_axioms": "Five exact tagged targets; only propext, Classical.choice and Quot.sound.",
+  "new_material_native_applications": 0,
+  "implementation_modified": false,
+  "historical_full_source_scope": "C07 accepted=false and qualifications preserved; C08 is only two specified torsion contributions.",
+  "primary_abstracts_checked": [
+    "https://arxiv.org/abs/2409.11628",
+    "https://arxiv.org/abs/1401.7731"
+  ],
+  "normalization_helper_checked": "Final sqrt_two_normalization explicitly proves sqrt2/2=1/sqrt2.",
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.999,
+      "stdout": "\u2139 [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9323 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.937,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.306,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 11221610,
+      "output_sha256": "85557f4700b3b74f5881edd0226efea66aa4ee95dea9c7331a217aec52ece7c4",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.291,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.434,
+      "stdout": "553 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.073,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.192,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.166,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.076,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.277,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.073,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

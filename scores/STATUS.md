@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 94 |
-| stated | 5 |
+| proved | 99 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **99** |
 
@@ -109,8 +109,8 @@
 | GAC:refinement-elimination | Detail elimination retains source contacts and memory | proved | `Artform.Scores.GravityBridge.Statement.refinementLaw` / `Artform.Scores.GravityBridge.refinementLaw` | approved 2026-10-30 |
 | GAC:schedule-boundary | Shear schedule defect and exact endpoint primitives | proved | `Artform.Scores.GravityBridge.Statement.scheduleLaw` / `Artform.Scores.GravityBridge.scheduleLaw` | approved 2026-10-30 |
 | GAC:finite-boundary-adjoint | Finite Green identity and the native open-cell boundary gap | proved | `Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw` / `Artform.Scores.GravityBridge.boundaryAdjointLaw` | approved 2026-10-30 |
-| GAC:two-cell-torsion | Two-cell torsion source and endpoint reduction | stated | `Artform.Scores.GravityBridge.Statement.twoCellLaw` / `Artform.Scores.GravityBridge.twoCellLaw` | awaiting review |
-| GAC:weighted-kernel-algebra | Weighted finite gluing and normalized identities | stated | `Artform.Scores.GravityBridge.Statement.kernelAlgebraLaw` / `Artform.Scores.GravityBridge.kernelAlgebraLaw` | awaiting review |
-| GAC:gaussian-schur-integral | Convergent Gaussian Schur integral with sources | stated | `Artform.Scores.GravityBridge.Statement.gaussianLaw` / `Artform.Scores.GravityBridge.gaussianLaw` | awaiting review |
-| GAC:finite-gaussian-phase | Finite quadratic Gauss phase and the Weyl bridge | stated | `Artform.Scores.GravityBridge.Statement.phaseLaw` / `Artform.Scores.GravityBridge.phaseLaw` | awaiting review |
-| GAC:normalized-gaussian-gluing | Normalized Gaussian gluing and discarded-detail test | stated | `Artform.Scores.GravityBridge.Statement.heatLaw` / `Artform.Scores.GravityBridge.heatLaw` | awaiting review |
+| GAC:two-cell-torsion | Two-cell torsion source and endpoint reduction | proved | `Artform.Scores.GravityBridge.Statement.twoCellLaw` / `Artform.Scores.GravityBridge.twoCellLaw` | approved 2026-10-30 |
+| GAC:weighted-kernel-algebra | Weighted finite gluing and normalized identities | proved | `Artform.Scores.GravityBridge.Statement.kernelAlgebraLaw` / `Artform.Scores.GravityBridge.kernelAlgebraLaw` | approved 2026-10-30 |
+| GAC:gaussian-schur-integral | Convergent Gaussian Schur integral with sources | proved | `Artform.Scores.GravityBridge.Statement.gaussianLaw` / `Artform.Scores.GravityBridge.gaussianLaw` | approved 2026-10-30 |
+| GAC:finite-gaussian-phase | Finite quadratic Gauss phase and the Weyl bridge | proved | `Artform.Scores.GravityBridge.Statement.phaseLaw` / `Artform.Scores.GravityBridge.phaseLaw` | approved 2026-10-30 |
+| GAC:normalized-gaussian-gluing | Normalized Gaussian gluing and discarded-detail test | proved | `Artform.Scores.GravityBridge.Statement.heatLaw` / `Artform.Scores.GravityBridge.heatLaw` | approved 2026-10-30 |

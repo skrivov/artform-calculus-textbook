@@ -306,7 +306,7 @@ scope remains unchanged.
 
 ## C08/E01–E04: exact component sources and quantum-kernel pilots
 
-Five new submissions await independent review10: GAC:two-cell-torsion,
+Five submissions were independently approved in review10: GAC:two-cell-torsion,
 GAC:weighted-kernel-algebra, GAC:gaussian-schur-integral, GAC:finite-gaussian-phase and
 GAC:normalized-gaussian-gluing. Findings132–136 and section7 literal quotes specify the scopes.
 All94 old approvals stand; all five new Defs/Statements/proof modules are new surfaces.
@@ -334,6 +334,9 @@ No gravitational physical constraint support, indefinite phase prescription or u
 coarse-graining law is assumed. The primary literature comparisons in findings135/136 have explicit
 scope and are not imported Lean premises.
 
-validation-C08-E01-E02-E03-E04.json will record all required checks, certificates, both empty drift
-reports and five separate kernel replays. Zero additional native material-application credit is
-proposed; the campaign's R7/R8 target remains open.
+validation-C08-E01-E02-E03-E04.json records all required checks, certificates, both empty drift
+reports and five separate kernel replays. All five claims were independently approved at freeze
+`1e774a8c37656c2e1d39431765f6493abdbfad23`; none returned. See the distinct
+[audit](audit-independent-10.md), [per-key verdicts](verdict-independent-10.json)
+and [validation](validation-independent-10.json). All94 earlier approvals stand.
+Zero additional material native applications are credited; the campaign's R7/R8 target remains open.
