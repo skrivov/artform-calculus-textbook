@@ -1,0 +1,329 @@
+{
+  "date": "2026-10-31",
+  "scope": "reviewed analytic extension and preserved baseline",
+  "baseline_commit": "c64e8eb26946797e191a6c7a5455c809fd91591e",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 3.287,
+      "stdout_sha256": "dd71bfdef797ac1c5ff590f678ea555cc0dc2e5b0a5bf2d6979a184c035acd3d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.872,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 21.904,
+      "stdout_sha256": "eb5a1388076a49f625016b57eedd2ac29ce523d8853e5159d9e81551dd70d836",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.157,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.303,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.041,
+      "stdout_sha256": "60668a440072626a8075de21c075071484d05c13819d197f305657b1ff946204",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.158,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.201,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.267,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.078,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.33,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.Differential"
+      ],
+      "exit_code": 0,
+      "seconds": 5.878,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuaternionForm"
+      ],
+      "exit_code": 0,
+      "seconds": 5.898,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticForm"
+      ],
+      "exit_code": 0,
+      "seconds": 5.834,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.UnitQuaternionWitness"
+      ],
+      "exit_code": 0,
+      "seconds": 5.923,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticWitness"
+      ],
+      "exit_code": 0,
+      "seconds": 6.033,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.Stabilizers"
+      ],
+      "exit_code": 0,
+      "seconds": 5.87,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.GeometryPreflight"
+      ],
+      "exit_code": 0,
+      "seconds": 5.94,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.909,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 6.448,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_sha256": {
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/phase-space-replay.json": "92e89b293620b6cb155a096d0c933c4ef451e0eeec4527c8138772332399bae2",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/STATUS.md": "948cac4261866c86f9d1b30f492c0d35a8eff9f57bc8f70415babfb56b12451e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-12.md": "da2564db7cc3d0004d0d9f99914d70b7e3667c977f55b2645c9693c4e95fe337",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-analytic.md": "a46a6246512e3cdd3805f9ad0431c08f9b0972463cf1593fa45725fd3a8bef8c",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/phase-space-replay.py": "8b001c573a1b304c07677bd23149671d0dfd87f1f477b93f1a9420c8c6643de1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/campaign.json": "f1e7b4fe783b8291c4d81346520dd9ad057b0428fd401ea1531dd48dcde562b3",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/INVESTIGATIONS.md": "e054669d99a618e05724a6c6b66fcdce4cbbf83ddc116c95ca9f1ee527663d7a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-02.md": "1b8fe59880f1dcbdf8dc8cc3b2c15ce97f5c3bb19799b143ae028044843fabf5",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/claims.json": "a70f65432ec7444e238fc0eca99ef8abb440ab4c47773a4c335908147ef48126",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NEXT-CONTRACT.md": "fbc099d67a3e2441a13303cc43c2bcebe5e9d5ee607ea4905e06da5009f77ef8",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source-pins.json": "c46a2d1fdf827d65933acf4f4e274b84a99ad03708689d693e1d4b96419b7130",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/CONTRACTS.md": "daac00c981d5b18161d22be20e2733d7e28465967a7706edf4f3b70241489b29",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/CAMPAIGN.md": "00693538cb17f1f459020bcfc1928eaab9590ea89398d104bfe89d96b2b8f947",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-02.json": "bda9ed5ffba4134127b2120f90bdc3537823990edf216998f5cd633b23423cc3",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/README.md": "4115fbebcfa7b40265a516f3f3ef8da23b24d9a2c7b0f6930af43d632228d5d4",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-01.json": "aba2df0360b55e32b83599567646d473667ad11e36dda38483d57bc5e2910370",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/RESULTS.md": "2957f82c6f96b98d09ed4da8c84fb53c62fb85ffdf238527f12b6c8fdde84e87",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-08.md": "f801a07507d541a57dc9f668846e8eff4e0035b816455e39c05bdc76f271c844",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/analytic-source-pins.json": "54e7501976a7ea653df1f9cb3c1da853d6870ab1fff41c28566b0663065a902a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/HANDOFF.md": "55817b78a631d820ce1e127b95e4fb21b6412362352f20419d24a4c50e235c4a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-analytic-root.py": "f90380edb78a447d0524917b9aad97fb2cfcd7f0154b93a2a92046ee7679d4c9",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-01.json": "50d6dc3d686708a5b85e318585f720177d0dba23d5c7de096d641ed1979bcda4",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-02.json": "b14f6f51644f4e857d3628f4f8c7d6417cd94ab21210ed1692be487a2a0f55a7",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/tangent-independent-01.py": "7549afdb5cc5845f636bc3e5dc62888fa4747ffbad564b19b2c68b1e3bf66983",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/VALIDATION.json": "efbb7f1c1687bf805ed26c71b8ca7fcb61a25f5edf3778765d3f1036e3c96539",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-01.py": "cba60f543962e15fa0c6269c15bd36ec790481e8d3c6ad32fbaa4a690860a46c",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/ANALYTIC-RESULTS.md": "6b8e8a202a83b36c861ba5027f16b4b671d791f0ffdb3187797d69d4019d6483",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md": "cfb9cfc646131b61c4c0f743c8d2b0b2dec36c376f286237ba95ed1a59cfc78e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/formal-replay.json": "101a20c88fb98d6e3e604a4f8ee6e7fe3d0afd8369b2b5ddd8d30619579ad864",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-research-root.json": "f0b25edae8d076ca77fdf1dc4e1422a194fb96d4d4b6756f816a707109709254",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-01.md": "a85bfd4e8babc9451b7e8c4b7bbd77af352e34689c9519f68a74c255da235d0b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/formal-replay.py": "bce039ee61ff9bd28d985017b1d41932924d9d547bc43fe8e009560a1ba148c6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-04.md": "d4d33a81a186380d10d0e740a07e7fd8aa6a3a29a8477d6582d7fbdb7efd0b8b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-02.py": "205804531bbc161654956ed2edb6e1f63bd4b691d577bc9842434adfcc4580ce",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-research-root.py": "2c3b5fa7f5b81a798c59e11ed0d8b6bfc0e625f2c9d9066e0b30af1078ff129d",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/gravity-programme-excerpts.md": "96f0cb423fd7ea57958a201677c83a0ab3de0bf85324d141200586e4dcd33d55",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1"
+  },
+  "score_counts": {
+    "total": 269,
+    "approved": 265,
+    "pending_CNI": 4
+  },
+  "new_module_kernel_replays": 9,
+  "independent_verdicts": [
+    {
+      "file": "verdict-independent-01.json",
+      "approvals": 8
+    },
+    {
+      "file": "verdict-independent-02.json",
+      "approvals": 3
+    }
+  ],
+  "approved_baseline_production_changed": false,
+  "new_material_gravity_applications": 0,
+  "decision12": "unpassed: smooth quasi-Hamiltonian regular reduction/domain binding",
+  "result": "passed"
+}

@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 254 |
-| stated | 12 |
+| proved | 265 |
+| stated | 4 |
 | planned | 0 |
-| **total** | **266** |
+| **total** | **269** |
 
 ## Statements
 
@@ -273,11 +273,14 @@
 | CNI:two-shear-score | Exact classical impulse score and physical descent | stated | `Artform.Scores.ClassicalNonabelian.Statement.twoShearScore` / `Artform.Scores.ClassicalNonabelian.twoShearScore` | awaiting review |
 | CNI:legal-native | Owned atomic face and compatible drift realization | stated | `Artform.Scores.ClassicalNonabelian.Statement.legalNative` / `Artform.Scores.ClassicalNonabelian.legalNative` | awaiting review |
 | CNI:noncommuting-control | Noncommuting curvature change and failure controls | stated | `Artform.Scores.ClassicalNonabelian.Statement.noncommutingControl` / `Artform.Scores.ClassicalNonabelian.noncommutingControl` | awaiting review |
-| NGB:two-face-geometry | Oppositely oriented two-face Gauss geometry | stated | `Artform.Scores.NonabelianGravity.Statement.twoFaceGeometry` / `Artform.Scores.NonabelianGravity.twoFaceGeometry` | awaiting review |
-| NGB:oriented-score | Exact oriented scores and gauge-reduced inverses | stated | `Artform.Scores.NonabelianGravity.Statement.orientedScore` / `Artform.Scores.NonabelianGravity.orientedScore` | awaiting review |
-| NGB:legal-overlap | Overlapping face maps and a legal sequential realizer | stated | `Artform.Scores.NonabelianGravity.Statement.legalOverlap` / `Artform.Scores.NonabelianGravity.legalOverlap` | awaiting review |
-| NGB:noncommuting-controls | Noncommuting quotient motion and failed shortcuts | stated | `Artform.Scores.NonabelianGravity.Statement.noncommutingControls` / `Artform.Scores.NonabelianGravity.noncommutingControls` | awaiting review |
-| NGB:double-dictionary | Exact endpoint dictionary to the AMM double | stated | `Artform.Scores.NonabelianGravity.Statement.doubleDictionary` / `Artform.Scores.NonabelianGravity.doubleDictionary` | awaiting review |
-| NGB:formal-two-form | Universal finite Maurer two-form certificates | stated | `Artform.Scores.NonabelianGravity.Statement.formalTwoForm` / `Artform.Scores.NonabelianGravity.formalTwoForm` | awaiting review |
-| NGB:word-binding | Formal word normalization and actual group-process semantics | stated | `Artform.Scores.NonabelianGravity.Statement.wordBinding` / `Artform.Scores.NonabelianGravity.wordBinding` | awaiting review |
-| NGB:neighbor-scaling | Shared-edge cancellation, noncommutative jets and a norm bound | stated | `Artform.Scores.NonabelianGravity.Statement.neighborScaling` / `Artform.Scores.NonabelianGravity.neighborScaling` | awaiting review |
+| NGB:two-face-geometry | Oppositely oriented two-face Gauss geometry | proved | `Artform.Scores.NonabelianGravity.Statement.twoFaceGeometry` / `Artform.Scores.NonabelianGravity.twoFaceGeometry` | approved 2026-10-31 |
+| NGB:oriented-score | Exact oriented scores and gauge-reduced inverses | proved | `Artform.Scores.NonabelianGravity.Statement.orientedScore` / `Artform.Scores.NonabelianGravity.orientedScore` | approved 2026-10-31 |
+| NGB:legal-overlap | Overlapping face maps and a legal sequential realizer | proved | `Artform.Scores.NonabelianGravity.Statement.legalOverlap` / `Artform.Scores.NonabelianGravity.legalOverlap` | approved 2026-10-31 |
+| NGB:noncommuting-controls | Noncommuting quotient motion and failed shortcuts | proved | `Artform.Scores.NonabelianGravity.Statement.noncommutingControls` / `Artform.Scores.NonabelianGravity.noncommutingControls` | approved 2026-10-31 |
+| NGB:double-dictionary | Exact endpoint dictionary to the AMM double | proved | `Artform.Scores.NonabelianGravity.Statement.doubleDictionary` / `Artform.Scores.NonabelianGravity.doubleDictionary` | approved 2026-10-31 |
+| NGB:formal-two-form | Universal finite Maurer two-form certificates | proved | `Artform.Scores.NonabelianGravity.Statement.formalTwoForm` / `Artform.Scores.NonabelianGravity.formalTwoForm` | approved 2026-10-31 |
+| NGB:word-binding | Formal word normalization and actual group-process semantics | proved | `Artform.Scores.NonabelianGravity.Statement.wordBinding` / `Artform.Scores.NonabelianGravity.wordBinding` | approved 2026-10-31 |
+| NGB:neighbor-scaling | Shared-edge cancellation, noncommutative jets and a norm bound | proved | `Artform.Scores.NonabelianGravity.Statement.neighborScaling` / `Artform.Scores.NonabelianGravity.neighborScaling` | approved 2026-10-31 |
+| NGB:analytic-interpretation | Actual quaternion derivatives and fused two-form evaluations | proved | `Artform.Scores.NonabelianGravity.Statement.analyticInterpretation` / `Artform.Scores.NonabelianGravity.analyticInterpretation` | approved 2026-10-31 |
+| NGB:stabilizer-preservation | Exact preservation of the full gauge stabilizer | proved | `Artform.Scores.NonabelianGravity.Statement.stabilizerPreservation` / `Artform.Scores.NonabelianGravity.stabilizerPreservation` | approved 2026-10-31 |
+| NGB:geometric-preflight | Valence gap and changed flux conjugacy class | proved | `Artform.Scores.NonabelianGravity.Statement.geometricPreflight` / `Artform.Scores.NonabelianGravity.geometricPreflight` | approved 2026-10-31 |

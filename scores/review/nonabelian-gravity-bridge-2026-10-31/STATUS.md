@@ -1,21 +1,23 @@
 # Campaign status
 
-31 October 2026: **initial research checkpoint reached; continuation decision unpassed**.
+31 October 2026: **analytic interpretation extended; regular-reduction decision unpassed**.
 
 | Item | State |
 |---|---|
-| Initial investigations with research dispositions | 12 of12 |
+| Initial investigations with research dispositions | 12 of12; no extra round count for this extension |
 | Fully answered model/algebra questions | 7: A01-A06 and B01 |
-| Scoped partial results | 4: B02-B05 |
-| Continuation assessment | B06: unpassed |
-| Conditional geometric/native investigations | 12 unstarted |
-| New checked Lean submissions | 8, all pending independent fidelity review |
-| New independent approvals | 0 |
-| New material native gravity applications | 0 |
-| Preserved approvals | 254 |
+| Scoped partial investigations | B02-B05; actual curve semantics now proved, reduction still open |
+| Continuation decision | B06: unpassed on smooth quasi-Hamiltonian regular reduction/domain binding |
+| Conditional geometric/native investigations | C01-D06: all12 unstarted |
+| Campaign Lean submissions | 11: original8 plus analytic/stabilizer/preflight3 |
+| Independent review01 | Original8 approved, none returned |
+| Independent review02 | Additive3 approved, none returned |
+| Preserved earlier approvals | 254 |
 | Inherited pending CNI submissions | 4 |
-| Total score claims after this batch | 266: 254 proved,12 stated |
-| Additional workers launched | 0 |
-| Next scientific duties | Analytic Maurer/reduction binding and independent fidelity review |
+| Current score count | 269 total:265 approved,4 stated (CNI) |
+| Additional workers launched | One user-authorized reviewer, reused for both reviews |
+| New material native gravity applications | 0 |
+| Immediate next duty | Explicit compact-group regular-reduction contract in ANALYTIC-RESULTS.md |
+| Subsequent candidate | Four-edge dipole with moving-area reconstruction, conditional on the gate |
 
-A recorded disposition does not mean that an original physical obligation is solved. The first-stage model works algebraically; finite formal two-form and conditional norm results retain their stated limits. No geometric stage is activated. See RESULTS.md, HANDOFF.md and validation-research-root.json. The original organization receipt VALIDATION.json remains historical and is not the research validation.
+See ANALYTIC-RESULTS.md, checkpoint-analytic.md, NEXT-CONTRACT.md and the two independent audits. The original checkpoint-12.md, validate-research-root.py and its receipts describe the first batch at c64e8eb; they are retained as historical evidence and do not describe current approval counts. The current root validation is validate-analytic-root.py and validation-analytic-root.json.

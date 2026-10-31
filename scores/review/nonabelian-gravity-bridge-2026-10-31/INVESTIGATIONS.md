@@ -1,6 +1,6 @@
 # Ordered research questions
 
-The initial twelve entries now have research dispositions: A01-A06 and B01 answer their model/algebra questions, B02-B05 have scoped partial results and B06 records an unpassed decision. C01-D06 remain planned and unstarted. See RESULTS.md and campaign.json for evidence and limits. The execution order and conditional activation rules are in [CAMPAIGN.md](CAMPAIGN.md). A disposition records evidence and exact scope, not a compulsory new theorem. Dependencies are scientific prerequisites; missing formalization is recorded separately.
+The initial twelve entries now have research dispositions: A01-A06 and B01 answer their model/algebra questions, B02-B05 have scoped partial results and B06 records an unpassed decision. C01-D06 remain planned and unstarted. The analytic extension revisits B02/B03/B06 without creating new investigation counts. See ANALYTIC-RESULTS.md, RESULTS.md and campaign.json for evidence and limits. The execution order and conditional activation rules are in [CAMPAIGN.md](CAMPAIGN.md). A disposition records evidence and exact scope, not a compulsory new theorem. Dependencies are scientific prerequisites; missing formalization is recorded separately.
 
 | ID | Question and required evidence | Dependencies |
 |---|---|---|

@@ -3,16 +3,16 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "initial_allocation_investigated_gate_unpassed",
+  "research_status": "analytic_interpretation_extended_regular_reduction_open",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
-  "researcher_policy": "single_researcher_no_additional_workers",
-  "additional_workers_launched": 0,
+  "researcher_policy": "one_researcher_one_user_authorized_independent_reviewer",
+  "additional_workers_launched": 1,
   "initial_investigations": 12,
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 8,
-  "new_independent_approvals": 0,
+  "new_registered_claims": 11,
+  "new_independent_approvals": 11,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -42,8 +42,13 @@
         "independent_fidelity_review"
       ],
       "unmet": [
-        "independent_fidelity_review",
-        "analytic_Maurer_exterior_form_and_regular_reduction_binding"
+        "smooth_quasiHamiltonian_regular_reduction_domain_binding"
+      ],
+      "discharged": [
+        "actual_oriented_two_face_process",
+        "independent_review_of_original_eight_claims",
+        "actual_quaternion_curve_Maurer_and_two_form_evaluation_binding",
+        "independent_review_of_three_additive_claims"
       ]
     },
     "decision18": {
@@ -68,7 +73,7 @@
       "lean_claims": [
         "NGB:two-face-geometry"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -88,7 +93,7 @@
         "NGB:oriented-score",
         "NGB:neighbor-scaling"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -107,7 +112,7 @@
       "lean_claims": [
         "NGB:oriented-score"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -127,7 +132,7 @@
         "NGB:oriented-score",
         "NGB:legal-overlap"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -146,7 +151,7 @@
       "lean_claims": [
         "NGB:noncommuting-controls"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -166,7 +171,7 @@
         "NGB:oriented-score",
         "NGB:legal-overlap"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -185,7 +190,7 @@
       "lean_claims": [
         "NGB:double-dictionary"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": true,
       "physical_gate_discharged": false,
       "evidence": [
@@ -200,11 +205,13 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Consistent AMM edge-plus-fusion form selected; exact rational tangent data pass. Analytic axioms/reduction remain external and unformalized.",
+      "result": "Actual quaternion differential interpretation now proved; global quasi-Hamiltonian and regular-reduction domain remain open.",
       "lean_claims": [
-        "NGB:formal-two-form"
+        "NGB:formal-two-form",
+        "NGB:analytic-interpretation",
+        "NGB:stabilizer-preservation"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_and_02_at_literal_scope",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -219,12 +226,13 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Universal finite formal pullback certificates and actual group-word binding pass. Analytic Maurer interpretation remains open.",
+      "result": "Actual quaternion curve-evaluation pullbacks proved for both face maps and drift; regular reduced form not constructed.",
       "lean_claims": [
         "NGB:formal-two-form",
-        "NGB:word-binding"
+        "NGB:word-binding",
+        "NGB:analytic-interpretation"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_and_02_at_literal_scope",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -243,7 +251,7 @@
       "lean_claims": [
         "NGB:double-dictionary"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -262,7 +270,7 @@
       "lean_claims": [
         "NGB:neighbor-scaling"
       ],
-      "independent_review": "pending",
+      "independent_review": "approved_independent_01_for_original_claims",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -277,9 +285,12 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Continuation unpassed pending independent fidelity review and the analytic interpretation/domain contract; no geometric stage activated.",
-      "lean_claims": [],
-      "independent_review": "not_a_theorem_submission",
+      "result": "Original eight independently approved; actual derivative/form semantics added. Regular reduction remains the gate. Geometric preflight records valence and fixed-conjugacy controls without activating C.",
+      "lean_claims": [
+        "NGB:geometric-preflight",
+        "NGB:stabilizer-preservation"
+      ],
+      "independent_review": "approved_independent_01_and_02_at_literal_scope",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -435,5 +446,12 @@
     "R6": "open_no_new_material_application",
     "R7": "open_no_new_material_application",
     "R8": "open_no_new_material_application"
-  }
+  },
+  "analytic_extension_claims": 3,
+  "analytic_extension_review": "approved_independent_02",
+  "latest_checkpoint": "checkpoint-analytic.md",
+  "preflight_findings": [
+    "no_four_valent_vertex_on_current_canvas",
+    "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
+  ]
 }

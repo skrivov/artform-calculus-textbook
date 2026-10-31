@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-31",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "local_inputs": [
+    {
+      "repository_path": "lake-manifest.json",
+      "sha256": "d335397f4a766516c38741186a3c6691282290fed3fa8b0c9c186dddab039d45"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Mul.lean",
+      "sha256": "9a5f4cda6bdba50954d27879160adfdb7d408b41c49dde6343cd03a30227b242"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Calculus/FDeriv/Mul.lean",
+      "sha256": "a9ac40abb691761c9d09a4870f886f03ec758b286e3685c1f31614e91d372950"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Quaternion.lean",
+      "sha256": "37c3ad78c7019dff722100862c4d9714243da98c3674c49e2021300dac7726ed"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Algebra/Quaternion.lean",
+      "sha256": "cbac27d23bd6648e9c7c1d22c7e70801315ce6bce275cee2689542c11f1cd0fe"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/CURRENT-PROGRAM.md",
+      "sha256": "064290780bf8a8cffc8ec7248e6ce9b4f0a340d7aa5406942a16c1c62bba07f0"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-owned-flat-vector16-smooth-range-and-coupled-l2-obstruction.md",
+      "sha256": "f762f32adf2ee15b1b4115732a2e138230563135da490349be28bc80754e8b23"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-r7-full-current-smooth-domain-and-lie-algebra.md",
+      "sha256": "535cc11ad31d42e9e75f5ee2bd269d765512542b540555071723314fdf616877"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/dg-ga/9707021v1",
+      "sections": [
+        "double \u00a73",
+        "twist Theorem4.5",
+        "reduction Theorem5.1",
+        "fusion Theorem6.1"
+      ],
+      "status": "external source; global axioms/reduction theorem not newly represented in Lean"
+    },
+    {
+      "url": "https://arxiv.org/html/1506.03053v1",
+      "sections": [
+        "curved reconstruction Theorem1"
+      ],
+      "status": "future geometric admission requirements only; no reconstruction theorem claimed"
+    }
+  ],
+  "gravity_refresh": "P190 and P179 local documents read; all eight routes open; Q1 qualification retained; no live-chat progress inferred"
+}

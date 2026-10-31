@@ -225,3 +225,5 @@ import ArtformScores.Nonabelian.Theorems
 import ArtformScores.ClassicalNonabelian.Theorems
 
 import ArtformScores.NonabelianGravity.Theorems
+
+import ArtformScores.NonabelianGravity.AnalyticTheorems

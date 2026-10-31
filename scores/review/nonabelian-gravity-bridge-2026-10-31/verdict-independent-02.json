@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "same independently authorized ngb_independent_review worker; no implementation authorship",
+  "reviewed_base_commit": "c64e8eb26946797e191a6c7a5455c809fd91591e",
+  "reviewed_freeze": "nine additive working-tree modules, exact source and surface hashes below",
+  "approved_count": 3,
+  "returned_count": 0,
+  "prior_approved_count_preserved": 262,
+  "original_baseline_approved_count": 254,
+  "review01_eight_approvals_preserved": true,
+  "four_CNI_claims_still_pending": true,
+  "entries": [
+    {
+      "key": "NGB:analytic-interpretation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.analyticInterpretation",
+      "lean_proof": "Artform.Scores.NonabelianGravity.analyticInterpretation",
+      "review_text_sha256": "8ad7fa0e2339b71720097750eac5f5bae54849e2129d7b900dcbc4cecda64f2f",
+      "canonical_literal_sha256": "2d7ba6671ff86a1a28badb4eb10fd053273f6d4bad35a2b3cadd938353743101",
+      "reachable_definition_count": 58,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual quaternion curve derivatives use analytic noncommutative inverse/product rules; concrete conjugation-invariant pairing and wedge orientation bind every curve-form evaluation to the finite certificate. Cayley value8 is an ambient non-vacuity witness, with neither Gauss-tangent nor regular-reduction significance. Global form bundles, quasi-Hamiltonian axioms and reduced symplectic geometry remain excluded.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:stabilizer-preservation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.stabilizerPreservation",
+      "lean_proof": "Artform.Scores.NonabelianGravity.stabilizerPreservation",
+      "review_text_sha256": "8f3926c26fcce197019adfe7ccdefd237762b6eda37e3dba928bbea03f53841f",
+      "canonical_literal_sha256": "6a1245f97ca23dfaf5fbe8973caeb84f850c58be0f0b4ceb24b0bc1ef62ca9bc",
+      "reachable_definition_count": 20,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual full six-vertex gauge stabilizer sets are equal before and after every complete score, by injectivity and equivariance; no Gauss/freeness restriction or substitution by conjugate stabilizers. Discreteness and smooth quotient geometry are not asserted.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:geometric-preflight",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.geometricPreflight",
+      "lean_proof": "Artform.Scores.NonabelianGravity.geometricPreflight",
+      "review_text_sha256": "e6d1ca974b9b6223ef9415fafe720dd36037732092334b311b2356ec8aa80e19",
+      "canonical_literal_sha256": "17eefb4125ab7801a793726c5d3e6d0465c8378cec8d99670f122fb228637046",
+      "reachable_definition_count": 20,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Concrete valence bound, both full Gauss conditions, all initial/kicked quaternion unit norms and flux real parts0/-1 match the written i-cycle. Trace invariance excludes every invertible-quaternion conjugation. No tetrahedral reconstruction or general geometric no-go is asserted.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1"
+  },
+  "canonical_file_sha256": "051a10c53b21f31add353759e14f7bb780c419dbc44ee55f31f8c6a0171bf3e1",
+  "independent_replay_sha256": "205804531bbc161654956ed2edb6e1f63bd4b691d577bc9842434adfcc4580ce",
+  "audit": "audit-independent-02.md",
+  "validation": "validation-independent-02.json",
+  "new_material_native_gravity_applications": 0,
+  "scope": "Actual analytic curve-form semantics, exact stabilizer sets and a bounded fixed-conjugacy adverse control. No global quasi-Hamiltonian reduction or native gravitational law is approved."
+}

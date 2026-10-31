@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_independent_review; distinct from root implementation author",
+  "reviewed_base_commit": "c64e8eb26946797e191a6c7a5455c809fd91591e",
+  "reviewed_freeze": "nine additive working-tree modules and three literals, bound by exact file/surface hashes",
+  "full_warning_free_build": "Root completed full build before refreshed reports; reviewer separately replayed every new module kernel.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.318,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.223,
+      "stdout": "1325 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.308,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.157,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "Differential",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.Differential"
+      ],
+      "exit_code": 0,
+      "seconds": 5.799,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "QuaternionForm",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.QuaternionForm"
+      ],
+      "exit_code": 0,
+      "seconds": 5.812,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "AnalyticForm",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticForm"
+      ],
+      "exit_code": 0,
+      "seconds": 5.882,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "UnitQuaternionWitness",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.UnitQuaternionWitness"
+      ],
+      "exit_code": 0,
+      "seconds": 5.879,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "AnalyticWitness",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticWitness"
+      ],
+      "exit_code": 0,
+      "seconds": 5.754,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Stabilizers",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.Stabilizers"
+      ],
+      "exit_code": 0,
+      "seconds": 5.664,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "GeometryPreflight",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.GeometryPreflight"
+      ],
+      "exit_code": 0,
+      "seconds": 6.054,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "AnalyticStatements",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.725,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "AnalyticTheorems",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.AnalyticTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.95,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "independent_arithmetic": {
+    "script": "replay-independent-02.py",
+    "script_sha256": "205804531bbc161654956ed2edb6e1f63bd4b691d577bc9842434adfcc4580ce",
+    "exit_code": 0,
+    "result": {
+      "representation": "rational 4x4 matrices; direct inverse/product derivatives",
+      "assignments": 2,
+      "signed_words_per_assignment": 1555,
+      "derivative_order_checks": 3110,
+      "cayley": {
+        "unit_norm_parameter_samples": 5,
+        "cayley_derivative_at_zero": "2i",
+        "ambient_twice_form_value": 8,
+        "P0_variation_is_Gauss_tangent": false
+      },
+      "stabilizers": [
+        {
+          "state": "noncommuting",
+          "gauge_functions_checked": 46656,
+          "stabilizer_size": 1,
+          "exact_set_preserved": true
+        },
+        {
+          "state": "singular_identity",
+          "gauge_functions_checked": 46656,
+          "stabilizer_size": 6,
+          "exact_set_preserved": true
+        }
+      ],
+      "geometric_preflight": {
+        "all_vertex_valences_below_four": true,
+        "initial_and_kicked_Gauss": true,
+        "all_28_link_impulse_values_unit_norm": true,
+        "initial_P0_real_part": "0",
+        "kicked_P0_real_part": "-1",
+        "trace_separates_quaternion_conjugacy_classes": true
+      }
+    }
+  },
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1"
+  },
+  "canonical_file_sha256": "051a10c53b21f31add353759e14f7bb780c419dbc44ee55f31f8c6a0171bf3e1",
+  "claims_file_sha256": "3b5d9334e38b1f635ed5f696537f083b66c76b050a8959471e520ad7493a2249",
+  "ledger_report_sha256": "eb5a1388076a49f625016b57eedd2ac29ce523d8853e5159d9e81551dd70d836",
+  "analytical_results_sha256": "6b8e8a202a83b36c861ba5027f16b4b671d791f0ffdb3187797d69d4019d6483",
+  "all_eleven_review01_modules_unchanged": true,
+  "approved_baseline_preserved": 262,
+  "four_CNI_submissions_still_pending": true,
+  "reviewer_changed_production_or_metadata": false,
+  "approval_recommendations": 3,
+  "returns": 0,
+  "new_material_native_gravity_applications": 0,
+  "next_contract_sha256": "fbc099d67a3e2441a13303cc43c2bcebe5e9d5ee607ea4905e06da5009f77ef8"
+}

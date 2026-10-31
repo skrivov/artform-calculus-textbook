@@ -4836,8 +4836,8 @@ Use the actual Canvas with vertices0..5, stored edges 0:0->1, 1:1->4, 2:4->3, 3:
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.twoFaceGeometry"
 lean_proof = "Artform.Scores.NonabelianGravity.twoFaceGeometry"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "9f926c8811a81e2962fca600ed2052a30edb40ae20c52b3ce9a51fb67c1d7221"
 
 [[statement]]
 key = "NGB:oriented-score"
@@ -4849,8 +4849,8 @@ For either face, kick each traversal-based impulse on the left by its actual bas
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.orientedScore"
 lean_proof = "Artform.Scores.NonabelianGravity.orientedScore"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ce7c43e88bbc92fabd57e0c2358e1ebe0a27defec4236740c5dfe241561b4073"
 
 [[statement]]
 key = "NGB:legal-overlap"
@@ -4862,8 +4862,8 @@ The actual ProcessProfiles have true guards and commit exactly the declared grou
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.legalOverlap"
 lean_proof = "Artform.Scores.NonabelianGravity.legalOverlap"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "e3db78ee716c9c370f5c39daba1c9de7cc9827d99c2b169f7e4e912f79a1e8d8"
 
 [[statement]]
 key = "NGB:noncommuting-controls"
@@ -4875,8 +4875,8 @@ In Perm(Fin3), let r=(01)(12), t=(01), U=(t,t,t,1,1,1,r), P=(t,t,t,t,1,1,1). Thi
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.noncommutingControls"
 lean_proof = "Artform.Scores.NonabelianGravity.noncommutingControls"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c0ebe8f05771bb40be0df8e2ff319d82e2ff03b65636a2daa12b31499e1abaaf"
 
 [[statement]]
 key = "NGB:double-dictionary"
@@ -4888,8 +4888,8 @@ For every group set A=U and B=U^-1 P. The Alekseev-Malkin-Meinrenken endpoint wo
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.doubleDictionary"
 lean_proof = "Artform.Scores.NonabelianGravity.doubleDictionary"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ad338b4974d4b4a4531df911ad27fe9ecc648572715cb3d4b8427ef782c2917e"
 
 [[statement]]
 key = "NGB:formal-two-form"
@@ -4901,8 +4901,8 @@ In the finite formal word/Maurer algebra of Maurer.lean, use fourteen independen
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.formalTwoForm"
 lean_proof = "Artform.Scores.NonabelianGravity.formalTwoForm"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "543387c444672138ab3c14d13326041ac591ad990b5a222c800afcbd796651f9"
 
 [[statement]]
 key = "NGB:word-binding"
@@ -4914,8 +4914,8 @@ For any group and assignment of natural-numbered generators, evaluating the redu
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.wordBinding"
 lean_proof = "Artform.Scores.NonabelianGravity.wordBinding"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "eb8c4cefb98cd6d02234789ff7149d91366f28c32dc179f70e3d1996777856b7"
 
 [[statement]]
 key = "NGB:neighbor-scaling"
@@ -4927,5 +4927,44 @@ On the actual canvas, the shared impulse after the two forward face commits is P
 """
 lean_statement = "Artform.Scores.NonabelianGravity.Statement.neighborScaling"
 lean_proof = "Artform.Scores.NonabelianGravity.neighborScaling"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "63fe26e03709bcd990b6e8ea46069d46579c0a6fae44abd17aa31fc73ccabda6"
+
+[[statement]]
+key = "NGB:analytic-interpretation"
+label = "NGB:analytic-interpretation"
+title = "Actual quaternion derivatives and fused two-form evaluations"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:analytic-interpretation)"
+statement = """
+Let H be the real quaternions, with pairing(a,b)=-Re(ab). At any invertible generator assignment g, two real-parameter quaternion curve families c,d pass through g with derivatives x_i*g_i and y_i*g_i. For every finite signed word w, the actual derivative of its product/inverse curve is oneValue(g,x,right(w))*evalWord(g,w). The formal wedge evaluates to pairing(oneValue(x,a),oneValue(y,b))-pairing(oneValue(x,b),oneValue(y,a)); conjugation invariance of the concrete quaternion pairing is proved, not assumed. The analyticTwiceOmega defined from actual left/right logarithmic curve derivatives, the AMM double edge terms A=U,B=U^-1P and the declared ordered fusion terms equals the formal twoValue for every word-state substitution. Its values are unchanged under wordKick0, wordKick1 and wordDrift of original. The independently reviewed word-binding theorem identifies these substitutions with the actual group processes when curves take invertible values. Non-vacuity uses the globally unit-norm Cayley curve (1+t*i)*(1-t*i)^-1 in U0 and independently in P0: analyticTwiceOmega at zero is8. This is an ambient non-vacuity witness: the independent P0 curve leaves Gauss, and the identity baseline is not asserted to be regular. This is an analytic curve-evaluation theorem, not a Lean construction of a differential-form bundle, quasi-Hamiltonian axioms, regular symplectic quotient, geometric reconstruction or native gravitational dynamics.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.analyticInterpretation"
+lean_proof = "Artform.Scores.NonabelianGravity.analyticInterpretation"
+reviewed = "2026-10-31"
+review_text_sha256 = "8ad7fa0e2339b71720097750eac5f5bae54849e2129d7b900dcbc4cecda64f2f"
+
+[[statement]]
+key = "NGB:stabilizer-preservation"
+label = "NGB:stabilizer-preservation"
+title = "Exact preservation of the full gauge stabilizer"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:stabilizer-preservation)"
+statement = """
+For every group, every raw state on the actual two-face canvas and every fixed complete-instruction word, run is injective and the set of all six-vertex gauge functions fixing the output equals exactly the set fixing the input. Use the actual independent vertex gauge action and both-sided reverse word; impose no free-action or Gauss restriction. In particular the statement holds on the full admitted Gauss carrier. This preserves exact stabilizer sets along a score and supplies an orbit-type ingredient for regular reduction. It does not prove that a stabilizer is discrete, construct a smooth quotient or supply a nondegenerate reduced form.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.stabilizerPreservation"
+lean_proof = "Artform.Scores.NonabelianGravity.stabilizerPreservation"
+reviewed = "2026-10-31"
+review_text_sha256 = "8f3926c26fcce197019adfe7ccdefd237762b6eda37e3dba928bbea03f53841f"
+
+[[statement]]
+key = "NGB:geometric-preflight"
+label = "NGB:geometric-preflight"
+title = "Valence gap and changed flux conjugacy class"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:geometric-preflight)"
+statement = """
+Every ordered star of the present two-face canvas has fewer than four half-edges. For the explicit unit quaternion i, take U=(i,1,1,1,1,1,1) and P=(i,i,i,i,1,1,1). The initial state and its complete forward face0 kick both satisfy all six Gauss equations, and every link and impulse in both states has quaternion norm squared1. The initial P0 has real part0, while the kicked P0=i*i has real part-1. No invertible quaternion conjugates the initial P0 to the kicked P0. Thus the actual kick does not preserve every individual flux conjugacy class, even within this admitted unit-norm example. This is an adverse control for a proposed fixed-conjugacy/fixed-area interpretation; neither state is asserted to reconstruct a nondegenerate tetrahedron. It does not exclude moving-area geometric domains or prove a no-go theorem for a future four-valent constructor.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.geometricPreflight"
+lean_proof = "Artform.Scores.NonabelianGravity.geometricPreflight"
+reviewed = "2026-10-31"
+review_text_sha256 = "e6d1ca974b9b6223ef9415fafe720dd36037732092334b311b2356ec8aa80e19"

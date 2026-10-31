@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "ngb_independent_review; no authorship of submitted Lean production modules",
+  "reviewed_commit": "c64e8eb26946797e191a6c7a5455c809fd91591e",
+  "approved_count": 8,
+  "returned_count": 0,
+  "baseline_approvals_preserved": 254,
+  "four_CNI_claims_still_pending": true,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "NGB:two-face-geometry",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.twoFaceGeometry",
+      "lean_proof": "Artform.Scores.NonabelianGravity.twoFaceGeometry",
+      "review_text_sha256": "9f926c8811a81e2962fca600ed2052a30edb40ae20c52b3ce9a51fb67c1d7221",
+      "canonical_literal_sha256": "28a98613091d46bddd25470bca2d1d3e140186c7e1a5077caa56551f59c6e4fe",
+      "reachable_definition_count": 15,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual fixed signed canvas, all incidence and ordered half-edge stars, full Gauss carrier and six independent gauges match the literal; no arbitrary-cell-complex theorem.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:oriented-score",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.orientedScore",
+      "lean_proof": "Artform.Scores.NonabelianGravity.orientedScore",
+      "review_text_sha256": "ce7c43e88bbc92fabd57e0c2358e1ebe0a27defec4236740c5dfe241561b4073",
+      "canonical_literal_sha256": "827b500082bccdf0b5b7a27b508cf1a02c6be0d9d74fb9efac6ce42bb5512a30",
+      "reachable_definition_count": 29,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Complete orientation-aware kicks, reverse sign/order words, exact raw defects, all complete-instruction prefixes and full gauge-orbit bijections match; mixed orientation uses the required right multiplier.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:legal-overlap",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.legalOverlap",
+      "lean_proof": "Artform.Scores.NonabelianGravity.legalOverlap",
+      "review_text_sha256": "e3db78ee716c9c370f5c39daba1c9de7cc9827d99c2b169f7e4e912f79a1e8d8",
+      "canonical_literal_sha256": "0a6fd7da0feb75630353891ef3b6d94138bb88ca1d747f55df4ba655689ebf6d",
+      "reachable_definition_count": 54,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual profiles satisfy declared reads/writes and exact application; shared impulse writes forbid a simultaneous compatible Batch. The total order-free period-three realizer has singleton phases and checks full Gauss.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:noncommuting-controls",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.noncommutingControls",
+      "lean_proof": "Artform.Scores.NonabelianGravity.noncommutingControls",
+      "review_text_sha256": "c0ebe8f05771bb40be0df8e2ff319d82e2ff03b65636a2daa12b31499e1abaaf",
+      "canonical_literal_sha256": "8a6b5fd75110049a31cdb317ede9fbeeb221df9b414c0f1c4446252a6c145738",
+      "reachable_definition_count": 33,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Exact S3 witness and all specified adverse replacements match; holonomy order separates initial and tick gauge orbits. The interposed-drift comparison asserts only raw endpoint difference.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:double-dictionary",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.doubleDictionary",
+      "lean_proof": "Artform.Scores.NonabelianGravity.doubleDictionary",
+      "review_text_sha256": "ad338b4974d4b4a4531df911ad27fe9ecc648572715cb3d4b8427ef782c2917e",
+      "canonical_literal_sha256": "8e7c4d27ce9885ba7dff75572ca5188b686558b9dd5bd8acddeae7bbf14966b6",
+      "reachable_definition_count": 4,
+      "axioms": [
+        "propext"
+      ],
+      "reason": "AMM source/target word and gauge-action conventions match A=U,B=U^-1 P; drift has the stated ABA,A^-1 coordinates. This is an algebraic dictionary only.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:formal-two-form",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.formalTwoForm",
+      "lean_proof": "Artform.Scores.NonabelianGravity.formalTwoForm",
+      "review_text_sha256": "543387c444672138ab3c14d13326041ac591ad990b5a222c800afcbd796651f9",
+      "canonical_literal_sha256": "45ab24140f8c2eb2554faff49251428db32928147afc7b805fab26fc77fefc4f",
+      "reachable_definition_count": 43,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Finite integer normal reductions, nonzero baseline coefficient and universal commutative-ring valuation are faithful. Independent coordinate-differential cyclic-trace calculation reproduces all three identities. Analytic differential and quasi-Hamiltonian reduction obligations are explicitly excluded.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:word-binding",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.wordBinding",
+      "lean_proof": "Artform.Scores.NonabelianGravity.wordBinding",
+      "review_text_sha256": "eb8c4cefb98cd6d02234789ff7149d91366f28c32dc179f70e3d1996777856b7",
+      "canonical_literal_sha256": "05b247e62ec7f50161f798483eadd836a2ac2963b41728c8a8a10ef8b0864e34",
+      "reachable_definition_count": 33,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual arbitrary-group word evaluation respects products and inverse words, realizes both forward face updates and drift, and covers every raw group state. No analytic differentiation is asserted.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:neighbor-scaling",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.neighborScaling",
+      "lean_proof": "Artform.Scores.NonabelianGravity.neighborScaling",
+      "review_text_sha256": "63fe26e03709bcd990b6e8ea46069d46579c0a6fae44abd17aa31fc73ccabda6",
+      "canonical_literal_sha256": "4cf32493b8c3a645dc378a19b82d27d3ec43204f72a8e24bd7121ef438321897",
+      "reachable_definition_count": 17,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual shared-edge conjugation side, noncommutative degree-three products and conditional pointwise/rescaled estimates match. The norm theorem correctly requires a normed division ring and the written matching hypotheses.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93"
+  },
+  "canonical_file_sha256": "31c706935c7c029129367c527996b344c2eb32de9ad015f1b1d331afac367c9a",
+  "source_pins_sha256": "c46a2d1fdf827d65933acf4f4e274b84a99ad03708689d693e1d4b96419b7130",
+  "independent_replay_files": {
+    "replay-independent-01.py": "cba60f543962e15fa0c6269c15bd36ec790481e8d3c6ad32fbaa4a690860a46c",
+    "tangent-independent-01.py": "7549afdb5cc5845f636bc3e5dc62888fa4747ffbad564b19b2c68b1e3bf66983"
+  },
+  "audit": "audit-independent-01.md",
+  "validation": "validation-independent-01.json",
+  "new_material_native_gravity_applications": 0,
+  "physical_scope": "Exact group/process identities, finite formal two-form certificate and conditional division-ring estimates; no global analytic quasi-Hamiltonian reduction, native gravitational dynamics, geometric reconstruction, or R7/R8 gate is approved."
+}

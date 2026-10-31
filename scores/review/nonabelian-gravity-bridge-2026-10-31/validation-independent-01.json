@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_independent_review; distinct from root implementation author",
+  "reviewed_commit": "c64e8eb26946797e191a6c7a5455c809fd91591e",
+  "scope": "eight frozen NGB submissions only",
+  "baseline_approvals_preserved": 254,
+  "inherited_CNI_pending_unchanged": 4,
+  "implementation_modified": false,
+  "manifest_or_status_modified": false,
+  "full_warning_free_build": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail"
+    ],
+    "exit_code": 0,
+    "result": "Build completed successfully (9794 jobs)."
+  },
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.297,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.053,
+      "stdout": "1307 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.151,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.196,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.191,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.076,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.274,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "Geometry",
+      "exit_code": 0,
+      "seconds": 6.8,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Dynamics",
+      "exit_code": 0,
+      "seconds": 6.907,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Controls",
+      "exit_code": 0,
+      "seconds": 5.781,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Process",
+      "exit_code": 0,
+      "seconds": 5.697,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Descent",
+      "exit_code": 0,
+      "seconds": 5.723,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Double",
+      "exit_code": 0,
+      "seconds": 5.622,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Maurer",
+      "exit_code": 0,
+      "seconds": 16.684,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "WordBinding",
+      "exit_code": 0,
+      "seconds": 5.776,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Scaling",
+      "exit_code": 0,
+      "seconds": 5.685,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Statements",
+      "exit_code": 0,
+      "seconds": 5.578,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "Theorems",
+      "exit_code": 0,
+      "seconds": 5.617,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "independent_replays": {
+    "replay-independent-01.py": {
+      "sha256": "cba60f543962e15fa0c6269c15bd36ec790481e8d3c6ad32fbaa4a690860a46c",
+      "exit_code": 0,
+      "result": {
+        "scope": "independent finite coordinate-differential trace algebra",
+        "baseline_cyclic_terms": 55,
+        "formal_results": [
+          {
+            "map": "face0",
+            "cyclic_coordinate_defect_terms": 0,
+            "omitted_fusion_defect_terms": 36
+          },
+          {
+            "map": "face1",
+            "cyclic_coordinate_defect_terms": 0,
+            "omitted_fusion_defect_terms": 37
+          },
+          {
+            "map": "drift",
+            "cyclic_coordinate_defect_terms": 0,
+            "omitted_fusion_defect_terms": 0
+          }
+        ],
+        "finite_group_controls": {
+          "representation": "dihedral affine maps on Z/3",
+          "adverse_controls": 4,
+          "noncommutation": true,
+          "holonomy_order_separates_gauge_orbits": true,
+          "four_signed_face_commutations": true
+        }
+      }
+    },
+    "tangent-independent-01.py": {
+      "sha256": "7549afdb5cc5845f636bc3e5dc62888fa4747ffbad564b19b2c68b1e3bf66983",
+      "exit_code": 0,
+      "result": {
+        "representation": "rational 4x4 real matrices and cyclic coordinate differentials",
+        "scope": "two exact points; no global regularity theorem",
+        "results": [
+          {
+            "constraint_rank": 18,
+            "constraint_tangent_dimension": 24,
+            "gauge_rank": 18,
+            "restricted_two_form_rank": 6,
+            "gauge_null_errors": 0
+          },
+          {
+            "constraint_rank": 18,
+            "constraint_tangent_dimension": 24,
+            "gauge_rank": 18,
+            "restricted_two_form_rank": 6,
+            "gauge_null_errors": 0
+          }
+        ]
+      }
+    }
+  },
+  "source_pins_authenticated": 22,
+  "source_authentication": "Repository inputs at c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82, workspace inputs against pinned hashes; all match.",
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93"
+  },
+  "canonical_file_sha256": "31c706935c7c029129367c527996b344c2eb32de9ad015f1b1d331afac367c9a",
+  "source_pins_sha256": "c46a2d1fdf827d65933acf4f4e274b84a99ad03708689d693e1d4b96419b7130",
+  "approval_recommendations": 8,
+  "returns": 0,
+  "new_material_native_gravity_applications": 0,
+  "global_analytic_or_reduction_theorem_reviewed": false
+}

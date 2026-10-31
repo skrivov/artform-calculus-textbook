@@ -1,3 +1,5 @@
+> The first-batch findings below are retained as history. The current analytic extension and review state are in ANALYTIC-RESULTS.md and checkpoint-analytic.md. Original production statements are unchanged.
+
 # Initial research: a two-face score and a formal canonical test
 
 The initial twelve investigations now have research dispositions: seven model questions answered, four scoped partial results, and one continuation decision. Eight new Lean submissions cover the actual two-face algebra, process contracts, controls, double dictionary, formal two-form, word binding and conditional small-step estimates. They await independent fidelity review. The inherited 254 approvals and four pending CNI submissions are preserved. No additional worker was used.
