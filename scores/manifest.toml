@@ -3732,8 +3732,8 @@ See [finding237](findings/237-original-full24-tt-cross-source.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.sourceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.sourceLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "4dddf92f6daa68805ebc6a1cb61026798e18f000752e623cd24734dfc6365ceb"
 
 [[statement]]
 key = "GAC2:native-paired-tt-preparation"
@@ -3754,8 +3754,8 @@ See [finding238](findings/238-native-paired-tt-preparation.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.preparedLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.preparedLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "e7b481c737da7bb55a2bf9d347de502d9d98bf699a4e9f4261ebdd0e288ab0fb"
 
 [[statement]]
 key = "GAC2:paired-band-preparation-readout"
@@ -3774,8 +3774,8 @@ See [finding239](findings/239-paired-band-preparation-readout.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.readoutLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.readoutLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "60a8de99d6e17daac716e857df1f46ff75f08106a97091e6a47c116e5cac5fa3"
 
 [[statement]]
 key = "GAC2:native-tt-zero-preparation-response"
@@ -3795,8 +3795,8 @@ See [finding240](findings/240-native-tt-zero-preparation-response.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.zeroResponseLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.zeroResponseLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "5a52d08d4571fa85c3e9dbe002c15812f1037b315086eb73974b0da6c7b89fa4"
 
 [[statement]]
 key = "GAC2:native-prepared-metric-cut-cost"
@@ -3816,8 +3816,8 @@ See [finding241](findings/241-native-prepared-metric-cut-cost.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.metricLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.metricLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "71c982331f2e0dc32f1b9b5b0e5e70adf31fe7b7c81d03e1a80d8274da0b9e4f"
 
 [[statement]]
 key = "GAC2:native-full24-independent-return"
@@ -3837,8 +3837,8 @@ See [finding242](findings/242-native-full24-independent-return.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.independentLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.independentLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "0aaa9e2bb1e1f540dc8dddc54a64c97cfe2e01a7df6c2a3c31fec4f70cf15268"
 
 [[statement]]
 key = "GAC2:native-bounded-history-ambiguity"
@@ -3857,8 +3857,8 @@ See [finding243](findings/243-native-bounded-history-ambiguity.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.historyLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.historyLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "466cbda39834544e927b2f4257f64f3bca08613c92cd68d4e7e575a500b21f97"
 
 [[statement]]
 key = "GAC2:native-scalar-fourjet-current"
@@ -3877,8 +3877,8 @@ See [finding244](findings/244-native-scalar-fourjet-current.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.greenLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.greenLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ce53a1998ca093d405bb76f7328b3f0cf4f6f0a140ce0e6f70eb4529e0d5aa5a"
 
 [[statement]]
 key = "GAC2:native-four-row-source-embedding"
@@ -3899,8 +3899,8 @@ See [finding245](findings/245-native-four-row-source-embedding.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.fullRowsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.fullRowsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "3c403605e2976084b9fda28d3134ce7886dccc097f628c8b01f217582ec48cfb"
 
 [[statement]]
 key = "GAC2:native-tt-source-range-budget"
@@ -3921,5 +3921,5 @@ See [finding246](findings/246-native-tt-source-range-budget.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.rangeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "3637abac7e8f80c760a36040f5a1601c2c7b3860ea5b84516b25a9da67d6b589"

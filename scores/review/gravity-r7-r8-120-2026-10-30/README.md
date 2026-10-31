@@ -342,3 +342,22 @@ microbenchmark observations; historical/Lean/full40/physical saving is not infer
 Additional native material/physical-gate credit remains0. Full native Hessian and
 current identification, finite corners, physical frame/link/history/radical,
 uniform combined-symbol/source bounds and geometric/measure transfer remain open.
+
+All ten review12 I01–I10 claims were independently approved on31 October2026 at
+repaired freeze `58fccdbae3be4c48fbb5769c535fc035d01c14ba`; none returned. See the
+distinct [audit](audit-independent-12.md), [per-key verdicts](verdict-independent-12.json),
+[compact validation](validation-independent-12.json) and
+[exact/adverse replay](arithmetic-independent-12.py). I01's tagged law was
+strengthened by the author to include both already proved full24 inverse directions;
+the literal quote and every earlier approval were preserved. The reviewer authored
+no Lean changes. All32 implementation files match the repaired freeze, and all199
+earlier entries stand, giving209 approvals and90/120 mathematical dispositions.
+Twelve separate kernels include the untagged Core/Full24 support; those add0 rounds.
+The distinct replay derives all576 original Hessian entries directly from the
+commutator/torsion density and checks actual full24 source/return, every four-row
+column coefficient, prepared/zero jets, scalar Green contacts and adverse domains.
+The native negative return, on-TT-only curvature cancellation and polarization
+square4 are retained. These are leading paired-sector results with0 additional
+material native/physical-gate or efficiency credit. Admitted packets, finite-h
+contours/remainders, full40 physical reconstruction, independent frame/link/history
+matching and the physical current/quotient remain open.

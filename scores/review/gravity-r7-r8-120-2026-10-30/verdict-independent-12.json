@@ -1,0 +1,335 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "original_submission": "d1c559097230ed1a84bb24ec3af1a413d6a2a3d8",
+  "reviewed_commit": "58fccdbae3be4c48fbb5769c535fc035d01c14ba",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 199,
+  "implementation_modified_by_reviewer": false,
+  "entries": [
+    {
+      "key": "GAC2:original-full24-tt-cross-source",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.sourceLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.sourceLaw",
+      "review_text_sha256": "4dddf92f6daa68805ebc6a1cb61026798e18f000752e623cd24734dfc6365ceb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 82,
+      "new_material_native_application": false,
+      "reason": "Actual rational density polarization and repaired universal full24 two-sided inverse, literal native T/true transpose/Gram and all constitutive face entries. Full mixed source conclusion explicitly imposes the leading TT wave; off-orbit cubic is torsion only."
+    },
+    {
+      "key": "GAC2:native-paired-tt-preparation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.preparedLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.preparedLaw",
+      "review_text_sha256": "e7b481c737da7bb55a2bf9d347de502d9d98bf699a4e9f4261ebdd0e288ab0fb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Full four-jet prepared generator intertwining with actual mixed forcing, exact read inverse/injection and zero-preparation intersection. Leading triangular generator only; no finite-h feedback or preparation admission presumed."
+    },
+    {
+      "key": "GAC2:paired-band-preparation-readout",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.readoutLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.readoutLaw",
+      "review_text_sha256": "60a8de99d6e17daac716e857df1f46ff75f08106a97091e6a47c116e5cac5fa3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Correct paired slice of the original compact reflected band, nonzero guard, explicit two component budgets and read inverse only on the prepared image. Unrestricted four-jet read has nontrivial kernel."
+    },
+    {
+      "key": "GAC2:native-tt-zero-preparation-response",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.zeroResponseLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.zeroResponseLaw",
+      "review_text_sha256": "5a52d08d4571fa85c3e9dbe002c15812f1037b315086eb73974b0da6c7b89fa4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 1,
+      "new_material_native_application": false,
+      "reason": "All four actual derivatives, four zero initial jets, exact original forced scalar row and nonzero cosh coefficient with a!=0 and l2=2a2. Not a packet/finite-h physical growth theorem."
+    },
+    {
+      "key": "GAC2:native-prepared-metric-cut-cost",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.metricLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.metricLaw",
+      "review_text_sha256": "71c982331f2e0dc32f1b9b5b0e5e70adf31fe7b7c81d03e1a80d8274da0b9e4f",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Original leading coordinate metric correction retains03,13,23 and nonzero a,j guard. Complete matrix vanishes iff both input data vanish, and a metric-zero correction cannot cancel it. No finite-h Phi or other physical-class exclusion."
+    },
+    {
+      "key": "GAC2:native-full24-independent-return",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.independentLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.independentLaw",
+      "review_text_sha256": "0aaa9e2bb1e1f540dc8dddc54a64c97cfe2e01a7df6c2a3c31fec4f70cf15268",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 39,
+      "new_material_native_application": false,
+      "reason": "Correct negative native return in all24 coordinates, all connection residuals, on-wave time/spatial sector reconstruction, signed held-out block and physical -h conversion. No independent finite-h connection/target/history completion."
+    },
+    {
+      "key": "GAC2:native-bounded-history-ambiguity",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.historyLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.historyLaw",
+      "review_text_sha256": "466cbda39834544e927b2f4257f64f3bca08613c92cd68d4e7e575a500b21f97",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Actual four derivatives and globally bounded nonzero homogeneous cos history. Its addition retains source forcing and changes the cut value; no claim that this is an admitted finite-h full40 history."
+    },
+    {
+      "key": "GAC2:native-scalar-fourjet-current",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.greenLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.greenLaw",
+      "review_text_sha256": "ce53a1998ca093d405bb76f7328b3f0cf4f6f0a140ce0e6f70eb4529e0d5aa5a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Complete four-jet Green identity with both source contacts and exact prepared pullback-5/2; scalar-sector identity and normalization only, not full native cut, energy or physical quotient."
+    },
+    {
+      "key": "GAC2:native-four-row-source-embedding",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.fullRowsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.fullRowsLaw",
+      "review_text_sha256": "3c403605e2976084b9fda28d3134ce7886dccc097f628c8b01f217582ec48cfb",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 17,
+      "new_material_native_application": false,
+      "reason": "Original native degree4 coefficient column recovered in characteristic0, every coefficient eta-conjugated, actual source added and all four lower coordinate residuals canceled under the scalar equation. No remaining36/full40 or finite-h conclusion."
+    },
+    {
+      "key": "GAC2:native-tt-source-range-budget",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCross.rangeLaw",
+      "review_text_sha256": "3637abac7e8f80c760a36040f5a1601c2c7b3860ea5b84516b25a9da67d6b589",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 6,
+      "new_material_native_application": false,
+      "reason": "Actual leading TT velocity coefficient range and zero iff, retained Frobenius square4 and explicit nonzero-frequency adverse sequence toward0. Fixed native band budgets remain valid; no packet/nonlinear/source-state count inference."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Core.lean": "d0b2da88b262d17c6848f48f4f5e64e4b60603d3126ea6528fb6db128f6b0da4",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Full24.lean": "e74aa7fa74c815ad4e58a3d22ab3a45ed728693b57f5c61c8dd6cd8df0739f5b",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/FullRows.lean": "bd7ab911ad71da434a02295b1da49d6e4c9080c2000c7ed7f736001967d60ec8",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/FullRowsDefs.lean": "76bf928e1704e1c0722ad113d6948c984090f401511d1598b90595482fc83dae",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/FullRowsStatements.lean": "30f012e1230be2f05665d2150fc31d15326bd9abcb0410fb145832651605fb4a",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Green.lean": "de48a2802e40a392d1db64880e03da0e6a1f0db52fbb648a7f7520a3a769df39",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/GreenDefs.lean": "9ad2362f409612d12f4353b1d84445ab3f9e663df35379ca1c091903f4f4fb6e",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/GreenStatements.lean": "f2d0af97cf72d3bafb3a878d047f262267d7a2acd170f3f014b73f481babb63f",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/History.lean": "23d446fe293b925e9aa0861b70996f7b1c47f6558edac283e9f10277c5ac88fb",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/HistoryDefs.lean": "f0624f76720ae7a34b80c1046f5b8ba1b55b54d36fb9e0930818422fd32a9880",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/HistoryStatements.lean": "ecccabc21453c2fe071dc032bfde8410d94a53ebd66c516235c57c65e346927c",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Independent.lean": "70bc1e44c6ad862d320c46843b1967955d66d43d8e6a6917e6d6b5114a982b61",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/IndependentDefs.lean": "917145d8eebcabc0debe540fd304b2f1b0b55845e04f8860f985d5df1670c8f7",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/IndependentStatements.lean": "2ed69bda304cca38a76581aaf7d6abb88259a86360244c951f2ff1e06b258432",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Metric.lean": "bf70909b2971f1584f62458cd426408cf85a38f94d9ebb28d80ef82af2d543b5",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/MetricDefs.lean": "487bb225ee2db2524881e7e57e47710edabe92d383ba2dd6523f09202358d671",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/MetricStatements.lean": "02da5e35b70bf44192e35e56fc4863a4a0e1042d1988004824ee0cfa0e3aced8",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Prepared.lean": "d5f0abf51aa1a3896fcb7fdd55a15d00a3e65e19f8533bd1bd1b5f0538d98229",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/PreparedDefs.lean": "6d6ad104071e0166362199d05fcb9ed366d6fe18cba4a83a3b6b3e0a2a117a83",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/PreparedStatements.lean": "1bb4cd5260b905fc43208ab021ee7215805af6387e0d1fb515a2689521728a40",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Range.lean": "2af4ceb94badc35846cffc6b8224a7e632eadb09bd5904bc4bb6302748ca62ae",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/RangeDefs.lean": "1a08156f00095e09c9af7aa32e024898bd4d4b5677c2a7c35e08194ea5c99327",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/RangeStatements.lean": "fc20ada4fc72611aa40f6646fef08908f3a5b00c7a8e4d5047cbf3b875e9da67",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Readout.lean": "2755762bcb18c23edfd420e41feda834c915f73715d8f79e682194244bdb501a",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/ReadoutDefs.lean": "ccca1c5c7dafcc6c9e011994e00e961d366826092d64e428a4ca3e059d8dcf19",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/ReadoutStatements.lean": "c1dbe325bcf2c03d6245b5db18ae2b87d01cda1e87cb390da6f9397194c4cef0",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/Source.lean": "190280f3c74f33bc3a7ffbb0fece5b2dcbfd30789f46df94a3f7703ec575063f",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/SourceDefs.lean": "046cd6e9018714bbbde1769a1cd95f6901b023d828079a0a4b3b4d9dcb3ae3c2",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/SourceStatements.lean": "6a922f0d3cf1890feb7b7833501790d17912a3f515a52e0fb410ef9fd3124b6d",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/ZeroResponse.lean": "0987f233e55d9b6f5c7957ddd20ef84292981be8b438fc7280b27179d6a99a8d",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/ZeroResponseDefs.lean": "11d370d4b4d7c483a4c6e1be3b3784ce05634cf29caaf766212567b4dc272886",
+    "scores/ArtformScores/GravityBridge/Native/TTCross/ZeroResponseStatements.lean": "8bcfbedfd9b5e654de7a774be2a28cf2abd677cee7e464cb87933ee430f1531d"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "69bdd81f45f2aa032da5c58de5a0de33e6142b41db720c05cce9ed6c0bfcce3d",
+    "physics/ledgers/lattice-waves/findings/237-original-full24-tt-cross-source.md": "5b7c1a71179eae1e3ac2112b0667a82b9a5ba931976ecaa8a4240c2ff9b9191c",
+    "physics/ledgers/lattice-waves/findings/238-native-paired-tt-preparation.md": "4598e012f5018907f51b147ac40ec346995f14811108f9f06f1306e7c9d1c66a",
+    "physics/ledgers/lattice-waves/findings/239-paired-band-preparation-readout.md": "4f83b88f651c5e07106af8db888415ec6ee1694f19610c7677c08b0e3d0885bc",
+    "physics/ledgers/lattice-waves/findings/240-native-tt-zero-preparation-response.md": "bd5d73ebb7fa3907edc97147559b93e8819149a17ebf726ca467a1eb34f86081",
+    "physics/ledgers/lattice-waves/findings/241-native-prepared-metric-cut-cost.md": "10ab19b40c2fdcc75b398da54abe7f6ec01049a849f706a9c42a7d64fa42138f",
+    "physics/ledgers/lattice-waves/findings/242-native-full24-independent-return.md": "eebbe157861e0b1a1773989b7d20fb1057bbef620b119c61eb415c5e309e3784",
+    "physics/ledgers/lattice-waves/findings/243-native-bounded-history-ambiguity.md": "9efbe06be9d4c253fa588a9fe5a4578eb263e52bb49b577a42dae249e805b79d",
+    "physics/ledgers/lattice-waves/findings/244-native-scalar-fourjet-current.md": "a65788e2348f04352c41d64d71de49b3096352fb4ce7bbedbcfc112cf272352a",
+    "physics/ledgers/lattice-waves/findings/245-native-four-row-source-embedding.md": "90583ccd3a1ae4a7b62aaaf303916d746768b697149fb4519404b4bc0d2d4b76",
+    "physics/ledgers/lattice-waves/findings/246-native-tt-source-range-budget.md": "743f077dd4b1151af25e7416fa70f9f7b0cc37aa8b874fd3b80d5c7a77067178"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "f4f782fc74afb61698fe0f3a3ed2b9ba7facaccb3f64ef99fd4428f28163e211",
+  "exact_original_snapshot_pairs_authenticated": 41,
+  "literal_repair": {
+    "required": true,
+    "key": "GAC2:original-full24-tt-cross-source",
+    "issue": "Original tagged sourceLaw omitted universal two-sided inverse asserted by literal quote; standalone original_full24_inverse already proved it.",
+    "author_change": "Add that universal inverse conjunct and use existing theorem in same-type proof.",
+    "repair_commit": "58fccdbae3be4c48fbb5769c535fc035d01c14ba",
+    "reviewer_Lean_edits": false,
+    "claim_weakened": false,
+    "earlier_approval_changed": false,
+    "new_research_round": false
+  },
+  "scope_checks": {
+    "actual_original_density_polarization": true,
+    "full_signed24_partition_and_both_inverse_directions": true,
+    "actual_native_Theta_and_true_coordinate_transpose": true,
+    "native_time_T_is_negative_physical_time_T": true,
+    "both_T_factors_retained_in_Q": true,
+    "negative_native_return_and_all24_residuals": true,
+    "original_on_TT_curvature_cancellation_only": true,
+    "cross_polarization_Frobenius_square": 4,
+    "point_frequency_not_admitted_packet": true,
+    "full_four_preparation_jets_and_original_source": true,
+    "generator_intertwining_not_finite_h_step": true,
+    "paired_band_only_and_unrestricted_read_kernel": true,
+    "actual_derivatives_and_four_zero_initial_jets": true,
+    "bounded_oscillator_history_retained": true,
+    "complete_coframe_metric_cost_not_finite_h_Phi": true,
+    "scalar_Green_pullback": "-5/2 alternating TT data form",
+    "both_Green_source_contacts": true,
+    "all_original_coefficients_eta_conjugated": true,
+    "all_four_coordinate_rows_not_full40": true,
+    "actual_TT_velocity_range_not_nonlinear_source_range": true,
+    "low_frequency_adverse_not_failure_of_fixed_band": true
+  },
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-12.py",
+    "sha256": "88bb8e00be8abfb66726faf93150c86fa5371e1762ada4db128dcd496a4c7a5c",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-12.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 16.425,
+    "result": {
+      "all24_partition_and_both_inverse_orders": true,
+      "all24_supplied_face_block_cases": 20,
+      "all5_original_four_row_coefficients_at_paired_directions": 5,
+      "arbitrary_complex_full24_faces": 11,
+      "cross_constitutive_symbol_cases": 20,
+      "direct_original_density_hessian_entries": 576,
+      "efficiency_credit": 0,
+      "frequency_budget_adverse_bounds": 4,
+      "heldout_negative_time_block_return": true,
+      "metric_cut_nonzero_cases": 9,
+      "new_native_physical_gate": 0,
+      "prepared_full_matrix_intertwiners_and_Green_pullbacks": 5,
+      "rational_jet_Green_cases": 85,
+      "source_sha256": {
+        "scores/review/gravity-r7-r8-120-2026-10-30/native-coordinate-root-10.py": "0539d488875a2d5945bbef5f8216bd0007856542f02823e92a21c8e73a0fbb17",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "f4f782fc74afb61698fe0f3a3ed2b9ba7facaccb3f64ef99fd4428f28163e211",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/R7-original-forcing-native-generator.md": "f8c8769129b03d210185e642dad1501f226c785eeac31b6b3898c273b57272f9",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/native-coordinate-polynomial.md": "aae563c807d63a97dc30441ea347f648639e895dcb11403c460372c41221c916",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/native-slow-lower-basis.md": "0a10194b7ae97ddb7e8047eeb1cf72664c51e865c658459f57b17ecfa49474f3"
+      },
+      "status": "passed",
+      "wrong_native_return_sign_detected": 20,
+      "zero_four_jet_Taylor_recurrence_orders": 21
+    }
+  },
+  "root_replay_reproduced_without_published_JSON_mutation": {
+    "script": "tt-cross-root-12.py",
+    "script_sha256": "ffe0a8a0a4fc67385864e1a44e827715c9dc9950323587c2c0911c3172a075b6",
+    "command": [
+      "python3",
+      "tt-cross-root-12.py (identical code; receipt redirected to temporary file)"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 7.072,
+    "result": {
+      "status": "passed",
+      "full24_nonreal_symbol_cases": 20,
+      "rational_preparation_current_history_cases": 96,
+      "forced_series_orders": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "checks_groups": 116,
+      "source_pins": 41,
+      "native_credit": "limiting actual source and paired sector only; finite-h/full40 physical gate0",
+      "efficiency_credit": "0; no historical or runtime claim"
+    },
+    "published_receipt_sha256_unchanged": "7bebeee8d00f8ea629b5a0deae241d3c17523eabc90a82eba18fca118bcdd97c"
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_historical_runtime_Lean_full40_physical_or_prospective_efficiency_credit": 0,
+    "prior_C10_E08_H08_prospective_comparisons_unchanged": true,
+    "actual_pointwise_full24_constitutive_source_binding_now_instantiated": true,
+    "new_admitted_native_finite_h_construction": false,
+    "uninstantiated_bridges": [
+      "admitted real Fourier packet and open-patch original-domain identification",
+      "uniform original contour/remainder/source/history bounds",
+      "finite-h feedback and all40 reconstruction for the declared physical trace",
+      "independent coframe/frame/connection/link/history prescription and metric target",
+      "full integrated physical current, radical/quotient and source-compatible measure",
+      "nonlinear source range, state selection and parent completion"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 90,
+  "campaign_target": 120,
+  "total_approvals_after_review": 209,
+  "audit": "audit-independent-12.md",
+  "validation": "validation-independent-12.json"
+}
