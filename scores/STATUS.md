@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 277 |
+| proved | 278 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **281** |
+| **total** | **282** |
 
 ## Statements
 
@@ -296,3 +296,4 @@
 | NGB:native-boundary-conditioning | Actual spatial boundary symbol and kernel-aware nonuniform conditioning | proved | `Artform.Scores.NonabelianGravity.Statement.nativeBoundaryConditioning` / `Artform.Scores.NonabelianGravity.nativeBoundaryConditioning` | approved 2026-10-31 |
 | NGB:native-history-source-guard | Third-cell native Ward source compatibility and an active-source counterexample | proved | `Artform.Scores.NonabelianGravity.Statement.nativeHistorySourceGuard` / `Artform.Scores.NonabelianGravity.nativeHistorySourceGuard` | approved 2026-10-31 |
 | NGB:native-quantum-kernel-tests | Native real negative ray and flat-output tests for an explicit naive phase kernel | proved | `Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests` / `Artform.Scores.NonabelianGravity.nativeQuantumKernelTests` | approved 2026-10-31 |
+| NGB:native-complete-history | Complete finite native history compatibility and certified elimination | proved | `Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory` / `Artform.Scores.NonabelianGravity.nativeCompleteHistory` | approved 2026-10-31 |

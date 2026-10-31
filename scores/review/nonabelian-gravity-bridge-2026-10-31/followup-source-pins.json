@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
+  "role": "Original nonlinear unit-spacing curvature+forward-torsion action; physically unselected candidate. Frozen gravity programme remains unchanged. Existing native-source-pins.json supplies the quadratic/basis conventions.",
+  "local_inputs": [
+    {
+      "workspace_path": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-formal-all-order-native-publication/sources/r8-native/cited-sources/01-08-08-08-08-04-09-original-Q-M-data.json",
+      "repository_snapshot": "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-Q-M-data.json",
+      "sha256": "12df2a52f867d0ca1ab81ec6b077f31427cfe2c30d13756e641332dad7cf4ad1"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-formal-all-order-native-publication/sources/r8-native/cited-sources/02-09-09-09-09-02-15-original-curvature-action.md",
+      "repository_snapshot": "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-curvature-action.md",
+      "sha256": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-formal-all-order-native-publication/sources/r8-native/cited-sources/03-10-10-10-10-03-11-forward-torsion-definition.md",
+      "repository_snapshot": "scores/review/nonabelian-gravity-bridge-2026-10-31/source/nonlinear-forward-torsion.md",
+      "sha256": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341"
+    }
+  ]
+}

@@ -194,5 +194,14 @@
     "statement": "For the same complete spatial-zero-character cut Taylor action over real40-vectors let d=e25 and a=e25+e32+e39 in native rotational diagonal coordinates. The vector d is nonzero, L(u,v+t*d)=L(u,v) for all real u,v,t, and L(t*a,0)=-291*t^2/101 for every real t. Consequently the explicitly defined constant-amplitude phase kernel K_hbar(u,v)=exp(i*L(u,v)/hbar) is independent of that output coordinate for every real hbar,u,v,t under Lean's total division convention, in particular for positive hbar. These are finite exact action/kernel screening identities. No multidimensional integral, integrability or divergence theorem, physical measure, contour, reduced Hilbert space, unitary propagation or selected quantum gravity theory is inferred; alternative constrained/compact amplitudes and measures remain open.",
     "review_status": "approved_independent_09",
     "novelty_status": "source_bound_specialization_of_known_framework"
+  },
+  {
+    "key": "NGB:native-complete-history",
+    "label": "NGB:native-complete-history",
+    "title": "Complete finite native history compatibility and certified elimination",
+    "statement": "For every n>=0 interior sites of the approved complete spatial-zero-character Full40 Taylor candidate over rational fields, retain all40 coordinates per site, all sources, fixed40-vector endpoints x,z and the affine pre/post covectors. NativeMatch means every original momentum-matching equation. It is equivalent to H_n*y=r, where H_n has diagonal A=H0+H1, upper B and lower B^T, and r=j with B^T*x subtracted at the first site and B*z at the last (both terms at n=1, no equations at n=0). Every H_n admits an invertible rational congruence U^T*H_n*U=diag(d), with both inverse matrices certified. For any such certificate compatibility is exactly (U^T*r)_i=0 at every zero d_i. It is necessary and sufficient for a matched history. All histories are y=U*w, with w_i=(U^T*r)_i/d_i at nonzero pivots and arbitrary zero-pivot coordinates; every matched history has this form. An emitted full80 certificate for n=2 is checked in Lean, with66 nonzero and14 zero pivots. Zero fields/sources match for every n, whereas the n=2 source supported at the first inactive coordinate admits no match with zero endpoints. The deterministic host compiler is an untrusted certificate generator; its implementation and a closed all-length rank formula are not proved. This complete finite source criterion extends the previous necessary Ward guard, without selecting a physical mode count, nonlinear evolution or quantum gravity theory.",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory",
+    "lean_proof": "Artform.Scores.NonabelianGravity.nativeCompleteHistory",
+    "review_status": "approved_independent_10"
   }
 ]

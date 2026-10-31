@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
+  "result": "passed",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 13.218,
+      "stdout_sha256": "28898c9f5f176197042c2347e0eef1373052235d8c6acc7cf0ab2eb047c2b43d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.995,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 24.981,
+      "stdout_sha256": "12d41574a78bc4bd531077fe256017ee5419142e405024891885633888db5aa2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.175,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.346,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.311,
+      "stdout_sha256": "cfd78f2f986aa10e9d03346e284184962f551f147b29234714cc6c311bda59a2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.185,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.205,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.317,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.076,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.169,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.056,
+      "stdout_sha256": "dba227ee6a4e9684e0e0a8640d4b437b6c52359f772b9dc31d7f48de202a6c0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.518,
+      "stdout_sha256": "06da12662975dbf07f32cdf79a78969b4447c68011c67c0d8295cca0ca7f8648",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/history-emitter-root.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.456,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-10.py"
+      ],
+      "exit_code": 0,
+      "seconds": 46.584,
+      "stdout_sha256": "aadc646f7bb60ee3e5858d185315085ea6f1e2d434733cba196eb3698e106891",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "separate_kernel_replays_reused_from_exact_independent_receipt": 12,
+  "review_receipt_sha256": "4da9458c9d8e7eeb72c5cdb8071a0e4d2ac1a1ae8668a1cad46478c6abdb35ca",
+  "prior_approved_production_changed": false,
+  "scores": {
+    "total": 282,
+    "approved": 278,
+    "pending_CNI": 4
+  },
+  "new_material_physical_gravity_applications": 0
+}

@@ -1,0 +1,481 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_sol61_transport_review",
+  "contribution_disclosure": "Sole user-authorized Sol6.1 reviewer ngb_sol61_transport_review supplied prior mathematical/native-source/convention advice, source guard and congruence suggestions, and independent arithmetic. Root authored all12 production History Lean modules and host producers; reviewer authored none. Reviewer examined final source, definitions, proofs and canonical literal. Reviewer identified the sample binding gap and root corrected it before final review. Review artifacts only were authored by this reviewer. No claim of no prior formulation involvement. Standalone replay10 embeds this reviewer complete source transcription and solver with no root/helper imports; separate fidelity10 explicitly depends on reviewer replay10.",
+  "reviewed_base_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
+  "reviewed_freeze": "twelve final F1 History modules, one canonical literal and exact source/domain/evidence files; prepared fullbuild and both fresh reports",
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/HistoryBinding.lean": "518bb11c1bd1cc3e2eedffb8d107059dfc6f02959527c72838d394bdfd5d774b",
+    "scores/ArtformScores/NonabelianGravity/HistoryCertificate.lean": "be86499495ae38e5c77fdbfe6bdefda3f99be7a0d66bfdb9bd601825b77a4a17",
+    "scores/ArtformScores/NonabelianGravity/HistoryMatrix.lean": "0b5f84d60d7e670ac67e3f7a5264de24de75aaf69a037ec3cc6f93f9cf2408bf",
+    "scores/ArtformScores/NonabelianGravity/HistorySample.lean": "1e9577efef26cb50b7bf97fbd3e97a25854877ebf4eea662539304b826a0a197",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleData.lean": "dbcaaae404e9a8021e56357be618ed66a4a4f1b3c942636c4420b2dc90ee1325",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleDiagonal.lean": "d24c3fa2880d38f8f859eafe3050b7aba0bff5655c70a94f323f4f9015edd2a9",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleLeft.lean": "0796593a26eea1448c11deb18bea437a26428bf6b94383e4c9a81fdc2edc5b1b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleProduct.lean": "fe7725e47d32d1435814a572f903b66914388a8f35a5fc4af8300251a2fba36b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleRight.lean": "ca820e7ce61f4ba1a694782b2e883cd11d560e324206fe0d5b0a41872f92ca6e",
+    "scores/ArtformScores/NonabelianGravity/HistorySolve.lean": "f5b42e42cb5e0f4ed3f18dcc533907aa1daa44814a51f7b532f6869d6ec79fbb",
+    "scores/ArtformScores/NonabelianGravity/HistoryStatements.lean": "7b86ceb15c9c6ab3181c65fcd31d827be901f20b9cf3636bf46464ea2901d5f8",
+    "scores/ArtformScores/NonabelianGravity/HistoryTheorems.lean": "25c80166b437e3e453276157db4f7ddb46d3fb91188e3dedd03ee6c7b49d1577",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/FOLLOWUP-CONTRACT.md": "795b0632a88544df79a698320746bdf797f279cba87584b0c2bf8907b7bdb1e1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/HISTORY-RESULTS.md": "69998d402821056f8db1d25300da0c07656d0fc7ed9d7b131245e9cfa963d417",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/PRIOR-ART-FOLLOWUP.md": "c3180de9cf789976e9a1eba6d67c4056bd1dceaac6cad89ff27e6a21dd9f2e6f",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root-data.json": "3882921d829cda7ca12232d3c90a897b284b6503f0fd276ec69097def4b9024a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root.py": "886e6822b3d657b5b99b4614f60b4874f08acf988c53ea7fd3dc56d2131c1867",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-10.py": "1fb2cf87eee004442cf2c1973843967389fb9b2511a7c50e0aa964f16d98c5cb",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/history-compiler-root.py": "019101980697993906dfae9186d8192c7e9c61a689ba28485b0d6982cbd07d04",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/history-emitter-root.py": "0a8c5576eac439643dc65fc12e2defed30331ae0196fc1c8dd780c31b4baf8c6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root-data.json": "aa1d1b653332038a67bb330ddfb2b43b7fd7b74ad701fdbecc8a3b17f338638b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root.py": "75c271221658f2157deaa1ce6e3c57b1cb5e03add131321e165d487c0440f2bc",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-10.py": "f12a6a193172f50e571a720e11ceba3909ce1ff0c17229813f57c1597aec58b6"
+  },
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "c0768dcc57ea3c5ac0be5077c5cbe854cdbf266ccec28fd8afb32a0d9ef56fe5",
+  "claims_file_preapproval_snapshot_sha256": "0e73490b612a22c76c08824af2fb9cedc453c6aeab2ff61123e51b6905788b91",
+  "independent_replay_sha256": "f12a6a193172f50e571a720e11ceba3909ce1ff0c17229813f57c1597aec58b6",
+  "independent_data_fidelity_sha256": "1fb2cf87eee004442cf2c1973843967389fb9b2511a7c50e0aa964f16d98c5cb",
+  "new_material_native_gravity_applications": 0,
+  "root_prepared_receipt": {
+    "path": "build/ngb-history-prepared.json",
+    "sha256": "924a011bd040b84711874179e27694079cf98524f9863ef71313728392e0be20",
+    "source_fingerprint_entries_verified": 943,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "12d41574a78bc4bd531077fe256017ee5419142e405024891885633888db5aa2"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 13.218,
+        "stdout_sha256": "28898c9f5f176197042c2347e0eef1373052235d8c6acc7cf0ab2eb047c2b43d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 14.995,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 24.981,
+        "stdout_sha256": "12d41574a78bc4bd531077fe256017ee5419142e405024891885633888db5aa2",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "full_warning_free_build": "Authenticated fresh full --wfail build and both reports against all943 F1 source fingerprints; all12 final modules separately kernel-replayed.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.296,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.266,
+      "stdout": "1483 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.169,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.199,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.216,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.077,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.306,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.171,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-10.py"
+      ],
+      "exit_code": 0,
+      "seconds": 45.958,
+      "stdout": "2 {'dimension': 40, 'rank': 36, 'radical': 4, 'offdiagonal_fallbacks': 0, 'all_owned_rows': True, 'complete_source_guard': True, 'allsolutions': True, 'stationary_action': True}\n3 {'dimension': 80, 'rank': 66, 'radical': 14, 'offdiagonal_fallbacks': 0, 'all_owned_rows': True, 'complete_source_guard': True, 'allsolutions': True, 'stationary_action': True}\n5 {'dimension': 160, 'rank': 126, 'radical': 34, 'offdiagonal_fallbacks': 0, 'all_owned_rows': True, 'complete_source_guard': True, 'allsolutions': True, 'stationary_action': True}\nindefinite zero-diagonal control [Fraction(2, 1), Fraction(-1, 2)]\n{\n  \"history\": {\n    \"2\": {\n      \"dimension\": 40,\n      \"rank\": 36,\n      \"radical\": 4,\n      \"offdiagonal_fallbacks\": 0,\n      \"all_owned_rows\": true,\n      \"complete_source_guard\": true,\n      \"allsolutions\": true,\n      \"stationary_action\": true\n    },\n    \"3\": {\n      \"dimension\": 80,\n      \"rank\": 66,\n      \"radical\": 14,\n      \"offdiagonal_fallbacks\": 0,\n      \"all_owned_rows\": true,\n      \"complete_source_guard\": true,\n      \"allsolutions\": true,\n      \"stationary_action\": true\n    },\n    \"5\": {\n      \"dimension\": 160,\n      \"rank\": 126,\n      \"radical\": 34,\n      \"offdiagonal_fallbacks\": 0,\n      \"all_owned_rows\": true,\n      \"complete_source_guard\": true,\n      \"allsolutions\": true,\n      \"stationary_action\": true\n    }\n  },\n  \"zero_diagonal_fallback\": true,\n  \"scope\": \"complete rational source-bound native history arithmetic; no fixed allN rank assumption\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-10.py"
+      ],
+      "exit_code": 0,
+      "seconds": 47.331,
+      "stdout": "Independent full source/compiler comparison passed: all12800 forward/backward entries and80 diagonal values match the actual Lean sample table\n",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "HistoryCertificate",
+      "source_sha256": "be86499495ae38e5c77fdbfe6bdefda3f99be7a0d66bfdb9bd601825b77a4a17",
+      "olean_sha256": "fcaa4bb18184b4f0e2cd1835d2ed2207ae650f67dd5274e6dd33f21c9d67fc56",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryCertificate"
+      ],
+      "exit_code": 0,
+      "seconds": 6.982,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySolve",
+      "source_sha256": "f5b42e42cb5e0f4ed3f18dcc533907aa1daa44814a51f7b532f6869d6ec79fbb",
+      "olean_sha256": "71c4bfe66123d2cb9812f11e9bf5026c77961fa241775a85a08d4545939abd7d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySolve"
+      ],
+      "exit_code": 0,
+      "seconds": 6.358,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryMatrix",
+      "source_sha256": "0b5f84d60d7e670ac67e3f7a5264de24de75aaf69a037ec3cc6f93f9cf2408bf",
+      "olean_sha256": "7bd142834393938983e2e788d7f0321d9e28a5558fb126f155e0ae338a1cea5d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 5.975,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryBinding",
+      "source_sha256": "518bb11c1bd1cc3e2eedffb8d107059dfc6f02959527c72838d394bdfd5d774b",
+      "olean_sha256": "c7ab0ffd7ed26459bd0861dc24e541d33bbe02639c9fe807dc9d37c7c3568cc4",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryBinding"
+      ],
+      "exit_code": 0,
+      "seconds": 6.171,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySampleData",
+      "source_sha256": "dbcaaae404e9a8021e56357be618ed66a4a4f1b3c942636c4420b2dc90ee1325",
+      "olean_sha256": "d8d90c8ee247e924c7b56b00aa5305e72d894edf5b4592f53d4fb12fc0d31c87",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySampleData"
+      ],
+      "exit_code": 0,
+      "seconds": 6.184,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySampleLeft",
+      "source_sha256": "0796593a26eea1448c11deb18bea437a26428bf6b94383e4c9a81fdc2edc5b1b",
+      "olean_sha256": "7a4647f0d8d39e1190419bbbbc25f2a978a1f0607c476f6c2b91b55d2e07a70c",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySampleLeft"
+      ],
+      "exit_code": 0,
+      "seconds": 662.12,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySampleRight",
+      "source_sha256": "ca820e7ce61f4ba1a694782b2e883cd11d560e324206fe0d5b0a41872f92ca6e",
+      "olean_sha256": "1c9b990394dbe8679e48da215580958ed44c4f33dea6b1d7e6e9f29044d2cdcf",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySampleRight"
+      ],
+      "exit_code": 0,
+      "seconds": 670.244,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySampleProduct",
+      "source_sha256": "fe7725e47d32d1435814a572f903b66914388a8f35a5fc4af8300251a2fba36b",
+      "olean_sha256": "76b03d74b9096fe16a715158fad0a8fcf429c08c5ba2f2c5b0b1c8f8b4646087",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySampleProduct"
+      ],
+      "exit_code": 0,
+      "seconds": 671.13,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySampleDiagonal",
+      "source_sha256": "d24c3fa2880d38f8f859eafe3050b7aba0bff5655c70a94f323f4f9015edd2a9",
+      "olean_sha256": "f7065f0951c8f649cb0e325d5bf99a8cdf5d79e45604a17ec7cb9f4a9b1eae58",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySampleDiagonal"
+      ],
+      "exit_code": 0,
+      "seconds": 646.172,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistorySample",
+      "source_sha256": "1e9577efef26cb50b7bf97fbd3e97a25854877ebf4eea662539304b826a0a197",
+      "olean_sha256": "b9dfd2b958a7b3da6412a2f4325230a3624ac5b875763550d891ded7d77b0dda",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistorySample"
+      ],
+      "exit_code": 0,
+      "seconds": 6.143,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryStatements",
+      "source_sha256": "7b86ceb15c9c6ab3181c65fcd31d827be901f20b9cf3636bf46464ea2901d5f8",
+      "olean_sha256": "4ba455ee85e81b3c18be0de159aac2187fb768fcb73c2c4700a7ef435bac8760",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 6.058,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryTheorems",
+      "source_sha256": "25c80166b437e3e453276157db4f7ddb46d3fb91188e3dedd03ee6c7b49d1577",
+      "olean_sha256": "2cca3f71c3929457b7ba33b98b56669ca096d0ee2e74dbb27dd092352edb2972",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.749,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "all67_previous_NGB_modules_unchanged": true,
+  "all_preexisting_Lean_except_import_aggregator_unchanged": true,
+  "prior_module_hashes_checked": {
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/BoundaryCircle.lean": "040b00432f8dab8d7ebc7c231f986d04395a38930285332c7e8752006744e3c9",
+    "scores/ArtformScores/NonabelianGravity/BoundaryConditioning.lean": "24d3b0500de1fb51c74746e5e9d9914db677ccb2d0d73851c84c28a69f086457",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryColumns.lean": "306a8df5fc9103c2a6f01d1ee0eb70fff217f17696185264f8fa44f2cb60e785",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryDefs.lean": "b817128f880769a15e99616d92a0aa008aeeb81d963b88592d17f6e276537cb3",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryKernel.lean": "0bc9c37356ae34455c82eff6eaeab79c0e0f2bbdceb965e5192f5303cf019901",
+    "scores/ArtformScores/NonabelianGravity/BoundaryQuantum.lean": "f109291af1a1d28f2f59c6d300d90c6724fca2b65a666a02b9b40fd15d7647ea",
+    "scores/ArtformScores/NonabelianGravity/BoundaryRotation.lean": "4235968bbc38171ee20607a249c1e0c7b8fdf00e741750261c1d4d1ab38e8109",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStatements.lean": "c0eccfa305af7ed27195002343d092491dd0212b78e8c28de1b60afcc299de9c",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStencil.lean": "a887c3772c7eeb3952cc296783270f1990d52f43388da6a0f3599fb24b98419c",
+    "scores/ArtformScores/NonabelianGravity/BoundarySymbol.lean": "e4d553ba00e6f51525ecfc12b20101f92b3ba97cef1010e8c353228eea32a82b",
+    "scores/ArtformScores/NonabelianGravity/BoundaryTheorems.lean": "83f3f6cd0e79b3dc1a0ed933c2fab4721fe73213b46de259073cda364bc7f9f1",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/LegendreBinding.lean": "7000b2c5ca5cd730613ed5e38947a5b573a61652cb9a57018ee601e0707779ff",
+    "scores/ArtformScores/NonabelianGravity/LegendreBoundary.lean": "2c6e0400484944f85a59ea796ff6e0e41e371e1d64ea3ef54e0005aad975bcd3",
+    "scores/ArtformScores/NonabelianGravity/LegendreComposition.lean": "23ea4bf89561e462bddbad3a22014a3bcd7bf75d525e4a19dd06daa6ed2850ab",
+    "scores/ArtformScores/NonabelianGravity/LegendreCompositionData.lean": "83653650dd98dc598ab82b41c96abafdc1761cda55f4006678e1026e41a48a34",
+    "scores/ArtformScores/NonabelianGravity/LegendreGluing.lean": "75f6fa3fca4031142b73bdb574ba16835ba23fd2d8deeeb65d8ef766ae4d6bc4",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrix.lean": "ed58fc6310f31a6f63b5cc0e31bdaad8f33d0f50f344e9c57e22bd78f1152898",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrixData.lean": "691a602803e19908f2179a027a9cbf36b9c847f82662b91e40522d6cd35209d3",
+    "scores/ArtformScores/NonabelianGravity/LegendrePolynomial.lean": "216dc50bdb9e45d7e77a077d0d2fec18b2871ff3bbfd8bcfe51e8f68b4cd23d0",
+    "scores/ArtformScores/NonabelianGravity/LegendreRows.lean": "309787faa2149708c56d2269b049daa3fb65d3a41057206ab185f6fef4daab90",
+    "scores/ArtformScores/NonabelianGravity/LegendreSchur.lean": "3ed5518ea11d0d2491d1bca200409d2fb2931db32442b17f0ec6ceb15385bb53",
+    "scores/ArtformScores/NonabelianGravity/LegendreSource.lean": "148fce7b33e22cd2d29d12b73fc036c88d265760b92ad052eae3df190ebce692",
+    "scores/ArtformScores/NonabelianGravity/LegendreStatements.lean": "3453bb58899a9ce43ff34f436b06cf036ffc40fa5dca8672942b767d83124a25",
+    "scores/ArtformScores/NonabelianGravity/LegendreTheorems.lean": "1cd621557c49a5546697beaa2642238871db42287aef25cd91bfc5bb59d84800",
+    "scores/ArtformScores/NonabelianGravity/LegendreVariation.lean": "115faea1f07f369301fe19955188e2e1eae65959bebb53c4db80d84b6a241418",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/NativeBoundary.lean": "1a1f2dcb045839f923716e3239ff28bc14d7f68582f339191998325cde0ecad0",
+    "scores/ArtformScores/NonabelianGravity/NativeRotation.lean": "4c5af2253b6c1c406cce4255d560cf21a381eba3c0d19a51626c080955683a46",
+    "scores/ArtformScores/NonabelianGravity/NativeStatements.lean": "4d86694dbeeb1ac65ef1d4ccaf84c99a8e23bd99f2e0ec1cfe39befc7caf9114",
+    "scores/ArtformScores/NonabelianGravity/NativeTheorems.lean": "06a7463d002d8863781aa5a147ae2f064725247e14bc40bd74791f0f1e99ae5d",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108"
+  },
+  "prior_manifest_entries_preserved": 281,
+  "prior_approvals_preserved": 277,
+  "source_pins_verified": 14,
+  "source_pin_mismatches": [],
+  "per_key_report_surfaces": [
+    {
+      "key": "NGB:native-complete-history",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeCompleteHistory",
+      "review_text_sha256": "88af0861532375fc21e8f8a962cf2483e0328a228acd8fd127b5950ac672d54a",
+      "canonical_literal_sha256": "ced558286e0eef2b925ea626383ec96bee209b73185e367ad9868655f1bd5d67",
+      "reachable_definition_count": 25,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "Every finite history retains all40 owned coordinates, sources, both endpoint terms and the approved native affine pre/post representative. Classical rational symmetric-certificate existence is separated from untrusted host implementation. Exact compatibility at zero pivots is necessary/sufficient and the solution map is valid/complete. Final tagged type explicitly binds both emitted inverses and full native congruence to the sample diagonal with66 nonzero pivots. Independent complete source/solver replay covers N2,N3,N5, empty and zero-diagonal indefinite controls and all12880 emitted scalar entries. No fixed allN rank, verified Python termination, physical gauge/mode classification, nonlinear or quantum successor theorem is asserted.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "exact_sample_matrix_entries_compared": 12800,
+  "exact_sample_diagonal_entries_compared": 80,
+  "tagged_surface_contains_explicit_three_native_sample_identities": true,
+  "later_quantum_and_nonlinear_sources_excluded_from_review": true,
+  "audit_sha256": "ec9d824b4afd01c09213b5c530a880fb33cca5a204efd55e2d90f0fd4bb0679a",
+  "checker_scheduling": "Independent checker streams used separate temporary receipts then merged; serial Product tail cancelled after durable successful Diagonal receipt because Product was replayed in its own parallel stream. No duplicated successful proof result or build reused without hashes."
+}

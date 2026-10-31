@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "completed_relevant_native_research_tools_found",
+  "research_status": "followup_three_target_campaign_in_progress",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_active_user_authorized_independent_reviewer",
   "additional_workers_launched": 2,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 23,
-  "new_independent_approvals": 23,
+  "new_registered_claims": 24,
+  "new_independent_approvals": 24,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -499,7 +499,7 @@
     "model": "gpt-6.1-sol",
     "authorization": "User explicitly authorized one Sol6.1 reviewer for this continuation.",
     "prior_reviewer_state": "Not used for this continuation; prior reviews01-05 retained.",
-    "state": "final_independent_09_review_completed"
+    "state": "final_independent_10_review_completed"
   },
   "transport_extension_claims": 2,
   "transport_extension_review": "approved_independent_06",
@@ -558,5 +558,15 @@
   },
   "maximum_concurrent_review_workers": 1,
   "boundary_continuation_claims": 3,
-  "boundary_continuation_review": "approved_independent_09"
+  "boundary_continuation_review": "approved_independent_09",
+  "followup_three_targets": {
+    "contract": "FOLLOWUP-CONTRACT.md",
+    "baseline_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
+    "F1": "approved_independent_10_complete_finite_source_criterion",
+    "F2": "lean_compiled_fixed_certificate_contour_reference_pending_independent_11",
+    "F3": "lean_compiled_exact_isotropic_lapse_constraint_pending_independent_12",
+    "old_C_D_activated": false,
+    "new_counted_round_allocation": 0,
+    "selected_physical_gravity_applications": 0
+  }
 }
