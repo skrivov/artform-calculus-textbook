@@ -104,3 +104,19 @@ claim of a complete gravity solution. Both additions were independently approved
 `207183698798dc782dc1b0a30aaab727544e327b`; none returned. The original71 approvals stand.
 See the distinct [audit](audit-independent-03.md), [per-key verdicts](verdict-independent-03.json),
 [validation](validation-independent-03.json) and [integer replay](integer-replay-independent-03.py).
+
+## B03 and D01 additions: exact memory and stencil support
+
+GAC:block-memory and GAC:stencil-support are new foundational submissions, described in ledger
+findings110 and111. The canonical statements are literal quotes in scores/manifest.toml.
+Check arbitrary semiring/module quantifiers, initial auxiliary state and all finite history terms,
+prepared graph invariance and the stronger full-domain autonomy criterion. The old Whitehead
+score supplies the fixed-initialization non-Markov example; a nontrivial invariant graph has B!=0.
+
+For stencil support check factor order with possibly noncommutative coefficients, faithfulness
+on every field via impulses, support inclusion rather than equality, the sharp shift-radius
+example, cancellation, and the original kick/move entry1+q*p. Dense averaging fixes constants
+only; it leaves a local identity realization available on that restricted space. Neither foundation
+is asserted to be a new native application. The full native dynamic split, stencil and domain
+remain obligations. Validation-B03-D01.json records all required checks, drift checks and both
+separate kernel replays. Original73 approvals stand. Independent review is requested.

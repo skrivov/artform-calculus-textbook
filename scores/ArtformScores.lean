@@ -48,3 +48,5 @@ import ArtformScores.GravityBridge.Kernels
 import ArtformScores.GravityBridge.Native.R2Trace
 import ArtformScores.GravityBridge.Native.R2Exceptions
 import ArtformScores.GravityBridge.Native.R2ZeroRow
+import ArtformScores.GravityBridge.Memory
+import ArtformScores.GravityBridge.Stencil

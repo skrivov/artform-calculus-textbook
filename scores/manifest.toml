@@ -973,3 +973,51 @@ lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclus
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion"
 reviewed = "2026-10-30"
 review_text_sha256 = "82a918f547754c41dacb561b9f739cc8c5f22f54318f462c75ae994f8b080507"
+
+[[statement]]
+key = "GAC:block-memory"
+label = "GAC:block-memory"
+title = "Exact block memory and prepared autonomy"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:block-memory)"
+statement = """
+**GAC:block-memory (exact block memory and prepared autonomy).** Let K be a semiring and Y,Z be
+K-modules with additive commutative monoids. For linear blocks A:Y to Y, B:Z to Y, C:Y to Z, D:Z to Z,
+let x_(n+1)=A*x_n+B*z_n and z_(n+1)=C*x_n+D*z_n. For every natural n,
+z_n=D^n*z_0+sum_(j<n) D^(n-1-j)*C*x_j, and
+x_(n+1)=A*x_n+B*D^n*z_0+sum_(j<n) B*D^(n-1-j)*C*x_j.
+No auxiliary initial datum is omitted. If a linear J:Y to Z satisfies C*y+D*J*y=J*(A*y+B*J*y)
+for every y, the full orbit from (y,J*y) is (U^n*y,J*U^n*y), with U(y)=A*y+B*J*y.
+An arbitrary visible map U satisfying A*x+B*z=U(x) for every x,z exists if and only if B=0.
+For the rational quarter turn (x,z) maps to (z,-x), with the fixed initial preparation z=0, there is no
+single map U from rational readings to rational readings satisfying x_(n+1)=U(x_n) for every initial x
+and every n. This quarter turn is the existing Whitehead score at unit 1.
+These are algebraic block laws; no native gravity memory kernel is inferred without its actual block bridge.
+See [finding 110](findings/110-exact-block-memory-and-prepared-autonomy.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.blockMemory"
+lean_proof = "Artform.Scores.GravityBridge.blockMemory"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:stencil-support"
+label = "GAC:stencil-support"
+title = "Exact stencil support and restricted-field agreement"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:stencil-support)"
+statement = """
+**GAC:stencil-support (exact support and restricted-field agreement).** Let K be a semiring and G an
+additive monoid with decidable equality. For a finite-support convolution kernel p with coefficients in K,
+define Act(p,v)(x)=sum_a p_a*v(x+a). Then Act(p*q,v)=Act(p,Act(q,v)); its action on all fields distinguishes
+kernels; and support(p*q) is contained in support(p)+support(q). On G=Z^d, if every coordinate of a support
+point of p has integer absolute value at most r, and likewise q at most s, then p*q has radius at most r+s.
+The support inclusion can be strict: over rational kernels on Z, the displacement 1 belongs to the sum of
+the supports of 1-T and 1+T but not to their product's support.
+For every N=n+1, the rational N-by-N matrix with every entry 1/N fixes every constant field and has no zero
+entry. Thus exact agreement with the identity on constant fields can coexist with a globally dense kernel.
+This does not forbid a local law agreeing on that restricted subspace or identify restricted agreement with
+physical equivalence. See [finding 111](findings/111-exact-stencil-support-and-restricted-fields.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.stencilSupport"
+lean_proof = "Artform.Scores.GravityBridge.stencilSupport"
+reviewed = ""
+review_text_sha256 = ""
