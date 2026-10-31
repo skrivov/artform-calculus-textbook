@@ -1,0 +1,376 @@
+{
+  "investigations": [
+    "G2-K01",
+    "G2-K02",
+    "G2-K03",
+    "G2-K04",
+    "G2-K05",
+    "G2-K06",
+    "G2-K07",
+    "G2-K08",
+    "G2-K09",
+    "G2-K10",
+    "G2-L01",
+    "G2-L02",
+    "G2-L03",
+    "G2-L04",
+    "G2-L05",
+    "G2-L06",
+    "G2-L07",
+    "G2-L08",
+    "G2-L09",
+    "G2-L10"
+  ],
+  "status": "passed",
+  "review": "pending independent fidelity review14 of120-round campaign",
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 3.325,
+      "stdout_bytes": 137,
+      "stdout_sha256": "315990a6e0bb36b5f03e9967b0fa8a0ed8e33963503357237af605d61bd478cd",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "\u2139 [3788/3953] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9757 jobs).\n"
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean > build/report.json",
+      "exit_code": 0,
+      "seconds": 14.37,
+      "stdout_bytes": 70493294,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.335,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.881,
+      "stdout_bytes": 33,
+      "stdout_sha256": "0bf15bb805b811d60d2d15d96273f7cacaefb9ba00dcf7e950e4a6d7b70c4178",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "1190 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json",
+      "exit_code": 0,
+      "seconds": 20.671,
+      "stdout_bytes": 29243475,
+      "stdout_sha256": "25ac8330347d316d797c4bc59f1c825adaef4e24c601e4f870c6f085c14e8eb6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.159,
+      "stdout_bytes": 23,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.146,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.199,
+      "stdout_bytes": 44,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.229,
+      "stdout_bytes": 51,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/gravity_r2_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.08,
+      "stdout_bytes": 162,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": "python3 scripts/status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.344,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "0 approved statements changed since review\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.148,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scores/review/gravity-r7-r8-120-2026-10-30/final-native-root-14.py",
+      "exit_code": 0,
+      "seconds": 3.941,
+      "stdout_bytes": 1956,
+      "stdout_sha256": "f2efa41c0634f219220bc4a778859f5de66aba5c5a0540d5c9c92d4769838797",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.All24Programs",
+      "exit_code": 0,
+      "seconds": 6.306,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.OddInverse",
+      "exit_code": 0,
+      "seconds": 6.606,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.ModalDegree",
+      "exit_code": 0,
+      "seconds": 9.023,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.Templates",
+      "exit_code": 0,
+      "seconds": 5.679,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.SourceAudit",
+      "exit_code": 0,
+      "seconds": 6.046,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.PolynomialCost",
+      "exit_code": 0,
+      "seconds": 5.763,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.Slots",
+      "exit_code": 0,
+      "seconds": 7.692,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.FacePartition",
+      "exit_code": 0,
+      "seconds": 8.008,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.ConstitutiveInverse",
+      "exit_code": 0,
+      "seconds": 8.757,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.FaceCode",
+      "exit_code": 0,
+      "seconds": 5.746,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.ForwardQ",
+      "exit_code": 0,
+      "seconds": 5.669,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.RetroCertificates.InverseQ",
+      "exit_code": 0,
+      "seconds": 5.633,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Signature",
+      "exit_code": 0,
+      "seconds": 5.798,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Coframe",
+      "exit_code": 0,
+      "seconds": 5.671,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Signed",
+      "exit_code": 0,
+      "seconds": 5.733,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Envelope",
+      "exit_code": 0,
+      "seconds": 5.727,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Budget",
+      "exit_code": 0,
+      "seconds": 5.759,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Retuning",
+      "exit_code": 0,
+      "seconds": 5.739,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.SourceBranch",
+      "exit_code": 0,
+      "seconds": 5.695,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Window",
+      "exit_code": 0,
+      "seconds": 5.781,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.Unrestricted",
+      "exit_code": 0,
+      "seconds": 5.711,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.NativeDetailTests.FiniteWindow",
+      "exit_code": 0,
+      "seconds": 5.717,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    }
+  ],
+  "proof_scope": "Final20 original24 inverse/constitutive/circuit/certificate derivations and scoped native source/branch/coframe/envelope/value-trace/measure adverse tests. No full40 finite-h physical gate, physical energy/modes/quantum normalization or historical/global Lean saving. Narrow prospective matched rational-DAG counts only."
+}

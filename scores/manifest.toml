@@ -4134,3 +4134,445 @@ lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statemen
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "4430a694a7082dbdf60a252795ee1483ae09dc59950cc55e5ce048682c76d38f"
+
+[[statement]]
+key = "GAC2:verified-all24-rank-return"
+label = "GAC2:verified-all24-rank-return"
+title = "Verified arbitrary-input original24 inverse programs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:verified-all24-rank-return)"
+statement = """
+**GAC2:verified-all24-rank-return (verified arbitrary-input original24 inverse programs).** For the same arbitrary rational24-connection source A, executable dense
+and rank programs both return the original fullHApply(A) and satisfy BOTH
+original inverse orders. All four distinct and all four repeated blocks,
+including signed space conjugation and31 orientation, are retained. The dense
+block route uses72 rational scales and48 adds; the rank route uses32 scales
+and40 adds. Fixed coefficients and signed reads/copies/negations are free in
+BOTH routes. References and output slots are valid. For scale cost cs>0 and
+add cost ca>=0 the rank cost is strictly smaller. This is prospective exact
+arithmetic compression of this same full24 map, not historical, Lean, runtime,
+bit-complexity, full40 or physical-resource saving.
+See [finding257](findings/257-verified-all24-rank-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.all24ProgramsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.all24ProgramsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:original-global-odd-inverse"
+label = "GAC2:original-global-odd-inverse"
+title = "Original full24 inverse as an odd degree-five polynomial"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:original-global-odd-inverse)"
+statement = """
+**GAC2:original-global-odd-inverse (original full24 inverse as an odd degree-five polynomial).** Let a=194/101,b=103/101,c=200/101. The actual original rational24
+connection inverse is p1*B+p3*B^3+p5*B^5, where
+p1=a^-2+b^-2+c^-2, p3=-(a^-2*b^-2+a^-2*c^-2+b^-2*c^-2),
+and p5=a^-2*b^-2*c^-2. All eight original block identities and the complete
+power-coordinate reconstruction are proved, and both original inverse orders
+hold for arbitrary24 input. This is an exact alternative polynomial return
+at the fixed original coupling, not a lower-degree approximation or a
+claim that polynomial evaluation is faster.
+See [finding258](findings/258-original-global-odd-inverse.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.oddInverseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.oddInverseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-modal-inverse-degree"
+label = "GAC2:native-modal-inverse-degree"
+title = "Native modal interpolation requires the fifth-degree term"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-modal-inverse-degree)"
+statement = """
+**GAC2:native-modal-inverse-degree (native modal interpolation requires the fifth-degree term).** The original24 connection Hessian has explicit nonzero native eigenmodes
+with six distinct eigenvalues plus/minus194/101, plus/minus103/101 and
+plus/minus200/101. Among odd scalar polynomials p1*z+p3*z^3+p5*z^5
+whose inverse response matches the three positive native eigenvalues, all
+three coefficients are uniquely the preceding p1,p3,p5. No odd polynomial
+of degree at most3 matches these three inverse responses. This is a native
+modal interpolation lower bound within that polynomial class; it is not a
+universal arithmetic-circuit lower bound or physical mode count.
+See [finding259](findings/259-native-modal-inverse-degree.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.modalDegreeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.modalDegreeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-two-template-certificate"
+label = "GAC2:native-two-template-certificate"
+title = "Two template checks certify both original24 inverse orders"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-two-template-certificate)"
+statement = """
+**GAC2:native-two-template-certificate (two template checks certify both original24 inverse orders).** For arbitrary characteristic-zero coefficient fields, two candidate3x3
+matrices D,R satisfying D*timeB=I and R*repeatB(1)=I give a complete24
+return by the original signed partition, space conjugation and eta factors.
+That return satisfies both original inverse orders for every native24 source.
+Actual timeH and repeatH(1) meet the certificate premises. Under the explicitly
+dense product checker, the two templates contain18 scalar equalities,
+54 multiplications and36 additions; a direct24x24 product contains576 scalar
+equalities,13824 multiplications and13248 additions. The approved partition
+and original inverse identities are reused. These are declared fresh proof
+obligation counts, with no historical, global Lean or measured runtime saving.
+See [finding260](findings/260-native-two-template-certificate.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.templatesLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.templatesLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-source-only-certificate-audit"
+label = "GAC2:native-source-only-certificate-audit"
+title = "Selected native sources do not certify the full inverse"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-source-only-certificate-audit)"
+statement = """
+**GAC2:native-source-only-certificate-audit (selected native sources do not certify the full inverse).** The wrong return which keeps all distinct blocks but replaces all repeated
+returns by zero agrees with the original full inverse on every threeConnection
+input and on the actual native adjoint of every threeBlockFace input. It
+nevertheless maps every pure repeated input to zero and fails the original
+full inverse equation on the explicit nonzero rational repeated source at
+b=1,z=(1,0,0). Passing all of these selected TT source blocks therefore does
+not certify the original full24 inverse. This is an adverse test of a
+restricted certificate, not a failure of the correct full return.
+See [finding261](findings/261-native-source-only-certificate-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.sourceAuditLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.sourceAuditLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-polynomial-work-audit"
+label = "GAC2:native-polynomial-work-audit"
+title = "Exact degree-five inverse can cost more than block return"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-polynomial-work-audit)"
+statement = """
+**GAC2:native-polynomial-work-audit (exact degree-five inverse can cost more than block return).** A typed native expression DAG with five original B applications,
+three24-vector scales and two24-vector sums returns exactly the original
+full inverse for every rational24 input. Its references are valid. Each B
+macro uses all eight original dense3blocks, whose72 coefficients are nonzero
+at kappa=1/101. Under that declared macro DAG the polynomial route costs
+432 scales and288 adds, whereas the verified rank return costs32 scales
+and40 adds. For scale weight cs>0 and add weight ca>=0 the polynomial route
+costs strictly more. This is an exact negative efficiency comparison for
+these specified programs, not an optimality, measured runtime or historical claim.
+See [finding262](findings/262-native-polynomial-work-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.polynomialCostLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.polynomialCostLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-full-face-rank-partition"
+label = "GAC2:native-full-face-rank-partition"
+title = "All original constitutive face slots in eight signed blocks"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-full-face-rank-partition)"
+statement = """
+**GAC2:native-full-face-rank-partition (all original constitutive face slots in eight signed blocks).** The complete original24-face constitutive operator
+Q=M*(I-2*kappa*T*B^-1*T^T*M), with kappa=1/101 and the actual native T,
+true coordinate transpose and signed face Gram M, has an explicit signed
+partition into eight3blocks. The read and assembly are two-sided inverses.
+In these coordinates each Q block is
+alpha^-1*I-beta/(alpha*(alpha+3*beta))*J, with its inverse alpha*I+beta*J.
+Every original alpha and alpha+3*beta is nonzero; all eight inverse products
+and the literal original Q correspondence are proved over characteristic-zero
+fields. This is the homogeneous constitutive face map, not the full40
+finite-spacing operator or an unrestricted coordinate-quartic inverse.
+See [finding263](findings/263-native-full-face-rank-partition.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.facePartitionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.facePartitionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-full-constitutive-inverse"
+label = "GAC2:native-full-constitutive-inverse"
+title = "Original full face inverse and exact curvature Woodbury return"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-full-constitutive-inverse)"
+statement = """
+**GAC2:native-full-constitutive-inverse (original full face inverse and exact curvature woodbury return).** The inverse assembled from the preceding eight face blocks is a two-sided
+inverse of the complete original homogeneous constitutive Q on every24 face
+input. Let C0 be the original unrestricted homogeneous curvature Hessian,
+identified by polarization of the original zero-torsion-coefficient density,
+and let C0^-1 be its complete original24 return. Both curvature inverse
+orders are proved. The complete constitutive inverse also equals
+Q^-1*Y=M*Y+2*kappa*T*C0^-1*T^T*Y.
+The native expression retains both face Gram factors needed to realize the
+true transpose. Curvature inversion is used inside this exact Woodbury
+identity; it does not replace the full current-law connection inverse.
+See [finding264](findings/264-native-full-constitutive-inverse.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.constitutiveInverseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.constitutiveInverseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-full-Q-program"
+label = "GAC2:native-full-Q-program"
+title = "Verified cheaper complete original constitutive forward map"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-full-Q-program)"
+statement = """
+**GAC2:native-full-Q-program (verified cheaper complete original constitutive forward map).** For the same arbitrary rational24-face input, the executable dense and
+rank circuits both return all24 components of the actual original
+constitutive Q, with all signed read/assembly data retained. The dense route
+costs72 scales and48 adds; the rank route costs32 scales and40 adds, with
+fixed coefficients and signed reads/copies/negation free in both. All circuit
+references and output slots are valid, and for scale weight cs>0, add weight
+ca>=0 the rank cost is strictly smaller. This is prospective exact arithmetic
+compression of the full homogeneous face map, not a source-restricted output,
+historical/runtime/bit-complexity or full40 physical saving.
+See [finding265](findings/265-native-full-Q-program.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.forwardQLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.forwardQLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-full-Q-inverse-program"
+label = "GAC2:native-full-Q-inverse-program"
+title = "Verified complete inverse constitutive map on held-out inputs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-full-Q-inverse-program)"
+statement = """
+**GAC2:native-full-Q-inverse-program (verified complete inverse constitutive map on held-out inputs).** For the same arbitrary rational24-face input, executable dense and rank
+circuits return the complete original Q inverse. Both reconstruction orders
+with the actual Q hold. The dense program costs72 scales and48 adds; the
+rank program costs32 scales and40 adds, with the same fixed-coefficient,
+signed-wire convention and valid references/output slots. For scale weight
+cs>0 and add weight ca>=0 the rank cost is strictly smaller. This is the
+second native constitutive operation, tested on held-out arbitrary inputs;
+it is not the forward map relabeled as its inverse, an admitted physical
+source theorem or historical/Lean/full40 runtime saving.
+See [finding266](findings/266-native-full-Q-inverse-program.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.RetroCertificates.Statement.inverseQLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.RetroCertificates.inverseQLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-constitutive-diagonal-signs"
+label = "GAC2:native-constitutive-diagonal-signs"
+title = "Complete original constitutive quadratic has both algebraic signs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-constitutive-diagonal-signs)"
+statement = """
+**GAC2:native-constitutive-diagonal-signs (complete original constitutive quadratic has both algebraic signs).** The complete original constitutive quadratic Z^T*Q*Z on all24 face
+slots has an explicit invertible rational change of coordinates to a diagonal
+form. On each of its eight signed3blocks, z=(a+b+c,-a+b+c,-2*b+c)
+gives weights2*alphaForward,6*alphaForward,3*(alphaForward+3*betaForward).
+Exactly12 rational diagonal coefficients are positive and12 negative, with
+none zero. Explicit original rational face inputs give quadratic values
+202/103 and-202/103. The same algebraic congruence holds over characteristic-zero
+fields. These are constitutive quadratic signs, not physical energy positivity,
+a Ward/source-compatible quotient signature, quantum mode counts or an admitted
+physical spectrum.
+See [finding267](findings/267-native-constitutive-diagonal-signs.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signatureLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.signatureLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-all-detail-coframe-source"
+label = "GAC2:native-all-detail-coframe-source"
+title = "Connection detail source leaves the complete coframe covector"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-all-detail-coframe-source)"
+statement = """
+**GAC2:native-all-detail-coframe-source (connection detail source leaves the complete coframe covector).** For the original inherited two-cell family with b>0,u>0, every real detail
+r and every fixed connection-detail source j, the derivative of the literal
+source-bearing action with respect to b is
+f(u,r)=-sinh(u+r)-sinh(u-r)-kappa*(cosh(u+r)-1)<0.
+The derivative is taken locally at b!=0 and retains-j*r. Thus changing j
+or solving its detail equation does not remove this coframe source in the
+declared family. It is a retained coframe Euler/covector duty, not bare
+canonical boundary momentum or exclusion of a different full fine solution
+or of a prescribed fixed-coframe boundary experiment.
+See [finding268](findings/268-native-all-detail-coframe-source.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.coframeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.coframeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-negative-detail-discriminant"
+label = "GAC2:native-negative-detail-discriminant"
+title = "Signed native rapidity can remove the real stationary branch"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-negative-detail-discriminant)"
+statement = """
+**GAC2:native-negative-detail-discriminant (signed native rapidity can remove the real stationary branch).** If A^2-B^2<0, no proper real algebraic boost C^2-S^2=1 can satisfy
+A*S+B*C=0. In the actual original detail family at u=log(201/202),
+D=(2*sinh u+kappa*cosh u)^2-(kappa*sinh u)^2 is exactly
+-151/83250381402. Consequently for any b!=0 and every real r, the actual
+zero-source detail force is nonzero. The parameter201/202 is positive and
+below1, so this is an actual real negative rapidity. It prevents extending
+the positive-u stationary branch across this signed test; it does not prove
+a failure of the complete original admitted physical problem.
+See [finding269](findings/269-native-negative-detail-discriminant.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.signedLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.signedLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-source-envelope-contacts"
+label = "GAC2:native-source-envelope-contacts"
+title = "Original source envelope retains its derivative and susceptibility"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-source-envelope-contacts)"
+statement = """
+**GAC2:native-source-envelope-contacts (original source envelope retains its derivative and susceptibility).** For b>0,u>0, let R=sqrt D and let r0 be the actual zero-source
+stationary rapidity. The real source branch is r(j)=r0-arsinh(j/(b*R)).
+The complete original source envelope is
+E(j)=kappa*b-b*R*cosh(r(j)-r0)-j*r(j).
+Its derivative is-r(j), and its second derivative is
+1/(b*R*sqrt(1+(j/(b*R))^2))>0. The literal two-cell source action is
+identified with E before differentiating. Omitting-j*r(j) gives zero first
+source derivative at j0, whereas the full derivative is-r0>0 on the actual
+positive-u branch. This is a restricted source-envelope contact calculation,
+not a positive Gaussian or full quantum effective action.
+See [finding270](findings/270-native-source-envelope-contacts.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.envelopeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.envelopeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-stationary-value-trace-budget"
+label = "GAC2:native-stationary-value-trace-budget"
+title = "Small native value defect does not supply a derivative budget"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-stationary-value-trace-budget)"
+statement = """
+**GAC2:native-stationary-value-trace-budget (small native value defect does not supply a derivative budget).** The exact corrected original stationary merge defect satisfies
+0<Delta_eff<202*b*(sinh u)^4 for b>0,u>0. For0<u<=delta this is at most
+the strict upper bound202*b*(cosh delta)^4*u^4; with u=h*v it gives
+202*b*(cosh delta)^4*h^4*v^4 under h>0,v>0,h*v<=delta.
+The literal stationary two-cell difference is identified with this defect.
+A separate retained-trace test uses u=h^2*v, phases(0,u+r,2*u), the declared
+spatial native conversion omega=-phi/h and temporal spacing h/2. If the detail
+is stationary and2*sinh(h^2*v)<kappa, then r<-u/2 and the magnitude of its
+second divided difference exceeds4*v/h. Thus a small local action defect does
+not supply a uniform derivative budget for that declared report. Full coframe
+scaling, physical preparation and a uniform full40 admission bridge are not inferred.
+See [finding271](findings/271-native-stationary-value-trace-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.budgetLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.budgetLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-coarse-scalar-retuning"
+label = "GAC2:native-coarse-scalar-retuning"
+title = "One coarse scalar rescaling fails two original stationary tests"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-coarse-scalar-retuning)"
+statement = """
+**GAC2:native-coarse-scalar-retuning (one coarse scalar rescaling fails two original stationary tests).** For the actual current-law stationary values at b=1, the proper boost
+pairs(c,s)=(5/4,3/4) and(5/3,4/3) satisfy respectively
+V1<-45/32 and V2>-80/27. There is no single real beta such that
+V1=-beta*(15/8) and V2=-beta*(40/9), the corresponding inherited coarse
+curvature readings. Hence one constant coarse curvature rescaling cannot
+match both stationary tests while the original fine law is retained.
+This deliberately enlarges the original fixed-coupling comparison as an
+adverse control; it excludes neither field-dependent counterterms nor a
+different full geometric or admitted physical comparison.
+See [finding272](findings/272-native-coarse-scalar-retuning.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.retuningLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.retuningLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-global-source-detail"
+label = "GAC2:native-global-source-detail"
+title = "Every real source has one stationary native detail on the positive branch"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-global-source-detail)"
+statement = """
+**GAC2:native-global-source-detail (every real source has one stationary native detail on the positive branch).** For b>0,u>0 the actual native split action has strictly negative detail
+Hessian for every real r, and its detail force is strictly decreasing. For
+every real source j there is exactly one real stationary r. If r0 is the
+actual zero-source stationary boost and R=sqrt D, the force and complete
+action are exactly-b*R*sinh(r-r0)-j and
+kappa*b-b*R*cosh(r-r0)-j*r; the returned rapidity is
+r0-arsinh(j/(b*R)). This is global existence/uniqueness in the declared real
+one-detail family, with a stationary maximum. It is not automatic membership
+in the original small-log, coframe, boundary or history domain.
+See [finding273](findings/273-native-global-source-detail.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.sourceBranchLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.sourceBranchLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-source-rapidity-window"
+label = "GAC2:native-source-rapidity-window"
+title = "Exact native source window for both child rapidities"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-source-rapidity-window)"
+statement = """
+**GAC2:native-source-rapidity-window (exact native source window for both child rapidities).** For b>0,u>0, at the unique stationary detail the condition-u<r<u is
+exactly the source interval
+-2*b*(sinh u)^2-2*kappa*b*sinh u*cosh u < j < 2*b*(sinh u)^2.
+The endpoint source values are computed from the actual original detail
+force. Every source inside this interval therefore gives both child rapidities
+u+r,u-r in(0,2*u). Sources outside it do not satisfy this same open
+rapidity condition. This is an exact source/log window for the restricted
+family; full physical preparation, other fields and boundary/source admission
+remain independent duties.
+See [finding274](findings/274-native-source-rapidity-window.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.windowLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.windowLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-unrestricted-positive-weight"
+label = "GAC2:native-unrestricted-positive-weight"
+title = "Unrestricted positive real weight is not a finite normalization"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-unrestricted-positive-weight)"
+statement = """
+**GAC2:native-unrestricted-positive-weight (unrestricted positive real weight is not a finite normalization).** Consider the deliberately enlarged experiment that integrates the actual
+zero-source restricted action over every real detail r with positive weight
+exp(-F), using ordinary real Lebesgue measure. For b>0,u>0 that continuous
+weight is at least1 everywhere and its nonnegative integral is infinite.
+Thus this unrestricted positive-real prescription cannot be normalized in
+this family. This does not assert divergence of the original Lorentzian
+quantum measure, an oscillatory or complex contour prescription, a bounded
+original detail domain, or the full gauge-reduced path integral.
+See [finding275](findings/275-native-unrestricted-positive-weight.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.unrestrictedLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.unrestrictedLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-finite-detail-weight"
+label = "GAC2:native-finite-detail-weight"
+title = "Bounded native detail interval has explicit finite positive mass"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-finite-detail-weight)"
+statement = """
+**GAC2:native-finite-detail-weight (bounded native detail interval has explicit finite positive mass).** In the same actual zero-source restricted family, let r0 be the actual
+stationary rapidity and L>=0. On |r-r0|<=L the positive-real weight is
+bounded above by exp(b*R*cosh L-kappa*b), R=sqrt D. Its nonnegative
+Lebesgue integral on[r0-L,r0+L] is at most
+(2*L)*exp(b*R*cosh L-kappa*b). For L>0 this integral is strictly positive
+and finite. This retains the finite-window qualification missing from the
+unrestricted adverse test. It does not choose the original physical contour,
+gauge measure, normalization, all40 fields or a quantum state.
+See [finding276](findings/276-native-finite-detail-weight.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.finiteWindowLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeDetailTests.finiteWindowLaw"
+reviewed = ""
+review_text_sha256 = ""

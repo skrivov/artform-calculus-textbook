@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "source_pairs": 45,
+  "matched_operator_replays": [
+    {
+      "operator": "H",
+      "arbitrary_heldout_inputs": 48,
+      "all_outputs": 24,
+      "dense_scales_adds": [
+        72,
+        48
+      ],
+      "rank_scales_adds": [
+        32,
+        40
+      ],
+      "emitted_dense_gates": 120,
+      "emitted_rank_gates": 72,
+      "serialized_program_bytes": 5088,
+      "max_coefficient_num_den_bits": 15,
+      "max_replayed_intermediate_bits": 25,
+      "program_sha256": "070c82c57201d6f1a146c862fd2c138ac81be21297bc89786b548ec3cb55215c"
+    },
+    {
+      "operator": "Q",
+      "arbitrary_heldout_inputs": 48,
+      "all_outputs": 24,
+      "dense_scales_adds": [
+        72,
+        48
+      ],
+      "rank_scales_adds": [
+        32,
+        40
+      ],
+      "emitted_dense_gates": 120,
+      "emitted_rank_gates": 72,
+      "serialized_program_bytes": 4892,
+      "max_coefficient_num_den_bits": 14,
+      "max_replayed_intermediate_bits": 23,
+      "program_sha256": "130f081af59c1a329817a12b8d7c88783dcdc71869e9d2930918d9dc44db2f74"
+    },
+    {
+      "operator": "Qinverse",
+      "arbitrary_heldout_inputs": 48,
+      "all_outputs": 24,
+      "dense_scales_adds": [
+        72,
+        48
+      ],
+      "rank_scales_adds": [
+        32,
+        40
+      ],
+      "emitted_dense_gates": 120,
+      "emitted_rank_gates": 72,
+      "serialized_program_bytes": 4552,
+      "max_coefficient_num_den_bits": 7,
+      "max_replayed_intermediate_bits": 17,
+      "program_sha256": "e9b858555c235fb78a5aa6ae6dba5c4eb445b6fe004e5064c23f800a56b69226"
+    }
+  ],
+  "actual_source_adjoint_control_cases": 24,
+  "literal_current_two_cell_cases": 60,
+  "original_native_eigenvalues": [
+    "194/101",
+    "-194/101",
+    "103/101",
+    "-103/101",
+    "200/101",
+    "-200/101"
+  ],
+  "constitutive_diagonal_signs": [
+    12,
+    12
+  ],
+  "polynomial_scales_adds": [
+    432,
+    288
+  ],
+  "generation_policy": "fixed coefficients supplied in both routes; emitted gates/serialized bytes/bitlength recorded separately from replay; no runtime saving claimed",
+  "measure_proof": "formal Lean continuous-weight, unrestricted lintegral and finite-window inequalities; no numeric improper-integral inference",
+  "credit": "prospective same-input/all24-output arithmetic comparisons only; historical, global Lean, full40 and physical-resource savings0; complete physical gates0"
+}
