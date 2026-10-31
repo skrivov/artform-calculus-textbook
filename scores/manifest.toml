@@ -877,3 +877,25 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Statement.connectionPrepar
 lean_proof = "Artform.Scores.GravityBridge.Native.connectionPreparationLaw"
 reviewed = ""
 review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-processing"
+label = "GAC:finite-processing"
+title = "Complete processing of finite source kernels"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-processing)"
+statement = """
+**GAC:finite-processing (complete finite source kernels).** A kernel a:X to Y has values in a commutative
+semiring K. With finite Y and a measure mu:Y to K, define
+weightedCompose(mu,a,b)(x,z)=sum_y a(x,y)*mu(y)*b(y,z).
+For bijections eX:X to X', eY:Y to Y', eZ:Z to Z', transport functions by inverse substitution and kernels
+by inverse substitution in both arguments. Transporting mu,a,b commutes with weighted composition.
+For finite X,Y,X',Y', define amplitude(mu,nu,psi,a,phi)=sum_x sum_y psi(x)*mu(x)*a(x,y)*nu(y)*phi(y).
+For every external source label j, both bijections and all data may depend on j; transporting both measures,
+the preparation psi, test phi and kernel leaves the amplitude unchanged at that j.
+This is a finite reindexing theorem, with no source differentiability or native quantum-measure claim.
+See [finding 106](findings/106-complete-processing-of-finite-source-kernels.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.finiteProcessing"
+lean_proof = "Artform.Scores.GravityBridge.finiteProcessing"
+reviewed = ""
+review_text_sha256 = ""

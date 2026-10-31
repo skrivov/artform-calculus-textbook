@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "44c99136350d2c15120c44ec6bc60258b929936a",
+  "investigation": "GAC-B01",
+  "independent_review": "pending",
+  "proofs": [
+    {
+      "label": "GAC:finite-processing",
+      "decl": "Artform.Scores.GravityBridge.finiteProcessing",
+      "proves": "Artform.Scores.GravityBridge.Statement.finiteProcessing",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "full_build_wfail": 0,
+  "required_report_status_tree_certificate_checks": "all passed",
+  "approved_surface_drift": [],
+  "kernel_replay": {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "ArtformScores.GravityBridge.Kernels"
+    ],
+    "exit_code": 0
+  },
+  "file_hashes": {
+    "scores/ArtformScores/GravityBridge/KernelDefs.lean": "fad5ac58d0a434ec3a5ad2f368aff906a4a28aa4c2dab3490d96f30bf779bd7b",
+    "scores/ArtformScores/GravityBridge/KernelStatements.lean": "37ee1d1327c8576b572abd7de187384c872ed4d6b2cdfe1e8695037558c6361f",
+    "scores/ArtformScores/GravityBridge/Kernels.lean": "c63e59758599fe2d3f105ca57e3bdb5419f83dbb95b7d88c27f643963b0d88f9"
+  },
+  "scope": "Finite source-dependent kernel reindexing with all preparation and density data; no infinite native quantum measure is claimed."
+}

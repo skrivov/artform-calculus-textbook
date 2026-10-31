@@ -1,6 +1,6 @@
 # Gravity calculus foundation submission
 
-30 October 2026. Six new checked proof submissions; independent fidelity review pending.
+30 October 2026. Seven new checked proof submissions; independent fidelity review pending.
 The original sixty-three scores entries retain their independent approvals.
 
 ## Statements to review
@@ -13,9 +13,10 @@ The original sixty-three scores entries retain their independent approvals.
 | GAC:temporal-witness | GravityBridge.Native.Statement.temporalWitness / GravityBridge.Native.temporalWitness |
 | GAC:defect-stability | GravityBridge.Statement.defectStability / GravityBridge.defectStability |
 | GAC:connection-preparation | GravityBridge.Native.Statement.connectionPreparationLaw / GravityBridge.Native.connectionPreparationLaw |
+| GAC:finite-processing | GravityBridge.Statement.finiteProcessing / GravityBridge.finiteProcessing |
 
 All names start with Artform.Scores. The literal source statements are quoted in scores/manifest.toml
-from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–105.
+from the lattice-waves ledger's ALGEBRA-OF-SCORES.md section 7 and findings 102–106.
 Definitions, statements, proofs and positive examples are under scores/ArtformScores/GravityBridge/.
 
 ## Required fidelity checks
@@ -40,6 +41,10 @@ Definitions, statements, proofs and positive examples are under scores/ArtformSc
    Check its exact quadratic variation, the nonzero TT inputs and the unique prepared correction.
    The c-independent term -2*kappa*z^2 must be retained for the input-dependent effective density.
    Neither this block nor its first-lift correction is the entire native connection or gravity action.
+8. Check finite kernel composition and closed amplitudes under bijections of their declared data.
+   All measures, preparations, tests and kernel arguments transform. Source dependence is pointwise
+   in an arbitrary external label; no derivative or continuum measure is asserted.
+   Check the nonconstant two-state measure example and the exact 1-versus-2 failure when it is left behind.
 
 The bounded historical source/review snapshots in source/ and source-pins.json preserve provenance.
 Their old UNREVIEWED headings are historical; the distinct review gives the inherited scoped acceptance.

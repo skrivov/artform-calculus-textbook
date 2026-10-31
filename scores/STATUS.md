@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 63 |
-| stated | 6 |
+| stated | 7 |
 | planned | 0 |
-| **total** | **69** |
+| **total** | **70** |
 
 ## Statements
 
@@ -84,3 +84,4 @@
 | GAC:temporal-witness | Rational transverse traceless symbol witness | stated | `Artform.Scores.GravityBridge.Native.Statement.temporalWitness` / `Artform.Scores.GravityBridge.Native.temporalWitness` | awaiting review |
 | GAC:defect-stability | Quantitative realization defect | stated | `Artform.Scores.GravityBridge.Statement.defectStability` / `Artform.Scores.GravityBridge.defectStability` | awaiting review |
 | GAC:connection-preparation | Native connection preparation and source term | stated | `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` / `Artform.Scores.GravityBridge.Native.connectionPreparationLaw` | awaiting review |
+| GAC:finite-processing | Complete processing of finite source kernels | stated | `Artform.Scores.GravityBridge.Statement.finiteProcessing` / `Artform.Scores.GravityBridge.finiteProcessing` | awaiting review |
