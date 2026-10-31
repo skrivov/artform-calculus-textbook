@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 149 |
-| stated | 0 |
+| stated | 4 |
 | planned | 0 |
-| **total** | **149** |
+| **total** | **153** |
 
 ## Statements
 
@@ -164,3 +164,7 @@
 | GAC2:temporal-forcing-factor-cancellation | The original lower temporal forcing through repeated-factor cancellation | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.tTForceLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.tTForceLaw` | approved 2026-10-31 |
 | GAC2:full24-homogeneous-decomposition | The full original24 homogeneous connection partition and density | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.homogeneousLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.homogeneousLaw` | approved 2026-10-31 |
 | GAC2:verified-native-block-programs | Verified exact arithmetic programs for the original native block | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.blockProgramsLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.blockProgramsLaw` | approved 2026-10-31 |
+| GAC2:metric-cauchy-organization | The original metric Cauchy organization and exact inverses | stated | `Artform.Scores.GravityBridge.Native.MetricCut.Statement.coordinatesLaw` / `Artform.Scores.GravityBridge.Native.MetricCut.coordinatesLaw` | awaiting review |
+| GAC2:metric-leading-range-return | The original leading normal range and visible source return | stated | `Artform.Scores.GravityBridge.Native.MetricCut.Statement.leadingLaw` / `Artform.Scores.GravityBridge.Native.MetricCut.leadingLaw` | awaiting review |
+| GAC2:signed-ordered-inverse-contacts | Original signed physical block and ordered inverse contacts | stated | `Artform.Scores.GravityBridge.Native.InverseJets.Statement.signedLaw` / `Artform.Scores.GravityBridge.Native.InverseJets.signedLaw` | awaiting review |
+| GAC2:quartic-two-return-coefficient | The supplied native quartic contacts with both elimination returns | stated | `Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarticLaw` / `Artform.Scores.GravityBridge.Native.MetricCut.quarticLaw` | awaiting review |

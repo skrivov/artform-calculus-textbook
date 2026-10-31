@@ -167,3 +167,34 @@ saving are credited. The general-input programs do establish the declared prospe
 (9 scales/6 adds to4 scales/5 adds); this does not improve the already optimal old selected source.
 The actual longitudinal numerator, nonfinite native stationarity/profile admission, contour and
 physical source/boundary/history transfers remain open.
+
+## Review06 handoff: D01–D04
+
+Four mathematical dispositions are submitted; campaign34/120,149 approvals before review06.
+Original22 source/snapshot pairs are pinned, including the inseparable leading/quartic
+metric scopes and M185 review. Root validation is recorded in validation-D01-D04.json.
+
+Read the four literal entries and findings187–190 in canonical ALGEBRA section8.
+Coordinates restricts the physical20-row equivalence to symmetric metric and symmetric TT
+inputs/outputs, with both inverse directions and explicit symmetry preservation. Its general
+raw carrier also permits nonsymmetric matrices; no physical dimension assertion covers those.
+The fixedN4 target is encoded separately, including its harmonic shift velocity.
+
+Leading proves the original leading normal range/kernel, not exact nonzero-h rank. Its free
+coefficient multiplies k; it is not the unit-longitudinal amplitude n.c. The visible-source
+return is one-way with E*V=I. No reconstruction iff is asserted without V*E=I.
+
+Signed checks the physical omega/native-A sign directly in the original torsion definition,
+its conversion to the indexed basis, both zero-order inverses, complete H1 table and three
+H2 contacts. Link Taylor inputs are displayed rational polynomial coefficients; no contour
+averaging inverse or uniform remainder is asserted. All noncommuting products are retained.
+
+Quartic checks supplied reviewed coefficient formulas, the visible Cauchy return and the
+bilinear cubic top return. Its arbitrary-vector contraction is algebra; physical top-inverse
+identification also needs the transverse subspace, rho²=k.k and actual native extraction.
+The supplied dependentFourth/F2'''/Sigma4 values are not promoted to full40 derivations.
+No new native physical gate or efficiency saving is claimed by these four submissions.
+
+Root review06 validation passed all16 checks, including four separate kernel replays,
+all required certificate checks and empty approved-text drifts. All149 earlier manifest
+entries remain identical; four new entries are unreviewed.

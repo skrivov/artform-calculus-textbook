@@ -107,6 +107,62 @@
       "bytes": 715,
       "sha256": "40403dc2b84e7cb3fc3062bb4be4d99877382d820b9408145e1054db883b6b41",
       "scope": "source wrapper-display qualification; no new mathematical acceptance"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-physical-metric-Cauchy-leading-block-M157-M183-evidence-20261030/OPEN-full-physical-Cauchy-cut-leading-rank-three-and-longitudinal-range-equation.md",
+      "snapshot": "source/metric-leading-block.md",
+      "bytes": 14960,
+      "sha256": "62d36f2047589011bd846b81b1751a40ca2ec1f3b30c6a4f95e70b5c13e79323",
+      "scope": "original20 metric rows, fixedN4 target, rank3 leading block and actual ordered source; scope inseparable"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-physical-metric-Cauchy-leading-block-M157-M183-evidence-20261030/mandatory-leading-rank-three-and-longitudinal-range-scope.md",
+      "snapshot": "source/metric-leading-scope.md",
+      "bytes": 2286,
+      "sha256": "da8912f8392ee8741b69eb90f178681ca7f268eca2e0b548de7a07591cbc3fdf",
+      "scope": "inseparable initial-cut and fixed finite norm scope"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-physical-metric-Cauchy-leading-block-M157-M183-evidence-20261030/additive-vanishing-of-the-longitudinal-cubic-boundary-coefficient.md",
+      "snapshot": "source/metric-cubic-vanishing.md",
+      "bytes": 5681,
+      "sha256": "6544a4cc4139ea2e890591b43c40bcfbb388e476034546f218b670ec145f473e",
+      "scope": "manual cubic cancellation, no finite-h stencil rotation or exactrank3 claim"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-quartic-physical-Cauchy-scalar-and-metric-cut-solve-M157-M184-evidence-20261030/OPEN-actual-quartic-longitudinal-scalar-and-patchwise-full-metric-cut-solve.md",
+      "snapshot": "source/metric-quartic.md",
+      "bytes": 16450,
+      "sha256": "5665c33256a79a7c2124f1430c25070e167ddd607f54644cc23fc4f545c50750",
+      "scope": "scoped M185-reviewed quartic, both eliminations and changed-trace patchwise linear metric solve; no full frame/link/history matching"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-quartic-physical-Cauchy-scalar-and-metric-cut-solve-M157-M184-evidence-20261030/mandatory-quartic-scalar-and-changed-metric-trace-scope.md",
+      "snapshot": "source/metric-quartic-scope.md",
+      "bytes": 2149,
+      "sha256": "7d8636c732659d5ad1a9014b46402234fefa83efbbf8f25969847655fe86523d",
+      "scope": "inseparable compact-patch, exceptional-ray and separate finite-N funding scope"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-quartic-physical-Cauchy-scalar-and-metric-cut-solve-M157-M184-evidence-20261030/additive-actual-target-operator-norm-and-native-step-noninvariance.md",
+      "snapshot": "source/metric-cut-target-noninvariance.md",
+      "bytes": 6869,
+      "sha256": "09ac99383538687c0d203a033d0eb059d9c40248cc567df282a0cfdd052d0992",
+      "scope": "actual unweighted norm whole-band o(1) metric repair remains noninvariant under original native step; no order-one alternative excluded"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M185-R8-quartic-and-R7-additive-independent-duty-review-20261030/independent-review.md",
+      "snapshot": "source/M185-review.md",
+      "bytes": 10925,
+      "sha256": "79a6452be2859ac2bac0c91e0c855c74381e239b9158f71b2e8b01b282def038",
+      "scope": "scoped manual independent review; unfinished publication at campaigncutoff remains separate"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/M185-R8-quartic-and-R7-additive-independent-duty-review-20261030/MANDATORY-REVIEW-SCOPE.md",
+      "snapshot": "source/M185-review-scope.md",
+      "bytes": 1849,
+      "sha256": "75b5c8bcd7200b8d726c41a656f693e49e4a0ea761f6ddd59d0279215029444e",
+      "scope": "inseparable review scope: no full physical prescription, global-frequency or nonlinear credit"
     }
   ],
   "new_mathematical_acceptance": "none from this inventory; new Lean claims require independent fidelity approval",

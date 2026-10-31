@@ -2681,3 +2681,97 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.bl
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.blockProgramsLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "6277358e9683e3832b21a3086a1edfa0f50e27a06d84c6870624ab7bc278869c"
+
+[[statement]]
+key = "GAC2:metric-cauchy-organization"
+label = "GAC2:metric-cauchy-organization"
+title = "The original metric Cauchy organization and exact inverses"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:metric-cauchy-organization)"
+statement = """
+**GAC2:metric-cauchy-organization (original metric rows, guarded algebra).** Let R=k.k!=0,
+j!=0,j*j=-1, P=I-kk^T/R and Q(m)=(jR)^-1*(m*k-k*(k.m.k)/(2R)), with bilinear dots.
+The spatial remainder m-scalar(m)*P-j*(ku^T+uk^T), u=Q(m), has zero trace and right
+contraction with k; it is symmetric whenever m is symmetric. For the original metric
+Cauchy rows (m_sp,m_sp,t,m_0sp,m00,m_0sp,t,m00,t), retain both TT remainders, visible
+(u,Q(m_sp,t),chi0,m00,m_0sp,t,m00,t), H=R*scalar(m_sp), and the original Einstein M.
+Explicit organization and reconstruction are mutual inverses on the stated transverse and
+trace-free output domain, preserving symmetry in both directions on the physical20-row domain. The fixed physical N4 target is separately encoded as
+(q+4v4 I,2p+2j sym(k,X4),0,0,-2jv4 k,0). These are cut algebra identities;
+no actual native S_h solution, derivative existence, prescribed coordinate history or physical
+matching theorem is assumed or obtained.
+See [finding187](findings/187-original-twenty-metric-cauchy-organization.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.coordinatesLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.coordinatesLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:metric-leading-range-return"
+label = "GAC2:metric-leading-range-return"
+title = "The original leading normal range and visible source return"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:metric-leading-range-return)"
+statement = """
+**GAC2:metric-leading-range-return (leading coefficient, exact supplied source).** At native
+kappa, the leading remaining normal map is (c0,c)->(-101*R*c0/20600,
+(-2422/29973)*(-R*c+k*(k.c))). For R!=0 its range is exactly the normal targets
+(H,J) with k.J=0, and its kernel is exactly c0=0,c=a*k. An explicit guarded lift
+reconstructs every target in that range with its arbitrary longitudinal coefficient.
+For supplied visible blocks h^2*Y,h^2*X, their ordered Schur product is exactly
+h^4*Y*E*X. If E*V=I and V*s+X*c=target, the visible contribution is
+C*s=C*E*target-C*E*X*c. This retains the actual source subtraction; no nonzero-h
+rank, actual native remainder/inverse, changed prescription or physical realization follows.
+See [finding188](findings/188-leading-metric-normal-range-and-visible-source-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.leadingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.leadingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:signed-ordered-inverse-contacts"
+label = "GAC2:signed-ordered-inverse-contacts"
+title = "Original signed physical block and ordered inverse contacts"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:signed-ordered-inverse-contacts)"
+statement = """
+**GAC2:signed-ordered-inverse-contacts (literal physical basis and rational jet contacts).**
+For physical columns omega0=x*(t1 wedge t2),omega1=y*(t0 wedge t2),
+omega2=z*(t0 wedge t1), native A=-omega has the original torsion rows
+C*z with C=[[-1,-1,0],[1,0,-1],[0,1,-1]], and an explicit conversion to the earlier
+indexed connection basis. With v=(1,1,-1),w=(1,-1,-1), Bc=vv^T-I and
+Bc^-1=-I+vv^T/2, set H0=-A I-E ww^T,N0=-alpha I+2kappa ww^T.
+At the original rational constants N0,H0 are mutual inverses. Direct ordered link products
+give N1,N2; H1=-H0*N1*H0 and H2=H0*N1*H0*N1*H0-H0*N2*H0 obey the two inverse
+coefficient equations. The complete H1 table and three temporal/mixed H2 contractions
+are checked for all rational symbol inputs. Products are not commuted. These are exact
+signed coefficient identities, not a full24 frequency/contour inverse or analytic Taylor bound.
+See [finding189](findings/189-original-signed-physical-block-and-ordered-inverse-jets.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.signedLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.signedLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:quartic-two-return-coefficient"
+label = "GAC2:quartic-two-return-coefficient"
+title = "The supplied native quartic contacts with both elimination returns"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:quartic-two-return-coefficient)"
+statement = """
+**GAC2:quartic-two-return-coefficient (complete supplied return algebra).** Keep the original
+rational kappa,A,g,E,Hd,D,beta. For the supplied dependent fourth jet
+W4=-(Hd-D)*T*phi/Hd, supplied raw fourth divergence and full third-source derivative,
+the visible-return subtraction gives -Craw*T*phi with
+Craw=kappa*[Hd+(kappa*A^2+E)*(Hd-D)/Hd]/12. The bilinear cubic column
+b3=-i*kappa^2*g*A*rho*v/2 with top inverse-1/(beta*rho^2) contributes
+Ctop*(v.v), Ctop=kappa^4*g^2*A^2/(4beta); there is no conjugation.
+Both retained returns give Cstar=Craw+Ctop>kappa/24>0 and scalar
+-Cstar*|P k^[2]|^2. At k=(1,2,3), |P k^[2]|^2=38/7, so this supplied scalar is negative.
+Lean certifies these return formulas and guards; the original full40-to-Taylor extraction,
+actual dependent-jet recurrence and uniform remainder/inverse estimates remain separate duties.
+See [finding190](findings/190-quartic-coefficient-with-both-elimination-returns.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarticLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.quarticLaw"
+reviewed = ""
+review_text_sha256 = ""

@@ -1,0 +1,11 @@
+# Mandatory physical-Cauchy leading-block scope
+
+Read the full source together with this scope, original a5570827 plus mandatory6c2dafaf, eec52c84 plus lower0a10194b, and eaa5e9b0 ONLY WITH initial-cut correction cb440bb2 and original7533 scope. Source authority remains own M157/1137; later ROOT-reviewed supplements are separately attributed.
+
+The completed new result is the COMPLETE order-h² four-by-four reduced physical metric Cauchy block AFTER eliminating twelve visible coordinate jets, its exact rank3, and the exact remaining scalar Schur equation. The twelve-row elimination is proved to begin affecting the normal block only at h4; normal sources retain original curvature, full B inverse, electric transpose, both symmetric test slots, first lift and centering return. No claim of exact rank3 or rank4 at nonzero h is made. The scalar D_h and the actual N4 longitudinal rhs have not been evaluated.
+
+The physical target is all twenty first-seed metric Cauchy entries with TT(q,2p) fixed and original scalar/Navier/harmonic cut. Varying its sixteen coordinate traces is an explicitly changed trace, not an alteration of the actual prescription by implication. D_h a=R_h is sufficient only within the declared exact slow metric class (and any additional class satisfying the separately proved uniqueness hypotheses). It does not prove full frame/link/history matching. In particular N5 formal lapse repair is not the eight-row physical completion. The longitudinal condition at h5 is necessary only under the displayed delta c=O(h3) trace-order restriction.
+
+Funding is separately fixed finite N4 at M>=B4(r+6,J+8); the example r=J=18 uses466. All original true offsets, time halos, stopped weights, incoming adjoints and lower-coordinate eta are retained. No CAS/numerical mathematical evaluation was used.
+
+This source calculation0/description0 has a separate actual literal-reception preparation1, governed by mandatory-receiver001-binding-lookup-qualification.md in the sibling receiver evidence directory. Two available original/preserved pairs, no guards; no raw tool envelope export is invented. Earlier source calculation/description/preservation histories and immutable predecessors remain unchanged. Distinct ROOT review is required before scientific acceptance.
