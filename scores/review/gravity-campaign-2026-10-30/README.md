@@ -340,3 +340,44 @@ reports and five separate kernel replays. All five claims were independently app
 [audit](audit-independent-10.md), [per-key verdicts](verdict-independent-10.json)
 and [validation](validation-independent-10.json). All94 earlier approvals stand.
 Zero additional material native applications are credited; the campaign's R7/R8 target remains open.
+
+## B07/B08/E05–E07: prepared data, algebraic states and a fixed-band limit
+
+Five new pending submissions: GAC:prepared-connection-cost, GAC:forced-jet-graph,
+GAC:algebraic-state-transport, GAC:uncertainty-noise and GAC:gaussian-band-limit.
+Findings137–141 and literal section7 quotes specify the claims. All99 prior approvals stand.
+The fifteen Defs/Statements/proof files are new surfaces; no old text is intentionally changed.
+
+PreparedCost compares the approved signed block preparation with a reset under declared readings.
+The reset is inadmissible when z is nonzero, so it is not a comparison of two admitted physical
+prescriptions. Check the exact minimum over the broader odd-matching class and its equality case.
+The cost is a rational coefficient norm, not native energy or a whole-band repair norm.
+ForcedGraph constructs a nonzero prepared leading-jet graph and all-natural operator intertwining,
+including a complex approved-coefficient instance. Nonzero tail values need not be independent
+memory. Leading operator powers are not actual native time steps, and altered preparation requires
+its own physical admissibility. M179/M182's accepted native graph gap remains unchanged.
+
+StateTransport constructs actual algebraic positive pullbacks and invariance under intertwining.
+The vector-state/swap example is nontrivial. The trace obstruction excludes a literal iI commutator
+in positive finite dimension; it does not exclude finite Weyl relations or unbounded CCR operators.
+Read all four source-pins-E05 snapshots (the publication snapshot normalizes only absolute
+workspace links; separate original and snapshot hashes are recorded): M166 already supplies a native common-Weyl isomorphism and
+selected-band weak-* limits. This new algebraic proof is compatible with its map direction but does
+not newly close that accepted gap. Larger-domain invariant inclusion and native continuity remain.
+No C*-norm, representation-domain or strong-resolvent property follows from the algebraic class.
+
+QuantumNoise proves the exact Hermitian quadratic decomposition and positivity criterion, an actual
+real symplectic beam splitter, its square-root attenuation coefficients, elementary declared variance
+identity and noninjective discarded output. It does not construct a quantum channel or prove complete
+positivity, and it does not identify the native physical boundary/source/noise class. An initial
+statement parse grouped an arrow inside iff; explicit parentheses now record the intended conditional
+iff. No approved surface or source meaning was changed by this correction.
+
+BandLimit is an actual continuous-linear multiplication operator on C([-R,R],real), with operator
+norm error h*R^2/2 and a one-sided spacing limit for fixed R. The explicit h_n->0/escaping-frequency
+sequence has constant nonzero error. Check that no native, strong-resolvent, Weyl-label or nonlinear
+limit is inferred. All five investigations record failed/unverified full native transfers and propose
+zero additional material application credit. Independent review11 is required before approval.
+
+validation-B07-B08-E05-E06-E07.json records required checks, certificates, both drifts and five
+separate kernel replays. The root agent does not self-approve these claims.

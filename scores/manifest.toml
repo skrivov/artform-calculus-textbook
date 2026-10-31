@@ -1569,3 +1569,116 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.heatLaw"
 lean_proof = "Artform.Scores.GravityBridge.heatLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "26fd09847c19263786f488a51194fb4414e4ec5879d235bd2769cd5611e93edf"
+
+[[statement]]
+key = "GAC:prepared-connection-cost"
+label = "GAC:prepared-connection-cost"
+title = "Prepared native connection coefficient cost"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:prepared-connection-cost)"
+statement = """
+**GAC:prepared-connection-cost (declared block experiment and coefficient cost).** Use the
+approved signed native block and c_*(z)=(0,-2*z/103,2*z/103), for rational z.
+Define odd matching by c1-c2=-4*z/103 and coefficient cost C(c)=c0^2+c1^2+c2^2.
+The actual block equation implies odd matching, and c_* satisfies it. Every odd-matching c obeys
+C(c)=8*z^2/10609+c0^2+(c1+c2)^2/2. Thus C(c)>=8*z^2/10609, with equality exactly at c=c_*.
+For z nonzero, prepared and reset pairs have the same first reading z, but the declared connection
+reading c1-c2 is nonzero at c_* and zero at reset; reset fails the native block equation.
+The cost is a rational coefficient norm, not physical energy. This test does not compare two
+admitted physical prescriptions; the full original experiment/source class remains to be established.
+See [finding 137](findings/137-prepared-connection-cost-and-admissible-experiment-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.preparedCostLaw"
+lean_proof = "Artform.Scores.GravityBridge.preparedCostLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:forced-jet-graph"
+label = "GAC:forced-jet-graph"
+title = "Invariant prepared graph for forced leading jets"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:forced-jet-graph)"
+statement = """
+**GAC:forced-jet-graph (specified leading prepared graph).** Over any field K, with K-modules
+Y,Z, let r be nonzero, F:Y->Z linear, O_r(q,v)=(v,-r*q), and
+J_r,F(q,v)=(r^-2*F(q),r^-2*F(v),-r^-1*F(q),-r^-1*F(v)).
+For the declared triangular companion L(q,v,z)=(O_r(q,v),z1,z2,z3,F(q)),
+L(y,J(y))=(O_r(y),J(O_r(y))) and every natural operator power has the same intertwining.
+J(y)=0 if and only if F(q)=F(v)=0. These are operator powers on a specified leading graph,
+not native finite time steps. Nonzero prepared auxiliary coordinates on this graph are determined
+by the visible pair and do not by themselves imply independent dynamical memory.
+No full40 invariant lattice branch, original physical preparation or boundary/source matching follows.
+See [finding 138](findings/138-forced-leading-jet-graph-and-memory-transfer-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.forcedGraphLaw"
+lean_proof = "Artform.Scores.GravityBridge.forcedGraphLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:algebraic-state-transport"
+label = "GAC:algebraic-state-transport"
+title = "Algebraic state pullback and finite CCR scope"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:algebraic-state-transport)"
+statement = """
+**GAC:algebraic-state-transport (positive pullback in the stated class).** An algebraic positive
+state on a complex star algebra is a complex-linear functional s with s(1)=1 and, for every a,
+im(s(a* a))=0 and re(s(a* a))>=0, where a* denotes star(a).
+For every unital complex star-algebra homomorphism f:B->A, s composed with f is again such a state.
+If s is invariant under alpha:A->A and f intertwines beta:B->B with alpha, its pullback is beta-invariant.
+For two-by-two complex matrices, the explicit positive vector state s(A)=A00, pulled back along
+conjugation by the binary swap, sends Z=diag(1,-1) to-1, whereas s(Z)=1.
+For every positive finite n and complex n-by-n A,B, A*B-B*A is not i times the identity.
+This is algebraic positivity and an actual finite example. Continuity, C*-completion, native invariant
+inclusion and common quantum Hamiltonian domains are not inferred from the finite pilot.
+See [finding 139](findings/139-algebraic-state-transport-and-native-domain-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.stateTransportLaw"
+lean_proof = "Artform.Scores.GravityBridge.stateTransportLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:uncertainty-noise"
+label = "GAC:uncertainty-noise"
+title = "Uncertainty form and retained environment noise"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:uncertainty-noise)"
+statement = """
+**GAC:uncertainty-noise (declared form compatibility and dilation pilot).** For real y,c let
+M=[[y,i*c],[-i*c,y]] and Q(z)=re(star(z) dot M*z), for z in C^2.
+Then Q(z)=(y+c)*normSq(z0+i*z1)/2+(y-c)*normSq(z0-i*z1)/2.
+Consequently Q is nonnegative on every z exactly when |c|<=y.
+On two real canonical planes, B_r,t(x,e)=(r*x+t*e,-t*x+r*e) preserves the sum of their area forms
+when r^2+t^2=1. For eta in[0,1], r=sqrt(eta),t=sqrt(1-eta) meets this condition.
+The uncertainty test with c=(1-eta)/2 and eta<=1 is exactly y>=(1-eta)/2.
+A declared independent isotropic environment variance1/2 contributes t^2/2 to the output variance
+r^2*v+t^2/2. Keeping only the first output at r=t=1/sqrt(2) is not injective.
+This proves a form test and real dilation pilot, not construction or complete positivity of a quantum
+channel, native TT noise law, physical boundary state or source-preserving quotient.
+See [finding 140](findings/140-uncertainty-noise-and-native-boundary-consistency-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.quantumNoiseLaw"
+lean_proof = "Artform.Scores.GravityBridge.quantumNoiseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:gaussian-band-limit"
+label = "GAC:gaussian-band-limit"
+title = "Fixed-band Gaussian operator norm limit"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:gaussian-band-limit)"
+statement = """
+**GAC:gaussian-band-limit (one fixed operator topology and an enlarged-domain test).** On the
+real Banach space C([-R,R],R), define T_h by multiplication with exp(-h*xi^2/2).
+For h>=0,R>=0, its continuous-linear operator norm satisfies ||T_h-I||<=h*R^2/2.
+Hence ||T_h-I|| tends to0 as h tends to0 through nonnegative reals, for every fixed R.
+For h_n=1/(n+1) and xi_n=sqrt(2*(n+1)), h_n tends to0 but exp(-h_n*xi_n^2/2)=exp(-1).
+The absolute discrepancy |exp(-1)-1| is strictly positive and the discrepancy sequence does not
+tend to0. Thus this bound does not yield uniform convergence on all frequency labels.
+The domain is a fixed compact interval and the topology is the indicated continuous-linear operator
+norm. No native generator, Weyl-label norm, strong-resolvent or nonlinear gravity limit is inferred.
+See [finding 141](findings/141-fixed-band-gaussian-limit-and-escaping-frequency.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.bandLimitLaw"
+lean_proof = "Artform.Scores.GravityBridge.bandLimitLaw"
+reviewed = ""
+review_text_sha256 = ""

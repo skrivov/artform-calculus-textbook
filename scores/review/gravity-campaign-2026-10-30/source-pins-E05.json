@@ -1,0 +1,47 @@
+{
+  "investigation": "GAC-E05",
+  "status": "native selected-band premises inspected; no new native state transfer credited",
+  "pins": [
+    {
+      "path_relative_to_workspace": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M166-R7-R5-common-Weyl-algebra-and-native-stable-band-limit-UNREVIEWED-20261030.md",
+      "snapshot": "scores/review/gravity-campaign-2026-10-30/source/e05-common-weyl-source.md",
+      "sha256": "e991f04007b43f7d3d6111182c61a1a8df3da1dbdc05e8d66058c6e96700f9c5",
+      "bytes": 11312,
+      "scope": "selected native band source; later scoped acceptance supplied separately",
+      "snapshot_sha256": "e991f04007b43f7d3d6111182c61a1a8df3da1dbdc05e8d66058c6e96700f9c5",
+      "snapshot_bytes": 11312,
+      "snapshot_normalization": "none; exact literal"
+    },
+    {
+      "path_relative_to_workspace": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M166-reviewed-common-Weyl-limit-and-complete-T3-T4-scalar-contributions-20261030.md",
+      "snapshot": "scores/review/gravity-campaign-2026-10-30/source/e05-common-weyl-publication.md",
+      "sha256": "943b538025191331ceac06ec933ee9a8d8b2b740c8a86f5c5d7d5075335c4c77",
+      "bytes": 9389,
+      "scope": "published scoped acceptance",
+      "snapshot_sha256": "9865f60ff5380a859e89268dff1c851a56eaeb6afb3f19a0b4ec6af7cf794103",
+      "snapshot_bytes": 9149,
+      "snapshot_normalization": "Workspace-absolute link prefix replaced by five-level relative prefix for repository portability; source sha256/bytes refer to the original inspected literal."
+    },
+    {
+      "path_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-M166-common-Weyl-distinct-review-evidence-20261030/finished-distinct-manual-common-Weyl-and-stable-band-limit-review.md",
+      "snapshot": "scores/review/gravity-campaign-2026-10-30/source/e05-common-weyl-review.md",
+      "sha256": "0fb98ea21a5ed366adb189c6ee69c1615dd41b1648d5173dc3db9a50342b48e4",
+      "bytes": 9636,
+      "scope": "completed independent review",
+      "snapshot_sha256": "0fb98ea21a5ed366adb189c6ee69c1615dd41b1648d5173dc3db9a50342b48e4",
+      "snapshot_bytes": 9636,
+      "snapshot_normalization": "none; exact literal"
+    },
+    {
+      "path_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-M166-common-Weyl-distinct-review-evidence-20261030/mandatory-common-Weyl-review-scope-and-premise-qualification.md",
+      "snapshot": "scores/review/gravity-campaign-2026-10-30/source/e05-common-weyl-scope.md",
+      "sha256": "77e44699657cbca86fab57b9e268b85cd4aeb9487ab66e201162c32eb9e20f89",
+      "bytes": 2169,
+      "scope": "mandatory selected-band, topology and complex-sign scope",
+      "snapshot_sha256": "77e44699657cbca86fab57b9e268b85cd4aeb9487ab66e201162c32eb9e20f89",
+      "snapshot_bytes": 2169,
+      "snapshot_normalization": "none; exact literal"
+    }
+  ],
+  "limits": "The new Lean definition is algebraic positivity; it does not formalize the complete M166 analytic construction or a full-parent physical inclusion."
+}
