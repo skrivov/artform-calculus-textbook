@@ -2051,8 +2051,8 @@ See [finding157](findings/157-original-forty-coordinates-gram-and-star.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.coordinatesLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.coordinatesLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "621423797d050c9fa7b1646161c645c87a9068b0a1550975614b94b20c48f6b4"
 
 [[statement]]
 key = "GAC2:native-shift-adjoint"
@@ -2072,8 +2072,8 @@ See [finding158](findings/158-independent-periodic-shifts-and-incoming-transpose
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.shiftsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.shiftsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "5bfc19e39f104d65c83556fd1aaa73afc679e20f3e0f73341b5376c9e936e69c"
 
 [[statement]]
 key = "GAC2:native-ordered-plaquette-jet"
@@ -2094,8 +2094,8 @@ See [finding159](findings/159-ordered-plaquette-quadratic-jet-and-inverse-readin
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.plaquetteLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "5bf9b0d4f4c4bb17895a036f2ea65749cab6211e13844204e8c2763e29ebb0d1"
 
 [[statement]]
 key = "GAC2:native-five-summand-complement"
@@ -2115,8 +2115,8 @@ See [finding160](findings/160-five-summand-native-complement-and-gauge-contact.m
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.complementLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "d79f999fad3dca36ab5f8fdf912d87cc90650b7012eb8b5777bd226b84d69cae"
 
 [[statement]]
 key = "GAC2:native-flat-torsion-gauge"
@@ -2140,5 +2140,5 @@ See [finding161](findings/161-original-flat-torsion-and-six-lorentz-columns.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.torsionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "b23d1022f215a4e1c0d66bd847336d144ef830b83ddd36ab43637f0e36a34b6a"

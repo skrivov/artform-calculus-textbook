@@ -132,3 +132,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-30: `GAC:source-radical-audit` approved as `Artform.Scores.GravityBridge.Statement.sourceRadicalLaw` (text 59acb847a246)
 - 2026-10-30: `GAC:controlled-phase-equivalence` approved as `Artform.Scores.GravityBridge.Statement.controlledPhaseLaw` (text 3d6ac7e5d3f2)
 - 2026-10-30: `GAC:metric-frame-kinematics` approved as `Artform.Scores.GravityBridge.Statement.metricFrameLaw` (text 65f126c20b37)
+- 2026-10-30: `GAC2:native-forty-coordinate-gram` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.coordinatesLaw` (text 621423797d05)
+- 2026-10-30: `GAC2:native-shift-adjoint` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.shiftsLaw` (text 5bfc19e39f10)
+- 2026-10-30: `GAC2:native-ordered-plaquette-jet` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw` (text 5bf9b0d4f4c4)
+- 2026-10-30: `GAC2:native-five-summand-complement` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw` (text d79f999fad3d)
+- 2026-10-30: `GAC2:native-flat-torsion-gauge` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw` (text b23d1022f215)

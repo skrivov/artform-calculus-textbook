@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-30",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "27c17c0fe8d7b7db914efa2b09760ebf7291cdce",
+  "approved_count": 5,
+  "returned_count": 0,
+  "original_approvals_preserved": 119,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:native-forty-coordinate-gram",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.coordinatesLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.coordinatesLaw",
+      "review_text_sha256": "621423797d050c9fa7b1646161c645c87a9068b0a1550975614b94b20c48f6b4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 16,
+      "new_material_native_application": false,
+      "reason": "Exact40-slot packing and original(01,02,03,23,31,12) Lorentz coordinates, full eta-skew classification, original trace/Gram normalization, nondegeneracy and Hodge signs. Real/complex fields included as bilinear algebra; no physical quotient or mode count."
+    },
+    {
+      "key": "GAC2:native-shift-adjoint",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.shiftsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.shiftsLaw",
+      "review_text_sha256": "5bfc19e39f104d65c83556fd1aaa73afc679e20f3e0f73341b5376c9e936e69c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Actual independent pointwise shift/difference identities and finite periodic bilinear incoming transpose, with four-direction(Z/3)^4 witness. No infinite-background sum, conjugation or Hilbert-domain assumption substituted."
+    },
+    {
+      "key": "GAC2:native-ordered-plaquette-jet",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.plaquetteLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.plaquetteLaw",
+      "review_text_sha256": "5bf9b0d4f4c4bb17895a036f2ea65749cab6211e13844204e8c2763e29ebb0d1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 12,
+      "new_material_native_application": false,
+      "reason": "Actual ordered noncommutative degree-two fourfold product, guarded two-sided inverse jet and original inverse-reading contact; signed original plaquette letters and noncommuting Lorentz witness retained. No analytic exponential remainder asserted."
+    },
+    {
+      "key": "GAC2:native-five-summand-complement",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.complementLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.complementLaw",
+      "review_text_sha256": "d79f999fad3dca36ab5f8fdf912d87cc90650b7012eb8b5777bd226b84d69cae",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 7,
+      "new_material_native_application": false,
+      "reason": "All five original weights and both distinct diagonal transport contacts retained with equal diagonal field values. Exact first complement and mixed gauge-contact identity; nonzero3/8 example. No complete mixed full40 Ward conclusion."
+    },
+    {
+      "key": "GAC2:native-flat-torsion-gauge",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.torsionLaw",
+      "review_text_sha256": "b23d1022f215a4e1c0d66bd847336d144ef830b83ddd36ab43637f0e36a34b6a",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 15,
+      "new_material_native_application": false,
+      "reason": "All16+24 entries in actual flat torsion, antisymmetry, arbitrary-profile Lorentz columns and commuting curvature differences. Original six unordered faces, indefinite signs and exact2*kappa variation retained; no full curvature-plus-torsion force/kernel inferred."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/Full40/CoordinatesDefs.lean": "e1117e26c4c265979da5364ceda30ca2f5759058f86b9aab3ebf2dc939fdad47",
+    "scores/ArtformScores/GravityBridge/Native/Full40/CoordinatesStatements.lean": "ddb692baff136fc5935de915bdf581e6910d2eeaf7c2b8b287c31a55f9ae4ec5",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Coordinates.lean": "e91d8e8cb32aa996596744a829c59553ef116a71b7e861b044022fb8c2077430",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ShiftsDefs.lean": "c2add3450384e387d88014bc24a390f60936f5adc040ad6d795580f97ad87cbd",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ShiftsStatements.lean": "6090c5ae3cf859c44cbec7702febe70e698b6a258563d4bd402ff9dfa8614f13",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Shifts.lean": "7b36d3d1b1ddc8a95c76f422a3614d18a001226fbdeea36d4da343c90ca7f76f",
+    "scores/ArtformScores/GravityBridge/Native/Full40/PlaquetteDefs.lean": "31843ae3dce6f8d26532c4acf6c423dd12170a88a1616968015cc8d1e2d49811",
+    "scores/ArtformScores/GravityBridge/Native/Full40/PlaquetteStatements.lean": "b8b381dd0fa73282cf0f8b47b19e0b397619a501db2fbf4d9fd9a3394178b3a4",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Plaquette.lean": "a8009d1eda72174c7468c77c4dabb57b2f89c04e27bb3cab02a797582b643b9b",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ComplementDefs.lean": "d3778e90f1e75df05878385991ffe71a4aa7c7e9decb0289edbdd9b1f4ac8f75",
+    "scores/ArtformScores/GravityBridge/Native/Full40/ComplementStatements.lean": "b9e3225acdc2df19169b393871faa0b4a4ed426a1506f8ac04a1a6748ee17ef7",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Complement.lean": "10b3cf07d6415d3ee91a70599419b3eb85be7a263673c91579e102c299d7fba6",
+    "scores/ArtformScores/GravityBridge/Native/Full40/TorsionDefs.lean": "547c475106a3858655678a4e1fc86608be76f04aeeeda0bce51daefdd9feecd5",
+    "scores/ArtformScores/GravityBridge/Native/Full40/TorsionStatements.lean": "abfabfed0167071343aa744d4ca839e187a94614ff5278ddbe5e5693e7da5621",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Torsion.lean": "b56c31ac807d061b8538d8eadbcc5d11dd635b0ea2a1a164c66460ec038ffee0"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "c962e99456f6c534d46adc27a743bc18dcfebe2652e2410011e44668c22540d8",
+    "physics/ledgers/lattice-waves/findings/157-original-forty-coordinates-gram-and-star.md": "136ab49a637cf230338bf6fb497bfa730b0d4ac07eb00e13a7bc960953451b58",
+    "physics/ledgers/lattice-waves/findings/158-independent-periodic-shifts-and-incoming-transpose.md": "30ed74ee0688852e55ca679cdb1b6baa8282253e4f4f6f63997bf543df9b971f",
+    "physics/ledgers/lattice-waves/findings/159-ordered-plaquette-quadratic-jet-and-inverse-reading.md": "d17332e986716bad5b10bb796f94a86fbe7a7004228615620ef8e76290a44c86",
+    "physics/ledgers/lattice-waves/findings/160-five-summand-native-complement-and-gauge-contact.md": "c259c4233cd68f085a6b001deee287a32157b0c44bb02ceaf17fd8b0a7e0dfea",
+    "physics/ledgers/lattice-waves/findings/161-original-flat-torsion-and-six-lorentz-columns.md": "b70e68f5ec0e633cf01632363e80ec6cbb93ee52294da7e422beae9f04054771"
+  },
+  "source_pins_sha256": "b872842695bda5491174b1175425541df80b191dc43714371f61e329b8ae3100",
+  "source_pins_authenticated": true,
+  "exact_original_snapshot_pairs_authenticated": 14,
+  "source_acceptance_limits": [
+    "M185 reviewed but publication unfinished at cutoff.",
+    "M186 accepts copied-frame necessary connection-value reduction under mandatory scope, not a divJ5 value.",
+    "Prospective four-group longitudinal certificate and receiver qualification remain unreviewed.",
+    "Exact coordinate Gram and description001 background/operator qualifications retained."
+  ],
+  "independent_arithmetic": "arithmetic-independent-01.py",
+  "independent_arithmetic_sha256": "5c48b33e49fb5b4f5ca49f0dfc217272704459a58c49f8ccf041ee97e028fcba",
+  "independent_arithmetic_result": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-01.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.047,
+    "gram_entries": 36,
+    "star_basis_checks": 6,
+    "periodic_sites": 81,
+    "bilinear_shift_checks": 4,
+    "unit_shift_separation_checks": 16,
+    "ordered_inverse_and_contact": true,
+    "two_diagonal_paths": true,
+    "torsion_unit_density": "-1/101",
+    "torsion_unit_derivative": "-2/101",
+    "source_sha256": {
+      "scores/ArtformScores/GravityBridge/Native/Full40/CoordinatesDefs.lean": "e1117e26c4c265979da5364ceda30ca2f5759058f86b9aab3ebf2dc939fdad47",
+      "scores/ArtformScores/GravityBridge/Native/Full40/ShiftsDefs.lean": "c2add3450384e387d88014bc24a390f60936f5adc040ad6d795580f97ad87cbd",
+      "scores/ArtformScores/GravityBridge/Native/Full40/PlaquetteDefs.lean": "31843ae3dce6f8d26532c4acf6c423dd12170a88a1616968015cc8d1e2d49811",
+      "scores/ArtformScores/GravityBridge/Native/Full40/ComplementDefs.lean": "d3778e90f1e75df05878385991ffe71a4aa7c7e9decb0289edbdd9b1f4ac8f75",
+      "scores/ArtformScores/GravityBridge/Native/Full40/TorsionDefs.lean": "547c475106a3858655678a4e1fc86608be76f04aeeeda0bce51daefdd9feecd5"
+    }
+  },
+  "plan_publication_fix": {
+    "action": "Force-add the ignored exact PLAN.md mirror requested by root, without changing its content.",
+    "PLAN.md_sha256": "81e26f1df5b358f2097cae216b8e89a19fc9ff7c01b86a69be0098a6eb54a607",
+    "PLAN.json_sha256": "740f5fb0c7131547cfc3129392e8c734caa007d807cba9e96bd9fb9729c4cb9a",
+    "matches_prior_read_only_plan_review": true,
+    "ledger_mirrors_exact": true,
+    "source_inventory_or_publication_rounds_credited": 0
+  },
+  "efficiency_ruler_sha256": "d11d5b378fd4a8ac4086860886075cc2feab4ea1df934ed0a6add693f3f93d5c",
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "retrospective_efficiency_saving_established": false,
+    "classification": "Faithful original-coordinate/formal-coefficient reconstructions and supporting periodic identities.",
+    "uninstantiated_bridges": [
+      "complete original quadratic variation and full curvature/contact Hessian",
+      "mixed six-column Ward identity against arbitrary independent tests",
+      "actual longitudinal target coefficient evaluation and native domain",
+      "physical source/preparation/current/quotient and energy identification",
+      "independent connection/frame/link/history and full original R7/R8 compatibility"
+    ]
+  },
+  "audit": "audit-independent-01.md",
+  "validation": "validation-independent-01.json"
+}

@@ -1,4 +1,4 @@
-# R7/R8 120-round campaign: independent review01 handoff
+# R7/R8 120-round campaign: independent review01
 
 First five substantive rounds G2-A01–A05; findings157–161; five new GAC2 claims. The119 prior approvals stand. [Plan](PLAN.md), [allocation](PLAN.json), [source pins](source-pins.json) and [efficiency ruler](efficiency-ruler.json) are included. Initial plan/source review was read-only, by the same distinct reviewer; it approved no mathematical claim.
 
@@ -9,3 +9,18 @@ Review every literal manifest claim against section8 of ledger ALGEBRA-OF-SCORES
 All five are faithful coefficient/domain reconstructions or supporting identities. No new material native application, physical quotient, mode count or retrospective efficiency saving is proposed. The later target value remains unreviewed. Future retrospective claims require the frozen same-problem work ruler and held-out tests.
 
 Run required build/report/status/tree/certificate checks, both drifts and separate kernel replay of each new module. Approve only passing literal claims through ledger_status.py; preserve all119 prior entries. Record audit/verdict/compact validation01 and publish/push. Root authors; one distinct reviewer judges. No human approval is a gate.
+
+## Independent disposition
+
+All five literal claims were independently approved at freeze
+`27c17c0fe8d7b7db914efa2b09760ebf7291cdce`; none returned. See the distinct
+[audit](audit-independent-01.md), [per-key verdicts](verdict-independent-01.json),
+[validation](validation-independent-01.json) and [exact arithmetic replay](arithmetic-independent-01.py).
+All119 baseline approvals stand unchanged, giving124 approved entries in total.
+No implementation was edited. Zero additional material native applications or
+retrospective efficiency savings are credited; the full40/operator and physical bridges remain open.
+
+The ignored PLAN.md has been force-added unchanged after verifying its exact ledger mirror
+and the hashes from the earlier read-only plan review. Source inventory, review and this
+publication repair consume no research round. M185's publication status and M186's reduction
+scope remain as pinned; the newer longitudinal value certificate remains unreviewed.
