@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 63 |
-| stated | 7 |
+| proved | 70 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **70** |
 
@@ -78,10 +78,10 @@
 | T12:gap | A fixed class without a palindrome | proved | `Artform.Scores.Statement.palindromeGap` / `Artform.Scores.Leapfrog.palindromeGap` | approved 2026-10-30 |
 | T13:presentations | The presentations of the step groups | proved | `Artform.Scores.Statement.stepPresentations` / `Artform.Scores.StepGroup.stepPresentations` | approved 2026-10-30 |
 | T13:psl-a5 | PSL(2, 5) is the alternating group | proved | `Artform.Scores.Statement.pslAlternating` / `Artform.Scores.pslAlternating` | approved 2026-10-30 |
-| GAC:relations | Typed relations extend score laws | stated | `Artform.Scores.GravityBridge.Statement.typedRelations` / `Artform.Scores.GravityBridge.typedRelations` | awaiting review |
-| GAC:realization | Invariance and all-time realization | stated | `Artform.Scores.GravityBridge.Statement.invariantRealization` / `Artform.Scores.GravityBridge.invariantRealization` | awaiting review |
-| GAC:native-distinct-block | Signed native Schur cancellation | stated | `Artform.Scores.GravityBridge.Native.Statement.distinctBlock` / `Artform.Scores.GravityBridge.Native.distinctBlock` | awaiting review |
-| GAC:temporal-witness | Rational transverse traceless symbol witness | stated | `Artform.Scores.GravityBridge.Native.Statement.temporalWitness` / `Artform.Scores.GravityBridge.Native.temporalWitness` | awaiting review |
-| GAC:defect-stability | Quantitative realization defect | stated | `Artform.Scores.GravityBridge.Statement.defectStability` / `Artform.Scores.GravityBridge.defectStability` | awaiting review |
-| GAC:connection-preparation | Native connection preparation and source term | stated | `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` / `Artform.Scores.GravityBridge.Native.connectionPreparationLaw` | awaiting review |
-| GAC:finite-processing | Complete processing of finite source kernels | stated | `Artform.Scores.GravityBridge.Statement.finiteProcessing` / `Artform.Scores.GravityBridge.finiteProcessing` | awaiting review |
+| GAC:relations | Typed relations extend score laws | proved | `Artform.Scores.GravityBridge.Statement.typedRelations` / `Artform.Scores.GravityBridge.typedRelations` | approved 2026-10-30 |
+| GAC:realization | Invariance and all-time realization | proved | `Artform.Scores.GravityBridge.Statement.invariantRealization` / `Artform.Scores.GravityBridge.invariantRealization` | approved 2026-10-30 |
+| GAC:native-distinct-block | Signed native Schur cancellation | proved | `Artform.Scores.GravityBridge.Native.Statement.distinctBlock` / `Artform.Scores.GravityBridge.Native.distinctBlock` | approved 2026-10-30 |
+| GAC:temporal-witness | Rational transverse traceless symbol witness | proved | `Artform.Scores.GravityBridge.Native.Statement.temporalWitness` / `Artform.Scores.GravityBridge.Native.temporalWitness` | approved 2026-10-30 |
+| GAC:defect-stability | Quantitative realization defect | proved | `Artform.Scores.GravityBridge.Statement.defectStability` / `Artform.Scores.GravityBridge.defectStability` | approved 2026-10-30 |
+| GAC:connection-preparation | Native connection preparation and source term | proved | `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` / `Artform.Scores.GravityBridge.Native.connectionPreparationLaw` | approved 2026-10-30 |
+| GAC:finite-processing | Complete processing of finite source kernels | proved | `Artform.Scores.GravityBridge.Statement.finiteProcessing` / `Artform.Scores.GravityBridge.finiteProcessing` | approved 2026-10-30 |

@@ -1,6 +1,9 @@
 # Gravity calculus foundation submission
 
-30 October 2026. Seven new checked proof submissions; independent fidelity review pending.
+30 October 2026. Seven new checked proof submissions independently approved at freeze
+`bc5571ce53e92185fbbae3ff3c4a0b54b63abead`; none returned. See the distinct
+[audit](audit-independent-01.md), [per-key verdicts](verdict-independent-01.json) and
+[independent validation](validation-independent-01.json).
 The original sixty-three scores entries retain their independent approvals.
 
 ## Statements to review
@@ -48,10 +51,11 @@ Definitions, statements, proofs and positive examples are under scores/ArtformSc
 
 The bounded historical source/review snapshots in source/ and source-pins.json preserve provenance.
 Their old UNREVIEWED headings are historical; the distinct review gives the inherited scoped acceptance.
-They do not approve these new Lean submissions.
+They do not approve these new Lean submissions; the distinct audit above supplies that review.
 
 validation-checkpoint-01.json belongs to the first four submissions at the first checkpoint.
-The later quantitative-defect submission has its own validation record.
+The later quantitative-defect, connection-preparation and finite-processing submissions have their own
+historical validation records. Their pending-review fields describe the submission checkpoints.
 
 ## Reproduction and verdict
 

@@ -781,8 +781,8 @@ See [finding 102](findings/102-typed-evolution-and-invariant-realization.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.typedRelations"
 lean_proof = "Artform.Scores.GravityBridge.typedRelations"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "66fd5d26d57b233654e6bcc897c4c381840e3459ca4bdf5a789b56626fbb2ce6"
 
 [[statement]]
 key = "GAC:realization"
@@ -798,8 +798,8 @@ See [finding 102](findings/102-typed-evolution-and-invariant-realization.md), in
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.invariantRealization"
 lean_proof = "Artform.Scores.GravityBridge.invariantRealization"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "d7b51f4a725bec5649e92724c7f218740ef2ca4bb4f2e17855cb7e0bac53afc6"
 
 [[statement]]
 key = "GAC:native-distinct-block"
@@ -816,8 +816,8 @@ See [finding 103](findings/103-native-signed-block-and-temporal-symbol.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Statement.distinctBlock"
 lean_proof = "Artform.Scores.GravityBridge.Native.distinctBlock"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "68996920bd3ef56d8bc265f11acd932014be83e56c909be665c70c1db33d49fa"
 
 [[statement]]
 key = "GAC:temporal-witness"
@@ -834,8 +834,8 @@ transfer to admitted packets are separate obligations; see
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Statement.temporalWitness"
 lean_proof = "Artform.Scores.GravityBridge.Native.temporalWitness"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "48daadc1e257ff623bd5452848b127e023fcf8b6675167c5bb4e16b5728a9830"
 
 [[statement]]
 key = "GAC:defect-stability"
@@ -853,8 +853,8 @@ positive example and the native generator/step distinction.
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.defectStability"
 lean_proof = "Artform.Scores.GravityBridge.defectStability"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "46d44b029c2e065a655758bebcca107533211c98de0a3fac9c2a63c39eb5629b"
 
 [[statement]]
 key = "GAC:connection-preparation"
@@ -875,8 +875,8 @@ or effective gravity action. See [finding 105](findings/105-native-connection-pr
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.connectionPreparationLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "68d4c114fee87516fd2e6f34b611e4f23fa3190ebe800f852f881ecf7b9c3707"
 
 [[statement]]
 key = "GAC:finite-processing"
@@ -897,5 +897,5 @@ See [finding 106](findings/106-complete-processing-of-finite-source-kernels.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.finiteProcessing"
 lean_proof = "Artform.Scores.GravityBridge.finiteProcessing"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "5052198e15229750aa741064f105e00d6e62aaa078b125ac89810cd1b25bf2c4"

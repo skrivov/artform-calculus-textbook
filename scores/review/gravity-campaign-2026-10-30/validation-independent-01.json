@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-30",
+  "reviewed_commit": "bc5571ce53e92185fbbae3ff3c4a0b54b63abead",
+  "independent_review": true,
+  "full_build": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail"
+    ],
+    "exit_code": 0,
+    "result": "Build completed successfully (9245 jobs)."
+  },
+  "reports": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "415 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "kernel_replays": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Relations"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Realization"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.DistinctBlock"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.TemporalWitness"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Stability"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.Preparation"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Kernels"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "proof_target_and_axiom_validation": "All seven exact tagged targets; only allowed axioms.",
+  "approved_surface_drift": [],
+  "source_pin_validation": "All four snapshots match both recorded hashes and live originals.",
+  "manifest_quotes": "All seven quotes occur literally in canonical ledger section 7.",
+  "independent_exact_rational_recalculation": {
+    "determinant": "2058146/1030301",
+    "schur_at_z_1": [
+      "-101/103",
+      "-101/103",
+      "0"
+    ],
+    "momentum_squared": "14",
+    "diagonal_contraction": "-36/35",
+    "temporal_coefficient": "36/505",
+    "stationary_preparation_at_z_1": [
+      "0",
+      "-2/103",
+      "2/103"
+    ],
+    "connection_action_at_z_1": "4/10403",
+    "complete_density_at_z_1": "-2/103",
+    "tt_inputs": [
+      "23/10",
+      "-3/4",
+      "-3/2"
+    ]
+  },
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "stdout": "ℹ [3788/3838] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9245 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "418 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    }
+  ]
+}
