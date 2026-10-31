@@ -162,3 +162,7 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `GAC2:temporal-forcing-factor-cancellation` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.tTForceLaw` (text adcc7f6fd61f)
 - 2026-10-31: `GAC2:full24-homogeneous-decomposition` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.homogeneousLaw` (text 78e41413dd59)
 - 2026-10-31: `GAC2:verified-native-block-programs` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.blockProgramsLaw` (text 6277358e9683)
+- 2026-10-31: `GAC2:metric-cauchy-organization` approved as `Artform.Scores.GravityBridge.Native.MetricCut.Statement.coordinatesLaw` (text 9a2e8216a40c)
+- 2026-10-31: `GAC2:metric-leading-range-return` approved as `Artform.Scores.GravityBridge.Native.MetricCut.Statement.leadingLaw` (text c8ca7df08e82)
+- 2026-10-31: `GAC2:signed-ordered-inverse-contacts` approved as `Artform.Scores.GravityBridge.Native.InverseJets.Statement.signedLaw` (text 2f9adeec4d92)
+- 2026-10-31: `GAC2:quartic-two-return-coefficient` approved as `Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarticLaw` (text 76d948f92fa5)

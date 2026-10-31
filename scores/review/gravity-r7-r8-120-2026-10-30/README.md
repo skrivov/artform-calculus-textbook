@@ -198,3 +198,14 @@ No new native physical gate or efficiency saving is claimed by these four submis
 Root review06 validation passed all16 checks, including four separate kernel replays,
 all required certificate checks and empty approved-text drifts. All149 earlier manifest
 entries remain identical; four new entries are unreviewed.
+
+All four review06 claims were independently approved on31 October2026 at freeze
+`eee6b62ff40fdd23c6f1f50132e7c3a6705977ac`; none returned. See the distinct
+[audit](audit-independent-06.md), [per-key verdicts](verdict-independent-06.json),
+[validation](validation-independent-06.json) and [exact complex-rational/matrix replay](arithmetic-independent-06.py).
+All149 earlier approvals stand unchanged, giving153 approved entries in total.
+The symmetric physical domain, bilinear transpose, original signed basis and both supplied
+quartic returns passed independent fidelity and kernel checks. No implementation was edited
+and no fidelity repair was needed after freeze. Zero additional native material application or
+efficiency saving is credited; actual coefficient/jet/target, contour/norm and physical
+frame/link/history identifications remain separate. D05–D10 are outside this review.

@@ -2703,8 +2703,8 @@ See [finding187](findings/187-original-twenty-metric-cauchy-organization.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.coordinatesLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.coordinatesLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "9a2e8216a40cae802ef61b64d23abe7a74ca4dee55dd25a5bf33595f9cbdee9f"
 
 [[statement]]
 key = "GAC2:metric-leading-range-return"
@@ -2725,8 +2725,8 @@ See [finding188](findings/188-leading-metric-normal-range-and-visible-source-ret
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.leadingLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.leadingLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c8ca7df08e8281ecdb76c13f37a3fe99aec7637f83b040a9ee8e981a24362238"
 
 [[statement]]
 key = "GAC2:signed-ordered-inverse-contacts"
@@ -2749,8 +2749,8 @@ See [finding189](findings/189-original-signed-physical-block-and-ordered-inverse
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.InverseJets.Statement.signedLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.InverseJets.signedLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "2f9adeec4d92d4d0810ec44339a8272e5bc6643f99900ba009da9216833a322e"
 
 [[statement]]
 key = "GAC2:quartic-two-return-coefficient"
@@ -2773,5 +2773,5 @@ See [finding190](findings/190-quartic-coefficient-with-both-elimination-returns.
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.MetricCut.Statement.quarticLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.MetricCut.quarticLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "76d948f92fa5bbd53e75f5636c6624ad36312fe52ff6ac7c669c9af572bc8951"
