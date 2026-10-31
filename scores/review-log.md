@@ -147,3 +147,8 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `GAC2:four-shift-original-force-test` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw` (text 83254c6c9a87)
 - 2026-10-31: `GAC2:indexed-original-connection-blocks` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw` (text f360ba2d43b4)
 - 2026-10-31: `GAC2:source-dependent-action-reconstruction` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw` (text 284ff03d30cb)
+- 2026-10-31: `GAC2:metric-coframe-lorentz-isomorphism` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.splitLaw` (text 331f150beb11)
+- 2026-10-31: `GAC2:coframe-cut-value-velocity` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.cutJetsLaw` (text 84771c99d30f)
+- 2026-10-31: `GAC2:connection-residual-return` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.residualReturnLaw` (text c4fb1dba1965)
+- 2026-10-31: `GAC2:connection-first-order-sampling` approved as `Artform.Scores.GravityBridge.Native.Retrospective.Statement.samplingLaw` (text 96105ec5f15c)
+- 2026-10-31: `GAC2:lower-boost-physical-native-sign` approved as `Artform.Scores.GravityBridge.Native.Full40.Statement.physicalSignLaw` (text 025e962e5f11)

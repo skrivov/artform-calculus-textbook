@@ -112,3 +112,14 @@ frozen original/scope sources, especially connection-target-reduction and its ma
 Run required checks/certificates,both drifts and5 separate kernels. Record independent audit,
 verdict and compact validation04, approve only faithful passing claims through tooling,
 preserve134 entries and publish/push. Same one independent reviewer; root authors.
+
+All five review04 claims were independently approved on31 October2026 at freeze
+`912b840c561810f3491e3ef04e4498673f90eec6`; none returned. See the distinct
+[audit](audit-independent-04.md), [per-key verdicts](verdict-independent-04.json),
+[validation](validation-independent-04.json) and [exact arithmetic replay](arithmetic-independent-04.py).
+All134 earlier approvals stand unchanged, giving139 approved entries in total.
+The original coframe split and lower-coordinate signs agree with the frozen scoped source.
+The supplied jets, retained residual and formal sampling retain all declared limitations:
+no native contour inverse, actual analytic derivative or stationary graph is instantiated.
+No implementation was edited. Zero additional material native application or retrospective
+efficiency saving is assigned; physical prescriptions and independent connection/history remain open.

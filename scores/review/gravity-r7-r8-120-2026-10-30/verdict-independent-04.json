@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "912b840c561810f3491e3ef04e4498673f90eec6",
+  "approved_count": 5,
+  "returned_count": 0,
+  "original_approvals_preserved": 134,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:metric-coframe-lorentz-isomorphism",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.splitLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.splitLaw",
+      "review_text_sha256": "331f150beb11db2dae3a9b00a54bdb7bab52f25d9d18123ee8663daf4bcddb30",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 9,
+      "new_material_native_application": false,
+      "reason": "Original internal-row eta metric and six-coordinate Lambda with explicit inverse reconstruction, both readouts and actual readout linear equivalence. Nonzero pure Lorentz example; no physical quotient or independent connection return."
+    },
+    {
+      "key": "GAC2:coframe-cut-value-velocity",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.cutJetsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.cutJetsLaw",
+      "review_text_sha256": "84771c99d30f9f52817540d9b324491305bfbce3253267939fa5491417f9266b",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 8,
+      "new_material_native_application": false,
+      "reason": "Exact iff on arbitrary supplied Fin2 coframe jets, original nonzero metric-kernel boost and registered identical-coframe/different-connection counterexample. No analytic derivative or native field-equation identification."
+    },
+    {
+      "key": "GAC2:connection-residual-return",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.residualReturnLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.residualReturnLaw",
+      "review_text_sha256": "c4fb1dba19654de6a28216b060f92405d0de93875c2d42efa17528ab3019fe54",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 2,
+      "new_material_native_application": false,
+      "reason": "Exact negative residual return with ED=Id for the forward implication, DE=Id for the converse, both for iff, and nonzero residual example. No native contour or instantaneous inverse instantiated."
+    },
+    {
+      "key": "GAC2:connection-first-order-sampling",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Retrospective.Statement.samplingLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Retrospective.samplingLaw",
+      "review_text_sha256": "96105ec5f15ce13260f0b75f7c5e82fa589fdeafc73c891b5958243c87b3fabc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Exact inverse formal center/physical coefficient shears with half-link term and entire -2*kappa*E*R contact. E arbitrary, including singular; no native inverse, analytic expansion or curvature-only replacement."
+    },
+    {
+      "key": "GAC2:lower-boost-physical-native-sign",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.Full40.Statement.physicalSignLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.Full40.physicalSignLaw",
+      "review_text_sha256": "025e962e5f1138414b3df1d399fa6aec74ff8db39f52a235b1f4589072560b45",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 12,
+      "new_material_native_application": false,
+      "reason": "Original lower-coordinate eta signs, all boost/23,31,12 rotation coefficients and full readout identities. Physical negative derivative column leaves positive connection upon subtraction; P=-h*omega gives native positive h*derivative. No actual derivative or stationary graph inferred."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/Full40/SplitDefs.lean": "93ff66e6edb7df5dfad7663e15004be9421d8fab49367e557444fd294b4c2921",
+    "scores/ArtformScores/GravityBridge/Native/Full40/SplitStatements.lean": "0c9dc06fd58fd0d949fb629eb800050fb1b2f863990256c19208734c14c71d64",
+    "scores/ArtformScores/GravityBridge/Native/Full40/Split.lean": "c87ff21bfb0f844d3e28835e9ce8a3a99ab97b796cceaa6545b62598a72aa750",
+    "scores/ArtformScores/GravityBridge/Native/Full40/CutJetsDefs.lean": "002ec25aa6f2af4d385e065192d6768d7d105f151ae05105f833388596e10ec7",
+    "scores/ArtformScores/GravityBridge/Native/Full40/CutJetsStatements.lean": "43eb96a4278f7fc424b9853d9cab3fcd5681e6cac9c6f8d10bdec234dca3a3e8",
+    "scores/ArtformScores/GravityBridge/Native/Full40/CutJets.lean": "aadcffdaf31d800320fd1209247b7bbad15d716a3302c69613768a32cb875589",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/ResidualReturnDefs.lean": "abff0aff2d4e36a53d074b3adb3eb2546015b5bc7c9c25dc13da0002ea8d2106",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/ResidualReturnStatements.lean": "f4a2ef8dc80d0b0b8a505a1eb883eacf9dd6066aa82389355936d82d71c92693",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/ResidualReturn.lean": "89a41f977028201619c33dc33de001e06433d0796d4e41bb99684ffb969542eb",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SamplingDefs.lean": "ecb42a1bf79474534473c9005c5e54ee09f41192a5ed359b017979398be122c9",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/SamplingStatements.lean": "e3e8da2fe8cc63809e686172fd5c6df4624b66eeefb95f5c067739ca7671a00a",
+    "scores/ArtformScores/GravityBridge/Native/Retrospective/Sampling.lean": "3f0f837d9510fd33addc94d8bd928ab033ffb162a30ae2ffc4d2ed24804f2fb5",
+    "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSignDefs.lean": "60dfcb0ab9069d1689b441fe4736184b823b459eb941ffa10e819dc1a5f3742b",
+    "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSignStatements.lean": "1cad8bcb4e7dd59f963a95575ab68967e51336f7200d57a02798aaadd4617012",
+    "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSign.lean": "5a8a87b24bcf6cc88024c58c945af6b5792f0680f99a4092ffb2dd6847ffd7ba"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "72c251c2c98151d2867d92f158c5b2e39b382a2a8d8ef99dc6893fc5ecd79e91",
+    "physics/ledgers/lattice-waves/findings/172-metric-and-coframe-lorentz-isomorphism.md": "121bb76e4b7bf5332e3fa3cb3ea6b80c7357b5964aff8d4f2cf96848aaccb939",
+    "physics/ledgers/lattice-waves/findings/173-coframe-cut-jet-recovery-and-connection-limit.md": "20c1e7665dcab91f6398998a8389fd34fba0279ce1942f09642d61d4fb0525df",
+    "physics/ledgers/lattice-waves/findings/174-independent-connection-residual-return.md": "ea3a00afc4be91fd6883cf9c4442a468835d337e630ddd86abc819413a69d468",
+    "physics/ledgers/lattice-waves/findings/175-centered-physical-first-return-sampling.md": "18504757ee911ce9aec92022e1e3977a330c23d846e650ee1956130888dc8726",
+    "physics/ledgers/lattice-waves/findings/176-lower-boost-physical-native-connection-sign.md": "9d755dfb670b59a5fccf97bf672d3348ed264b8a8de101bf4f81ca81840341f8"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "b872842695bda5491174b1175425541df80b191dc43714371f61e329b8ae3100",
+  "source_pins_authenticated": true,
+  "exact_original_snapshot_pairs_authenticated": 14,
+  "cut_scope": {
+    "slots": "arbitrary supplied Fin2 values",
+    "actual_derivative_identification": false,
+    "independent_connection_counterexample_retained": true
+  },
+  "residual_scope": {
+    "forward_inverse": "E composed with D is identity",
+    "converse_inverse": "D composed with E is identity",
+    "residual_sign": "negative E*r",
+    "native_contour_inverse_supplied": false
+  },
+  "sampling_scope": {
+    "formal_first_coefficient": true,
+    "E_is_arbitrary": true,
+    "native_B_inverse_proved": false,
+    "entire_signed_contact_retained": "-2*kappa*E*R*f",
+    "analytic_remainder_proved": false
+  },
+  "gauge_coordinate_convention": {
+    "physical_column": "(lie(gamma),-dgamma)",
+    "subtract_from_gradient": "(symmetric frame,+dgamma)",
+    "native_conversion": "P=-h*omega maps the column to (lie(gamma),+h*dgamma)",
+    "zero_spacing": "forward scaling identity only, not an inverse conversion"
+  },
+  "independent_arithmetic": "arithmetic-independent-04.py",
+  "independent_arithmetic_sha256": "a1c7cf8618175c6c88302380fc930c7fdd8ef167bd3207bd08e865d55ebca18d",
+  "independent_arithmetic_result": {
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-04.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.036,
+    "all16_frame_basis_and_mixed_rational_reconstruction": true,
+    "all10_symmetric_basis_times_all6_Lorentz_readouts": true,
+    "original_lower_gradient_and_all_rotation_signs": true,
+    "physical_native_sign_at_zero_positive_negative_h": true,
+    "nonscalar_two_sided_inverse_residual_return": [
+      "17",
+      "-29"
+    ],
+    "nonzero_retained_residual": [
+      "8",
+      "-11"
+    ],
+    "formal_sampling_with_singular_E_and_noncommuting_maps": true,
+    "native_inverse_or_analytic_jet_claim": false,
+    "efficiency_benchmark": false,
+    "source_sha256": {
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-01.py": "5c48b33e49fb5b4f5ca49f0dfc217272704459a58c49f8ccf041ee97e028fcba",
+      "scores/ArtformScores/GravityBridge/Native/Full40/SplitDefs.lean": "93ff66e6edb7df5dfad7663e15004be9421d8fab49367e557444fd294b4c2921",
+      "scores/ArtformScores/GravityBridge/Native/Full40/ProjectorDefs.lean": "fed61750976e004ed7e3ac108277c93a1c8fda640e9a881f30c14fbfb185e0c1",
+      "scores/ArtformScores/GravityBridge/Native/Full40/CoordinatesDefs.lean": "e1117e26c4c265979da5364ceda30ca2f5759058f86b9aab3ebf2dc939fdad47",
+      "scores/ArtformScores/GravityBridge/Native/Full40/CutJetsStatements.lean": "43eb96a4278f7fc424b9853d9cab3fcd5681e6cac9c6f8d10bdec234dca3a3e8",
+      "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSignDefs.lean": "60dfcb0ab9069d1689b441fe4736184b823b459eb941ffa10e819dc1a5f3742b",
+      "scores/ArtformScores/GravityBridge/Native/Retrospective/ResidualReturnDefs.lean": "abff0aff2d4e36a53d074b3adb3eb2546015b5bc7c9c25dc13da0002ea8d2106",
+      "scores/ArtformScores/GravityBridge/Native/Retrospective/SamplingDefs.lean": "ecb42a1bf79474534473c9005c5e54ee09f41192a5ed359b017979398be122c9"
+    }
+  },
+  "reviewer_replay_development": {
+    "initial_exit_code": 1,
+    "initial_issue": "Inherited fixed4x4 matrix multiplier was passed a2x2 block; IndexError. Reviewer-only code, no submission change.",
+    "repair": "Use dimension-aware multiplier for nonscalar inverse check; final replay passed."
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "retrospective_efficiency_saving_established": false,
+    "classification": "Original flat algebraic coframe split and sign reconstruction, supplied cut jets with connection limit, generic retained-residual and formal sampling identities.",
+    "uninstantiated_bridges": [
+      "actual derivative and native analytic sampling/remainder",
+      "bounded whole-contour native inverse and its source/shift estimates",
+      "actual torsion-free/stationary graph and copied physical target",
+      "allowed physical source/preparation, boundary/current/quotient",
+      "independent frame/link/history match and longitudinal value"
+    ]
+  },
+  "audit": "audit-independent-04.md",
+  "validation": "validation-independent-04.json"
+}
