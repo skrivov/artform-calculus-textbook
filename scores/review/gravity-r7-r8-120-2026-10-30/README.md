@@ -65,3 +65,23 @@ The complete declared periodic flat quadratic action and coordinate force are re
 including the explicit force/Hessian matrix identity and real derivative without a half force.
 Mixed Ward, analytic/domain and physical prescription bridges remain open. Zero additional
 material native application or retrospective efficiency saving is assigned.
+
+## Review03: A08–A10 and C04–C05
+
+Five new literal claims and findings167–171, with129 approved entries preserved. Review the
+complete mixed Ward identity, pointwise nonlinear link correction and periodic sum: pure gauge
+quadratic zero alone is insufficient. The projector keeps its connection change and exactly
+characterizes source compatibility. These reconstruct frozen source identities, not new physics.
+
+The finite probe is explicitly CYCLIC Fin17 with shifts1,2,4,8; it is not four Cartesian generators.
+Check the declared pulse, noncollapse guards, complete action and coordinate-unit force values.
+Exploratory dense calculations were stopped and earn no proof/efficiency credit; their changed
+inputs are not matched benchmarks. C04 proves eight original restriction densities, not full24
+block diagonality. It explicitly recovers the actual old B_t from the complete formula and retains
+repeated-block signs. C05 retains the auxiliary source constant, both inverse hypotheses where
+required, indefinite quadratic completion and actual returned action. No new gate or saving proposed.
+
+Review each definition, literal manifest quote against ledger section8/finding, nonvacuity and
+all15 implementation files. Required checks, certificates,both drifts and individual5 kernels
+must pass. Record independent audit/verdict/compact validation03, approve passing literal claims
+through ledger_status.py preserving129 entries, then publish/push. Root authors; same one reviewer.

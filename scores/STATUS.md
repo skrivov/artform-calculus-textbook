@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 129 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **129** |
+| **total** | **134** |
 
 ## Statements
 
@@ -144,3 +144,8 @@
 | GAC2:guarded-schur-source-reconstruction | Full source Schur reduction with exact reconstruction | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw` | approved 2026-10-30 |
 | GAC2:complete-flat-quadratic-variation | Complete original flat quadratic variation on periodic fields | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw` / `Artform.Scores.GravityBridge.Native.Full40.quadraticLaw` | approved 2026-10-30 |
 | GAC2:full-coordinate-variational-force | The original full coordinate force from the complete quadratic action | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw` / `Artform.Scores.GravityBridge.Native.Full40.forceLaw` | approved 2026-10-30 |
+| GAC2:full-mixed-lorentz-ward | The full original mixed Lorentz Ward identity | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.wardLaw` / `Artform.Scores.GravityBridge.Native.Full40.wardLaw` | awaiting review |
+| GAC2:coframe-projector-compatible-sources | The coframe Lorentz projector with compatible sources | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.projectorLaw` / `Artform.Scores.GravityBridge.Native.Full40.projectorLaw` | awaiting review |
+| GAC2:four-shift-original-force-test | A noncollapsed four-shift finite periodic force test | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw` / `Artform.Scores.GravityBridge.Native.Full40.fourDirectionLaw` | awaiting review |
+| GAC2:indexed-original-connection-blocks | Indexed original distinct and repeated connection restrictions | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.indexedBlocksLaw` | awaiting review |
+| GAC2:source-dependent-action-reconstruction | Source-dependent stationary action and auxiliary reconstruction | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw` | awaiting review |

@@ -2255,3 +2255,117 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.forceLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "1bd7968e32b54a8060c3447572ee062fcdb8773eb6438e77a19c301f80c1936a"
+
+[[statement]]
+key = "GAC2:full-mixed-lorentz-ward"
+label = "GAC2:full-mixed-lorentz-ward"
+title = "The full original mixed Lorentz Ward identity"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:full-mixed-lorentz-ward)"
+statement = """
+**GAC2:full-mixed-lorentz-ward (arbitrary second tests, complete periodic action).** In the
+original full40 characteristic-zero periodic model of GAC2:complete-flat-quadratic-variation,
+let Rw=(lie(w),D w), and let R1(q,w) have zero frame and connection
+-(1/2)*[A_i,w+S_i*w]. Then LU(Rw)=[w,C], K(Rw)=theta(Rw)=0 and, pointwise,
+K(R1)+Qraw(q,Rw)+Qraw(Rw,q)=[w,K(q)]. The invariant original Gram/star cancels
+the mixed density up to-g(C,star*K(R1)), whose periodic sum is zero. Therefore
+D S2(q)[Rw]=0 for every independent field q and gauge parameter w, and the FULL coordinate
+force of Rw is zero. R is injective through its frame part. This is the complete mixed
+Lorentz identity on the declared finite periodic domain; no physical quotient, refoliation,
+nonlinear-force remainder or boundary extension is inferred.
+See [finding167](findings/167-full-original-mixed-lorentz-ward.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.wardLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.wardLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:coframe-projector-compatible-sources"
+label = "GAC2:coframe-projector-compatible-sources"
+title = "The coframe Lorentz projector with compatible sources"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:coframe-projector-compatible-sources)"
+statement = """
+**GAC2:coframe-projector-compatible-sources (exact frame split and source condition).** Let
+Lambda(F) have boosts(F_0i+F_i0)/2 and rotations(F_23-F_32,F_31-F_13,F_12-F_21)/2
+in the original bivector order. Pointwise Lambda(lie(w))=w. With P=I-R*Lambda on
+native periodic full40 fields, Lambda(Pq)=0, P^2=P and P(Rw)=0. Its fixed fields are
+exactly ker(Lambda), and Pq=0 exactly when q=Rw for some w. For ANY linear source
+functional J, J(Rw)=0 for every w iff J(Pq)=J(q) for every q. P preserves the metric
+variation and the complete coordinate force; the original first-variation source is compatible.
+These are exact algebraic statements for the declared domain, not an asserted physical quotient,
+bounded nonperiodic projector or unrestricted inverse.
+See [finding168](findings/168-coframe-projector-and-compatible-sources.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.projectorLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.projectorLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:four-shift-original-force-test"
+label = "GAC2:four-shift-original-force-test"
+title = "A noncollapsed four-shift finite periodic force test"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:four-shift-original-force-test)"
+statement = """
+**GAC2:four-shift-original-force-test (explicit finite periodic stress input).** On X=Fin17
+with its cyclic additive group, choose the four literal shifts(1,2,4,8). Each is nonzero,
+any two differ, no pair sum is zero, and each acts nontrivially on the identity-coframe pulse
+q(x)=(I*delta_(x,0),0). For the COMPLETE original S2 and kappa=1/101,
+S2(q)=12/101. Unit tests at the origin in the original coordinate slots0,16,39 give
+D S2(q)[delta_0]=12/101, D S2(q)[delta_16]=-2/101 and D S2(q)[delta_39]=0.
+The first two are explicitly identified with full coordinate force rows f_00 and A_0^(01).
+This is a cyclic four-stencil stress test, not four independent Cartesian generators or a
+physical solution; the arbitrary-group identities and separate Cartesian-shift test remain as stated.
+See [finding169](findings/169-noncollapsed-four-shift-full-force-probe.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.fourDirectionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:indexed-original-connection-blocks"
+label = "GAC2:indexed-original-connection-blocks"
+title = "Indexed original distinct and repeated connection restrictions"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:indexed-original-connection-blocks)"
+statement = """
+**GAC2:indexed-original-connection-blocks (derive the old blocks from the complete formula).**
+At homogeneous zero frame and constant original connection, index the four distinct triples
+(a,b,c)=(012,013,023,123) by A_a=x*t_b wedge t_c, A_b=y*t_c wedge t_a,
+A_c=z*t_a wedge t_b. The COMPLETE one-site density restricts exactly to
+2*t*eta_a*eta_b*eta_c*(x^2+y^2+z^2)-(1-2*t)*(eta_c*x*y+eta_b*x*z+eta_a*y*z).
+For each repeated index b, put A_a=z_a*t_a wedge t_b for the three ascending a!=b.
+Its complete density is eta_b*(t*sum z_a^2-sum_(a<c) z_a*z_c), equivalently half its
+quadratic pairing with R_b(t), whose diagonal is2*t*eta_b and off-diagonal-eta_b.
+The012 distinct restriction is explicitly half the quadratic pairing with the ORIGINAL B_t.
+These are eight checked restriction identities, not an unproved full24-block diagonalization
+or a full frequency-dependent inverse. No measured retrospective saving is claimed.
+See [finding170](findings/170-indexed-original-connection-density-blocks.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.indexedBlocksLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:source-dependent-action-reconstruction"
+label = "GAC2:source-dependent-action-reconstruction"
+title = "Source-dependent stationary action and auxiliary reconstruction"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:source-dependent-action-reconstruction)"
+statement = """
+**GAC2:source-dependent-action-reconstruction (retain the eliminated source constant).**
+Over a characteristic-zero field, let A,B,D be bilinear forms on V,VxW,W, with D symmetric,
+and E the declared inverse from W dual to W. For linear sources u,v, set
+S(f,a)=A(f,f)/2+B(f,a)+D(a,a)/2-u(f)-v(a), a*=E(v-B(f,-)).
+Under D*E=Id, S(f,a)=Seff(f)+D(a-a*,a-a*)/2, where
+Seff=A(f,f)/2-u(f)-(v-Bf)(E(v-Bf))/2.
+It expands to(A(f,f)-Bf(E(Bf)))/2-(u(f)-Bf(Ev))-v(Ev)/2.
+Under BOTH inverse identities, the original auxiliary equation Bf+D a=v holds exactly iff
+a=a*, and S(f,a*)=Seff. The nonzero-source rational example has A=3,B=1,D=2,
+E=1/2,u=4,v=5,f=1,a*=2 and S=Seff=-13/2. No positivity or native invertibility is assumed.
+See [finding171](findings/171-source-dependent-action-and-exact-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw"
+reviewed = ""
+review_text_sha256 = ""

@@ -106,3 +106,8 @@ import ArtformScores.GravityBridge.Native.Retrospective.CurvatureOnly
 import ArtformScores.GravityBridge.Native.Retrospective.SchurSource
 import ArtformScores.GravityBridge.Native.Full40.Quadratic
 import ArtformScores.GravityBridge.Native.Full40.Force
+import ArtformScores.GravityBridge.Native.Full40.Ward
+import ArtformScores.GravityBridge.Native.Full40.Projector
+import ArtformScores.GravityBridge.Native.Full40.FourDirection
+import ArtformScores.GravityBridge.Native.Retrospective.IndexedBlocks
+import ArtformScores.GravityBridge.Native.Retrospective.SourceAction
