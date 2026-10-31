@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 75 |
-| stated | 2 |
+| proved | 77 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **77** |
 
@@ -90,5 +90,5 @@
 | GAC:r2-zero-row-exclusion | Exact native all-zero-stratum exclusion | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion` / `Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion` | approved 2026-10-30 |
 | GAC:block-memory | Exact block memory and prepared autonomy | proved | `Artform.Scores.GravityBridge.Statement.blockMemory` / `Artform.Scores.GravityBridge.blockMemory` | approved 2026-10-30 |
 | GAC:stencil-support | Exact stencil support and restricted-field agreement | proved | `Artform.Scores.GravityBridge.Statement.stencilSupport` / `Artform.Scores.GravityBridge.stencilSupport` | approved 2026-10-30 |
-| GAC:r2-norm-chart | Original odd norm and broader chart | stated | `Artform.Scores.GravityBridge.Native.R2.Statement.normChart` / `Artform.Scores.GravityBridge.Native.R2.normChart` | awaiting review |
-| GAC:r2-phase-transfer | Guarded original phase and norm transfer | stated | `Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer` / `Artform.Scores.GravityBridge.Native.R2.phaseTransfer` | awaiting review |
+| GAC:r2-norm-chart | Original odd norm and broader chart | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.normChart` / `Artform.Scores.GravityBridge.Native.R2.normChart` | approved 2026-10-30 |
+| GAC:r2-phase-transfer | Guarded original phase and norm transfer | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer` / `Artform.Scores.GravityBridge.Native.R2.phaseTransfer` | approved 2026-10-30 |

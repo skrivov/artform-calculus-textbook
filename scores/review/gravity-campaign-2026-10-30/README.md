@@ -144,5 +144,8 @@ smaller-latitude physical candidate is claimed.
 
 R2PhaseDefs.lean and R2PhaseStatements.lean are new; prior approved entries are unchanged.
 Validation-F05-F06.json records required checks, empty drift, the R2 certificate check and both
-separate kernel replays using compact hashes/sizes for the generated reports. Independent review
-is requested; the original75 approvals stand.
+separate kernel replays using compact hashes/sizes for the generated reports. Both additions were
+independently approved at freeze `b3aed56aa9a985e831a1aed9308a00ee5405347a`; none returned.
+The original75 approvals stand. See the distinct [audit](audit-independent-05.md),
+[per-key verdicts](verdict-independent-05.json), [validation](validation-independent-05.json)
+and [exact norm replay](norm-arithmetic-independent-05.py).

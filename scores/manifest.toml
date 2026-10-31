@@ -1043,8 +1043,8 @@ single-sign feasibility or physical phase-selection verdict. See
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.normChart"
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.normChart"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "510047da614f5777b88825c1444371176f2efcbe613499b19af6f177acd7758c"
 
 [[statement]]
 key = "GAC:r2-phase-transfer"
@@ -1066,5 +1066,5 @@ physical phase-selection rule. See [finding 113](findings/113-native-r2-guarded-
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.phaseTransfer"
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.phaseTransfer"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "56b15afec4d758a95d1257c2259bef7f3f79e4e507a5b13f85b4aab761df8f97"

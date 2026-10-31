@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-30",
+  "reviewed_commit": "b3aed56aa9a985e831a1aed9308a00ee5405347a",
+  "independent_review": true,
+  "full_build": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail"
+    ],
+    "exit_code": 0,
+    "result": "Build completed successfully (9264 jobs)."
+  },
+  "reports": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 9424315,
+      "output_sha256": "152e49385098c85271180bdf770246df09dc9b16415706232024724d319f44ad"
+    }
+  ],
+  "kernel_replays": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.R2NormChart"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.GravityBridge.Native.R2PhaseTransfer"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "461 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/norm-arithmetic-independent-05.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"odd_norm_identity_exact\": true, \"difference_nonzero_coefficients\": 0, \"necessary_witness_even_delta\": \"103/9\", \"necessary_witness_one_plus_radius_squared\": \"1672/1295\", \"source_sha256\": {\"scores/ArtformScores/GravityBridge/Native/R2Defs.lean\": \"9c68dc22a29ced5934933f921b2e0980a358762fb649bbbb1e3ab65cbc854407\", \"scores/ArtformScores/GravityBridge/Native/R2PhaseDefs.lean\": \"9c52ebca8816fd6ab2687a237d96b6539d6ba1a4cf3fd45562e4c4d76a858d5d\", \"scores/review/gravity-campaign-2026-10-30/source-arithmetic-independent-02.py\": \"b6ac3553d0267699ed2d05528e0b02f94d509fd17518a4a55dad77f88aada2ba\"}}\n",
+      "stderr": ""
+    }
+  ],
+  "source_authentication": "Both manifest quotes are literal ledger text; three R2 snapshots and all six F01 original source hashes match.",
+  "independent_exact_arithmetic": {
+    "odd_norm_identity": "zero rational-coefficient polynomial difference",
+    "necessary_witness_even_delta": "103/9",
+    "necessary_witness_one_plus_radius_squared": "1672/1295",
+    "source_hashes": "Pinned and verified by norm-arithmetic-independent-05.py"
+  },
+  "approved_surface_drift": {
+    "book": 0,
+    "scores": []
+  },
+  "earlier_manifest_entries_unchanged": 75,
+  "proof_target_and_axioms": "Both exact tagged targets; only allowed axioms.",
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 3.024,
+      "stdout": "ℹ [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9264 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.074,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.219,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 9424315,
+      "output_sha256": "152e49385098c85271180bdf770246df09dc9b16415706232024724d319f44ad"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.299,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.399,
+      "stdout": "463 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.065,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.193,
+      "stdout": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.19,
+      "stdout": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.073,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.281,
+      "stdout": "0 approved statements changed since review\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.066,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/norm-arithmetic-independent-05.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.037,
+      "stdout": "{\"odd_norm_identity_exact\": true, \"difference_nonzero_coefficients\": 0, \"necessary_witness_even_delta\": \"103/9\", \"necessary_witness_one_plus_radius_squared\": \"1672/1295\", \"source_sha256\": {\"scores/ArtformScores/GravityBridge/Native/R2Defs.lean\": \"9c68dc22a29ced5934933f921b2e0980a358762fb649bbbb1e3ab65cbc854407\", \"scores/ArtformScores/GravityBridge/Native/R2PhaseDefs.lean\": \"9c52ebca8816fd6ab2687a237d96b6539d6ba1a4cf3fd45562e4c4d76a858d5d\", \"scores/review/gravity-campaign-2026-10-30/source-arithmetic-independent-02.py\": \"b6ac3553d0267699ed2d05528e0b02f94d509fd17518a4a55dad77f88aada2ba\"}}\n"
+    }
+  ]
+}
