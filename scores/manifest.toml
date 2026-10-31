@@ -2142,3 +2142,116 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.torsionLa
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.torsionLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "b23d1022f215a4e1c0d66bd847336d144ef830b83ddd36ab43637f0e36a34b6a"
+
+[[statement]]
+key = "GAC2:signed-block-polynomial-inverse"
+label = "GAC2:signed-block-polynomial-inverse"
+title = "The original signed block through a quadratic matrix relation"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:signed-block-polynomial-inverse)"
+statement = """
+**GAC2:signed-block-polynomial-inverse (reconstruct the actual solved native block).** For the
+literal rational C=curvatureBlock,T=torsionBlock,M=-I of GAC:native-distinct-block,
+C^2=C+2I and T^T*M*T=-(C+2I). Thus B_t=C+2*t*T^T*M*T=(1-2*t)C-4*t*I.
+Put d_t=2*(1-4*t)*(1+2*t) and N_t=(6*t-1)I+(1-2*t)C. Both B_t*N_t and N_t*B_t equal
+d_t*I. If both1-4*t and1+2*t are nonzero, d_t^-1*N_t is the two-sided actual matrix
+inverse. At the native t=1/101 it equals(9999*C-9595*I)/19982 and B_t is exactly the
+original connectionBlock. This is a certified reconstruction and reusable inverse family;
+it establishes no new physical gate or measured efficiency gain by itself.
+See [finding162](findings/162-signed-connection-minimal-polynomial-inverse.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.polynomialInverseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.polynomialInverseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:curvature-only-force-residual"
+label = "GAC2:curvature-only-force-residual"
+title = "Curvature-only elimination fails the original signed force"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:curvature-only-force-residual)"
+statement = """
+**GAC2:curvature-only-force-residual (test the original equation and full density).** Keep
+r(z)=(0,-z,z) and B_t of GAC2:signed-block-polynomial-inverse. Then C*r=-r and
+B_t*r=-(1+2*t)*r. The curvature-only preparation c_C=2*t*r solves C*c_C+2*t*r=0,
+but its ORIGINAL full residual B_t*c_C+2*t*r is-4*t^2*r. If1+2*t!=0, the full
+preparation c_B=2*t*r/(1+2*t) solves the original equation. At t=1/101 it is exactly
+connectionPreparation(z); c_C is stationary for the native block exactly when z=0.
+For the complete source-dependent density S_t=-2*t*z^2+c.B_t*c/2+2*t*c.r,
+S_t(c_B)=-2*t*z^2/(1+2*t), while S_t(c_C)-S_t(c_B)=-16*t^4*z^2/(1+2*t).
+This indefinite stationary-action difference is not physical energy or a minimum claim.
+See [finding163](findings/163-curvature-only-connection-full-force-error.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.curvatureOnlyLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.curvatureOnlyLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:guarded-schur-source-reconstruction"
+label = "GAC2:guarded-schur-source-reconstruction"
+title = "Full source Schur reduction with exact reconstruction"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:guarded-schur-source-reconstruction)"
+statement = """
+**GAC2:guarded-schur-source-reconstruction (the eliminated source is retained).** For modules
+V,W over any ring, linear maps A:V->V,B:W->V,C:V->W,D,E:W->W with D*E=E*D=Id,
+and arbitrary original u,v,f,a, the full equations A*f+B*a=u and C*f+D*a=v hold
+exactly when(A-B*E*C)*f=u-B*E*v and a=E*(v-C*f). Both inverse hypotheses,
+both coupling products, the shifted source and the auxiliary reconstruction remain explicit.
+The nontrivial rational2x2 block example has A=D=2,B=C=1,E=1/2,u=4,v=5,f=1,a=2.
+This is a reusable reduction theorem, not an asserted native full-operator inverse.
+See [finding164](findings/164-guarded-schur-source-and-exact-reconstruction.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.schurSourceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.schurSourceLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:complete-flat-quadratic-variation"
+label = "GAC2:complete-flat-quadratic-variation"
+title = "Complete original flat quadratic variation on periodic fields"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:complete-flat-quadratic-variation)"
+statement = """
+**GAC2:complete-flat-quadratic-variation (the full declared native flat formula).** For any
+finite additive commutative lattice group X and characteristic-zero field K, retain all original
+16+24 coordinates, four shifts and six faces. In the native unit-spacing alpha=lambda=0,
+beta=sigma=1 model, define the complete quadratic formula
+S2(q)=sum_(x,faces){g(Lf+UA,star*K A)+g(C,star*Q(A))}+kappa*sum eta_i*eta_j*eta(theta,theta)
+using the literal wedge/complement/transport/plaquette/torsion maps in QuadraticDefs.
+The bivector bracket equals its original matrix commutator, commutes with internal star and
+preserves g. The raw contact maps back to the ORIGINAL quadratic curvature reading.
+The displayed B(q,p) is bilinear and S2(q)=B(q,q). Hence, for all epsilon,q,p,
+S2(q+epsilon*p)=S2(q)+epsilon*(B(q,p)+B(p,q))+epsilon^2*S2(p).
+The complete coefficient formula is retained; no analytic remainder of the nonlinear action,
+full nonlinear native solution, physical quotient or positivity is claimed.
+See [finding165](findings/165-complete-original-flat-quadratic-variation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.quadraticLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.quadraticLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:full-coordinate-variational-force"
+label = "GAC2:full-coordinate-variational-force"
+title = "The original full coordinate force from the complete quadratic action"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:full-coordinate-variational-force)"
+statement = """
+**GAC2:full-coordinate-variational-force (all periodic coordinate covectors).** In the domain
+and complete S2 formula of GAC2:complete-flat-quadratic-variation, pack all fields through
+X times the40 original coordinate slots. Let delta_a be the inverse coordinate image of its
+unit vector and F(q)_a=B(q,delta_a)+B(delta_a,q). Then for every test p,
+B(q,p)+B(p,q)=sum_a F(q)_a*p_a, and F(q)=0 exactly when every such variation vanishes.
+There are40*card(X) coordinate rows, with no physical mode count inferred. The force equals
+its full coordinate Hessian times the packed field. This Hessian has symmetric transpose,
+without a positivity or Hermitian assertion. Its direct
+variation retains both curvature cross terms, both ordered-contact polarizations and the
+2*kappa torsion term displayed in ForceDefs. For real fields it is the actual derivative at
+epsilon=0 of S2(q+epsilon*p), not half that derivative. No finite-boundary, nonlinear full-force,
+refoliation or physical R7/R8 equivalence is inferred.
+See [finding166](findings/166-full-original-coordinate-force-and-hessian.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.forceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.forceLaw"
+reviewed = ""
+review_text_sha256 = ""

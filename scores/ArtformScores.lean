@@ -101,3 +101,8 @@ import ArtformScores.GravityBridge.Native.Full40.Shifts
 import ArtformScores.GravityBridge.Native.Full40.Plaquette
 import ArtformScores.GravityBridge.Native.Full40.Complement
 import ArtformScores.GravityBridge.Native.Full40.Torsion
+import ArtformScores.GravityBridge.Native.Retrospective.PolynomialInverse
+import ArtformScores.GravityBridge.Native.Retrospective.CurvatureOnly
+import ArtformScores.GravityBridge.Native.Retrospective.SchurSource
+import ArtformScores.GravityBridge.Native.Full40.Quadratic
+import ArtformScores.GravityBridge.Native.Full40.Force

@@ -24,3 +24,33 @@ The ignored PLAN.md has been force-added unchanged after verifying its exact led
 and the hashes from the earlier read-only plan review. Source inventory, review and this
 publication repair consume no research round. M185's publication status and M186's reduction
 scope remain as pinned; the newer longitudinal value certificate remains unreviewed.
+
+## Review02: C01–C03 and A06–A07
+
+Five new claims and findings162–166. All124 prior approvals stand; all15 new modules are under
+Native/Retrospective(PolynomialInverse,CurvatureOnly,SchurSource) and Native/Full40(Quadratic,Force).
+Compare each literal quote with section8 and every definition/non-vacuity instance. Source freeze
+and original Gram/domain qualifications remain mandatory.
+
+The retrospective inverse uses the exact old C,T,M and retains both scalar singular factors.
+The curvature-only audit retains the full original force/source density and distinguishes a
+source-restricted solve from a full inverse. The generic Schur equivalence retains both inverse
+hypotheses, both coupling products, the source shift and auxiliary reconstruction. Baseline02
+pins the ACTUAL older selected r/w proof; no invented slow baseline or efficiency gain is asserted.
+
+Quadratic assembles the full declared periodic flat formula with original(01,02,03,23,31,12)
+bivectors, complementary orientation, five-summand transport, ordered plaquette contact and
+all torsion terms. Bracket/matrix, star and g identities plus exact bilinearity/variation are
+checked over arbitrary characteristic-zero fields. Contact is identified with the original
+inverse reading. Force constructs all40*card(X) coordinate covectors and proves equivalence
+with variation against every independent test. Check both cross terms, both contact
+polarizations,2*kappa and the actual real HasDerivAt with no half force. Transpose symmetry
+is coordinate variational symmetry, not positivity/Hermitian physics.
+
+These remain formal flat-quadratic/periodic reconstructions and generic supporting algebra.
+No nonlinear original exponential remainder, complete mixed Ward theorem, native physical
+quotient/prescription matching, new material R7/R8 gate or measured retrospective saving is
+proposed. Judge scope especially carefully before any promotion. Required checks, certificates,
+both drift checks and separate kernels are recorded in validation-C01-C03-A06-A07.json.
+Record distinct audit/verdict/compact independent validation02, approve passing literal claims
+through tooling, preserve124 prior entries, and publish/push. One reviewer; root authors.

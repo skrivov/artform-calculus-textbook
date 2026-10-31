@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "frozen_baseline_commit": "2cc03100955a87c38d85b1753683a1ae63460dd9",
+  "problem": "earlier solved native distinct-block source and complete density",
+  "scope_match": "selected-source r/w solve is already short; general inverse has stronger output and earns no automatic efficiency credit",
+  "original_files": [
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/Defs.lean",
+      "bytes": 2408,
+      "sha256": "5f04523624d4d7dc2c8f0182d9fa44c4a2d308234d81bf117b47f37fd97c1876"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/DistinctBlock.lean",
+      "bytes": 2169,
+      "sha256": "c682c8985ae2b97c0bf57b84942892f2b8162a0a3611e645775e919b24c8e683"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/PreparationDefs.lean",
+      "bytes": 1553,
+      "sha256": "5ea243a030e1b56c63b04b43e333849b40432e5bb738fb746a6219e9529d94e7"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/Preparation.lean",
+      "bytes": 4148,
+      "sha256": "9dfd89b71a5f37a3a46ac301063abc8d24fb2d39cabe6e24e890dc68867a654e"
+    }
+  ]
+}
