@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-30",
+  "reviewed_commit": "a2c754a9f65f03c1bbc5fc82ab1b0874e8c05c92",
+  "independent_review": true,
+  "full_build": {
+    "command": [
+      "lake",
+      "build",
+      "--wfail"
+    ],
+    "exit_code": 0,
+    "result": "Build completed successfully (9248 jobs)."
+  },
+  "reports": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    }
+  ],
+  "kernel_replay": {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "ArtformScores.GravityBridge.Native.R2Trace"
+    ],
+    "exit_code": 0
+  },
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "428 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/source-arithmetic-independent-02.py"
+      ],
+      "exit_code": 0,
+      "stdout": "T=conj(P)*L-Q*conj(L): exact zero polynomial\nDelta=norm(P)^2-norm(Q)^2: exact zero polynomial\nW-s*(w+i*(1+s)*gamma)=N/2: exact zero polynomial\nBhat=Ub+iq*Vb+gamma*s*(-3q+i): exact zero polynomial\n",
+      "stderr": ""
+    }
+  ],
+  "source_authentication": "All six F01 original hashes and all three R2 bounded snapshots match; manifest quote is literal ledger text.",
+  "source_arithmetic": "All four independent original P/Q/T/Delta/W/Bhat expansion differences are exact zero rational-coefficient polynomials.",
+  "approved_surface_drift": [],
+  "earlier_manifest_entries_unchanged": 70,
+  "proof_target_and_axioms": "Exact tagged target; only allowed axioms.",
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "stdout": "ℹ [3788/4252] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9248 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/report.json"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "output": "build/ledger-report.json"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout": "430 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/gravity-campaign-2026-10-30/source-arithmetic-independent-02.py"
+      ],
+      "exit_code": 0,
+      "stdout": "T=conj(P)*L-Q*conj(L): exact zero polynomial\nDelta=norm(P)^2-norm(Q)^2: exact zero polynomial\nW-s*(w+i*(1+s)*gamma)=N/2: exact zero polynomial\nBhat=Ub+iq*Vb+gamma*s*(-3q+i): exact zero polynomial\n"
+    }
+  ]
+}

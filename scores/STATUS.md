@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 70 |
-| stated | 1 |
+| proved | 71 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **71** |
 
@@ -85,4 +85,4 @@
 | GAC:defect-stability | Quantitative realization defect | proved | `Artform.Scores.GravityBridge.Statement.defectStability` / `Artform.Scores.GravityBridge.defectStability` | approved 2026-10-30 |
 | GAC:connection-preparation | Native connection preparation and source term | proved | `Artform.Scores.GravityBridge.Native.Statement.connectionPreparationLaw` / `Artform.Scores.GravityBridge.Native.connectionPreparationLaw` | approved 2026-10-30 |
 | GAC:finite-processing | Complete processing of finite source kernels | proved | `Artform.Scores.GravityBridge.Statement.finiteProcessing` / `Artform.Scores.GravityBridge.finiteProcessing` | approved 2026-10-30 |
-| GAC:r2-trace-reduction | Original R2 trace and monic normal remainder | stated | `Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction` / `Artform.Scores.GravityBridge.Native.R2.traceReduction` | awaiting review |
+| GAC:r2-trace-reduction | Original R2 trace and monic normal remainder | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction` / `Artform.Scores.GravityBridge.Native.R2.traceReduction` | approved 2026-10-30 |

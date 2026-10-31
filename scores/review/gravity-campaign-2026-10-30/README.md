@@ -76,4 +76,8 @@ bounds; and the exact monic identity including zero/lower-degree rows. All origi
 s,3-s,E,Delta must appear in the clearing equivalence. No coefficient is divided out in the remainder.
 The positive normal-chart point witnesses only the reduction hypotheses. It is not claimed to satisfy
 phase norms or radial reconstruction. Finding107 and validation-F02.json give scope and build evidence.
-The original70 approvals stand; this new claim awaits its own distinct final verdict.
+The original70 approvals stand. This additional claim was independently approved at freeze
+`a2c754a9f65f03c1bbc5fc82ab1b0874e8c05c92`; none returned. See the distinct
+[R2 audit](audit-independent-02.md), [verdict](verdict-independent-02.json),
+[validation](validation-independent-02.json) and
+[original-input arithmetic witness](source-arithmetic-independent-02.py).

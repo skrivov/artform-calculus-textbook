@@ -921,3 +921,5 @@ See [finding 107](findings/107-native-r2-trace-and-monic-remainder.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction"
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.traceReduction"
+reviewed = "2026-10-30"
+review_text_sha256 = "d602deac6e509612161c1c6f1248cead0f5455df89eb4d9e165fd8117867dc24"
