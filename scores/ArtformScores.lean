@@ -45,3 +45,4 @@ import ArtformScores.GravityBridge.Native.TemporalWitness
 import ArtformScores.GravityBridge.Stability
 import ArtformScores.GravityBridge.Native.Preparation
 import ArtformScores.GravityBridge.Kernels
+import ArtformScores.GravityBridge.Native.R2Trace

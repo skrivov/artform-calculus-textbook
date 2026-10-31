@@ -1,0 +1,21 @@
+{
+  "investigation": "GAC-F02",
+  "source_pins": [
+    {
+      "source": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r2-post-M182-negative-sign-rational-elimination-duty-research-20261030/frozen-original-corrected-force.md",
+      "snapshot": "source/r2-original-corrected-force.md",
+      "sha256": "5edba7e6e071d61c4eb59c5cb9379259b2984b9b72ceeba0db58bbca7bafa504"
+    },
+    {
+      "source": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r2-post-M182-negative-sign-rational-elimination-duty-research-20261030/frozen-four-row-source.md",
+      "snapshot": "source/r2-four-row-source.md",
+      "sha256": "097935241748874aaf4b65386a8d8ccedf564cdc0e96a879e89faa244d7750b5"
+    },
+    {
+      "source": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M178-distinct-ROOT-four-real-affine-latitude-review-20261030.md",
+      "snapshot": "source/r2-four-row-distinct-review.md",
+      "sha256": "f1c17128bba8dd9d1c9dac8aa8207e74d81f4621249709a2ca3e25b602d76700"
+    }
+  ],
+  "other_guards": "Retain every F01 source guard; this claim proves trace arithmetic only."
+}

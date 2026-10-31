@@ -65,3 +65,15 @@ Record a verdict per label. Approve only through the existing ledger_status.py t
 Return a statement explicitly if its translation fails; preserve valid old proofs and the original verdict.
 
 No human approval is a gate. This saved handoff requests independent agent review and does not claim it occurred.
+
+## F02 addition: original R2 trace arithmetic
+
+GAC:r2-trace-reduction is a separate new submission. Its exact original source snapshots are pinned in
+[source-pins-R2.json](source-pins-R2.json). Check Native/R2Defs.lean against corrected original force
+5edba7e6 section4 and M178 09793524: original W, Bhat, J and the unmultiplied affine trace; all four cubic
+products; the latitude-independent phase determinant; both gamma signs; the genuine polynomial degree
+bounds; and the exact monic identity including zero/lower-degree rows. All original denominator guards
+s,3-s,E,Delta must appear in the clearing equivalence. No coefficient is divided out in the remainder.
+The positive normal-chart point witnesses only the reduction hypotheses. It is not claimed to satisfy
+phase norms or radial reconstruction. Finding107 and validation-F02.json give scope and build evidence.
+The original70 approvals stand; this new claim awaits its own distinct final verdict.

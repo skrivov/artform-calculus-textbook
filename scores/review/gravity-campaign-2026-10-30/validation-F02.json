@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-30",
+  "submission": "GAC:r2-trace-reduction",
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 5.825
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean",
+      "exit_code": 0,
+      "seconds": 13.56
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.288
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.279
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean",
+      "exit_code": 0,
+      "seconds": 13.111
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.066
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.064
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.198
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.186
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.066
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.R2Trace",
+      "exit_code": 0,
+      "seconds": 7.632
+    }
+  ],
+  "fidelity_review": "independent review in progress; no self-approval",
+  "scope": "Original finite R2 trace arithmetic, not feasibility or native reconstruction."
+}

@@ -899,3 +899,25 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.finiteProcessing"
 lean_proof = "Artform.Scores.GravityBridge.finiteProcessing"
 reviewed = "2026-10-30"
 review_text_sha256 = "5052198e15229750aa741064f105e00d6e62aaa078b125ac89810cd1b25bf2c4"
+
+[[statement]]
+key = "GAC:r2-trace-reduction"
+label = "GAC:r2-trace-reduction"
+title = "Original R2 trace and monic normal remainder"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r2-trace-reduction)"
+statement = """
+**GAC:r2-trace-reduction (original R2 trace and monic normal remainder).** Use the literal corrected
+complex J and four real rows Pe,Qe,Po,Qo of the frozen original-force and M178 sources in finding 107.
+For real q,R,a,G,gamma,s with q^2=103/2, gamma^2=G and N=s^2+(5-8a+6G)*s+2*(2-3a)^2=0,
+J(gamma)=Pe+i*q*Qe+gamma*(q*Po+i*Qo). Each row has degree at most three in s.
+For every real cubic P=c3*s^3+c2*s^2+c1*s+c0 (including zero and lower-degree polynomials), put
+nu=5-8a+6G, k=2*(2-3a)^2, ell=c1-nu*c2+(nu^2-k)*c3 and n=c0-k*c2+nu*k*c3.
+Then P(s)-(ell*s+n)=N(s)*(c3*s+c2-nu*c3).
+If q and gamma are nonzero, J(gamma)=J(-gamma)=0 if and only if all four affine remainders vanish at s.
+The original unmultiplied affine trace is zero if and only if J is zero when s,3-s,E and Delta are nonzero;
+these denominator guards are retained explicitly. This proves polynomial trace arithmetic and clearing,
+with no claim that arbitrary row zeros satisfy the original phase norms or native reconstruction guards.
+See [finding 107](findings/107-native-r2-trace-and-monic-remainder.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction"
+lean_proof = "Artform.Scores.GravityBridge.Native.R2.traceReduction"
