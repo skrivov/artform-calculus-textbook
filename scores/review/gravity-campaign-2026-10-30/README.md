@@ -119,4 +119,8 @@ example, cancellation, and the original kick/move entry1+q*p. Dense averaging fi
 only; it leaves a local identity realization available on that restricted space. Neither foundation
 is asserted to be a new native application. The full native dynamic split, stencil and domain
 remain obligations. Validation-B03-D01.json records all required checks, drift checks and both
-separate kernel replays. Original73 approvals stand. Independent review is requested.
+separate kernel replays; its generated reports are retained as byte counts and SHA-256 hashes.
+Both foundations were independently approved at freeze
+`4fc465dc188cf764eb8be326e231c84b6539f59b`; none returned. Original73 approvals stand.
+See the distinct [audit](audit-independent-04.md), [per-key verdicts](verdict-independent-04.json)
+and [validation](validation-independent-04.json).

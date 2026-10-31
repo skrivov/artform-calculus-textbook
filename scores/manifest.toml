@@ -996,8 +996,8 @@ See [finding 110](findings/110-exact-block-memory-and-prepared-autonomy.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.blockMemory"
 lean_proof = "Artform.Scores.GravityBridge.blockMemory"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "b6114f3fca866d5c1fcf7375fd35c8a2f9e197220da47008012115224c440e18"
 
 [[statement]]
 key = "GAC:stencil-support"
@@ -1019,5 +1019,5 @@ physical equivalence. See [finding 111](findings/111-exact-stencil-support-and-r
 """
 lean_statement = "Artform.Scores.GravityBridge.Statement.stencilSupport"
 lean_proof = "Artform.Scores.GravityBridge.stencilSupport"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-30"
+review_text_sha256 = "45f701bc5b6669dbcb0eff42d0ac36979e91d5ccef20c2de873f9798f189a30c"

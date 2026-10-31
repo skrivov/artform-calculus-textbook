@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 73 |
-| stated | 2 |
+| proved | 75 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **75** |
 
@@ -88,5 +88,5 @@
 | GAC:r2-trace-reduction | Original R2 trace and monic normal remainder | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.traceReduction` / `Artform.Scores.GravityBridge.Native.R2.traceReduction` | approved 2026-10-30 |
 | GAC:r2-exception-cases | Native common factor and complete affine alternatives | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases` / `Artform.Scores.GravityBridge.Native.R2.exceptionCases` | approved 2026-10-30 |
 | GAC:r2-zero-row-exclusion | Exact native all-zero-stratum exclusion | proved | `Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion` / `Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion` | approved 2026-10-30 |
-| GAC:block-memory | Exact block memory and prepared autonomy | stated | `Artform.Scores.GravityBridge.Statement.blockMemory` / `Artform.Scores.GravityBridge.blockMemory` | awaiting review |
-| GAC:stencil-support | Exact stencil support and restricted-field agreement | stated | `Artform.Scores.GravityBridge.Statement.stencilSupport` / `Artform.Scores.GravityBridge.stencilSupport` | awaiting review |
+| GAC:block-memory | Exact block memory and prepared autonomy | proved | `Artform.Scores.GravityBridge.Statement.blockMemory` / `Artform.Scores.GravityBridge.blockMemory` | approved 2026-10-30 |
+| GAC:stencil-support | Exact stencil support and restricted-field agreement | proved | `Artform.Scores.GravityBridge.Statement.stencilSupport` / `Artform.Scores.GravityBridge.stencilSupport` | approved 2026-10-30 |
