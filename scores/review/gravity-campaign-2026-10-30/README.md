@@ -180,3 +180,34 @@ pass; see validation-B04-D02-B02.json. All three additions were independently ap
 freeze `56f724062c57b04113508158281e72cf774f2a2f`; none returned. Original77 approvals
 stand. See the distinct [audit](audit-independent-06.md), [per-key verdicts](verdict-independent-06.json)
 and [validation](validation-independent-06.json). These add no material native application.
+
+## D05, D04, D06, D07 and D08: scoped R8 leading inverse tests
+
+Four new labels use the literal M185 leading scalar and coefficient, pinned with its mandatory
+scope and distinct review in source-pins-R8.json. Check every constant, projected-square/pair
+identity, nonempty nearest-ray mask, distance quantifier, reciprocal guard and adverse point.
+
+GAC:r8-angular-conditioning proves the explicit global distance estimate and native leading
+coefficient inverse bound. GAC:r8-leading-local-inverse excludes a universal polynomial-symbol
+inverse on a radial subband, including complex coefficients. It does not exclude finite
+Laurent stencils, particular source numerators or all finite-h dressed TT realizations.
+GAC:r8-gap-remainder retains the actual native error bound and M*h threshold as hypotheses.
+GAC:r8-nonuniform-domain gives a concrete nonexceptional annular sequence with quadratically
+growing leading inverse, and the true fourth-order radial scaling. Findings117–120 state
+what is proved and what remains an external analytic or source-extraction obligation.
+
+D08 is the failed reservoir-transfer audit in finding121. EnergyAudit.lean instantiates the
+approved signed action formula and tests a conserved negative quadratic on the old reversible
+quarter-turn score, including an explicit Archimedean no-lower-bound proof. It infers no
+physical Hamiltonian or gravity reservoir price; no new registered D08 claim is proposed.
+
+The distinct pre-freeze scientific audit credits zero additional material native applications.
+The distance/rate estimates are quantitative leading-symbol inputs; no Lean map identifies
+leadingScalar with the actual all40 D_h/h4 construction, and no actual native remainder/domain
+or source numerator is instantiated. Preserve that disposition independently of proof approval.
+
+R8Defs and R8Statements are new surfaces; all80 prior approved entries are unchanged. Full
+required checks, certificates, empty drift and five separate kernel replays pass; see the compact
+validation-D05-D04-D06-D07-D08.json. A failed receipt packaging attempt is preserved by hash: its
+raw debug output contained an absolute machine path, then was compacted before the passing
+identity check. Independent fidelity review and publication of the four new keys are requested.

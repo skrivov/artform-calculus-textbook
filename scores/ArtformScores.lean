@@ -55,3 +55,8 @@ import ArtformScores.GravityBridge.Native.R2PhaseTransfer
 import ArtformScores.GravityBridge.Companion
 import ArtformScores.GravityBridge.Locality
 import ArtformScores.GravityBridge.Sources
+import ArtformScores.GravityBridge.Native.R8Angular
+import ArtformScores.GravityBridge.Native.R8LocalInverse
+import ArtformScores.GravityBridge.Native.R8Remainder
+import ArtformScores.GravityBridge.Native.R8Domains
+import ArtformScores.GravityBridge.Native.EnergyAudit

@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 80 |
-| stated | 0 |
+| stated | 4 |
 | planned | 0 |
-| **total** | **80** |
+| **total** | **84** |
 
 ## Statements
 
@@ -95,3 +95,7 @@
 | GAC:companion-readout | Triangular companion readout and full-state invariance | proved | `Artform.Scores.GravityBridge.Statement.companionReadout` / `Artform.Scores.GravityBridge.companionReadout` | approved 2026-10-30 |
 | GAC:local-processing | Two-channel inverse and orbit support bounds | proved | `Artform.Scores.GravityBridge.Statement.localProcessing` / `Artform.Scores.GravityBridge.localProcessing` | approved 2026-10-30 |
 | GAC:source-response | Declared impulse responses and a separating experiment | proved | `Artform.Scores.GravityBridge.Statement.sourceResponse` / `Artform.Scores.GravityBridge.sourceResponse` | approved 2026-10-30 |
+| GAC:r8-angular-conditioning | Explicit leading metric-cut angular conditioning | stated | `Artform.Scores.GravityBridge.Native.R8.Statement.angularConditioning` / `Artform.Scores.GravityBridge.Native.R8.angularConditioning` | awaiting review |
+| GAC:r8-leading-local-inverse | Leading metric-cut polynomial inverse obstruction | stated | `Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse` / `Artform.Scores.GravityBridge.Native.R8.leadingLocalInverse` | awaiting review |
+| GAC:r8-gap-remainder | Angular and h budget with an explicit remainder hypothesis | stated | `Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder` / `Artform.Scores.GravityBridge.Native.R8.gapRemainder` | awaiting review |
+| GAC:r8-nonuniform-domain | Native leading inverse loss on an annular ray sequence | stated | `Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain` / `Artform.Scores.GravityBridge.Native.R8.nonuniformDomain` | awaiting review |

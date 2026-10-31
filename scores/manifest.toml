@@ -1136,3 +1136,86 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.sourceResponse"
 lean_proof = "Artform.Scores.GravityBridge.sourceResponse"
 reviewed = "2026-10-30"
 review_text_sha256 = "d16420340cad57a0543e761b47298485e9b13dbb3747f151de7d98c87c9caf29"
+
+[[statement]]
+key = "GAC:r8-angular-conditioning"
+label = "GAC:r8-angular-conditioning"
+title = "Explicit leading metric-cut angular conditioning"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r8-angular-conditioning)"
+statement = """
+**GAC:r8-angular-conditioning (explicit leading metric-cut angular conditioning).** For real k in R^3,
+put r2=sum_i k_i^2, v_i=k_i^2-k_i*(sum_j k_j^3)/r2, F=sum_i k_i^4-(sum_i k_i^3)^2/r2.
+For r2 nonzero, sum_i v_i^2=F and r2*F=sum_(i<j) [k_i*k_j*(k_i-k_j)]^2.
+For every r2>0 there are m nonzero and a nonempty Boolean coordinate mask b such that, with
+w_i=m when b_i is true and zero otherwise, r2*sum_i(k_i-w_i)^2<=36*F.
+If delta>0 and every such exceptional-line point w has sum_i(k_i-w_i)^2>=delta^2,
+then r2*delta^2<=36*F. For the literal rational native coefficient C_* of M185 equations2–3,
+C_*>1/(24*101). The leading scalar d4=-C_*F is nonzero and its reciprocal has absolute value
+at most87264/(r2*delta^2). This is a pointwise leading-symbol estimate; no finite-h remainder,
+full40 extraction or physical energy interpretation is supplied by this bound.
+See [finding 117](findings/117-native-leading-metric-cut-angular-conditioning.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.angularConditioning"
+lean_proof = "Artform.Scores.GravityBridge.Native.R8.angularConditioning"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:r8-leading-local-inverse"
+label = "GAC:r8-leading-local-inverse"
+title = "Leading metric-cut polynomial inverse obstruction"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r8-leading-local-inverse)"
+statement = """
+**GAC:r8-leading-local-inverse (polynomial-symbol inverse obstruction).** For every real c, polynomial
+P over the reals and nonempty real open interval (a,b), it is impossible that c*t^4*P(t)=1 throughout
+that interval. The same holds for complex c,P evaluated at real t. Consequently no complex polynomial
+P satisfies d4(t*(1,2,3))*P(t)=1 for every real1<t<2, with the literal native leading scalar of
+GAC:r8-angular-conditioning. This excludes a universal scalar inverse with a finite-order constant-
+coefficient differential symbol on that radial subband. It is not a finite-Laurent-stencil theorem,
+a statement about a particular source whose numerator might cancel the factor, or an obstruction to
+every realization of the finite-h dressed TT map.
+See [finding 118](findings/118-native-leading-local-inverse-scope.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.leadingLocalInverse"
+lean_proof = "Artform.Scores.GravityBridge.Native.R8.leadingLocalInverse"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:r8-gap-remainder"
+label = "GAC:r8-gap-remainder"
+title = "Angular and h budget with an explicit remainder hypothesis"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r8-gap-remainder)"
+statement = """
+**GAC:r8-gap-remainder (explicit h and gap budget).** Let k be real with r2=sum_i k_i^2>0,
+delta>0 satisfy the exceptional-line separation of GAC:r8-angular-conditioning, h>0 and M>=0.
+For a real scalar D, suppose |D-h^4*d4(k)|<=M*h^5 and M*h<=r2*delta^2/174528.
+Then D is nonzero and |D^-1|<=174528/(h^4*r2*delta^2).
+The actual native D_h remainder constant and its uniform frequency/source domain remain explicit
+application hypotheses. The theorem does not obtain them from the formal leading coefficient.
+See [finding 119](findings/119-native-scalar-inverse-with-explicit-remainder-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.gapRemainder"
+lean_proof = "Artform.Scores.GravityBridge.Native.R8.gapRemainder"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:r8-nonuniform-domain"
+label = "GAC:r8-nonuniform-domain"
+title = "Native leading inverse loss on an annular ray sequence"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r8-nonuniform-domain)"
+statement = """
+**GAC:r8-nonuniform-domain (annular adverse sequence and radial scaling).** For0<e<=1 put
+k_e=(1,1+e,0). Its squared radius is between2 and5, and0<F(k_e)<=e^2. With e_n=1/(n+1),
+every natural n has d4(k_e_n) nonzero and |d4(k_e_n)^-1|>=(n+1)^2/C_*.
+There is no finite real uniform upper bound for this inverse sequence, despite its fixed annulus.
+For every real t and real k, d4(t*k)=t^4*d4(k), so the leading low-frequency cost also has its actual
+fourth-order radial scaling. These are leading-symbol conclusions, not a claimed counterexample to
+every finite-h inverse or a new global native state/continuum theorem.
+See [finding 120](findings/120-native-leading-inverse-ray-sequence-and-low-frequency.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDomain"
+lean_proof = "Artform.Scores.GravityBridge.Native.R8.nonuniformDomain"
+reviewed = ""
+review_text_sha256 = ""
