@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 139 |
-| stated | 0 |
+| stated | 10 |
 | planned | 0 |
-| **total** | **139** |
+| **total** | **149** |
 
 ## Statements
 
@@ -154,3 +154,13 @@
 | GAC2:connection-residual-return | The exact independent connection return retains its residual | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.residualReturnLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.residualReturnLaw` | approved 2026-10-31 |
 | GAC2:connection-first-order-sampling | Centered and physical first-order connection sampling | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.samplingLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.samplingLaw` | approved 2026-10-31 |
 | GAC2:lower-boost-physical-native-sign | Original lower-coordinate boost and physical-native connection signs | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.physicalSignLaw` / `Artform.Scores.GravityBridge.Native.Full40.physicalSignLaw` | approved 2026-10-31 |
+| GAC2:temporal-boost-quarter-contact | The original temporal boost quarter-contact | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.boostContactLaw` / `Artform.Scores.GravityBridge.Native.Full40.boostContactLaw` | awaiting review |
+| GAC2:full-inverse-first-contact | The full signed inverse in the first connection contact | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.firstContactLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.firstContactLaw` | awaiting review |
+| GAC2:guarded-four-group-target | The guarded complete four-group longitudinal target | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.fourGroupLaw` / `Artform.Scores.GravityBridge.Native.Full40.fourGroupLaw` | awaiting review |
+| GAC2:higher-temporal-profile-budget | Higher temporal Lorentz jets with explicit real profile bounds | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.temporalProfileLaw` / `Artform.Scores.GravityBridge.Native.Full40.temporalProfileLaw` | awaiting review |
+| GAC2:native-cut-gauge-readouts | Six-component native cut gauge readouts and their forward frame cost | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.cutGaugeLaw` / `Artform.Scores.GravityBridge.Native.Full40.cutGaugeLaw` | awaiting review |
+| GAC2:native-singular-source-strata | Singular strata and retained source range guards | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.singularLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.singularLaw` | awaiting review |
+| GAC2:selected-source-work-audit | The actual solved source and a declared one-multiplication lower bound | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceCostLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.sourceCostLaw` | awaiting review |
+| GAC2:temporal-forcing-factor-cancellation | The original lower temporal forcing through repeated-factor cancellation | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.tTForceLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.tTForceLaw` | awaiting review |
+| GAC2:full24-homogeneous-decomposition | The full original24 homogeneous connection partition and density | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.homogeneousLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.homogeneousLaw` | awaiting review |
+| GAC2:verified-native-block-programs | Verified exact arithmetic programs for the original native block | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.blockProgramsLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.blockProgramsLaw` | awaiting review |

@@ -1,0 +1,257 @@
+{
+  "investigations": [
+    "G2-B06",
+    "G2-B07",
+    "G2-B08",
+    "G2-B09",
+    "G2-B10",
+    "G2-C06",
+    "G2-C07",
+    "G2-C08",
+    "G2-C09",
+    "G2-C10"
+  ],
+  "status": "passed",
+  "review": "pending independent fidelity review05 of120-round campaign",
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 56.764,
+      "stdout_bytes": 1349,
+      "stdout_sha256": "36f8e4ac34034c1bc8da1b717bd5dbff70cce880000932410c964713c4fe5f20",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "\u2139 [3788/3838] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\n\u2714 [9459/9473] Built ArtformScores.GravityBridge.Native.Retrospective.BlockProgramsStatements (3.3s)\n\u2714 [9460/9473] Built ArtformScores.GravityBridge.Native.Retrospective.TTForce (3.8s)\n\u2714 [9461/9473] Built ArtformScores.GravityBridge.Native.Full40.TemporalProfile (3.9s)\n\u2714 [9462/9473] Built ArtformScores.GravityBridge.Native.Retrospective.Singular (4.2s)\n\u2714 [9463/9473] Built ArtformScores.GravityBridge.Native.Retrospective.FirstContact (4.4s)\n\u2714 [9464/9473] Built ArtformScores.GravityBridge.Native.Full40.CutGaugeDefs (3.1s)\n\u2714 [9465/9473] Built ArtformScores.GravityBridge.Native.Retrospective.SourceCostDefs (3.2s)\n\u2714 [9466/9473] Built ArtformScores.GravityBridge.Native.Retrospective.BlockPrograms (5.3s)\n\u2714 [9467/9473] Built ArtformScores.GravityBridge.Native.Full40.CutGaugeStatements (3.1s)\n\u2714 [9468/9473] Built ArtformScores.GravityBridge.Native.Retrospective.SourceCostStatements (2.9s)\n\u2714 [9469/9473] Built ArtformScores.GravityBridge.Native.Full40.CutGauge (3.8s)\n\u2714 [9470/9473] Built ArtformScores.GravityBridge.Native.Retrospective.SourceCost (4.5s)\n\u2714 [9471/9473] Built ArtformScores.GravityBridge.Native.Retrospective.Homogeneous (50s)\n\u2714 [9472/9473] Built ArtformScores (2.7s)\nBuild completed successfully (9473 jobs).\n"
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean > build/report.json",
+      "exit_code": 0,
+      "seconds": 12.97,
+      "stdout_bytes": 70493294,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.295,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.606,
+      "stdout_bytes": 32,
+      "stdout_sha256": "0572dc2e26a38612e52009d59f182a14f6d59fafb0596e220e420669016ceab0",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "775 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json",
+      "exit_code": 0,
+      "seconds": 15.336,
+      "stdout_bytes": 17152102,
+      "stdout_sha256": "bc3d44333248cbc2e6040316ffd422dcaa93acc28689106f6a64e06706c56b37",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.113,
+      "stdout_bytes": 23,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.095,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.201,
+      "stdout_bytes": 44,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.177,
+      "stdout_bytes": 51,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/gravity_r2_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.075,
+      "stdout_bytes": 162,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": "python3 scripts/status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.293,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "0 approved statements changed since review\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.094,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env lean scripts/GravityProofCostReport.lean",
+      "exit_code": 0,
+      "seconds": 6.215,
+      "stdout_bytes": 583,
+      "stdout_sha256": "57743e09d2d32d0d78d2ce155fc60133f95929b5bd1f3f5b98e06cedb6fa15de",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"artform_closure_declarations\":10,\"artform_closure_structural_DAG_nodes\":18332,\"artform_closure_tree_nodes\":6129396,\"local_structural_DAG_nodes\":14471,\"local_tree_nodes\":2190259,\"raw_Expr_render_characters\":12844705,\"target\":\"Artform.Scores.GravityBridge.Native.schurCovector_eq\"}\n{\"artform_closure_declarations\":29,\"artform_closure_structural_DAG_nodes\":22302,\"artform_closure_tree_nodes\":3979975,\"local_structural_DAG_nodes\":10314,\"local_tree_nodes\":1999014,\"raw_Expr_render_characters\":11514396,\"target\":\"Artform.Scores.GravityBridge.Native.Retrospective.factorized_schur_same\"}\n"
+    },
+    {
+      "command": "python3 scores/review/gravity-r7-r8-120-2026-10-30/program-traces-root-05.py",
+      "exit_code": 0,
+      "seconds": 0.026,
+      "stdout_bytes": 301,
+      "stdout_sha256": "2557640c15f69302952ecce182a07cbaf5291c88504257c0c047fb781044a6cd",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"samples\": 5, \"all_original_inverse_outputs_equal\": true, \"counts\": {\"dense\": {\"scale\": 9, \"add\": 6}, \"rank\": {\"scale\": 4, \"add\": 5}}, \"bit_differences\": [[\"basis0\", 267, 136], [\"old_selected_r\", 293, 62], [\"general_integer\", 430, 160], [\"heldout_rational\", 633, 329], [\"heldout_large\", 1055, 584]]}\n"
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Full40.BoostContact",
+      "exit_code": 0,
+      "seconds": 5.382,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.FirstContact",
+      "exit_code": 0,
+      "seconds": 5.388,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Full40.FourGroup",
+      "exit_code": 0,
+      "seconds": 5.42,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Full40.TemporalProfile",
+      "exit_code": 0,
+      "seconds": 5.515,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Full40.CutGauge",
+      "exit_code": 0,
+      "seconds": 5.34,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.Singular",
+      "exit_code": 0,
+      "seconds": 5.666,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.SourceCost",
+      "exit_code": 0,
+      "seconds": 5.596,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.TTForce",
+      "exit_code": 0,
+      "seconds": 5.435,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.Homogeneous",
+      "exit_code": 0,
+      "seconds": 7.565,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.Retrospective.BlockPrograms",
+      "exit_code": 0,
+      "seconds": 5.648,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    }
+  ],
+  "proof_scope": "Original quarter contact, retained full inverse, guarded four-group target, bounded real higher-jet profile and local cut readouts; singular strata, matched selected-source negative work audit, original normalization cancellation, full24 homogeneous decomposition and verified arbitrary-input gate programs. No actual target value, new physical gate or historical/runtime saving claimed."
+}

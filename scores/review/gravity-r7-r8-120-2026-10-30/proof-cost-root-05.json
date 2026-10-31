@@ -1,0 +1,45 @@
+{
+  "model": "Proof expression measurements, same universal rational schurCovector proposition",
+  "command": "lake env lean scripts/GravityProofCostReport.lean",
+  "status": "no overall proof-size or runtime saving established",
+  "measurements": [
+    {
+      "artform_closure_declarations": 10,
+      "artform_closure_structural_DAG_nodes": 18332,
+      "artform_closure_tree_nodes": 6129396,
+      "local_structural_DAG_nodes": 14471,
+      "local_tree_nodes": 2190259,
+      "raw_Expr_render_characters": 12844705,
+      "target": "Artform.Scores.GravityBridge.Native.schurCovector_eq"
+    },
+    {
+      "artform_closure_declarations": 29,
+      "artform_closure_structural_DAG_nodes": 22302,
+      "artform_closure_tree_nodes": 3979975,
+      "local_structural_DAG_nodes": 10314,
+      "local_tree_nodes": 1999014,
+      "raw_Expr_render_characters": 11514396,
+      "target": "Artform.Scores.GravityBridge.Native.Retrospective.factorized_schur_same"
+    }
+  ],
+  "definitions": "Tree counts expand repeated structure. Structural DAG hash-conses equal Expr values. Closure includes reachable Artform definitions/proofs, excluding bodies of Mathlib constants. Raw Expr render character counts are not serialized certificate bytes.",
+  "conclusion": "Local and expanded-tree figures shrink, but full structural dependency DAG grows18,332->22,302. Earlier closed scalar source output is already one-multiplication optimal in the declared model. No historical-time or end-to-end saving credited.",
+  "source_files": [
+    {
+      "path": "scripts/GravityProofCostReport.lean",
+      "sha256": "ed6fe8ec2a70b99b31f9a8911b0f89841de840c5cbec42e9478134ae605189ff"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/Retrospective/SourceCost.lean",
+      "sha256": "3cae02a5d5e0d4d8c224b21366a4071ca4cdc99f0699dbdb4321f4bb3a1de147"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/Retrospective/FirstContact.lean",
+      "sha256": "70be5fbceb06f7e20c8673578a67692d60c684d01b28b79189608c0c6bfa9973"
+    },
+    {
+      "path": "scores/ArtformScores/GravityBridge/Native/DistinctBlock.lean",
+      "sha256": "c682c8985ae2b97c0bf57b84942892f2b8162a0a3611e645775e919b24c8e683"
+    }
+  ]
+}

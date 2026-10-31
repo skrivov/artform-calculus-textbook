@@ -1,0 +1,88 @@
+import ArtformScores.GravityBridge.Native.Retrospective.PolynomialInverse
+namespace Artform.Scores.GravityBridge.Native.Retrospective
+open Matrix
+
+theorem factorized_schur_same (z : ℚ) :
+    schurCovector z = ![-101 * z / 103, -101 * z / 103, 0] := by
+  unfold schurCovector
+  rw [native_inverse_identification, native_inverse_polynomial]
+  ext i
+  fin_cases i <;>
+    norm_num [kappa, facePairing, torsionBlock, faceInput, curvatureBlock,
+      Matrix.mul_apply, Matrix.mulVec, Matrix.vecMul, Matrix.vecHead, Matrix.vecTail,
+      Matrix.transpose_apply, Matrix.one_apply, dotProduct, Fin.sum_univ_succ] <;> ring
+
+inductive ZeroCostWire where
+  | input
+  | negativeInput
+  | constant (c : ℚ)
+
+def wireValue : ZeroCostWire → ℚ → ℚ
+  | .input, z => z
+  | .negativeInput, z => -z
+  | .constant c, _ => c
+
+def oneMultiplySchur (z : ℚ) : Fin 3 → ℚ :=
+  let s := (-101 / 103 : ℚ) * z
+  ![s, s, 0]
+
+lemma one_multiply_original_output (z : ℚ) : oneMultiplySchur z = schurCovector z := by
+  rw [factorized_schur_same]
+  ext i
+  fin_cases i <;> simp [oneMultiplySchur] <;> ring
+
+lemma no_zero_cost_wire : ¬∃ w : ZeroCostWire,
+    ∀ z : ℚ, wireValue w z = oneMultiplySchur z 0 := by
+  rintro ⟨w, hw⟩
+  cases w with
+  | input => have h := hw 1; norm_num [wireValue, oneMultiplySchur] at h
+  | negativeInput => have h := hw 1; norm_num [wireValue, oneMultiplySchur] at h
+  | constant c =>
+    have h0 := hw 0
+    have h1 := hw 1
+    norm_num [wireValue, oneMultiplySchur] at h0 h1
+    linarith
+
+/-! ## Non-vacuity -/
+example : oneMultiplySchur 103 = ![-101, -101, 0] := by decide +kernel
+
+end Artform.Scores.GravityBridge.Native.Retrospective
+
+open Lean Elab Command
+partial def proofTreeNodes : Expr → Nat
+  | .app f a => 1 + proofTreeNodes f + proofTreeNodes a
+  | .lam _ t b _ => 1 + proofTreeNodes t + proofTreeNodes b
+  | .forallE _ t b _ => 1 + proofTreeNodes t + proofTreeNodes b
+  | .letE _ t v b _ => 1 + proofTreeNodes t + proofTreeNodes v + proofTreeNodes b
+  | .mdata _ b => 1 + proofTreeNodes b
+  | .proj _ _ b => 1 + proofTreeNodes b
+  | _ => 1
+run_cmd do
+  let env ← getEnv
+  for n in [`Artform.Scores.GravityBridge.Native.schurCovector_eq,
+      `Artform.Scores.GravityBridge.Native.Retrospective.factorized_schur_same] do
+    let some ci := env.find? n | throwError "Missing target"
+    let some v := ci.value? (allowOpaque := true) | throwError "Missing proof"
+    let mut seen : NameSet := {}
+    let mut todo := [n]
+    let mut closureNodes := 0
+    let mut closureCount := 0
+    while !todo.isEmpty do
+      let q := todo.head!
+      todo := todo.tail!
+      if seen.contains q then continue
+      seen := seen.insert q
+      if !(`Artform).isPrefixOf q then continue
+      let some info := env.find? q | continue
+      closureCount := closureCount + 1
+      let mut ds := info.type.getUsedConstants
+      if let some b := info.value? (allowOpaque := true) then
+        closureNodes := closureNodes + proofTreeNodes b
+        ds := ds ++ b.getUsedConstants
+      todo := todo ++ ds.toList
+    let data := Json.mkObj [("target", toJson n.toString),
+      ("local_tree_nodes", toJson (proofTreeNodes v)),
+      ("raw_Expr_render_characters", toJson (toString v).length),
+      ("artform_closure_tree_nodes", toJson closureNodes),
+      ("artform_closure_declarations", toJson closureCount)]
+    logInfo m!"{data.compress}"

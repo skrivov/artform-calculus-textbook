@@ -2474,3 +2474,209 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.physicalS
 lean_proof = "Artform.Scores.GravityBridge.Native.Full40.physicalSignLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "025e962e5f1138414b3df1d399fa6aec74ff8db39f52a235b1f4589072560b45"
+
+[[statement]]
+key = "GAC2:temporal-boost-quarter-contact"
+label = "GAC2:temporal-boost-quarter-contact"
+title = "The original temporal boost quarter-contact"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:temporal-boost-quarter-contact)"
+statement = """
+**GAC2:temporal-boost-quarter-contact (supplied lower third-jet coefficient).** Put H_0a=n_a*a,
+with the other entries of H zero. In the original lower-coordinate convention,
+gamma(H)=(n*a/2,0_rotation). Half of this derivative gives the temporal physical boost
+contact(n*a/4,0_rotation), and nativeP=-h*omega gives-h*(n*a/4,0_rotation).
+If n has a nonzero component, this contact vanishes exactly when a=0. A supplied zero
+linear source contributes zero through arbitrary linear contorsion maps. This checks the
+coefficient algebra and sign; actual trace/source/Taylor identifications remain separate.
+See [finding177](findings/177-original-temporal-boost-quarter-contact.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.boostContactLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.boostContactLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:full-inverse-first-contact"
+label = "GAC2:full-inverse-first-contact"
+title = "The full signed inverse in the first connection contact"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:full-inverse-first-contact)"
+statement = """
+**GAC2:full-inverse-first-contact (original sourced direction, not curvature alone).** For the
+original r(z)=(0,-z,z), the certified full native inverse obeys B^-1*r=-101*r/103.
+Thus the first connection contact(-2/101)*B^-1*r is2*r/103. Its difference from the
+curvature-only preparation2*r/101 is-4*r/10403 and is zero exactly when z=0.
+A nonzero original z=1 gives difference component1=4/10403. This is the actual signed
+small-block source diagnostic; identification of an arbitrary full40 Z1 with this direction
+and its domain remains an application duty.
+See [finding178](findings/178-full-signed-inverse-first-return-contact.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.firstContactLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.firstContactLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:guarded-four-group-target"
+label = "GAC2:guarded-four-group-target"
+title = "The guarded complete four-group longitudinal target"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:guarded-four-group-target)"
+statement = """
+**GAC2:guarded-four-group-target (retain all supplied normal source groups).** For four
+supplied scalar groups G0..G3, let V=sum G and a=-V/(j*rho*d4). If j,rho,d4 are
+nonzero and n has a nonzero component, the original temporal boost contact n*a/4
+vanishes exactly when V=0. One nonzero group does not suffice: (1,-1,0,0) has V=0.
+Equal time-derivative readouts alone do not determine a scalar value, as constant1 and0
+show without extra equations. The ACTUAL original four-group identification and numerical
+value are not proved or inserted here; those remain the separately scoped native target.
+See [finding179](findings/179-complete-four-group-longitudinal-target-criterion.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.fourGroupLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.fourGroupLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:higher-temporal-profile-budget"
+label = "GAC2:higher-temporal-profile-budget"
+title = "Higher temporal Lorentz jets with explicit real profile bounds"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:higher-temporal-profile-budget)"
+statement = """
+**GAC2:higher-temporal-profile-budget (real interpolation and its declared cost).** For real
+h!=0,c, the quadratic profile c*(t/h)^2 has value and derivative0 at t=0 and value c at h.
+The bounded real profile g(t)=c*(1+h^2)/h^2*t^2/(1+t^2) has the same three readouts and
+satisfies |g(t)|<=|c*(1+h^2)/h^2|. For h>0,c=h^3*a/4 the latter bound is
+h*|a|*(1+h^2)/4. A native forward difference can therefore be adjusted by a declared
+higher jet while preserving the first cut jet. If both endpoint frame parameters are fixed
+zero, a nonzero adjustment is impossible. No native stationary, fixed-contour, full-history
+or complex-domain admissibility is inferred from these real profile identities.
+See [finding180](findings/180-higher-temporal-profile-and-real-norm-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.temporalProfileLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.temporalProfileLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-cut-gauge-readouts"
+label = "GAC2:native-cut-gauge-readouts"
+title = "Six-component native cut gauge readouts and their forward frame cost"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-cut-gauge-readouts)"
+statement = """
+**GAC2:native-cut-gauge-readouts (actual gauge column, local real-space cut).** On R times
+an additive spatial group, take the ORIGINAL native column R Gamma=(lie Gamma,D Gamma)
+with time step h!=0, three declared spatial steps and Gamma(t,x)=g_h,1(t)*c(x), using the
+bounded profile above. At the cut its coframe value and actual componentwise first time
+derivative are0, its temporal native link value is c(x), and its three spatial link values are0.
+Its metric variation is0 at every spacetime point. At the forward point its coframe is
+lie(c(x)); requiring that frame to remain0 forces c(x)=0. These are local gauge readouts,
+not an extension of periodic full-force stationarity or a funded native boundary/history theorem.
+See [finding181](findings/181-six-component-native-cut-gauge-readouts.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.cutGaugeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.cutGaugeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-singular-source-strata"
+label = "GAC2:native-singular-source-strata"
+title = "Singular strata and retained source range guards"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-singular-source-strata)"
+statement = """
+**GAC2:native-singular-source-strata (test before clearing denominators).** The original
+distinct B_t has nonzero null vectors at t=1/4 and-1/2; the indexed repeated R_b(t)
+has nonzero null vectors at t=1 and-1/2 for every b. At t=1/4 the particular r(z) source
+still has its certified spectral solve, although the global distinct inverse is singular.
+The denominator-cleared polynomial inverse becomes0 there and is NOT a matrix inverse.
+Every repeated b=0 source in the range at t=1 has component sum0; every distinct source
+in the range at t=1/4 obeys r0-r1-r2=0. Native t=1/101 satisfies the original inverse guards.
+See [finding182](findings/182-native-singular-strata-and-source-range-tests.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.singularLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.singularLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:selected-source-work-audit"
+label = "GAC2:selected-source-work-audit"
+title = "The actual solved source and a declared one-multiplication lower bound"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:selected-source-work-audit)"
+statement = """
+**GAC2:selected-source-work-audit (matched original source, no claimed overall saving).**
+A factorized proof reproduces EXACTLY the older universal rational schurCovector output
+(-101*z/103,-101*z/103,0). With its scalar coefficient precomputed, one multiplication
+and free copies/negation produce this output. No zero-cost wire consisting only of the input,
+its negative or an arbitrary input-independent constant can implement its first coordinate for
+all z. The actual older closed form is already optimal in that declared wire model.
+Measured local/tree figures improve for a sparse proof, but its full structural dependency
+DAG grows18,332->22,302; no overall proof-size, checker-runtime or historical-time saving
+is established. Measurements are representation-specific, not serialized certificate bytes.
+See [finding183](findings/183-matched-selected-source-proof-and-work-audit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceCostLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.sourceCostLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:temporal-forcing-factor-cancellation"
+label = "GAC2:temporal-forcing-factor-cancellation"
+title = "The original lower temporal forcing through repeated-factor cancellation"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:temporal-forcing-factor-cancellation)"
+statement = """
+**GAC2:temporal-forcing-factor-cancellation (retain the reviewed coefficient normalization).**
+Let H(t)=1/[(1+2t)(1-t)], C=t^2*R^2*L/[4(1+2t)(1-t)] and G=t*R*H(t)/2.
+If t,R,1+2t,1-t are nonzero, -C/G=-t*R*L/2. At the ORIGINAL kappa and TT witness,
+H=10201/10300, C=-63/12875 and-C/G=36/505, exactly the older lower temporalSymbol.
+This is the guarded cancellation of the supplied reviewed force/principal coefficients;
+it does not derive those coefficients anew from the full40 operator or prove a new native flow.
+See [finding184](findings/184-original-temporal-tt-forcing-factor-cancellation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.tTForceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.tTForceLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:full24-homogeneous-decomposition"
+label = "GAC2:full24-homogeneous-decomposition"
+title = "The full original24 homogeneous connection partition and density"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:full24-homogeneous-decomposition)"
+statement = """
+**GAC2:full24-homogeneous-decomposition (all cross blocks checked).** Assemble the original
+24 homogeneous connection slots from four distinct triples and four repeated triples using
+the literal wedge orientation of GAC2:indexed-original-connection-blocks. Explicit signed
+coordinate extraction and assembly are mutual inverses on all24 coordinates. The COMPLETE
+original homogeneous density equals the sum of all eight indexed densities for arbitrary
+rational t and arbitrary connection, including vanishing of every cross block. A nonzero
+assembled example at t=1/101 has density-3006/101. This is a zero-momentum homogeneous
+operator decomposition, not a frequency-dependent/contour inverse or a physical mode count.
+See [finding185](findings/185-full24-original-homogeneous-connection-decomposition.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.homogeneousLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.homogeneousLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:verified-native-block-programs"
+label = "GAC2:verified-native-block-programs"
+title = "Verified exact arithmetic programs for the original native block"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:verified-native-block-programs)"
+statement = """
+**GAC2:verified-native-block-programs (same arbitrary rational input and original inverse).**
+Two explicit register programs, direct dense and rank-one, return the ORIGINAL
+connectionBlock^-1*z for EVERY rational3-vector z. All register reads are valid. Counting
+coefficient-scale and add gates with precomputed native constants and free negation/copy,
+the direct program uses9 scales and6 adds; the rank-one program uses4 scales and5 adds.
+The programs and counts are checked in Lean, with no output hypothesis. This is a prospective
+exact-operation reduction on these declared general-input programs. It is NOT a historical
+speedup over the older selected r/w source, already one-multiplication optimal, nor a checker
+runtime, universal bit-complexity or physical resource claim.
+See [finding186](findings/186-verified-native-block-exact-arithmetic-programs.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.blockProgramsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.blockProgramsLaw"
+reviewed = ""
+review_text_sha256 = ""

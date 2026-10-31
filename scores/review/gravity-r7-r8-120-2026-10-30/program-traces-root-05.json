@@ -1,0 +1,135 @@
+{
+  "model": "exact rational coefficient scale/add gates; fixed coefficient precomputation, negation and copying excluded; general arbitrary3-vector input; original native inverse output",
+  "lean_authority": "verified-native-block-programs; both explicit register programs checked for original inverse on every rational input",
+  "lean_defs_sha256": "5a4efd7327f3c8330304394618f399e00d29b1e7dbfddb1675dcdaf48f9b44b4",
+  "counts": {
+    "dense": {
+      "scale": 9,
+      "add": 6
+    },
+    "rank": {
+      "scale": 4,
+      "add": 5
+    }
+  },
+  "historical_selected_source": "The old source-specialized r/w output already needs one precomputed multiplication. Neither general program is its optimized historical implementation.",
+  "samples": [
+    {
+      "name": "basis0",
+      "input": [
+        "1",
+        "0",
+        "0"
+      ],
+      "output": [
+        "-9595/19982",
+        "-9999/19982",
+        "-9999/19982"
+      ],
+      "dense": {
+        "max_numerator_bits": 14,
+        "max_denominator_bits": 15,
+        "sum_register_numerator_denominator_bits": 267
+      },
+      "rank": {
+        "max_numerator_bits": 14,
+        "max_denominator_bits": 15,
+        "sum_register_numerator_denominator_bits": 136
+      }
+    },
+    {
+      "name": "old_selected_r",
+      "input": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "output": [
+        "0",
+        "101/103",
+        "-101/103"
+      ],
+      "dense": {
+        "max_numerator_bits": 14,
+        "max_denominator_bits": 15,
+        "sum_register_numerator_denominator_bits": 293
+      },
+      "rank": {
+        "max_numerator_bits": 7,
+        "max_denominator_bits": 7,
+        "sum_register_numerator_denominator_bits": 62
+      }
+    },
+    {
+      "name": "general_integer",
+      "input": [
+        "1",
+        "2",
+        "3"
+      ],
+      "output": [
+        "-29795/9991",
+        "404/9991",
+        "-9393/9991"
+      ],
+      "dense": {
+        "max_numerator_bits": 15,
+        "max_denominator_bits": 15,
+        "sum_register_numerator_denominator_bits": 430
+      },
+      "rank": {
+        "max_numerator_bits": 15,
+        "max_denominator_bits": 14,
+        "sum_register_numerator_denominator_bits": 160
+      }
+    },
+    {
+      "name": "heldout_rational",
+      "input": [
+        "1/17",
+        "-23/29",
+        "31/37"
+      ],
+      "output": [
+        "-18454619/364491662",
+        "280896655/364491662",
+        "-302024845/364491662"
+      ],
+      "dense": {
+        "max_numerator_bits": 29,
+        "max_denominator_bits": 29,
+        "sum_register_numerator_denominator_bits": 633
+      },
+      "rank": {
+        "max_numerator_bits": 29,
+        "max_denominator_bits": 29,
+        "sum_register_numerator_denominator_bits": 329
+      }
+    },
+    {
+      "name": "heldout_large",
+      "input": [
+        "4294967297/3",
+        "-219902325555",
+        "281474976710657/7"
+      ],
+      "output": [
+        "-8397518477450367689/419622",
+        "2829137825943754611/139874",
+        "-2716244230893331337/139874"
+      ],
+      "dense": {
+        "max_numerator_bits": 63,
+        "max_denominator_bits": 19,
+        "sum_register_numerator_denominator_bits": 1055
+      },
+      "rank": {
+        "max_numerator_bits": 63,
+        "max_denominator_bits": 19,
+        "sum_register_numerator_denominator_bits": 584
+      }
+    }
+  ],
+  "runtime_claim": false,
+  "bit_claim": "Exact register bit sizes on five finite tests only, not an asymptotic bit-complexity or universal bound."
+}

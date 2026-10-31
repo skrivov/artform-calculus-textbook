@@ -123,3 +123,32 @@ The supplied jets, retained residual and formal sampling retain all declared lim
 no native contour inverse, actual analytic derivative or stationary graph is instantiated.
 No implementation was edited. Zero additional material native application or retrospective
 efficiency saving is assigned; physical prescriptions and independent connection/history remain open.
+
+## Review05: B06–B10 and C06–C10
+
+Ten new claims/findings177–186; preserve139 prior approvals. Scope is exact and deliberately
+narrow: supplied third-jet quarter-contact, actual signed small-block return, guarded FOUR-GROUP
+criterion with actual values unevaluated, real higher-jet profiles/bounds and actual six-component
+native cut readouts. The nonfinite real carrier's local readouts are NOT a new unrestricted Ward,
+stationary, contour or full-history theorem. Positive temporal adjustment changes the next frame;
+the copied-frame obstruction is retained. No actual divJ5 value is inserted as an accepted premise.
+
+C06 keeps different singular strata and source-restricted solves. C07 proves the SAME older
+universal Schur output and the declared zero-wire lower bound; old scalar closed form already
+needs one multiplication. Reproduce scripts/GravityProofCostReport.lean and proof-cost-root-05.json:
+local/tree measures shrink but full structural DAG18,332->22,302 grows. No overall certificate or
+runtime/historical saving is proposed. Larger dense attempt is archived for transparency.
+C08 starts from supplied reviewed principal/source coefficients, not a newly derived full40 graph.
+C09 NOW checks the full24 homogeneous partition, both coordinate inverses and all cross-block
+cancellation; this exceeds earlier restriction claims but remains zero-momentum algebra.
+C10 proves two actual valid register programs equal the original inverse on EVERY rational
+input and counts9/6 vs4/5 scale/add gates. This is a narrowly proposed prospective exact-work
+reduction in the declared model, excluding constant precomputation, negation/copy. It is not a
+historical improvement over old r/w. Exact finite bit traces are not asymptotic or runtime claims.
+
+Compare literal manifest quotes with ledger section8, findings, all30 modules/nonvacuity and
+frozen original source scopes. Independently replay both proof metrics and arithmetic traces.
+Required checks/certificates,both drifts and10 separate kernels must pass. Approve only faithful
+literal claims through tooling; preserve139 entries; record independent audit/verdict/compact
+validation05 and publish/push. Assign no new physical gate; judge any narrow prospective
+operation saving separately from historical/retrospective credit. Same one independent reviewer.
