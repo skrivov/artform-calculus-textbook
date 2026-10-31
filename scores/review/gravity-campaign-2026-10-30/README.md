@@ -81,3 +81,23 @@ The original70 approvals stand. This additional claim was independently approved
 [R2 audit](audit-independent-02.md), [verdict](verdict-independent-02.json),
 [validation](validation-independent-02.json) and
 [original-input arithmetic witness](source-arithmetic-independent-02.py).
+
+## F03–F04 additions: exceptional cases and a new native exclusion
+
+GAC:r2-exception-cases retains every zero/pivot alternative and the actual shared b² factor. Its b=0
+normal chart is classified before cancellation; N=0,G>=0,s>1/3 prove b!=0. The Pi/Lambda filter uses
+only its declared nonzero Lambda and exact latitude identity. Finding108 states these scopes.
+
+GAC:r2-zero-row-exclusion adds an exact integer unit identity and all eight native input bridges. The
+replay data are scores/certificates/gravity-r2-zero-row.json and gravity-r2-row-input.json. Run
+python3 scripts/gravity_r2_certificates.py --check; it checks the identity, source-input hash, all scale/factor
+identities and deterministic generation of R2CertificateData.lean. R2ZeroRow.lean proves every native
+coefficient equality using cubic interpolation of the actual polynomials, and checks the complete identity
+with ring. No exported coefficient is a Lean hypothesis. The 302-digit positive constant cannot be zero.
+
+Check finding109 and M178's explicit retained all-zero stratum against the new conclusion. The theorem
+excludes this stratum off b=0, and hence on the original normal G>=0,s>1/3 chart. For simultaneous J zeros
+it guarantees a nonzero affine pivot. The original remaining double-norm chart has the stronger reviewed
+latitude bound; all its other original guards still apply. Nonzero-pivot feasibility, single-sign feasibility,
+physical selection, full40 history and R7/R8 are open. This is a proposed new native R2 reduction, not a
+claim of a complete gravity solution. The original71 approvals stand.

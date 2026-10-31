@@ -46,3 +46,5 @@ import ArtformScores.GravityBridge.Stability
 import ArtformScores.GravityBridge.Native.Preparation
 import ArtformScores.GravityBridge.Kernels
 import ArtformScores.GravityBridge.Native.R2Trace
+import ArtformScores.GravityBridge.Native.R2Exceptions
+import ArtformScores.GravityBridge.Native.R2ZeroRow

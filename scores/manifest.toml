@@ -923,3 +923,53 @@ lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.traceReductio
 lean_proof = "Artform.Scores.GravityBridge.Native.R2.traceReduction"
 reviewed = "2026-10-30"
 review_text_sha256 = "d602deac6e509612161c1c6f1248cead0f5455df89eb4d9e165fd8117867dc24"
+
+[[statement]]
+key = "GAC:r2-exception-cases"
+label = "GAC:r2-exception-cases"
+title = "Native common factor and complete affine alternatives"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r2-exception-cases)"
+statement = """
+**GAC:r2-exception-cases (native common factor and complete affine alternatives).** In the four real
+R2 rows of GAC:r2-trace-reduction put b=2-3a, nu=5-8a+6G, and let c2_i,c3_i be their latitude coefficients.
+With u=1+R, t=103/2, m=1+(2+3t)*R+(1+t)*R^2, p=m*a-(1+(1+t)*R), j0=1-u*a, put
+S=(p+t*(4a-1)*j0, (4a-1)*p-j0, u+(4a-1)*m, t*u*(4a-1)-m).
+For every real R,a,G and each row i its constant remainder is exactly
+n_i=b^2*(-6*R*S_i-2*c2_i+2*nu*c3_i). Cancelling b^2 is equivalent only when b is nonzero.
+At a=2/3 the original normal equation is equivalent to s=0 or s=1/3-6G; hence N=0, G>=0 and s>1/3
+imply b is nonzero. This does not discard the smaller-latitude exceptional normal chart.
+For arbitrary real four-vectors l,n, the equations l_i*s+n_i=0 are equivalent to n=0 when l=0.
+If l_j is nonzero, they are equivalent to l_j*s+n_j=0 and all minors l_j*n_i-l_i*n_j=0.
+For nonzero Lambda and Lambda*s=Pi, all four equations are equivalent to Pi*l_i+Lambda*n_i=0.
+No ell=n=0 stratum or native phase/reconstruction condition is assumed absent.
+See [finding 108](findings/108-native-r2-zero-row-and-factor-cases.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.exceptionCases"
+lean_proof = "Artform.Scores.GravityBridge.Native.R2.exceptionCases"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:r2-zero-row-exclusion"
+label = "GAC:r2-zero-row-exclusion"
+title = "Exact native all-zero-stratum exclusion"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:r2-zero-row-exclusion)"
+statement = """
+**GAC:r2-zero-row-exclusion (exact native all-zero-stratum exclusion).** Use the original four real
+R2 row polynomials and monic remainder coefficients ell_i,n_i of GAC:r2-trace-reduction.
+For every real R,a,G with 2-3a nonzero, ell_i=n_i=0 for all four i is impossible.
+Consequently the all-zero stratum is absent whenever the original normal equation N(s)=0, G>=0 and s>1/3
+hold. If also q^2=103/2, gamma^2=G, q and gamma are nonzero, and both original J traces vanish,
+at least one ell_i is nonzero. Thus the nonzero-pivot alternative applies to every such simultaneous-sign
+candidate; no all-zero affine branch remains in this chart. The certificate is the exact integer identity
+sum_i Q_i*g_i=D with D a positive 302-digit integer, recorded in scores/certificates/gravity-r2-zero-row.json.
+Lean checks that identity and every g_i's equality to the actual native polynomial coefficient, using
+cubic evaluation identities rather than assuming exported coefficient data. The shared factor b^2 is
+cancelled only after its explicit nonzero proof. This excludes the coefficient stratum, not every zero
+of the four affine rows at one latitude, and makes no single-handedness or full-force-feasibility decision.
+See [finding 109](findings/109-native-r2-zero-row-exclusion-certificate.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R2.Statement.zeroRowExclusion"
+lean_proof = "Artform.Scores.GravityBridge.Native.R2.zeroRowExclusion"
+reviewed = ""
+review_text_sha256 = ""

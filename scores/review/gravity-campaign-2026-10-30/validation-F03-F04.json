@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-30",
+  "submissions": [
+    "GAC:r2-exception-cases",
+    "GAC:r2-zero-row-exclusion"
+  ],
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 5.557,
+      "output": "\u2139 [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\n\u2714 [9253/9254] Built ArtformScores (2.6s)\nBuild completed successfully (9254 jobs).\n"
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean",
+      "exit_code": 0,
+      "seconds": 13.061
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.285,
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.436,
+      "output": "439 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean",
+      "exit_code": 0,
+      "seconds": 12.853
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.067,
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.065,
+      "output": ""
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.193,
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.168,
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/gravity_r2_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.075,
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.064,
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.R2Exceptions",
+      "exit_code": 0,
+      "seconds": 5.36,
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.R2ZeroRow",
+      "exit_code": 0,
+      "seconds": 15.651,
+      "output": ""
+    }
+  ],
+  "certificate_sha256": "92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e",
+  "fidelity_review": "independent read-only review provisionally passes; final approval pending published freeze",
+  "scope": "New original R2 coefficient-stratum exclusion, not complete force feasibility or R7/R8."
+}
