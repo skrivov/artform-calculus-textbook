@@ -303,3 +303,37 @@ five separate kernel replays. All five claims were independently approved at fre
 and [validation](validation-independent-09.json). All89 earlier approvals stand.
 Zero additional material native applications are credited; C07's historical full-source
 scope remains unchanged.
+
+## C08/E01–E04: exact component sources and quantum-kernel pilots
+
+Five new submissions await independent review10: GAC:two-cell-torsion,
+GAC:weighted-kernel-algebra, GAC:gaussian-schur-integral, GAC:finite-gaussian-phase and
+GAC:normalized-gaussian-gluing. Findings132–136 and section7 literal quotes specify the scopes.
+All94 old approvals stand; all five new Defs/Statements/proof modules are new surfaces.
+
+TwoCell preserves C07's native coefficient, source contact, shared-momentum jump and endpoint
+covectors. Its scalar contribution is not a full40 solution or physical coarse geometry. Check the
+naive unit-coefficient reuse failure without interpreting it as a native refinement no-go.
+KernelAlgebra proves weighted associativity and the actual density-normalized identity, including
+necessity and a zero-weight adverse case. Source labels are pointwise parameters.
+
+Gaussian proves an actual Lebesgue integral and integrability for the eliminated positive direction,
+with its determinant normalization and transformed/contact sources. Positivity of the remaining
+Schur direction, singular gauges and indefinite Lorentzian integrals are not inferred. The zero
+coefficient example is nonintegrable; its formal integral value is not substituted for convergence.
+
+Phase is a finite binary quadratic Gauss/Clifford pilot. It proves actual H/S unitarity and Pauli/Weyl
+conjugations, the corresponding classical F2 label loop, the complete complex matrix cube, computed
+Gauss sum, unit phase norm and fixed-reference interference. Check sqrt2/2=1/sqrt2. Its relative
+reference test does not detect an isolated state's arbitrary global phase. It is explicitly distinct
+from a continuous bosonic metaplectic theorem or native quantum-gravity state/amplitude.
+
+Heat proves actual positive real Gaussian gluing with Lebesgue detail measure, both durations and
+the full square-root normalization. The fixed-midpoint example differs from the integrated kernel.
+No gravitational physical constraint support, indefinite phase prescription or universal unitary
+coarse-graining law is assumed. The primary literature comparisons in findings135/136 have explicit
+scope and are not imported Lean premises.
+
+validation-C08-E01-E02-E03-E04.json will record all required checks, certificates, both empty drift
+reports and five separate kernel replays. Zero additional native material-application credit is
+proposed; the campaign's R7/R8 target remains open.

@@ -1457,3 +1457,115 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw"
 lean_proof = "Artform.Scores.GravityBridge.boundaryAdjointLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "eb1b0c5602d8696db0afbf9cbc4bc72e69626a05b3388295c87b47d6820eff5d"
+
+[[statement]]
+key = "GAC:two-cell-torsion"
+label = "GAC:two-cell-torsion"
+title = "Two-cell torsion source and endpoint reduction"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:two-cell-torsion)"
+statement = """
+**GAC:two-cell-torsion (two-cell source and endpoint reduction).** With the pinned flat torsion
+coefficient kappa=1/101, let L(a,m,b,j)=kappa*(m-a)^2+kappa*(b-m)^2-j*m.
+Put m_*=(a+b)/2+j/(4*kappa) and
+L_eff=kappa*(b-a)^2/2-j*(a+b)/2-j^2/(8*kappa).
+For all rational a,m,b,j, L=L_eff+2*kappa*(m-m_*)^2; L_eff is the unique minimum in m.
+The source-bearing middle matching condition
+2*kappa*(m-a)-2*kappa*(b-m)=j is equivalent to m=m_*.
+At that middle value the endpoint momenta are kappa*(b-a)+j/2 and kappa*(b-a)-j/2.
+This is the exact source reduction of two declared flat torsion contributions. It is not a full40
+solution or a physical coarse cube action with unverified geometry, metric or connection normalization.
+See [finding 132](findings/132-two-cell-torsion-source-and-native-refinement-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.twoCellLaw"
+lean_proof = "Artform.Scores.GravityBridge.twoCellLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:weighted-kernel-algebra"
+label = "GAC:weighted-kernel-algebra"
+title = "Weighted finite gluing and normalized identities"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:weighted-kernel-algebra)"
+statement = """
+**GAC:weighted-kernel-algebra (weighted gluing and its identity).** For finite intermediate sets Y,Z
+and a commutative semiring K, define (a *_mu b)(x,z)=sum_y a(x,y)*mu(y)*b(y,z).
+Then (a *_mu b) *_nu c=a *_mu (b *_nu c), for arbitrary declared boundary kernels and both measures.
+Over a field, if every mu(x) is nonzero, e_mu(x,y)=delta_(x,y)/mu(y) is a left and right identity
+for the corresponding composition. A left identity on the full algebra of square kernels exists
+if and only if every mu(x) is nonzero, including the empty-set case.
+Source and boundary labels may be retained pointwise as parameters. A zero-weight constraint on
+the original state set does not leave an identity for every unrestricted kernel there; any restricted
+physical state space needs its own support/quotient specification.
+See [finding 133](findings/133-weighted-kernel-gluing-and-normalized-identity.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.kernelAlgebraLaw"
+lean_proof = "Artform.Scores.GravityBridge.kernelAlgebraLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:gaussian-schur-integral"
+label = "GAC:gaussian-schur-integral"
+title = "Convergent Gaussian Schur integral with sources"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:gaussian-schur-integral)"
+statement = """
+**GAC:gaussian-schur-integral (an actual convergent Gaussian integral).** For real parameters let
+S(q,z)=a*z^2+2*b*q*z+c*q^2-2*j*z-2*k*q,
+E(q)=(c-b^2/a)*q^2-2*(k-b*j/a)*q-j^2/a, and z_*=(j-b*q)/a.
+For a nonzero, S=E+a*(z-z_*)^2. For a>0 and every fixed q, exp(-S(q,z)) is Lebesgue integrable
+in z and its integral is exp(-E(q))*sqrt(pi/a). The two-by-two determinant obeys
+det[[c,b],[b,a]]=a*(c-b^2/a). All sources and the normalization are retained.
+No positivity of the remaining Schur coefficient is inferred from a>0, and no further integration
+in q is claimed. The a=0 constant Gaussian is not integrable on the whole real line.
+See [finding 134](findings/134-convergent-gaussian-schur-integral-and-sources.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.gaussianLaw"
+lean_proof = "Artform.Scores.GravityBridge.gaussianLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-gaussian-phase"
+label = "GAC:finite-gaussian-phase"
+title = "Finite quadratic Gauss phase and the Weyl bridge"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-gaussian-phase)"
+statement = """
+**GAC:finite-gaussian-phase (finite quadratic phase and its Weyl bridge).** On C^2 let
+H=(1/sqrt(2))*[[1,1],[1,-1]], S=diag(1,i), X=[[0,1],[1,0]], Z=diag(1,-1).
+H and S are unitary. Their actual conjugations satisfy HXH*=Z, HZH*=X,
+SXS*=i*XZ and SZS*=Z. The corresponding generator-label matrices over F2 are
+h=[[0,1],[1,0]], s=[[1,0],[1,1]], and(h*s)^3=I.
+The actual amplitude loop instead obeys(H*S)^3=gamma*I, where
+gamma=(1/sqrt(2))*sum_(x=0,1) i^(x^2)=(1+i)/sqrt(2), normSq(gamma)=1 and gamma is not1.
+Against a fixed coherent reference, normSq(1+gamma)=2+sqrt(2), which is not4.
+This is a finite binary quadratic-phase pilot with its explicit Weyl correspondence. It is not
+an asserted bosonic metaplectic lift or a native gravity amplitude construction.
+See [finding 135](findings/135-finite-quadratic-phase-loop-and-weyl-bridge.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.phaseLaw"
+lean_proof = "Artform.Scores.GravityBridge.phaseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:normalized-gaussian-gluing"
+label = "GAC:normalized-gaussian-gluing"
+title = "Normalized Gaussian gluing and discarded-detail test"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:normalized-gaussian-gluing)"
+statement = """
+**GAC:normalized-gaussian-gluing (integrated detail and normalization).** For real h>0 define
+K_h(x,y)=exp(-(y-x)^2/(2*h))/sqrt(2*pi*h), with Lebesgue intermediate measure.
+For h0,h1>0 the product K_h0(x,m)*K_h1(m,y) is integrable in m and
+integral_m K_h0(x,m)*K_h1(m,y)=K_(h0+h1)(x,y).
+Its exact prefactor identity is
+sqrt(2*pi*h0)^-1*sqrt(2*pi*h1)^-1*sqrt(pi/((h0+h1)/(2*h0*h1)))=sqrt(2*pi*(h0+h1))^-1.
+Retaining the middle variable and integrating it are different from fixing/discarding it: at
+h=1/(2*pi), K_h(0,0)^2=1 but K_(2*h)(0,0)=1/sqrt(2), and these differ.
+This is a positive real Gaussian boundary kernel, not an oscillatory Lorentzian gravity kernel.
+No physical native constraints or quantum refinement map are inferred from the identity.
+See [finding 136](findings/136-normalized-gaussian-gluing-and-detail-measure.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.heatLaw"
+lean_proof = "Artform.Scores.GravityBridge.heatLaw"
+reviewed = ""
+review_text_sha256 = ""
