@@ -226,6 +226,62 @@
       "bytes": 14591,
       "sha256": "e53a2a95fff08b29d11c61ed171c789bad6ab611aa43e0f4a09cef42713faaa6",
       "scope": "Original leading polynomial, guarded off-axis inverse and order-one graph; physical frame/link/history prescription remains open"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-variable-temporal-symbol-and-weighted-spatial-range-qualified-source-work-20261028/original-constant-coframe-Schur-symbol-and-coordinate-normalization.md",
+      "snapshot": "source/native-coordinate-polynomial.md",
+      "bytes": 6154,
+      "sha256": "aae563c807d63a97dc30441ea347f648639e895dcb11403c460372c41221c916",
+      "scope": "Original full constant-coframe degree-six symbol, indefinite fourth-time coefficient and guarded inverse; not a full variable time inverse"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-variable-temporal-symbol-and-weighted-spatial-range-qualified-source-work-20261028/mandatory-authority-domain-attribution-and-effective-history-qualification.md",
+      "snapshot": "source/native-coordinate-polynomial-qualification.md",
+      "bytes": 5229,
+      "sha256": "53df290d08bbe7c3f8681bc1a480c839b450f7998b636f0101e1dfee65a881ff",
+      "scope": "Mandatory domains/history/finite corners; full time companion, nonlinear source and physical parent remain open"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-variable-temporal-symbol-and-weighted-spatial-range-qualified-source-work-20261028/finished-scope-and-unresolved-time-range-obligations.md",
+      "snapshot": "source/native-coordinate-polynomial-scope.md",
+      "bytes": 2037,
+      "sha256": "3811e564632660b40d9d3c371aa3a60220bbf2afb1d698af29ac8c8172a82d4c",
+      "scope": "Spatial weighted inverse not full time inverse; exact low-frequency and analytic/nonlinear duties"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-low-frequency-first-seed-M157-research-evidence-20261030/OPEN-native-low-frequency-slow-contour-first-seed-and-physical-cut-test.md",
+      "snapshot": "source/native-slow-cauchy-polynomial.md",
+      "bytes": 16303,
+      "sha256": "eec52c8467f0d1f50e016e6208691fba2c8a26fb64533d677cb5b077d8315412",
+      "scope": "Original mixed second/fourth-order Cauchy polynomial, exact full40 reconstruction and declared twenty trace; full physical prescription separate"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-low-frequency-first-seed-M157-research-evidence-20261030/additive-lower-coordinate-basis-convention.md",
+      "snapshot": "source/native-slow-lower-basis.md",
+      "bytes": 2314,
+      "sha256": "0a10194b7ae97ddb7e8047eeb1cf72664c51e865c658459f57b17ecfa49474f3",
+      "scope": "All G_j,C1 and all four coordinate jet slots must use the same lower basis"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-low-frequency-first-seed-M157-research-evidence-20261030/mandatory-coframe-coordinate-scope-and-order-two-cut-functional.md",
+      "snapshot": "source/native-slow-coframe-trace-scope.md",
+      "bytes": 5313,
+      "sha256": "01c258f611c478294dd5d1fbcce248068dfe48ef7ca092b9fb54b8de979401f3",
+      "scope": "Complete coframe chi is not constructor Phi; exact full source/normal returns and physical cut remain separate"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-low-frequency-first-seed-M157-research-evidence-20261030/mandatory-physical-trace-Fourier-parity-description-qualification.md",
+      "snapshot": "source/native-slow-parity-scope.md",
+      "bytes": 1657,
+      "sha256": "8b97a3c18307d56d6997513defac418d819d0216852c97e97b55897359803886",
+      "scope": "Fourier reality/Schwartz support does not imply componentwise coordinate evenness; frozen description correction"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-post-p110-continuation-records/M160-R7-exact-native-cut-form-and-selected-TT-nondegeneracy-UNREVIEWED-20261030.md",
+      "snapshot": "source/native-original-cut-form.md",
+      "bytes": 11151,
+      "sha256": "acb95d614111ecf39e622f77bdc01ede1777890a8a0109d1a2ed7ededcc6ddf9",
+      "scope": "Exact full-space lattice cut current with original scaling and incoming transpose; declared selected trace, finite owned corners and full radical remain separate"
     }
   ],
   "new_mathematical_acceptance": "none from this inventory; new Lean claims require independent fidelity approval",

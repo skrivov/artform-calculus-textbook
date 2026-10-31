@@ -3109,3 +3109,205 @@ lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.he
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "002ecdcb324a3dd5b74cbff5d5521a69a84d3c22cb91212562f6adcb9046118c"
+
+[[statement]]
+key = "GAC2:native-cauchy-polynomial-lower-basis"
+label = "GAC2:native-cauchy-polynomial-lower-basis"
+title = "Complete mixed Cauchy polynomial and lower basis"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-cauchy-polynomial-lower-basis)"
+statement = """
+**GAC2:native-cauchy-polynomial-lower-basis (complete mixed cauchy polynomial and lower basis).** For the original degree-four coordinate polynomial G(z), the complete four-jet
+Cauchy input is G1*x0+G2*(z*x0+x1)+G3*(z^2*x0+z*x1+x2)+
+G4*(z^3*x0+z^2*x1+z*x2+x3). The mixed second/fourth-order input is
+(z*t0+t1,Cauchy+C1*t0), so zero coordinate jets retain C1*t0. For an involutive
+basis map eta, transforming every G_j by eta*G_j*eta, all four jets by eta and C1
+by eta*C1 transforms the entire coordinate input by eta. These are exact pointwise
+linear identities; they do not identify complete-coframe chi with constructor Phi
+or supply the original admitted history/physical trace.
+See [finding207](findings/207-native-cauchy-polynomial-lower-basis.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.cauchyLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.cauchyLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-companion-resolvent"
+label = "GAC2:native-companion-resolvent"
+title = "Guarded complete coordinate companion resolvent"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-companion-resolvent)"
+statement = """
+**GAC2:native-companion-resolvent (guarded complete coordinate companion resolvent).** For the complete four-jet companion N=(x1,x2,x3,-H*(G0*x0+G1*x1+
+G2*x2+G3*x3)), the explicit state R_z(b) has first entry L*Cauchy_G(z,b) and
+subsequent entries z*x0-b0,z^2*x0-z*b0-b1,z^3*x0-z^2*b0-z*b1-b2.
+H*G4=I and G(z)*L=I prove(zI-N)R_z(b)=b. Adding G4*H=I and
+L*G(z)=I proves uniqueness and the other inverse direction. The complete residual
+formula retains every G_j and Cauchy contact. A nonzero quartic reference satisfies
+all inverse guards. Actual native polynomial/band and uniform contour bounds are not
+supplied merely by arbitrary H,L.
+See [finding208](findings/208-native-companion-resolvent.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.resolventLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.resolventLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:mixed-source-response-contacts"
+label = "GAC2:mixed-source-response-contacts"
+title = "Source-complete mixed response and preparation change"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:mixed-source-response-contacts)"
+statement = """
+**GAC2:mixed-source-response-contacts (source-complete mixed response and preparation change).** For L inverse to the coordinate polynomial G(z), the mixed symbol
+((z^2+r)*t,(C0+z*C1)*t+G(z)*chi) has the displayed source response when
+z^2+r!=0. Its two inverse directions use the corresponding two coordinate inverse
+guards. At the same TT input, changing coordinate preparation changes only the
+coordinate response by L*(Cauchy(x)-Cauchy(y)). Omitting C1*t0 changes it by
+L*(C1*t0); this is nonzero only if that vector is nonzero. These are pointwise
+source/response identities. The mixed inverse excludes the TT poles; it is not the
+separate coordinate inverse used at the light-cone roots.
+See [finding209](findings/209-mixed-source-response-contacts.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.sourceResponseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.sourceResponseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-current-coordinate-factors"
+label = "GAC2:native-current-coordinate-factors"
+title = "Original current factors in two data coordinates"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-current-coordinate-factors)"
+statement = """
+**GAC2:native-current-coordinate-factors (original current factors in two data coordinates).** With full nine-entry symmetric-tensor contraction, the original coframe
+pairing at f_sp=q/2,f_dot=p equals-(q:s-r:p)/2. Rewriting with metric velocity
+v=2p gives-(q:w-r:v)/4, preserving its physical value. On the original unit-dyad
+polarization both geometry/momentum tests give-1. For any bilinear B,
+B(f-h*c,g-h*d)=B(f,g)-h*B(f,d)-h*B(c,g)+h^2*B(c,d).
+This is the full algebraic physical-connection scaling expansion; identifying
+separate16/24 slot embeddings, h^-2 Hessian and h^4/h/h^3 measure/current factors
+remains an additional native source duty.
+See [finding210](findings/210-native-current-coordinate-factors.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.coordinatesLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.coordinatesLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:complete-current-processing-defect"
+label = "GAC2:complete-current-processing-defect"
+title = "Complete current change under processing"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:complete-current-processing-defect)"
+statement = """
+**GAC2:complete-current-processing-defect (complete current change under processing).** For a bounded real bilinear B and bounded E,D from the same normed
+input space, pull_B(E+D)-pull_B(E)=B(E,D)+B(D,E)+B(D,D). Its operator norm
+is at most||B||*(2*||E||*||D||+||D||^2). The quadratic contact is retained.
+If every D-value is in both ambient radicals of B, the pulled current is unchanged.
+These are estimates in the supplied spaces; they do not identify the full physical
+radical or declare a source-changing, unadmitted alteration equivalent.
+See [finding211](findings/211-complete-current-processing-defect.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.processingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.processingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:admitted-source-current-radical"
+label = "GAC2:admitted-source-current-radical"
+title = "Admitted and source-compatible current radical"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:admitted-source-current-radical)"
+statement = """
+**GAC2:admitted-source-current-radical (admitted and source-compatible current radical).** The radical on an admitted subspace W consists of g in W with
+B(g,w)=0 for every w in W. If A preserves W and B(A*g,w)+B(g,A*w)=0
+there, it preserves this admitted radical. Nondegeneracy on W makes that radical
+zero. Restricting W further by J*g=0 retains source compatibility explicitly.
+The statements do not compute the full native radical, identify all Ward directions,
+or extend a selected-sector nondegeneracy theorem to the full solution quotient.
+See [finding212](findings/212-admitted-source-current-radical.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.radicalLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.radicalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:source-observation-preparation-equivalence"
+label = "GAC2:source-observation-preparation-equivalence"
+title = "Source and observation agreement on admitted preparations"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:source-observation-preparation-equivalence)"
+statement = """
+**GAC2:source-observation-preparation-equivalence (source and observation agreement on admitted preparations).** If U maps preparations into W, then V is also admitted and has the same
+complete J-force and readout as U exactly when every(V-U) input lies in
+W intersect ker(J) intersect ker(read). A full trace with a recovery map on W is
+rigid: two admitted response maps with the same complete trace agree. A concrete
+read-invisible vector can still change the force. These are exact linear interface
+criteria; a TT-only reading does not identify the original complete physical cut,
+connection, history or current prescription.
+See [finding213](findings/213-source-observation-preparation-equivalence.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.equivalenceLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.SlowCompanion.equivalenceLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:owned-window-incoming-boundary"
+label = "GAC2:owned-window-incoming-boundary"
+title = "Incoming adjoints on an owned spatial window"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:owned-window-incoming-boundary)"
+statement = """
+**GAC2:owned-window-incoming-boundary (incoming adjoints on an owned spatial window).** On a finite additive group, pairing with an owner weight p has the exact
+shift-adjoint defect sum_x(p(x)-p(x+s))*f(x)*g(x+s). It equals the forward
+owned pairing minus the true incoming pairing with f(x-s). A constant full-space
+owner cancels the defect. On the explicit five-site window with an outgoing edge,
+the defect is1. This is a local window identity; full-space native reindexing cannot
+therefore be used to erase a finite owned corner.
+See [finding214](findings/214-owned-window-incoming-boundary.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.ownedWindowLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.ownedWindowLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:declared-cost-quadratic-energy"
+label = "GAC2:declared-cost-quadratic-energy"
+title = "Coefficient operation count versus leading selected energy"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:declared-cost-quadratic-energy)"
+statement = """
+**GAC2:declared-cost-quadratic-energy (coefficient operation count versus leading selected energy).** The original leading selected TT quadratic energy coefficient at rho^2=14
+on a times the native polarization with zero momentum is7*a^2/2. The same
+one-scale temporal forcing program uses exactly1 multiplication and0 additions
+for every rational a, while its output is(36/505)*a. For every rational bound M,
+some a has quadratic energy coefficient greater than M with that same operation
+count. Thus this declared coefficient cost alone funds no such amplitude/energy
+bound. This is a formal quadratic comparison, not an admission of arbitrary nonlinear
+amplitudes or a finite-h physical energy theorem.
+See [finding215](findings/215-declared-cost-quadratic-energy.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.costEnergyLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.NativeCurrent.costEnergyLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:leading-preparation-trace-gap"
+label = "GAC2:leading-preparation-trace-gap"
+title = "Necessary trace change of a leading prepared graph"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:leading-preparation-trace-gap)"
+statement = """
+**GAC2:leading-preparation-trace-gap (necessary trace change of a leading prepared graph).** For a triangular leading block(S,0;F,N), graph invariance is exactly
+K*S-N*K=F. If||S||,||N||<=a>0 and d<=||F||, then||K||>=d/(2*a).
+The zero-coordinate copy is invariant exactly when F=0. Under the two-sided
+quadratic-resolvent inverse and S^2=-rI, nonzero F forces the prepared Sylvester
+graph to be nonzero. This is a leading graph/trace obstruction for that declared
+class; it does not prove an order-one alternative matches the original full physical
+coframe, connection, cut or history prescription.
+See [finding216](findings/216-leading-preparation-trace-gap.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leadingPreparationLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw"
+reviewed = ""
+review_text_sha256 = ""

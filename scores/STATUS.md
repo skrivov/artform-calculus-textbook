@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 169 |
-| stated | 0 |
+| stated | 10 |
 | planned | 0 |
-| **total** | **169** |
+| **total** | **179** |
 
 ## Statements
 
@@ -184,3 +184,13 @@
 | GAC2:native-tt-forcing-programs | Matched exact original forcing programs | proved | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw` | approved 2026-10-31 |
 | GAC2:hilbert-single-step-generator | Single native step to generator through projection | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw` | approved 2026-10-31 |
 | GAC2:heldout-native-tt-force | Held-out off-axis native temporal witness | proved | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw` | approved 2026-10-31 |
+| GAC2:native-cauchy-polynomial-lower-basis | Complete mixed Cauchy polynomial and lower basis | stated | `Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.cauchyLaw` / `Artform.Scores.GravityBridge.Native.SlowCompanion.cauchyLaw` | awaiting review |
+| GAC2:native-companion-resolvent | Guarded complete coordinate companion resolvent | stated | `Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.resolventLaw` / `Artform.Scores.GravityBridge.Native.SlowCompanion.resolventLaw` | awaiting review |
+| GAC2:mixed-source-response-contacts | Source-complete mixed response and preparation change | stated | `Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.sourceResponseLaw` / `Artform.Scores.GravityBridge.Native.SlowCompanion.sourceResponseLaw` | awaiting review |
+| GAC2:native-current-coordinate-factors | Original current factors in two data coordinates | stated | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.coordinatesLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.coordinatesLaw` | awaiting review |
+| GAC2:complete-current-processing-defect | Complete current change under processing | stated | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.processingLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.processingLaw` | awaiting review |
+| GAC2:admitted-source-current-radical | Admitted and source-compatible current radical | stated | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.radicalLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.radicalLaw` | awaiting review |
+| GAC2:source-observation-preparation-equivalence | Source and observation agreement on admitted preparations | stated | `Artform.Scores.GravityBridge.Native.SlowCompanion.Statement.equivalenceLaw` / `Artform.Scores.GravityBridge.Native.SlowCompanion.equivalenceLaw` | awaiting review |
+| GAC2:owned-window-incoming-boundary | Incoming adjoints on an owned spatial window | stated | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.ownedWindowLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.ownedWindowLaw` | awaiting review |
+| GAC2:declared-cost-quadratic-energy | Coefficient operation count versus leading selected energy | stated | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.costEnergyLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.costEnergyLaw` | awaiting review |
+| GAC2:leading-preparation-trace-gap | Necessary trace change of a leading prepared graph | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leadingPreparationLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw` | awaiting review |

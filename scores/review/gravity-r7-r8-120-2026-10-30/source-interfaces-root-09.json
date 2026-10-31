@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "full_noncommuting_companion_basis_tests": 8,
+  "two_inverse_directions": true,
+  "all_four_lower_basis_jets": true,
+  "complete_current_quadratic_contact": true,
+  "owned_corner": "1",
+  "constant_cost_energy_examples": [
+    "7/2",
+    "14"
+  ],
+  "source_pairs": 39,
+  "new_physical_gate": 0,
+  "historical_or_runtime_saving": 0
+}
