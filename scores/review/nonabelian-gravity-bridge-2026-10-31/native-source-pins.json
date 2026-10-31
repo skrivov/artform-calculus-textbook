@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "3084e39533cc2c4a160c4e9875b13c21d6873f62",
+  "contract": "NATIVE-CONTRACT.md",
+  "local_inputs": [
+    {
+      "repository_path": "lake-manifest.json",
+      "sha256": "d335397f4a766516c38741186a3c6691282290fed3fa8b0c9c186dddab039d45"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/CoordinatesDefs.lean",
+      "sha256": "e1117e26c4c265979da5364ceda30ca2f5759058f86b9aab3ebf2dc939fdad47"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/TorsionDefs.lean",
+      "sha256": "547c475106a3858655678a4e1fc86608be76f04aeeeda0bce51daefdd9feecd5"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/QuadraticDefs.lean",
+      "sha256": "2bea8d1b0be757198d9c16bb29ad69dca3b7a356d034a1b8cc7d6a07e0bf6aae"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/Quadratic.lean",
+      "sha256": "342efe505d70540c66ca84a4f6c02a5d522def88a153d230a4a592ee9bbe56c8"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/ForceDefs.lean",
+      "sha256": "c82168b96a74c8ec99d1622992d98971d43e7a68da886cfef0e1e5b289549fcc"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/Force.lean",
+      "sha256": "c76da44e342dfca76facf841dc49bfa1fb6a150e641f582fc5369ec015f506ff"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSignDefs.lean",
+      "sha256": "60dfcb0ab9069d1689b441fe4736184b823b459eb941ffa10e819dc1a5f3742b"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/PhysicalSign.lean",
+      "sha256": "5a8a87b24bcf6cc88024c58c945af6b5792f0680f99a4092ffb2dd6847ffd7ba"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/WardDefs.lean",
+      "sha256": "65c5ca181966062b9472e73c7b0db09380d292ff98aa3f7412e457291e30cdc7"
+    },
+    {
+      "repository_path": "scores/ArtformScores/GravityBridge/Native/Full40/Ward.lean",
+      "sha256": "e1a78fd2e483092794117958bacf7eee84eff81c02a29dbf55db9393a5d83c3a"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/CURRENT-PROGRAM.md",
+      "sha256": "064290780bf8a8cffc8ec7248e6ce9b4f0a340d7aa5406942a16c1c62bba07f0"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-owned-flat-link-smooth-range-and-l2-obstruction.md",
+      "sha256": "77162d75986c30ee8f1d27a724cf0cb1a5bc9b22746f8b16d11e6ee9740107fe"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-owned-flat-vector16-smooth-range-and-coupled-l2-obstruction.md",
+      "sha256": "f762f32adf2ee15b1b4115732a2e138230563135da490349be28bc80754e8b23"
+    }
+  ]
+}

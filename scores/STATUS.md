@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 271 |
+| proved | 272 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **275** |
+| **total** | **276** |
 
 ## Statements
 
@@ -290,3 +290,4 @@
 | NGB:spherical-face-collapse | Orthant spherical holonomies and a Gauss-preserving collapsed face | proved | `Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse` / `Artform.Scores.NonabelianGravity.sphericalFaceCollapse` | approved 2026-10-31 |
 | NGB:matched-orthant-transport | Matched orthant faces and one-sided cell-sector transport | proved | `Artform.Scores.NonabelianGravity.Statement.matchedOrthantTransport` / `Artform.Scores.NonabelianGravity.matchedOrthantTransport` | approved 2026-10-31 |
 | NGB:matched-score-separation | Matched-sector kick obstruction and intrinsic-preserving connection drift | proved | `Artform.Scores.NonabelianGravity.Statement.matchedScoreSeparation` / `Artform.Scores.NonabelianGravity.matchedScoreSeparation` | approved 2026-10-31 |
+| NGB:native-rotation-import-test | Complete native force rejects the conditional rotational diagonal import | proved | `Artform.Scores.NonabelianGravity.Statement.nativeRotationImportTest` / `Artform.Scores.NonabelianGravity.nativeRotationImportTest` | approved 2026-10-31 |

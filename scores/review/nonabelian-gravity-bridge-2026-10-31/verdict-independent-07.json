@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "single user-authorized Sol6.1 ngb_sol61_transport_review",
+  "contribution_disclosure": "Single user-authorized Sol6.1 reviewer ngb_sol61_transport_review. Reviewer supplied conceptual convention/domain advice and independent arithmetic before implementation. Root authored all four production modules; reviewer authored none. Reviewer independently examined actual source, proofs and canonical literal and authored only review artifacts. The standalone stdlib Fraction replay imports no production or prior-review evaluator. No claim of no prior involvement in problem formulation.",
+  "reviewed_base_commit": "3084e39533cc2c4a160c4e9875b13c21d6873f62",
+  "reviewed_freeze": "four additive final modules plus frozen contract/results/pins, bound by exact hashes",
+  "approved_count": 1,
+  "returned_count": 0,
+  "prior_approved_count_preserved": 271,
+  "four_CNI_claims_still_pending": true,
+  "entries": [
+    {
+      "key": "NGB:native-rotation-import-test",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeRotationImportTest",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeRotationImportTest",
+      "review_text_sha256": "e16407aa578e6101b553e8904b2b6a91dde861011b9874b22ffabaa4817f0897",
+      "canonical_literal_sha256": "c7c2b4662f82c55d9afa270ec003bd88a82469440a73f0dc0c94cb74b559983e",
+      "reachable_definition_count": 55,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "The actual complete Full40 first variation and coordinate force yield all40 owned rows of the rational rotational diagonal trial, including off-ansatz contact equations. Arbitrary Full40 integer zero extension is bound to both incident densities and Fin3 storage without omitted boundary terms. The force matrix has nonzero trace-direction and traceless factors, and the actual owned force vanishes exactly for the zero trial. The claim explicitly retains flat zero-character, rational, physically unselected linearized and conditional-import scope; no curved score field map or derivative is asserted.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/NativeRotation.lean": "4c5af2253b6c1c406cce4255d560cf21a381eba3c0d19a51626c080955683a46",
+    "scores/ArtformScores/NonabelianGravity/NativeBoundary.lean": "1a1f2dcb045839f923716e3239ff28bc14d7f68582f339191998325cde0ecad0",
+    "scores/ArtformScores/NonabelianGravity/NativeStatements.lean": "4d86694dbeeb1ac65ef1d4ccaf84c99a8e23bd99f2e0ec1cfe39befc7caf9114",
+    "scores/ArtformScores/NonabelianGravity/NativeTheorems.lean": "06a7463d002d8863781aa5a147ae2f064725247e14bc40bd74791f0f1e99ae5d",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NATIVE-CONTRACT.md": "7d0648a524a30b5617ab141fc03ead533c38a26157739aff1939da9633271586",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NATIVE-RESULTS.md": "f21d0e3d9498a04de622d5edbe9b63bde9b124e074f60cf51914b7bc82d9a9af",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0"
+  },
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "83f30d6eee2fcb87d71e66cbaaba1204b39eb9875cc233b70c51701741f9510d",
+  "claims_file_preapproval_snapshot_sha256": "5ecb9df290c875971dcebd5be0d459ca640cd307e1af2e57da70cc6fe29153c1",
+  "independent_replay_sha256": "218e3787bf7b95e82cd94adb76c5bffeec5563ac844882bd51cefecc7e48c779",
+  "audit": "audit-independent-07.md",
+  "validation": "validation-independent-07.json",
+  "new_material_native_gravity_applications": 0,
+  "scope": "Conditional rational one-owned-time spatial-zero-character native rotational diagonal import rejection. No faithful curved-orthant score field map/derivative, real extension counted as formal theorem, nonlinear history, physical Hamiltonian, universal connection no-go or new native application."
+}

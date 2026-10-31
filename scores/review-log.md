@@ -284,3 +284,4 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `NGB:spherical-face-collapse` approved as `Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse` (text ea482243ac8c)
 - 2026-10-31: `NGB:matched-orthant-transport` approved as `Artform.Scores.NonabelianGravity.Statement.matchedOrthantTransport` (text dc92cb530b23)
 - 2026-10-31: `NGB:matched-score-separation` approved as `Artform.Scores.NonabelianGravity.Statement.matchedScoreSeparation` (text 573820534410)
+- 2026-10-31: `NGB:native-rotation-import-test` approved as `Artform.Scores.NonabelianGravity.Statement.nativeRotationImportTest` (text e16407aa578e)

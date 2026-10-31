@@ -1,4 +1,26 @@
-# Next contract: native constraint compatibility before further dynamics
+# Next contract after the conditional native rotation test
+
+NATIVE-CONTRACT.md and NATIVE-RESULTS.md record the first source-specific
+adverse test. In the spatial-zero character, the complete owned40 force
+rejects every nonzero rational rotational diagonal trial with the coframe
+fixed and zero source/halo. This is a conditional import test, not the
+actual curved-orthant score: a faithful native field map is still missing.
+Do not repeat this test as a new research round or infer a universal no-go.
+
+The immediate feasibility target is now an explicit source-bound map from
+one admitted geometric configuration and its link chart into native
+coframe/independent Lorentz connection plus native boundary momenta.
+Derive the actual Legendre/boundary flux instead of declaring toy P to be
+native momentum. Retain the original endpoint/halo and all40 equations.
+Only after that map exists should a continuous score variation be bound
+to its derivative and a genuine native generator or factorization tested.
+Do not repair the failed trial merely by adding the already-known pure
+gauge Ward column. If no faithful map can be built, record the precise
+obstruction rather than quantizing an unidentified kinematic drift.
+
+The following source/domain and analytic gates remain in force.
+
+## Retained native constraint compatibility requirements
 
 TRANSPORT-RESULTS.md completes the matched cell-sector transport test.
 The full first-digon kick leaves the positive-curvature sector despite

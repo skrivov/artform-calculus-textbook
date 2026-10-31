@@ -1,4 +1,29 @@
-# Handoff after the matched cell-sector score comparison
+# Handoff after the conditional native rotation test
+
+The current stage is NATIVE-CONTRACT.md / NATIVE-RESULTS.md, one additive
+claim NGB:native-rotation-import-test and four modules NativeRotation,
+NativeBoundary, NativeStatements, NativeTheorems. Baseline3084e39 has
+38 NGB modules and271 approvals, all preserved. Review07 uses the same
+authorized Sol6.1 reviewer; no additional worker is launched. Current
+review status is STATUS.md. validate-native-root.py is the current checker.
+
+All40 owned rows of the actual complete quadratic action are tested in
+the spatial-zero character, with F=0 about E=I, kappa=1/101, rational
+rotational diagonal trial v, zero source/halo and integer zero extension.
+NativeBoundary proves all incident density bindings, rather than using a
+periodic-history assumption. The force matrix has diagonal4/101,
+offdiagonal-99/101 and only v=0 in its kernel. This is a small known-flat-
+Hessian specialization aimed at rejecting a conditional import, not a
+field map or derivative of the actual curved-orthant score. P189 is stronger.
+Native candidate selection, full histories and all quantum gates remain open.
+
+NEXT-CONTRACT.md prioritizes a source-bound field/link-chart and native
+Legendre boundary-momentum dictionary before another repaired score. The
+old pure-gauge Ward null columns do not supply a physical repair. Publish
+only the owned lane and proof repo; use PUBLICATION-NATIVE.json in the lane.
+The following transport handoff retains its historical details.
+
+## Previous matched cell-sector comparison
 
 Read TRANSPORT-CONTRACT.md and TRANSPORT-RESULTS.md. The strict transport
 test is now an actual intrinsically matched pair of spherical orthants,

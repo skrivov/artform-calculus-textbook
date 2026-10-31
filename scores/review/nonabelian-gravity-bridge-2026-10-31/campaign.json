@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "matched_sector_transport_and_score_comparison_approved_native_generator_open",
+  "research_status": "native_rotation_import_rejected_faithful_field_map_open",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_active_user_authorized_independent_reviewer",
   "additional_workers_launched": 2,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 17,
-  "new_independent_approvals": 17,
+  "new_registered_claims": 18,
+  "new_independent_approvals": 18,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -460,7 +460,7 @@
   },
   "analytic_extension_claims": 3,
   "analytic_extension_review": "approved_independent_02",
-  "latest_checkpoint": "TRANSPORT-RESULTS.md",
+  "latest_checkpoint": "NATIVE-RESULTS.md",
   "preflight_findings": [
     "no_four_valent_vertex_on_current_canvas",
     "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
@@ -516,5 +516,20 @@
       "No_exclusion_of_other_or_small_step_flows"
     ],
     "next": "Pin a source-selected independent-connection constraint/Hamiltonian and actual native carrier before another score or quantization proposal."
+  },
+  "native_extension_claims": 1,
+  "native_extension_review": "approved_independent_07",
+  "native_import_diagnostic": {
+    "contract": "NATIVE-CONTRACT.md",
+    "results": "NATIVE-RESULTS.md",
+    "baseline_commit": "3084e39533cc2c4a160c4e9875b13c21d6873f62",
+    "field_map_status": "Unavailable: no curved-score to native field/boundary-momentum map or actual score derivative asserted.",
+    "trial": "Rational rotational diagonal A1^23,A2^31,A3^12, zero coframe perturbation about E=I, one owned site, zero source/halo, spatial-zero character.",
+    "boundary": "Complete integer zero extension with both incident density cells; Fin3 storage binding for arbitrary owned Full40 inputs.",
+    "result": "All40 owned rows: three-row matrix diagonal4/101 and offdiagonal-99/101; zero force iff zero trial.",
+    "novelty": "Small checked import diagnostic; P189 already proves stronger flat full24 fixed-window facts.",
+    "next": "Derive a source-bound field/link-chart and native Legendre boundary-momentum dictionary before a repaired score or quantization.",
+    "new_material_native_applications": 0,
+    "added_research_rounds": 0
   }
 }

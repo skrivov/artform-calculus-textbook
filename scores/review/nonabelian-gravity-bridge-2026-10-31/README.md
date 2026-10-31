@@ -1,5 +1,12 @@
 # Non-Abelian scores: the gravity bridge campaign
 
+The current continuation is [NATIVE-RESULTS.md](NATIVE-RESULTS.md): the
+complete owned native force rejects a conditional rational rotational
+connection-only import. The faithful curved-score field map remains open.
+Use [NATIVE-CONTRACT.md](NATIVE-CONTRACT.md), [current status](STATUS.md),
+[review handoff](HANDOFF.md) and [validator](validate-native-root.py).
+Earlier transport results and receipts below retain their stage counts.
+
 31 October 2026: [TRANSPORT-RESULTS.md](TRANSPORT-RESULTS.md) records the
 matched cell-sector test. Two orthants have complete intrinsic face
 matching and a specified seam prescription. The full first-digon kick
