@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "geometry_counts": [
+    [
+      16,
+      32,
+      24,
+      8,
+      1
+    ],
+    [
+      24,
+      52,
+      42,
+      15,
+      2
+    ]
+  ],
+  "literal_full_cell_cases": 16,
+  "all_six_word_cases": 96,
+  "exact_stationary_discriminants": [
+    "4575451/5151505000",
+    "325748/2295225",
+    "23332/10201",
+    "660953/91809",
+    "10449053/999698"
+  ],
+  "source_pins": 45,
+  "original_law": "six based/inverse words, all five transports, all ordered torsion indices; kappa1/101",
+  "scope": "fixed inherited cubical coframe and01-boost family; full physical gate0; efficiency0"
+}

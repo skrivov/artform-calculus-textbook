@@ -186,3 +186,14 @@ import ArtformScores.GravityBridge.Native.TTCross.Green
 import ArtformScores.GravityBridge.Native.TTCross.History
 import ArtformScores.GravityBridge.Native.TTCross.FullRows
 import ArtformScores.GravityBridge.Native.TTCross.Range
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Geometry
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Words
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Mean
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Torsion
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Seam
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Cell
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Detail
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Coframe
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Uniform
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Merge
+import ArtformScores.GravityBridge.Native.CurvedSubdivision.Contacts

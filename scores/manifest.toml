@@ -3923,3 +3923,214 @@ lean_statement = "Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCross.rangeLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "3637abac7e8f80c760a36040f5a1601c2c7b3860ea5b84516b25a9da67d6b589"
+
+[[statement]]
+key = "GAC2:native-two-cube-incidence"
+label = "GAC2:native-two-cube-incidence"
+title = "Actual sourced two-cube incidence and inherited coframes"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-two-cube-incidence)"
+statement = """
+**GAC2:native-two-cube-incidence (actual sourced two-cube incidence and inherited coframes).** The sourced unit4cube and its temporal half subdivision have cell counts
+(16,32,24,8,1) and(24,52,42,15,2). For E=diag(h0,1,b,1), each child
+inherits E*diag(1/2,1,1,1)=diag(h0/2,1,b,1). The two oriented child
+determinants sum to the parent determinant, and all three intrinsic shared-facet
+columns agree. These are the actual cubical comparison data, not a map between
+cube, octahedron and stella, or a physical field admission theorem.
+See [finding247](findings/247-native-two-cube-incidence.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.geometryLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.geometryLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-six-curved-words"
+label = "GAC2:native-six-curved-words"
+title = "All six original based words and guarded reverse loops"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-six-curved-words)"
+statement = """
+**GAC2:native-six-curved-words (all six original based words and guarded reverse loops).** With U0=U2=U3=I and U1 a01 boost having parameters(c0,s0) at the root
+and(c1,s1) at the forward temporal root, all six original based plaquettes
+are computed as literal ordered edge words. Only the01 face is active, with
+(cflux,sflux)=(c0*c1-s0*s1,c0*s1-s0*c1). The reverse words are actual
+two-sided inverses when BOTH endpoint boosts satisfy c_i^2-s_i^2=1.
+The original root inverse-skew is-(H-H^-1)/2. These conclusions concern this
+restricted connection family and retain the original word orientation.
+See [finding248](findings/248-native-six-curved-words.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.wordsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.wordsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-curved-five-transport"
+label = "GAC2:native-curved-five-transport"
+title = "Original five transported complementary bivector terms"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-curved-five-transport)"
+statement = """
+**GAC2:native-curved-five-transport (original five transported complementary bivector terms).** In the declared01-boost family the complementary23 bivector
+b*e2 wedge e3 is fixed by every actual corner transport. The original five
+weights1/4,1/4,1/4,1/8,1/8 therefore give that same complementary bivector.
+The root inverse-skew has Lie coordinates(-sflux,0,0,0,0,0), and the complete
+six-face curvature fold on this family is-b*sflux. This is a transported-mean
+and curvature-value reduction on the family, not equality of arbitrary transverse
+field derivatives or replacement of the five terms by a new quadrature.
+See [finding249](findings/249-native-curved-five-transport.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.meanLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.meanLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-curved-ordered-torsion"
+label = "GAC2:native-curved-ordered-torsion"
+title = "Full ordered nonlinear torsion on the inherited coframe"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-curved-ordered-torsion)"
+statement = """
+**GAC2:native-curved-ordered-torsion (full ordered nonlinear torsion on the inherited coframe).** For E=diag(h0,1,b,1), h0*b!=0, and a proper algebraic01 boost(c,s),
+the original transported torsion has Theta01=h0*((1-c)*e0+s*e1),
+Theta10=-Theta01 and all other ordered components zero. The full density
+(det E)/2 times the ordered sum etaIJ*gE^ik*gE^jl*ThetaijI*ThetaklJ
+is-2*h0*b*(c-1). Both inverse metric factors and the original ordered-index
+one-half are retained. The claimed inverse of E^T*eta*E is checked. Uniform
+lattice-length normalization cancels when using E; h0 remains the inherited
+coframe column and kappa is unchanged at1/101.
+See [finding250](findings/250-native-curved-ordered-torsion.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.torsionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.torsionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-curved-seam-detail"
+label = "GAC2:native-curved-seam-detail"
+title = "A fused coarse link does not fix the fine seam"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-curved-seam-detail)"
+statement = """
+**GAC2:native-curved-seam-detail (a fused coarse link does not fix the fine seam).** Let B(q) be the exact rational01 boost with c=(q+q^-1)/2,
+s=(q-q^-1)/2. It is injective in q, and B(q)*B(r)=B(q*r) for nonzero
+parameters. The two child increment pairs(q,q) and(q*r,q/r) have the same
+coarse fused boost B(q^2), but different fine seam boosts when r!=1.
+Thus a fused coarse report does not determine the seam in this actual boost
+family. The changed fine side traces must be retained as detail; equality of
+the coarse loop is not equality of the full fine physical boundary data.
+See [finding251](findings/251-native-curved-seam-detail.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.seamLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.seamLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-current-curved-cell"
+label = "GAC2:native-current-curved-cell"
+title = "Complete current cubical cell law and symmetric merge defect"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-current-curved-cell)"
+statement = """
+**GAC2:native-current-curved-cell (complete current cubical cell law and symmetric merge defect).** The literal original six-face, five-transport curvature plus the complete
+ordered torsion at kappa=1/101, beta=1, alpha=lambda=0 restricts to
+S(h0,b,c0,s0,c1,s1)=-b*(c0*s1-s0*c1)-2*kappa*h0*b*(c0-1).
+For parent h0=1 and two inherited children h0=1/2, with midpoint boost(c,s)
+and endpoint double boost(c^2+s^2,2*c*s), the child sum minus parent is
+b*(c-1)*(2*s-kappa). At c=5/4,s=3/4,b=1 it is301/808.
+This is a full current-law value defect within the declared family, not a
+full40 stationarity or cross-polyhedron obstruction.
+See [finding252](findings/252-native-current-curved-cell.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.cellLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.cellLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-current-stationary-detail"
+label = "GAC2:native-current-stationary-detail"
+title = "Corrected stationary real detail in the original split action"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-current-stationary-detail)"
+statement = """
+**GAC2:native-current-stationary-detail (corrected stationary real detail in the original split action).** For b>0,u>0 the literal two-child action with midpoint phase u+r and
+fixed endpoint phase2u, including source-j*r, is
+F=-b*(sinh(u+r)+sinh(u-r))-kappa*b*(cosh(u+r)-1)-j*r.
+At j=0 its old symmetric detail r=0 has nonzero force-kappa*b*sinh u.
+Writing c=cosh u,s=sinh u,A=2*s+kappa*c,B=kappa*s,D=A^2-B^2,
+there exists an actual real stationary r with cosh r=A/sqrt D,
+sinh r=-B/sqrt D and-u<r<0. The literal action has derivative zero there,
+value b*(kappa-sqrt D) and detail Hessian-b*sqrt D<0.
+This corrects one connection detail in the declared inherited-coframe family;
+it is a stationary maximum, not a minimizing or positive Gaussian elimination.
+See [finding253](findings/253-native-current-stationary-detail.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.detailLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.detailLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-stationary-coframe-source"
+label = "GAC2:native-stationary-coframe-source"
+title = "Coframe source retained after connection detail stationarity"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-stationary-coframe-source)"
+statement = """
+**GAC2:native-stationary-coframe-source (coframe source retained after connection detail stationarity).** At the corrected zero-source stationary rapidity of the original split,
+the derivative of the literal action with respect to the coframe column b is
+kappa-sqrt D<0, for b>0,u>0,D=(2*sinh u+kappa*cosh u)^2-
+(kappa*sinh u)^2. Thus solving this connection detail equation does not solve
+the retained coframe equation in this family. The derivative is taken locally
+on b!=0 and is bound to the literal original two-cell action. It is a coframe
+Euler/source covector, not a bare canonical boundary momentum or proof that
+no different full fine field can solve all equations.
+See [finding254](findings/254-native-stationary-coframe-source.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.coframeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.coframeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-uniform-detail-residual"
+label = "GAC2:native-uniform-detail-residual"
+title = "Original uniform subdivision has an interior detail residual"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-uniform-detail-residual)"
+statement = """
+**GAC2:native-uniform-detail-residual (original uniform subdivision has an interior detail residual).** For every N>=2 equal temporal children with inherited h0=1/N,
+the literal original cell sum at phases phi_k=k*u is
+-b*sum_k sinh(phi_(k+1)-phi_k)-(2*kappa*b/N)*sum_k(cosh phi_k-1).
+Perturbing a single interior phase phi_k, while keeping both coarse endpoint
+phases fixed, has derivative-(2*kappa*b/N)*sinh(k*u), which is nonzero
+for b>0,u>0 and1<=k<N. Exact edge/root incidence and the actual original
+cell sum are checked. Hence the uniform split is not stationary in this
+retained-detail family. This is not an assertion that all fine boundary
+traces remain fixed or that the full nonlinear refinement problem is insoluble.
+See [finding255](findings/255-native-uniform-detail-residual.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.uniformLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.uniformLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-stationary-merge-defect"
+label = "GAC2:native-stationary-merge-defect"
+title = "Corrected stationary native merge still differs from the parent"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-stationary-merge-defect)"
+statement = """
+**GAC2:native-stationary-merge-defect (corrected stationary native merge still differs from the parent).** For b>0,u>0, solving the actual zero-source connection detail in the
+inherited two-child family gives a strictly positive action difference from
+the coarse original cell:
+Delta_eff=b*(kappa+2*cosh u*sinh u-sqrt D)>0.
+Its exact rationalization is
+Delta_eff*(kappa+2*cosh u*sinh u+sqrt D)=4*b*(sinh u)^4.
+For every supplied positive rapidity bound delta one can choose2u<delta
+and the corrected stationary r has both child rapidities u+r,u-r in(0,delta).
+Thus correcting the old detail section still fails exact merging in this
+specific family. A log bound alone does not establish full physical admission,
+and no universal full40 or cross-polyhedron obstruction is claimed.
+See [finding256](findings/256-native-stationary-merge-defect.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.mergeLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw"
+reviewed = ""
+review_text_sha256 = ""

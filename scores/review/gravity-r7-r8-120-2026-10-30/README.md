@@ -361,3 +361,7 @@ square4 are retained. These are leading paired-sector results with0 additional
 material native/physical-gate or efficiency credit. Admitted packets, finite-h
 contours/remainders, full40 physical reconstruction, independent frame/link/history
 matching and the physical current/quotient remain open.
+
+## Review13: J01–J10, original curved subdivision
+
+Findings247–256 submit ten original-law cubical geometry, transport, torsion, seam, stationary-detail, coframe-source, uniform-chain and corrected merge dispositions. The campaign is100/120,90 approved,209 total before review13. All45 source pairs are authenticated. Review all37 new Lean files, including7 supporting modules and separate kernels for all17 proof/support modules. The fixed coframe/01-boost family does not supply a full40 physical solution or cross-polyhedron map. No J efficiency or native physical-gate credit.

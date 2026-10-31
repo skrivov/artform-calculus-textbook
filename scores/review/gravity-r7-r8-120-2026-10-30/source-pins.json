@@ -296,6 +296,34 @@
       "bytes": 2186,
       "sha256": "90a942f1bbb77c9b38d3ec10d7c5f3c623c37f1157d8085ea011af4716e51af7",
       "scope": "previous independently approved component benchmark, with all full40/native geometric/physical-transfer exclusions retained; no full40 solution or native geometric move follows"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/coframe-cell-variational-parent/full-cell-cotangent-and-curved-refinement-proof.md",
+      "bytes": 15936,
+      "sha256": "0d56b797228dea181902a1430c737dc2308027f33b559dcec76dbfdbf7e16e5c",
+      "scope": "Sourced actual two4cube incidence and old curvature-only sign/quadrature/stationary-detail control; not current full torsion action or cross-polyhedron map",
+      "snapshot": "source/actual-curved-cube-parent.md"
+    },
+    {
+      "original": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/coframe-cell-variational-parent/producer.py",
+      "bytes": 6790,
+      "sha256": "3389be759aaaa57601b81896620cdc5dfbacf4c32f49f98a07b17021eb91a9a3",
+      "scope": "Exact actual cube/subdivision incidence and all24/42 original based face words; definition prefix only, never execute artifact-writing tail",
+      "snapshot": "source/actual-curved-cube-producer.py"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-tensor-pure-tangent-mean-obstruction/premises/06-13-30-19-03-05-05-13-13-13-01-01-01-01-11-03-10-10-10-10-03-11-forward-torsion-definition.md",
+      "bytes": 9654,
+      "sha256": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+      "scope": "Original complete nonlinear ordered torsion functional, determinant/inverse metric and all endpoint/link contacts; fixed kappa model later selected, optional gamma family not imported",
+      "snapshot": "source/original-nonlinear-torsion.md"
+    },
+    {
+      "original": "physics/ledgers/gravity/campaigns/eight-route-gravity-block3-2026-09-11/development/cycle162-post68-tensor-pure-tangent-mean-obstruction/premises/05-12-29-18-02-04-04-12-12-12-24-24-24-24-02-09-09-09-09-02-15-original-curvature-action.md",
+      "bytes": 10278,
+      "sha256": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da",
+      "scope": "Original actual five transported corner terms and six complementary root inverse-skew curvature terms; full independent fields and source/boundary qualifications",
+      "snapshot": "source/original-transported-curvature.md"
     }
   ],
   "new_mathematical_acceptance": "none from this inventory; new Lean claims require independent fidelity approval",
