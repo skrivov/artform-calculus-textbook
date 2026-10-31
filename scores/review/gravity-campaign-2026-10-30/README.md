@@ -473,3 +473,52 @@ and five separate kernel replays. All five claims were independently approved at
 [validation](validation-independent-13.json) and [exact arithmetic replay](arithmetic-independent-13.py).
 All109 earlier approvals stand. Zero additional material native applications are credited;
 the guarded pivot result strengthens the same accepted R2 workflow.
+
+## H04–H08 final additions and all-eight assessment
+
+Final submission14 contains five new claims in findings152–156. The previous114 approvals
+stand. JointBudget, StateTopology, SourceRadical, ControlledPhase and MetricFrame each have
+new Defs and Statements surfaces. No approved surface is edited. Literal claims are in
+scores/manifest.toml and ledger ALGEBRA-OF-SCORES.md section7.
+
+- GAC:joint-remainder-budget retains the literal native leading scalar and approaching ray.
+  Check the annulus, nonzero leading coefficient, O(h^5) budget and exact cancellation for
+  the declared adverse remainder. It is not the actual native remainder. Check the positive
+  nonlinear budget equivalence; no native source norm is supplied.
+- GAC:state-topology-audit uses actual continuous linear evaluation functionals on one real
+  C([0,1]) space. Check positivity, normalization, norm bounds, the changing separating
+  continuous function, every fixed-observable limit, exact distance2 and failed norm limit.
+  It does not prove norm failure for the accepted native M166 states.
+- GAC:source-radical-audit constructs actual source/form quotients by the maximal compatible
+  radical subspace and preserves the step. Check k=0 and k!=0. The stronger nondegeneracy
+  obstruction quantifies over every quotient subspace and retains both full pullbacks.
+  Native allowed sources and the physical quotient are not identified by this finite model.
+- GAC:controlled-phase-equivalence proves equality of every isolated conjugation channel,
+  including the actual binary loop. The explicitly added coherent reference has a different
+  channel and a prepared/recombined circuit amplitude(1+gamma)/2. Check its probability at
+  the binary Gauss phase and the unitary premise. A native reference and its physical cost
+  are not supplied. No isolated global phase is claimed observable.
+- GAC:metric-frame-kinematics checks an exact finite rational Lorentz boost with the same
+  metric and nonzero off-diagonal frame entry. Check the entire linearized eta-skew kernel,
+  unique six parameters and finite coefficientwise jet classification. Check torsion and
+  curvature cancellation for the specified commuting first-order symbols, with nonzero
+  frame/connection examples. These are kinematic results, not full native shifted force,
+  physical gauge equivalence, all40 reconstruction or physical mode counting.
+
+The [final scientific assessment](final-assessment.md) and [proposed continuation](continuation.md)
+are part of this final independent review. Assess all eight directions, causal usefulness of
+OutlookOf, counting and every claimed native transfer. The intended final accounting is60
+investigations and56 new approved claims,119 total including original63. A01,A08,F01,D08
+carry research dispositions without separate registered new claims. Exactly one accepted
+material native application remains the scoped R2 all-zero coefficient-stratum reduction;
+its later extensions do not earn extra applications. The material R7/R8 target is unmet,
+all eight routes and the full parent remain open, and scientific outcome is partially successful.
+The twelve continuation duties are proposed future work, outside the completed allocation.
+
+Validation-H04-H05-H06-H07-H08.json records all required checks, certificates, both drift checks
+and five separate kernel replays with compact output hashes. Independently replay the proof
+and source/fidelity checks. Approve only passing literal claims through ledger_status.py,
+write audit/verdict/validation14, and publish. If the final assessment passes, replace its draft
+header with final approved counts and your review14 reference as part of your publication.
+The root will then close ledger checkpoint12 and the goal after publication. No additional
+material native credit is proposed, and no human technical approval is a gate.

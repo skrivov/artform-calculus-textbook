@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 114 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **114** |
+| **total** | **119** |
 
 ## Statements
 
@@ -129,3 +129,8 @@
 | GAC:boundary-anchoring | Boundary anchoring of the source-bearing component | proved | `Artform.Scores.GravityBridge.Statement.boundaryAnchoringLaw` / `Artform.Scores.GravityBridge.boundaryAnchoringLaw` | approved 2026-10-30 |
 | GAC:guarded-pivot-substitution | Guard-preserving native R2 pivot substitution | proved | `Artform.Scores.GravityBridge.Statement.pivotAuditLaw` / `Artform.Scores.GravityBridge.pivotAuditLaw` | approved 2026-10-30 |
 | GAC:finite-response-audit | Finite amplitude response audit and matching freedom | proved | `Artform.Scores.GravityBridge.Statement.radiativeAuditLaw` / `Artform.Scores.GravityBridge.radiativeAuditLaw` | approved 2026-10-30 |
+| GAC:joint-remainder-budget | Joint angular spacing and nonlinear budgets | stated | `Artform.Scores.GravityBridge.Statement.jointBudgetLaw` / `Artform.Scores.GravityBridge.jointBudgetLaw` | awaiting review |
+| GAC:state-topology-audit | Actual state convergence and norm separation | stated | `Artform.Scores.GravityBridge.Statement.stateTopologyLaw` / `Artform.Scores.GravityBridge.stateTopologyLaw` | awaiting review |
+| GAC:source-radical-audit | Source-compatible radical quotient audit | stated | `Artform.Scores.GravityBridge.Statement.sourceRadicalLaw` / `Artform.Scores.GravityBridge.sourceRadicalLaw` | awaiting review |
+| GAC:controlled-phase-equivalence | Isolated and controlled-reference phase equivalence | stated | `Artform.Scores.GravityBridge.Statement.controlledPhaseLaw` / `Artform.Scores.GravityBridge.controlledPhaseLaw` | awaiting review |
+| GAC:metric-frame-kinematics | Metric frame and connection kinematics audit | stated | `Artform.Scores.GravityBridge.Statement.metricFrameLaw` / `Artform.Scores.GravityBridge.metricFrameLaw` | awaiting review |

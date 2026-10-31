@@ -1916,3 +1916,116 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.radiativeAuditLaw"
 lean_proof = "Artform.Scores.GravityBridge.radiativeAuditLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "356d4a1fd0dbe7a7fe1dbe9f5d7bbf07b631d37e13750f1bb26f8fcf42b73dd3"
+
+[[statement]]
+key = "GAC:joint-remainder-budget"
+label = "GAC:joint-remainder-budget"
+title = "Joint angular spacing and nonlinear budgets"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:joint-remainder-budget)"
+statement = """
+**GAC:joint-remainder-budget (joint limits require uniform angular control).** Keep the native
+leading scalar d4=-C*F and approachingRay(h)=(1,1+h,0) of GAC:r8-nonuniform-domain.
+For real 0<h<=1 the ray has radial square in[2,5] and d4 nonzero. The declared adverse
+remainder R(h)=-h^4*d4(approachingRay(h)) satisfies |R(h)|<=C*h^5, while
+h^4*d4(approachingRay(h))+R(h)=0. This family is allowed by that isolated remainder
+estimate; it is not the actual native finite-spacing remainder or a fixed separated patch.
+For real h,d,amplitude>0 and any C, amplitude^2/(h^4*d)<=C*amplitude exactly when
+amplitude<=C*h^4*d. Instantiating a native nonlinear estimate still requires its actual
+source/operator coefficient, domain and remainder.
+See [finding 152](findings/152-joint-angular-spacing-and-nonlinear-budget.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.jointBudgetLaw"
+lean_proof = "Artform.Scores.GravityBridge.jointBudgetLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:state-topology-audit"
+label = "GAC:state-topology-audit"
+title = "Actual state convergence and norm separation"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:state-topology-audit)"
+statement = """
+**GAC:state-topology-audit (fixed-observable convergence does not imply state-norm convergence).**
+On the single real Banach algebra C([0,1]), let delta_x be evaluation at x and x_n=1/(n+1).
+Each delta_x is a continuous linear functional, delta_x(1)=1, delta_x(f*f)>=0 and
+its functional norm is at most1. For x>0 the continuous function
+f_x(t)=max(-1,1-2*t/x) has norm at most1, f_x(0)=1 and f_x(x)=-1.
+Consequently norm(delta_x-delta_0)=2. For every fixed continuous f,
+delta_(x_n)(f) tends to delta_0(f), but norm(delta_(x_n)-delta_0)=2 for every n
+and these norms do not tend to zero. This is a real positive-state topology example,
+not a claim of norm failure for the selected native M166 states.
+See [finding 153](findings/153-positive-state-topology-and-native-limit-scope.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.stateTopologyLaw"
+lean_proof = "Artform.Scores.GravityBridge.stateTopologyLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:source-radical-audit"
+label = "GAC:source-radical-audit"
+title = "Source-compatible radical quotient audit"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:source-radical-audit)"
+statement = """
+**GAC:source-radical-audit (retain the full source when quotienting).** In the declared
+GaugeSpace(q,p,g), gauge form q*p'-p*q', radical gaugeNull={q=p=0}, step(q+p,p,g+q)
+and source j*q+k*g, put Nmax=gaugeNull intersect ker(source). For any subspace N,
+N lies in gaugeNull and the full source descends through its actual quotient exactly when
+N<=Nmax. The source and form descend through Nmax and the step preserves Nmax.
+If k=0 then Nmax=gaugeNull; if k is nonzero then Nmax=0. For k nonzero there is
+no quotient at all carrying both a nondegenerate bilinear form pulling back to the full
+gauge form and a linear functional pulling back to the full source. These are claims in
+the specified singular model; native gauge status and allowed sources remain unidentified.
+See [finding 154](findings/154-source-compatible-radical-and-nondegenerate-quotient.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.sourceRadicalLaw"
+lean_proof = "Artform.Scores.GravityBridge.sourceRadicalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:controlled-phase-equivalence"
+label = "GAC:controlled-phase-equivalence"
+title = "Isolated and controlled-reference phase equivalence"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:controlled-phase-equivalence)"
+statement = """
+**GAC:controlled-phase-equivalence (specify the allowed reference experiment).** For complex
+gamma of norm square1, conjugation by gamma*I fixes every2x2 matrix. The binary loop
+(H*S)^3=gamma_G*I therefore has the identity isolated conjugation channel. In contrast,
+C_gamma=diag(1,gamma) is unitary and C_gamma*X*C_gamma^dagger differs from X whenever
+gamma!=1. The explicitly prepared and recombined circuit has
+(H^dagger*C_gamma*H)_(0,0)=(1+gamma)/2. At the normalized binary Gauss phase gamma_G,
+its squared norm is(2+sqrt(2))/4, different from1. The coherent reference is an additional
+experiment class. This does not make a scalar global phase observable in its isolated channel
+or identify a permitted native gravitational reference or its physical cost.
+See [finding 155](findings/155-isolated-channel-and-controlled-reference-experiment.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.controlledPhaseLaw"
+lean_proof = "Artform.Scores.GravityBridge.controlledPhaseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:metric-frame-kinematics"
+label = "GAC:metric-frame-kinematics"
+title = "Metric frame and connection kinematics audit"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:metric-frame-kinematics)"
+statement = """
+**GAC:metric-frame-kinematics (kinematic data omitted by a metric readout).** With
+eta=diag(-1,1,1,1), metric(E)_(ij)=sum_a eta_a*E_(ai)*E_(aj). The rational frame
+with temporal/spatial block[[5/3,4/3],[4/3,5/3]] and identity on the other axes has
+the same metric as I, determinant1 and entry(0,1)=4/3. The linearized metric map is
+V(F)_(ij)=eta_i*F_(ij)+eta_j*F_(ji). Its kernel consists exactly of the Lorentz
+matrices with three boost and three rotation parameters displayed in MetricFrameDefs;
+these parameters are unique. The same parametrization holds coefficientwise for any finite
+list of linearized metric jets. For commuting rational symbols k, set A_i=k_i*F.
+The declared linearized torsion k_i*F_(aj)-k_j*F_(ai)-A_i(a,j)+A_j(a,i) and
+curvature k_i*A_j(a,b)-k_j*A_i(a,b) vanish; A_i is eta-skew when F is.
+This is exact finite-frame and first-order kinematics, not the native shifted full40 force,
+physical gauge equivalence, admissible history reconstruction or a physical mode count.
+See [finding 156](findings/156-metric-frame-connection-and-full-forty-obligation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.metricFrameLaw"
+lean_proof = "Artform.Scores.GravityBridge.metricFrameLaw"
+reviewed = ""
+review_text_sha256 = ""

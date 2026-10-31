@@ -91,3 +91,8 @@ import ArtformScores.GravityBridge.MatterTransfer
 import ArtformScores.GravityBridge.BoundaryAnchoring
 import ArtformScores.GravityBridge.PivotAudit
 import ArtformScores.GravityBridge.RadiativeAudit
+import ArtformScores.GravityBridge.JointBudget
+import ArtformScores.GravityBridge.StateTopology
+import ArtformScores.GravityBridge.SourceRadical
+import ArtformScores.GravityBridge.ControlledPhase
+import ArtformScores.GravityBridge.MetricFrame
