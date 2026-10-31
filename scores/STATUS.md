@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 159 |
-| stated | 10 |
+| proved | 169 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **169** |
 
@@ -174,13 +174,13 @@
 | GAC2:normal-divergence-physical-group | Complete normal divergence and the supplied physical third group | proved | `Artform.Scores.GravityBridge.Native.NormalDivergence.Statement.physicalLaw` / `Artform.Scores.GravityBridge.Native.NormalDivergence.physicalLaw` | approved 2026-10-31 |
 | GAC2:four-group-recipe-exact-value | Exact value and regular-prime replay of the supplied four-group recipe | proved | `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.valueLaw` / `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.valueLaw` | approved 2026-10-31 |
 | GAC2:fixed-recipe-contact-budget | A quantitative temporal-contact test for the supplied fixed recipe | proved | `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.Statement.contactLaw` / `Artform.Scores.GravityBridge.Native.LongitudinalRecipe.contactLaw` | approved 2026-10-31 |
-| GAC2:complete-graph-riccati | Complete bounded graph defect | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.completeLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.completeLaw` | awaiting review |
-| GAC2:visible-closure-image-gap | Visible closure versus complete image invariance | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.visibleLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.visibleLaw` | awaiting review |
-| GAC2:quadratic-resolvent-sylvester | Quadratic-resolvent prepared graph | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.sylvesterLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.sylvesterLaw` | awaiting review |
-| GAC2:full-riccati-feedback | Complete graph recentering with feedback | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.feedbackLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.feedbackLaw` | awaiting review |
-| GAC2:original-native-tt-plane | The complete original TT plane | stated | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.originalLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.originalLaw` | awaiting review |
-| GAC2:whole-trace-repair-gap | The complete whole-trace repair bound | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.repairLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.repairLaw` | awaiting review |
-| GAC2:packet-operator-witness | Admitted packet and detector quantifiers | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.packetLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.packetLaw` | awaiting review |
-| GAC2:native-tt-forcing-programs | Matched exact original forcing programs | stated | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw` | awaiting review |
-| GAC2:hilbert-single-step-generator | Single native step to generator through projection | stated | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw` | awaiting review |
-| GAC2:heldout-native-tt-force | Held-out off-axis native temporal witness | stated | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw` | awaiting review |
+| GAC2:complete-graph-riccati | Complete bounded graph defect | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.completeLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.completeLaw` | approved 2026-10-31 |
+| GAC2:visible-closure-image-gap | Visible closure versus complete image invariance | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.visibleLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.visibleLaw` | approved 2026-10-31 |
+| GAC2:quadratic-resolvent-sylvester | Quadratic-resolvent prepared graph | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.sylvesterLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.sylvesterLaw` | approved 2026-10-31 |
+| GAC2:full-riccati-feedback | Complete graph recentering with feedback | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.feedbackLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.feedbackLaw` | approved 2026-10-31 |
+| GAC2:original-native-tt-plane | The complete original TT plane | proved | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.originalLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.originalLaw` | approved 2026-10-31 |
+| GAC2:whole-trace-repair-gap | The complete whole-trace repair bound | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.repairLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.repairLaw` | approved 2026-10-31 |
+| GAC2:packet-operator-witness | Admitted packet and detector quantifiers | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.packetLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.packetLaw` | approved 2026-10-31 |
+| GAC2:native-tt-forcing-programs | Matched exact original forcing programs | proved | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw` | approved 2026-10-31 |
+| GAC2:hilbert-single-step-generator | Single native step to generator through projection | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw` | approved 2026-10-31 |
+| GAC2:heldout-native-tt-force | Held-out off-axis native temporal witness | proved | `Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw` / `Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw` | approved 2026-10-31 |

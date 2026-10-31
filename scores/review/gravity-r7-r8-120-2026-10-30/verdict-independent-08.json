@@ -1,0 +1,368 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "d642fe9b9c059bdf1d763ff41c70e872abb01277",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 159,
+  "implementation_modified": false,
+  "entries": [
+    {
+      "key": "GAC2:complete-graph-riccati",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.completeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.completeLaw",
+      "review_text_sha256": "3837a8e7d773f1df87818e3be83f79d3bf9493e4c19da2c2f7971f8a255de3a4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 4,
+      "new_material_native_application": false,
+      "reason": "Exact complete image criterion and vertical defect with its own propagator and full quadratic feedback. Generic norm-independent block algebra; no physical product-norm substitution."
+    },
+    {
+      "key": "GAC2:visible-closure-image-gap",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.visibleLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.visibleLaw",
+      "review_text_sha256": "40d73006bd8110d193ef1aaafb51cc7c09b86fea3225d68da0d086fc0493e9dc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 10,
+      "new_material_native_application": false,
+      "reason": "Visible closure identified separately from the full artform defect and intertwining. Supplied bounded scalar witness excludes the zero graph, without constructing a native packet or identifying A21."
+    },
+    {
+      "key": "GAC2:quadratic-resolvent-sylvester",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.sylvesterLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.sylvesterLaw",
+      "review_text_sha256": "546310399c4921e7c008ed32718f0c8ee6217120dc9f8ca3e69fca011805213e",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 5,
+      "new_material_native_application": false,
+      "reason": "Two-sided quadratic inverse gives commutation and solution; left inverse suffices for conditional uniqueness. Norm bound and nonzero oscillator example; no nilpotence or actual native companion inverse assumed."
+    },
+    {
+      "key": "GAC2:full-riccati-feedback",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.feedbackLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.feedbackLaw",
+      "review_text_sha256": "7260dc776531da059aae1a91e628bac542a1b918037a93b7841658a0a6692a0d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Full noncommutative recentering retains both propagator changes and quadratic feedback. Exact remainder and norm estimate; no finite-h native solution inferred."
+    },
+    {
+      "key": "GAC2:original-native-tt-plane",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.originalLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCoordinates.originalLaw",
+      "review_text_sha256": "590a0dd9949289148abc35ac36940f61b5376450254c942396cf5b8c19006393",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 10,
+      "new_material_native_application": false,
+      "reason": "Complete rational native TT plane at123, free diagonal coordinates, original dyad/full nine-entry Frobenius norm and original i-free36/505 coefficient. No single-mode-to-packet promotion."
+    },
+    {
+      "key": "GAC2:whole-trace-repair-gap",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.repairLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.repairLaw",
+      "review_text_sha256": "ec177d8ff404911f2623321fcb060f2b4d1d2037148b53a9fee6911bf92b2169",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 3,
+      "new_material_native_application": false,
+      "reason": "Full Riccati graph gap, actual two-sided Neumann inverse, exact head/coordinate normalization and full image equality. Contractive supplied readouts, normalized-gap upstream premise and large-repair case retained."
+    },
+    {
+      "key": "GAC2:packet-operator-witness",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.packetLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.packetLaw",
+      "review_text_sha256": "0e755d18b6c893d32ebb12665c280ac8a412bab25a364d20b306495144b0e195",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 0,
+      "new_material_native_application": false,
+      "reason": "Correct normalized bounded packet/detector estimate and stability, with the full unnormalized factors. Neither a point detector nor admitted native packet is supplied by a scalar Fourier symbol."
+    },
+    {
+      "key": "GAC2:native-tt-forcing-programs",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw",
+      "review_text_sha256": "1f13a0ef93b930d5d87eb4f9bcf92a25b5221a5a2e071d3841badcf17ff4e8ad",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 11,
+      "new_material_native_application": false,
+      "reason": "Same full-matrix input access; two actual expressions equal the original forcing on the entire TT plane. Exact3/2 versus1/0 counts and zero-operation signed-wire/constant exclusion. Prospective fixed-momentum work only."
+    },
+    {
+      "key": "GAC2:hilbert-single-step-generator",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw",
+      "review_text_sha256": "ce8afdd87ab45e095d3a0614d35712a2d5b16d64c2e187786461730b2a547e73",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 0,
+      "new_material_native_application": false,
+      "reason": "Entire exponential tail and noncommutative power estimate, orthogonal Hilbert projections/range criterion and closed-kernel graph application under the original positiveh/smallness guard. No max-norm substitution or new native identification."
+    },
+    {
+      "key": "GAC2:heldout-native-tt-force",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw",
+      "review_text_sha256": "002ecdcb324a3dd5b74cbff5d5521a69a84d3c22cb91212562f6adcb9046118c",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 8,
+      "new_material_native_application": false,
+      "reason": "Distinct124 momentum and dyad, complete TT and Frobenius checks,59/505 original coefficient and universal trace-zero reduction. No common-band packet/operator bound inferred."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Complete.lean": "4a7e426df494960ba9c890743f9e6725910743dd3d85a666a98a1aec7ec4b227",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/CompleteDefs.lean": "7a714b0be9be6e1516c1fce4c921521aa261515d8cf0cbcbbc03494d9fd56437",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/CompleteStatements.lean": "cb8c946a9da40b88b933f3ecad6ba05def97a9bf4aa03b788ff371ae4783e3ab",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/ExponentialEstimates.lean": "4da27e1627d07c7be5584d1613ebf3f5a2f4d5c51eb23659d9f4bfd541ea2562",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Feedback.lean": "452a084170c5ce9bea0c30dba746a1d3b4506f70a98c7aa1b003ba1bf7e10a59",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/FeedbackDefs.lean": "8f983275d138e3c977fce831bb1341d0baecba94d4530338c07cbc9fc1eb7b25",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/FeedbackStatements.lean": "bb860024ba32fef382290eb4cd1fe2c05eacc6ccb841855efe2d9ec674b80dd1",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStep.lean": "25c23412bd56353f0257fbbc583dba67fbbf22cf2eb849fef920aeb7629f46ef",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStepDefs.lean": "0aa3d8ab29b880eeaec834c8f0c6d0380e6132a28b7f161428e321420c9ab967",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStepStatements.lean": "c1caaa633d5929a64970e5d7a8a32b7ab06aee8192c0777d863042ffc7b073a1",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Packet.lean": "7c91fdd0be218c07412141c701a449bd6e0744b3e43112c00b0e1a0f4762cdc0",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/PacketDefs.lean": "90b89858bb2488b085edb03e52269f58b572f162731311cdd4335bb0059d8f6a",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/PacketStatements.lean": "5e1b996b68ce59fbb16f07a4e184ce8914aaf807b34aa47cc8dc4739df1e4284",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Repair.lean": "84c6114abbf90ccd649fd0a4cdf369f779b89d8a48e67e77a04cea1a68c5ece1",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/RepairDefs.lean": "aab034418dbf25ac3b4e8c9182759ec656e6677ebc3347f50b9be59910ae1af3",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/RepairStatements.lean": "60e8410f2fdee81dcc86d70a08aaeea2351c4e61f91a2beb4239220c97fa9374",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Sylvester.lean": "791f3f192204fb6c11a2938492f5044f3cd63494eddd3cdb0805d8658a06105e",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/SylvesterDefs.lean": "ce47e50f7b4749697159ed8b30319cd0f8587c971a8e5fe80471f43aa82f707b",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/SylvesterStatements.lean": "78f4bd382de7f14f957d7f4b754f263cb378354cf57f72c1214c385d1a216eaa",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/Visible.lean": "e65c2c9b818a81344ecbe1e75e4a8f2a74f9b3ca706c90c6144533257ac45773",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/VisibleDefs.lean": "3cc8295aeed66ca7229413a22f5021a3325dab06455746cf5dc9d1bec6c92d1c",
+    "scores/ArtformScores/GravityBridge/Native/R7Blocks/VisibleStatements.lean": "1ac723e1c38bb5969082e975f978e20b8a042d8fb2a45864ace00828375f61dc",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Heldout.lean": "7b778d726284ff397a1055ddc9120228d436a1f7d1e575cce4533dfa76ec25a0",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/HeldoutDefs.lean": "2cdde9df43d3a468b705811aae99d3ea2905fff1bac1fb9bc58994126777bb2a",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/HeldoutStatements.lean": "125c518e1ca2d91bdafe2dc94dd20bfe1b84c0be71dbd6143859365f91375da9",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Original.lean": "8f473425ee10c54f62e8443d796d2e8d42c6d3af1e0518327a76a87fc758817f",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/OriginalDefs.lean": "0c07bba6f273bc5410c4baff8eb8e357b0a869827717151f8f725759bb9afb24",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/OriginalStatements.lean": "3ec6c55b96257f47b4a3e3f26de3db75fe6f7019706eda0ed218bda742f5d90e",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Programs.lean": "e0c01702dc9aa9dcc62c2d1f5759b19464dd7b1285fe8a3f3f65621a1ee2cf4b",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/ProgramsDefs.lean": "a79d0adb047afda322b25e4fd7960b476c8cacffbb5e1ec76d62e03d58cb894e",
+    "scores/ArtformScores/GravityBridge/Native/TTCoordinates/ProgramsStatements.lean": "25d201bfb9582442eaaa54f10cf2c39380020f1b6f38395413883ef204acf8fd"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "75d6133e4c6ed4b6269ea2774d1d1e80a8182f7f0fb0181d86dc77c8548bc5d3",
+    "physics/ledgers/lattice-waves/findings/197-complete-graph-riccati.md": "3ec89f9a05e291689df9cac3bc33109612db8acbe043d94353c1ca12a0f4e4d7",
+    "physics/ledgers/lattice-waves/findings/198-visible-closure-image-gap.md": "e301e3c510ef5856d573455ee2a379968c1f99b65d2e38152517114b13ef3684",
+    "physics/ledgers/lattice-waves/findings/199-quadratic-resolvent-sylvester.md": "9df05e8c1ea8ef2e4abe435827370ff987cd9a012960a22341ca72ee3e751eb0",
+    "physics/ledgers/lattice-waves/findings/200-full-riccati-feedback.md": "a4d71a2c21f17e68e13514e3e8b60cf3056f8057a70ead24104ef246f2a9d722",
+    "physics/ledgers/lattice-waves/findings/201-original-native-tt-plane.md": "adf3461ccd8ddf6ab50448abed66b6dbabbad602da97fa1614dec5203809bbcb",
+    "physics/ledgers/lattice-waves/findings/202-whole-trace-repair-gap.md": "2a362c9bca27a528029c4f9d13138d87202c568cfe346c14faa7afa29a914bcd",
+    "physics/ledgers/lattice-waves/findings/203-packet-operator-witness.md": "5d2754bc223e1ae12edc12ed190157f4c3787f766a8e2e2054a2c3525b2a6410",
+    "physics/ledgers/lattice-waves/findings/204-native-tt-forcing-programs.md": "836ae4edb142faf2e2aad1334dcfb0c87a7fd461f0467c8d548df4d096748fc7",
+    "physics/ledgers/lattice-waves/findings/205-hilbert-single-step-generator.md": "e1c8722e01d2851e05a44e6f3b34ef69f74eeccaef5ec90382968e1cf4503051",
+    "physics/ledgers/lattice-waves/findings/206-heldout-native-tt-force.md": "38baeae632a5724839982b2708ad0b3a511049aec57d3e79c61c95eea437b733"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "adbc2f186c4240d24b1344f083ec64c09fdc69831df688921aaacb94e0f4847f",
+  "exact_original_snapshot_pairs_authenticated": 31,
+  "scope_checks": {
+    "own_propagator_and_complete_feedback": true,
+    "generic_product_algebra_no_physical_norm_identification": true,
+    "supplied_detector_not_native_packet": true,
+    "both_Sylvester_inverse_directions_and_unique_solution": true,
+    "no_actual_N_nilpotence_or_native_resolvent_assumed": true,
+    "complete_whole_trace_image_equality": true,
+    "upstream_normalized_gap_explicit": true,
+    "large_delta_case_no_graph_assertion": true,
+    "same_Hilbert_norm_orthogonal_contractivity": true,
+    "complete_noncommutative_exponential_tail_proof": true,
+    "closed_subspace_and_closed_kernel_graph_bridges": true,
+    "original_h_positive_and_exp_guard": true,
+    "full_TT_matrix_input_access_matched": true,
+    "exact_program_costs": {
+      "literal_scales": 3,
+      "literal_adds": 2,
+      "contracted_scales": 1,
+      "contracted_adds": 0
+    },
+    "zero_operation_signed_wire_and_constant_excluded": true,
+    "heldout_124_coefficient": "59/505",
+    "full_nine_entry_Frobenius_square": 2,
+    "single_mode_not_promoted_to_L2_packet": true
+  },
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-08.py",
+    "sha256": "ff9cf1b6e062fc1ee00d6e7279ad65bc9f7011655d42463e8faef46089564969",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-08.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.032,
+    "output_bytes": 5769,
+    "output_sha256": "bb8fdcde9f544c6312705a18d910c443c9ddd9246bfd7588ef4024d47f636fee",
+    "stderr": "",
+    "result": {
+      "status": "pass",
+      "method": "stdlib Fraction Gaussian solves and noncommutative word expansion; independent of author replay",
+      "source_sha256": {
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Complete.lean": "4a7e426df494960ba9c890743f9e6725910743dd3d85a666a98a1aec7ec4b227",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/CompleteDefs.lean": "7a714b0be9be6e1516c1fce4c921521aa261515d8cf0cbcbbc03494d9fd56437",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/CompleteStatements.lean": "cb8c946a9da40b88b933f3ecad6ba05def97a9bf4aa03b788ff371ae4783e3ab",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/ExponentialEstimates.lean": "4da27e1627d07c7be5584d1613ebf3f5a2f4d5c51eb23659d9f4bfd541ea2562",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Feedback.lean": "452a084170c5ce9bea0c30dba746a1d3b4506f70a98c7aa1b003ba1bf7e10a59",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/FeedbackDefs.lean": "8f983275d138e3c977fce831bb1341d0baecba94d4530338c07cbc9fc1eb7b25",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/FeedbackStatements.lean": "bb860024ba32fef382290eb4cd1fe2c05eacc6ccb841855efe2d9ec674b80dd1",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStep.lean": "25c23412bd56353f0257fbbc583dba67fbbf22cf2eb849fef920aeb7629f46ef",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStepDefs.lean": "0aa3d8ab29b880eeaec834c8f0c6d0380e6132a28b7f161428e321420c9ab967",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/NativeStepStatements.lean": "c1caaa633d5929a64970e5d7a8a32b7ab06aee8192c0777d863042ffc7b073a1",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Packet.lean": "7c91fdd0be218c07412141c701a449bd6e0744b3e43112c00b0e1a0f4762cdc0",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/PacketDefs.lean": "90b89858bb2488b085edb03e52269f58b572f162731311cdd4335bb0059d8f6a",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/PacketStatements.lean": "5e1b996b68ce59fbb16f07a4e184ce8914aaf807b34aa47cc8dc4739df1e4284",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Repair.lean": "84c6114abbf90ccd649fd0a4cdf369f779b89d8a48e67e77a04cea1a68c5ece1",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/RepairDefs.lean": "aab034418dbf25ac3b4e8c9182759ec656e6677ebc3347f50b9be59910ae1af3",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/RepairStatements.lean": "60e8410f2fdee81dcc86d70a08aaeea2351c4e61f91a2beb4239220c97fa9374",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Sylvester.lean": "791f3f192204fb6c11a2938492f5044f3cd63494eddd3cdb0805d8658a06105e",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/SylvesterDefs.lean": "ce47e50f7b4749697159ed8b30319cd0f8587c971a8e5fe80471f43aa82f707b",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/SylvesterStatements.lean": "78f4bd382de7f14f957d7f4b754f263cb378354cf57f72c1214c385d1a216eaa",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/Visible.lean": "e65c2c9b818a81344ecbe1e75e4a8f2a74f9b3ca706c90c6144533257ac45773",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/VisibleDefs.lean": "3cc8295aeed66ca7229413a22f5021a3325dab06455746cf5dc9d1bec6c92d1c",
+        "scores/ArtformScores/GravityBridge/Native/R7Blocks/VisibleStatements.lean": "1ac723e1c38bb5969082e975f978e20b8a042d8fb2a45864ace00828375f61dc",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Heldout.lean": "7b778d726284ff397a1055ddc9120228d436a1f7d1e575cce4533dfa76ec25a0",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/HeldoutDefs.lean": "2cdde9df43d3a468b705811aae99d3ea2905fff1bac1fb9bc58994126777bb2a",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/HeldoutStatements.lean": "125c518e1ca2d91bdafe2dc94dd20bfe1b84c0be71dbd6143859365f91375da9",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Original.lean": "8f473425ee10c54f62e8443d796d2e8d42c6d3af1e0518327a76a87fc758817f",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/OriginalDefs.lean": "0c07bba6f273bc5410c4baff8eb8e357b0a869827717151f8f725759bb9afb24",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/OriginalStatements.lean": "3ec6c55b96257f47b4a3e3f26de3db75fe6f7019706eda0ed218bda742f5d90e",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/Programs.lean": "e0c01702dc9aa9dcc62c2d1f5759b19464dd7b1285fe8a3f3f65621a1ee2cf4b",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/ProgramsDefs.lean": "a79d0adb047afda322b25e4fd7960b476c8cacffbb5e1ec76d62e03d58cb894e",
+        "scores/ArtformScores/GravityBridge/Native/TTCoordinates/ProgramsStatements.lean": "25d201bfb9582442eaaa54f10cf2c39380020f1b6f38395413883ef204acf8fd"
+      },
+      "checks": {
+        "derived_original_TT_basis": true,
+        "original_and_heldout_full_tensor_square": 2,
+        "original_temporal_coefficient": "36/505",
+        "heldout_temporal_coefficient": "59/505",
+        "same_input_program_costs": {
+          "literal": [
+            3,
+            2
+          ],
+          "contracted": [
+            1,
+            0
+          ]
+        },
+        "no_free_signed_matrix_wire_or_constant": true,
+        "heldout_old_one_read_formula_fails": true,
+        "nonnilpotent_Sylvester_direct_unknowns": 6,
+        "both_inverse_directions": true,
+        "projection_noncommutative_recursion_orders": 10,
+        "full_Riccati_symbolic_recenter": true,
+        "head_normalization_and_full_image_both_directions": true,
+        "adverse_cases": [
+          "nonzero feedback",
+          "unnormalized packet",
+          "zero-time invariance",
+          "unguarded resonant quadratic resolvent",
+          "fixed-momentum one-read nontransfer"
+        ]
+      },
+      "limitations": "Finite exact replay supplements kernel proofs; no native source/packet/generator/uniform-band identification or analytic norm theorem is inferred from these examples."
+    }
+  },
+  "root_replay_reproduced_without_JSON_mutation": {
+    "script": "r7-root-replay-08.py",
+    "script_sha256": "658f89677c426430503ce82a6aefc287eab6e6dc1565295f09c6ddacd7e0550d",
+    "artifact_sha256": "1ccc922667e67da2250c82f8eec39c6a7ede1a3ad180220e83c2a4653f6f2a55",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/r7-root-replay-08.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.032,
+    "output_bytes": 373,
+    "output_sha256": "4705f0dd7acb29833573583c1ea1f4d18e055a441a2bbb8cf4428393342c7a49",
+    "stderr": "",
+    "result": {
+      "status": "passed",
+      "TT_inputs": 49,
+      "heldout_force": "59/505",
+      "full_tensor_square": 2,
+      "noncommutative_projection_recursions": 8,
+      "non_nilpotent_Sylvester": true,
+      "two_sided_head_reparameterization": true,
+      "zero_step_adverse_case": true,
+      "source_pairs": 31,
+      "cost": "specified literal3scales2adds versus original full-TT one-scale output; no historical/runtime saving"
+    }
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "historical_or_runtime_efficiency_credit": 0,
+    "matched_historical_Lean_log_certificate_available": false,
+    "new_prospective_fixed_momentum_program_comparison": true,
+    "prospective_scope": "Two specified programs on the same full rational TT matrix at123;3scales2adds versus1scale0adds, with zero-operation exclusion. No runtime/bit/physical claim.",
+    "prior_C10_prospective_program_compression_unchanged": true,
+    "actual_native_generator_and_packet_instantiated": false,
+    "actual_native_companion_inverse_instantiated": false,
+    "full_finite_h_Riccati_solution_constructed": false,
+    "uninstantiated_bridges": [
+      "actual native A_h/U_h and all original band/norm/halo identifications",
+      "actual G_j/C_j lower-basis companion/forcing and uniform quadratic inverse",
+      "admitted reflected unit packet and uniform native lower bound",
+      "physical coframe, lapse/shift, frame/link/history prescription",
+      "native nonlinear finite-h invariant graph and full physical parent"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 50,
+  "campaign_target": 120,
+  "total_approvals_after_review": 169,
+  "audit": "audit-independent-08.md",
+  "validation": "validation-independent-08.json"
+}

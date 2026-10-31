@@ -2926,8 +2926,8 @@ See [finding197](findings/197-complete-graph-riccati.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.completeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.completeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "3837a8e7d773f1df87818e3be83f79d3bf9493e4c19da2c2f7971f8a255de3a4"
 
 [[statement]]
 key = "GAC2:visible-closure-image-gap"
@@ -2945,8 +2945,8 @@ See [finding198](findings/198-visible-closure-image-gap.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.visibleLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.visibleLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "40d73006bd8110d193ef1aaafb51cc7c09b86fea3225d68da0d086fc0493e9dc"
 
 [[statement]]
 key = "GAC2:quadratic-resolvent-sylvester"
@@ -2964,8 +2964,8 @@ See [finding199](findings/199-quadratic-resolvent-sylvester.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.sylvesterLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.sylvesterLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "546310399c4921e7c008ed32718f0c8ee6217120dc9f8ca3e69fca011805213e"
 
 [[statement]]
 key = "GAC2:full-riccati-feedback"
@@ -2982,8 +2982,8 @@ See [finding200](findings/200-full-riccati-feedback.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.feedbackLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.feedbackLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "7260dc776531da059aae1a91e628bac542a1b918037a93b7841658a0a6692a0d"
 
 [[statement]]
 key = "GAC2:original-native-tt-plane"
@@ -3001,8 +3001,8 @@ See [finding201](findings/201-original-native-tt-plane.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.originalLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.originalLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "590a0dd9949289148abc35ac36940f61b5376450254c942396cf5b8c19006393"
 
 [[statement]]
 key = "GAC2:whole-trace-repair-gap"
@@ -3024,8 +3024,8 @@ See [finding202](findings/202-whole-trace-repair-gap.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.repairLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.repairLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ec177d8ff404911f2623321fcb060f2b4d1d2037148b53a9fee6911bf92b2169"
 
 [[statement]]
 key = "GAC2:packet-operator-witness"
@@ -3043,8 +3043,8 @@ See [finding203](findings/203-packet-operator-witness.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.packetLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.packetLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "0e755d18b6c893d32ebb12665c280ac8a412bab25a364d20b306495144b0e195"
 
 [[statement]]
 key = "GAC2:native-tt-forcing-programs"
@@ -3065,8 +3065,8 @@ See [finding204](findings/204-native-tt-forcing-programs.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.programsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.programsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "1f13a0ef93b930d5d87eb4f9bcf92a25b5221a5a2e071d3841badcf17ff4e8ad"
 
 [[statement]]
 key = "GAC2:hilbert-single-step-generator"
@@ -3087,8 +3087,8 @@ See [finding205](findings/205-hilbert-single-step-generator.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.nativeStepLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.nativeStepLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ce8afdd87ab45e095d3a0614d35712a2d5b16d64c2e187786461730b2a547e73"
 
 [[statement]]
 key = "GAC2:heldout-native-tt-force"
@@ -3107,5 +3107,5 @@ See [finding206](findings/206-heldout-native-tt-force.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.TTCoordinates.Statement.heldoutLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.TTCoordinates.heldoutLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "002ecdcb324a3dd5b74cbff5d5521a69a84d3c22cb91212562f6adcb9046118c"

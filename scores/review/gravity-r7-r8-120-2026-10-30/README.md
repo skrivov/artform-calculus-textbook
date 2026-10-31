@@ -262,3 +262,19 @@ Review the complete own-propagator Riccati identity, visible/image distinction, 
 The frozen old manual logarithm proof has no matched Lean baseline; no historical/runtime or global proof-size improvement is claimed. E08 instead compares two specified programs on the SAME freely readable full TT matrix at k=(1,2,3): literal3scales2adds and off-diagonal1scale0adds. A signed free matrix wire or constant cannot give that output for all TT inputs. Coefficients/copies/negation are free. A three-gate optimum on x,y would be false for this original input interface and is not claimed. Held-out k=(1,2,4) has original force59/505; one-read optimization is not claimed there.
 
 Root validation receipt: validation-E01-E10.json; exact root replay: r7-root-replay-08.py/json. Judge independently against canonical section8, the literal manifest, findings and original pinned scopes; run all required checks/drifts and11 separate kernels plus a distinct mathematical replay. Approve only passing claims, record audit/verdict/compact validation08 and publish. No material native R7/R8 gate is proposed from this reconstruction.
+
+All ten review08 claims were independently approved on31 October2026 at freeze
+`d642fe9b9c059bdf1d763ff41c70e872abb01277`; none returned. See the distinct
+[audit](audit-independent-08.md), [per-key verdicts](verdict-independent-08.json),
+[compact validation](validation-independent-08.json) and
+[exact/adverse replay](arithmetic-independent-08.py). All159 earlier approvals stand
+unchanged, giving169 total approvals and50/120 completed campaign dispositions.
+All31 submitted Lean files are unchanged. Eleven separate kernel replays pass,
+including the exponential-estimate dependency. The full Hilbert tail, orthogonal
+projection/closed-kernel bridge, actual two-sided Neumann normalization and image
+equality retain the original guard, norms and upstream source premises.
+The matched full-matrix TT expressions establish only the prospective fixed123
+comparison3 scales2 adds to1 scale0 adds, with an explicit zero-operation exclusion.
+No historical/runtime saving or additional material native application is credited.
+Actual native generator/companion/forcing and packet/band identification, finite-h
+nonlinear graphs and physical trace/frame/link/history admission remain separate.
