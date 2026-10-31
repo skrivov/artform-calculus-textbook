@@ -216,3 +216,41 @@ See the distinct [audit](audit-independent-07.md), [per-key verdicts](verdict-in
 [validation](validation-independent-07.json) and [exact arithmetic replay](arithmetic-independent-07.py).
 D08 remains an audited failed transfer, with no registered success theorem. Zero additional material
 native applications are credited.
+
+## D03/B05/B06/C01/C02: memory, contact jets and constrained changing geometry
+
+Five new foundation submissions await independent review08: GAC:reversible-memory,
+GAC:source-contact-jets, GAC:quotient-compatibility, GAC:changing-geometry and GAC:singular-action.
+Ledger findings122–126 and the literal canonical statements in section7 specify their scope.
+All84 previous approvals stand; no approved definition or statement is edited.
+
+Check invariant-image injectivity, inverse-image/surjectivity equivalence, finite visible bijectivity,
+finite readout-fibre memory cardinality and the nonempty visible type in the reset criterion. The
+original Whitehead quarter-turn on ZMod7 supplies the collapsed readout with seven retained inputs;
+integer translation supplies the infinite forward-invariant adverse case. Neither cardinality nor reset
+is asserted to prove a physical energy price or continuous native memory dimension.
+
+Polynomial source jets use fixed finite boundary bijections and source-dependent rational-polynomial
+weights, preparation, kernels and tests. Check all formal derivatives, the mixed second product term,
+the missing-measure derivative example and equal low jets with unequal polynomials. Native input z
+is the approved Christoffel block amplitude. Check the exact second input derivatives -4/103,8/10403
+and their difference -4/101 against Native.Preparation; it is not an identified external source class.
+
+Check actual quotient map/form construction and necessity: T(N)<=N, outputs and every source covector
+annihilating N, and both arguments of the boundary form null on N. Fixed affine input b is arbitrary;
+it need not be in N. The(q,p,g) model has a nonzero surviving form; the selected-q-kernel adverse case
+is not its radical. No native Dirac/radical identification is assumed.
+
+The one-edge subdivision changes two vertices/one edge to three vertices/two edges. Check the exact
+incidence square, midpoint retraction, whole aggregate fibre and sum/difference equivalence. It is a
+one-dimensional chain map, with no absent higher-dimensional complex claimed. The singular action
+L=(y1-x1)^2/2 must yield the specified pre/post signs, zero second momenta, free second coordinate,
+exact quadratic variation and shared-momentum/corner-stationarity equivalence. Its two distinct
+outgoing states prevent an assumed functional evolution.
+
+New definition surfaces: ContactJetDefs.lean, ChangingGeometryDefs.lean, ConstraintDefs.lean; the other
+new definitions occur only in the positive/caution examples. New statement surfaces:
+ReversibleMemoryStatements.lean, ContactJetStatements.lean, QuotientStatements.lean,
+ChangingGeometryStatements.lean, ConstraintStatements.lean. No native material-application credit is
+proposed for these foundations. Final validation-D03-B05-B06-C01-C02.json will record required checks,
+certificates, drift and five separate kernel replays with compact hashes/byte counts.

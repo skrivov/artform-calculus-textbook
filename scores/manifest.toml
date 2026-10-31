@@ -1219,3 +1219,118 @@ lean_statement = "Artform.Scores.GravityBridge.Native.R8.Statement.nonuniformDom
 lean_proof = "Artform.Scores.GravityBridge.Native.R8.nonuniformDomain"
 reviewed = "2026-10-30"
 review_text_sha256 = "b976e3f3055a5afc06523eeb6f06a71efe441ed83b054b6d0de64078d732961b"
+
+[[statement]]
+key = "GAC:reversible-memory"
+label = "GAC:reversible-memory"
+title = "Reversibility and finite retained information"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:reversible-memory)"
+statement = """
+**GAC:reversible-memory (invariant preparation, reset and retained information).** For arbitrary types Y,H,
+let E:Y to H and R:H to Y satisfy R*E=id, let T be a bijection of H, and put U=R*T*E.
+If T preserves the actual image of E, then U is injective, and T^-1 preserves that image if and only if
+U is surjective. If Y is finite, U is bijective. Forward image preservation alone need not give
+surjectivity on an infinite Y. For arbitrary X,W, a finite memory type M, readout O:X to W and m:X to M,
+if x maps to (O(x),m(x)) injectively, then m restricted to each fibre O^-1(w) is injective and
+card(O^-1(w))<=card(M). For a nonempty visible type Y and a fixed z0 in Z, the reset
+(y,z) maps to (y,z0) injectively if and only if Z is a subsingleton. This is a finite information bound,
+with no thermodynamic energy or continuous native-gravity dimension cost inferred.
+See [finding 122](findings/122-reversible-preparation-reset-and-finite-memory.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.reversibleMemory"
+lean_proof = "Artform.Scores.GravityBridge.reversibleMemory"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:source-contact-jets"
+label = "GAC:source-contact-jets"
+title = "Complete polynomial source jets and the native input contact Hessian"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:source-contact-jets)"
+statement = """
+**GAC:source-contact-jets (complete polynomial source jets and contact terms).** In the finite boundary
+amplitude sum_(x,y) psi(x)*mu(x)*a(x,y)*nu(y)*phi(y), let every factor be a polynomial over Q in one
+source parameter. Under fixed finite bijections of the boundary sets, transform all five factors and
+kernel arguments. Every formal derivative jet J_n(p,z)=(derivative^n p)(z) of the closed amplitude is
+unchanged. In particular J_2(p*q)=J_2(p)*J_0(q)+2*J_1(p)*J_1(q)+J_0(p)*J_2(q), at every rational z.
+For the approved native stationary connection block, the polynomials -2*z^2/103 and4*z^2/10403 equal
+the complete and connection-only prepared densities respectively. Their second input derivatives are
+-4/103 and8/10403, with difference -4/101. The input-dependent contact term must be retained.
+The native z is its specified block input, not a verified class of external quantum-gravity sources.
+Agreement of finitely many jets at one point does not imply equality of generating polynomials.
+See [finding 123](findings/123-polynomial-source-jets-and-native-contact-term.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.sourceContactJets"
+lean_proof = "Artform.Scores.GravityBridge.sourceContactJets"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:quotient-compatibility"
+label = "GAC:quotient-compatibility"
+title = "Evolution, source and boundary-form quotient compatibility"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:quotient-compatibility)"
+statement = """
+**GAC:quotient-compatibility (evolution, sources and boundary forms).** Let K be a field, X,W be
+K-modules with additive commutative groups and N a submodule of X. A linear endomorphism T descends
+to X/N exactly when T(N) is contained in N. A linear output O:X to W factors through X/N exactly
+when O(N)=0. For any declared family of source covectors S_j:X to K, each factors through X/N
+exactly when each annihilates N. A bilinear boundary form omega on X descends in both arguments
+exactly when omega(n,x)=omega(x,n)=0 for every n in N and x in X.
+If T preserves N, every fixed affine source translation x maps to T(x)+b respects quotient classes,
+for arbitrary b in X; it is not necessary that b belong to N. These conditions construct the quotient
+maps and form. A direction ignored by one selected readout need not be a boundary-form radical.
+No native physical radical or native source class is assumed to satisfy these criteria.
+See [finding 124](findings/124-compatible-quotients-for-evolution-sources-and-forms.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.quotientCompatibility"
+lean_proof = "Artform.Scores.GravityBridge.quotientCompatibility"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:changing-geometry"
+label = "GAC:changing-geometry"
+title = "Incidence-compatible edge subdivision and retained detail"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:changing-geometry)"
+statement = """
+**GAC:changing-geometry (edge subdivision and retained detail).** For rational vertex data on one
+coarse edge put d_c(u)=u_1-u_0. On the subdivided edge with three vertices put
+ d_f(u)=(u_1-u_0,u_2-u_1). Vertex restriction retains(u_0,u_2), while edge aggregation sends(e_0,e_1)
+to e_0+e_1. Aggregation*d_f=d_c*restriction. Midpoint refinement sends(a,b) to(a,(a+b)/2,b),
+restriction*refinement=id, and its fine gradient is(d_c/2,d_c/2).
+Two fine edge fields e,f have the same aggregate exactly when f=e+(d,-d) for some rational d.
+The retained-detail map e maps to(e_0+e_1,e_0-e_1) is a linear equivalence with inverse
+(c,d) maps to((c+d)/2,(c-d)/2); both recovery identities hold for all data.
+Aggregation alone has nontrivial fibres and is not this equivalence. This concerns a concrete change
+of finite one-dimensional incidence geometry, with no automatic curved or native gravity transfer.
+See [finding 125](findings/125-incidence-compatible-edge-subdivision-and-detail.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.changingGeometry"
+lean_proof = "Artform.Scores.GravityBridge.changingGeometry"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:singular-action"
+label = "GAC:singular-action"
+title = "Singular quadratic action, constraints and relational gluing"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:singular-action)"
+statement = """
+**GAC:singular-action (singular quadratic action and variational gluing).** For rational configurations
+x=(x_1,x_2), y=(y_1,y_2), let L(x,y)=(y_1-x_1)^2/2 and pre/post momenta both(y_1-x_1,0).
+For all rational epsilon and variations dx,dy, the exact action change is
+ epsilon*(-p_pre dot dx+p_post dot dy)+epsilon^2*(dy_1-dx_1)^2/2.
+The phase evolution relation p=p_pre(x,y),q=p_post(x,y) is equivalent to
+p_2=q_2=0, q_1=p_1 and y_1=x_1+p_1. It leaves y_2 free.
+At an intermediate configuration y, equality of the post and pre boundary covectors against every
+variation is equivalent to x_1-2*y_1+z_1=0. The exact two-step action change under y+epsilon*d is
+ epsilon*(2*y_1-x_1-z_1)*d_1+epsilon^2*d_1^2.
+There exist intermediate and endpoint momenta realizing both phase relations exactly when that corner
+stationarity holds. This is a singular finite variational model, not an assumed native Dirac reduction.
+See [finding 126](findings/126-singular-quadratic-action-constraints-and-gluing.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.singularActionLaw"
+lean_proof = "Artform.Scores.GravityBridge.singularActionLaw"
+reviewed = ""
+review_text_sha256 = ""

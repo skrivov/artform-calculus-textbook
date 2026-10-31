@@ -60,3 +60,9 @@ import ArtformScores.GravityBridge.Native.R8LocalInverse
 import ArtformScores.GravityBridge.Native.R8Remainder
 import ArtformScores.GravityBridge.Native.R8Domains
 import ArtformScores.GravityBridge.Native.EnergyAudit
+
+import ArtformScores.GravityBridge.ReversibleMemory
+import ArtformScores.GravityBridge.ContactJets
+import ArtformScores.GravityBridge.Quotients
+import ArtformScores.GravityBridge.ChangingGeometry
+import ArtformScores.GravityBridge.Constraints
