@@ -143,6 +143,7 @@ lemma native_full24_on_TT_source (j z a : K) (hj : j ^ 2 = -1) (hz : z ^ 2 = -2 
 theorem sourceLaw : Statement.sourceLaw := by
   intro K _ _
   exact ⟨actual_original_hessian_pairing,
+    original_full24_inverse,
     actual_threeblock_constitutive_Q,
     actual_full24_cross_Q,
     native_full24_on_TT_source⟩

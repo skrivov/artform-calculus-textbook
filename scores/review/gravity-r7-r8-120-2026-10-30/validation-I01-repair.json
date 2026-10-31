@@ -1,0 +1,166 @@
+{
+  "investigations": [
+    "G2-I01",
+    "G2-I02",
+    "G2-I03",
+    "G2-I04",
+    "G2-I05",
+    "G2-I06",
+    "G2-I07",
+    "G2-I08",
+    "G2-I09",
+    "G2-I10"
+  ],
+  "status": "passed",
+  "review": "pending independent fidelity review12 of120-round campaign",
+  "checks": [
+    {
+      "command": "lake build --wfail",
+      "exit_code": 0,
+      "seconds": 56.48,
+      "stdout_bytes": 2651,
+      "stdout_sha256": "3aa269f42a2739b08b8eb71d58950db492bc21af30e6ce8b868ac5b0d639543d",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "lake env lean --run scripts/Report.lean > build/report.json",
+      "exit_code": 0,
+      "seconds": 13.006,
+      "stdout_bytes": 70493294,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/status.py --check",
+      "exit_code": 0,
+      "seconds": 0.288,
+      "stdout_bytes": 87,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n"
+    },
+    {
+      "command": "python3 scripts/check_tree.py --identity",
+      "exit_code": 0,
+      "seconds": 1.824,
+      "stdout_bytes": 33,
+      "stdout_sha256": "87024525e84d8493e970c9a0fbf9f59b7813c1e9eacd7b0061c5a133edb2e600",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "1060 files checked; 0 problem(s)\n"
+    },
+    {
+      "command": "lake env lean --run scripts/LedgerReport.lean > build/ledger-report.json",
+      "exit_code": 0,
+      "seconds": 17.034,
+      "stdout_bytes": 25239662,
+      "stdout_sha256": "ce618ac8091f34503532ad85df950a51bfdbf71b83009ebced7aaceb5f90dd59",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --write",
+      "exit_code": 0,
+      "seconds": 0.126,
+      "stdout_bytes": 23,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "wrote scores/STATUS.md\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --check",
+      "exit_code": 0,
+      "seconds": 0.12,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scripts/one_mode_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.193,
+      "stdout_bytes": 44,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/extent_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 2.178,
+      "stdout_bytes": 51,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "the extent certificates are the generator's output\n"
+    },
+    {
+      "command": "python3 scripts/gravity_r2_certificates.py --check",
+      "exit_code": 0,
+      "seconds": 0.075,
+      "stdout_bytes": 162,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n"
+    },
+    {
+      "command": "python3 scripts/status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.284,
+      "stdout_bytes": 43,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "0 approved statements changed since review\n"
+    },
+    {
+      "command": "python3 scripts/ledger_status.py --drift",
+      "exit_code": 0,
+      "seconds": 0.119,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "python3 scores/review/gravity-r7-r8-120-2026-10-30/tt-cross-root-12.py",
+      "exit_code": 0,
+      "seconds": 6.984,
+      "stdout_bytes": 356,
+      "stdout_sha256": "3ec4c448b1060259d712f70ec50de5087de1c9726675d8a78e442b97fc82ba73",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": "{\"status\": \"passed\", \"full24_nonreal_symbol_cases\": 20, \"rational_preparation_current_history_cases\": 96, \"forced_series_orders\": [0, 1, 2, 3, 4, 5, 6, 7, 8], \"checks_groups\": 116, \"source_pins\": 41, \"native_credit\": \"limiting actual source and paired sector only; finite-h/full40 physical gate0\", \"efficiency_credit\": \"0; no historical or runtime claim\"}\n"
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.TTCross.SourceStatements",
+      "exit_code": 0,
+      "seconds": 5.401,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "command": "lake env leanchecker ArtformScores.GravityBridge.Native.TTCross.Source",
+      "exit_code": 0,
+      "seconds": 5.916,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    }
+  ],
+  "proof_scope": "Actual full24 Hessian/T/Q source binding, paired prepared graph/read/metric budget, forced zero preparation, all24 independent return, bounded history ambiguity, full scalar current, all four original lower coordinate rows and actual TT source range. Leading sector only; no finite-h, admitted full40 physical gate, instability, mode count or efficiency credit."
+}

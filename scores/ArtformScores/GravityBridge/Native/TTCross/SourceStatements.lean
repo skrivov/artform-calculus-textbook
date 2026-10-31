@@ -14,6 +14,8 @@ def sourceLaw : Prop :=
     (∀ (A B : Connection ℚ),
     Retrospective.connectionDensity (1 / 101) (A + B) - Retrospective.connectionDensity (1 / 101) A-
       Retrospective.connectionDensity (1 / 101) B = dotConnection B (fullBApply A)) ∧
+    (∀ (A : Connection K), fullBApply (fullHApply A) = A ∧
+      fullHApply (fullBApply A) = A) ∧
     (∀ (p m s : Fin 3 → K),
     nativeConstitutiveQ (threeBlockFace p m s) =
       threeBlockFace (-p - (2 / 101 : K) • ((timeT * timeH * timeT.transpose) *ᵥ p))
