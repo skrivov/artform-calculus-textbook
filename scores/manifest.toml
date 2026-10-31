@@ -2369,3 +2369,108 @@ lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.so
 lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "284ff03d30cb4026fed34df526dc4c4a30bfff5a550faf251ea903358a945a6a"
+
+[[statement]]
+key = "GAC2:metric-coframe-lorentz-isomorphism"
+label = "GAC2:metric-coframe-lorentz-isomorphism"
+title = "The exact metric and coframe Lorentz isomorphism"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:metric-coframe-lorentz-isomorphism)"
+statement = """
+**GAC2:metric-coframe-lorentz-isomorphism (original16 coframe coordinates).** Over a
+characteristic-zero field, m(F)_ij=eta_i*F_ij+eta_j*F_ji is symmetric. With the ORIGINAL
+Lambda of GAC2:coframe-projector-compatible-sources, the inverse readout is
+F=eta*m(F)/2+lie(Lambda(F)), with eta multiplying internal rows. Conversely any symmetric
+m and any six-vector w reconstruct a coframe with metric m and Lorentz readout w.
+This gives a linear equivalence between all16 coframe coordinates and symmetric metric
+coordinates times the original six Lorentz coordinates. Equality of both readouts implies
+equality of coframes. It is a flat algebraic split, without a physical quotient or connection return.
+See [finding172](findings/172-metric-and-coframe-lorentz-isomorphism.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.splitLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.splitLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:coframe-cut-value-velocity"
+label = "GAC2:coframe-cut-value-velocity"
+title = "Exact coframe value and velocity recovery and its connection limit"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:coframe-cut-value-velocity)"
+statement = """
+**GAC2:coframe-cut-value-velocity (declared algebraic value and velocity jets).** Let F,G
+be two Fin2-tuples of original coframe matrices, representing supplied value and velocity data.
+F=G exactly when their metric readouts and coframe Lorentz readouts agree at both jet slots.
+In particular zero metric and Lorentz differences recover zero full coframe differences.
+Metric readout alone fails to determine a nonzero Lorentz coframe. Even equality of both
+full coframe jets does NOT determine independent connection values: an explicit nonzero
+connection counterexample has identical coframes. This is algebraic jet recovery; analytic
+identification of supplied jets with actual derivatives and the native field equations are separate.
+See [finding173](findings/173-coframe-cut-jet-recovery-and-connection-limit.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.cutJetsLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.cutJetsLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:connection-residual-return"
+label = "GAC2:connection-residual-return"
+title = "The exact independent connection return retains its residual"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:connection-residual-return)"
+statement = """
+**GAC2:connection-residual-return (keep the exact original residual sign).** For linear maps
+C:V->W,D,E:W->W over a ring, write r(U)=C*u+D*v and A=-E*C. If E*D=Id and
+C*f+D*a=0, then the exact difference obeys a-v=A(f-u)-E*r(U). Conversely D*E=Id
+makes that retained-return equation imply C*f+D*a=0. With both inverse identities these
+conditions are equivalent. A nonzero residual example with C=D=E=Id,u=f=a=0,v=1
+has a-v=-1, whereas the residual-free graph difference is0. No whole-contour native inverse
+or pointwise-in-time inverse is supplied by this module.
+See [finding174](findings/174-independent-connection-residual-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.residualReturnLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.residualReturnLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:connection-first-order-sampling"
+label = "GAC2:connection-first-order-sampling"
+title = "Centered and physical first-order connection sampling"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:connection-first-order-sampling)"
+statement = """
+**GAC2:connection-first-order-sampling (formal first coefficient with retained contact).**
+For arbitrary linear L:W->W and characteristic-zero field, center(q0,q1)=(q0,q1-L*q0/2)
+and physical(q0,q1)=(q0,q1+L*q0/2) are exact inverse maps on first-order jets.
+For arbitrary linear Omega:V->W,E:W->W,R:V->W, physical(Omega*f,-2*kappa*E*R*f)
+has first coefficient L*Omega*f/2-2*kappa*E*R*f; centering recovers the full contact.
+The nonzero rational example sends(1,-2/101) to(1,97/202) and back. These are formal
+coefficient identities; they do not derive a native analytic Taylor remainder, prove E is an
+inverse, or replace the original full B^-1 in an application.
+See [finding175](findings/175-centered-physical-first-return-sampling.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Retrospective.Statement.samplingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Retrospective.samplingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:lower-boost-physical-native-sign"
+label = "GAC2:lower-boost-physical-native-sign"
+title = "Original lower-coordinate boost and physical-native connection signs"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:lower-boost-physical-native-sign)"
+statement = """
+**GAC2:lower-boost-physical-native-sign (lower coordinate and original boost action).** For
+H_ij representing supplied lower-coordinate first derivatives, put G^I_i=eta_I*H_iI and
+F^I_i=eta_I*(H_iI+H_Ii)/2. Then G-F=lie(gamma), where the boost coefficients of gamma
+are(H_0a-H_a0)/2, with the original(23,31,12) rotation signs. Lambda(G)=gamma and
+Lambda(F)=0. With the ORIGINAL physical Lorentz column(lie(gamma),-dgamma),
+(G,0)-column=(F,+dgamma). Converting physical omega to native log P=-h*omega sends
+that Lorentz column to(lie(gamma),+h*dgamma). The lower temporal gradient is-H_a0.
+This fixes the algebraic sign; actual derivative/Taylor and stationary-graph identifications
+remain separate source obligations.
+See [finding176](findings/176-lower-boost-physical-native-connection-sign.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.Full40.Statement.physicalSignLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.Full40.physicalSignLaw"
+reviewed = ""
+review_text_sha256 = ""

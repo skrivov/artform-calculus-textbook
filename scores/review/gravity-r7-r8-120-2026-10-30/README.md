@@ -95,3 +95,20 @@ The full mixed Ward retains arbitrary second tests and the original fixed-log li
 The cyclic probe, eight restrictions and source-action theorem retain their declared scopes.
 No implementation was edited. Zero additional material native application or retrospective
 efficiency saving is assigned; physical prescription and boundary/domain bridges remain open.
+
+## Review04: B01–B05
+
+Five new claims, findings172–176; preserve134 approved entries. Review the literal original
+metric/Lorentz linear equivalence and the algebraic Fin2 cut-jet iff. Supplied jet slots are NOT
+an analytic differentiation theorem. The independent-connection counterexample and missing
+native solution/contour instantiation are explicit. Residual return retains-E*r and separates
+left/right inverse duties. Sampling is an exact FORMAL first jet, with arbitrary E; it does not
+prove E inverse or derive the native Taylor remainder. PhysicalSign checks LOWER eta0 and the
+original physical(lie gamma,-dgamma) versus nativeP=-h*omega signs. Actual derivative and
+stationary-graph identification remain qualified source duties. No material gate or saving proposed.
+
+Compare section8, each finding, all15 implementation files and nonvacuity examples with the
+frozen original/scope sources, especially connection-target-reduction and its mandatory scope.
+Run required checks/certificates,both drifts and5 separate kernels. Record independent audit,
+verdict and compact validation04, approve only faithful passing claims through tooling,
+preserve134 entries and publish/push. Same one independent reviewer; root authors.

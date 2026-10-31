@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 134 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **134** |
+| **total** | **139** |
 
 ## Statements
 
@@ -149,3 +149,8 @@
 | GAC2:four-shift-original-force-test | A noncollapsed four-shift finite periodic force test | proved | `Artform.Scores.GravityBridge.Native.Full40.Statement.fourDirectionLaw` / `Artform.Scores.GravityBridge.Native.Full40.fourDirectionLaw` | approved 2026-10-31 |
 | GAC2:indexed-original-connection-blocks | Indexed original distinct and repeated connection restrictions | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.indexedBlocksLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.indexedBlocksLaw` | approved 2026-10-31 |
 | GAC2:source-dependent-action-reconstruction | Source-dependent stationary action and auxiliary reconstruction | proved | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.sourceActionLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.sourceActionLaw` | approved 2026-10-31 |
+| GAC2:metric-coframe-lorentz-isomorphism | The exact metric and coframe Lorentz isomorphism | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.splitLaw` / `Artform.Scores.GravityBridge.Native.Full40.splitLaw` | awaiting review |
+| GAC2:coframe-cut-value-velocity | Exact coframe value and velocity recovery and its connection limit | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.cutJetsLaw` / `Artform.Scores.GravityBridge.Native.Full40.cutJetsLaw` | awaiting review |
+| GAC2:connection-residual-return | The exact independent connection return retains its residual | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.residualReturnLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.residualReturnLaw` | awaiting review |
+| GAC2:connection-first-order-sampling | Centered and physical first-order connection sampling | stated | `Artform.Scores.GravityBridge.Native.Retrospective.Statement.samplingLaw` / `Artform.Scores.GravityBridge.Native.Retrospective.samplingLaw` | awaiting review |
+| GAC2:lower-boost-physical-native-sign | Original lower-coordinate boost and physical-native connection signs | stated | `Artform.Scores.GravityBridge.Native.Full40.Statement.physicalSignLaw` / `Artform.Scores.GravityBridge.Native.Full40.physicalSignLaw` | awaiting review |

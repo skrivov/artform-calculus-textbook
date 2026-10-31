@@ -111,3 +111,8 @@ import ArtformScores.GravityBridge.Native.Full40.Projector
 import ArtformScores.GravityBridge.Native.Full40.FourDirection
 import ArtformScores.GravityBridge.Native.Retrospective.IndexedBlocks
 import ArtformScores.GravityBridge.Native.Retrospective.SourceAction
+import ArtformScores.GravityBridge.Native.Full40.Split
+import ArtformScores.GravityBridge.Native.Full40.CutJets
+import ArtformScores.GravityBridge.Native.Retrospective.ResidualReturn
+import ArtformScores.GravityBridge.Native.Retrospective.Sampling
+import ArtformScores.GravityBridge.Native.Full40.PhysicalSign
