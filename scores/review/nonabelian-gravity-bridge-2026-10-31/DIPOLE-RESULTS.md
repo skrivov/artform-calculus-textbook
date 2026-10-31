@@ -1,3 +1,5 @@
+Current continuation: TRANSPORT-RESULTS.md records the matched cell-sector test and independent-connection comparison. STATUS.md has current review counts; the results below retain their original scope.
+
 # A geometric admission obstruction for the unrestricted dipole kick
 
 The full oriented digon kick can preserve both complete Gauss equations

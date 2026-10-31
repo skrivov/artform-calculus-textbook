@@ -74,3 +74,18 @@ physics discovery before geometric admission is even specified. Next bind
 the actual cross-cell geometric transport and test a nonstationary admitted
 score. The regular-reduction contract still applies whenever a reduced
 symplectic form or quantization is used.
+
+## Matched transport comparison
+
+TRANSPORT-RESULTS.md supplies the next B06 diagnostic: an actual pair of
+intrinsically matched orthants with one-sided cell-sector seam data, a
+negative corrected Gram after the full first-digon kick, and a nonstationary
+invariant intrinsic domain for independent-connection link drifts. This
+adds no rounds, activates no C/D and selects no native dynamics. The same
+full face kick is not a universal positive-curvature geometric update.
+The drift is known kinematics until a source-selected Hamiltonian and
+constraints are bound. All269 baseline approvals and31 NGB modules stand.
+For this continuation the user authorized one Sol6.1 reviewer; only that
+reviewer is used. The cumulative campaign worker count is two sequential
+reviewers, with one active reviewer at a time. Earlier receipts retain
+their historically correct count of one.

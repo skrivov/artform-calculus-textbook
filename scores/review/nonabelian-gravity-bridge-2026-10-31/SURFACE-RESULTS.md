@@ -1,3 +1,5 @@
+Current continuation: TRANSPORT-RESULTS.md records the matched cell-sector test and independent-connection comparison. STATUS.md has current review counts; the results below retain their original scope.
+
 Current continuation: DIPOLE-RESULTS.md records the subsequent geometric admission diagnostic; STATUS.md has current counts. The results below retain their original scope.
 
 # Exact identification after the novelty assessment

@@ -5020,3 +5020,29 @@ lean_statement = "Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollap
 lean_proof = "Artform.Scores.NonabelianGravity.sphericalFaceCollapse"
 reviewed = "2026-10-31"
 review_text_sha256 = "ea482243ac8c2de3064a24b8e39884796185dab6419837c3d0c0c01f73d5c90a"
+
+[[statement]]
+key = "NGB:matched-orthant-transport"
+label = "NGB:matched-orthant-transport"
+title = "Matched orthant faces and one-sided cell-sector transport"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:matched-orthant-transport)"
+statement = """
+Take two copies of the positive unit-spherical orthant, with target coordinate vertices and opposite-oriented source labels(3,2,1,4). The declared sourceLabel is an involution, paired vertices coincide in copy coordinates, face incidence matches, and every complete three-vertex face Gram equals I on both sides. The ambient seam reflection fixes every vector in its face hyperplane and reverses its coordinate normal. Source simple loop words are the corresponding label-swapped target inverse loops, retaining the special edge24 stem. The declared based seams fix the base vertex and, between target frame(-e1,-e2,-e3) and source frame(+e1,+e2,+e3), have the proper orthogonal matrices linkRotation. The unit-quaternion lifts U=(i,j,k,j) act as those matrices on every tangent basis vector. With the previous target face tuple P=(r(1+i),r(1+j),r(1+k),r(1-j)), r=sqrt(1/2), the resulting dipole fixture has all U/P unit norm, full Gauss and the specified seam action; its outgoing Qe equals Pe^-1. Source HHR faces are(Q2,Q1,Q0,Q3), with the declared normal components and quaternion actions, corrected Gram I and all four convexity triples1. The previous erasingLift fails this stricter seam action. These are finite paired metric, path, frame, quaternion and star certificates. Their geometric interpretation uses one-sided cell sectors and seam differentials on the doubled orthant; no smooth global connection at its singular edges/vertices, general Lean manifold/gluing theorem or native gravitational field identification is asserted.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.matchedOrthantTransport"
+lean_proof = "Artform.Scores.NonabelianGravity.matchedOrthantTransport"
+reviewed = "2026-10-31"
+review_text_sha256 = "dc92cb530b236dbcf308313edfbd765f96e401f607ebd1ad39f41fa6f672f94a"
+
+[[statement]]
+key = "NGB:matched-score-separation"
+label = "NGB:matched-score-separation"
+title = "Matched-sector kick obstruction and intrinsic-preserving connection drift"
+source = "campaigns/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:matched-score-separation)"
+statement = """
+For any group on the dipole, a signed one-link drift Ue->Pe*Ue (inverse uses Pe^-1) fixes all target P and outgoing Q, fixes both complete raw defects, has exact reverse and commutes with independent endpoint gauge actions. On the matched orthant fixture above, the actual full forward first-digon kick has P=(r(-j-k),r(i+k),r(1+k),r(1-j)). It still satisfies Gauss and every P has unit norm and squared real part less than1. The declared postNormal vectors are pure imaginary unit axes with positive sine coefficients giving these actual P. Their actual corrected quaternion Gram is the explicit postGram matrix with determinant-1/4; the second convexity triple is0. Its determinant remains-1/4 under every independent normal-axis sign choice and every simultaneous invertible-quaternion conjugation. By the separately cited fixed-simple-path spherical Gram criterion this excludes a nondegenerate positive-curvature target cell; Lean certifies the matrix/axis/action identities, not a general reconstruction theorem. The independent-connection domain is the full unit-norm two-vertex gauge saturation of states with these fixed matched target/source face tuples and unit-norm links. It is nonempty, every admitted state satisfies Gauss with unit U/P, and every signed one-link drift and unit-norm endpoint gauge preserves it. The actual forward edge0 drift preserves both intrinsic face tuples but changes the gauge-invariant mixed real trace Re(P1*U0*U1^-1) from0 to-1/2. No endpoint gauge relates it to the initial fixture, and its seam action fails the stricter fixed transport prescription. This is nonstationary connection motion with fixed intrinsic geometry; it is neither an identified gravitational Hamiltonian or extrinsic-curvature law nor native R7/R8 dynamics, a smooth global connection, or a no-go for other or sufficiently small flows.
+"""
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.matchedScoreSeparation"
+lean_proof = "Artform.Scores.NonabelianGravity.matchedScoreSeparation"
+reviewed = "2026-10-31"
+review_text_sha256 = "573820534410c95f84662a0194dc90fce8ff39156e2bc34a70107cb422c50aba"

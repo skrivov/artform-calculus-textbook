@@ -125,3 +125,13 @@ a premature interpretation and identifying the missing cross-cell
 transport condition. It proves no new result about the native gravity
 programme, no matched two-cell reconstruction and no general prohibition
 on transport-restricted dynamics.
+
+## Matched-sector transport and update comparison
+
+TRANSPORT-CONTRACT.md freezes a specific continuation, implemented in
+TRANSPORT-RESULTS.md. Shape/connection compatibility and the underlying
+AMM target twist are known; Anza-Speziale1409.0836 studies additional
+conditions in a particular flat dynamics model. No general curved-score
+preservation theorem is supplied by that comparison. The explicit matched
+sector data, determinant obstruction and invariant independent-connection
+comparison are checked artifacts with no priority or native-gravity claim.

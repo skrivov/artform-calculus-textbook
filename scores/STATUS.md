@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 269 |
+| proved | 271 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **273** |
+| **total** | **275** |
 
 ## Statements
 
@@ -288,3 +288,5 @@
 | NGB:surface-face-twists | Actual face kicks as standard genus-two handle substitutions | proved | `Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists` / `Artform.Scores.NonabelianGravity.surfaceFaceTwists` | approved 2026-10-31 |
 | NGB:dipole-oriented-score | Complete dipole digon and unrestricted-link admission obstruction | proved | `Artform.Scores.NonabelianGravity.Statement.dipoleOrientedScore` / `Artform.Scores.NonabelianGravity.dipoleOrientedScore` | approved 2026-10-31 |
 | NGB:spherical-face-collapse | Orthant spherical holonomies and a Gauss-preserving collapsed face | proved | `Artform.Scores.NonabelianGravity.Statement.sphericalFaceCollapse` / `Artform.Scores.NonabelianGravity.sphericalFaceCollapse` | approved 2026-10-31 |
+| NGB:matched-orthant-transport | Matched orthant faces and one-sided cell-sector transport | proved | `Artform.Scores.NonabelianGravity.Statement.matchedOrthantTransport` / `Artform.Scores.NonabelianGravity.matchedOrthantTransport` | approved 2026-10-31 |
+| NGB:matched-score-separation | Matched-sector kick obstruction and intrinsic-preserving connection drift | proved | `Artform.Scores.NonabelianGravity.Statement.matchedScoreSeparation` / `Artform.Scores.NonabelianGravity.matchedScoreSeparation` | approved 2026-10-31 |

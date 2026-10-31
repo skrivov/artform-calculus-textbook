@@ -1,0 +1,373 @@
+{
+  "date": "2026-10-31",
+  "scope": "matched cell-sector transport; full kick obstruction and intrinsic-preserving connection drift",
+  "baseline_commit": "9985bfafb9fbecf300df1186843c05a0b919ef41",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 10.191,
+      "stdout_sha256": "d12e4871d97d673020b5d72a866cd26fa1fa2b97466476c2a8031f9f6fe51a74",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.608,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 24.773,
+      "stdout_sha256": "c322013e74a2bc82788ac612819411fdb930c851caf68fc863177e2ea6c7982a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.161,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.295,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.035,
+      "stdout_sha256": "fc62e01b71cfe75038a8b4828669f0a0706829088adf01a15ce22d4522e28412",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.158,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.197,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.188,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.076,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.287,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.155,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SphericalGluing"
+      ],
+      "exit_code": 0,
+      "seconds": 5.539,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SphericalTransport"
+      ],
+      "exit_code": 0,
+      "seconds": 5.957,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.SphericalGram"
+      ],
+      "exit_code": 0,
+      "seconds": 5.684,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.DipoleConnection"
+      ],
+      "exit_code": 0,
+      "seconds": 5.817,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.TransportControls"
+      ],
+      "exit_code": 0,
+      "seconds": 6.092,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.TransportStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.745,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.TransportTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.686,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-06.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.772,
+      "stdout_sha256": "cb8ba05796ff9a238f512cd0bd2538ecaad1ad9e1462b24e8c3e7c57e88ec264",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_sha256": {
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-04.md": "6d34f55c0b157264aa50557f580a9cca994505e01fa24ddbae387d46f974d921",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-dipole-root.py": "1de3fa5fd1fcd98b9de4abf81cf26afe115fd3713337988e08d337130bbfb5b6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-05.md": "85a281b8ae4019f381143029da953f5a0f47d3bfc75dd4f5dbe55fb42afac06d",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-06.py": "c7d31deeea79849b7ec219548743c0f5055d801b5d9636c90aeffaa113ea3eb9",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/phase-space-replay.json": "92e89b293620b6cb155a096d0c933c4ef451e0eeec4527c8138772332399bae2",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-06.json": "e5b8bb0bcacc23611b66219b7becc754e817d82cc0f178a1b397194ced354e49",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/STATUS.md": "a1691cd813037f60b69529393fbd7341845d09cb96c4a2ad2e626344e1b6cc06",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/transport-source-pins.json": "fa70567aa681ab137b983f3b590f95016aa8450318cf4364db567866259d1bf6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/dipole-source-pins.json": "e722def15a5b2672a2f868fa59a7e0051f48e7fc79d84bb40580dcf6e49bfe28",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-surface-root.py": "c549aac864a90ca0b71834f41ebf6021c853233b7b039dc9f3eb77815b776588",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-surface-root.json": "124d6ebdf26f43b51b4a3afc225cdaf90377e447c2e8d61e6eaae6bda69879fb",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-12.md": "da2564db7cc3d0004d0d9f99914d70b7e3667c977f55b2645c9693c4e95fe337",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-analytic.md": "a46a6246512e3cdd3805f9ad0431c08f9b0972463cf1593fa45725fd3a8bef8c",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/phase-space-replay.py": "8b001c573a1b304c07677bd23149671d0dfd87f1f477b93f1a9420c8c6643de1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/campaign.json": "7360d79dd6d5c6e02de44021ac42ab0e13abc437add28a3260e4690125c2462c",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/INVESTIGATIONS.md": "ea3d4ac743c7d87f6287f25b04ee5736129c17252761b71d36340b5770b138a7",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-02.md": "1b8fe59880f1dcbdf8dc8cc3b2c15ce97f5c3bb19799b143ae028044843fabf5",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/claims.json": "ba88fc7e5e5e47b7b83b6bd09fb4f0b516abfd076e998f11f5356aba229601bd",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/SURFACE-RESULTS.md": "41956a71f1affcf1de75e5b8e0312c9056753080d3bd8e320d781e99cf5557dc",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-04.py": "a9e107b62824682f377bcb9c0951efc7f3968d4bd4e0d35b2fc228d6f6c70529",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NEXT-CONTRACT.md": "06df54c6d05c65ff41f7551b1ab91306e82c129765c2c616e33b3d8e7d30917d",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-04.json": "8646ed2c7d69c8727ea9d1ae21172054eb03eabd89b24692975485e74bae6377",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source-pins.json": "c46a2d1fdf827d65933acf4f4e274b84a99ad03708689d693e1d4b96419b7130",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/CONTRACTS.md": "daac00c981d5b18161d22be20e2733d7e28465967a7706edf4f3b70241489b29",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/CAMPAIGN.md": "cf1acb27b83bd20acf5215960c298ae377158c58c0d434789d486c1614d3b39e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/DIPOLE-CONTRACT.md": "f51353a942455f159eb6e3e4a00a38e5fd6a26a2a3f898decc5f8d4fb24031d6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-02.json": "bda9ed5ffba4134127b2120f90bdc3537823990edf216998f5cd633b23423cc3",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/README.md": "ade3417def258a7bf8f420eb8a6d42daf89b4bcd50fb41a9b38a430c03571635",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-01.json": "aba2df0360b55e32b83599567646d473667ad11e36dda38483d57bc5e2910370",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/novelty-source-pins.json": "8ed4b1f966995670a40ed43268ded37ec5a408095bfe2750ba1b6513e62ec8e2",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/RESULTS.md": "2a3b2f295c68c0be5d2805df5d7d17626179d0b02a062098be1b260e46d661c4",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-05.json": "fe261b88156e80bdd67dd5f8a99b4bcc0441f68b800de9a146b608fc28aa213a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/TRANSPORT-CONTRACT.md": "282c4ed6a0ca9549215b2cde8d53778f9fa7ea3d7842a2ebb5e677e9a06816f6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/TRANSPORT-RESULTS.md": "cc3cbda716ef571663c3f0a90157e63525de4c01f162876b6de5b07c04f82644",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-transport-root.py": "1dbd1fd5387e2a336c220d85fbaa22b61b433955a83cb4efec9c7a2e34a8b561",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/NOVELTY.md": "82746aebd995918a6ce3dbd47b44c12ac2a2c4819d4e7c0060afb4152d866f19",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-08.md": "f801a07507d541a57dc9f668846e8eff4e0035b816455e39c05bdc76f271c844",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-05.json": "9e72ace6c919e79f81f7f232c46b6ebcfd6565aae110f717911bebd82486bbcc",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/analytic-source-pins.json": "54e7501976a7ea653df1f9cb3c1da853d6870ab1fff41c28566b0663065a902a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/HANDOFF.md": "645de971768a6ca445e480ec209d98bf1ebd0543bb22c1d8142fb4fa82b8993e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-analytic-root.py": "f90380edb78a447d0524917b9aad97fb2cfcd7f0154b93a2a92046ee7679d4c9",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-01.json": "50d6dc3d686708a5b85e318585f720177d0dba23d5c7de096d641ed1979bcda4",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-02.json": "b14f6f51644f4e857d3628f4f8c7d6417cd94ab21210ed1692be487a2a0f55a7",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-06.md": "e48e62d5fc6bd439f2a1b82da01b6be381c75e0719caf35244e1a4de07815bc2",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/tangent-independent-01.py": "7549afdb5cc5845f636bc3e5dc62888fa4747ffbad564b19b2c68b1e3bf66983",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/VALIDATION.json": "efbb7f1c1687bf805ed26c71b8ca7fcb61a25f5edf3778765d3f1036e3c96539",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-01.py": "cba60f543962e15fa0c6269c15bd36ec790481e8d3c6ad32fbaa4a690860a46c",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-dipole-root.json": "6c2c198b42dd5224572e677a5f9eab136c4bf5cbbe2ec0e6b5b95e1544e5845e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/ANALYTIC-RESULTS.md": "6b8e8a202a83b36c861ba5027f16b4b671d791f0ffdb3187797d69d4019d6483",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md": "d8c24a5c8be2fa6268c7503c3339ffc2fa23accfaafb89c9573ecd5a1ab75165",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/formal-replay.json": "101a20c88fb98d6e3e604a4f8ee6e7fe3d0afd8369b2b5ddd8d30619579ad864",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-analytic-root.json": "75f5f32219dd4b7a15456980b297dc9cac23bf129cf0405c5cfa420b9f63e3a8",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-research-root.json": "f0b25edae8d076ca77fdf1dc4e1422a194fb96d4d4b6756f816a707109709254",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/audit-independent-01.md": "a85bfd4e8babc9451b7e8c4b7bbd77af352e34689c9519f68a74c255da235d0b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/novelty-review-independent-03.md": "11928527befd6192d0b60a99041be0f34743e54a78e536755637f92a1931f1b1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/verdict-independent-06.json": "18079478169bb08be229ff22872940896a6bc54a6675e894097fc4e3e5e03937",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-05.py": "998e1c3c26d7ee03bb037730758bd154861e4c11cd68628accdf7d6249920d98",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/formal-replay.py": "bce039ee61ff9bd28d985017b1d41932924d9d547bc43fe8e009560a1ba148c6",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/checkpoint-04.md": "d4d33a81a186380d10d0e740a07e7fd8aa6a3a29a8477d6582d7fbdb7efd0b8b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/DIPOLE-RESULTS.md": "74510eb9e0fdb503be3450728ac31f5d853297e25a82efa9e80a2f800558185e",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-02.py": "205804531bbc161654956ed2edb6e1f63bd4b691d577bc9842434adfcc4580ce",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-research-root.py": "2c3b5fa7f5b81a798c59e11ed0d8b6bfc0e625f2c9d9066e0b30af1078ff129d",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validation-independent-04.json": "7e40aaa8ab48bf5dfe6e6a1d6e5dcbf0e86859b98b5a139c4df3a21726e3dd79",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/source/gravity-programme-excerpts.md": "96f0cb423fd7ea57958a201677c83a0ab3de0bf85324d141200586e4dcd33d55",
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108",
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9"
+  },
+  "score_counts": {
+    "total": 275,
+    "approved": 271,
+    "pending_CNI": 4
+  },
+  "new_module_kernel_replays": 7,
+  "independent_verdicts": [
+    {
+      "file": "verdict-independent-01.json",
+      "approvals": 8
+    },
+    {
+      "file": "verdict-independent-02.json",
+      "approvals": 3
+    },
+    {
+      "file": "verdict-independent-04.json",
+      "approvals": 2
+    },
+    {
+      "file": "verdict-independent-05.json",
+      "approvals": 2
+    },
+    {
+      "file": "verdict-independent-06.json",
+      "approvals": 2
+    }
+  ],
+  "approved_baseline_production_changed": false,
+  "new_material_gravity_applications": 0,
+  "decision12": "unpassed: smooth quasi-Hamiltonian regular reduction/domain binding",
+  "result": "passed"
+}

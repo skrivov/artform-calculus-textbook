@@ -40,3 +40,13 @@ domain saturated over all such lifts cannot be invariant. An identity-link
 stationary domain is an explicit positive control, so restricted geometric
 flows are not excluded. C01-D06 remain unstarted: cross-cell geometric
 transport admission and the faithful regular-reduction binding remain open.
+
+## Matched-sector continuation, still no added round count
+
+TRANSPORT-RESULTS.md completes the declared two-cell sector matching test.
+The full first-digon kick has corrected Gram determinant-1/4 despite
+Gauss/unit/noncentral faces; the independent-connection domain admits
+nonstationary link drifts that preserve every intrinsic tuple and violate
+the stricter seam law. Global smooth connection, native dynamics and
+regular reduction remain open. This is a further B06 diagnostic; it does
+not silently activate C/D or create an extra allocation.

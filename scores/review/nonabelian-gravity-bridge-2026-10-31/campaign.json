@@ -3,16 +3,16 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "dipole_one_cell_admission_obstruction_approved_matched_transport_open",
+  "research_status": "matched_sector_transport_and_score_comparison_approved_native_generator_open",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
-  "researcher_policy": "one_researcher_one_user_authorized_independent_reviewer",
-  "additional_workers_launched": 1,
+  "researcher_policy": "one_researcher_one_active_user_authorized_independent_reviewer",
+  "additional_workers_launched": 2,
   "initial_investigations": 12,
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 15,
-  "new_independent_approvals": 15,
+  "new_registered_claims": 17,
+  "new_independent_approvals": 17,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -49,7 +49,8 @@
         "independent_review_of_original_eight_claims",
         "actual_quaternion_curve_Maurer_and_two_form_evaluation_binding",
         "independent_review_of_three_additive_claims"
-      ]
+      ],
+      "geometric_probe": "Complete first-digon kick fails positive-curvature admission on the matched cell-sector fixture; supporting smooth reduction remains open."
     },
     "decision18": {
       "status": "unassessed",
@@ -285,23 +286,27 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Novelty audit identifies known AMM/Riello framework and standard genus-two face twists. Full presentation-orbit dictionary and signed face intertwining checked; no new physical dynamics or regular symplectic binding claimed. The unrestricted four-edge dipole now has a genuine one-cell spherical face-collapse control; actual cross-cell transport admission remains open.",
+      "result": "Novelty audit identifies known AMM/Riello framework and standard genus-two face twists. Full presentation-orbit dictionary and signed face intertwining checked; no new physical dynamics or regular symplectic binding claimed. The unrestricted four-edge dipole now has a genuine one-cell spherical face-collapse control; actual cross-cell transport admission remains open. Matched cell-sector seam data now constructed: complete first-digon kick has corrected Gram determinant -1/4, while a nonstationary independent-connection drift preserves a gauge-saturated intrinsic domain and fails strict seam transport.",
       "lean_claims": [
         "NGB:geometric-preflight",
         "NGB:stabilizer-preservation",
         "NGB:surface-orbit-dictionary",
         "NGB:surface-face-twists",
         "NGB:dipole-oriented-score",
-        "NGB:spherical-face-collapse"
+        "NGB:spherical-face-collapse",
+        "NGB:matched-orthant-transport",
+        "NGB:matched-score-separation"
       ],
-      "independent_review": "approved_independent_01_02_04_05_at_literal_scope; novelty_assessed_independent_03",
+      "independent_review": "approved_independent_01_02_04_05_06_at_literal_scope; novelty_assessed_independent_03",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
         "RESULTS.md",
         "ALGEBRA-OF-SCORES.md",
         "DIPOLE-CONTRACT.md",
-        "DIPOLE-RESULTS.md"
+        "DIPOLE-RESULTS.md",
+        "TRANSPORT-CONTRACT.md",
+        "TRANSPORT-RESULTS.md"
       ]
     },
     {
@@ -455,7 +460,7 @@
   },
   "analytic_extension_claims": 3,
   "analytic_extension_review": "approved_independent_02",
-  "latest_checkpoint": "DIPOLE-RESULTS.md",
+  "latest_checkpoint": "TRANSPORT-RESULTS.md",
   "preflight_findings": [
     "no_four_valent_vertex_on_current_canvas",
     "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
@@ -487,5 +492,29 @@
     ],
     "restricted_positive_control": "Every identity-link closed-tuple lift is stationary.",
     "next_question": "Pin actual face pairing, metrics and labelled tangent-frame transport; test whether a nonstationary score preserves that admitted domain."
+  },
+  "active_review_workers": 1,
+  "current_reviewer": {
+    "task": "ngb_sol61_transport_review",
+    "model": "gpt-6.1-sol",
+    "authorization": "User explicitly authorized one Sol6.1 reviewer for this continuation.",
+    "prior_reviewer_state": "Not used for this continuation; prior reviews01-05 retained."
+  },
+  "transport_extension_claims": 2,
+  "transport_extension_review": "approved_independent_06",
+  "matched_transport_diagnostic": {
+    "contract": "TRANSPORT-CONTRACT.md",
+    "result": "TRANSPORT-RESULTS.md",
+    "geometry": "Two face-matched positive spherical orthants with opposite orientations and explicit one-sided cell-sector seam/stem transports.",
+    "full_first_digon_kick": "Gauss and noncentral unit faces preserved, corrected target Gram determinant -1/4 for all normal-axis signs and gauges; fixed positive-curvature target admission fails.",
+    "positive_domain": "Full unit-norm endpoint gauge saturation of fixed matched source/target intrinsic data and unit link connections; invariant under all signed one-link drifts.",
+    "nonstationary_witness": "Mixed gauge-invariant real trace changes0 to-1/2 under edge0 drift; strict seam action fails.",
+    "limits": [
+      "No_global_smooth_LC_at_singular_strata",
+      "No_selected_gravitational_Hamiltonian_or_extrinsic_field_law",
+      "No_native_R7_R8_binding",
+      "No_exclusion_of_other_or_small_step_flows"
+    ],
+    "next": "Pin a source-selected independent-connection constraint/Hamiltonian and actual native carrier before another score or quantization proposal."
   }
 }

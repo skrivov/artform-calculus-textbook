@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "9985bfafb9fbecf300df1186843c05a0b919ef41",
+  "frozen_contract": "TRANSPORT-CONTRACT.md",
+  "sources": [
+    {
+      "authors": "Haggard-Han-Riello",
+      "url": "https://arxiv.org/html/1506.03053v1",
+      "locators": [
+        "section2 equations12,17,24,32,33",
+        "section4 equations44-45"
+      ],
+      "scope": "Fixed-simple-path reconstruction data and positive spherical Gram criterion; global geometry not newly formalized."
+    },
+    {
+      "authors": "Freidel-Speziale",
+      "url": "https://arxiv.org/html/1001.2748v1",
+      "locators": [
+        "section1.3",
+        "section5.1"
+      ],
+      "scope": "Known intrinsic/extrinsic and shape/connection distinction in flat holonomy-flux phase space, not an automatic curved dictionary."
+    },
+    {
+      "authors": "Anza-Speziale",
+      "url": "https://arxiv.org/abs/1409.0836",
+      "locators": [
+        "abstract v2"
+      ],
+      "scope": "Source-specific flat dynamics and secondary simplicity/shape matching; no general curved score preservation theorem."
+    },
+    {
+      "authors": "AMM",
+      "url": "https://arxiv.org/pdf/dg-ga/9707021v1",
+      "locators": [
+        "Theorem4.5"
+      ],
+      "scope": "Known target moment-map twist, not a selected gravitational Hamiltonian."
+    }
+  ],
+  "interpretation_guard": "Specified one-sided cell-sector seam prescription on singular doubled orthants; no smooth global Levi-Civita connection.",
+  "novelty_credit": "Checked explicit matched-sector specialization and update comparison, no priority or native gravity result.",
+  "local_inputs": [
+    {
+      "repository_path": "lake-manifest.json",
+      "sha256": "d335397f4a766516c38741186a3c6691282290fed3fa8b0c9c186dddab039d45"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Calculus/Deriv/Mul.lean",
+      "sha256": "9a5f4cda6bdba50954d27879160adfdb7d408b41c49dde6343cd03a30227b242"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Calculus/FDeriv/Mul.lean",
+      "sha256": "a9ac40abb691761c9d09a4870f886f03ec758b286e3685c1f31614e91d372950"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Analysis/Quaternion.lean",
+      "sha256": "37c3ad78c7019dff722100862c4d9714243da98c3674c49e2021300dac7726ed"
+    },
+    {
+      "repository_path": ".lake/packages/mathlib/Mathlib/Algebra/Quaternion.lean",
+      "sha256": "cbac27d23bd6648e9c7c1d22c7e70801315ce6bce275cee2689542c11f1cd0fe"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/CURRENT-PROGRAM.md",
+      "sha256": "064290780bf8a8cffc8ec7248e6ce9b4f0a340d7aa5406942a16c1c62bba07f0"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-owned-flat-vector16-smooth-range-and-coupled-l2-obstruction.md",
+      "sha256": "f762f32adf2ee15b1b4115732a2e138230563135da490349be28bc80754e8b23"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-r7-full-current-smooth-domain-and-lie-algebra.md",
+      "sha256": "535cc11ad31d42e9e75f5ee2bd269d765512542b540555071723314fdf616877"
+    }
+  ]
+}

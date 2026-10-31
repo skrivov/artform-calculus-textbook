@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "single user-authorized Sol6.1 ngb_sol61_transport_review",
+  "contribution_disclosure": "Single user-authorized Sol6.1 reviewer ngb_sol61_transport_review. Reviewer supplied earlier conceptual convention and positive-control advice; root authored all seven production modules. Reviewer authored none of those modules, independently reviewed their actual source/proofs/canonical literals, and authored only review artifacts. Prior independent05 arithmetic helpers are reused and hash-verified unchanged against the baseline. No claim of no prior involvement in formulation.",
+  "reviewed_base_commit": "9985bfafb9fbecf300df1186843c05a0b919ef41",
+  "reviewed_freeze": "seven additive working-tree modules bound by exact source hashes",
+  "approved_count": 2,
+  "returned_count": 0,
+  "prior_approved_count_preserved": 269,
+  "four_CNI_claims_still_pending": true,
+  "entries": [
+    {
+      "key": "NGB:matched-orthant-transport",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.matchedOrthantTransport",
+      "lean_proof": "Artform.Scores.NonabelianGravity.matchedOrthantTransport",
+      "review_text_sha256": "dc92cb530b236dbcf308313edfbd765f96e401f607ebd1ad39f41fa6f672f94a",
+      "canonical_literal_sha256": "67128826c9e47426036d858c8529a1b80e1fd081e5cea51456381231b1a1f495",
+      "reachable_definition_count": 47,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Finite paired face metrics, label-swapped inverse HHR loops, seam reflections and opposite-frame rotation matrices agree with the declared doubled orthant sectors. Quaternion lifts bind actual source/target holonomies and complete Gauss stars. The old erasing links fail strict seam admission. Continuous sector interpretation is explicit and is not a smooth global manifold/LC theorem.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:matched-score-separation",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.matchedScoreSeparation",
+      "lean_proof": "Artform.Scores.NonabelianGravity.matchedScoreSeparation",
+      "review_text_sha256": "573820534410c95f84662a0194dc90fce8ff39156e2bc34a70107cb422c50aba",
+      "canonical_literal_sha256": "8dd7c01871eb0c246c27aa344fe8ffe28c87b46a0396b6903e96fc99edfb5e89",
+      "reachable_definition_count": 47,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "The actual kick is bound through computed unit noncentral fluxes and normalized axes to corrected Gram determinant -1/4, invariant under all axis signs and simultaneous quaternion gauges. The nonempty independently gauged unit-connection domain preserves intrinsic matching under all signed one-link drifts; mixed trace distinguishes actual drift gauge orbits, while strict seam admission fails. External spherical Gram necessity is separately attributed; no native dynamics or generic flow no-go is claimed.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9"
+  },
+  "canonical_file_sha256": "d8c24a5c8be2fa6268c7503c3339ffc2fa23accfaafb89c9573ecd5a1ab75165",
+  "independent_replay_sha256": "c7d31deeea79849b7ec219548743c0f5055d801b5d9636c90aeffaa113ea3eb9",
+  "independent_replay_dependency_sha256": {
+    "replay-independent-05.py": "998e1c3c26d7ee03bb037730758bd154861e4c11cd68628accdf7d6249920d98"
+  },
+  "audit": "audit-independent-06.md",
+  "validation": "validation-independent-06.json",
+  "new_material_native_gravity_applications": 0,
+  "scope": "Matched cell-sector finite geometry; actual full-kick fixed-positive-curvature escape; nonstationary intrinsic-preserving independent connection drift. No smooth global LC/manifold theorem, native field binding, physical Hamiltonian or generic small-flow no-go.",
+  "claims_file_sha256": "d352720a186ede8899f1842343b193c2ef301c183e061a842de2e2e4982ac0a1",
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "receipt_metadata_correction": "Clerical correction: canonical_file_sha256 originally contained the claims.json digest. Corrected to the ALGEBRA-OF-SCORES.md bytes digest; original digest retained as claims_file_sha256. Both submitted literals, per-key hashes and production sources remain unchanged; approvals stand."
+}
