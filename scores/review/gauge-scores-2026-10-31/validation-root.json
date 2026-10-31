@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-31",
+  "author": "root",
+  "baseline": "01448c7d261a8f5e5620c39be447d527deddb469",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "seconds": 7.096,
+      "stdout_sha256": "b05c090136cc7203630fb532b1cc5f7e1c167a689724874b108783d058286d2a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 16.343,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 22.754,
+      "stdout_sha256": "b85a465dba3a553b0e60df695e10a65b1bdec2233408a77cfcd76f5b32dba339",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--write"
+      ],
+      "exit_code": 0,
+      "seconds": 0.167,
+      "stdout_sha256": "99571245cf0f2a4e40c8a71aaa0e274e222ae578a632738c999a25e5c7c44319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.368,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 1.999,
+      "stdout_sha256": "d2df363688333007f2155a5024e2475031c1141d849b447e0a8ce9558890ebe7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.159,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.202,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.27,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.082,
+      "stdout_sha256": "b473310e5ccbf88722becebe9329dbfa2d13dc78638c205cff0a254b32116251",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.342,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.165,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Theorems"
+      ],
+      "exit_code": 0,
+      "seconds": 6.19,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "old_approved_entries": 239,
+  "old_manifest_entries_unchanged": true,
+  "old_lean_modules_unchanged": true,
+  "umbrella_additive_import": true,
+  "new_labels": [
+    "GSC:canonical-filter",
+    "GSC:fixed-word",
+    "GSC:owned-compiler",
+    "GSC:c8-receipts",
+    "GSC:coherent-compiler",
+    "GSM:transverse",
+    "GSM:block-source",
+    "GSM:forced-memory",
+    "GSM:coarse-obstruction"
+  ],
+  "new_proof_axioms": {
+    "GSM:block-source": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSC:c8-receipts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSC:canonical-filter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSM:coarse-obstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSC:coherent-compiler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSC:fixed-word": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSM:forced-memory": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSC:owned-compiler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GSM:transverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "files": {
+    "scores/ArtformScores/Gauge/Statements.lean": "99da95901bc2650711a766e477f6d12d6d4e27e88f47e3b27de0d3adaec67797",
+    "scores/ArtformScores/Gauge/Spatial.lean": "e6033fd79829f1962d778b1d5643f33c00873210ae8f625a7b40592636e2a7b2",
+    "scores/ArtformScores/Gauge/Process.lean": "56dc5bea0b3fcb276e057f80719847142d7f6df74085acf63f03acb3d8e1d19f",
+    "scores/ArtformScores/Gauge/Theorems.lean": "490dda4b6cae57b6dd22d5a0704543db5e8708ce35f348548e4249b9cdde5a17",
+    "scores/ArtformScores/Gauge/Defs.lean": "507d344f201fe79bd0393e8176b179b027765da06c6a04882197f51826b7c0c4",
+    "scores/ArtformScores/Gauge/Laurent.lean": "f088efddee7d52a695264448d6374a76ac92f9b1dc64d64d9d61146a227fb920",
+    "scores/ArtformScores/Gauge/Coherent.lean": "612a6e3cdbf591cb254d0642c4fd48059405c79849e590274ac9ab200a5367b0",
+    "scores/ArtformScores/Gauge/Macro.lean": "3f31584937165b2e5b08d55cdc779c5246874fa8c0a0240b0b319001540532f7",
+    "scores/review/gauge-scores-2026-10-31/ALGEBRA-OF-SCORES.md": "1885146babc806c8259138e836fecd6b80ae1f6e99473a4b4fad5841a7c51468",
+    "scores/review/gauge-scores-2026-10-31/claims.json": "c1739e48237d7bacb9d7c62d1193475a8fceda461b424bfca92e9fdb20fae323",
+    "scores/review/gauge-scores-2026-10-31/source-pins.json": "257ca512298111e7fbdfdd8ef13ffdab5bc687c126be02ba4aa57d09274b7626"
+  }
+}

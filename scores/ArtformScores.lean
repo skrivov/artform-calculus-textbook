@@ -217,3 +217,5 @@ import ArtformScores.GravityBridge.Native.NativeDetailTests.SourceBranch
 import ArtformScores.GravityBridge.Native.NativeDetailTests.Window
 import ArtformScores.GravityBridge.Native.NativeDetailTests.Unrestricted
 import ArtformScores.GravityBridge.Native.NativeDetailTests.FiniteWindow
+
+import ArtformScores.Gauge.Theorems

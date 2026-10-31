@@ -1,0 +1,430 @@
+{
+  "date": "2026-10-31",
+  "reviewed_baseline_and_frozen_worktree": "01448c7d261a8f5e5620c39be447d527deddb469",
+  "independent_review": true,
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.479,
+      "stdout": "\u2139 [3788/3839] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9765 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.583,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.57,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 30791972,
+      "output_sha256": "b85a465dba3a553b0e60df695e10a65b1bdec2233408a77cfcd76f5b32dba339",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.371,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.999,
+      "stdout": "1212 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.166,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.202,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.276,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.083,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.359,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.169,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Defs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.179,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Process"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.245,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Macro"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.207,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Spatial"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.625,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Laurent"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.2,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Coherent"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.434,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Statements"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.144,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.Gauge.Theorems"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.102,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "post_approval_publication_checks": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.573,
+      "stdout": "\u2139 [3788/3925] Replayed ArtformChapter1\ninfo: textbook/tutorial/ArtformChapter1.lean:704:0: 3\nBuild completed successfully (9765 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.635,
+      "output_file": "build/report.json",
+      "output_bytes": 70493294,
+      "output_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.623,
+      "output_file": "build/ledger-report.json",
+      "output_bytes": 30791972,
+      "output_sha256": "b85a465dba3a553b0e60df695e10a65b1bdec2233408a77cfcd76f5b32dba339",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.369,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.964,
+      "stdout": "1216 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.173,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.211,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.293,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.085,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.352,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.16,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "independent_replay": {
+    "command": [
+      "python3",
+      "scores/review/gauge-scores-2026-10-31/replay-independent.py"
+    ],
+    "exit_code": 0,
+    "timing_not_recorded": true,
+    "result": {
+      "all8_translation_increments_including_zero": true,
+      "both_MQ7_inverse_orders": true,
+      "both_current_channels_retained": true,
+      "both_receipt_eighth_powers": -1,
+      "both_word_inverse_orders_and_fixed_source_tangent": 19,
+      "exact_phase_aware_raw_word_slices": 6,
+      "hidden_source_and_hidden_initial_omission_detected": true,
+      "native_C8_exact_cyclotomic_receipt_cases": 128,
+      "native_C8_original_assessment_reading_controls": true,
+      "native_Maxwell_41_slot_macro_cases": 19,
+      "native_common_policy_MQ9_gauge_cases": 58,
+      "native_torus_dimensions": [
+        4,
+        2
+      ],
+      "native_transverse_forced_memory_reconstruction_steps": 221,
+      "random_fixed_word_prefixes": 513,
+      "source_sha256": {
+        "scores/ArtformScores/Gauge/Coherent.lean": "612a6e3cdbf591cb254d0642c4fd48059405c79849e590274ac9ab200a5367b0",
+        "scores/ArtformScores/Gauge/Defs.lean": "507d344f201fe79bd0393e8176b179b027765da06c6a04882197f51826b7c0c4",
+        "scores/ArtformScores/Gauge/Laurent.lean": "f088efddee7d52a695264448d6374a76ac92f9b1dc64d64d9d61146a227fb920",
+        "scores/ArtformScores/Gauge/Macro.lean": "3f31584937165b2e5b08d55cdc779c5246874fa8c0a0240b0b319001540532f7",
+        "scores/ArtformScores/Gauge/Process.lean": "56dc5bea0b3fcb276e057f80719847142d7f6df74085acf63f03acb3d8e1d19f",
+        "scores/ArtformScores/Gauge/Spatial.lean": "e6033fd79829f1962d778b1d5643f33c00873210ae8f625a7b40592636e2a7b2",
+        "scores/ArtformScores/Gauge/Statements.lean": "99da95901bc2650711a766e477f6d12d6d4e27e88f47e3b27de0d3adaec67797",
+        "scores/ArtformScores/Gauge/Theorems.lean": "490dda4b6cae57b6dd22d5a0704543db5e8708ce35f348548e4249b9cdde5a17",
+        "scores/review/gauge-scores-2026-10-31/ALGEBRA-OF-SCORES.md": "1885146babc806c8259138e836fecd6b80ae1f6e99473a4b4fad5841a7c51468",
+        "scores/review/gauge-scores-2026-10-31/source-pins.json": "257ca512298111e7fbdfdd8ef13ffdab5bc687c126be02ba4aa57d09274b7626"
+      },
+      "status": "passed"
+    }
+  },
+  "fidelity_and_preservation": {
+    "approved_count": 9,
+    "returned_count": 0,
+    "prior_239_approved_entries_unchanged": true,
+    "old_Lean_modules_unchanged": true,
+    "frozen_new_Lean_files_unchanged": 8,
+    "canonical_manifest_and_external_mirror_exact": true,
+    "source_pins_authenticated": 7,
+    "total_approved_entries": 248,
+    "reviewer_Lean_edits": false,
+    "post_freeze_source_repair": false,
+    "required_command_count": 30,
+    "separate_new_module_kernels": 8,
+    "committed_or_pushed_by_reviewer": false,
+    "shared_ledger_edited_by_reviewer": false
+  },
+  "final_artifact_tree_check": {
+    "command": [
+      "python3",
+      "scripts/check_tree.py",
+      "--identity"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.953,
+    "stdout": "1216 files checked; 0 problem(s)\n",
+    "stderr": ""
+  }
+}

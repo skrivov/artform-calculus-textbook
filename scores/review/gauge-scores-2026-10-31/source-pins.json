@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-31",
+  "base_proof_commit": "01448c7d261a8f5e5620c39be447d527deddb469",
+  "source_root": "artforms workspace",
+  "sources": [
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/maxwell-construction.tex",
+      "sha256": "e9a6ce760fc7a547966ecd99dc06b9570b4ca638af9afde378eebfca58966a7d",
+      "bytes": 23445
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/maxwell-propagation-topology.tex",
+      "sha256": "27d9f998ed8e96b90720f9777e6ef753ebf496d1dffa864b392200a893743b39",
+      "bytes": 31305
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/native-maxwell-quadratic.tex",
+      "sha256": "9dc36a4711311b3d08be037d9b9aa9e4401d7631adfbd7aab2ed32d4290430c4",
+      "bytes": 13138
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/native-quadratic-receipts.tex",
+      "sha256": "b0917f4f80efee521f05471c5766014a25b5253f27dfb8f459a25621420bad56",
+      "bytes": 9937
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/phase-and-translation.tex",
+      "sha256": "445bf5266222e44f01922a972b4fc06a86bea163dba8ae59bc6396ae793f34c5",
+      "bytes": 12617
+    },
+    {
+      "path": "physics/gauge-theories-artform-calculus/chapters/sections/classical-structure.tex",
+      "sha256": "83e4a53fcfafe82056e1d02a8dd375d25635a98bdfe6aaa9f8cebdb0f643b4c5",
+      "bytes": 87136
+    },
+    {
+      "path": "physics/ledgers/lattice-waves/research/gauge-score-applications-2026-10-31/assessment.md",
+      "sha256": "b54784b8e04e6916a8ec77eebbf7cb84f3eebd0a15b2c09fae27ee26f0c65696",
+      "bytes": 12771
+    }
+  ]
+}

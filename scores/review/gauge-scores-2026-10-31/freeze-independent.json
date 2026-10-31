@@ -1,0 +1,23 @@
+{
+  "reviewer": "independent gravity_fidelity_review_01",
+  "frozen_baseline": "01448c7d261a8f5e5620c39be447d527deddb469",
+  "uncommitted_submission_freeze": true,
+  "root_validation_sha256": "89a914ba10321ae1452046d6ed4ad50857291482e056fb86c4b541dfd6fd5ffa",
+  "frozen_files": {
+    "scores/ArtformScores/Gauge/Statements.lean": "99da95901bc2650711a766e477f6d12d6d4e27e88f47e3b27de0d3adaec67797",
+    "scores/ArtformScores/Gauge/Spatial.lean": "e6033fd79829f1962d778b1d5643f33c00873210ae8f625a7b40592636e2a7b2",
+    "scores/ArtformScores/Gauge/Process.lean": "56dc5bea0b3fcb276e057f80719847142d7f6df74085acf63f03acb3d8e1d19f",
+    "scores/ArtformScores/Gauge/Theorems.lean": "490dda4b6cae57b6dd22d5a0704543db5e8708ce35f348548e4249b9cdde5a17",
+    "scores/ArtformScores/Gauge/Defs.lean": "507d344f201fe79bd0393e8176b179b027765da06c6a04882197f51826b7c0c4",
+    "scores/ArtformScores/Gauge/Laurent.lean": "f088efddee7d52a695264448d6374a76ac92f9b1dc64d64d9d61146a227fb920",
+    "scores/ArtformScores/Gauge/Coherent.lean": "612a6e3cdbf591cb254d0642c4fd48059405c79849e590274ac9ab200a5367b0",
+    "scores/ArtformScores/Gauge/Macro.lean": "3f31584937165b2e5b08d55cdc779c5246874fa8c0a0240b0b319001540532f7",
+    "scores/review/gauge-scores-2026-10-31/ALGEBRA-OF-SCORES.md": "1885146babc806c8259138e836fecd6b80ae1f6e99473a4b4fad5841a7c51468",
+    "scores/review/gauge-scores-2026-10-31/claims.json": "c1739e48237d7bacb9d7c62d1193475a8fceda461b424bfca92e9fdb20fae323",
+    "scores/review/gauge-scores-2026-10-31/source-pins.json": "257ca512298111e7fbdfdd8ef13ffdab5bc687c126be02ba4aa57d09274b7626",
+    "scores/review/gauge-scores-2026-10-31/HANDOFF.md": "2a1b93ecf1cd9e90dfc5a0d3f7b009e3ea570ce42d5017fd1b1bc1ce23d4a69f"
+  },
+  "source_pins_authenticated": 7,
+  "canonical_mirror_exact": true,
+  "prior_239_entries_unchanged": true
+}

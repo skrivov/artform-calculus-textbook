@@ -1,0 +1,40 @@
+{
+  "command": [
+    "python3",
+    "scores/review/gauge-scores-2026-10-31/replay-independent.py"
+  ],
+  "exit_code": 0,
+  "timing_not_recorded": true,
+  "result": {
+    "all8_translation_increments_including_zero": true,
+    "both_MQ7_inverse_orders": true,
+    "both_current_channels_retained": true,
+    "both_receipt_eighth_powers": -1,
+    "both_word_inverse_orders_and_fixed_source_tangent": 19,
+    "exact_phase_aware_raw_word_slices": 6,
+    "hidden_source_and_hidden_initial_omission_detected": true,
+    "native_C8_exact_cyclotomic_receipt_cases": 128,
+    "native_C8_original_assessment_reading_controls": true,
+    "native_Maxwell_41_slot_macro_cases": 19,
+    "native_common_policy_MQ9_gauge_cases": 58,
+    "native_torus_dimensions": [
+      4,
+      2
+    ],
+    "native_transverse_forced_memory_reconstruction_steps": 221,
+    "random_fixed_word_prefixes": 513,
+    "source_sha256": {
+      "scores/ArtformScores/Gauge/Coherent.lean": "612a6e3cdbf591cb254d0642c4fd48059405c79849e590274ac9ab200a5367b0",
+      "scores/ArtformScores/Gauge/Defs.lean": "507d344f201fe79bd0393e8176b179b027765da06c6a04882197f51826b7c0c4",
+      "scores/ArtformScores/Gauge/Laurent.lean": "f088efddee7d52a695264448d6374a76ac92f9b1dc64d64d9d61146a227fb920",
+      "scores/ArtformScores/Gauge/Macro.lean": "3f31584937165b2e5b08d55cdc779c5246874fa8c0a0240b0b319001540532f7",
+      "scores/ArtformScores/Gauge/Process.lean": "56dc5bea0b3fcb276e057f80719847142d7f6df74085acf63f03acb3d8e1d19f",
+      "scores/ArtformScores/Gauge/Spatial.lean": "e6033fd79829f1962d778b1d5643f33c00873210ae8f625a7b40592636e2a7b2",
+      "scores/ArtformScores/Gauge/Statements.lean": "99da95901bc2650711a766e477f6d12d6d4e27e88f47e3b27de0d3adaec67797",
+      "scores/ArtformScores/Gauge/Theorems.lean": "490dda4b6cae57b6dd22d5a0704543db5e8708ce35f348548e4249b9cdde5a17",
+      "scores/review/gauge-scores-2026-10-31/ALGEBRA-OF-SCORES.md": "1885146babc806c8259138e836fecd6b80ae1f6e99473a4b4fad5841a7c51468",
+      "scores/review/gauge-scores-2026-10-31/source-pins.json": "257ca512298111e7fbdfdd8ef13ffdab5bc687c126be02ba4aa57d09274b7626"
+    },
+    "status": "passed"
+  }
+}

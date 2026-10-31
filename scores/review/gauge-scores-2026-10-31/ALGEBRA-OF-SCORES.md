@@ -1,0 +1,62 @@
+# Gauge score compiler and exact coarse Maxwell dynamics
+
+Canonical claims for the two applications selected on 31 October 2026. The companion proof library uses namespace `Artform.Scores.Gauge`. Each entry below is quoted literally in the separate scores repository manifest. This campaign uses its own labels and directory while other agents edit the shared lattice-wave ledger.
+
+The source monograph is *Gauge Theories in Artform Calculus*: native Maxwell construction, transverse propagation, and native quadratic receipts MQ1–MQ9. These claims add a checked compiler and source-memory binding to that material; they do not assert world-priority novelty. Approval is recorded separately after independent fidelity review.
+
+## GSC:canonical-filter
+
+**Canonical processing filter and Weyl separation.**
+
+For every commutative coefficient ring R, let S=R[T,T^-1] and let reversal fix R and send T to T^-1. A two-by-two matrix P over S with det P=1 satisfies P^rev,transpose J P=J, J=[[0,1],[-1,0]], exactly when all four entries are reversal-fixed. The reversal-fixed Laurent polynomials are exactly the image of R[g], g=2-T-T^-1, under polynomial evaluation; this assertion uses no division by2. Reversal here is the coefficient-fixing spatial adjoint, not complex coefficient conjugation. On the five-site Z/3 scalar wave with E'=E+(2-T-T^-1)A, A'=A-E', the processor shifting A by+1 and E by-1, followed by inverse processing before the tick, sends two initially commuting Weyl labels to labels of pairing2. The actual Weyl operators obey this pairing commutator: the original pair commutes and the processed pair does not. Hence no complex linear equivalence can conjugate every original Weyl operator to the exactly specified processed Weyl operator. A common+1 translation of both channels preserves the pairing. This is a canonical filter and an explicit processed-action obstruction, not a complete classification of physically equivalent laws or all possible relabelings.
+
+## GSC:fixed-word
+
+**Fixed-word canonical Gauss scores.**
+
+On every finite Canvas K over every commutative ring R, use field state (A,E,rho), Gauss defect div E-rho, and the following fixed-instruction library: face(p,k) adds curlStar(single_p(k curl(A)_p)) to E; move(e,k) adds single_e(k E_e) to A; current(e,j) subtracts single_e(j) from E and div(single_e(j)) from rho; hold changes nothing. Every finite fixed word has a two-sided inverse obtained by reversing the word and negating its parameters. Every complete-instruction prefix preserves the Gauss defect, and the word commutes with A->A+diff(phi). Its tangent action is exactly the action on perturbations (delta A,delta E) with rho, sources and all selected parameters held fixed; it preserves sum_e(delta A_e delta E'_e-delta E_e delta A'_e) and div(delta E). These are ambient field-pairing and Gauss-tangent results; adaptive word selection, varying sources and a nondegenerate gauge-quotient pairing are not included.
+
+## GSC:owned-compiler
+
+**Owned local compiler and Maxwell macro binding.**
+
+The preceding instruction library is realized by actual ProcessProfiles on separately addressed potential, electric and charge slots. A face commit reads the nonzero-incidence potential and electric boundary slots and writes the electric boundary slots atomically. A link move reads its potential/electric pair and writes its potential. A prescribed current commit reads/writes its electric slot and its endpoint charge slots; no other slot changes. All guards are true. The periodic LawInSteps for a word w selects one enabled singleton batch in each slot, checks Gauss at every boundary, is total and order-free, and has period length(w)+1, including one extra witnessed hold. Every prefix through length(w) equals run(take n w); the complete padded cycle equals run(w), also for an empty word. The word containing all face kicks of coefficient1, then all fixed-current commits, then all link moves of coefficient-1 has exactly E'=E+curlStar(curl A)-J, A'=A-E', rho'=rho-div J. At R=Z/8 this is the actual maxwellTick. Face curvature is read before any move. Face commits are sequential despite overlapping boundaries. The new grouped histories and padded cadence are not asserted identical to the monograph's original per-link elementary histories; zero-current events remain witnessed.
+
+## GSC:c8-receipts
+
+**Both calibrated C8 receipts.**
+
+Keep the field palette C8=Z/8 and put alpha=exp(2 pi i/16), zeta8=alpha^2. For each Boolean b define q_b(x)=alpha^(-lift(x)^2+8 b lift(x)), using the digit lift into Z/16. These are the two actual monograph half-phase choices q+ and q-. They satisfy q_b(s+t)=q_b(s)q_b(t)zeta8^(-st), q_b(-x)=q_b(x), q_b(0)=1 and conjugate(q_b(x))q_b(x)=1. The doubled-lift character is exactly the standard C8 additive character. The choices differ at1 and q_b(1)^8 is not1 for either choice. In the embedded ring R16=Z[alpha,1/2], q_b(x) and the actual MQ7 kernel k_b(a)=(1/8)sum_e q_b(e)zeta8^(-ea) are elements of R16. The local amplitude matrix M_b(x,y)=k_b(x-y) is unitary; its adjoint entry is conjugate(k_b(-(x-y))). No half-phase uniqueness, palette enlargement, independently executed Fourier operation or claim about charged quantum source sectors is made.
+
+## GSC:coherent-compiler
+
+**Vacuum coherent compiler with exact coefficients.**
+
+On every finite Canvas with C8 potential configurations, a forward coherent gate is either the actual face diagonal q_b(curl(A)_p) or the actual single-link translation matrix with entry k_b(x_e-y_e) when all other links agree and0 otherwise. Each letter may instead select its adjoint. Compile a chronological fixed word by multiplying its actual matrices in execution order. For every such word the compiled matrix is unitary on the entire raw configuration space in both inverse orders, the reversed adjoint word is exactly its adjoint, and all entries belong to R16. Simultaneous gauge translation of its two matrix indices leaves it unchanged, so it sends every vacuum gauge-invariant amplitude to a vacuum gauge-invariant amplitude. The local matrix formula fixes both the link write and the action on the non-Gauss complement, retaining zero increments. Coherent compilation retains phases and actual coefficients and does not quotient by classical score relators. This theorem concerns the configuration polarization with electric characters and fixed vacuum gates, not a simultaneous |A,E> basis, charged sources, arbitrary subdivision or nonabelian quantization. Every native link translation branch is an enabled ProcessProfile on the C8 configuration frame with singleton read/write set, applying update(x,e,x_e+a); its matrix coefficient is exactly k_b(a), including a=0. For one common policy b, the all-faces-then-all-links vacuum word compiles exactly to the ordered product of these link matrices times the diagonal product over faces q_b(curl(A)_p), the actual MQ9 factorization. Mixed-policy words remain separate from that native common-policy tick. This supplies gate ownership and a raw matrix compiler; it does not claim a general weighted LawInSteps coherent realizer.
+
+## GSM:transverse
+
+**Native toroidal transverse source binding.**
+
+Take the actual periodic square Canvas with vertices/faces Fin4 x Fin2, positively directed horizontal and vertical links, and each four-link oriented square boundary. Embed a four-site field a as vertical-link values a(x) independent of y and horizontal-link values0. Over every commutative ring this field has div0 and curlStar curl equal to the embedded laplacian (2a(x)-a(x+1)-a(x-1)). The embedding of the phase (a,e) as (A,E,rho=0) is injective and satisfies Gauss. With any prescribed transverse C8 current j, the native incidence maxwellTick restricts exactly to e'=e+lap(a)-j, a'=a-e', and rho remains0 because div J=0. This is an actual two-dimensional periodic source-family binding, explicitly restricted to the four-by-two transverse sector; it is not a general charged or nontransverse reduction.
+
+## GSM:block-source
+
+**Exact even-odd blocks and original observable.**
+
+For the four-site sourced transverse tick over every commutative ring, read x=(Aeven,Eeven) on sites0,2 and z=(Aodd,Eodd) on sites1,3. The assembly interleaving those fields is a two-sided inverse of these reads. Put L(a,e)=(-a-e,2a+e) and H(a,e)_r=(a_r+a_(r+1),-a_r-a_(r+1)) on the two coarse cells. Then x'=Lx+Hz+f and z'=Hx+Lz+g, with f=(j_even,-j_even), g=(j_odd,-j_odd). The equality of the two cross maps is this width-four geometry's result. The coarse observable declared in the preceding gauge-score assessment is output(x)=(Aeven_(r+1)-Aeven_r,Eeven_r), whose first component is exactly the sum of the two adjacent fine curvatures. Direct x is not relabeled as that observable: fine reconstruction retains the additional even potential/holonomy data.
+
+## GSM:forced-memory
+
+**Exact source memory and constructive reconstruction.**
+
+In that same finite sourced family, write x_n=even(s_n), z_n=odd(s_n), f_n=(j_even,n,-j_even,n), g_n=(j_odd,n,-j_odd,n), D=L and B=C=H. Every fine trajectory satisfies
+x_(n+1)=Lx_n+B D^n z_0+sum_(r<n) B D^(n-1-r) C x_r+sum_(r<n) B D^(n-1-r) g_r+f_n.
+Conversely, for any visible sequence x, prescribed current sequence and initial hidden state z0, define z recursively by z_(n+1)=C x_n+D z_n+g_n, z_0=z0. Its exact closed formula is D^n z0+sum_(r<n)D^(n-1-r)C x_r+sum_(r<n)D^(n-1-r)g_r. The visible equation x_(n+1)=Lx_n+Bz_n+f_n holds exactly when interleaving x_n,z_n solves the original four-site tick. For a fixed current sequence the fine trajectory is unique given its full initial state. Thus this is constructive reconstruction, retaining both source channels and hidden preparation. D^4 acts as identity; least period four, memory decay, a truncation bound and minimal hidden dimension are not asserted.
+
+## GSM:coarse-obstruction
+
+**Gauss-valid C8 coarse nonautonomy.**
+
+In the actual C8 transverse family, let the first fine state be A=E=0 and the second A=(0,1,0,0), E=0. Both embed as native rho=0 Gauss-valid states and have identical assessment-declared coarse observable (paired curvature sums,Eeven)=0. After the zero-current tick the first reading remains0 while the second has Eeven=(7,7), so their readings differ. Consequently there exists no single autonomous map on that assessment-declared coarse-observable space that advances every state of this family. The exact memory and reconstruction results retain the data this read discards; no impossibility of autonomous evolution after an explicit preparation restriction is claimed.
+

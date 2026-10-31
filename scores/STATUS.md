@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 239 |
+| proved | 248 |
 | stated | 0 |
 | planned | 0 |
-| **total** | **239** |
+| **total** | **248** |
 
 ## Statements
 
@@ -254,3 +254,12 @@
 | GAC2:native-source-rapidity-window | Exact native source window for both child rapidities | proved | `Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.windowLaw` / `Artform.Scores.GravityBridge.Native.NativeDetailTests.windowLaw` | approved 2026-10-31 |
 | GAC2:native-unrestricted-positive-weight | Unrestricted positive real weight is not a finite normalization | proved | `Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.unrestrictedLaw` / `Artform.Scores.GravityBridge.Native.NativeDetailTests.unrestrictedLaw` | approved 2026-10-31 |
 | GAC2:native-finite-detail-weight | Bounded native detail interval has explicit finite positive mass | proved | `Artform.Scores.GravityBridge.Native.NativeDetailTests.Statement.finiteWindowLaw` / `Artform.Scores.GravityBridge.Native.NativeDetailTests.finiteWindowLaw` | approved 2026-10-31 |
+| GSC:canonical-filter | Canonical processing filter and Weyl separation | proved | `Artform.Scores.Gauge.Statement.canonicalFilter` / `Artform.Scores.Gauge.canonicalFilter` | approved 2026-10-31 |
+| GSC:fixed-word | Fixed-word canonical Gauss scores | proved | `Artform.Scores.Gauge.Statement.fixedWord` / `Artform.Scores.Gauge.fixedWord` | approved 2026-10-31 |
+| GSC:owned-compiler | Owned local compiler and Maxwell macro binding | proved | `Artform.Scores.Gauge.Statement.ownedCompiler` / `Artform.Scores.Gauge.ownedCompiler` | approved 2026-10-31 |
+| GSC:c8-receipts | Both calibrated C8 receipts | proved | `Artform.Scores.Gauge.Statement.c8Receipts` / `Artform.Scores.Gauge.c8Receipts` | approved 2026-10-31 |
+| GSC:coherent-compiler | Vacuum coherent compiler with exact coefficients | proved | `Artform.Scores.Gauge.Statement.coherentCompiler` / `Artform.Scores.Gauge.coherentCompiler` | approved 2026-10-31 |
+| GSM:transverse | Native toroidal transverse source binding | proved | `Artform.Scores.Gauge.Statement.transverseBinding` / `Artform.Scores.Gauge.transverseBinding` | approved 2026-10-31 |
+| GSM:block-source | Exact even-odd blocks and original observable | proved | `Artform.Scores.Gauge.Statement.blockedSource` / `Artform.Scores.Gauge.blockedSource` | approved 2026-10-31 |
+| GSM:forced-memory | Exact source memory and constructive reconstruction | proved | `Artform.Scores.Gauge.Statement.forcedMemory` / `Artform.Scores.Gauge.forcedMemory` | approved 2026-10-31 |
+| GSM:coarse-obstruction | Gauss-valid C8 coarse nonautonomy | proved | `Artform.Scores.Gauge.Statement.coarseObstruction` / `Artform.Scores.Gauge.coarseObstruction` | approved 2026-10-31 |
