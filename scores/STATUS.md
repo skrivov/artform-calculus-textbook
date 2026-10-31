@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 104 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **104** |
+| **total** | **109** |
 
 ## Statements
 
@@ -119,3 +119,8 @@
 | GAC:algebraic-state-transport | Algebraic state pullback and finite CCR scope | proved | `Artform.Scores.GravityBridge.Statement.stateTransportLaw` / `Artform.Scores.GravityBridge.stateTransportLaw` | approved 2026-10-30 |
 | GAC:uncertainty-noise | Uncertainty form and retained environment noise | proved | `Artform.Scores.GravityBridge.Statement.quantumNoiseLaw` / `Artform.Scores.GravityBridge.quantumNoiseLaw` | approved 2026-10-30 |
 | GAC:gaussian-band-limit | Fixed-band Gaussian operator norm limit | proved | `Artform.Scores.GravityBridge.Statement.bandLimitLaw` / `Artform.Scores.GravityBridge.bandLimitLaw` | approved 2026-10-30 |
+| GAC:gaussian-gauge-volume | Unfixed Gaussian gauge volume and regulator dependence | stated | `Artform.Scores.GravityBridge.Statement.gaugeVolumeLaw` / `Artform.Scores.GravityBridge.gaugeVolumeLaw` | awaiting review |
+| GAC:scalar-coframe-candidate | A scalar candidate on a constant coframe chart | stated | `Artform.Scores.GravityBridge.Statement.matterLaw` / `Artform.Scores.GravityBridge.matterLaw` | awaiting review |
+| GAC:clock-coupling-response | Clock response and independent coupling | stated | `Artform.Scores.GravityBridge.Statement.clockLaw` / `Artform.Scores.GravityBridge.clockLaw` | awaiting review |
+| GAC:finite-regulator-symmetry | Signed spatial classification and exact finite regulator | stated | `Artform.Scores.GravityBridge.Statement.regulatorLaw` / `Artform.Scores.GravityBridge.regulatorLaw` | awaiting review |
+| GAC:finite-gaussian-loop | Convergent finite Gaussian loop and controlled response | stated | `Artform.Scores.GravityBridge.Statement.loopLaw` / `Artform.Scores.GravityBridge.loopLaw` | awaiting review |

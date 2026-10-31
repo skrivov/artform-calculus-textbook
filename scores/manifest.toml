@@ -1682,3 +1682,127 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.bandLimitLaw"
 lean_proof = "Artform.Scores.GravityBridge.bandLimitLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "070bd3a22cf66726d3dba3e0129aaa75a5d1c8420d6da1581dc5e8ce7355cea6"
+
+[[statement]]
+key = "GAC:gaussian-gauge-volume"
+label = "GAC:gaussian-gauge-volume"
+title = "Unfixed Gaussian gauge volume and regulator dependence"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:gaussian-gauge-volume)"
+statement = """
+**GAC:gaussian-gauge-volume (slice convergence and unfixed volume).** For real epsilon and
+x=(q,g), set f_epsilon(x)=exp(-(q^2+epsilon*g^2)), with actual Lebesgue measures.
+f_0 is not integrable on R^2, although q->f_0(q,0) is integrable with integral sqrt(pi).
+For epsilon>0, f_epsilon is integrable and its integral is sqrt(pi)*sqrt(pi/epsilon).
+At epsilon=1 the integral is pi, at epsilon=4 it is pi/2, and these are unequal.
+This is a real singular Gaussian model. A convergent fixed slice or an arbitrarily chosen regulator
+is not a native gravitational gauge reduction, quotient measure or Lorentzian amplitude prescription.
+See [finding 142](findings/142-unfixed-gaussian-volume-and-native-quantum-transfer.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.gaugeVolumeLaw"
+lean_proof = "Artform.Scores.GravityBridge.gaugeVolumeLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:scalar-coframe-candidate"
+label = "GAC:scalar-coframe-candidate"
+title = "A scalar candidate on a constant coframe chart"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:scalar-coframe-candidate)"
+statement = """
+**GAC:scalar-coframe-candidate (declared matter addition and chart tests).** On a constant
+rational diagonal coframe E=diag(N,a,a,a), det(E)=N*a^3. For N,a nonzero, the declared
+inverse diag(N^-1,a^-1,a^-1,a^-1) is a two-sided inverse.
+Let Q(d)=-d0^2+d1^2+d2^2+d3^2 and frame(d)=(d0/N,d1/a,d2/a,d3/a).
+Define L=-lambda*det(E)*Q(frame(d))/2-j*phi. Then
+L=lambda*a^3*d0^2/(2*N)-lambda*N*a*(d1^2+d2^2+d3^2)/2-j*phi.
+The rational boost d0'=(5*d0+4*d1)/3,d1'=(4*d0+5*d1)/3 leaves Q invariant and leaves
+L at the unit coframe invariant with phi,j unchanged. For every epsilon,v,e the exact variation is
+L(phi+epsilon*v,d+epsilon*e)=L(phi,d)+epsilon*V+epsilon^2*L(0,e;source0), where
+V=-lambda*N*a^3*(-d0*e0/N^2+(d1*e1+d2*e2+d3*e3)/a^2)-j*v.
+This specifies a candidate matter density on this chart, not a coupled native full40 solution,
+full local Lorentz proof or selected Newton coefficient.
+See [finding 143](findings/143-scalar-coframe-candidate-and-source-variation.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.matterLaw"
+lean_proof = "Artform.Scores.GravityBridge.matterLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:clock-coupling-response"
+label = "GAC:clock-coupling-response"
+title = "Clock response and independent coupling"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:clock-coupling-response)"
+statement = """
+**GAC:clock-coupling-response (source law and a free parameter).** For rational data define
+Delta2(phi)(n)=phi(n+1)-2*phi(n)+phi(n-1), F=-lambda*a^3*Delta2(phi)/N,
+and phi(n)=rate*n+acceleration*n^2. Then F=-2*lambda*a^3*acceleration/N.
+The two-edge action lambda*a^3*((current-prev)^2+(next-current)^2)/(2*N)-j*current
+has exact variation under current->current+epsilon*v equal to its old value plus
+epsilon*(-lambda*a^3*(next-2*current+prev)/N-j)*v+epsilon^2*lambda*a^3*v^2/N.
+A normalized affine clock has phi(0)=0,phi(1)=rate and F=0 for every lambda.
+Under N->c*N, c nonzero, lambda*a^3/N is divided by c.
+For real lambda, d/dN[lambda/(2*N)] at N=1 is -lambda/2.
+Clock normalization and this scalar equation alone do not select lambda; a nonzero clock also
+changes the lapse/coframe force and is not asserted to preserve a vacuum gravity solution.
+See [finding 144](findings/144-clock-source-response-and-free-coupling.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.clockLaw"
+lean_proof = "Artform.Scores.GravityBridge.clockLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-regulator-symmetry"
+label = "GAC:finite-regulator-symmetry"
+title = "Signed spatial classification and exact finite regulator"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-regulator-symmetry)"
+statement = """
+**GAC:finite-regulator-symmetry (specified quadratic class and finite lattice).** Write the
+rational homogeneous quadratic form in four variables with four diagonal coefficients a0..a3 and
+six mixed coefficients b0..b5. Invariance under each independent coordinate reflection and the
+spatial swaps1<->2,2<->3 holds exactly when all b vanish and a1=a2=a3; a0 is independent.
+On (Z/2)^4 indexed by0..15, define chi_k(x)=product_i(-1)^(bit_i(k)*bit_i(x)), W_xk=chi_k(x)/4.
+The W columns are orthonormal. For p=2^i, sum_x W_xk*chi_p(x)*W_xl is1 exactly when l=k xor p,
+and0 otherwise. The forward-difference Gram in direction i is diagonal with entry4*bit_i(k).
+Consequently the declared local massive precision Gram with weights ct/4,cs/4 has diagonal
+A(k)=1+ct*bit0(k)+cs*(bit1(k)+bit2(k)+bit3(k)).
+Let R_i=sum_k1/(A(k)*A(k xor2^i)). Then R1=R2=R3 for arbitrary ct,cs.
+At ct=2,cs=1, R0=19/10,R1=34/15 and A(k)>=1.
+The representatives with bit_i(k)=0 give exactly eight disjoint pairs(k,k xor2^i), and
+sum_representatives1/(A(k)*A(k xor2^i))=R_i/2 at these declared coefficients.
+This is a finite Euclidean background-field regulator and a homogeneous quadratic symmetry class,
+not a native Lorentz symmetry, a continuum limiting-speed theorem or a full joint matter measure.
+See [finding 145](findings/145-spatial-symmetry-and-exact-binary-regulator.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.regulatorLaw"
+lean_proof = "Artform.Scores.GravityBridge.regulatorLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-gaussian-loop"
+label = "GAC:finite-gaussian-loop"
+title = "Convergent finite Gaussian loop and controlled response"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-gaussian-loop)"
+statement = """
+**GAC:finite-gaussian-loop (actual finite Gaussian response and remainder).** For real A,B,s
+with B>0 and A*B-s^2>0, f(u,v)=exp(-(A*u^2+2*s*u*v+B*v^2)/2) is integrable on R^2.
+Its integral is sqrt(pi/c)*sqrt(pi/(B/2)), c=A/2-(s/2)^2/(B/2).
+If also A>0, log(Z_s/Z_0)=-log(1-s^2/(A*B))/2.
+For every finite family of positive blocks with positive determinants, the product density is
+integrable on the actual finite product space, its integral is the product of these factors and
+log of its normalized partition is-sum log(1-s^2/(A_i*B_i))/2.
+For w_i>=1 and 0<=theta<=1/2, put F(theta)=sum_i log(1-theta/w_i)/2. Then
+|F(theta)+theta*sum_i(1/w_i)/2|<=card(I)*theta^2.
+In the eight-pair regulator of GAC:finite-regulator-symmetry, define Gamma_i(s)=-log(Z_i(s)/Z_i(0)).
+For s^2<=1/2, Gamma_i(s)=F_i(s^2) and |Gamma_i(s)-C_i*s^2|<=8*s^4, where C_i=-R_i/4.
+The exact temporal/spatial coefficients are C0=-19/40,C1=-17/30 and C0-C1=11/120.
+This is the controlled background response of the declared finite Euclidean regulator, not a
+native gravitational radiative coefficient, continuum speed or full-parent quantization theorem.
+See [finding 146](findings/146-finite-gaussian-loop-response-and-analytic-error.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.loopLaw"
+lean_proof = "Artform.Scores.GravityBridge.loopLaw"
+reviewed = ""
+review_text_sha256 = ""

@@ -386,3 +386,46 @@ separate kernel replays. All five claims were independently approved at freeze
 [audit](audit-independent-11.md), [per-key verdicts](verdict-independent-11.json)
 and [validation](validation-independent-11.json). All99 earlier approvals stand.
 Zero additional material native applications are credited; M166's selected-band result is inherited.
+
+## E08/G01–G04: gauge-volume transfer and a specified matter/regulator calculation
+
+Five new pending claims: GAC:gaussian-gauge-volume, GAC:scalar-coframe-candidate,
+GAC:clock-coupling-response, GAC:finite-regulator-symmetry and GAC:finite-gaussian-loop.
+Findings142–146 and literal section7 quotes state the scopes. All104 old approvals stand;
+the new GaugeVolume/Matter/Clock/Regulator/Loop Defs/Statements/proofs are new surfaces.
+
+GaugeVolume proves actual unfixed two-dimensional nonintegrability, fixed-slice integrability and
+positive regulated product integrals with unequal regulator normalizations. It is a real singular
+model; native physical radical, gauge volume, Lorentzian phase and refinement measure remain open.
+Matter specifies a proposed scalar addition on a constant diagonal coframe chart. Check its actual
+inverse/determinant, the chosen conventional temporal sign, nontrivial rational frame boost and
+complete local source variation. This does not alter the frozen native action or prove full local
+Lorentz, incidence/source or coupled40 compatibility. Clock derives the actual two-edge variation,
+source law, independent coefficient under affine normalization, calibration factor and real lapse
+derivative. A source-free scalar on a prescribed background need not solve the coupled coframe force.
+
+Regulator classifies precisely the homogeneous quadratic form with four diagonal/six mixed terms
+under independent reflections and spatial generating swaps. It proves two independent temporal/
+spatial coefficients in that class. It then gives the exact sixteen-site Walsh orthogonality,
+forward-difference Grams and parity-source Gram. These identify the local heavy precision and the
+background phi*heavy^2 coupling, disjoint eight-pair partition and reciprocal-sum half count.
+The bounded kernel-computation budgets have explanatory comments. All rational certificates use
+Lean kernel reduction, not native_decide. The finite axis values are not limiting speeds.
+
+Loop proves full2D positive block integrability and normalization, its normalized log ratio, actual
+finite-product integrability/partition/log ratio, and an explicit logarithm remainder. It applies
+them to this fixed regulator with theta=s^2<=1/2, proving actual free energy and error<=8*s^4.
+The computed coefficient gap is11/120. Check all pair multiplicities, casts and source/normalization
+factors. The measure is declared Lebesgue in paired normal coordinates; the Walsh/source algebra is
+proved, but no native gravity measure or full physical change of variables is identified.
+The background scalar is external in a positivity window; no stable joint cubic-interaction
+partition over all background values, continuum/low-momentum speed or universal coefficient follows.
+
+G01 is a candidate addition, G03/G04 a specified finite Euclidean regulator. They are not the native
+Lorentzian gravity/matter sector. The Collins primary-paper link motivates the test only. Full native
+coupling selection, regulator/symmetry/source identification and G05/G06 transfer remain separate.
+All five investigations propose zero additional material native application credit; E08's intended
+native quantum transfer is unsuccessful. Independent review12 is required before approval.
+
+validation-E08-G01-G02-G03-G04.json records full required checks, certificates, both empty drifts
+and five separate kernel replays. The root agent does not self-approve these claims.
