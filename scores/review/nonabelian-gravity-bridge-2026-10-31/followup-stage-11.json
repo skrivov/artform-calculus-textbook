@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "715c6a54d8c86eb73ade9ee5dbef9bf82ebb17d6",
+  "modules": [
+    "HistoryAction",
+    "HistoryThreeAction",
+    "HistoryGaussian",
+    "HistoryWick",
+    "HistoryComplex",
+    "HistoryContour",
+    "HistoryContourIntegral",
+    "HistoryReference",
+    "HistoryReferenceSample",
+    "HistoryQuantumStatements",
+    "HistoryQuantumTheorems"
+  ],
+  "entry_module": "HistoryQuantumTheorems",
+  "total_scores": 283,
+  "approved_scores": 279,
+  "ngb_claims": 25,
+  "key": "NGB:native-contour-reference",
+  "replays": [
+    "quantum-reference-root.py",
+    "quantum-slice-independent.py"
+  ],
+  "validation_output": "validation-quantum-root.json"
+}

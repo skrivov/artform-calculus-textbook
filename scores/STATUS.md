@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 278 |
+| proved | 279 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **282** |
+| **total** | **283** |
 
 ## Statements
 
@@ -297,3 +297,4 @@
 | NGB:native-history-source-guard | Third-cell native Ward source compatibility and an active-source counterexample | proved | `Artform.Scores.NonabelianGravity.Statement.nativeHistorySourceGuard` / `Artform.Scores.NonabelianGravity.nativeHistorySourceGuard` | approved 2026-10-31 |
 | NGB:native-quantum-kernel-tests | Native real negative ray and flat-output tests for an explicit naive phase kernel | proved | `Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests` / `Artform.Scores.NonabelianGravity.nativeQuantumKernelTests` | approved 2026-10-31 |
 | NGB:native-complete-history | Complete finite native history compatibility and certified elimination | proved | `Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory` / `Artform.Scores.NonabelianGravity.nativeCompleteHistory` | approved 2026-10-31 |
+| NGB:native-contour-reference | Source-admitted native contour reference with explicit measure and normalization | proved | `Artform.Scores.NonabelianGravity.Statement.nativeContourReference` / `Artform.Scores.NonabelianGravity.nativeContourReference` | approved 2026-10-31 |

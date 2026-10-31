@@ -1,0 +1,485 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_sol61_transport_review",
+  "contribution_disclosure": "Sole user-authorized Sol6.1 reviewer ngb_sol61_transport_review supplied prior native-source/convention/contour advice, independent source/congruence/Schur arithmetic, and the certificate-coordinate volume warning. Root authored all11 production Lean modules; reviewer authored none. Reviewer examined actual final definitions, statements, proofs and corrected canonical literal. Review artifacts only were authored by this reviewer; no claim of no earlier formulation involvement. Standalone11 embeds separate complete source arithmetic and reviewer solver without root/helper imports. Fidelity11 explicitly compares root exploratory data against reviewer standalone-derived data; host-only controls remain outside the formal composition scope.",
+  "reviewed_base_commit": "715c6a54d8c86eb73ade9ee5dbef9bf82ebb17d6",
+  "reviewed_freeze": "eleven final F2 History action/contour/reference modules, corrected canonical literal and exact source/domain/evidence files; final prepared fullbuild and both fresh reports",
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/HistoryAction.lean": "b9254642c5f0430b69a2e26bcb06a804e66019d8eb77f4d42cbb6118545bb572",
+    "scores/ArtformScores/NonabelianGravity/HistoryComplex.lean": "305a1180e7c01f6c5c8b0fb141ddbec3da93be134b710cd72c74fc7ed3ff7c4a",
+    "scores/ArtformScores/NonabelianGravity/HistoryContour.lean": "94e373cca37c98596cf3c7ef63c0579a64c08b008e5a2b7f714247442e37174b",
+    "scores/ArtformScores/NonabelianGravity/HistoryContourIntegral.lean": "f050bfacf469fdf0e0bb29c807133820596ef681714e6ac3e2fdea9cbba01f91",
+    "scores/ArtformScores/NonabelianGravity/HistoryGaussian.lean": "62d6aef12cd89072d090aaf652f0ffa970a04335f9eeb56cecaecd1c618ba484",
+    "scores/ArtformScores/NonabelianGravity/HistoryQuantumStatements.lean": "fdbf2eebd9a8ce0558334843349e648cc83f4a1a7f9046d6429d0e0ceb8046c0",
+    "scores/ArtformScores/NonabelianGravity/HistoryQuantumTheorems.lean": "e5d9c4502edbe0a1ca5c7bf5614a879d42429af6ba904937d927d1231417aa26",
+    "scores/ArtformScores/NonabelianGravity/HistoryReference.lean": "158156a4b775746d3ad4f643eac334fae9a8952edeb64b27a69c2c6dc0c65ea7",
+    "scores/ArtformScores/NonabelianGravity/HistoryReferenceSample.lean": "6501936f323ac6abdb5f44e10a20b368ff4be2efb49270438e384613160403ea",
+    "scores/ArtformScores/NonabelianGravity/HistoryThreeAction.lean": "b10786b06c4529d1904ebcb97d07f033362be75ce7b3429daa307d5a39f7f438",
+    "scores/ArtformScores/NonabelianGravity/HistoryWick.lean": "2adfa9fc8d7fc9897ab8a590fee40849430119116aa2f40a5b05cc0b27853e18",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/FOLLOWUP-CONTRACT.md": "795b0632a88544df79a698320746bdf797f279cba87584b0c2bf8907b7bdb1e1",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/PRIOR-ART-FOLLOWUP.md": "c3180de9cf789976e9a1eba6d67c4056bd1dceaac6cad89ff27e6a21dd9f2e6f",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/QUANTUM-REFERENCE-RESULTS.md": "ed69e2a37d10fafd0b9165173de9b1bfc58dd9a55c5e03e0806d6288401bbec4",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-11.py": "f690de60dbb1aa9a2cefcd9c49f6c4322fc195da5a8ac1154edb61587a396a15",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/followup-stage-11.json": "716195c4f5988f0135133835d56e1dfb83433dca2d31e028629231cd3e64ac78",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/quantum-reference-root-data.json": "2b48dee03d4a9ebff8f8ae314f6148248c45e3a4c70b51c00346e84ea2e8c0dc",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/quantum-reference-root.py": "4448bd56e12976c297e9f213a10960404a243115bbd39a03ddac3de862b0935a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/quantum-slice-independent-data.json": "5dd05856b345811dbd1171a3ff917a1113fdf07ea9255bcfd866f2dae041ca0a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/quantum-slice-independent.py": "8fa580a39c5d57f7034b1ae2ea8eda8a651b6cad01664310015e9d81035b735a",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-11.py": "1acbe2e20e5d3674fb10e25613f6c9f8102152252f4daeecbc9a5c736b459f64",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/validate-followup-root.py": "44cc8fc4365647a7c672cb43be3d29712a1876da2807a712b644367acf85f1ae"
+  },
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "e5fbb7d35b45e29ac9f5cb24ab4f1e0b19c5cd71a7dae86fea3fd70ab074fdd6",
+  "claims_file_preapproval_snapshot_sha256": "d2b52714906d11f60a469b0f03947cd9974ce16e5961c95b0ff1178554c75917",
+  "independent_replay_sha256": "1acbe2e20e5d3674fb10e25613f6c9f8102152252f4daeecbc9a5c736b459f64",
+  "independent_data_fidelity_sha256": "f690de60dbb1aa9a2cefcd9c49f6c4322fc195da5a8ac1154edb61587a396a15",
+  "new_material_native_gravity_applications": 0,
+  "root_prepared_receipt": {
+    "path": "build/ngb-followup-11-prepared.json",
+    "sha256": "6563433305bc76f71be2c73d277395be6a39380ea2487af3ac47d9b366b3742c",
+    "source_fingerprint_entries_verified": 954,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "491340717c790cf141b16843df3ab499e78fc4fa9a07df772e8668fcf70f7bee"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 6.703,
+        "stdout_sha256": "c208a6b884b2449dae46df02c0f9b62c052e079f93a479c7185ca27e30269fdb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 14.389,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 24.273,
+        "stdout_sha256": "491340717c790cf141b16843df3ab499e78fc4fa9a07df772e8668fcf70f7bee",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "full_warning_free_build": "Authenticated fresh full --wfail build and both reports against all954 source fingerprints; all11 new modules separately kernel-replayed without replaying old F1 proofs.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.304,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.234,
+      "stdout": "1507 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.179,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.206,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.208,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.078,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.296,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.178,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-11.py"
+      ],
+      "exit_code": 0,
+      "seconds": 19.202,
+      "stdout": "{\n  \"source\": \"standalone independent complete native Full40 density and certificate-coordinate contour controls\",\n  \"active\": 66,\n  \"positive\": 37,\n  \"negative\": 29,\n  \"rotation_phase\": \"1\",\n  \"nonzero_source_component\": \"4/101\",\n  \"nonzero_source_contact\": \"4/101\",\n  \"stationary_source_correction\": \"-2/101\",\n  \"complete_three_action_affine_source_check\": true,\n  \"exact_active_scalar_wick_completions\": 66,\n  \"incompatible_source_guard\": true,\n  \"gaussian_normalization_squared_over_pi_hbar_power_sha256\": \"943a4aad6b11b3a9b26b351a26ed3b09ab054c8836fcc696b422a1d2b21223ec\",\n  \"crosscertificate_invariance_claimed\": false,\n  \"analytic_status\": \"Actual Lebesgue integrability/integral is independently reviewed in Lean; this stdlib replay checks source/congruence/exponent algebra, not numerical quadrature\",\n  \"scope\": \"fixed-certificate coordinate Lebesgue reference; no common-carrier Schur composition or physical measure\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/quantum-slice-independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 19.505,
+      "stdout": "{\n  \"source\": \"independent complete Full40 native quadratic density transcription; full three-cell constrained coordinate slice\",\n  \"blocks\": {\n    \"full66\": {\n      \"dimension\": 66,\n      \"positive\": 37,\n      \"negative\": 29,\n      \"determinant\": \"-517905422876451919443168046658680796287447098284837108784697980120385236086807577682287345273706155587573482089/243832903346373057753735754171134986636183678747864518222063844827563189070306974536736984879633540411372703120328413799386185728\"\n    },\n    \"first36\": {\n      \"dimension\": 36,\n      \"positive\": 15,\n      \"negative\": 21,\n      \"determinant\": \"-1554470649046331777582028768892099642487096500813824000/1430768783591580504260467570192606659308868671266092320119567817646303601\"\n    },\n    \"second30\": {\n      \"dimension\": 30,\n      \"positive\": 12,\n      \"negative\": 18,\n      \"determinant\": \"406582748248936296992536254056607062928039934977984/1347848915332905650585522351309777516867383425202804564353001\"\n    },\n    \"Schur30\": {\n      \"dimension\": 30,\n      \"positive\": 22,\n      \"negative\": 8,\n      \"determinant\": \"1099422731974752165506908389044341103648039102765892043299615122421340121167359049266460237/562366748432014312973152559595962721905498121069382905584243285953269395470310310936576000\"\n    },\n    \"Schur36\": {\n      \"dimension\": 36,\n      \"positive\": 25,\n      \"negative\": 11,\n      \"determinant\": \"-843200998421412752919353750285877131726305342280039512218961462295993843566416398737/119751426958907471584128828196892569712107559607203053004353406393698000706590689763069526016\"\n    }\n  },\n  \"opposite_orders_source_contact\": true,\n  \"full_signature\": 8,\n  \"fresnel_prefactor_hbar_positive\": \"(2*pi*hbar)^33/sqrt(abs(detG)); signature phase exp(i*pi*8/4)=1\",\n  \"scope\": \"Exact finite source matrix/inertia/contact controls. Coordinate Lebesgue gauge-slice/Fresnel prescription is a conditional reference, not an unreduced real80 integral or physical quantum measure.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-11.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.023,
+      "stdout": "Independent comparison passed: all five exact determinants/inertias and66 native slice indices; host-only scope retained\n",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "HistoryAction",
+      "source_sha256": "b9254642c5f0430b69a2e26bcb06a804e66019d8eb77f4d42cbb6118545bb572",
+      "olean_sha256": "6d27300cf4e0e7c8d65161132ca21d469016a1be029c2e0b47eec620e0816236",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryAction"
+      ],
+      "exit_code": 0,
+      "seconds": 5.789,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryThreeAction",
+      "source_sha256": "b10786b06c4529d1904ebcb97d07f033362be75ce7b3429daa307d5a39f7f438",
+      "olean_sha256": "40c73aa355ba12494d07aa0dbfb9df96e1ca35fbb35b28d1fcd22c53d733698c",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryThreeAction"
+      ],
+      "exit_code": 0,
+      "seconds": 6.147,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryGaussian",
+      "source_sha256": "62d6aef12cd89072d090aaf652f0ffa970a04335f9eeb56cecaecd1c618ba484",
+      "olean_sha256": "76e3ab2ea982780f755a35c4feb7676511dc6ad12750d1edf9faa4e813815d5d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryGaussian"
+      ],
+      "exit_code": 0,
+      "seconds": 4.6,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryWick",
+      "source_sha256": "2adfa9fc8d7fc9897ab8a590fee40849430119116aa2f40a5b05cc0b27853e18",
+      "olean_sha256": "ab2e477268e729a7c93e2c68d4b16d211137b95e1202989a2488a91d20b79ea6",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryWick"
+      ],
+      "exit_code": 0,
+      "seconds": 4.472,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryComplex",
+      "source_sha256": "305a1180e7c01f6c5c8b0fb141ddbec3da93be134b710cd72c74fc7ed3ff7c4a",
+      "olean_sha256": "d3c7c8e3a87c6239e7f99099e2c9d3eaa852f61b04a2318965259d0c0ba96ee6",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryComplex"
+      ],
+      "exit_code": 0,
+      "seconds": 5.905,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryContour",
+      "source_sha256": "94e373cca37c98596cf3c7ef63c0579a64c08b008e5a2b7f714247442e37174b",
+      "olean_sha256": "49c023a7661b4e4678460f5d28fd60e1cd0cab69412c3355d538aaacc445b88d",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryContour"
+      ],
+      "exit_code": 0,
+      "seconds": 5.994,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryContourIntegral",
+      "source_sha256": "f050bfacf469fdf0e0bb29c807133820596ef681714e6ac3e2fdea9cbba01f91",
+      "olean_sha256": "0822f2a0196fa6b3dbea33a39e9228c02edfae8e17ca5e654ac80e998b00ecbc",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryContourIntegral"
+      ],
+      "exit_code": 0,
+      "seconds": 5.926,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryReference",
+      "source_sha256": "158156a4b775746d3ad4f643eac334fae9a8952edeb64b27a69c2c6dc0c65ea7",
+      "olean_sha256": "e44730128e0f04cbd3a08c40dc4f5933e2d31b18d67e9c65e77192269d7ff25b",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryReference"
+      ],
+      "exit_code": 0,
+      "seconds": 5.881,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryReferenceSample",
+      "source_sha256": "6501936f323ac6abdb5f44e10a20b368ff4be2efb49270438e384613160403ea",
+      "olean_sha256": "e7ae96c5069e9147f818e3330f879cbf419f7c0ad8779c9ab32134f618eff5cb",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryReferenceSample"
+      ],
+      "exit_code": 0,
+      "seconds": 16.343,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryQuantumStatements",
+      "source_sha256": "fdbf2eebd9a8ce0558334843349e648cc83f4a1a7f9046d6429d0e0ceb8046c0",
+      "olean_sha256": "6c22f8216e43bd8cec38264bb572534e444a0397e8884b55c28773e769eaf33a",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryQuantumStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.873,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "HistoryQuantumTheorems",
+      "source_sha256": "e5d9c4502edbe0a1ca5c7bf5614a879d42429af6ba904937d927d1231417aa26",
+      "olean_sha256": "6a54eb98325386692aeacf22ecdd1fad1e3b292c08dbb576a4dce44b14c1bb37",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.HistoryQuantumTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 6.016,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "all79_previous_NGB_modules_unchanged": true,
+  "all_preexisting_Lean_except_import_aggregator_unchanged": true,
+  "prior_module_hashes_checked": {
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/BoundaryCircle.lean": "040b00432f8dab8d7ebc7c231f986d04395a38930285332c7e8752006744e3c9",
+    "scores/ArtformScores/NonabelianGravity/BoundaryConditioning.lean": "24d3b0500de1fb51c74746e5e9d9914db677ccb2d0d73851c84c28a69f086457",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryColumns.lean": "306a8df5fc9103c2a6f01d1ee0eb70fff217f17696185264f8fa44f2cb60e785",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryDefs.lean": "b817128f880769a15e99616d92a0aa008aeeb81d963b88592d17f6e276537cb3",
+    "scores/ArtformScores/NonabelianGravity/BoundaryHistoryKernel.lean": "0bc9c37356ae34455c82eff6eaeab79c0e0f2bbdceb965e5192f5303cf019901",
+    "scores/ArtformScores/NonabelianGravity/BoundaryQuantum.lean": "f109291af1a1d28f2f59c6d300d90c6724fca2b65a666a02b9b40fd15d7647ea",
+    "scores/ArtformScores/NonabelianGravity/BoundaryRotation.lean": "4235968bbc38171ee20607a249c1e0c7b8fdf00e741750261c1d4d1ab38e8109",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStatements.lean": "c0eccfa305af7ed27195002343d092491dd0212b78e8c28de1b60afcc299de9c",
+    "scores/ArtformScores/NonabelianGravity/BoundaryStencil.lean": "a887c3772c7eeb3952cc296783270f1990d52f43388da6a0f3599fb24b98419c",
+    "scores/ArtformScores/NonabelianGravity/BoundarySymbol.lean": "e4d553ba00e6f51525ecfc12b20101f92b3ba97cef1010e8c353228eea32a82b",
+    "scores/ArtformScores/NonabelianGravity/BoundaryTheorems.lean": "83f3f6cd0e79b3dc1a0ed933c2fab4721fe73213b46de259073cda364bc7f9f1",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/HistoryBinding.lean": "518bb11c1bd1cc3e2eedffb8d107059dfc6f02959527c72838d394bdfd5d774b",
+    "scores/ArtformScores/NonabelianGravity/HistoryCertificate.lean": "be86499495ae38e5c77fdbfe6bdefda3f99be7a0d66bfdb9bd601825b77a4a17",
+    "scores/ArtformScores/NonabelianGravity/HistoryMatrix.lean": "0b5f84d60d7e670ac67e3f7a5264de24de75aaf69a037ec3cc6f93f9cf2408bf",
+    "scores/ArtformScores/NonabelianGravity/HistorySample.lean": "1e9577efef26cb50b7bf97fbd3e97a25854877ebf4eea662539304b826a0a197",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleData.lean": "dbcaaae404e9a8021e56357be618ed66a4a4f1b3c942636c4420b2dc90ee1325",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleDiagonal.lean": "d24c3fa2880d38f8f859eafe3050b7aba0bff5655c70a94f323f4f9015edd2a9",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleLeft.lean": "0796593a26eea1448c11deb18bea437a26428bf6b94383e4c9a81fdc2edc5b1b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleProduct.lean": "fe7725e47d32d1435814a572f903b66914388a8f35a5fc4af8300251a2fba36b",
+    "scores/ArtformScores/NonabelianGravity/HistorySampleRight.lean": "ca820e7ce61f4ba1a694782b2e883cd11d560e324206fe0d5b0a41872f92ca6e",
+    "scores/ArtformScores/NonabelianGravity/HistorySolve.lean": "f5b42e42cb5e0f4ed3f18dcc533907aa1daa44814a51f7b532f6869d6ec79fbb",
+    "scores/ArtformScores/NonabelianGravity/HistoryStatements.lean": "7b86ceb15c9c6ab3181c65fcd31d827be901f20b9cf3636bf46464ea2901d5f8",
+    "scores/ArtformScores/NonabelianGravity/HistoryTheorems.lean": "25c80166b437e3e453276157db4f7ddb46d3fb91188e3dedd03ee6c7b49d1577",
+    "scores/ArtformScores/NonabelianGravity/LegendreBinding.lean": "7000b2c5ca5cd730613ed5e38947a5b573a61652cb9a57018ee601e0707779ff",
+    "scores/ArtformScores/NonabelianGravity/LegendreBoundary.lean": "2c6e0400484944f85a59ea796ff6e0e41e371e1d64ea3ef54e0005aad975bcd3",
+    "scores/ArtformScores/NonabelianGravity/LegendreComposition.lean": "23ea4bf89561e462bddbad3a22014a3bcd7bf75d525e4a19dd06daa6ed2850ab",
+    "scores/ArtformScores/NonabelianGravity/LegendreCompositionData.lean": "83653650dd98dc598ab82b41c96abafdc1761cda55f4006678e1026e41a48a34",
+    "scores/ArtformScores/NonabelianGravity/LegendreGluing.lean": "75f6fa3fca4031142b73bdb574ba16835ba23fd2d8deeeb65d8ef766ae4d6bc4",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrix.lean": "ed58fc6310f31a6f63b5cc0e31bdaad8f33d0f50f344e9c57e22bd78f1152898",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrixData.lean": "691a602803e19908f2179a027a9cbf36b9c847f82662b91e40522d6cd35209d3",
+    "scores/ArtformScores/NonabelianGravity/LegendrePolynomial.lean": "216dc50bdb9e45d7e77a077d0d2fec18b2871ff3bbfd8bcfe51e8f68b4cd23d0",
+    "scores/ArtformScores/NonabelianGravity/LegendreRows.lean": "309787faa2149708c56d2269b049daa3fb65d3a41057206ab185f6fef4daab90",
+    "scores/ArtformScores/NonabelianGravity/LegendreSchur.lean": "3ed5518ea11d0d2491d1bca200409d2fb2931db32442b17f0ec6ceb15385bb53",
+    "scores/ArtformScores/NonabelianGravity/LegendreSource.lean": "148fce7b33e22cd2d29d12b73fc036c88d265760b92ad052eae3df190ebce692",
+    "scores/ArtformScores/NonabelianGravity/LegendreStatements.lean": "3453bb58899a9ce43ff34f436b06cf036ffc40fa5dca8672942b767d83124a25",
+    "scores/ArtformScores/NonabelianGravity/LegendreTheorems.lean": "1cd621557c49a5546697beaa2642238871db42287aef25cd91bfc5bb59d84800",
+    "scores/ArtformScores/NonabelianGravity/LegendreVariation.lean": "115faea1f07f369301fe19955188e2e1eae65959bebb53c4db80d84b6a241418",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/NativeBoundary.lean": "1a1f2dcb045839f923716e3239ff28bc14d7f68582f339191998325cde0ecad0",
+    "scores/ArtformScores/NonabelianGravity/NativeRotation.lean": "4c5af2253b6c1c406cce4255d560cf21a381eba3c0d19a51626c080955683a46",
+    "scores/ArtformScores/NonabelianGravity/NativeStatements.lean": "4d86694dbeeb1ac65ef1d4ccaf84c99a8e23bd99f2e0ec1cfe39befc7caf9114",
+    "scores/ArtformScores/NonabelianGravity/NativeTheorems.lean": "06a7463d002d8863781aa5a147ae2f064725247e14bc40bd74791f0f1e99ae5d",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108"
+  },
+  "prior_manifest_entries_preserved": 282,
+  "prior_approvals_preserved": 278,
+  "source_pins_verified": 14,
+  "source_pin_mismatches": [],
+  "per_key_report_surfaces": [
+    {
+      "key": "NGB:native-contour-reference",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeContourReference",
+      "lean_proof": "Artform.Scores.NonabelianGravity.nativeContourReference",
+      "review_text_sha256": "2d391acf840c73a6b2155658cbac3565b84076de876e54b229b8e71e7b8dcc01",
+      "canonical_literal_sha256": "50d0b501a0935c08688a7d7809730380255085b2bed5d4633faf6a0539029994",
+      "reachable_definition_count": 93,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verdict": "approve",
+      "reason": "The complete three-cut rational native action, both40-source contacts and affine endpoints are exactly bound to H2. Full compatibility is mandatory before nativeReference admission. The chosen zero-pivot complement and fixed certificate-coordinate product Lebesgue are explicit. Complex bilinear congruence and exact Wick completion bind the actual continued-action exponent to a damped finite Gaussian; Lean proves actual integrability/integral for positive hbar. The retained phase is precisely detdiag(wick), not an unclaimed ambient/certificate-change Jacobian. Sample66/37+/29\u2212/phase1 and nonzero sourceContact4/101 are independently reproduced. Only fixed-coordinate permutations are formally invariant; no common-carrier opposite-Schur composition, crosscertificate measure invariance, unreduced real integral or physical quantum propagation is asserted.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "analytic_measure": "product Lebesgue on Active c -> R for one fixed certificate; rotationPhase=detdiag(wick)",
+  "host_opposite_Schur_controls_approved_as_Lean_theorem": false,
+  "nonlinear_stage12_excluded": true,
+  "audit_sha256": "7d0aab67b8d0aa272361e1d0221add74adeec655a94bd25bb6d7178ecb8f836b"
+}

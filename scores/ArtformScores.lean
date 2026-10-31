@@ -241,3 +241,5 @@ import ArtformScores.NonabelianGravity.LegendreTheorems
 import ArtformScores.NonabelianGravity.BoundaryTheorems
 
 import ArtformScores.NonabelianGravity.HistoryTheorems
+
+import ArtformScores.NonabelianGravity.HistoryQuantumTheorems

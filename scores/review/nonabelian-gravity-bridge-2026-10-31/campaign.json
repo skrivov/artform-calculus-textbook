@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 24,
-  "new_independent_approvals": 24,
+  "new_registered_claims": 25,
+  "new_independent_approvals": 25,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -499,7 +499,7 @@
     "model": "gpt-6.1-sol",
     "authorization": "User explicitly authorized one Sol6.1 reviewer for this continuation.",
     "prior_reviewer_state": "Not used for this continuation; prior reviews01-05 retained.",
-    "state": "final_independent_10_review_completed"
+    "state": "final_independent_11_review_completed"
   },
   "transport_extension_claims": 2,
   "transport_extension_review": "approved_independent_06",
@@ -563,7 +563,7 @@
     "contract": "FOLLOWUP-CONTRACT.md",
     "baseline_commit": "0b5805b21a2f35e673efbee82a91d5d3d7685f2d",
     "F1": "approved_independent_10_complete_finite_source_criterion",
-    "F2": "lean_compiled_fixed_certificate_contour_reference_pending_independent_11",
+    "F2": "approved_independent_11_fixed_certificate_reference_order_comparison_partial",
     "F3": "lean_compiled_exact_isotropic_lapse_constraint_pending_independent_12",
     "old_C_D_activated": false,
     "new_counted_round_allocation": 0,

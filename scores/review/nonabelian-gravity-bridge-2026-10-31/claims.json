@@ -203,5 +203,14 @@
     "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeCompleteHistory",
     "lean_proof": "Artform.Scores.NonabelianGravity.nativeCompleteHistory",
     "review_status": "approved_independent_10"
+  },
+  {
+    "key": "NGB:native-contour-reference",
+    "label": "NGB:native-contour-reference",
+    "title": "Source-admitted native contour reference with explicit measure and normalization",
+    "statement": "For the same complete rational three-cell Full40 Taylor action with two interior sites, retain all three cut actions, both40-component source contacts and the affine endpoint representative. The actual action equals endpointAction plus the full80 matrix quadratic action; under full source compatibility its stationary value is endpointAction minus one half of the certified source contact. Fix one invertible rational congruence U^T H2 U=diag(d). Set every zero-pivot coordinate to0, and put product Lebesgue measure on the remaining real certificate coordinates. For rho=U^T r the declared complex contour is y=U*w with w_i=rho_i/d_i+omega_i*t_i at nonzero d_i, where omega_i=(1+i)/sqrt2 for positive d_i and (1-i)/sqrt2 for negative d_i. The exponent i*S/hbar of the full complex native polynomial pulls back to i*S_stationary/hbar minus the positive Gaussian exponent sum |d_i|*t_i^2/(2*hbar). For positive hbar Lean proves actual integrability and the Lebesgue integral. The declared reference amplitude retains det diag(omega)=prod omega and equals that phase times exp(i*S_stationary/hbar) times prod sqrt(pi/(|d_i|/(2*hbar))). Its normalization is invariant under permutations of these fixed coordinates. NativeReference is admitted exactly when hbar>0 and an original full80 native matched history exists. The emitted sample has66 active coordinates,37 positive and29 negative pivots, and rotation phase1. The nonzero source H2*e_(0,25) has component4/101 there and source contact4/101 for every certificate. Zero source/endpoints are admitted for positive hbar; the incompatible first inactive source is rejected. This is a chosen kernel-complement reference with a fixed certificate-coordinate volume. No certificate-independent measure, opposite-Schur-order composition theorem, physical gauge identification, equality with an unreduced real oscillatory integral, unitary propagator or selected quantum gravity theory is asserted.",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeContourReference",
+    "lean_proof": "Artform.Scores.NonabelianGravity.nativeContourReference",
+    "review_status": "approved_independent_11"
   }
 ]

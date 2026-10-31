@@ -1,0 +1,39 @@
+{
+  "source": "independent complete Full40 native quadratic density transcription; full three-cell constrained coordinate slice",
+  "blocks": {
+    "full66": {
+      "dimension": 66,
+      "positive": 37,
+      "negative": 29,
+      "determinant": "-517905422876451919443168046658680796287447098284837108784697980120385236086807577682287345273706155587573482089/243832903346373057753735754171134986636183678747864518222063844827563189070306974536736984879633540411372703120328413799386185728"
+    },
+    "first36": {
+      "dimension": 36,
+      "positive": 15,
+      "negative": 21,
+      "determinant": "-1554470649046331777582028768892099642487096500813824000/1430768783591580504260467570192606659308868671266092320119567817646303601"
+    },
+    "second30": {
+      "dimension": 30,
+      "positive": 12,
+      "negative": 18,
+      "determinant": "406582748248936296992536254056607062928039934977984/1347848915332905650585522351309777516867383425202804564353001"
+    },
+    "Schur30": {
+      "dimension": 30,
+      "positive": 22,
+      "negative": 8,
+      "determinant": "1099422731974752165506908389044341103648039102765892043299615122421340121167359049266460237/562366748432014312973152559595962721905498121069382905584243285953269395470310310936576000"
+    },
+    "Schur36": {
+      "dimension": 36,
+      "positive": 25,
+      "negative": 11,
+      "determinant": "-843200998421412752919353750285877131726305342280039512218961462295993843566416398737/119751426958907471584128828196892569712107559607203053004353406393698000706590689763069526016"
+    }
+  },
+  "opposite_orders_source_contact": true,
+  "full_signature": 8,
+  "fresnel_prefactor_hbar_positive": "(2*pi*hbar)^33/sqrt(abs(detG)); signature phase exp(i*pi*8/4)=1",
+  "scope": "Exact finite source matrix/inertia/contact controls. Coordinate Lebesgue gauge-slice/Fresnel prescription is a conditional reference, not an unreduced real80 integral or physical quantum measure."
+}
