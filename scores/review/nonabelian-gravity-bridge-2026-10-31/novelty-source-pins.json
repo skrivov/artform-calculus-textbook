@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-31",
+  "assessment_before_next_implementation": true,
+  "baseline_commit": "0377a6ec374350f9e656dba867e57dafe7bb3bd3",
+  "sources": [
+    {
+      "authors": "AMM",
+      "url": "https://arxiv.org/pdf/dg-ga/9707021v1",
+      "locators": [
+        "Theorem4.5",
+        "Theorem5.1",
+        "Theorem6.1",
+        "\u00a79.4"
+      ],
+      "use_and_limit": "Known double, fusion, reduction and twist machinery; its exact smooth premises are not newly kernel-certified."
+    },
+    {
+      "authors": "Riello",
+      "url": "https://arxiv.org/html/1706.07811v2",
+      "locators": [
+        "\u00a7IV.3",
+        "\u00a7VI",
+        "\u00a7VI.2 cylinder twist",
+        "\u00a7IX"
+      ],
+      "use_and_limit": "Known group-valued lattice phase space and auxiliary surface/gravity interpretation; no native R7/R8 selection follows."
+    },
+    {
+      "authors": "Goldman",
+      "url": "https://arxiv.org/pdf/math/0304307v1",
+      "locators": [
+        "\u00a72.6"
+      ],
+      "use_and_limit": "Known nonseparating Dehn-twist representation action; sign follows the chosen representation-action convention."
+    },
+    {
+      "authors": "Feher-Klimcik",
+      "url": "https://arxiv.org/pdf/1101.1759v4",
+      "locators": [
+        "equations6.7 and6.13"
+      ],
+      "use_and_limit": "Explicit standard T(A,B)=(AB,B) substitution; supplies the direct convention match."
+    },
+    {
+      "authors": "Haggard-Han-Riello",
+      "url": "https://arxiv.org/html/1506.03053v1",
+      "locators": [
+        "Theorem1",
+        "\u00a79"
+      ],
+      "use_and_limit": "Known guarded curved-tetrahedron reconstruction and reduced bending flows."
+    },
+    {
+      "authors": "Rovelli-Vidotto",
+      "url": "https://arxiv.org/html/0805.4585v1",
+      "locators": [
+        "\u00a7IV"
+      ],
+      "use_and_limit": "Existing four-link dipole/two-tetrahedron setting, not our new graph invention."
+    },
+    {
+      "authors": "Han-Hsiao-Pan",
+      "url": "https://arxiv.org/html/2311.08587v1",
+      "locators": [
+        "\u00a7V",
+        "TheoremV.2"
+      ],
+      "use_and_limit": "Existing quantum closure/intertwiner construction; does not select our native gravity state."
+    },
+    {
+      "authors": "Hsiao-Pan",
+      "url": "https://arxiv.org/html/2407.03242v1",
+      "locators": [
+        "abstract",
+        "\u00a7II"
+      ],
+      "use_and_limit": "Existing fixed-area length/twist quantization and coherent states; generic quantization is not a new target."
+    }
+  ],
+  "search_scope": "Targeted primary-source search and exact convention comparison; not an exhaustive priority proof and not a claim of first Lean formalization.",
+  "novelty_credit": "Concrete checked specializations and certificate/code artifacts; zero new material native gravity results."
+}

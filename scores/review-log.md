@@ -278,3 +278,5 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `NGB:analytic-interpretation` approved as `Artform.Scores.NonabelianGravity.Statement.analyticInterpretation` (text 8ad7fa0e2339)
 - 2026-10-31: `NGB:stabilizer-preservation` approved as `Artform.Scores.NonabelianGravity.Statement.stabilizerPreservation` (text 8f3926c26fcc)
 - 2026-10-31: `NGB:geometric-preflight` approved as `Artform.Scores.NonabelianGravity.Statement.geometricPreflight` (text e6d1ca974b9b)
+- 2026-10-31: `NGB:surface-orbit-dictionary` approved as `Artform.Scores.NonabelianGravity.Statement.surfaceOrbitDictionary` (text 33b3d9082c62)
+- 2026-10-31: `NGB:surface-face-twists` approved as `Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists` (text c7a79b7b40e6)

@@ -86,5 +86,23 @@
     "lean_proof": "Artform.Scores.NonabelianGravity.geometricPreflight",
     "statement": "Every ordered star of the present two-face canvas has fewer than four half-edges. For the explicit unit quaternion i, take U=(i,1,1,1,1,1,1) and P=(i,i,i,i,1,1,1). The initial state and its complete forward face0 kick both satisfy all six Gauss equations, and every link and impulse in both states has quaternion norm squared1. The initial P0 has real part0, while the kicked P0=i*i has real part-1. No invertible quaternion conjugates the initial P0 to the kicked P0. Thus the actual kick does not preserve every individual flux conjugacy class, even within this admitted unit-norm example. This is an adverse control for a proposed fixed-conjugacy/fixed-area interpretation; neither state is asserted to reconstruct a nondegenerate tetrahedron. It does not exclude moving-area geometric domains or prove a no-go theorem for a future four-valent constructor.",
     "review_status": "approved_independent_02"
+  },
+  {
+    "key": "NGB:surface-orbit-dictionary",
+    "title": "Complete Gauss and genus-two presentation orbit sets",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.surfaceOrbitDictionary",
+    "lean_proof": "Artform.Scores.NonabelianGravity.surfaceOrbitDictionary",
+    "statement": "For every group, define coordinates(a,b,x,z), pack them as U=(1,1,1,a,1,1,b) and P=(x,a^-1*x*a*z^-1,a^-1*x*a,x,b^-1*z*b,b^-1*z*b,z), and let R=(x^-1*a^-1*x*a)*(z^-1*b^-1*z*b). This packed state satisfies the complete six-vertex Gauss condition exactly when R=1. The explicit spanning-tree gauge on edges0,1,2,4,5 sends every admitted raw state to a state of this form, with coordinates(U3,U6,P0,P6) and R=1. Two packed states are related by some full six-vertex gauge function exactly when their four coordinates are related by one simultaneous group conjugation. The defined maps from the full admitted gauge-orbit set to the R=1 presentation-orbit set, and back, are two-sided inverses. Thus the explicit orbitEquiv covers the entire admitted carrier, with no commutation, regularity or freeness restriction. This is an equivalence of sets with the standard genus-two presentation; no surface fundamental-group construction, GIT quotient, topology or symplectic-form equivalence is asserted. It is a checked identification of known structure, not a novelty or native-gravity claim.",
+    "review_status": "approved_independent_04",
+    "novelty_status": "checked_specialization_of_known_mathematics"
+  },
+  {
+    "key": "NGB:surface-face-twists",
+    "title": "Actual face kicks as standard genus-two handle substitutions",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists",
+    "lean_proof": "Artform.Scores.NonabelianGravity.surfaceFaceTwists",
+    "statement": "For every group use the complete coordinate/orbit dictionary above and set A1=x^-1,B1=a^-1,A2=z^-1,B2=b^-1. The coordinate relator is exactly (A1*B1*A1^-1*B1^-1)*(A2*B2*A2^-1*B2^-1). Forward face0 sends x to a*x, hence A1 to A1*B1, with the other three generators fixed. Forward face1 sends z to b*z, hence A2 to A2*B2, with the others fixed. Backward faces use B1^-1 or B2^-1 in the corresponding right multiplication. Packing each substitution equals the actual oriented kick, the relator is preserved exactly, and the full orbit bijection intertwines each signed face kick with this standard substitution on presentation orbits. The S3 presentation with (a,b,x,z)=(reflection,rotation,1,1) satisfies R=1 and its forward face0 orbit changes, so the quotient action is nontrivial. These are the standard disjoint-handle Dehn-twist substitutions, up to the chosen representation-action sign convention in the literature. Lean certifies the algebra and orbit-set intertwining; it does not construct a surface diffeomorphism, certify a symplectic identification, classify the full drift-containing tick, or establish new gravitational dynamics.",
+    "review_status": "approved_independent_04",
+    "novelty_status": "checked_identification_with_standard_Dehn_twist_substitutions"
   }
 ]

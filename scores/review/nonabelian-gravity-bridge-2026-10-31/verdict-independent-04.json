@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-31",
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "reviewer": "same independently authorized ngb_independent_review worker; no production implementation authorship",
+  "contribution_disclosure": "Reviewer supplied the preceding conceptual coordinate/literature calculation in review03; root authored all five submitted production modules. This review independently checks the concrete definitions, targets, proofs and arithmetic, and does not claim no prior involvement in problem formulation.",
+  "reviewed_freeze": "five additive working-tree modules, bound by exact source hashes below",
+  "approved_count": 2,
+  "returned_count": 0,
+  "prior_approved_count_preserved": 265,
+  "four_CNI_claims_still_pending": true,
+  "entries": [
+    {
+      "key": "NGB:surface-orbit-dictionary",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.surfaceOrbitDictionary",
+      "lean_proof": "Artform.Scores.NonabelianGravity.surfaceOrbitDictionary",
+      "review_text_sha256": "33b3d9082c62cd37c0059b21bbb763b7f318517d3002a41aaf588fbc23c880b6",
+      "canonical_literal_sha256": "532831023bfe11f11aa46502e14b0c2d9d19bbfa071de6885a9679f1397f43fa",
+      "reachable_definition_count": 30,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "Actual tree gauge and all six star equations give exact full-carrier coverage. The packed-orbit criterion derives all six residual gauge values from the five tree links. Both quotient composition orders are proved with the actual full gauge action. This is an orbit-set equivalence only; no topology, GIT, smooth or symplectic structure is asserted.",
+      "new_material_native_gravity_application": false
+    },
+    {
+      "key": "NGB:surface-face-twists",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists",
+      "lean_proof": "Artform.Scores.NonabelianGravity.surfaceFaceTwists",
+      "review_text_sha256": "c7a79b7b40e67fb5e20b4dd129aea2c62c39200db7ad022d015c2b14742b4a59",
+      "canonical_literal_sha256": "6810a99baabfd37908d2ca33517badb9acecc15bea9af7965bebeec8a645b74d",
+      "reachable_definition_count": 54,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reason": "All four signed face choices pack to the actual production kicks, preserve the exact relator and induce precisely the standard A1/A2 right-multiplication substitutions. The complete orbit bijection intertwines these maps on every admitted orbit. The specified S3 witness has nontrivial quotient motion. The topological Dehn-twist name is literature interpretation; no surface diffeomorphism, symplectic identification, full tick classification or new gravity law is claimed.",
+      "new_material_native_gravity_application": false
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b"
+  },
+  "canonical_file_sha256": "a2fed95bf4b167bcf4cbe1478527910a46f4d58d69923eca42c5c9f1d85d3fb6",
+  "independent_replay_sha256": "a9e107b62824682f377bcb9c0951efc7f3968d4bd4e0d35b2fc228d6f6c70529",
+  "audit": "audit-independent-04.md",
+  "validation": "validation-independent-04.json",
+  "new_material_native_gravity_applications": 0,
+  "scope": "Complete Gauss/presentation orbit sets and exact signed standard substitutions only. No topology, GIT, smooth or symplectic isomorphism, full drift-containing tick classification, or native gravitational dynamics."
+}

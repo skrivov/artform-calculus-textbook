@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "analytic_interpretation_extended_regular_reduction_open",
+  "research_status": "novelty_assessed_known_surface_twists_identified_native_bridge_open",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_user_authorized_independent_reviewer",
   "additional_workers_launched": 1,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 11,
-  "new_independent_approvals": 11,
+  "new_registered_claims": 13,
+  "new_independent_approvals": 13,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -285,12 +285,14 @@
       "stage": "B",
       "activation": "initial",
       "status": "research_disposition_recorded",
-      "result": "Original eight independently approved; actual derivative/form semantics added. Regular reduction remains the gate. Geometric preflight records valence and fixed-conjugacy controls without activating C.",
+      "result": "Novelty audit identifies known AMM/Riello framework and standard genus-two face twists. Full presentation-orbit dictionary and signed face intertwining checked; no new physical dynamics or regular symplectic binding claimed.",
       "lean_claims": [
         "NGB:geometric-preflight",
-        "NGB:stabilizer-preservation"
+        "NGB:stabilizer-preservation",
+        "NGB:surface-orbit-dictionary",
+        "NGB:surface-face-twists"
       ],
-      "independent_review": "approved_independent_01_and_02_at_literal_scope",
+      "independent_review": "approved_independent_01_02_04_at_literal_scope; novelty_assessed_independent_03",
       "model_question_fully_answered": false,
       "physical_gate_discharged": false,
       "evidence": [
@@ -449,9 +451,19 @@
   },
   "analytic_extension_claims": 3,
   "analytic_extension_review": "approved_independent_02",
-  "latest_checkpoint": "checkpoint-analytic.md",
+  "latest_checkpoint": "SURFACE-RESULTS.md",
   "preflight_findings": [
     "no_four_valent_vertex_on_current_canvas",
     "actual_Gauss_valid_unit_quaternion_kick_changes_individual_flux_conjugacy_class"
-  ]
+  ],
+  "surface_extension_claims": 2,
+  "surface_extension_review": "approved_independent_04",
+  "novelty_assessment": {
+    "status": "completed_before_next_implementation",
+    "assessment": "known_framework_and_twist_operations; concrete_checked_artifacts; no_new_native_gravity_result",
+    "root": "NOVELTY.md",
+    "independent": "novelty-review-independent-03.md",
+    "next_step": "exact_full_Gauss_orbit_and_standard_twist_identification",
+    "priority_after_identification": "specific_native_compatibility_obstruction_or_matched_efficiency_question"
+  }
 }

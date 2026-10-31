@@ -1,6 +1,6 @@
 # Next conditional constructor: regular reduction, then a four-edge dipole
 
-This is an executable research specification, not a passed geometric gate.
+This is an executable supporting-formalization specification, not a passed geometric gate. The later novelty assessment in NOVELTY.md and SURFACE-RESULTS.md takes priority: AMM reduction, dipole geometry and generic curved-tetrahedron quantization are known. Use this construction only to support one explicitly selected compatibility or obstruction problem beyond those known results.
 Finish the regular-reduction contract in ANALYTIC-RESULTS.md before
 activating C01. Reuse the existing actual quaternion derivative interpreter;
 do not replace it by another uninterpreted invariant-pairing hypothesis.

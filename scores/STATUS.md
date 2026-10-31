@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 265 |
+| proved | 267 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **269** |
+| **total** | **271** |
 
 ## Statements
 
@@ -284,3 +284,5 @@
 | NGB:analytic-interpretation | Actual quaternion derivatives and fused two-form evaluations | proved | `Artform.Scores.NonabelianGravity.Statement.analyticInterpretation` / `Artform.Scores.NonabelianGravity.analyticInterpretation` | approved 2026-10-31 |
 | NGB:stabilizer-preservation | Exact preservation of the full gauge stabilizer | proved | `Artform.Scores.NonabelianGravity.Statement.stabilizerPreservation` / `Artform.Scores.NonabelianGravity.stabilizerPreservation` | approved 2026-10-31 |
 | NGB:geometric-preflight | Valence gap and changed flux conjugacy class | proved | `Artform.Scores.NonabelianGravity.Statement.geometricPreflight` / `Artform.Scores.NonabelianGravity.geometricPreflight` | approved 2026-10-31 |
+| NGB:surface-orbit-dictionary | Complete Gauss and genus-two presentation orbit sets | proved | `Artform.Scores.NonabelianGravity.Statement.surfaceOrbitDictionary` / `Artform.Scores.NonabelianGravity.surfaceOrbitDictionary` | approved 2026-10-31 |
+| NGB:surface-face-twists | Actual face kicks as standard genus-two handle substitutions | proved | `Artform.Scores.NonabelianGravity.Statement.surfaceFaceTwists` / `Artform.Scores.NonabelianGravity.surfaceFaceTwists` | approved 2026-10-31 |
