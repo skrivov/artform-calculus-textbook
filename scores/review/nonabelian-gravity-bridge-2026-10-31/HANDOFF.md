@@ -1,3 +1,19 @@
+# Current handoff: native boundary tool, independent review08
+
+Read GRAVITY-HANDOFF-LEGENDRE.md, LEGENDRE-CONTRACT.md and LEGENDRE-RESULTS.md.
+Two additive claims and14new Legendre modules are independently approved.
+All14 kernels and the exact fresh full-build/report freeze pass. Current
+counts are278total,274approved,4CNI pending;20NGB claims in56NGB modules.
+All42older NGB modules and272baseline approvals remain unchanged.
+
+The continuation is active, with spatial-character topology and third-cell
+Ward/source compatibility as the next checked targets. The quantum-gravity
+programme remains frozen. Nothing in review08 approves successor results
+or selects a physical phase space/measure. Use validate-legendre-root.py;
+PUBLICATION-LEGENDRE.json belongs only in the owned working lane.
+
+The following preserves the earlier handoff as historical stage detail.
+
 # Handoff after the conditional native rotation test
 
 The current stage is NATIVE-CONTRACT.md / NATIVE-RESULTS.md, one additive

@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-31",
+  "baseline_commit": "25c97bd57d14b9b2e9930c71020dbb25aa5807f9",
+  "scope": "Source-supported continuation; frozen gravity programme is read-only.",
+  "policy": "After each checked result reassess and pursue its next viable consequence; use the same single independent reviewer.",
+  "completion_criterion": "A source-bound materially relevant tool/result plus an audited disposition of every viable successor within the explicit frozen-source search; or justified exhaustion of those avenues. Neither universal mathematical exhaustion nor completion of quantum gravity is claimed.",
+  "avenues": [
+    {
+      "id": "X01",
+      "status": "approved_independent_08",
+      "question": "Derive the complete native two-time40-variable action, affine background term, Legendre covectors and constraints.",
+      "gate": "Actual Full40 source; full-coordinate two-time binding; independent review; Lean source identity.",
+      "next": "X02",
+      "evidence": [
+        "LEGENDRE-CONTRACT.md",
+        "legendre-root.py",
+        "composition-root.py",
+        "ArtformScores/NonabelianGravity/LegendreTheorems.lean"
+      ],
+      "registered_claims": [
+        "NGB:native-legendre-score",
+        "NGB:native-boundary-composition"
+      ]
+    },
+    {
+      "id": "X02",
+      "status": "approved_independent_08",
+      "question": "Compose two native cells, retain every interior equation and boundary reaction, and test extension of one-cell data.",
+      "gate": "X01 source-bound relation, exact internal rank/compatibility; no guessed quotient.",
+      "next": "X03",
+      "evidence": [
+        "LEGENDRE-CONTRACT.md",
+        "legendre-root.py",
+        "composition-root.py",
+        "ArtformScores/NonabelianGravity/LegendreTheorems.lean"
+      ],
+      "successor": {
+        "id": "X02b",
+        "status": "active",
+        "question": "Preserve the additional Ward source compatibility when a third native cell is attached.",
+        "evidence": "Independent exact active ranks36,66,96,126 for N2..5, and six new Schur null directions at N3. Actual compact Ward columns reproduced. Full40 source binding and symbolic kernel proofs in Lean scratch. No all-N classification claim."
+      },
+      "registered_claims": [
+        "NGB:native-legendre-score",
+        "NGB:native-boundary-composition"
+      ]
+    },
+    {
+      "id": "X03",
+      "status": "approved_independent_08",
+      "question": "Compile the source-bound singular canonical relation into explicit score instructions and test retained sources/contacts.",
+      "gate": "Actual constraints and admissible domains, same answers before/after factorization.",
+      "next": "X04",
+      "evidence": [
+        "LEGENDRE-CONTRACT.md",
+        "legendre-root.py",
+        "composition-root.py",
+        "ArtformScores/NonabelianGravity/LegendreTheorems.lean"
+      ],
+      "registered_claims": [
+        "NGB:native-legendre-score",
+        "NGB:native-boundary-composition"
+      ]
+    },
+    {
+      "id": "X04",
+      "status": "active_source_symbol_certificate",
+      "question": "Test nonzero actual spatial characters and distinguish zero-character artifacts from source-wide conclusions.",
+      "gate": "Current spatial shift r, original spatial averages and endpoint terms; no temporal/spatial substitution.",
+      "next": "X05",
+      "finding": "The full reciprocal-character source identity, sparse column22 left witness, irrationality and density of the actual rational circle rotation compile in Lean scratch. Public09 source binding, topology statement and independent review remain.",
+      "next_goal": "Bind actual native mixed-character source and certify sparse column/left-witness identities before claiming a boundary inverse obstruction."
+    },
+    {
+      "id": "X05",
+      "status": "conditional",
+      "question": "Derive a justified finite-dimensional quantum boundary kernel or a precise obstruction, retaining constraints, measure and common domains.",
+      "gate": "X01-X04 native binding; source-selected convergence/oscillatory prescription, physical versus reference representation stated.",
+      "next": "X06",
+      "research_note": "Active middle inertia independently(15+,21-); unrestricted positive Gaussian fails, conditional Fresnel recipe remains a reference construction. Stationary elimination is not integration."
+    },
+    {
+      "id": "X06",
+      "status": "conditional",
+      "question": "Reassess curved compact-score/native field maps, including boost/rotation signs, Barbero alternatives, intrinsic geometry and regular reduction.",
+      "gate": "Actual source-selected canonical variables and generator; known AMM/Barbero results do not count as a discovery.",
+      "next": "X07"
+    },
+    {
+      "id": "X07",
+      "status": "conditional",
+      "question": "Compare exact elimination or factorization against the same frozen native answer, audit all viable successors, publish usefulness/exhaustion assessment.",
+      "gate": "Matched problem/domain/source; independent review; remaining conditional gaps recorded as open rather than universal no-go.",
+      "next": "finish"
+    }
+  ],
+  "new_research_round_count": 0,
+  "prior_C_D_stages_activated": false,
+  "gravity_programme_modified": false,
+  "bounded_native_boundary_research_tools_approved": 1,
+  "selected_physical_gravity_applications": 0
+}

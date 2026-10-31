@@ -235,3 +235,5 @@ import ArtformScores.NonabelianGravity.DipoleTheorems
 import ArtformScores.NonabelianGravity.TransportTheorems
 
 import ArtformScores.NonabelianGravity.NativeTheorems
+
+import ArtformScores.NonabelianGravity.LegendreTheorems

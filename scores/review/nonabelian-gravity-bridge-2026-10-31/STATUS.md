@@ -1,36 +1,40 @@
 # Campaign status
 
-31 October2026: **conditional native rotation test independently approved; faithful field map open**.
+31 October2026: **native boundary score and source-compatible composition independently approved; successor research active**.
 
 | Item | State |
 |---|---|
-| Initial investigations with dispositions | 12 of12; continuations add no round count |
-| Fully answered model/algebra questions | 7: A01-A06 and B01 |
-| Scoped partial investigations | B02-B05; smooth regular reduction remains open |
-| Continuation | B06 source/domain diagnostics; no native completion credit |
-| Conditional geometric/native investigations | C01-D06: all12 unactivated |
-| Campaign Lean submissions | 18: original8, analytic3, surface2, dipole2, transport2, native diagnostic1 |
-| Prior reviews01,02,04,05,06 | All17 earlier NGB claims remain approved |
-| Independent review07 | New1 approved, none returned; exact source/report receipt verified |
-| Preserved earlier approvals | All271 at baseline3084e39; all38 earlier NGB modules unchanged |
-| Current score count | 276 total:272 approved,4 inherited CNI pending |
-| Review worker | Same authorized Sol6.1 reviewer; no additional worker this stage |
-| Native trial | Rational rotational diagonal connection, F=0 about E=I, zero spatial character |
-| Source and boundary | Complete quadratic candidate, kappa1/101, one owned site, zero source/halo; integer density binding proved |
-| Complete force result | All40 owned rows; matrix diagonal4/101, offdiagonal-99/101 on three rows, others zero |
-| Source-free conclusion | Only the zero rational trial has zero owned force |
-| Interpretation | Conditional import rejected; faithful curved-score/native field map absent |
-| Novelty | Small specialization of known flat Hessian, below stronger P189 results |
-| New material native gravity applications | 0; all eight directions remain open |
-| Next duty | Source-bound field/link-chart and native Legendre boundary-momentum dictionary |
+| Initial investigation dispositions | 12of12; no extra counted rounds |
+| Old conditional C01-D06 allocations | Unactivated |
+| Campaign Lean claims | 20approved:18earlier plus2native boundary claims |
+| Independent review08 | 2approved,0returned;14kernel replays and exact source/report hashes verified |
+| Preserved baseline | All272prior approvals,276manifest entries and42prior NGB modules at25c97bd |
+| Current score counts | 278total:274approved,4inherited CNI pending |
+| Production modules | 56NGB modules;14additive Legendre modules |
+| New research tool | All40 native cut covectors, singular score factorization and source-compatible two-cell test |
+| Scope | Complete flat Taylor candidate, kappa1/101, spatial-zero character, fixed boundary representative |
+| Middle elimination | Rank36 with four retained source conditions; effective mixed rank18 versus24for onecell |
+| Control | An admitted nonzero one-cell endpoint has no next source-free native cell |
+| Selected physical applications | 0; no gravity direction closed |
+| Next active source tests | Reciprocal spatial characters/current rotation; three-cell Ward source compatibility; quantum measure/domain gates |
+| Review worker | Same user-authorized Sol6.1 reviewer; no additional worker |
+| Frozen gravity programme | Read-only and unchanged |
 
-Current evidence is NATIVE-CONTRACT.md and NATIVE-RESULTS.md. The four
-additive modules are NativeRotation, NativeBoundary, NativeStatements and
-NativeTheorems. The actual score derivative, native physical selection,
-nonlinear histories and quantum measure/state/domains remain open.
+Current evidence: LEGENDRE-CONTRACT.md, LEGENDRE-RESULTS.md and independent08
+audit/verdict/validation. validate-legendre-root.py authenticates the exact
+prepared build/reports, old proof bytes and approvals, literal fidelity,
+required checks, independent arithmetic and all14 module kernel replays.
+Its --reuse-reviewed-kernels mode checks exact hashes before reusing the
+already completed independent replays; it does not bypass a kernel gate.
 
-Current validation is validate-native-root.py. Earlier validators and
-receipts retain historical counts. The independent review07 replay is
-standalone exact Fraction arithmetic, including the sensitive mixed-row
-contact/torsion control. NEXT-CONTRACT.md retains all analytic and native
-gates; Decision12 remains unpassed.
+The all40 boundary tool materially closes a bounded source-binding gap
+left by the earlier single torsion-component boundary covector. The full
+nonlinear/open-cell dictionary, curved compact/native map, physical
+constraint selection, positive Hilbert-adjoint identification and quantum
+measure/state remain open. R1/R7/R8 gain a concrete research test; all eight
+physical routes stay open. Decision12 remains unpassed.
+
+continuation-search.json records the active successors. Scratch symbol,
+rotation and longer-history calculations are not silently included in
+these two approvals. Historical stage validators and receipts retain
+their original scopes and counts.

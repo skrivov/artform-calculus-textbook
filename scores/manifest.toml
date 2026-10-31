@@ -5061,3 +5061,31 @@ lean_proof = "Artform.Scores.NonabelianGravity.nativeRotationImportTest"
 reviewed = "2026-10-31"
 review_text_sha256 = "e16407aa578e6101b553e8904b2b6a91dde861011b9874b22ffabaa4817f0897"
 fidelity = """Complete original quadratic action, all40 owned zero-character rows and explicit integer zero-extension binding. Conditional ansatz rejection only; no curved-score field map or dynamics claim. See NATIVE-CONTRACT.md and independent review07."""
+
+[[statement]]
+key = "NGB:native-legendre-score"
+label = "NGB:native-legendre-score"
+title = "Native cut action, affine boundary covectors and a singular score factorization"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-legendre-score)"
+statement = """
+Fix the complete Full40 flat Taylor candidate at kappa=1/101, spatial-zero-character shifts(1,0,0,0), native bivector order(01,02,03,23,31,12), and all40 independent old/new coordinates F^I_i at4I+i and A_i^a at16+6i+a. The cut quadratic density is the literal original transported-complement, ordered-contact and torsion density evaluated at time0 on old/new times0/1, with no face wrapping in Fin3 storage. Its exact matrix expression is L2(u,v)=u.H0.u/2+u.B.v+v.H1.v/2. The original linear curvature density is b.(u-v), with b22=b29=b36=1 and all other entries0, and is retained in the cut action L. Over the reals the actual directional derivative is D L(du,dv)=p+(u,v).dv-p-(u,v).du, where p-=-b-H0.u-B.v and p+=-b+B^T.u+H1.v. The rational mixed matrix B has rank24. The native rational phase-space relation p=p-(u,v),q=p+(u,v) equals exactly an incoming kick p->p+b+H0.u, the central relation p=-B.v,q=B^T.u, and an outgoing kick q->q-b+H1.v. The nonzero endpoint e25 has an admitted relation from(0,-b) to(e25,-b). This is a relation-valued score for a fixed flat Taylor model, not a bijective40-variable tick, physical mode count, identification of null directions as gauge, curved-score field map, nonlinear law or selected quantum theory.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeLegendreScore"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeLegendreScore"
+reviewed = "2026-10-31"
+review_text_sha256 = "1e0b7922bc1452da891f48a6acb5915f5f897ecb840bbcc65d855bdfd0b6519c"
+
+[[statement]]
+key = "NGB:native-boundary-composition"
+label = "NGB:native-boundary-composition"
+title = "Native two-cell source compatibility, effective action and nonextension"
+source = "review/nonabelian-gravity-bridge-2026-10-31/ALGEBRA-OF-SCORES.md (NGB:native-boundary-composition)"
+statement = """
+For the same complete spatial-zero-character Taylor cut action, compose L(x,y)+L(y,z)-j.y with all40 middle coordinates retained. Let A=H0+H1, J the coordinate projector which deletes only0,4,8,12, and D the declared symmetric rational matrix with AD=DA=J. A has rank36. Middle momentum matching p+(x,y)-p-(y,z)=j is equivalent to Jj=j and Jy=D r, where r=j-B^T.x-B.z. Thus the four inactive source components must vanish; no source compatibility equation is discarded or interpreted as gauge. Every matched middle field gives the complete stationary effective action x.H0.x/2+z.H1.z/2+b.(x-z)-r.D.r/2. Its actual declared effective mixed matrix is -BDB and has rank18, compared with one-cell rank24. For x=z=0,j=e25 the effective action is -9595/39964, retaining a nonzero source-contact term. Zero fields and source do match, whereas source e0 cannot match. The one-cell admitted output(e25,-b) cannot be the input of any next source-free native cell under the unchanged relation: its incoming momentum component25 is0 but every next pre-momentum component25 is-4/101. These are source-bound boundary-admission and composition tests. They do not define a physical reduced space, classify constraints as gauge, evaluate a quantum integral, establish an unrestricted unitary propagator or solve a native R7/R8 dynamical obligation.
+"""
+status = "stated"
+lean_statement = "Artform.Scores.NonabelianGravity.Statement.nativeBoundaryComposition"
+lean_proof = "Artform.Scores.NonabelianGravity.nativeBoundaryComposition"
+reviewed = "2026-10-31"
+review_text_sha256 = "201c265ec15a589facc6b16dbb899fef3ff6c2ff8956c7853f59763e0aeff412"

@@ -3,7 +3,7 @@
   "campaign": "nonabelian-gravity-bridge-2026-10-31",
   "date": "2026-10-31",
   "organization_status": "complete",
-  "research_status": "native_rotation_import_rejected_faithful_field_map_open",
+  "research_status": "native_boundary_tool_approved_source_conditioning_continuation_active",
   "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
   "researcher_policy": "one_researcher_one_active_user_authorized_independent_reviewer",
   "additional_workers_launched": 2,
@@ -11,8 +11,8 @@
   "conditional_investigations": 12,
   "maximum_investigations": 24,
   "completed_investigations": 12,
-  "new_registered_claims": 18,
-  "new_independent_approvals": 18,
+  "new_registered_claims": 20,
+  "new_independent_approvals": 20,
   "new_material_gravity_applications": 0,
   "baseline_score_counts": {
     "approved": 254,
@@ -531,5 +531,18 @@
     "next": "Derive a source-bound field/link-chart and native Legendre boundary-momentum dictionary before a repaired score or quantization.",
     "new_material_native_applications": 0,
     "added_research_rounds": 0
+  },
+  "source_continuation": {
+    "register": "continuation-search.json",
+    "new_round_count": 0,
+    "old_C_D_activated": false,
+    "source_bound_boundary_tools_checked": 1,
+    "selected_physical_gravity_applications": 0,
+    "next_targets": [
+      "reciprocal_character_boundary_inverse_criterion",
+      "three_cell_Ward_source_compatibility",
+      "quantum_boundary_measure_and_domains"
+    ],
+    "source_bound_boundary_tools_independently_approved": 1
   }
 }

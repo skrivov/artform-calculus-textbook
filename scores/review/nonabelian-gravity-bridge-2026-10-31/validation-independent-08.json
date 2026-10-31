@@ -1,0 +1,477 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "ngb_sol61_transport_review",
+  "contribution_disclosure": "Sole user-authorized Sol6.1 reviewer ngb_sol61_transport_review. Reviewer supplied prior mathematical, source/domain and boundary-convention advice and separate arithmetic; root authored all14 production Lean modules. Reviewer authored none and independently examined their actual source, definitions, statements, proofs and canonical literals. Review artifacts only were authored by this reviewer. No claim of no prior involvement in problem formulation. Standalone replay imports no production evaluator or prior reviewer helper.",
+  "reviewed_base_commit": "25c97bd57d14b9b2e9930c71020dbb25aa5807f9",
+  "reviewed_freeze": "fourteen final Legendre modules; two canonical literals; frozen contract/results/native pins and root producers/data",
+  "root_prepared_receipt": {
+    "path": "build/ngb-legendre-prepared.json",
+    "sha256": "2ed72294851778d2d4be973ececf59c3927cd80ab57d64aa636e99aaead0e886",
+    "source_fingerprint_entries_verified": 920,
+    "source_fingerprint_mismatches": [],
+    "report_sha256": {
+      "build/report.json": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "build/ledger-report.json": "a7fc8ff0e882a48f0ba48a6589b438a6ec6d37b43728e842905e0cea8a635973"
+    },
+    "report_mismatches": [],
+    "checks": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "--wfail"
+        ],
+        "exit_code": 0,
+        "seconds": 3.399,
+        "stdout_sha256": "9378faade5a33b592ea80d43959ac698238b1b4e6be4d91c1c9c60561e0c6820",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/Report.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 14.7,
+        "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--run",
+          "scripts/LedgerReport.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 23.413,
+        "stdout_sha256": "a7fc8ff0e882a48f0ba48a6589b438a6ec6d37b43728e842905e0cea8a635973",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "full_warning_free_build": "Root fresh full --wfail build and both reports authenticated against all frozen source entries; all14 final new modules independently kernel-replayed.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.32,
+      "stdout": "103 statements (91 proved, 2 partial, 8 stated, 2 planned, 0 informal); 92 definitions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.088,
+      "stdout": "1411 files checked; 0 problem(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.173,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.198,
+      "stdout": "the certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.234,
+      "stdout": "the extent certificates are the generator's output\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/gravity_r2_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.079,
+      "stdout": "{\"identity_verified\": true, \"native_inputs_verified\": 8, \"data_matches_lean\": true, \"sha256\": \"92369c1881fe5b7cbf1df8cc5028acc3295870bb2433d35a819ab7a75dbb7d4e\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.327,
+      "stdout": "0 approved statements changed since review\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/replay-independent-08.py"
+      ],
+      "exit_code": 0,
+      "seconds": 4.339,
+      "stdout": "{\n  \"coefficient_field\": \"Q\",\n  \"source\": \"independent transcription of complete Full40 density, including ordered contact/torsion and linear curvature\",\n  \"cut_quadratic_monomials\": 204,\n  \"common_denominator\": 202,\n  \"independent_polynomial_terms_sha256\": \"7c6170506aa1fb22a3138f215af37b23f7bb29a2483af396b7a1906a47ee2960\",\n  \"affine_boundary_nonzeros\": [\n    22,\n    29,\n    36\n  ],\n  \"actual_cut_matrix_binding_dense_control\": true,\n  \"directional_variation_control\": true,\n  \"relation_score_factorization_control\": true,\n  \"mixed_rank\": 24,\n  \"middle_rank\": 36,\n  \"effective_mixed_rank\": 18,\n  \"D_left_right_projector\": true,\n  \"inactive_source_components\": [\n    0,\n    4,\n    8,\n    12\n  ],\n  \"source_compatibility_and_stationary_action\": true,\n  \"source_contact\": \"-9595/39964\",\n  \"nonextension_witness\": \"0->e25 admitted; future pre component25=-4/101 for every endpoint\",\n  \"zero_matching_control\": true,\n  \"inactive_e0_source_rejected\": true,\n  \"scope\": \"complete flat spatial-zero-character Taylor model; no quantum integral, physical mode count, gauge classification or curved-score field map\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scores/review/nonabelian-gravity-bridge-2026-10-31/data-fidelity-independent-08.py"
+      ],
+      "exit_code": 0,
+      "seconds": 4.669,
+      "stdout": "Independent complete numeric comparison passed: 14 matrices; 204 polynomial terms; all six factor/inverse identities\n",
+      "stderr": ""
+    }
+  ],
+  "separate_kernel_replays": [
+    {
+      "module": "LegendrePolynomial",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendrePolynomial"
+      ],
+      "exit_code": 0,
+      "seconds": 5.93,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreSource",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreSource"
+      ],
+      "exit_code": 0,
+      "seconds": 7.299,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreMatrixData",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreMatrixData"
+      ],
+      "exit_code": 0,
+      "seconds": 5.721,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreMatrix",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 42.783,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreRows",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreRows"
+      ],
+      "exit_code": 0,
+      "seconds": 26.063,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreBinding",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreBinding"
+      ],
+      "exit_code": 0,
+      "seconds": 14.812,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreBoundary",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreBoundary"
+      ],
+      "exit_code": 0,
+      "seconds": 6.011,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreVariation",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreVariation"
+      ],
+      "exit_code": 0,
+      "seconds": 7.927,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreCompositionData",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreCompositionData"
+      ],
+      "exit_code": 0,
+      "seconds": 6.0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreComposition",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreComposition"
+      ],
+      "exit_code": 0,
+      "seconds": 340.08,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreGluing",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreGluing"
+      ],
+      "exit_code": 0,
+      "seconds": 15.385,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreSchur",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreSchur"
+      ],
+      "exit_code": 0,
+      "seconds": 11.578,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreStatements",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreStatements"
+      ],
+      "exit_code": 0,
+      "seconds": 5.828,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "module": "LegendreTheorems",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "ArtformScores.NonabelianGravity.LegendreTheorems"
+      ],
+      "exit_code": 0,
+      "seconds": 5.804,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "independent_replay": {
+    "script": "replay-independent-08.py",
+    "script_sha256": "082e0ed1174d71e1789adf87ca21d7390181dca5fee700d3647f69f9a0a8936c",
+    "dependencies": "Python standard library only; no prior helper or production evaluator imports",
+    "exit_code": 0,
+    "result": {
+      "coefficient_field": "Q",
+      "source": "independent transcription of complete Full40 density, including ordered contact/torsion and linear curvature",
+      "cut_quadratic_monomials": 204,
+      "common_denominator": 202,
+      "independent_polynomial_terms_sha256": "7c6170506aa1fb22a3138f215af37b23f7bb29a2483af396b7a1906a47ee2960",
+      "affine_boundary_nonzeros": [
+        22,
+        29,
+        36
+      ],
+      "actual_cut_matrix_binding_dense_control": true,
+      "directional_variation_control": true,
+      "relation_score_factorization_control": true,
+      "mixed_rank": 24,
+      "middle_rank": 36,
+      "effective_mixed_rank": 18,
+      "D_left_right_projector": true,
+      "inactive_source_components": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "source_compatibility_and_stationary_action": true,
+      "source_contact": "-9595/39964",
+      "nonextension_witness": "0->e25 admitted; future pre component25=-4/101 for every endpoint",
+      "zero_matching_control": true,
+      "inactive_e0_source_rejected": true,
+      "scope": "complete flat spatial-zero-character Taylor model; no quantum integral, physical mode count, gauge classification or curved-score field map"
+    }
+  },
+  "independent_numeric_fidelity": {
+    "script": "data-fidelity-independent-08.py",
+    "script_sha256": "c73dfb3dd471fa41d2e56eadd5590fa0d1bee4b9c169b24d0a9f4d40cb47b561",
+    "numeric_matrices_verified": 14,
+    "polynomial_terms_verified": 204,
+    "mixedMiddle_nonzero_entries": 141,
+    "all_six_rank_factor_inverse_identities": true,
+    "both_pairwise_composition_bindings": true,
+    "root_producer_data_matches_independent": true
+  },
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/NonabelianGravity/LegendreBinding.lean": "7000b2c5ca5cd730613ed5e38947a5b573a61652cb9a57018ee601e0707779ff",
+    "scores/ArtformScores/NonabelianGravity/LegendreBoundary.lean": "2c6e0400484944f85a59ea796ff6e0e41e371e1d64ea3ef54e0005aad975bcd3",
+    "scores/ArtformScores/NonabelianGravity/LegendreComposition.lean": "23ea4bf89561e462bddbad3a22014a3bcd7bf75d525e4a19dd06daa6ed2850ab",
+    "scores/ArtformScores/NonabelianGravity/LegendreCompositionData.lean": "83653650dd98dc598ab82b41c96abafdc1761cda55f4006678e1026e41a48a34",
+    "scores/ArtformScores/NonabelianGravity/LegendreGluing.lean": "75f6fa3fca4031142b73bdb574ba16835ba23fd2d8deeeb65d8ef766ae4d6bc4",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrix.lean": "ed58fc6310f31a6f63b5cc0e31bdaad8f33d0f50f344e9c57e22bd78f1152898",
+    "scores/ArtformScores/NonabelianGravity/LegendreMatrixData.lean": "691a602803e19908f2179a027a9cbf36b9c847f82662b91e40522d6cd35209d3",
+    "scores/ArtformScores/NonabelianGravity/LegendrePolynomial.lean": "216dc50bdb9e45d7e77a077d0d2fec18b2871ff3bbfd8bcfe51e8f68b4cd23d0",
+    "scores/ArtformScores/NonabelianGravity/LegendreRows.lean": "309787faa2149708c56d2269b049daa3fb65d3a41057206ab185f6fef4daab90",
+    "scores/ArtformScores/NonabelianGravity/LegendreSchur.lean": "3ed5518ea11d0d2491d1bca200409d2fb2931db32442b17f0ec6ceb15385bb53",
+    "scores/ArtformScores/NonabelianGravity/LegendreSource.lean": "148fce7b33e22cd2d29d12b73fc036c88d265760b92ad052eae3df190ebce692",
+    "scores/ArtformScores/NonabelianGravity/LegendreStatements.lean": "3453bb58899a9ce43ff34f436b06cf036ffc40fa5dca8672942b767d83124a25",
+    "scores/ArtformScores/NonabelianGravity/LegendreTheorems.lean": "1cd621557c49a5546697beaa2642238871db42287aef25cd91bfc5bb59d84800",
+    "scores/ArtformScores/NonabelianGravity/LegendreVariation.lean": "115faea1f07f369301fe19955188e2e1eae65959bebb53c4db80d84b6a241418",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/LEGENDRE-CONTRACT.md": "db771bd1cb373d9ced114e50fc793d5810548af6ab3707b435e561a9312249b5",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/LEGENDRE-RESULTS.md": "4b16bc7b3d4876bf9838311372b1d78c46b15e206d0dd102e2b2ce84eea3e267",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/native-source-pins.json": "fd88fd4c954fe046a492b53a38e7c0f31396a095ceb4add86b5578b3367a64a0",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root.py": "75c271221658f2157deaa1ce6e3c57b1cb5e03add131321e165d487c0440f2bc",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/legendre-root-data.json": "aa1d1b653332038a67bb330ddfb2b43b7fd7b74ad701fdbecc8a3b17f338638b",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root.py": "886e6822b3d657b5b99b4614f60b4874f08acf988c53ea7fd3dc56d2131c1867",
+    "scores/review/nonabelian-gravity-bridge-2026-10-31/composition-root-data.json": "3882921d829cda7ca12232d3c90a897b284b6503f0fd276ec69097def4b9024a"
+  },
+  "all42_previous_NGB_modules_unchanged": true,
+  "all_preexisting_Lean_except_import_aggregator_unchanged": true,
+  "prior_module_hashes_checked": {
+    "scores/ArtformScores/NonabelianGravity/AnalyticForm.lean": "9096b7b9c933fe5f0b24c0da310b8419d53bd98575e177848c0fd69de255f3e6",
+    "scores/ArtformScores/NonabelianGravity/AnalyticStatements.lean": "d465ac62ef64344a570313c51ddbe959e9f2fafe59716a87f803918fc330f61e",
+    "scores/ArtformScores/NonabelianGravity/AnalyticTheorems.lean": "ffb64eb71ba0a4884b2383d9420e6ce64dbdda5ab472eeceb845ca37073ac6e1",
+    "scores/ArtformScores/NonabelianGravity/AnalyticWitness.lean": "0d3f7447e2f49c3826d2ca2ac0a623d83a23c78af494b976f4c327bb1d06024d",
+    "scores/ArtformScores/NonabelianGravity/Controls.lean": "3412b7f4d147ac2eafd4d10038b911377a4df18c7eeb868946a63bc87531353a",
+    "scores/ArtformScores/NonabelianGravity/Descent.lean": "769b04cf1fe2bcb85843c839bfcac7b9d2e2c81c32d01b7d8f3b54546349cb53",
+    "scores/ArtformScores/NonabelianGravity/Differential.lean": "3f5145472b37de5c9ad2c1cfc51aafd4842811b0e2063ddf678d877abcde2ccb",
+    "scores/ArtformScores/NonabelianGravity/Dipole.lean": "34e4f27c00d944925fb348d1b987e7492e5f6ca08608328f5702efa4e49e1396",
+    "scores/ArtformScores/NonabelianGravity/DipoleConnection.lean": "8a9bb051f1ec79eea10e2e78cfc2bcfd3d12cf46a0929e0e0bd594f29a775e4f",
+    "scores/ArtformScores/NonabelianGravity/DipoleErasure.lean": "f3fc7e8f345803c0a05009e698528ab4a2c12577a4beb51ae062a6a4944f4d2c",
+    "scores/ArtformScores/NonabelianGravity/DipoleStatements.lean": "e054fd86da5bfb52638295eae393250bca036f4fcd0e7774291384561414aa4a",
+    "scores/ArtformScores/NonabelianGravity/DipoleTheorems.lean": "740a8b8fbc457d3bab9e67778b08819863ea5bd192531c54cc9405db1535518c",
+    "scores/ArtformScores/NonabelianGravity/Double.lean": "89f4e881125e4a9345c3dc97ed4422b3a62ef410c8095c23546a6a904e9f3829",
+    "scores/ArtformScores/NonabelianGravity/Dynamics.lean": "7546402e04103623c3459b90e6527d2866e90235ebe7d4980d3a8b18af3eae39",
+    "scores/ArtformScores/NonabelianGravity/Geometry.lean": "5aaf230d896c2202e74df04fd228dd0467dac4c95306213fb03ec79a53726c52",
+    "scores/ArtformScores/NonabelianGravity/GeometryPreflight.lean": "272badf375169cde12fa57c0dc2b58ef3085843a3bfeb7481faa1d903aa0f923",
+    "scores/ArtformScores/NonabelianGravity/Maurer.lean": "0fbc9aa83e865a16b1aa11f4f9bf23bdf1add70da79343b17f9c8911ab5c951c",
+    "scores/ArtformScores/NonabelianGravity/NativeBoundary.lean": "1a1f2dcb045839f923716e3239ff28bc14d7f68582f339191998325cde0ecad0",
+    "scores/ArtformScores/NonabelianGravity/NativeRotation.lean": "4c5af2253b6c1c406cce4255d560cf21a381eba3c0d19a51626c080955683a46",
+    "scores/ArtformScores/NonabelianGravity/NativeStatements.lean": "4d86694dbeeb1ac65ef1d4ccaf84c99a8e23bd99f2e0ec1cfe39befc7caf9114",
+    "scores/ArtformScores/NonabelianGravity/NativeTheorems.lean": "06a7463d002d8863781aa5a147ae2f064725247e14bc40bd74791f0f1e99ae5d",
+    "scores/ArtformScores/NonabelianGravity/Process.lean": "8a1482932447504a03595f4466dda0a5174196f19979e98fbd8aabec24595aab",
+    "scores/ArtformScores/NonabelianGravity/QuaternionForm.lean": "af57083aaca321fadedcd4ac7204721060cfca6e27e6046b3cbe15eeba5c3518",
+    "scores/ArtformScores/NonabelianGravity/Scaling.lean": "011a01c4d991c74199b644e6c828a8fea31e02c041a81ea5e9ced8d1999b69c8",
+    "scores/ArtformScores/NonabelianGravity/SphericalFixture.lean": "27d3cfcce588ce0f94bb216db04b7d2b38ebad61c8d9428ff6d54414446f66fd",
+    "scores/ArtformScores/NonabelianGravity/SphericalGluing.lean": "d97b680e00c59497ac7d606b62b13b03f2c4c74a1b34fdff480c611bb9b925fc",
+    "scores/ArtformScores/NonabelianGravity/SphericalGram.lean": "f603d83638e97b109dcd452b4f01392d0cf34b90230f833b28c4b57e3ffd1a99",
+    "scores/ArtformScores/NonabelianGravity/SphericalOrthant.lean": "4b95dbfbdeb3aa71c797049d847727597cc59ca15b5e936190c76f90893b21ee",
+    "scores/ArtformScores/NonabelianGravity/SphericalTransport.lean": "9896e5f3766db6c52d2885ad9c84a45843447f456a1863104e3ff78096d554c3",
+    "scores/ArtformScores/NonabelianGravity/Stabilizers.lean": "27f4adb27f633ce4ad4d9acf1192681eb47dbb17be51467e3de9af20f22d8718",
+    "scores/ArtformScores/NonabelianGravity/Statements.lean": "157b32c314589af82513b9d444bced855e98c7d3089f730c15e69e2c89388544",
+    "scores/ArtformScores/NonabelianGravity/SurfaceCoordinates.lean": "3412b596e8a1c0921aab2d0f37ed5ab2fa911325c504140c0470e1cdf795c962",
+    "scores/ArtformScores/NonabelianGravity/SurfaceQuotient.lean": "77213ea9567c909d1c723fc5b83a9c8994b81ddc1cc038968f49257b13791809",
+    "scores/ArtformScores/NonabelianGravity/SurfaceStatements.lean": "e61ea0e589d7f8fc1d07899c16ba753548003ce59b21f846a95c51f67c942fd6",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTheorems.lean": "dfe84dc754432f9fcda317a1c123311ef57bb58e2164931f15e36b34dba6a93b",
+    "scores/ArtformScores/NonabelianGravity/SurfaceTwists.lean": "0f41d8381fd005d8d6e4c489009316e05eaef05194841165291770167b2c5300",
+    "scores/ArtformScores/NonabelianGravity/Theorems.lean": "584407759be8da18ef0615dc297abb43d10577c5807e94e0beb9542b71db3b93",
+    "scores/ArtformScores/NonabelianGravity/TransportControls.lean": "09a320385ab653f3cf3fac72065c181954a6400d82acf3c129a1be0b25232c95",
+    "scores/ArtformScores/NonabelianGravity/TransportStatements.lean": "dc78eb40909d83077e19b788492ddb18fdbeb13d9c28c6fe3f22b1f3fe4f006c",
+    "scores/ArtformScores/NonabelianGravity/TransportTheorems.lean": "540393bca21d9106d3b7c46b65bed9b15919f9462235817735f4ad3aea1a3fd9",
+    "scores/ArtformScores/NonabelianGravity/UnitQuaternionWitness.lean": "bde9703853b8edfe86241244256434f3a5d5f8224a56a1834523383e2a088c37",
+    "scores/ArtformScores/NonabelianGravity/WordBinding.lean": "77953d32128bc2409364e5d2005c670fa0ca699c524189585302504b77fa3108"
+  },
+  "prior_manifest_entries_preserved": 276,
+  "prior_approvals_preserved": 272,
+  "source_pins_verified": 14,
+  "source_pin_mismatches": [],
+  "canonical_file": "ALGEBRA-OF-SCORES.md",
+  "canonical_file_sha256": "5ccf350d1665fd18b819e6ff069ba616b668d2ee1777cb0fd7d4f91239e22992",
+  "claims_file_preapproval_snapshot_sha256": "fdeb5a8d3156b5b8021b1213874267afd253ad84c4f0a934dcece24efface3f4",
+  "new_material_native_gravity_applications": 0,
+  "successor_symbol_history_and_quantum_results_outside_approved_claims": true
+}
