@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "scope": "organization_only_author_checks_not_independent_fidelity_review",
+  "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
+  "campaign_structure": "pass",
+  "source_pins_authenticated": 22,
+  "mirror": "pass",
+  "document_links": "pass",
+  "proposed_finite_incidence": "pass_not_a_Lean_update_proof",
+  "research_investigations_completed": 0,
+  "new_registered_claims": 0,
+  "additional_workers_launched": 0,
+  "baseline_counts": {
+    "approved": 254,
+    "pending": 4
+  },
+  "commands": [
+    {
+      "name": "warning-free-build",
+      "command": [
+        "lake",
+        "build",
+        "--wfail"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "fc2737f73c6947350c57f242f1ce717de904c497a6e0ad0316938dcb70b3f01e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 4.125
+    },
+    {
+      "name": "book-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/Report.lean"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "157a0f5e500f20785e93c6b6498772e1ea83cc4e63f89aae8867d6ca1806a89a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 18.368
+    },
+    {
+      "name": "book-status",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "ccf3e9c7b62cb2645ea76a3642a1a7367774580f7e2e7bd6e7c06428781920d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.448
+    },
+    {
+      "name": "tree-identity",
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "159fb0f9b5a41657f6dc4a9350e3bb8df2bcf69f3d3d537e707c0b2b79ae3d72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 2.238
+    },
+    {
+      "name": "ledger-report",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--run",
+        "scripts/LedgerReport.lean"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b35d4f77d43a413b6befa80e402e104e9da67d54542616cabe6bf071b45257b2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 27.954
+    },
+    {
+      "name": "ledger-status",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.192
+    },
+    {
+      "name": "one-mode-certificates",
+      "command": [
+        "python3",
+        "scripts/one_mode_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "ea61dcd3a079b6b0e440a14b731a6fa47d2f335dc82137355a41dc77ff0e7232",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.222
+    },
+    {
+      "name": "extent-certificates",
+      "command": [
+        "python3",
+        "scripts/extent_certificates.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "c052b85e418befe80d5456dfc4b1bcd2a97329a0bc09611389280c7d7ab49b72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 2.398
+    },
+    {
+      "name": "approved-book-drift",
+      "command": [
+        "python3",
+        "scripts/status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "f96806f673fae561fba68e139cb84fb550223297d45ca48810f770d5df547366",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.438
+    },
+    {
+      "name": "approved-ledger-drift",
+      "command": [
+        "python3",
+        "scripts/ledger_status.py",
+        "--drift"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.198
+    },
+    {
+      "name": "diff-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.004
+    }
+  ],
+  "new_module_kernel_replays": 0,
+  "new_module_kernel_replays_reason": "No Lean files were added or edited.",
+  "report_stdout_paths": {
+    "book-report": "build/report.json",
+    "ledger-report": "build/ledger-report.json"
+  },
+  "final_publication_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_tree.py",
+        "--identity"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "628c9938d8416dc3383b6ac269efa3ca2d44c49b2b4cfecddb12099feebc23c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "prepublication_corrections": [
+    "Removed one extra terminal blank line from the normalized programme excerpt after staged whitespace checking. Original source bytes and pins are unchanged."
+  ]
+}

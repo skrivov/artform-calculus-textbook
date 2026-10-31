@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
+  "local_freeze_only": true,
+  "live_sibling_chat_inspected": false,
+  "local_inputs": [
+    {
+      "workspace_path": "artform-calculus-textbook/scores/STATUS.md",
+      "sha256": "82205bc29deacdd1921f94dec79dde0c235da5546326ff48b3994232c1e9550b",
+      "bytes": 58900,
+      "role": "baseline approvals and pending submissions"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/manifest.toml",
+      "sha256": "c358b2c9449b96847dd52259c2ddf4922d95f443b07203b80bef3eeb6b41a6d8",
+      "bytes": 332841,
+      "role": "baseline literal claims and review metadata"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores.lean",
+      "sha256": "7739760c4942e63abfee826e308a23bef351044e6a9ebc859b60fc0c9ef06e3d",
+      "bytes": 12085,
+      "role": "baseline umbrella imports"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/review/classical-nonabelian-impulse-2026-10-31/ALGEBRA-OF-SCORES.md",
+      "sha256": "155f0aef5e5bbd28325c6285cd2e651fdf431071559420db0df0087832478415",
+      "bytes": 5394,
+      "role": "predecessor canonical statements"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/review/classical-nonabelian-impulse-2026-10-31/source-pins.json",
+      "sha256": "2260d334fcb5d2e9ec7032cb11ec771b69e169f317adf4e169d7520842d4b7c7",
+      "bytes": 1429,
+      "role": "predecessor original source authentication"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/review/classical-nonabelian-impulse-2026-10-31/source/classical-dynamics.tex",
+      "sha256": "ebdc03fd2b2f51dffc8a7d4b8d2116d85f491123c412f4b71cf9455833d236f3",
+      "bytes": 78283,
+      "role": "pinned monograph classical target"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/review/classical-nonabelian-impulse-2026-10-31/source/nonabelian-frontiers.tex",
+      "sha256": "ebd84a464385740a402afce9c50725830b85fedf306497eda9e6f83a44b796da",
+      "bytes": 9919,
+      "role": "pinned monograph scope"
+    },
+    {
+      "workspace_path": "physics/ledgers/lattice-waves/campaigns/classical-nonabelian-impulse-2026-10-31/RESULTS.md",
+      "sha256": "8cea4a2615b47e74195d775e65e21c23b70c69ffaffe9752e6fa03828a7eb20f",
+      "bytes": 7918,
+      "role": "one-face outcome and orientation boundary"
+    },
+    {
+      "workspace_path": "physics/ledgers/lattice-waves/campaigns/classical-nonabelian-impulse-2026-10-31/PUBLICATION.json",
+      "sha256": "b06aba9466af37c73d454dd2e383dc35edc358036cde0b6b97f9c812fd513712",
+      "bytes": 1097,
+      "role": "predecessor publication receipt"
+    },
+    {
+      "workspace_path": "physics/ledgers/lattice-waves/campaigns/gravity-calculus-2026-10-30/final-assessment.md",
+      "sha256": "f8334c390ad78d5f1809f6d5d779d106a6355aac7f49af85cf9fdd1cc862579b",
+      "bytes": 13921,
+      "role": "earlier eight-direction assessment"
+    },
+    {
+      "workspace_path": "physics/ledgers/lattice-waves/campaigns/gravity-calculus-r7-r8-120-2026-10-30/FINAL-REPORT.md",
+      "sha256": "b3cec59b8829e382e06345353237bfb0dd3149eb39bdbffac77e1c52f75469f5",
+      "bytes": 8406,
+      "role": "completed second campaign physical scope"
+    },
+    {
+      "workspace_path": "physics/ledgers/lattice-waves/campaigns/gravity-calculus-r7-r8-120-2026-10-30/HANDOFF-GRAVITY-THREAD.md",
+      "sha256": "5d0aa518a55b9a697c4c8f6e9e262a71fc5f6f67e7a7d2ca9c2cd495592aae1c",
+      "bytes": 14544,
+      "role": "reusable native interfaces and conventions"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/CURRENT-PROGRAM.md",
+      "sha256": "064290780bf8a8cffc8ec7248e6ce9b4f0a340d7aa5406942a16c1c62bba07f0",
+      "bytes": 3438606,
+      "role": "local programme index; P190 heading, not a live chat snapshot"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-owned-flat-vector16-smooth-range-and-coupled-l2-obstruction.md",
+      "sha256": "f762f32adf2ee15b1b4115732a2e138230563135da490349be28bc80754e8b23",
+      "bytes": 10114,
+      "role": "P190 scope and Q1 qualification"
+    },
+    {
+      "workspace_path": "physics/ledgers/gravity/planning/2026-10-20-gravity-after-r7-full-current-smooth-domain-and-lie-algebra.md",
+      "sha256": "535cc11ad31d42e9e75f5ee2bd269d765512542b540555071723314fdf616877",
+      "bytes": 9165,
+      "role": "P179 reference-domain scope and Q1 qualification"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Controls.lean",
+      "sha256": "46a75311e63905c1530c288f67a1f8bcde101420d9395616e7b11ba9ed663e27",
+      "bytes": 4108,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Descent.lean",
+      "sha256": "e3584f761df70fb4abb7c1c5b0eaac0f080b40ce4bb4985c83838bcbb2bd5292",
+      "bytes": 2641,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Dynamics.lean",
+      "sha256": "287cfc19925cab0b7330f26148ec0505348bf38b0aab2608f28d71e7f6ea8cb3",
+      "bytes": 7675,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Geometry.lean",
+      "sha256": "317c5e2c5b1e4cbea8c040ba555005fbf4d7f288294b155448a980d2ad3098d8",
+      "bytes": 4858,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Process.lean",
+      "sha256": "545dddf32f901995e53a41a2b217d4c77771a697be119a52774edccb903d35e1",
+      "bytes": 9495,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Statements.lean",
+      "sha256": "af584fe6b0de3fe9ac37d65aead347021925ddcea488b065d80d1bf27d4b717c",
+      "bytes": 4763,
+      "role": "predecessor production Lean module; unchanged"
+    },
+    {
+      "workspace_path": "artform-calculus-textbook/scores/ArtformScores/ClassicalNonabelian/Theorems.lean",
+      "sha256": "d6a8504102c1d6b788d22d5d2d92e0564af63e6711bdca9db45c1302269fab81",
+      "bytes": 3252,
+      "role": "predecessor production Lean module; unchanged"
+    }
+  ],
+  "primary_literature": [
+    {
+      "id": "AMM",
+      "title": "Lie Group Valued Moment Maps",
+      "url": "https://arxiv.org/abs/dg-ga/9707021",
+      "version": "v1",
+      "role": "quasi-Hamiltonian framework; external literature, not a checked theorem of this campaign"
+    },
+    {
+      "id": "Riello",
+      "title": "On a self-dual phase space for 3+1 lattice Yang-Mills theory",
+      "url": "https://arxiv.org/html/1706.07811v2",
+      "version": "v2",
+      "sections": [
+        "IV.1",
+        "IV.3",
+        "IX"
+      ],
+      "role": "edge flux conventions, fusion and gravitational interpretation"
+    },
+    {
+      "id": "HHR",
+      "title": "Encoding Curved Tetrahedra in Face Holonomies: a Phase Space of Shapes from Group-Valued Moment Maps",
+      "url": "https://arxiv.org/abs/1506.03053v1",
+      "version": "v1",
+      "role": "candidate reconstruction route, not an identification already proved here"
+    },
+    {
+      "id": "FS",
+      "title": "Twisted geometries: A geometric parametrisation of SU(2) phase space",
+      "url": "https://arxiv.org/abs/1001.2748v3",
+      "version": "v3",
+      "role": "standard fixed-graph holonomy-flux comparison"
+    }
+  ]
+}

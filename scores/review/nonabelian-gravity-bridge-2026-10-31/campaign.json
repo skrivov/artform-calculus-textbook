@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "campaign": "nonabelian-gravity-bridge-2026-10-31",
+  "date": "2026-10-31",
+  "organization_status": "complete",
+  "research_status": "not_started",
+  "baseline_commit": "c5e7ed067d5ca4d225b1c77e4af9e86f437d2e82",
+  "researcher_policy": "single_researcher_no_additional_workers",
+  "additional_workers_launched": 0,
+  "initial_investigations": 12,
+  "conditional_investigations": 12,
+  "maximum_investigations": 24,
+  "completed_investigations": 0,
+  "new_registered_claims": 0,
+  "new_independent_approvals": 0,
+  "new_material_gravity_applications": 0,
+  "baseline_score_counts": {
+    "approved": 254,
+    "checked_pending_review": 4,
+    "total": 258
+  },
+  "execution_order": [
+    "A01",
+    "A02",
+    "B01",
+    "B02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ],
+  "decisions": {
+    "decision12": {
+      "status": "unassessed",
+      "requires": [
+        "actual_oriented_two_face_process",
+        "physical_phase_space_preservation",
+        "independent_fidelity_review"
+      ]
+    },
+    "decision18": {
+      "status": "unassessed",
+      "requires": [
+        "nonempty_geometric_reconstruction",
+        "update_and_gluing_admission",
+        "selected_original_native_contract",
+        "independent_fidelity_review"
+      ]
+    }
+  },
+  "investigations": [
+    {
+      "id": "A01",
+      "question": "Bind the seven-edge, two-face candidate in CONTRACTS.md to an actual Canvas; verify closed signed boundaries and complete ordered stars.",
+      "depends_on": "baseline",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "A02",
+      "question": "Derive the orientation-aware left/right kick from transported signed-face impulses, with the correct inverse on a reversed stored edge.",
+      "depends_on": "A01",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "A03",
+      "question": "Prove preservation of the full Gauss surface for both complete face commits and inverses on arbitrary group states; record whether each raw defect is fixed or conjugated.",
+      "depends_on": "A02",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "A04",
+      "question": "Decide the two face maps' commutator with U frozen, and separately build valid sequential or merged process profiles when write supports overlap.",
+      "depends_on": "A03",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "A05",
+      "question": "Give a noncommuting Gauss-valid example with a gauge-invariant change; retain wrong-orientation, wrong-order and partial-commit adverse controls.",
+      "depends_on": "A04",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "A06",
+      "question": "Formalize arbitrary admitted words, gauge descent, exact reverses and legal prefix histories on this actual canvas; state what extends beyond it.",
+      "depends_on": "A05",
+      "stage": "A",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B01",
+      "question": "Bind our endpoint fluxes and gauge conventions to the explicit quasi-Hamiltonian double; distinguish an algebraic dictionary from equality of physical phase spaces.",
+      "depends_on": "baseline",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B02",
+      "question": "Derive the edge two-form/quasi-Poisson structure, fusion cross terms and regular reduction for the declared stars; identify the exact formalization requirements.",
+      "depends_on": "B01",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B03",
+      "question": "Compute each shear's pullback of the chosen fused structure or reduced Poisson brackets; give exact positive identities or a counterexample within the actual admitted domain.",
+      "depends_on": "B02, A03",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B04",
+      "question": "If needed, construct and test one explicit corrected curvature update preserving Gauss and the physical structure. If the original passes, identify its generator or exact canonical interpretation and timestep parameters.",
+      "depends_on": "B03",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B05",
+      "question": "Derive the controlled small-flux/small-step relationship to holonomy-flux variables, including normalization, ordering corrections and the actual limiting domain.",
+      "depends_on": "B03, B04",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "B06",
+      "question": "Resolve the first continuation decision: combine the actual local process and physical phase-space contracts; distinguish an exact canonical map from an approximation to selected gravitational dynamics.",
+      "depends_on": "A06, B05",
+      "stage": "B",
+      "activation": "initial",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C01",
+      "question": "Select a concrete four-valent SU(2) closure domain and its signs, areas, curvature scale and nondegeneracy guards.",
+      "depends_on": "decision12 passed",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C02",
+      "question": "Construct an explicit curved-tetrahedron reconstruction or a scoped obstruction, retaining branches and genuine nonempty examples.",
+      "depends_on": "C01",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C03",
+      "question": "Determine whether the selected score update preserves this reconstructed geometric domain; give an admitted positive example and a domain-escape control where applicable.",
+      "depends_on": "C02",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C04",
+      "question": "Glue two admitted cells with actual shared geometry, orientation and transport matching; retain shape data beyond closure and area alone.",
+      "depends_on": "C03",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C05",
+      "question": "Derive a boundary/refinement or schedule comparison for these actual cells with complete boundary variables and sources.",
+      "depends_on": "C04",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "C06",
+      "question": "Resolve geometric continuation: identify an admissible bridge and select one live original gravity obligation with its complete source/domain contract.",
+      "depends_on": "C05",
+      "stage": "C",
+      "activation": "decision12_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D01",
+      "question": "Pin the selected original obligation and baseline answer; define the same input/output/accuracy and every retained physical guard before applying scores.",
+      "depends_on": "decision18 passed",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D02",
+      "question": "Construct the map between the score carrier and the native fields, constraints, currents and boundary data; prove every restriction used.",
+      "depends_on": "D01",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D03",
+      "question": "Use the construction to solve, exclude or quantitatively reduce one actual unresolved native subproblem.",
+      "depends_on": "D02",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D04",
+      "question": "Test the result against all relevant native equations and adverse inputs, including independent connection/history/halo and exceptional strata.",
+      "depends_on": "D03",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D05",
+      "question": "Compare against the frozen baseline for the same answer; record new feasibility/observable information or matched computational savings without inflating scope.",
+      "depends_on": "D04",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    },
+    {
+      "id": "D06",
+      "question": "Publish the bounded campaign assessment with independent-review state, native usefulness and unresolved obligations; decide whether a separate larger allocation is justified.",
+      "depends_on": "D05",
+      "stage": "D",
+      "activation": "decision18_passed",
+      "status": "planned",
+      "result": null,
+      "lean_claims": [],
+      "independent_review": "not_submitted"
+    }
+  ]
+}
