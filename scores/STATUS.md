@@ -6,8 +6,8 @@
 
 | Status | Statements |
 |---|---|
-| proved | 209 |
-| stated | 10 |
+| proved | 219 |
+| stated | 0 |
 | planned | 0 |
 | **total** | **219** |
 
@@ -224,13 +224,13 @@
 | GAC2:native-scalar-fourjet-current | Full scalar four-jet current and source contact | proved | `Artform.Scores.GravityBridge.Native.TTCross.Statement.greenLaw` / `Artform.Scores.GravityBridge.Native.TTCross.greenLaw` | approved 2026-10-31 |
 | GAC2:native-four-row-source-embedding | Embed the actual mixed source in all four coordinate rows | proved | `Artform.Scores.GravityBridge.Native.TTCross.Statement.fullRowsLaw` / `Artform.Scores.GravityBridge.Native.TTCross.fullRowsLaw` | approved 2026-10-31 |
 | GAC2:native-tt-source-range-budget | Actual source range and zero-frequency preparation test | proved | `Artform.Scores.GravityBridge.Native.TTCross.Statement.rangeLaw` / `Artform.Scores.GravityBridge.Native.TTCross.rangeLaw` | approved 2026-10-31 |
-| GAC2:native-two-cube-incidence | Actual sourced two-cube incidence and inherited coframes | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.geometryLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.geometryLaw` | awaiting review |
-| GAC2:native-six-curved-words | All six original based words and guarded reverse loops | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.wordsLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.wordsLaw` | awaiting review |
-| GAC2:native-curved-five-transport | Original five transported complementary bivector terms | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.meanLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.meanLaw` | awaiting review |
-| GAC2:native-curved-ordered-torsion | Full ordered nonlinear torsion on the inherited coframe | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.torsionLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.torsionLaw` | awaiting review |
-| GAC2:native-curved-seam-detail | A fused coarse link does not fix the fine seam | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.seamLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.seamLaw` | awaiting review |
-| GAC2:native-current-curved-cell | Complete current cubical cell law and symmetric merge defect | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.cellLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.cellLaw` | awaiting review |
-| GAC2:native-current-stationary-detail | Corrected stationary real detail in the original split action | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.detailLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.detailLaw` | awaiting review |
-| GAC2:native-stationary-coframe-source | Coframe source retained after connection detail stationarity | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.coframeLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.coframeLaw` | awaiting review |
-| GAC2:native-uniform-detail-residual | Original uniform subdivision has an interior detail residual | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.uniformLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.uniformLaw` | awaiting review |
-| GAC2:native-stationary-merge-defect | Corrected stationary native merge still differs from the parent | stated | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.mergeLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw` | awaiting review |
+| GAC2:native-two-cube-incidence | Actual sourced two-cube incidence and inherited coframes | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.geometryLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.geometryLaw` | approved 2026-10-31 |
+| GAC2:native-six-curved-words | All six original based words and guarded reverse loops | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.wordsLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.wordsLaw` | approved 2026-10-31 |
+| GAC2:native-curved-five-transport | Original five transported complementary bivector terms | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.meanLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.meanLaw` | approved 2026-10-31 |
+| GAC2:native-curved-ordered-torsion | Full ordered nonlinear torsion on the inherited coframe | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.torsionLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.torsionLaw` | approved 2026-10-31 |
+| GAC2:native-curved-seam-detail | A fused coarse link does not fix the fine seam | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.seamLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.seamLaw` | approved 2026-10-31 |
+| GAC2:native-current-curved-cell | Complete current cubical cell law and symmetric merge defect | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.cellLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.cellLaw` | approved 2026-10-31 |
+| GAC2:native-current-stationary-detail | Corrected stationary real detail in the original split action | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.detailLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.detailLaw` | approved 2026-10-31 |
+| GAC2:native-stationary-coframe-source | Coframe source retained after connection detail stationarity | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.coframeLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.coframeLaw` | approved 2026-10-31 |
+| GAC2:native-uniform-detail-residual | Original uniform subdivision has an interior detail residual | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.uniformLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.uniformLaw` | approved 2026-10-31 |
+| GAC2:native-stationary-merge-defect | Corrected stationary native merge still differs from the parent | proved | `Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.mergeLaw` / `Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw` | approved 2026-10-31 |

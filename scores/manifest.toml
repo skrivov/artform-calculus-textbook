@@ -3940,8 +3940,8 @@ See [finding247](findings/247-native-two-cube-incidence.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.geometryLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.geometryLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "a5dc2612113166069ddf63cdafee2e8a2a61709215dc51fe7108c3c84f9b83a9"
 
 [[statement]]
 key = "GAC2:native-six-curved-words"
@@ -3960,8 +3960,8 @@ See [finding248](findings/248-native-six-curved-words.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.wordsLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.wordsLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "9cad8f647abe7d1c4a02d65b0092d483fc14c43113cb62cc07ab6dc090b273db"
 
 [[statement]]
 key = "GAC2:native-curved-five-transport"
@@ -3980,8 +3980,8 @@ See [finding249](findings/249-native-curved-five-transport.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.meanLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.meanLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "efc399447d3bfaf518414d0a4eaafe370e90eb9673016dd5be4cc88627da8911"
 
 [[statement]]
 key = "GAC2:native-curved-ordered-torsion"
@@ -4001,8 +4001,8 @@ See [finding250](findings/250-native-curved-ordered-torsion.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.torsionLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.torsionLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "01a5f62897505534158836b8feaed07b97906868ad6275784e5d270b8dbb6f58"
 
 [[statement]]
 key = "GAC2:native-curved-seam-detail"
@@ -4021,8 +4021,8 @@ See [finding251](findings/251-native-curved-seam-detail.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.seamLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.seamLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "0a710ede366af59b3673731ca2b7c16796d580233594b2f41102e7c74e763318"
 
 [[statement]]
 key = "GAC2:native-current-curved-cell"
@@ -4042,8 +4042,8 @@ See [finding252](findings/252-native-current-curved-cell.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.cellLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.cellLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "c0ce79a0c776fa6b066f3a3457834f028c00fd5f3edbab1439ea23feadb8244d"
 
 [[statement]]
 key = "GAC2:native-current-stationary-detail"
@@ -4065,8 +4065,8 @@ See [finding253](findings/253-native-current-stationary-detail.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.detailLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.detailLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "56c9903985ba29ee5647f4936f4e9573985e27b111bc0ef7c078308f1bcf1cd9"
 
 [[statement]]
 key = "GAC2:native-stationary-coframe-source"
@@ -4086,8 +4086,8 @@ See [finding254](findings/254-native-stationary-coframe-source.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.coframeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.coframeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "ca23ccc0d68a13b1cda8344aa4a74e36f66294db5cd1a9c9985844ffa3f0ec51"
 
 [[statement]]
 key = "GAC2:native-uniform-detail-residual"
@@ -4108,8 +4108,8 @@ See [finding255](findings/255-native-uniform-detail-residual.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.uniformLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.uniformLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "0ac810c424d4e25f4fdcd2fb93ce90245f2b6dfb7f6272cc065c35f40808571d"
 
 [[statement]]
 key = "GAC2:native-stationary-merge-defect"
@@ -4132,5 +4132,5 @@ See [finding256](findings/256-native-stationary-merge-defect.md).
 """
 lean_statement = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.mergeLaw"
 lean_proof = "Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw"
-reviewed = ""
-review_text_sha256 = ""
+reviewed = "2026-10-31"
+review_text_sha256 = "4430a694a7082dbdf60a252795ee1483ae09dc59950cc55e5ce048682c76d38f"

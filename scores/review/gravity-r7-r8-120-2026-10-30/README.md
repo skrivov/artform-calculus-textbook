@@ -362,6 +362,23 @@ material native/physical-gate or efficiency credit. Admitted packets, finite-h
 contours/remainders, full40 physical reconstruction, independent frame/link/history
 matching and the physical current/quotient remain open.
 
+All ten review13 J01–J10 claims were independently approved on31 October2026 at
+freeze `5fb342554a5c710d7603c818fcc93897f2674651`; none returned. See the distinct
+[audit](audit-independent-13.md), [per-key verdicts](verdict-independent-13.json),
+[compact validation](validation-independent-13.json) and
+[exact/adverse replay](arithmetic-independent-13.py). All209 earlier entries/proofs
+and all37 submitted Lean files remain unchanged, giving219 approvals and100/120
+mathematical dispositions. Seventeen separate kernel replays include all seven
+supporting modules; they add0 approvals or rounds. Both exact replays pass.
+The distinct replay checks216 cells and oriented incidences, literal full-cell
+contractions, exact second-order matrix-action derivatives and28 interior-chain
+residuals. Original root curvature sign, five transports, both inverse guards,
+determinant/2 and both torsion metrics are retained. The corrected real stationary
+detail has negative Hessian and a strict merge defect, with a nonzero coframe
+source. These are fixed inherited-coframe/01-boost results. No cross-polyhedron
+map, complete fine-field solution, physical boundary admission, native physical
+gate or J efficiency saving is inferred; additional material native credit is0.
+
 ## Review13: J01–J10, original curved subdivision
 
-Findings247–256 submit ten original-law cubical geometry, transport, torsion, seam, stationary-detail, coframe-source, uniform-chain and corrected merge dispositions. The campaign is100/120,90 approved,209 total before review13. All45 source pairs are authenticated. Review all37 new Lean files, including7 supporting modules and separate kernels for all17 proof/support modules. The fixed coframe/01-boost family does not supply a full40 physical solution or cross-polyhedron map. No J efficiency or native physical-gate credit.
+Findings247–256 submit ten original-law cubical geometry, transport, torsion, seam, stationary-detail, coframe-source, uniform-chain and corrected merge dispositions. At submission,100/120 dispositions were presented,90 approved, with209 total approvals before review13. All45 source pairs are authenticated. Review all37 new Lean files, including7 supporting modules and separate kernels for all17 proof/support modules. The fixed coframe/01-boost family does not supply a full40 physical solution or cross-polyhedron map. No J efficiency or native physical-gate credit.

@@ -1,0 +1,342 @@
+{
+  "date": "2026-10-31",
+  "campaign": "gravity-calculus-r7-r8-120-2026-10-30",
+  "reviewer": "distinct gravity_fidelity_review_01 agent; no implementation authorship",
+  "reviewed_commit": "5fb342554a5c710d7603c818fcc93897f2674651",
+  "approved_count": 10,
+  "returned_count": 0,
+  "original_approvals_preserved": 209,
+  "implementation_modified_by_reviewer": false,
+  "post_freeze_fidelity_correction": false,
+  "entries": [
+    {
+      "key": "GAC2:native-two-cube-incidence",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.geometryLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.geometryLaw",
+      "review_text_sha256": "a5dc2612113166069ddf63cdafee2e8a2a61709215dc51fe7108c3c84f9b83a9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 9,
+      "new_material_native_application": false,
+      "reason": "Exact original cell counts and inherited half-chart coframe/determinant/shared intrinsic columns. Mathematical cubical data only; no cross-polyhedron comparison or physical admission inferred."
+    },
+    {
+      "key": "GAC2:native-six-curved-words",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.wordsLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.wordsLaw",
+      "review_text_sha256": "9cad8f647abe7d1c4a02d65b0092d483fc14c43113cb62cc07ab6dc090b273db",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 10,
+      "new_material_native_application": false,
+      "reason": "All six original based and reverse words with actual roots/forward slots. Both endpoint Lorentz guards retained for two-sided inverse interpretation and original negative inverse-skew; algebraic reductions do not admit unguarded links."
+    },
+    {
+      "key": "GAC2:native-curved-five-transport",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.meanLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.meanLaw",
+      "review_text_sha256": "efc399447d3bfaf518414d0a4eaafe370e90eb9673016dd5be4cc88627da8911",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 16,
+      "new_material_native_application": false,
+      "reason": "Actual active complement is fixed by every original boost path, with all five weights and root sign. Reduced family fold bound separately in Cell to literal all-six original words; no off-family derivative or new quadrature inference."
+    },
+    {
+      "key": "GAC2:native-curved-ordered-torsion",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.torsionLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.torsionLaw",
+      "review_text_sha256": "01a5f62897505534158836b8feaed07b97906868ad6275784e5d270b8dbb6f58",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 11,
+      "new_material_native_application": false,
+      "reason": "Complete ordered nonlinear torsion, determinant/2, both inverse metrics and nonzero coframe guards. Correct negative inherited-h0 density and original fixedkappa; not positive energy or optional coupling rescaling."
+    },
+    {
+      "key": "GAC2:native-curved-seam-detail",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.seamLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.seamLaw",
+      "review_text_sha256": "0a710ede366af59b3673731ca2b7c16796d580233594b2f41102e7c74e763318",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 7,
+      "new_material_native_application": false,
+      "reason": "Injective rational boost parameter, guarded multiplication, same fused report and unequal fine seam. Small positive witness meets the physical Lorentz component; generic algebra alone is not a fine boundary admission theorem."
+    },
+    {
+      "key": "GAC2:native-current-curved-cell",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.cellLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.cellLaw",
+      "review_text_sha256": "c0ce79a0c776fa6b066f3a3457834f028c00fd5f3edbab1439ea23feadb8244d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 33,
+      "new_material_native_application": false,
+      "reason": "Literal six-face/five-transport current curvature plus all ordered torsion at fixed original couplings; symmetric full-law defect and301/808 control correct within family. Not a full40 stationary or geometric-class obstruction."
+    },
+    {
+      "key": "GAC2:native-current-stationary-detail",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.detailLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.detailLaw",
+      "review_text_sha256": "56c9903985ba29ee5647f4936f4e9573985e27b111bc0ef7c078308f1bcf1cd9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 42,
+      "new_material_native_application": false,
+      "reason": "Full source-j*r retained, both derivatives and old nonstationary section checked. Proper boost realized by actual real rapidity with-u<r<0, literal derivative0/value and negative Hessian. Stationary maximum, not positive Gaussian/minimum."
+    },
+    {
+      "key": "GAC2:native-stationary-coframe-source",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.coframeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.coframeLaw",
+      "review_text_sha256": "ca23ccc0d68a13b1cda8344aa4a74e36f66294db5cd1a9c9985844ffa3f0ec51",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 37,
+      "new_material_native_application": false,
+      "reason": "Actual local b!=0 derivative transferred from stationary value to literal action; negative coframe source persists after detail stationarity. No bare canonical momentum or exclusion of other fine fields."
+    },
+    {
+      "key": "GAC2:native-uniform-detail-residual",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.uniformLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.uniformLaw",
+      "review_text_sha256": "0ac810c424d4e25f4fdcd2fb93ce90245f2b6dfb7f6272cc065c35f40808571d",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 37,
+      "new_material_native_application": false,
+      "reason": "Actual root/edge incidence, fixed coarse endpoints and complete cell-sum binding for every child count>=2/interior slot. Opposite curvature derivatives cancel and nonzero original torsion residual remains; side traces and broader physical solution class not fixed."
+    },
+    {
+      "key": "GAC2:native-stationary-merge-defect",
+      "verdict": "approve",
+      "lean_statement": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.Statement.mergeLaw",
+      "lean_proof": "Artform.Scores.GravityBridge.Native.CurvedSubdivision.mergeLaw",
+      "review_text_sha256": "4430a694a7082dbdf60a252795ee1483ae09dc59950cc55e5ce048682c76d38f",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reachable_definition_count": 35,
+      "new_material_native_application": false,
+      "reason": "Corrected stationary literal merge defect strictly positive, exact rationalization4*b*s4, and actual branch within any supplied small log bound. No all-field admission, cross-polyhedron map or full40 obstruction."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/AnalyticSplit.lean": "e223c3aac8019c7ada5289326dfbbb810a49f7303ea3a602c014f844941494a7",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Cell.lean": "37a852b988830d3f41593d921f13733f60a15d1245f7f996ec83bf614dc54a92",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/CellDefs.lean": "27805c65af4fd1b8cf0daf4c35da0e49eaff212574e905162427454f39cd8929",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/CellStatements.lean": "8a71950eacb10bedd81c1e76914064b90ed4d66cc982892e4962f391c6b52826",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Coframe.lean": "8e8abbe47376eb7f0ae65828a30087bf9462ba65874b15bceec8e01e418599c1",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/CoframeDefs.lean": "6e1e4c076104d5b4116c8d0f3d0eeba9149088a011a31e434f840613669a3ab7",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/CoframeStatements.lean": "881ca12b067448d0ea885829312e7116ffcd0a032a69085e370a2a12e52ce1de",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Contacts.lean": "83b981713056db46dd68e91695e1b1d62ce081bdd129ec6bb6e54d55bf6bfdcb",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/CoreBoost.lean": "a64b618134e58b7b52e9dec3c721f6d16429fea5f1119a2218dcb645d7da8fb3",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Detail.lean": "3a3c43e0c34ef1140310dabcca0442abc7dddc90f231a166a611096072031510",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/DetailDefs.lean": "e221fd38aa1aa060dc0d43f0655714786c94e47fbbb24c1fb13b90ba7abd5f47",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/DetailStatements.lean": "29626f6dc1f7a1ed2855315fa90aed6493e90deda1d429b1b544d1914d3e4395",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Geometry.lean": "6a6e82edad21604ccbb4a240cdf371ac524027af0cab4f408c418b4ba69c2a7e",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/GeometryDefs.lean": "c4e724a3ef3c582c42d367ff0e8582978ff6d2999a1a4bb852ac462c4e77e43c",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/GeometryStatements.lean": "ee608c1468b1404d4acc5e2b2424dcc1c3477f301a58c52b1db3a5bbfaebbe25",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Mean.lean": "e2390001b40c153bda109bdfaac8e993686bbe74ac00f3c6d681d09b6cd42d00",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/MeanDefs.lean": "bab4efc5795bb59182be2a1f5b4c23cab25ffc8d4c5c2937b0de6dd32dbca3eb",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/MeanStatements.lean": "91a22520a3a2e4fc92c60d37aed6145754e474c6bc474f164ce46756b805957a",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Merge.lean": "c6d8fdb0c0a50c08d516a86b4767a9b4fde58db0fa39afef9a131160461e9705",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/MergeDefs.lean": "959f5ddd433caeb5e82440395905d04c745362b8ae33acbb9516a414dab5deed",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/MergeStatements.lean": "a919dd4c8aa99b4ca02a8ad63a8433d036c12eb622705634bb5849f8bd2c2624",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Normal.lean": "5e71a1cbf60868e774f1e22f32957d987a4a5511c773657dcbd8e901852cbfd0",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/RealBranch.lean": "f34e707062a70fbb75e8fc01183109fdb7ca1f720b0381023ac1c78bd818c98f",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Seam.lean": "5a09f050f384ae7ed4852a782d8af4ec16cef375ac715caa016ca45acef0bad5",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/SeamDefs.lean": "53eaaa444304226740c0c021cd29a96422872d0df6962eaf532519d4478d8986",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/SeamStatements.lean": "f586d1de1e4abc470d636bde3e5823807b3afec77015faad0bc1245debe71bd8",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/SplitOriginal.lean": "dad9eff41d4d48a4b317b39e52434d2d74bea98f55037c69a1dc060a416e3078",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Torsion.lean": "92fdd5d4329fef5d2a4c8277096e2911fbf7c0aebeb316030ff3443144ebfbe4",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/TorsionDefs.lean": "0144c7e26b6302bad50ace757e759a83de5331d33edca17ce99f7234ea6726f9",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/TorsionStatements.lean": "a0f3522f524970ee529cda30bb43de2b0a7c1b37302534c05ccbe30d23e0d5ff",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Uniform.lean": "f02d0cfd1221e550542d4ff5300568380febe0c94df895ffd9902b506a5f5c31",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/UniformBase.lean": "8886a5cf7686b2e41000464f50d4df455085e87087046268c33e5a35f07ab4f7",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/UniformDefs.lean": "c044e609b4e48e1ea86d175d952e67b41b45397f7be94bd344ae44ebe645ac4e",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/UniformStatements.lean": "6d1295c5e1cc8d1bbcac76a06e023110949f50afd315083cab444412008610b8",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/Words.lean": "a47b81f71dc2469fb1b4ac3bbd412b3fd1b0bc975e268745ba087602413fc900",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/WordsDefs.lean": "3640530bf04f37002eeebf883c968dfe9bca7f18f5b95bcc0f40a3bf0efe1838",
+    "scores/ArtformScores/GravityBridge/Native/CurvedSubdivision/WordsStatements.lean": "fe9b348048f2fd1a658b2eabfc90a8798e1650f5851967e9c3eeb6e3b4cae0ed"
+  },
+  "canonical_input_sha256": {
+    "physics/ledgers/lattice-waves/ALGEBRA-OF-SCORES.md": "05f501cc63ae313925de675451c2f672d7dcb834d0ede8d27c036fcabf7a5a45",
+    "physics/ledgers/lattice-waves/findings/247-native-two-cube-incidence.md": "5f54d4fdab65c656462e9c25a1765bf8c32ac4e1d9b35ee119719452a8fb9cfc",
+    "physics/ledgers/lattice-waves/findings/248-native-six-curved-words.md": "4f7bc06ef21bdff73bf6263a2ca612445f9e7d5857194833eef298893328cd87",
+    "physics/ledgers/lattice-waves/findings/249-native-curved-five-transport.md": "2dc4f5e646e4a0914ae46ecee241bbb6d58c6f4f483543bd6d91caad442c346f",
+    "physics/ledgers/lattice-waves/findings/250-native-curved-ordered-torsion.md": "b4efd15605ca954495f7c510591db1834580a7ea216b931e693b27d793fdb7e0",
+    "physics/ledgers/lattice-waves/findings/251-native-curved-seam-detail.md": "be4be634afd8adb91a1a1f8b8e614eaf8c830c10c51d2db733d81af0f6dda791",
+    "physics/ledgers/lattice-waves/findings/252-native-current-curved-cell.md": "f2ee6b25661b2a720f48aa285d91731557c1fa44f2cb72fc6126f91c7616ab4b",
+    "physics/ledgers/lattice-waves/findings/253-native-current-stationary-detail.md": "d38fb7dfdb15eabfa32778d5650e8835ad382d7390c24d24f6ee9d4b10c65a44",
+    "physics/ledgers/lattice-waves/findings/254-native-stationary-coframe-source.md": "a3b5b7514d5ff6218cb3cddfafac255c197733b378b8359a143dcd44b6d82288",
+    "physics/ledgers/lattice-waves/findings/255-native-uniform-detail-residual.md": "b0742f89b4c93c7efbadc0a2e41a969bfa9a72c4a3f0950c97e6a084e9c1bda6",
+    "physics/ledgers/lattice-waves/findings/256-native-stationary-merge-defect.md": "ba7b4b3fb9654f0c1c0840394a7c1418a0782414c6e4b2641ef18006fd829598"
+  },
+  "canonical_literal_quotes_exact": true,
+  "source_pins_sha256": "7782d960421cab64f12dc3dd7a43d73a6d9125bcc766e0aa8f493ea8a7b87a42",
+  "exact_original_snapshot_pairs_authenticated": 45,
+  "scope_checks": {
+    "actual_old_cube_data_not_cross_polyhedron_map": true,
+    "inherited_half_chart_volume_and_intrinsic_columns": true,
+    "all_six_original_words_and_incoming_owners": true,
+    "both_endpoint_Lorentz_guards_for_inverse": true,
+    "five_actual_transports_original_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.125,
+      0.125
+    ],
+    "root_curvature_minus_inverse_skew": true,
+    "all_ordered_torsion_det_half_and_both_inverse_metrics": true,
+    "original_lattice_length_cancels_not_h0_coframe_column": true,
+    "fixed_kappa_no_optional_gamma_scaling": true,
+    "full_current_law_native_symmetric_defect": "301/808",
+    "seam_varies_despite_same_fused_report": true,
+    "source_minus_jr_retained": true,
+    "actual_real_stationary_rapidity_not_only_formal_Lorentz_point": true,
+    "same_rapidity_guard": "-u<r<0; both children in(0,2u)",
+    "stationary_Hessian": "-b*sqrtD<0; maximum, not minimum/positive Gaussian",
+    "local_nonzero_coframe_source_not_boundary_momentum": true,
+    "every_uniform_child_count_ge2_and_interior_slot": true,
+    "coarse_endpoint_phases_fixed_fine_side_data_not_fixed": true,
+    "strict_corrected_merge_rationalization": "4*b*sinh(u)^4",
+    "small_log_guard_not_full_physical_admission": true
+  },
+  "independent_arithmetic": {
+    "script": "arithmetic-independent-13.py",
+    "sha256": "7354834682fc9df4d61b7e195ca59a733baeb861cb58794ee7b3d0e2a8fe418c",
+    "command": [
+      "python3",
+      "scores/review/gravity-r7-r8-120-2026-10-30/arithmetic-independent-13.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 21.321,
+    "result": {
+      "efficiency_credit": 0,
+      "exact_literal_rapidity_and_coframe_second_jets": 24,
+      "guardless_reverse_inverse_rejected": true,
+      "independent_incidence_cells": 216,
+      "internal_shared_facet_cancels": true,
+      "literal_six_face_full_cell_cases": 24,
+      "literal_uniform_interior_derivatives": 28,
+      "native_q2_defect": "301/808",
+      "new_native_physical_gate": 0,
+      "oriented_boundary_squared_zero": true,
+      "source_contacts_retained": true,
+      "source_sha256": {
+        "scores/review/gravity-r7-r8-120-2026-10-30/source-pins.json": "7782d960421cab64f12dc3dd7a43d73a6d9125bcc766e0aa8f493ea8a7b87a42",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/actual-curved-cube-parent.md": "0d56b797228dea181902a1430c737dc2308027f33b559dcec76dbfdbf7e16e5c",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/actual-curved-cube-producer.py": "3389be759aaaa57601b81896620cdc5dfbacf4c32f49f98a07b17021eb91a9a3",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/original-nonlinear-torsion.md": "bdd049a8a3438dfbd56cae6718c61327932b3d722a8db390e9379ea194f89341",
+        "scores/review/gravity-r7-r8-120-2026-10-30/source/original-transported-curvature.md": "738a55ce3c80ef47b792a5965b548e2b690e6272711167ab9806757b9dbe66da"
+      },
+      "stationary_discriminant_merge_and_rapidity_interval_cases": 4,
+      "status": "passed"
+    }
+  },
+  "root_replay_reproduced_without_published_JSON_mutation": {
+    "script": "curved-subdivision-root-13.py",
+    "script_sha256": "af2784c8cd3240d9645f31d78baf457f2fca5fc797078f19b7f04ff6aed4e7db",
+    "command": [
+      "python3",
+      "curved-subdivision-root-13.py (identical code; receipt redirected to temporary file)"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.443,
+    "result": {
+      "status": "passed",
+      "geometry_counts": [
+        [
+          16,
+          32,
+          24,
+          8,
+          1
+        ],
+        [
+          24,
+          52,
+          42,
+          15,
+          2
+        ]
+      ],
+      "literal_full_cell_cases": 16,
+      "all_six_word_cases": 96,
+      "exact_stationary_discriminants": [
+        "4575451/5151505000",
+        "325748/2295225",
+        "23332/10201",
+        "660953/91809",
+        "10449053/999698"
+      ],
+      "source_pins": 45,
+      "original_law": "six based/inverse words, all five transports, all ordered torsion indices; kappa1/101",
+      "scope": "fixed inherited cubical coframe and01-boost family; full physical gate0; efficiency0"
+    },
+    "published_receipt_sha256_unchanged": "94930580d9de8e936298f6da4c042a805a2b5f9753cc0ddd84c82f3aed31f0f2"
+  },
+  "native_scope_assessment": {
+    "new_material_native_applications": 0,
+    "current_campaign_material_native_applications": 0,
+    "inherited_first_campaign_scoped_R2_applications_unchanged": 1,
+    "new_historical_runtime_Lean_full40_physical_or_prospective_efficiency_credit": 0,
+    "prior_C10_E08_H08_prospective_comparisons_unchanged": true,
+    "actual_full_current_cell_and_corrected_one_detail_binding_now_instantiated": true,
+    "new_admitted_native_physical_construction": false,
+    "uninstantiated_bridges": [
+      "actual cube/octahedron/stella incidence and comparison map",
+      "full fine coframe/connection/detail equations rather than inherited restricted family",
+      "independent complete boundary/source/frame/link/history prescriptions and physical admission",
+      "native full40 solution/geometric quotient/current reconstruction",
+      "source-dependent stationary reduction with all contacts and physical quantum measure/contour",
+      "uniform refinement/continuum limits and parent completion"
+    ]
+  },
+  "campaign_dispositions_completed_after_review": 100,
+  "campaign_target": 120,
+  "total_approvals_after_review": 219,
+  "audit": "audit-independent-13.md",
+  "validation": "validation-independent-13.json"
+}
