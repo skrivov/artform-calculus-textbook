@@ -167,5 +167,32 @@
     "lean_proof": "Artform.Scores.NonabelianGravity.nativeBoundaryComposition",
     "source": "LEGENDRE-CONTRACT.md",
     "review_status": "approved_independent_08"
+  },
+  {
+    "key": "NGB:native-boundary-conditioning",
+    "title": "Actual spatial boundary symbol and kernel-aware nonuniform conditioning",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeBoundaryConditioning",
+    "lean_proof": "Artform.Scores.NonabelianGravity.nativeBoundaryConditioning",
+    "statement": "For the same physically unselected complete Full40 Taylor candidate, retain all complement/contact/torsion terms and all40 independent old/new components. On Fin3 time times the multiplicative unit circle use shifts(1,0),(0,r),0,0, with r=(399+40i)/401. At time0 use u times s^n and at time1 v times s^(-n). At the spatial identity subtract the old-only and new-only quadratic densities to define circleMixed(n,u,v). Four-corner source binding and exact expansion identify it with u.B(r^n).v for the declared88-entry reciprocal Laurent symbol B. The corresponding finite read-table identity holds for every nonzero complex z and every u,v. The actual rotation has unit norm, irrational angle/(2pi), dense integer powers and no integer power equal to-1. The declared six-row witness obeys W(z)^T B(z)=(10201+10589z)(1+z)e22^T/2. For boost unit e22=A1^01, B(z)e22=-(1+z)(e10+e15)/4 and its point-space supremum norm is |1+z|/4. At every actual integer harmonic each kernel vector has coordinate22=0 and is Hermitian-orthogonal to e22. Nevertheless there is no real constant C such that |v22|<=C||B(r^n)v|| in that supremum norm for all integer n and all complex40 vectors v. This is an exact native cut-boundary harmonic conditioning criterion beyond mere singularity. It is not a completed infinite Fourier/L2 operator theorem, a failure of every smooth inverse, a physical mode classification or a selected gravitational evolution.",
+    "review_status": "approved_independent_09",
+    "novelty_status": "source_bound_specialization_of_known_framework"
+  },
+  {
+    "key": "NGB:native-history-source-guard",
+    "title": "Third-cell native Ward source compatibility and an active-source counterexample",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeHistorySourceGuard",
+    "lean_proof": "Artform.Scores.NonabelianGravity.nativeHistorySourceGuard",
+    "statement": "For the approved complete spatial-zero-character Taylor cut action over rational fields, retain both40-component momentum-matching equations of a three-cell history, p+(x,y)-p-(y,v)=j1 and p+(y,v)-p-(v,z)=j2, with arbitrary fixed endpoints x,z. A Lorentz parameter w supported only at history time2 in Fin5 gives the actual Full40 gauge field g1(w) at time1 with only A0=w, and g2(w) at time2 with F=lie(w),A0=-w; the endpoint fields vanish. The six explicit sparse columns satisfy A*g1+B*g2=0, B^T*g1+A*g2=0, B*g1=0 and B^T*g2=0, where A=H0+H1 and B is the actual one-cell mixed matrix. Every matched history obeys g1(w).j1+g2(w).j2=0 for every rational bivector w. The source j1=e16,j2=0 satisfies the previous two-cell inactive-coordinate guard Jj1=j1 but admits no three-cell matching for any endpoints: w=e01 gives the incompatible pairing1. Zero fields and sources do match. This supplies an additional native source guard for composition; it does not claim a new general Ward identity, classify every kernel or history length, identify all null directions as gauge, or solve nonlinear/physical gravity constraints.",
+    "review_status": "approved_independent_09",
+    "novelty_status": "source_bound_specialization_of_known_framework"
+  },
+  {
+    "key": "NGB:native-quantum-kernel-tests",
+    "title": "Native real negative ray and flat-output tests for an explicit naive phase kernel",
+    "lean_statement": "Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests",
+    "lean_proof": "Artform.Scores.NonabelianGravity.nativeQuantumKernelTests",
+    "statement": "For the same complete spatial-zero-character cut Taylor action over real40-vectors let d=e25 and a=e25+e32+e39 in native rotational diagonal coordinates. The vector d is nonzero, L(u,v+t*d)=L(u,v) for all real u,v,t, and L(t*a,0)=-291*t^2/101 for every real t. Consequently the explicitly defined constant-amplitude phase kernel K_hbar(u,v)=exp(i*L(u,v)/hbar) is independent of that output coordinate for every real hbar,u,v,t under Lean's total division convention, in particular for positive hbar. These are finite exact action/kernel screening identities. No multidimensional integral, integrability or divergence theorem, physical measure, contour, reduced Hilbert space, unitary propagation or selected quantum gravity theory is inferred; alternative constrained/compact amplitudes and measures remain open.",
+    "review_status": "approved_independent_09",
+    "novelty_status": "source_bound_specialization_of_known_framework"
   }
 ]

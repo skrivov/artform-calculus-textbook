@@ -287,3 +287,6 @@ One line per verdict. Approvals are written by `scripts/ledger_status.py --appro
 - 2026-10-31: `NGB:native-rotation-import-test` approved as `Artform.Scores.NonabelianGravity.Statement.nativeRotationImportTest` (text e16407aa578e)
 - 2026-10-31: `NGB:native-legendre-score` approved as `Artform.Scores.NonabelianGravity.Statement.nativeLegendreScore` (text 1e0b7922bc14)
 - 2026-10-31: `NGB:native-boundary-composition` approved as `Artform.Scores.NonabelianGravity.Statement.nativeBoundaryComposition` (text 201c265ec15a)
+- 2026-10-31: `NGB:native-boundary-conditioning` approved as `Artform.Scores.NonabelianGravity.Statement.nativeBoundaryConditioning` (text 23010974621e)
+- 2026-10-31: `NGB:native-history-source-guard` approved as `Artform.Scores.NonabelianGravity.Statement.nativeHistorySourceGuard` (text d9ca9339f980)
+- 2026-10-31: `NGB:native-quantum-kernel-tests` approved as `Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests` (text ba9c69f4705e)

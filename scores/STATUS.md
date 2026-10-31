@@ -6,10 +6,10 @@
 
 | Status | Statements |
 |---|---|
-| proved | 274 |
+| proved | 277 |
 | stated | 4 |
 | planned | 0 |
-| **total** | **278** |
+| **total** | **281** |
 
 ## Statements
 
@@ -293,3 +293,6 @@
 | NGB:native-rotation-import-test | Complete native force rejects the conditional rotational diagonal import | proved | `Artform.Scores.NonabelianGravity.Statement.nativeRotationImportTest` / `Artform.Scores.NonabelianGravity.nativeRotationImportTest` | approved 2026-10-31 |
 | NGB:native-legendre-score | Native cut action, affine boundary covectors and a singular score factorization | proved | `Artform.Scores.NonabelianGravity.Statement.nativeLegendreScore` / `Artform.Scores.NonabelianGravity.nativeLegendreScore` | approved 2026-10-31 |
 | NGB:native-boundary-composition | Native two-cell source compatibility, effective action and nonextension | proved | `Artform.Scores.NonabelianGravity.Statement.nativeBoundaryComposition` / `Artform.Scores.NonabelianGravity.nativeBoundaryComposition` | approved 2026-10-31 |
+| NGB:native-boundary-conditioning | Actual spatial boundary symbol and kernel-aware nonuniform conditioning | proved | `Artform.Scores.NonabelianGravity.Statement.nativeBoundaryConditioning` / `Artform.Scores.NonabelianGravity.nativeBoundaryConditioning` | approved 2026-10-31 |
+| NGB:native-history-source-guard | Third-cell native Ward source compatibility and an active-source counterexample | proved | `Artform.Scores.NonabelianGravity.Statement.nativeHistorySourceGuard` / `Artform.Scores.NonabelianGravity.nativeHistorySourceGuard` | approved 2026-10-31 |
+| NGB:native-quantum-kernel-tests | Native real negative ray and flat-output tests for an explicit naive phase kernel | proved | `Artform.Scores.NonabelianGravity.Statement.nativeQuantumKernelTests` / `Artform.Scores.NonabelianGravity.nativeQuantumKernelTests` | approved 2026-10-31 |

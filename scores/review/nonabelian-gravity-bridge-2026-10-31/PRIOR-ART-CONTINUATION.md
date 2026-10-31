@@ -43,3 +43,11 @@ maps. The operational decision is narrower: pursue the exact native
 boundary admission, source compatibility and topology questions; record
 which physical selections remain absent; do not rename known kinematics
 or a reference representation as a solution to quantum gravity.
+
+The follow-up boundary tests remain specializations. Hoehn's quadratic
+classification sections5,7-10 explicitly discusses secondary compatibility,
+rank changes and constraints on composed quantum propagators. Its phase
+ansatz includes a measure factor; an action by itself is not a physical
+propagator. The current native source16 counterexample, actual reciprocal
+boundary symbol and exact real ray/flat-output identities are the new
+checked data, not new general constraint or quantization principles.

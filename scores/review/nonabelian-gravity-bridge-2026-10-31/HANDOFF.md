@@ -1,3 +1,23 @@
+# Current handoff: native boundary continuation, independent09 approved
+
+Read GRAVITY-HANDOFF-BOUNDARY.md, BOUNDARY-CONTINUATION-CONTRACT.md,
+BOUNDARY-CONTINUATION-RESULTS.md and SUCCESSOR-ASSESSMENT.md. Three additive
+claims and11Boundary modules are independently approved; all11kernel
+replays and the fresh full-build/source/report freeze pass. There are
+281scores,277approved and4inherited CNI pending;23NGB claims in67modules.
+All274baseline approvals and56NGB production modules atbf99338 stand.
+
+The campaign found four bounded native research-tool bundles and concludes
+on that success branch. All8physical gravity routes remain open. The
+actual circle result is a literal mixed-density/harmonic criterion, not a
+completed globalL2 theorem. Third-cell source admission and finite quantum
+kernel tests retain their exact source/domain limits. Future source-gated
+contracts are listed in continuation-search.json. The gravity programme
+stays frozen. Use validate-boundary-root.py and the owned-lane receipt
+PUBLICATION-BOUNDARY.json; earlier validators remain historical.
+
+The following preserves earlier stage handoffs.
+
 # Current handoff: native boundary tool, independent review08
 
 Read GRAVITY-HANDOFF-LEGENDRE.md, LEGENDRE-CONTRACT.md and LEGENDRE-RESULTS.md.

@@ -1,0 +1,19 @@
+{
+  "source_sha256": "75c271221658f2157deaa1ce6e3c57b1cb5e03add131321e165d487c0440f2bc",
+  "problem": "All6400 rational Hessian coefficients of the same80-input native Full40 cut density; spatial-zero character,kappa1/101",
+  "same_coefficients": true,
+  "dense_scalar_density_evaluations": 3240,
+  "sparse_symbolic_density_expansions": 1,
+  "sparse_nonzero_monomials": 204,
+  "observations": [
+    {
+      "method": "dense",
+      "seconds": 8.480539826996392
+    },
+    {
+      "method": "sparse",
+      "seconds": 0.01363253200543113
+    }
+  ],
+  "limits": "Single matched local run; includes each matrix construction, excludes shared definitions and output checks. Not a benchmark against optimized solvers; host load and software affect seconds. No physical or general algorithmic speedup theorem."
+}

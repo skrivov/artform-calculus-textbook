@@ -36,9 +36,9 @@
       ],
       "successor": {
         "id": "X02b",
-        "status": "active",
+        "status": "approved_independent_09",
         "question": "Preserve the additional Ward source compatibility when a third native cell is attached.",
-        "evidence": "Independent exact active ranks36,66,96,126 for N2..5, and six new Schur null directions at N3. Actual compact Ward columns reproduced. Full40 source binding and symbolic kernel proofs in Lean scratch. No all-N classification claim."
+        "evidence": "BOUNDARY-CONTINUATION-CONTRACT.md; BoundaryHistoryDefs/Columns/Kernel; source16 old-guard pass and all-endpoint three-cell rejection."
       },
       "registered_claims": [
         "NGB:native-legendre-score",
@@ -64,39 +64,51 @@
     },
     {
       "id": "X04",
-      "status": "active_source_symbol_certificate",
+      "status": "approved_independent_09",
       "question": "Test nonzero actual spatial characters and distinguish zero-character artifacts from source-wide conclusions.",
       "gate": "Current spatial shift r, original spatial averages and endpoint terms; no temporal/spatial substitution.",
       "next": "X05",
-      "finding": "The full reciprocal-character source identity, sparse column22 left witness, irrationality and density of the actual rational circle rotation compile in Lean scratch. Public09 source binding, topology statement and independent review remain.",
-      "next_goal": "Bind actual native mixed-character source and certify sparse column/left-witness identities before claiming a boundary inverse obstruction."
+      "finding": "Literal actual circle mixed density bound at the spatial identity; all80 inputs,88 Laurents, exact column22 and six-row witness, dense actual integer powers, kernel coordinate22 zero and failed uniform coordinate estimate. Pi supremum norm explicitly fixed; no global L2 theorem.",
+      "next_goal": "Bounded native conditioning criterion complete; global Haar/Fourier operator construction remains a separately scoped mathematical successor."
     },
     {
       "id": "X05",
-      "status": "conditional",
+      "status": "finite_screening_approved_09_physical_selection_open",
       "question": "Derive a justified finite-dimensional quantum boundary kernel or a precise obstruction, retaining constraints, measure and common domains.",
       "gate": "X01-X04 native binding; source-selected convergence/oscillatory prescription, physical versus reference representation stated.",
       "next": "X06",
-      "research_note": "Active middle inertia independently(15+,21-); unrestricted positive Gaussian fails, conditional Fresnel recipe remains a reference construction. Stationary elimination is not integration."
+      "research_note": "Real negative ray -291t^2/101 and nonzero flat output direction give exact finite tests of the specified constant-amplitude phase kernel. No multidimensional integral or divergence theorem. New measure/amplitude/constraint/contour choices would define a reference construction, not select physical gravity."
     },
     {
       "id": "X06",
-      "status": "conditional",
+      "status": "source_selection_gate_open_after_prior_adverse_controls",
       "question": "Reassess curved compact-score/native field maps, including boost/rotation signs, Barbero alternatives, intrinsic geometry and regular reduction.",
       "gate": "Actual source-selected canonical variables and generator; known AMM/Barbero results do not count as a discovery.",
-      "next": "X07"
+      "next": "X07",
+      "finding": "Earlier seam/Gram-sector and all40 native rotational-import controls rule out the tested identifications. Lorentz/boost/Barbero relabelling does not construct the absent native curved canonical map. Other domains/small flows remain possible; no universal no-go."
     },
     {
       "id": "X07",
-      "status": "conditional",
+      "status": "matched_native_hessian_comparison_and_successor_assessment_checked_09",
       "question": "Compare exact elimination or factorization against the same frozen native answer, audit all viable successors, publish usefulness/exhaustion assessment.",
       "gate": "Matched problem/domain/source; independent review; remaining conditional gaps recorded as open rather than universal no-go.",
-      "next": "finish"
+      "next": "finish",
+      "evidence": [
+        "boundary-benchmark-root.py",
+        "boundary-benchmark-data.json",
+        "SUCCESSOR-ASSESSMENT.md",
+        "GRAVITY-HANDOFF-BOUNDARY.md"
+      ],
+      "finding": "Same6400 exact Hessian coefficients;3240 scalar density evaluations versus one sparse symbolic expansion with204monomials. One observational timing run, not an optimized-solver or physical-evolution speedup theorem."
     }
   ],
   "new_research_round_count": 0,
   "prior_C_D_stages_activated": false,
   "gravity_programme_modified": false,
-  "bounded_native_boundary_research_tools_approved": 1,
-  "selected_physical_gravity_applications": 0
+  "bounded_native_boundary_research_tools_approved": 4,
+  "selected_physical_gravity_applications": 0,
+  "status": "completed_relevant_native_research_tools_found",
+  "completion_branch": "relevant_research_tools_found_with_explicit_successor_dispositions",
+  "assessment": "SUCCESSOR-ASSESSMENT.md",
+  "handoff": "GRAVITY-HANDOFF-BOUNDARY.md"
 }

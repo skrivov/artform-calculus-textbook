@@ -1,3 +1,9 @@
+Current stage: independent09 native boundary continuation. See STATUS.md,
+BOUNDARY-CONTINUATION-CONTRACT.md, GRAVITY-HANDOFF-BOUNDARY.md and
+SUCCESSOR-ASSESSMENT.md. The bounded campaign found useful native tools;
+all physical gravity routes remain open. validate-boundary-root.py is the
+current validator. Historical text follows.
+
 # Non-Abelian scores: the gravity bridge campaign
 
 The current result is the [native boundary tool](LEGENDRE-RESULTS.md):
