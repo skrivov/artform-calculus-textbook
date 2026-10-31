@@ -156,3 +156,13 @@ import ArtformScores.GravityBridge.Native.SlowCompanion.Equivalence
 import ArtformScores.GravityBridge.Native.NativeCurrent.OwnedWindow
 import ArtformScores.GravityBridge.Native.NativeCurrent.CostEnergy
 import ArtformScores.GravityBridge.Native.R7Blocks.LeadingPreparation
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Inverse
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Band
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Leading
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Companion
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Exceptional
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.PairedConnection
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Axis
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Scaling
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.Growing
+import ArtformScores.GravityBridge.Native.CoordinateSymbol.ForcedRow

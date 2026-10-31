@@ -3311,3 +3311,202 @@ lean_statement = "Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leading
 lean_proof = "Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw"
 reviewed = "2026-10-31"
 review_text_sha256 = "2067e72fb55257ebb6b09362840c913e4a624ac4fc5354aa42fd6507647d4bfa"
+
+[[statement]]
+key = "GAC2:native-reflected-band-inverse-guards"
+label = "GAC2:native-reflected-band-inverse-guards"
+title = "Compact reflected band and both native light-cone guards"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-reflected-band-inverse-guards)"
+statement = """
+**GAC2:native-reflected-band-inverse-guards (compact reflected band and both native light-cone guards).** The closed reflected band9<=R=|k|^2<=25, k_i^2<=81R/100 is compact,
+contains(1,2,3) and(1,2,4), and has3<=sqrt(R)<=5 and |k_i|<=9sqrt(R)/10.
+For the original simple-bivector coordinate symbol on either physical light cone,
+d=-(S3-sigma*rho^3)^2/4<=-729/400. The displayed actual coordinate inverse
+therefore satisfies both matrix inverse identities on both branches. This is a
+pointwise leading-symbol and compact-band guard, not a finite-h remainder or a
+uniform physical-source/history estimate.
+See [finding217](findings/217-native-reflected-band-inverse-guards.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.bandLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.bandLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-coordinate-two-sided-inverse"
+label = "GAC2:native-coordinate-two-sided-inverse"
+title = "Original simple-bivector coordinate inverse"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-coordinate-two-sided-inverse)"
+statement = """
+**GAC2:native-coordinate-two-sided-inverse (original simple-bivector coordinate inverse).** For the original Lorentz-simple face r=(p^[2] wedge p)/2, C=eta*K
+satisfies C^2=d*C. Writing a=9999/9991 and b=10201/10300 gives the
+explicit two-value inverse of a*d*I+(b-a)*C with numerator b*d*I+(a-b)*C
+and denominator a*b*d^2. Both multiplication orders are checked, retaining
+a,b,d!=0. Restoring the original2/101 and eta factors yields the two-sided
+native upper inverse. Conjugating symbol and inverse by eta yields both lower-basis
+identities. No inverse is asserted at d=0.
+See [finding218](findings/218-native-coordinate-two-sided-inverse.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.inverseLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.inverseLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-quartic-leading-inverse"
+label = "GAC2:native-quartic-leading-inverse"
+title = "Complete coordinate quartic and leading inverse"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-quartic-leading-inverse)"
+statement = """
+**GAC2:native-quartic-leading-inverse (complete coordinate quartic and leading inverse).** With temporal momentum(-j*z,k), j^2=-1, the original coordinate symbol
+is exactly G0+z*G1+z^2*G2+z^3*G3+z^4*G4, with all five coefficients
+obtained from the displayed bilinear face pairing. Its G4 is
+(1/202)*diag(D*R,-H*R*I+(H-D)*k*k^T), H=9999/9991,D=10201/10300.
+For R!=0 the displayed temporal/transverse/longitudinal inverse satisfies both
+multiplication orders. This binds the genuine leading quartic; it supplies no numerical
+finite-h Taylor remainder or variable-background/nonlinear source constant.
+See [finding219](findings/219-native-quartic-leading-inverse.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.leadingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.leadingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-quartic-companion-binding"
+label = "GAC2:native-quartic-companion-binding"
+title = "Native quartic bound to the full four-jet companion"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-quartic-companion-binding)"
+statement = """
+**GAC2:native-quartic-companion-binding (native quartic bound to the full four-jet companion).** Map the actual five native coordinate matrices to linear maps. Their polynomial
+is exactly the original symbol at(-j*z,k), j^2=-1. Using the actual two-sided
+G4 inverse for R!=0 and coordinate-symbol inverse for d!=0, the complete
+four-jet resolvent solves(zI-N)x=b for every sixteen-component b and is unique.
+All four Cauchy contacts and all five coefficients are retained. The proof uses the
+full non-nilpotent companion; it does not fund a uniform contour, spacing/source norm
+or physical preparation bound from arbitrary inverse parameters.
+See [finding220](findings/220-native-quartic-companion-binding.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.companionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.companionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-angular-exceptional-domains"
+label = "GAC2:native-angular-exceptional-domains"
+title = "R7 and R8 exceptional directions differ"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-angular-exceptional-domains)"
+statement = """
+**GAC2:native-angular-exceptional-domains (r7 and r8 exceptional directions differ).** For R!=0 the R8 angular coefficient Psi=S4-S3^2/R satisfies
+R*Psi=sum_(i<j) k_i^2*k_j^2*(k_i-k_j)^2. Thus Psi=0 exactly when
+all nonzero spatial components have one common value. Both(3,3,0) and(3,-3,0)
+belong to the explicit R7 band, but their Psi values are0 and162. The R7 two-cone
+inverse guard therefore does not give a uniform nonzero R8 quartic angular coefficient
+on that whole band. Vanishing of this coefficient alone does not decide the complete
+finite-h numerator/source problem.
+See [finding221](findings/221-native-angular-exceptional-domains.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.exceptionalLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.exceptionalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-angular-zero-connection-return"
+label = "GAC2:native-angular-zero-connection-return"
+title = "Connection response persists on an angular-zero ray"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-angular-zero-connection-return)"
+statement = """
+**GAC2:native-angular-zero-connection-return (connection response persists on an angular-zero ray).** At k=(3,3,0), q=[[1/2,-1/2,0],[-1/2,1/2,0],[0,0,-1]] is symmetric,
+trace-free and transverse, with full Frobenius square2. Its original real temporal
+forcing coefficient is-27/101. For the original spatial12 block at zero TT velocity,
+z=q12_ddot/4=9/4. The full signed first connection return is(0,-9/206,9/206),
+and its difference from curvature-only preparation is(0,9/10403,-9/10403).
+These are nonzero lower-block responses at Psi=0, not a proof that the original full
+connection prescription fails there.
+See [finding222](findings/222-native-angular-zero-connection-return.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.pairedConnectionLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.pairedConnectionLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-axis-complete-source-numerator"
+label = "GAC2:native-axis-complete-source-numerator"
+title = "Axis branches retain the complete mixed numerator"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-axis-complete-source-numerator)"
+statement = """
+**GAC2:native-axis-complete-source-numerator (axis branches retain the complete mixed numerator).** For p=(a,a,0,0), every original face r vanishes, the complete coordinate symbol
+vanishes, and the displayed six-face lower mixed source vanishes for every tensor Q.
+For the opposite branch p=(-a,a,0,0), the actual discriminant is-a^6 and the
+original coordinate inverse exists in both orders when a!=0. This classifies the
+literal symbol and full mixed numerator, rather than treating every spatial axis and
+both signs as one denominator obstruction. Source admission and full finite-h
+reconstruction remain separate.
+See [finding223](findings/223-native-axis-complete-source-numerator.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.axisLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.axisLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-frequency-response-scaling"
+label = "GAC2:native-frequency-response-scaling"
+title = "Frequency degrees of symbol and forced response"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-frequency-response-scaling)"
+statement = """
+**GAC2:native-frequency-response-scaling (frequency degrees of symbol and forced response).** Under p->s*p the original face, discriminant/symbol and mixed source with
+Q->s^2*Q scale by s^3,s^6,s^5. For s!=0,d!=0 both the upper and lower
+coordinate inverses scale by s^-6, so the lower-coordinate response scales by s^-1.
+A displayed full-face input at p=(-1,1,0,0) has lower response
+(0,0,0,-9991/9999), giving component-9991/(9999*s) after scaling.
+This concrete face-source family is not asserted to belong to the original nonlinear
+or TT compatibility-source class, nor to be an L2 wave packet.
+See [finding224](findings/224-native-frequency-response-scaling.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.scalingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.scalingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-coordinate-extra-real-root"
+label = "GAC2:native-coordinate-extra-real-root"
+title = "Extra real root of an actual coordinate column"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-coordinate-extra-real-root)"
+statement = """
+**GAC2:native-coordinate-extra-real-root (extra real root of an actual coordinate column).** At temporal momentum(-j*z,a,-a,0), j^2=-1, the original discriminant is
+-(a^2/2)*(z^2-2*a^2)*(z^2+a^2). The complete upper-symbol column on e3 is
+-kappa*H*a^2*(z^2-2*a^2)*(z^2+a^2)*e3, kappa=1/101,H=9999/9991.
+It vanishes at z^2=2*a^2, including the positive root sqrt(2)*a when a>0.
+This is an extra leading coordinate root, not a selected TT light-cone mode or a
+physical instability, quantum mode count or nonlinear admission theorem.
+See [finding225](findings/225-native-coordinate-extra-real-root.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.growingLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.growingLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC2:native-forced-row-zero-four-jet"
+label = "GAC2:native-forced-row-zero-four-jet"
+title = "Unit-row forcing with zero initial four-jet"
+source = "ALGEBRA-OF-SCORES.md section 8 (GAC2:native-forced-row-zero-four-jet)"
+statement = """
+**GAC2:native-forced-row-zero-four-jet (unit-row forcing with zero initial four-jet).** For the actual paired-axis row at a=1, let l^2=2 and
+u(t)=-(101*9991/9999)*(cosh(l*t)+2*cos(t)-3)/6. The displayed five jets
+are successive actual derivatives, the first four initial jets vanish, and
+[-(1/101)*(9999/9991)]*(u4-u2-2*u0)=1 at every t.
+Thus resetting all four initial jets does not remove a general forced native-row
+response. Whether this unit forcing is in the original admitted nonlinear compatibility
+range is not asserted; a complete time/source budget remains unfunded.
+See [finding226](findings/226-native-forced-row-zero-four-jet.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.forcedRowLaw"
+lean_proof = "Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw"
+reviewed = ""
+review_text_sha256 = ""

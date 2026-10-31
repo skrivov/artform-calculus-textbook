@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "native_two_sided_instances": 5,
+  "native_quartic_samples": 4,
+  "complete_native_companion_basis_sources": 16,
+  "lower_source_scaling_instances": 3,
+  "growing_row_samples": 15,
+  "native_unit_row_normalization": true,
+  "source_pairs": 39,
+  "finite_h_remainder_funded": false,
+  "admitted_nonlinear_source_binding": false,
+  "new_physical_gate": 0,
+  "historical_or_runtime_saving": 0
+}

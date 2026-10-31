@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 179 |
-| stated | 0 |
+| stated | 10 |
 | planned | 0 |
-| **total** | **179** |
+| **total** | **189** |
 
 ## Statements
 
@@ -194,3 +194,13 @@
 | GAC2:owned-window-incoming-boundary | Incoming adjoints on an owned spatial window | proved | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.ownedWindowLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.ownedWindowLaw` | approved 2026-10-31 |
 | GAC2:declared-cost-quadratic-energy | Coefficient operation count versus leading selected energy | proved | `Artform.Scores.GravityBridge.Native.NativeCurrent.Statement.costEnergyLaw` / `Artform.Scores.GravityBridge.Native.NativeCurrent.costEnergyLaw` | approved 2026-10-31 |
 | GAC2:leading-preparation-trace-gap | Necessary trace change of a leading prepared graph | proved | `Artform.Scores.GravityBridge.Native.R7Blocks.Statement.leadingPreparationLaw` / `Artform.Scores.GravityBridge.Native.R7Blocks.leadingPreparationLaw` | approved 2026-10-31 |
+| GAC2:native-reflected-band-inverse-guards | Compact reflected band and both native light-cone guards | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.bandLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.bandLaw` | awaiting review |
+| GAC2:native-coordinate-two-sided-inverse | Original simple-bivector coordinate inverse | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.inverseLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.inverseLaw` | awaiting review |
+| GAC2:native-quartic-leading-inverse | Complete coordinate quartic and leading inverse | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.leadingLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.leadingLaw` | awaiting review |
+| GAC2:native-quartic-companion-binding | Native quartic bound to the full four-jet companion | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.companionLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.companionLaw` | awaiting review |
+| GAC2:native-angular-exceptional-domains | R7 and R8 exceptional directions differ | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.exceptionalLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.exceptionalLaw` | awaiting review |
+| GAC2:native-angular-zero-connection-return | Connection response persists on an angular-zero ray | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.pairedConnectionLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.pairedConnectionLaw` | awaiting review |
+| GAC2:native-axis-complete-source-numerator | Axis branches retain the complete mixed numerator | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.axisLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.axisLaw` | awaiting review |
+| GAC2:native-frequency-response-scaling | Frequency degrees of symbol and forced response | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.scalingLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.scalingLaw` | awaiting review |
+| GAC2:native-coordinate-extra-real-root | Extra real root of an actual coordinate column | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.growingLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.growingLaw` | awaiting review |
+| GAC2:native-forced-row-zero-four-jet | Unit-row forcing with zero initial four-jet | stated | `Artform.Scores.GravityBridge.Native.CoordinateSymbol.Statement.forcedRowLaw` / `Artform.Scores.GravityBridge.Native.CoordinateSymbol.forcedRowLaw` | awaiting review |
