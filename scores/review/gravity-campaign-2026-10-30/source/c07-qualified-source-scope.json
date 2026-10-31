@@ -1,0 +1,57 @@
+{
+  "status": "FINAL_QUALIFIED_SOURCE_PENDING_DISTINCT_ROOT_REVIEW",
+  "source_history": {
+    "calculation": 0,
+    "description": 1,
+    "preparation": 0
+  },
+  "predecessor_OPEN_histories": {
+    "Ward": {
+      "calculation": 0,
+      "description": 0,
+      "preparation": 0
+    },
+    "Flat40": {
+      "calculation": 0,
+      "description": 0,
+      "preparation": 0
+    },
+    "R7Critical": {
+      "calculation": 0,
+      "description": 0,
+      "preparation": 0
+    }
+  },
+  "current_MAIN": "M40",
+  "own_current_gate": "e3620d PASS afterb7c397/session98560",
+  "claims": [
+    "Exact full original Lorentz gauge columns and whole-force Ward identities at full stationarity",
+    "Direct guarded finite-stencil sup-norm and l2 realizations, exact-coordinate full Hessian symmetry, bounded full-coframe gauge projection",
+    "Complete unrestricted flat original quadratic coefficient and40-row operator with all independent shifts and evaluated contact block",
+    "Arbitrary mixed six-column flat gauge annihilation with exact coordinate-force/Gram conversions"
+  ],
+  "domains": [
+    "Original small full40-field neighborhood, independent physical coframes and fixed-log links; compact local tests for infinite backgrounds",
+    "Uniform guarded backgrounds; no global link-log or coframe inverse claim",
+    "Flat symbol has4independent phases; nonconstant branch is not Fourier diagonalized"
+  ],
+  "excluded": [
+    "ROOT R7 fixed-complement intertwiner and compatible-source equivalence are not absorbed",
+    "No force/gauge-fixed inverse or gap",
+    "No full rank/constraint/evolution/physical degree count",
+    "No reduced-force self-adjointness or positive physical energy",
+    "No refoliation or parent completion"
+  ],
+  "shared_assistance_disclosed": true,
+  "all_scientific_work_manual": true,
+  "accepted": false,
+  "governing_qualification": "mandatory-description001-background-and-operator-domains.md",
+  "background_domain": "Uniform sup-norm/accepted-profile-algebra control only; nondecaying traveling background need not be l2",
+  "l2_realization": "Bounded perturbation/gauge/Jacobian/projection operators from finite-stencil sup coefficient bounds; no nonlinear bounded-background F(z) l2 assertion",
+  "literal_old_source_scope": "source-scope-and-history.json is unchanged pre-description001 cutoff",
+  "whole_before_description001": {
+    "owner_files": 31,
+    "adjacent_files": 2,
+    "pairs": 33
+  }
+}

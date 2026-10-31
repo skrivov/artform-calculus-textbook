@@ -258,3 +258,43 @@ All five were independently approved at freeze `1894f9b16d0ce882fe98f06610e2954a
 none returned. See the distinct [audit](audit-independent-08.md),
 [per-key verdicts](verdict-independent-08.json) and [validation](validation-independent-08.json).
 All84 earlier approvals stand, and zero additional material native applications are credited.
+
+## C03–C07: canonical relations, actual finite reduction and native endpoint scope
+
+Five new claims await independent review09: GAC:canonical-composition, GAC:radical-reduction,
+GAC:refinement-elimination, GAC:schedule-boundary and GAC:finite-boundary-adjoint. Ledger
+findings127–131 and literal section7 quotes state the scopes. All89 old approvals stand.
+
+Canonical.lean proves the full self-orthogonal composition criterion, using the dual-annihilator
+intersection identity and the finite/nondegenerate intermediate pairing. Check the existential
+intermediate point, not only isotropy. Check the singular-action phase form, its nondegeneracy and
+four test directions, plus the positive two-step canonical relation. The nonlinear polynomial
+F(t,p)=((t²,p),(t,2tp)) has an exact variation, injective first variation and isotropy certificate.
+Its actual vertical-fibre composition is one point while the displayed linearization admits dt=1.
+No manifold regularity theorem is silently imported.
+
+Radical.lean pulls that phase form back to the actual p_g=0 constraint surface, computes its whole
+radical, constructs the quotient equivalence and compares the full constrained relation with its
+reduced drift. The selected compatible representative step is explicit. Source j*q descends; source
+g does not. The old move(1) realizer is checked. None identifies the native gravity radical.
+
+Refinement.lean retains both positive step lengths and the detail source. Verify the square
+completion and unique minimum with all guards, including the negative source contact. The original
+balancedScore diag(2,1/2) intertwines with the retained sum/difference law; its aggregate has genuine
+memory and a two-step recurrence. No Gaussian integral is inferred from stationary elimination.
+
+Schedule.lean compares the actual old shear words. Check their order defect, symplectic pairing,
+one-form endpoint primitives and exact variations. General quotient equality is a range condition;
+it identifies quotient laws only after each separately descends. Boundary/source criteria remain.
+
+BoundaryAdjoint.lean is C07's partial native transfer test. Read source-pins-C07.json and all four
+snapshots including the coordinate-force and background/operator qualifications. Historical source
+acceptance is not promoted. The exact finite Green identity needs its endpoint term. The specified
+all-spatial torsion contribution has coefficient kappa, with no extra half. It is one contribution,
+not a full40 solution or a native cube move. All16 coframe/24 connection rows, curvature/transport
+contacts, exact invariant Gram conversions, and metric/frame/link/history/source matching remain
+required. No native physical adjoint, energy or quotient is supplied by this example.
+
+All five *Defs.lean and five *Statements.lean surfaces are new; no prior approved Lean text changes.
+validation-C03-C04-C05-C06-C07.json will contain full required checks, certificates, empty drift and
+five separate kernel replays. Zero additional native material-application credit is proposed.

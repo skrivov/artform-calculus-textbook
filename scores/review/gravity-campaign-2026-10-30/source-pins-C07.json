@@ -1,0 +1,42 @@
+{
+  "investigation": "GAC-C07",
+  "date": "2026-10-30",
+  "status": "input freeze; no full native move accepted",
+  "files": [
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/unrestricted-flat-quadratic-and-complete-forty-force-for-review.md",
+      "snapshot": "source/c07-flat-quadratic-and-forty-force.md",
+      "sha256": "183dbf9399f5812af0cf6531725bda7319525b1303b0ec87d97e70d76be8463d",
+      "bytes": 10394,
+      "scope": "Literal source formulas(4),(7); compact/periodic derivation; no acceptance of a new full40 theorem"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/exact-coordinate-force-and-pairing-qualification.md",
+      "snapshot": "source/c07-coordinate-force-pairing-qualification.md",
+      "sha256": "d5b922cb4d8ae1e586e43eb784788d9c0e71a6b4303b1fadceb334a3285584ce",
+      "bytes": 2828,
+      "scope": "G/eta are invariant pairings and domain covectors, not positive Hilbert adjoints"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/mandatory-description001-background-and-operator-domains.md",
+      "snapshot": "source/c07-background-operator-domains.md",
+      "sha256": "2bb75962d284b6d64cf457bb9cd50b92e85d8893161ac6c835b715cc1d04a1ec",
+      "bytes": 2717,
+      "scope": "Qualified sup background versus l2 operator domains"
+    },
+    {
+      "source_relative_to_workspace": "physics/ledgers/gravity/reviews/2026-10-13-r8-native-parent-sol61/continuation-2026-10-13-sol61/r8-full-original-Ward-and-unrestricted-flat-quadratic-source-work-20261026/effective-qualified-source-scope-and-history.json",
+      "snapshot": "source/c07-qualified-source-scope.json",
+      "sha256": "7c5fb1d443762f1b94a2a4a79a2f3414db2d27d9d0d48bdf17a1ffcdf65f45c8",
+      "bytes": 2446,
+      "scope": "Historical pending-distinct-review source scope; not promoted by this extraction"
+    }
+  ],
+  "native_subsector": "One all-spatial theta_12^3 forward difference at A=0 in the unit-spacing flat torsion quadratic coefficient; kappa=1/101, s1*s2*eta33=+1. This is a contribution, not a full40 solution.",
+  "unresolved": [
+    "All16 coframe and24 connection boundary equations and exact invariant-to-coordinate force conversions",
+    "Independent metric/frame/link/history prescriptions on a native cube/octahedron/stella move",
+    "Actual boundary primitive/current, source/preparation and compatible physical quotient",
+    "Source publication/review scope remains that of the original pins; new theorem certifies the displayed finite component only"
+  ]
+}

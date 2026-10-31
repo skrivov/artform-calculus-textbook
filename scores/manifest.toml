@@ -1334,3 +1334,126 @@ lean_statement = "Artform.Scores.GravityBridge.Statement.singularActionLaw"
 lean_proof = "Artform.Scores.GravityBridge.singularActionLaw"
 reviewed = "2026-10-30"
 review_text_sha256 = "1e7ea73ad5533a56f19263ba80b100fb0c0be7d10572e786f44dd217e34cec5f"
+
+[[statement]]
+key = "GAC:canonical-composition"
+label = "GAC:canonical-composition"
+title = "Canonical composition and a non-clean polynomial test"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:canonical-composition)"
+statement = """
+**GAC:canonical-composition (linear composition and a nonlinear intersection test).** Over a field K,
+let X,Y,Z be modules with additive commutative groups, Y finite dimensional, and BX,BY,BZ bilinear
+forms with BY nondegenerate. Call R in X*Y self-orthogonal when membership(x,y) in R is equivalent to
+BX(x,u)=BY(y,v) for every(u,v) in R. The relational composite of two such linear subspaces R in X*Y
+and S in Y*Z is self-orthogonal for BX,BZ. This includes finite-dimensional symplectic canonical relations.
+The singular-action phase form is alternating and nondegenerate, and its full constrained relation is
+self-orthogonal for that form. For the real polynomial parameterization F(t,p)=((t^2,p),(t,2*t*p)),
+both F and its linear first variation J_(t,p)(dt,dp)=((2*t*dt,dp),(dt,2*p*dt+2*t*dp)) are injective.
+J is isotropic for minus the incoming plus the outgoing area form. For every real epsilon the exact
+variation is F(a+epsilon*u)=F(a)+epsilon*J_a(u)+epsilon^2*((u_t^2,0),(0,2*u_t*u_p)).
+Composing its image relation with the incoming vertical fibre y_q=0 yields exactly the outgoing zero
+point. At t=0 the variation u=(1,0) satisfies the linearized incoming constraint and has outgoing
+delta q=1, while no nonzero step along that parameter direction satisfies the exact constraint.
+This checks a concrete failure of unqualified nonlinear linearization, not a general nonlinear theorem.
+See [finding 127](findings/127-canonical-linear-composition-and-nonlinear-intersection.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.canonicalLaw"
+lean_proof = "Artform.Scores.GravityBridge.canonicalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:radical-reduction"
+label = "GAC:radical-reduction"
+title = "Actual finite radical and reduced dynamics"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:radical-reduction)"
+statement = """
+**GAC:radical-reduction (the actual singular-model radical and reduced dynamics).** Represent the
+singular action's constraint surface by(q,p,g) maps to((q,g),(p,0)). Its pulled-back phase form is
+omega(x,y)=q*p'-p*q'. Its entire radical is N={(0,0,g)}. The quotient by N is linearly equivalent
+to Q^2 by[(q,p,g)] maps to(q,p), and the original constrained relation holds exactly when the
+outgoing readout is the unit drift(q,p) maps to(q+p,p) of the incoming readout.
+The compatible selected step(q,p,g) maps to(q+p,p,g+q) induces that drift under the quotient
+equivalence. The readout formula gives the standard nonzero two-variable area pairing, which the
+drift preserves. Each declared source j*q factors through the quotient; the source g does not.
+These are the actual radical, quotient and source tests of the specified finite singular action.
+They do not identify a native gravity radical, physical Hamiltonian or mode count.
+See [finding 128](findings/128-singular-action-radical-quotient-and-source-test.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.radicalLaw"
+lean_proof = "Artform.Scores.GravityBridge.radicalLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:refinement-elimination"
+label = "GAC:refinement-elimination"
+title = "Detail elimination retains source contacts and memory"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:refinement-elimination)"
+statement = """
+**GAC:refinement-elimination (detail elimination, source contact and memory).** For rational nonzero
+h0,h1,H=h0+h1, set e0=h0*c/H+d, e1=h1*c/H-d and
+L=e0^2/(2*h0)+e1^2/(2*h1)-j*d. Then
+L=c^2/(2*H)-h0*h1*j^2/(2*H)+H*(d-h0*h1*j/H)^2/(2*h0*h1).
+For positive h0,h1 the reduced value is the unique minimum in d, attained at d=h0*h1*j/H.
+The two positive step lengths add to H; elimination retains its source-dependent contact term.
+Under the reversible original balanced score diag(2,1/2) on fine edges, the retained sum/difference
+coordinates(c,d) evolve by((5*c+3*d)/4,(3*c+5*d)/4). The detail equivalence intertwines these laws.
+Their visible aggregate satisfies c_(n+2)=(5/2)*c_(n+1)-c_n at every two-step state, while no map
+U(c) gives the next aggregate for all c,d. Retaining detail and eliminating/resetting it are different
+operations. This is exact finite algebra; no Gaussian integral or native quantum refinement is inferred.
+See [finding 129](findings/129-refinement-detail-elimination-contact-and-memory.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.refinementLaw"
+lean_proof = "Artform.Scores.GravityBridge.refinementLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:schedule-boundary"
+label = "GAC:schedule-boundary"
+title = "Shear schedule defect and exact endpoint primitives"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:schedule-boundary)"
+statement = """
+**GAC:schedule-boundary (shear order and endpoint terms).** For rational a,b define
+K_a(q,p)=(q,p+a*q), M_b(q,p)=(q+b*p,p). Then
+M_b*K_a(x)-K_a*M_b(x)=(a*b*q,-a*b*p); the two complete laws agree for every x exactly when a*b=0.
+Both orders preserve q*p'-p*q'. With theta_x(u)=p*u_q their endpoint-potential differences are
+D F_KM(x)[u] and D F_MK(x)[u], where
+F_KM=a*q^2/2+b*(p+a*q)^2/2 and F_MK=b*p^2/2+a*(q+b*p)^2/2.
+Each displayed D is its exact linear variation coefficient, and
+F(x+epsilon*u)=F(x)+epsilon*D F(x)[u]+epsilon^2*F(u).
+For any field K, module X, submodule N and linear F,G,
+mkQ*F=mkQ*G exactly when range(F-G) is contained in N. For already compatible quotient laws this
+is the required equality test. Symplecticity alone neither erases the order defect nor drops boundary
+primitives. No native gravitational schedule equivalence is asserted.
+See [finding 130](findings/130-shear-schedule-defects-and-endpoint-primitives.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.scheduleLaw"
+lean_proof = "Artform.Scores.GravityBridge.scheduleLaw"
+reviewed = ""
+review_text_sha256 = ""
+
+[[statement]]
+key = "GAC:finite-boundary-adjoint"
+label = "GAC:finite-boundary-adjoint"
+title = "Finite Green identity and the native open-cell boundary gap"
+source = "ALGEBRA-OF-SCORES.md section 7 (GAC:finite-boundary-adjoint)"
+statement = """
+**GAC:finite-boundary-adjoint (finite shifts retain their endpoint term).** For rational sequences
+f,g on the natural numbers, Df_i=f_(i+1)-f_i and every natural n,
+sum_(i<n) Df_i*g_i+sum_(i<n) f_(i+1)*Dg_i=f_n*g_n-f_0*g_0.
+The identity with the endpoint term suppressed holds exactly when f_n*g_n=f_0*g_0.
+For the source-pinned all-spatial torsion contribution L(u0,u1)=kappa*(u1-u0)^2, kappa=1/101,
+the exact variation under u+epsilon*v is
+L(u)+epsilon*2*kappa*(u1-u0)*(v1-v0)+epsilon^2*kappa*(v1-v0)^2.
+The linear term is the outgoing covector2*kappa*(u1-u0) times v1 minus the same incoming covector
+times v0. This certifies one displayed flat torsion component and finite transposition bookkeeping.
+It does not derive the entire sixteen-plus-twenty-four boundary force, identify its invariant pairing
+with a positive Hilbert adjoint, or supply a cube/octahedron/stella physical move.
+See [finding 131](findings/131-native-open-cell-boundary-adjoint-transfer-test.md).
+"""
+lean_statement = "Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw"
+lean_proof = "Artform.Scores.GravityBridge.boundaryAdjointLaw"
+reviewed = ""
+review_text_sha256 = ""

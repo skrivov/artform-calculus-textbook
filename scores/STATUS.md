@@ -7,9 +7,9 @@
 | Status | Statements |
 |---|---|
 | proved | 89 |
-| stated | 0 |
+| stated | 5 |
 | planned | 0 |
-| **total** | **89** |
+| **total** | **94** |
 
 ## Statements
 
@@ -104,3 +104,8 @@
 | GAC:quotient-compatibility | Evolution, source and boundary-form quotient compatibility | proved | `Artform.Scores.GravityBridge.Statement.quotientCompatibility` / `Artform.Scores.GravityBridge.quotientCompatibility` | approved 2026-10-30 |
 | GAC:changing-geometry | Incidence-compatible edge subdivision and retained detail | proved | `Artform.Scores.GravityBridge.Statement.changingGeometry` / `Artform.Scores.GravityBridge.changingGeometry` | approved 2026-10-30 |
 | GAC:singular-action | Singular quadratic action, constraints and relational gluing | proved | `Artform.Scores.GravityBridge.Statement.singularActionLaw` / `Artform.Scores.GravityBridge.singularActionLaw` | approved 2026-10-30 |
+| GAC:canonical-composition | Canonical composition and a non-clean polynomial test | stated | `Artform.Scores.GravityBridge.Statement.canonicalLaw` / `Artform.Scores.GravityBridge.canonicalLaw` | awaiting review |
+| GAC:radical-reduction | Actual finite radical and reduced dynamics | stated | `Artform.Scores.GravityBridge.Statement.radicalLaw` / `Artform.Scores.GravityBridge.radicalLaw` | awaiting review |
+| GAC:refinement-elimination | Detail elimination retains source contacts and memory | stated | `Artform.Scores.GravityBridge.Statement.refinementLaw` / `Artform.Scores.GravityBridge.refinementLaw` | awaiting review |
+| GAC:schedule-boundary | Shear schedule defect and exact endpoint primitives | stated | `Artform.Scores.GravityBridge.Statement.scheduleLaw` / `Artform.Scores.GravityBridge.scheduleLaw` | awaiting review |
+| GAC:finite-boundary-adjoint | Finite Green identity and the native open-cell boundary gap | stated | `Artform.Scores.GravityBridge.Statement.boundaryAdjointLaw` / `Artform.Scores.GravityBridge.boundaryAdjointLaw` | awaiting review |
