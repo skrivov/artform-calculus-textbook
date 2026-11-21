@@ -2,7 +2,8 @@
 """Checks on the repository's files.
 
 Fails when:
-  - a Lean file of the libraries (textbook/ArtformTextbook/, scores/ArtformScores/)
+  - a Lean file of the libraries (textbook/ArtformTextbook/, scores/ArtformScores/,
+    stages/ArtformStages/)
     contains, outside comments and strings, one of the words FORBIDDEN, or declares
     an axiom;
   - any file contains an absolute home path or an e-mail address other than a
@@ -21,7 +22,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LIBRARY = ("textbook/ArtformTextbook/", "scores/ArtformScores/")
+LIBRARY = ("textbook/ArtformTextbook/", "scores/ArtformScores/", "stages/ArtformStages/")
 GUIDE_PDF = "tutorial/lean-through-artform-calculus.pdf"
 LIMIT = 5 * 1024 * 1024
 FORBIDDEN = ("sorry", "admit", "native_decide", "implemented_by", "extern",

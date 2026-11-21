@@ -106,6 +106,10 @@ with `latexmk -pdf` in `type-theory/paper/`.
   `scores/ArtformScores/Certificates/` holds generated coset tables, which
   `scripts/one_mode_certificates.py` writes, and generated runs of groups, which
   `scripts/extent_certificates.py` writes.
+- `stages/`: the stage algebra, the Lean library `ArtformStages`. It proves the core
+  of the author's research ledger on a layered universe, not book text: a stage, lay,
+  keep and add, the trail of a walk, and what a carry keeps
+  ([`stages/README.md`](stages/README.md) lists the statements).
 - `scripts/`: the status reports and local publication checks.
 
 ## Licence

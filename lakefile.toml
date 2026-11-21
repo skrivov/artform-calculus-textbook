@@ -1,5 +1,5 @@
 name = "artform-calculus-textbook"
-defaultTargets = ["ArtformTextbook", "Tutorial", "ArtformRoles", "ArtformScores"]
+defaultTargets = ["ArtformTextbook", "Tutorial", "ArtformRoles", "ArtformScores", "ArtformStages"]
 
 [[require]]
 name = "mathlib"
@@ -33,4 +33,12 @@ leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.m
 [[lean_lib]]
 name = "ArtformScores"
 srcDir = "scores"
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }
+
+# The stage algebra: the core of the research ledger on a layered universe
+# (physics/ledgers/multilayered-universe/STAGE-ALGEBRA.md in the author's
+# workspace), not book text. A stage, lay, keep, add, the trail and a carry.
+[[lean_lib]]
+name = "ArtformStages"
+srcDir = "stages"
 leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, weak.linter.mathlibStandardSet = true, maxSynthPendingDepth = 3 }
