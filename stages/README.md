@@ -25,6 +25,7 @@ against the ledger's text: the statements are proved, not approved.
 | keep | `Stage.keep`, `Stage.keepCommon`, `Stage.keepTrail` | the richest carry; kept in common; `keep(S; M)` |
 | a line, a chain | `α × S.World`, `Stage.Chain` | a whole number on every line of the map |
 | the trail | `Stage.trail` | what a walk leaves on the lines, forward less back |
+| a filling of one mark | `R[G]`, Mathlib's `MonoidAlgebra R G` | a number of the dial `R` at finitely many laws of the space `G`; a shift is `single g r` |
 
 ## The statements
 
@@ -60,6 +61,10 @@ against the ledger's text: the statements are proved, not approved.
 | the smallest case | keeping the whole trail over a wheel gives the count | `Stage.rest_keep_wheel`, `Stage.count_isCarry_wheel` | `Examples.lean` |
 | rule 5 | a carry over a carry need not be a carry | `Stage.carry_of_carry_need_not_be_carry` | `Examples.lean` |
 | rule 7 | adding an act and keeping cannot be done in either order | `Stage.keep_add_ne_add_keep` | `Examples.lean` |
+| one rule is one stencil (charter, D16) | a law of one mark that adds and is the same at every place is the table of one stencil | `law_eq_mul_stencil` | `OneMark.lean` |
+| only the shifts | on a space with two unique products, on a dial without zero divisors, two fillings whose product is one mark at rest have one place each | `eq_single_of_mul_eq_one` | `OneMark.lean` |
+| one mark has no law but the shifts | there a law of one mark that adds, is the same at every place and can be undone is a shift with one number | `law_of_one_mark_is_a_shift`, `Stage.law_of_one_mark_is_a_shift` | `OneMark.lean` |
+| the lattices | rows that pass, in any number, are such a space | `lattice_twoUniqueProds`, `lattice_law_of_one_mark_is_a_shift` | `OneMark.lean` |
 
 ## Notes
 
