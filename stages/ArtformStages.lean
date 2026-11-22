@@ -29,3 +29,4 @@ import ArtformStages.OneRule
 import ArtformStages.Speed
 import ArtformStages.Hodge
 import ArtformStages.ForcedComplex
+import ArtformStages.BookBoard

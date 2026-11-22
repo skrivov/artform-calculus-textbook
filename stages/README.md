@@ -164,6 +164,9 @@ against the ledger's text: the statements are proved, not approved.
 | FC3 (T362(c)) | every board is a complex of squares with the same incidence and gauge, wide when the board is | `Board.toSquareComplex`, `Board.toSquareComplex_incidence`, `Board.toSquareComplex_gauge`, `Board.toSquareComplex_wide` | `ForcedComplex.lean` |
 | FC4, FC5 (T362(d), (e)) | the cubic torus of side `n > 1` is a complex of squares with the incidence and gauge of `Solid.lean`, and for `n ≥ 3` it is wide | `cubeComplex`, `cubeComplex_incidence`, `cubeComplex_gauge`, `cubeComplex_wide` | `ForcedComplex.lean` |
 | FC6 (T362(f)) | on the cubic torus of side `n ≥ 3` the law of light is forced: such a kick is `Cᵀ diag(K) C` | `cube_kick_forced` | `ForcedComplex.lean` |
+| BB1 (finding 453, T363(a)) | the line `(w, 0)` of the torus has the flags `(w, 0)`, along, and `(w - (0, 1), 2)`, against; the line `(w, 1)` has `(w - (1, 0), 1)` and `(w, 3)` | `torus_flag_zero`, `torus_flag_one` | `BookBoard.lean` |
+| BB2, BB3 (T363(b), (c)) | for `n, m ≥ 3` the torus is wide, and for `n, m ≥ 2` every corner has the paint 4 | `torus_wide`, `torus_paint` | `BookBoard.lean` |
+| BB4 (T363(d)) | on the torus a kick of reach 1 that meets A10, A11 and one rule for the far weights is `Cᵀ diag(κ) C` with one `κ`, and a drift that is one rule is one number | `torus_kick_forced`, `torus_drift_forced` | `BookBoard.lean` |
 
 ## Notes
 
@@ -191,7 +194,8 @@ against the ledger's text: the statements are proved, not approved.
   removes is finding 446; the dispersion of light on the torus is finding 447; the book's
   tick on the dial of eight is finding 448; one rule, finding 421's T331(b), is finding 449;
   the speed of light along an axis is finding 450; the three parts of a field are finding 451;
-  the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452.
+  the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452;
+  the torus as a wide board of one paint, where Pair's kick and drift are forced, is finding 453.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
