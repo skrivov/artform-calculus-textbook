@@ -99,6 +99,11 @@ against the ledger's text: the statements are proved, not approved.
 | BO1 (finding 436, T346(a)) | with `S` positive semidefinite, `L = D D` for a symmetric `D` with an inverse `D'`, and `4 D' D' - S`, the window `4 L⁻¹ - S`, positive definite, every orbit of Pair from `(A, S w)` is bounded | `OrbitBounded`, `orbit_bounded_of_window` | `Bounded.lean` |
 | BO2 (T346(b)) | on a board, `κ σ` times the sum of `λ` over the four sides of `σ` below `2` at every square keeps every orbit of Pair from `(A, S w)` bounded | `Board.orbit_bounded` | `Bounded.lean` |
 | BO3 (T346(c)) | an orbit whose `E` lies on the level 0 of the kick drifts, `(-k y, L' y)` at step `k`, so it is not bounded | `pair_iterate_kernel`, `not_orbitBounded_of_kernel` | `Bounded.lean` |
+| BG1 (finding 438, T348(a)) | along a level `L S v = μ v`, the orbit of Pair from `(a v, e S v)` is the orbit of the Pair of one place with `σ = 1` and `λ = μ`, carried by `v` and `S v` | `pair_iterate_on_pair_level` | `Converse.lean` |
+| BG2 (T348(b)) | a level of `L S` below `0`, or at `4` or more, has an orbit from some `(A, S w)` that is not bounded | `exists_not_orbitBounded_of_level` | `Converse.lean` |
+| BG3 (T348(c)) | with `S` positive semidefinite and `L = D D` for a symmetric `D` with an inverse `D'`, every orbit of Pair from `(A, S w)` is bounded exactly when `4 D' D' - S` is positive definite | `orbit_bounded_iff_window` | `Converse.lean` |
+| BG4 (T348(d)) | on a board with `κ > 0` and `λ > 0`, every orbit of Pair from `(A, S w)` is bounded exactly when `4 / λ` less `Cᵀ diag(κ) C` is positive definite | `Board.orbit_bounded_iff` | `Converse.lean` |
+| RC2 (finding 439, T349(b)) | where the image of `C` holds `e σ - e τ` for every two squares, on at least three squares, two different `K` give two different kicks `Cᵀ diag(K) C` | `kick_injective` | `Classes.lean` |
 
 ## Notes
 
@@ -116,7 +121,9 @@ against the ledger's text: the statements are proved, not approved.
   sorts is finding 427, that window read on the squares is finding 428, its strict form and local
   test are finding 430, the local tests on a board's incidence are finding 432, and the board
   itself, its gauge, the window on its lines and the torus are finding 434; the step from the
-  window to bounded orbits, on many places and on every board, is finding 436.
+  window to bounded orbits, on many places and on every board, is finding 436; that the window
+  is exact, and that two different weights on the squares give two different kicks, are findings
+  438 and 439.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a

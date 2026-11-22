@@ -14,3 +14,5 @@ import ArtformStages.Strict
 import ArtformStages.Board
 import ArtformStages.Incidence
 import ArtformStages.Bounded
+import ArtformStages.Converse
+import ArtformStages.Classes
