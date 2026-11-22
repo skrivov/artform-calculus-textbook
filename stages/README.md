@@ -167,6 +167,9 @@ against the ledger's text: the statements are proved, not approved.
 | BB1 (finding 453, T363(a)) | the line `(w, 0)` of the torus has the flags `(w, 0)`, along, and `(w - (0, 1), 2)`, against; the line `(w, 1)` has `(w - (1, 0), 1)` and `(w, 3)` | `torus_flag_zero`, `torus_flag_one` | `BookBoard.lean` |
 | BB2, BB3 (T363(b), (c)) | for `n, m ≥ 3` the torus is wide, and for `n, m ≥ 2` every corner has the paint 4 | `torus_wide`, `torus_paint` | `BookBoard.lean` |
 | BB4 (T363(d)) | on the torus a kick of reach 1 that meets A10, A11 and one rule for the far weights is `Cᵀ diag(κ) C` with one `κ`, and a drift that is one rule is one number | `torus_kick_forced`, `torus_drift_forced` | `BookBoard.lean` |
+| JN1, JN2 (finding 454, T364(a), (b)) | the squares of the torus are joined, and so are its corners | `torus_joined`, `torus_corners_joined` | `TorusJoined.lean` |
+| JN3, JN4 (T364(c), (d)) | for `n, m ≥ 3` a kick of reach 1 on the torus with `M G = 0` and `Gᵀ M = 0` is `Cᵀ diag(K) C` for exactly one `K`, and with one rule for the far weights for exactly one number `κ` | `torus_kick_unique`, `torus_kick_one_weight` | `TorusJoined.lean` |
+| JN5 (T364(e)) | on the torus, with every `λ > 0`, a charge is `M φ` exactly when it sums to `0`, the potential is unique up to a constant, and such a charge is the divergence of a still field | `torus_coulomb`, `torus_coulomb_unique`, `torus_coulomb_field` | `TorusJoined.lean` |
 
 ## Notes
 
@@ -195,7 +198,8 @@ against the ledger's text: the statements are proved, not approved.
   tick on the dial of eight is finding 448; one rule, finding 421's T331(b), is finding 449;
   the speed of light along an axis is finding 450; the three parts of a field are finding 451;
   the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452;
-  the torus as a wide board of one paint, where Pair's kick and drift are forced, is finding 453.
+  the torus as a wide board of one paint, where Pair's kick and drift are forced, is finding 453; its
+  squares and its corners joined, one weight for each kick and Coulomb's problem on it, finding 454.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables

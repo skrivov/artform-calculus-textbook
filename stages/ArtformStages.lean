@@ -30,3 +30,4 @@ import ArtformStages.Speed
 import ArtformStages.Hodge
 import ArtformStages.ForcedComplex
 import ArtformStages.BookBoard
+import ArtformStages.TorusJoined
