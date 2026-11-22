@@ -263,6 +263,11 @@ against the ledger's text: the statements are proved, not approved.
 | SQ2 (C471) | Pair on the square's mode at `κ = λ = 1/2`, `modeTick (1/2) (1/2) 4`, has trace `1 = 2 cos(π/3)`, third power `-1` and sixth power `1`: it turns by `π / 3` at every tick | `square_mode_trace`, `square_mode_pow_three`, `square_mode_pow_six` | `OneSquare.lean` |
 | SW1 (finding 486, C472) | on the window of two squares a filling whose ends are `0` at every corner is the sum of the two faces' loops, and there are exactly `n ^ 2` of them on the dial of `n` | `dominoEnds`, `dominoLoop`, `dominoEnds_eq_zero_iff`, `dominoLoops`, `card_domino_neutral` | `SmallWindows.lean` |
 | SW2 (C472) | the loops' sum of squares is `4 a² + 4 b² - 2 a b`, the form of the faces' table `C Cᵀ`, which takes `(1, 1)` to `3` times itself and `(1, -1)` to `5` times itself; at `κ = λ = 1/2` Pair on those modes has the traces `5/4` and `3/4` | `domino_energy`, `dominoFaces`, `domino_energy_eq_form`, `dominoFaces_sym`, `dominoFaces_anti`, `domino_mode_traces` | `SmallWindows.lean` |
+| GB1 (finding 487, C473) | a wave of the fillings lies in the Gauss sector of the ends `ρ` exactly when every turn by the ends `W(0, Mᵀ φ)` multiplies it by `χ(φ ⬝ ρ)` | `transpose_dotProduct`, `endsTurn`, `endsTurn_apply`, `InSector`, `inSector_iff` | `GaugeBlindKick.lean` |
+| GB2 (C473) | a table that passes every turn by the ends keeps every Gauss sector | `inSector_of_comm` | `GaugeBlindKick.lean` |
+| GB3, GB4 (C473) | the Fourier transform carries the turn by `x` to the move by `-x`, so the kick `F⁻¹ (phase k) F` of a phase blind to gauge changes passes every turn by the ends and keeps every Gauss sector | `fourier_turn`, `phaseMul_comm_move`, `blindKick`, `blindKick_comm`, `blindKick_sector` | `GaugeBlindKick.lean` |
+| GB5 (C473) | where no gauge change has a flux, a phase that reads the potentials through their fluxes is blind to gauge changes, the energy kick of finding 484 on the faces among them | `fluxPhase_blind`, `fluxKick_sector`, `energyFluxPhase`, `energyKick_sector` | `GaugeBlindKick.lean` |
+| GB6 (C473) | Plancherel: the Fourier transform keeps the sum of the squares up to the number of configurations, so a kick of a phase of size `1` keeps it | `fourier_sum_sq`, `fourierInv_sum_sq`, `blindKick_sum_sq` | `GaugeBlindKick.lean` |
 
 ## Notes
 
@@ -330,7 +335,9 @@ against the ledger's text: the statements are proved, not approved.
   values at every count but the top, and that likeness forces it, finding 484; one square: with no
   charge its field is one count, the loop, and its mode turns by `π / 3` at `κ = λ = 1/2`, finding
   485; small windows: the window of two squares has the two loops for its charge-free field, and its
-  faces' table has the classical modes `ω² = 3` and `5`, finding 486.
+  faces' table has the classical modes `ω² = 3` and `5`, finding 486; the joint universe with the
+  kick that carries light: a kick of a phase blind to gauge changes keeps every Gauss sector of the
+  fillings and the sum of the squares, finding 487.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.

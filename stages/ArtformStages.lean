@@ -62,3 +62,4 @@ import ArtformStages.WeylKind
 import ArtformStages.EnergyTick
 import ArtformStages.OneSquare
 import ArtformStages.SmallWindows
+import ArtformStages.GaugeBlindKick
