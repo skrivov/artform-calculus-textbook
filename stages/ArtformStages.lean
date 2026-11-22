@@ -12,3 +12,4 @@ import ArtformStages.Scale
 import ArtformStages.Dual
 import ArtformStages.Strict
 import ArtformStages.Board
+import ArtformStages.Incidence

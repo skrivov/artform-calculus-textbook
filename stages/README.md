@@ -91,6 +91,11 @@ against the ledger's text: the statements are proved, not approved.
 | SD2 (T340(b)) | a real symmetric table each of whose rows has its sizes summing to less than twice its diagonal entry is positive definite: the local test of the window | `posDef_of_rowsum` | `Strict.lean` |
 | BT1 (finding 432, T342(a)) | on a board, given by an incidence with entries `-1`, `0`, `1` and two squares at each line, `κ σ p σ < 2` at every square makes the table on the squares positive definite | `squareTable`, `roundDrift`, `board_local_sufficient` | `Board.lean` |
 | BT2 (T342(b)) | a positive definite table on the squares has `κ σ p σ < 4` at every square | `board_local_necessary` | `Board.lean` |
+| BI1 (finding 434, T344(a)) | a closed board turned one way, given by the four corners of each square in its turn: its incidence has `C² = |C|`, two squares at each line, and columns summing to `0` | `Board`, `Board.incidence`, `Board.incidence_sq`, `Board.incidence_col`, `Board.incidence_col_sum` | `Incidence.lean` |
+| BI2 (T344(b)) | `C D = 0` for the board's gauge `D`, so Pair with the kick `Cᵀ K C` passes the gauge on every board | `Board.gauge`, `Board.incidence_mul_gauge`, `Board.pair_gauge` | `Incidence.lean` |
+| BI3 (T344(c)) | the drift round a square is the sum of `λ` over its four sides, and the local tests of the window hold on every board | `Board.roundDrift_incidence`, `Board.certificate`, `Board.asked` | `Incidence.lean` |
+| BI4 (T344(d)) | with every `λ > 0`, the same test makes the table on the lines, `4 / λ` less `Cᵀ diag(κ) C`, positive definite | `Board.window` | `Incidence.lean` |
+| BI5 (T344(e)) | the torus of `n` by `m` squares is a board, and on it `κ λ < 1 / 2` makes the table on the squares positive definite | `torus`, `torus_certificate` | `Incidence.lean` |
 
 ## Notes
 
@@ -106,7 +111,8 @@ against the ledger's text: the statements are proved, not approved.
   scripts, and proved here over any commutative ring (finding 422 of the ledger). Its reading on
   a finite board and its window of stability are findings 424 and 425; its window with a drift by
   sorts is finding 427, that window read on the squares is finding 428, its strict form and local
-  test are finding 430, and the local tests on a board's incidence are finding 432.
+  test are finding 430, the local tests on a board's incidence are finding 432, and the board
+  itself, its gauge, the window on its lines and the torus are finding 434.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a
