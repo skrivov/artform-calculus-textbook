@@ -58,3 +58,4 @@ import ArtformStages.ChancePower
 import ArtformStages.JointUniverse
 import ArtformStages.InnerDirectionReach
 import ArtformStages.StageNumber
+import ArtformStages.WeylKind
