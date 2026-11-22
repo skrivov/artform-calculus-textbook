@@ -231,6 +231,9 @@ against the ledger's text: the statements are proved, not approved.
 | WK2 (C463) | the walk, the coin `cos μ · 1 - i sin μ · σx` at every place and then the shift of the first number one place on and the second one place back, acts on the wave `e^{ikx}` of the ring, `k = 2 π j / N`, times two numbers, by its table `diag(e^{-ik}, e^{ik})` times the coin, whose trace is `2 cos μ cos k` and determinant `1` | `coin`, `walk`, `walkSymbol`, `walk_acts_by_symbol`, `walkSymbol_trace`, `walkSymbol_det` | `TheWalk.lean` |
 | WK3 (C463) | `e^{-iε}` is a level of the walk's table at `k` exactly when `cos ε = cos μ cos k`; with `e^{-iε}` its inverse `e^{iε}` is a level too, so the levels come in pairs of opposite sign | `IsWalkLevel`, `walk_level_iff`, `walk_levels_pair` | `TheWalk.lean` |
 | WK4 (C463) | the walk's table at `k + π` is minus its table at `k`, so every level `e^{-iε}` at `k` has the twin `-e^{-iε}`, the level of `ε + π`, at `k + π` | `walkSymbol_add_pi` | `TheWalk.lean` |
+| ST1 (finding 477, C464) | with the symmetric sign, a whole number of charges on each level, if some level is below zero then for every number `M` some occupation has an energy below `M`: no occupation is lowest | `occupationEnergy`, `symmetric_no_lowest` | `Statistics.lean` |
+| ST2 (C464) | with the alternating sign, `0` or `1` on each level, every occupation has an energy at least the sum of the levels below zero, and the sea, every level below zero filled once and no other, has exactly that energy | `IsAlternating`, `sea`, `alternating_energy_ge`, `sea_energy` | `Statistics.lean` |
+| ST3 (C464) | for a coin angle `μ` strictly between `0` and `π / 2` and every wave number `k`, the walk's table has a level `e^{-iε}` with `ε` strictly between `0` and `π`, and its pair `e^{iε}`: read as energies, one above zero and one below | `walk_level_signs` | `Statistics.lean` |
 
 ## Notes
 
@@ -282,7 +285,9 @@ against the ledger's text: the statements are proved, not approved.
   that pass up to a kept sign, on which the cube's turns act only up to a sign, finding 475; the
   kind of number, which a dial of 3 or more values forces to hold a turn that no real number is,
   finding 473; the walk of a charge, forced up to its angles, with the levels `cos ε = cos μ cos k`
-  and a twin at `k + π`, finding 476.
+  and a twin at `k + π`, finding 476; the statistics of a charge whose walk has levels of both
+  signs, with no lowest energy for the symmetric sign and the sea for the alternating sign, finding
+  477.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
