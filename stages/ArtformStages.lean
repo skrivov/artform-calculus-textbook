@@ -54,3 +54,4 @@ import ArtformStages.KindOfNumber
 import ArtformStages.TheWalk
 import ArtformStages.Statistics
 import ArtformStages.QuantumLight
+import ArtformStages.ChancePower

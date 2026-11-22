@@ -243,6 +243,7 @@ against the ledger's text: the statements are proved, not approved.
 | QL6 (C461) | an invertible map that carries every `W(v)` to the same multiple of `W(pair S L v)` as the quantum tick does is the tick times one nonzero number; one that carries every `W(v)` to some multiple of `W(pair S L v)` is the tick times one Weyl operation and one nonzero number | `qtick_unique`, `qtick_unique_upto_weyl` | `QuantumLight.lean` |
 | QL7 (C461) | a map that multiplies the value at each `b` by a nonzero number `φ(b)`, and that carries every Weyl operation to a multiple of a Weyl operation, has `φ(b) = φ(0) · χ(-half · b ⬝ S b + β ⬝ b)` for some symmetric `S` and some configuration `β` | `phase_quadratic_of_carries` | `QuantumLight.lean` |
 | QL8 (C461) | the power `t` of the quantum tick is a Weyl operation times a number exactly when the power `t` of `pair S L` is the identity on the dial's states | `qtick_pow_weyl_iff` | `QuantumLight.lean` |
+| CH1 (finding 479, C466) | for every real `q > 0`, the link gate at an eighth of a turn, `coin (π / 4)` of `TheWalk.lean`, keeps the sum of the `q`-th powers of the sizes of every two complex numbers exactly when `q = 2` | `gate_power_iff` | `ChancePower.lean` |
 
 ## Notes
 
@@ -298,7 +299,8 @@ against the ledger's text: the statements are proved, not approved.
   signs, with no lowest energy for the symmetric sign and the sea for the alternating sign, finding
   477; the quantum law of light, the Weyl operations named by the states of the classical field, on
   which the quantum kick, drift and tick act as Pair does, with the tick forced up to a number and a
-  Weyl operation, and the kick's phase forced to be quadratic, finding 474.
+  Weyl operation, and the kick's phase forced to be quadratic, finding 474; only the square among
+  the powers, as the link gate keeps it, finding 479.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
