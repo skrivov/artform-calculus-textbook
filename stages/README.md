@@ -195,6 +195,9 @@ against the ledger's text: the statements are proved, not approved.
 | WN5 (T373(e)) | every field on the window is one gradient and one transverse field, each unique, and its charges sum to `0` | `window_hodge`, `window_divergence_sum` | `OpenWindow.lean` |
 | OS1, OS2 (finding 464, T374(a), (b)) | on a wide complex the far weight of `Cᵀ diag(K) C` at a flag of `σ` is `K σ`, so `K` is unique; where every corner has one paint, one rule read on paints leaves one `κ`, and a drift that is one rule one `λ` | `SquareComplex.farWeightRead_kick`, `SquareComplex.kick_unique`, `SquareComplex.one_rule_one_number`, `SquareComplex.drift_one_number` | `SolidRule.lean` |
 | OS3, OS4 (T374(c), (d)) | every corner of the cubic torus has one paint, so for side `n ≥ 3` the askings and one rule leave `κ Cᵀ C` for exactly one `κ`, and one `λ` | `cube_paint_const`, `cube_kick_one_number`, `cube_drift_one_number` | `SolidRule.lean` |
+| WS1, WS2 (finding 465, T375(a), (b)) | on the cubic torus `Cᵀ ψ` and `Gᵀ A` read on the lines and corners, and `Cᵀ C + G Gᵀ` is the stencil of seven points on each direction | `cube_transpose_mulVec`, `cube_gaugeT_mulVec`, `cube_hodge_laplacian` | `SolidWaves.lean` |
+| WS3, WS4 (T375(c), (d)) | the plane waves are the stencil's levels at `6 - 2 cos θ₁ - 2 cos θ₂ - 2 cos θ₃`, and the wave of an amplitude with no divergence is transverse light at `κ` times that level | `cube_stencil_wave`, `cube_transverse_wave` | `SolidWaves.lean` |
+| WS5, WS6 (T375(e), (f)) | for each wave vector other than `0` the amplitudes with no divergence form a space of dimension `2`; Pair turns the wave by `2 θ` per step, `sin² θ = κ λ Σ sin² (θ_d / 2)` | `cube_polarizations`, `cube_dispersion`, `cube_dispersion_relation` | `SolidWaves.lean` |
 
 ## Notes
 
@@ -235,7 +238,8 @@ against the ledger's text: the statements are proved, not approved.
   with `C G = 0`, and `2 - χ` on every closed board whose squares and corners are joined, finding
   462; the book's window with open edges, where the law is forced and no field is harmonic,
   finding 463; one rule in the cubic torus, read on paints, which leaves one `κ` and one `λ`,
-  finding 464.
+  finding 464; light in a solid, its stencil, its two polarizations and its dispersion, finding
+  465.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
