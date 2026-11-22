@@ -200,6 +200,8 @@ against the ledger's text: the statements are proved, not approved.
 | WS5, WS6 (T375(e), (f)) | for each wave vector other than `0` the amplitudes with no divergence form a space of dimension `2`; Pair turns the wave by `2 θ` per step, `sin² θ = κ λ Σ sin² (θ_d / 2)` | `cube_polarizations`, `cube_dispersion`, `cube_dispersion_relation` | `SolidWaves.lean` |
 | SM1, SM2 (finding 466, T376(a), (b)) | on the cubic torus the sum of `g` times its stencil is the sum of the squares of its steps, so a stencil `0` leaves `g` the same everywhere; a field is harmonic exactly when it is uniform | `cube_energy`, `cube_stencil_const`, `cube_harmonic_iff` | `SolidModes.lean` |
 | SM3 to SM5 (T376(c) to (e)) | the harmonic fields, the gradients and the transverse fields form spaces of dimensions `3`, `n³ - 1` and `2 (n³ - 1)`; Pair keeps the three means of `E` | `cube_harmonic_finrank`, `cube_gradient_finrank`, `cube_transverse_finrank`, `cube_pair_mean` | `SolidModes.lean` |
+| VS1, VS2 (finding 467, T377(a), (b)) | in every direction `u` of a solid the level of the plane wave of wave vector `t u` lies between `t² - t⁴ / 12` and `t²`, and such a level gives an angle per step between `c t √(1 - t² / 12)` and `c t / √(1 - c² t² / 4)` | `solid_level_direction`, `angle_of_level_bounds` | `SolidSpeed.lean` |
+| VS3, VS4 (T377(c), (d)) | so the angle per step in every direction of a solid lies between those bounds, its ratio to `t` tends to `c`, and on the cubic torus every transverse plane wave turns by it | `solidAngle_bounds`, `solidAngle_speed`, `cube_plane_wave` | `SolidSpeed.lean` |
 
 ## Notes
 
@@ -241,7 +243,8 @@ against the ledger's text: the statements are proved, not approved.
   462; the book's window with open edges, where the law is forced and no field is harmonic,
   finding 463; one rule in the cubic torus, read on paints, which leaves one `κ` and one `λ`,
   finding 464; light in a solid, its stencil, its two polarizations and its dispersion, finding
-  465; the three momenta of the cubic torus and the dimensions of its fields, finding 466.
+  465; the three momenta of the cubic torus and the dimensions of its fields, finding 466; one speed
+  of light in every direction of a solid, finding 467.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
