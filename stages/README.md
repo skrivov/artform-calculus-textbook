@@ -249,6 +249,7 @@ against the ledger's text: the statements are proved, not approved.
 | JU3 (C465) | a matter hop puts its charge `q` on its line, and changes the filling's ends and the occupation's charges both by `q` at the line's head and `-q` at its tail; between two dots with no charge it makes a pair | `MatterHop.hop_books`, `MatterHop.hop_makes_pair` | `JointUniverse.lean` |
 | JU4 (C465) | a drift whose phases have size `1`, a kept law and a gate keep the sum of the squares; on each pair the hop joins, the gate is the link gate `coin (± θ)` of `TheWalk.lean`; the gate of `-θ` undoes the gate of `θ`, the kept law of `-z` that of `z`, and the drift of the inverse phases that of the phases | `drift_norm`, `kept_norm`, `MatterHop.gate`, `MatterHop.gate_pair`, `MatterHop.gate_norm`, `MatterHop.gate_neg_gate`, `kept_neg_kept`, `drift_inv_drift`, `qdrift_norm` | `JointUniverse.lean` |
 | ID8 (finding 475, C462) | on the ring of `N ≥ 4 r + 1` places, with `S` the shift, the table `∑_{j=-r}^{r} a_j S^j` of reach `r`, the same at every place, keeps the sum of the squares of the sizes of every wave exactly when exactly one `a_j` is not `0` and that one has size `1`: it shifts rigidly by `j` places and turns (Meyer's theorem at every reach); at `r = 1` it is ID1 | `ringShiftBy`, `reachTable`, `scalar_reach_unitary_iff`, `reachOne_eq_reachTable`, `scalar_reach_one_of_reach` | `InnerDirectionReach.lean` |
+| KN8 (finding 481, C468) | for a stage with finitely many acts and laws and at least one act, on the dial of `n ≥ 1`, the reading of a line `ℓ` by a turn `χ` of `ℤ/n` into the complex numbers multiplies the value at a filling `c` by `χ (c ℓ)`; the reading by the dial's standard turn is finding 472's reading; and the writes of the lines and the readings by `χ` make every table of the waves on the fillings exactly when `χ` is faithful | `Stage.waveReadBy`, `Stage.waveReadBy_std`, `Stage.span_write_readBy_iff` | `StageNumber.lean` |
 
 ## Notes
 
@@ -308,7 +309,8 @@ against the ledger's text: the statements are proved, not approved.
   the powers, as the link gate keeps it, finding 479; light and charges run together, a joint
   universe in which Gauss's law cannot fail, finding 478; no motion without an inner direction at
   every finite reach, Meyer's theorem for the tables of reach `r` on the ring of `N ≥ 4 r + 1`
-  places, finding 475 again.
+  places, finding 475 again; the kind of number on the fillings of a stage, where the writes and the
+  readings by a turn make every table exactly when the turn is faithful, finding 481.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
