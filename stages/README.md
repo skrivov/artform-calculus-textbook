@@ -96,6 +96,9 @@ against the ledger's text: the statements are proved, not approved.
 | BI3 (T344(c)) | the drift round a square is the sum of `λ` over its four sides, and the local tests of the window hold on every board | `Board.roundDrift_incidence`, `Board.certificate`, `Board.asked` | `Incidence.lean` |
 | BI4 (T344(d)) | with every `λ > 0`, the same test makes the table on the lines, `4 / λ` less `Cᵀ diag(κ) C`, positive definite | `Board.window` | `Incidence.lean` |
 | BI5 (T344(e)) | the torus of `n` by `m` squares is a board, and on it `κ λ < 1 / 2` makes the table on the squares positive definite | `torus`, `torus_certificate` | `Incidence.lean` |
+| BO1 (finding 436, T346(a)) | with `S` positive semidefinite, `L = D D` for a symmetric `D` with an inverse `D'`, and `4 D' D' - S`, the window `4 L⁻¹ - S`, positive definite, every orbit of Pair from `(A, S w)` is bounded | `OrbitBounded`, `orbit_bounded_of_window` | `Bounded.lean` |
+| BO2 (T346(b)) | on a board, `κ σ` times the sum of `λ` over the four sides of `σ` below `2` at every square keeps every orbit of Pair from `(A, S w)` bounded | `Board.orbit_bounded` | `Bounded.lean` |
+| BO3 (T346(c)) | an orbit whose `E` lies on the level 0 of the kick drifts, `(-k y, L' y)` at step `k`, so it is not bounded | `pair_iterate_kernel`, `not_orbitBounded_of_kernel` | `Bounded.lean` |
 
 ## Notes
 
@@ -112,7 +115,8 @@ against the ledger's text: the statements are proved, not approved.
   a finite board and its window of stability are findings 424 and 425; its window with a drift by
   sorts is finding 427, that window read on the squares is finding 428, its strict form and local
   test are finding 430, the local tests on a board's incidence are finding 432, and the board
-  itself, its gauge, the window on its lines and the torus are finding 434.
+  itself, its gauge, the window on its lines and the torus are finding 434; the step from the
+  window to bounded orbits, on many places and on every board, is finding 436.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a
