@@ -178,6 +178,8 @@ against the ledger's text: the statements are proved, not approved.
 | IS3, IS4 (T366(c), (d)) | on the torus of `n` by `n` squares the diagonal wave turns by `axisAngle √(2 κ λ) θ₁` per step, and as a function of the length of its wave vector its angle has the derivative `c` at `0`, as along an axis | `torus_diagonal_wave`, `diagonalAngle_hasDerivAt` | `Isotropy.lean` |
 | MO1, MO2 (finding 457, T367(a), (b)) | on the torus Pair with a current `J` moves the means of `E` by minus the means of `J`, and with no current every number of steps keeps them | `torus_pairWith_mean`, `torus_pair_iterate_mean` | `TorusMomenta.lean` |
 | MO3, MO4 (T367(c), (d)) | with one drift `λ` each step moves the means of `A` by `-λ` times the means of `E`, so after `k` steps by `-k λ` times them | `torus_pair_mean_A`, `torus_pair_iterate_mean_A` | `TorusMomenta.lean` |
+| CG1, CG2 (finding 458, T368(a), (b)) | wherever `C G = 0`, every potential has exactly one gauge-equivalent potential with no divergence | `coulomb_gauge_exists`, `coulomb_gauge_unique` | `CoulombGauge.lean` |
+| CG3, CG4 (T368(c), (d)) | with no charge, Pair with every kick `Cᵀ K C` and one drift keeps a potential with no divergence, step after step | `pair_keeps_coulomb_gauge`, `pair_iterate_keeps_coulomb_gauge` | `CoulombGauge.lean` |
 
 ## Notes
 
@@ -210,7 +212,8 @@ against the ledger's text: the statements are proved, not approved.
   squares and its corners joined, one weight for each kick and Coulomb's problem on it, finding 454;
   its two harmonic fields, the uniform ones, and the means of `E` that Pair keeps, finding 455;
   one speed of light along the axes and the diagonals, and a level of the fourth order, finding 456;
-  the two momenta of the torus, kept, and the means of `A` that they move uniformly, finding 457.
+  the two momenta of the torus, kept, and the means of `A` that they move uniformly, finding 457;
+  the Coulomb gauge, which Pair keeps where there is no charge, finding 458.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
