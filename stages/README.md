@@ -234,6 +234,15 @@ against the ledger's text: the statements are proved, not approved.
 | ST1 (finding 477, C464) | with the symmetric sign, a whole number of charges on each level, if some level is below zero then for every number `M` some occupation has an energy below `M`: no occupation is lowest | `occupationEnergy`, `symmetric_no_lowest` | `Statistics.lean` |
 | ST2 (C464) | with the alternating sign, `0` or `1` on each level, every occupation has an energy at least the sum of the levels below zero, and the sea, every level below zero filled once and no other, has exactly that energy | `IsAlternating`, `sea`, `alternating_energy_ge`, `sea_energy` | `Statistics.lean` |
 | ST3 (C464) | for a coin angle `μ` strictly between `0` and `π / 2` and every wave number `k`, the walk's table has a level `e^{-iε}` with `ε` strictly between `0` and `π`, and its pair `e^{iε}`: read as energies, one above zero and one below | `walk_level_signs` | `Statistics.lean` |
+| QL0 (finding 474, C461) | the Fourier transform of the waves, the value at `b` the sum over `c` of `χ(-(b ⬝ c))` times the value at `c`, takes D2's write of a line to the turn by that line's count taken the other way round, which is D2's reading undone, and D2's reading of the line to its write, a move by one on that line: the names cross over | `fourier_write`, `fourier_read` | `QuantumLight.lean` |
+| QL1 (C461) | a wave is a complex number on every configuration `b : V → ℤ/n` of a finite set of cells, with `n` odd; the Weyl operation `W(b0, e0)` takes the value at `b + b0` to `b`, turned by `e0 ⬝ b`; Weyl operations pass up to the classical pairing, `W(u) W(v) = χ(omega u v) W(v) W(u)` | `weyl`, `weyl_comm` | `QuantumLight.lean` |
+| QL2 (C461) | the quantum kick of a symmetric `S`, after `W(b0, e0)`, after the kick undone, is `χ(half · b0 ⬝ S b0)` times `W(b0, e0 + S b0)` | `qkick`, `qkick_weyl` | `QuantumLight.lean` |
+| QL3 (C461) | the quantum drift of a symmetric `A`, the table that multiplies the electric pattern `b ↦ χ(-(e ⬝ b))` by `χ(half · e ⬝ A e)`, after `W(b0, e0)`, after the drift undone, is `χ(half · e0 ⬝ A e0)` times `W(b0 + A e0, e0)` | `qdrift`, `qdrift_weyl` | `QuantumLight.lean` |
+| QL4 (C461) | for symmetric `S` and `L`, the quantum tick, the drift of `-L` after the kick of `S`, after `W(v)`, after the tick undone, is a turn times `W(pair S L v)` | `qtick`, `qtick_weyl` | `QuantumLight.lean` |
+| QL5 (C461) | a linear map of the waves passes every `W(v)` exactly when it is a multiple of `1` | `commute_weyl_iff` | `QuantumLight.lean` |
+| QL6 (C461) | an invertible map that carries every `W(v)` to the same multiple of `W(pair S L v)` as the quantum tick does is the tick times one nonzero number; one that carries every `W(v)` to some multiple of `W(pair S L v)` is the tick times one Weyl operation and one nonzero number | `qtick_unique`, `qtick_unique_upto_weyl` | `QuantumLight.lean` |
+| QL7 (C461) | a map that multiplies the value at each `b` by a nonzero number `φ(b)`, and that carries every Weyl operation to a multiple of a Weyl operation, has `φ(b) = φ(0) · χ(-half · b ⬝ S b + β ⬝ b)` for some symmetric `S` and some configuration `β` | `phase_quadratic_of_carries` | `QuantumLight.lean` |
+| QL8 (C461) | the power `t` of the quantum tick is a Weyl operation times a number exactly when the power `t` of `pair S L` is the identity on the dial's states | `qtick_pow_weyl_iff` | `QuantumLight.lean` |
 
 ## Notes
 
@@ -287,7 +296,9 @@ against the ledger's text: the statements are proved, not approved.
   finding 473; the walk of a charge, forced up to its angles, with the levels `cos ε = cos μ cos k`
   and a twin at `k + π`, finding 476; the statistics of a charge whose walk has levels of both
   signs, with no lowest energy for the symmetric sign and the sea for the alternating sign, finding
-  477.
+  477; the quantum law of light, the Weyl operations named by the states of the classical field, on
+  which the quantum kick, drift and tick act as Pair does, with the tick forced up to a number and a
+  Weyl operation, and the kick's phase forced to be quadratic, finding 474.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
