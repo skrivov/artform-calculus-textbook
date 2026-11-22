@@ -152,6 +152,9 @@ against the ledger's text: the statements are proved, not approved.
 | DL4, DL5 (T358(d), (e)) | it keeps `Ω` and `Q⋆` on the dial, is undone by `unpair`, and obeys the wave equation | `Board.bookTick_omega`, `Board.bookTick_qstar`, `Board.bookTick_unpair`, `Board.bookTick_wave` | `Dial.lean` |
 | DL6 (T358(f)) | with a current on the dial, the divergence of `E` falls by that of the current | `Board.bookTick_continuity` | `Dial.lean` |
 | DL7 (T358(g)) | on a finite board every light returns after some number of ticks | `Board.bookTick_returns` | `Dial.lean` |
+| OR1 (finding 449, T359(a)) | on a wide board the far weight of `Cᵀ diag(K) C` at a flag of `σ`, read along the turn of `σ`, is `K σ` | `Board.farWeightRead_kick` | `OneRule.lean` |
+| OR2, OR3 (T359(b), (c)) | a kick of reach 1 meeting A10, A11 and one rule for the far weights (a function of the flag's six paints read either way) is `Cᵀ diag(K) C` with `K` the same on squares whose flags have the same paints, and so on each class | `Board.one_rule_flags`, `Board.one_rule_classes` | `OneRule.lean` |
+| OR4, OR5 (T359(d), (e)) | where every corner has one paint, such a kick is `Cᵀ diag(κ) C` with one `κ`, and a drift that is one rule is one number | `Board.one_rule_one_number`, `Board.drift_one_number` | `OneRule.lean` |
 
 ## Notes
 
@@ -177,8 +180,8 @@ against the ledger's text: the statements are proved, not approved.
   and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
   444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
   removes is finding 446; the dispersion of light on the torus is finding 447; the book's
-  tick on the dial of eight is finding 448.
+  tick on the dial of eight is finding 448; one rule, finding 421's T331(b), is finding 449.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
-  walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
-  which one rule makes `K` one number on each class of squares; and the comparison of a run's
-  own cell tables with a read board, which is a finite check of that run's data.
+  walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
+  for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
+  with a read board, which is a finite check of that run's data.
