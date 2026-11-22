@@ -55,3 +55,4 @@ import ArtformStages.TheWalk
 import ArtformStages.Statistics
 import ArtformStages.QuantumLight
 import ArtformStages.ChancePower
+import ArtformStages.JointUniverse

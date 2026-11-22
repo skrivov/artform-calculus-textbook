@@ -244,6 +244,10 @@ against the ledger's text: the statements are proved, not approved.
 | QL7 (C461) | a map that multiplies the value at each `b` by a nonzero number `φ(b)`, and that carries every Weyl operation to a multiple of a Weyl operation, has `φ(b) = φ(0) · χ(-half · b ⬝ S b + β ⬝ b)` for some symmetric `S` and some configuration `β` | `phase_quadratic_of_carries` | `QuantumLight.lean` |
 | QL8 (C461) | the power `t` of the quantum tick is a Weyl operation times a number exactly when the power `t` of `pair S L` is the identity on the dial's states | `qtick_pow_weyl_iff` | `QuantumLight.lean` |
 | CH1 (finding 479, C466) | for every real `q > 0`, the link gate at an eighth of a turn, `coin (π / 4)` of `TheWalk.lean`, keeps the sum of the `q`-th powers of the sizes of every two complex numbers exactly when `q = 2` | `gate_power_iff` | `ChancePower.lean` |
+| JU1 (finding 478, C465) | modes each with a base dot and a charge in `ℤ/n`, and an occupation of them; a joint law is a filling with an occupation whose ends are, at every dot, the charge the occupation puts there; an occupation is that of some joint law exactly when its charges at all dots add up to `0` in `ℤ/n` | `Modes`, `Modes.occCharge`, `JointConf`, `jointLaw`, `exists_jointLaw_iff` | `JointUniverse.lean` |
+| JU2 (C465) | a kick (a sum of kept laws on the filling), a drift (a phase on the filling), a matter hop and its reverse each take waves on joint laws to waves on joint laws, and so does a gate; the phase of the quantum drift of `QuantumLight.lean` is such a drift | `JointWave`, `jointWaves`, `jointKept`, `jointKick`, `jointDrift`, `MatterHop`, `MatterHop.hop`, `MatterHop.hopReverse`, `kick_jointWave`, `drift_jointWave`, `MatterHop.hop_jointWave`, `MatterHop.hopReverse_jointWave`, `MatterHop.gate_jointWave`, `qdriftPhase`, `qdrift_jointWave` | `JointUniverse.lean` |
+| JU3 (C465) | a matter hop puts its charge `q` on its line, and changes the filling's ends and the occupation's charges both by `q` at the line's head and `-q` at its tail; between two dots with no charge it makes a pair | `MatterHop.hop_books`, `MatterHop.hop_makes_pair` | `JointUniverse.lean` |
+| JU4 (C465) | a drift whose phases have size `1`, a kept law and a gate keep the sum of the squares; on each pair the hop joins, the gate is the link gate `coin (± θ)` of `TheWalk.lean`; the gate of `-θ` undoes the gate of `θ`, the kept law of `-z` that of `z`, and the drift of the inverse phases that of the phases | `drift_norm`, `kept_norm`, `MatterHop.gate`, `MatterHop.gate_pair`, `MatterHop.gate_norm`, `MatterHop.gate_neg_gate`, `kept_neg_kept`, `drift_inv_drift`, `qdrift_norm` | `JointUniverse.lean` |
 
 ## Notes
 
@@ -300,7 +304,8 @@ against the ledger's text: the statements are proved, not approved.
   477; the quantum law of light, the Weyl operations named by the states of the classical field, on
   which the quantum kick, drift and tick act as Pair does, with the tick forced up to a number and a
   Weyl operation, and the kick's phase forced to be quadratic, finding 474; only the square among
-  the powers, as the link gate keeps it, finding 479.
+  the powers, as the link gate keeps it, finding 479; light and charges run together, a joint
+  universe in which Gauss's law cannot fail, finding 478.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
