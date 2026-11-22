@@ -157,6 +157,9 @@ against the ledger's text: the statements are proved, not approved.
 | OR4, OR5 (T359(d), (e)) | where every corner has one paint, such a kick is `Cᵀ diag(κ) C` with one `κ`, and a drift that is one rule is one number | `Board.one_rule_one_number`, `Board.drift_one_number` | `OneRule.lean` |
 | SP1, SP2 (finding 450, T360(a), (b)) | `ω (θ) = 2 arcsin (c sin (θ / 2))` has `ω 0 = 0` and the derivative `c` at `0`, and meets the dispersion along an axis | `axisAngle_zero`, `axisAngle_hasDerivAt`, `axisAngle_dispersion` | `Speed.lean` |
 | SP3 (T360(c)) | on the torus with one `κ` and one `λ`, `0 ≤ κ λ ≤ 1`, the transverse plane wave of wave numbers `(p, 0)` turns by `ω (θ₁)` per step with `c = √(κ λ)` | `torus_axis_wave` | `Speed.lean` |
+| HD1 (finding 451, T361(a)) | for every real `A` and `x`, `A Aᵀ y = A x` has a solution `y` | `mul_transpose_solve` | `Hodge.lean` |
+| HD2 to HD4 (T361(b) to (d)) | wherever `C G = 0`, every field is `G φ + Cᵀ ψ + h` with `Gᵀ h = 0` and `C h = 0`, the three parts orthogonal and each unique | `hodge_exists`, `hodge_orthogonal`, `hodge_unique` | `Hodge.lean` |
+| HD5, HD6 (T361(e), (f)) | the gradient part carries the divergence and the transverse part the curl; the kick of Pair moves only the transverse part of `E` | `hodge_charge`, `hodge_curl`, `pair_parts` | `Hodge.lean` |
 
 ## Notes
 
@@ -183,7 +186,7 @@ against the ledger's text: the statements are proved, not approved.
   444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
   removes is finding 446; the dispersion of light on the torus is finding 447; the book's
   tick on the dial of eight is finding 448; one rule, finding 421's T331(b), is finding 449;
-  the speed of light along an axis is finding 450.
+  the speed of light along an axis is finding 450; the three parts of a field are finding 451.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
