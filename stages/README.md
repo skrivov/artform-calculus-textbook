@@ -160,6 +160,10 @@ against the ledger's text: the statements are proved, not approved.
 | HD1 (finding 451, T361(a)) | for every real `A` and `x`, `A Aᵀ y = A x` has a solution `y` | `mul_transpose_solve` | `Hodge.lean` |
 | HD2 to HD4 (T361(b) to (d)) | wherever `C G = 0`, every field is `G φ + Cᵀ ψ + h` with `Gᵀ h = 0` and `C h = 0`, the three parts orthogonal and each unique | `hodge_exists`, `hodge_orthogonal`, `hodge_unique` | `Hodge.lean` |
 | HD5, HD6 (T361(e), (f)) | the gradient part carries the divergence and the transverse part the curl; the kick of Pair moves only the transverse part of `E` | `hodge_charge`, `hodge_curl`, `pair_parts` | `Hodge.lean` |
+| FC1, FC2 (finding 452, T362(a), (b)) | on a wide complex of squares, where a line may be a side of any number of faces, a kick of reach 1 with `M G = 0` and `Gᵀ M = 0` is `Cᵀ diag(K) C`; and every `Cᵀ diag(K) C` is one | `SquareComplex.kick_forced`, `SquareComplex.kick_meets` | `ForcedComplex.lean` |
+| FC3 (T362(c)) | every board is a complex of squares with the same incidence and gauge, wide when the board is | `Board.toSquareComplex`, `Board.toSquareComplex_incidence`, `Board.toSquareComplex_gauge`, `Board.toSquareComplex_wide` | `ForcedComplex.lean` |
+| FC4, FC5 (T362(d), (e)) | the cubic torus of side `n > 1` is a complex of squares with the incidence and gauge of `Solid.lean`, and for `n ≥ 3` it is wide | `cubeComplex`, `cubeComplex_incidence`, `cubeComplex_gauge`, `cubeComplex_wide` | `ForcedComplex.lean` |
+| FC6 (T362(f)) | on the cubic torus of side `n ≥ 3` the law of light is forced: such a kick is `Cᵀ diag(K) C` | `cube_kick_forced` | `ForcedComplex.lean` |
 
 ## Notes
 
@@ -186,7 +190,8 @@ against the ledger's text: the statements are proved, not approved.
   444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
   removes is finding 446; the dispersion of light on the torus is finding 447; the book's
   tick on the dial of eight is finding 448; one rule, finding 421's T331(b), is finding 449;
-  the speed of light along an axis is finding 450; the three parts of a field are finding 451.
+  the speed of light along an axis is finding 450; the three parts of a field are finding 451;
+  the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables

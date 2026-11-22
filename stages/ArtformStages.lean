@@ -28,3 +28,4 @@ import ArtformStages.Dial
 import ArtformStages.OneRule
 import ArtformStages.Speed
 import ArtformStages.Hodge
+import ArtformStages.ForcedComplex
