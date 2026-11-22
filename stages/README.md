@@ -212,6 +212,11 @@ against the ledger's text: the statements are proved, not approved.
 | KP5 (C458) | with finitely many acts and laws, on the dial of `n ≥ 1`, the ends of fillings form a map of additive groups; an assignment is the ends of some filling exactly when its values add up to `0` in `ℤ/n`, and then of exactly `n ^ r` fillings, `r = |acts| |laws| - |laws| + 1`; so `k` charges of one click stand alone exactly when `n` divides `k` | `Stage.endsDial`, `Stage.endsDial_mem_range_iff`, `Stage.card_endsDial_fiber`, `Stage.cast_fiber_exponent`, `Stage.charges_alone_iff` | `KeepField.lean` |
 | KP6 (C458) | for `n, m ≥ 2` the world of the stage of two rows that pass is `ℤ/n × ℤ/m`, by an isomorphism that sends the law of `a` to `(1, 0)` and that of `b` to `(0, 1)` | `twoRows`, `twoRowsWorld`, `twoRowsWorld_law_a`, `twoRowsWorld_law_b` | `KeepField.lean` |
 | KP7 (C458) | read through it, with `(a, g)` the line across at the corner of `g` and `(b, g)` the line up, the ends of every chain at every corner are minus the divergence of the field that the chain gives the torus's lines | `twoRowsField`, `twoRows_ends_eq_neg_divergence` | `KeepField.lean` |
+| WV1 (finding 472, C459) | a wave is a complex number on every filling of a finite stage on the dial of `n`; the reading of `ℓ` after the write of `ℓ'` is the turn of `1` if `ℓ = ℓ'`, of `0` otherwise, times the write after the reading, and after the kept law of `z` it is the turn of `z`'s count on `ℓ` times the kept law after the reading; writes and kept laws pass each other, and readings pass each other | `Stage.Wave`, `Stage.waveWrite`, `Stage.waveRead`, `Stage.waveKept`, `Stage.read_write`, `Stage.read_kept`, `Stage.write_comm`, `Stage.write_kept_comm`, `Stage.read_comm` | `FillingWaves.lean` |
+| WV2 (C459) | a kept law and a reading take every charge sector to itself, and the write of `ℓ` takes the sector of `ρ` to the sector of `ρ` with one more at the head of `ℓ` and one less at its tail | `Stage.waveSector`, `Stage.waveKept_sector`, `Stage.waveRead_sector`, `Stage.waveWrite_sector` | `FillingWaves.lean` |
+| WV3 (C459) | each of the three kinds of table keeps the sum, over the fillings, of the squares of the sizes of a wave's numbers | `Stage.waveWrite_norm`, `Stage.waveRead_norm`, `Stage.waveKept_norm` | `FillingWaves.lean` |
+| WV4 (C459) | every linear map of the waves to themselves is a sum, with complex coefficients, of products of writes and readings | `Stage.span_write_read` | `FillingWaves.lean` |
+| WV5 (C459) | kept laws pass each other; writes and kept laws keep every part, with its numbers, and the reading of `ℓ` multiplies each kept law's number by the turn of that law's count on `ℓ`, to the power `-1` | `Stage.kept_comm`, `Stage.wavePart`, `Stage.write_part`, `Stage.kept_part`, `Stage.read_part` | `FillingWaves.lean` |
 
 ## Notes
 
@@ -258,7 +263,8 @@ against the ledger's text: the statements are proved, not approved.
   window holds, finding 468; the fall of Coulomb's field in the plane, as `1/r` in the mean,
   finding 469, and in a solid, as `1/r²` in the mean, finding 470; the ends of a trail, which give
   Gauss's law on every stage and on every dial, and the torus as the map of two rows that pass,
-  finding 471.
+  finding 471; waves on the fillings, with Weyl's relation, Gauss's law as the charge sectors and
+  the parts, finding 472.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
