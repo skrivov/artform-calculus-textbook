@@ -108,6 +108,13 @@ against the ledger's text: the statements are proved, not approved.
 | FL2 (T350(b)) | on every board, every `Cᵀ diag(K) C` has reach 1, `Cᵀ diag(K) C G = 0` and `Gᵀ Cᵀ diag(K) C = 0` | `Board.kick_meets` | `Forced.lean` |
 | FL3 (T350(c)) | on every board, a kick of reach 0 with `M G = 0` is `0` | `Board.reach_zero` | `Forced.lean` |
 | FL4 (T350(d)) | on a joined board the image of `C` holds `e σ - e τ`; so on a wide joined board of at least three squares each such kick is `Cᵀ diag(K) C` for exactly one `K` | `Board.joined_image`, `Board.kick_forced_unique` | `Forced.lean` |
+| MX1 (finding 441, T351(a)) | Pair with a current `J`, `E' = E + S A - J`, `A' = A - L E'`, is Pair when `J = 0`; with `S = Cᵀ K C` the field `B = C A` loses `C L E'` (Faraday) and `E' = E + Cᵀ K B - J` (Ampère) | `pairWith_zero`, `faraday_pairWith`, `ampere_pairWith` | `Maxwell.lean` |
+| MX2 (T351(b)) | with `C G = 0`, the divergence `-Gᵀ E` of `E'` is that of `E` less that of `J` | `divergence_pairWith` | `Maxwell.lean` |
+| MX3 (T351(c)) | with `C G = 0`, every state with divergence `ρ` goes to one with divergence `ρ'` exactly when `ρ' = ρ - div J` | `gauss_kept_iff` | `Maxwell.lean` |
+| MX4 (T351(d)) | with `C G = 0`, a change `G g` of `A` passes through Pair with a current | `pairWith_gauge` | `Maxwell.lean` |
+| MX5 (T351(e)) | with `S`, `L` symmetric, `Q⋆` after the step is `Q⋆` before less `J ⬝ L (E + E')` | `qstar_pairWith` | `Maxwell.lean` |
+| MX6 (T351(f)) | a state is still exactly when `Cᵀ K C A = J` and `C L E = 0`; its current has no divergence; with no current and every `κ > 0`, `C A = 0` | `pairWith_still_iff`, `still_current_divergence`, `still_field_zero` | `Maxwell.lean` |
+| MX7 (T351(g)) | on every board the divergence of every `E` sums to `0` over the corners | `Board.divergence_sum` | `Maxwell.lean` |
 
 ## Notes
 
@@ -128,7 +135,8 @@ against the ledger's text: the statements are proved, not approved.
   window to bounded orbits, on many places and on every board, is finding 436; that the window
   is exact, and that two different weights on the squares give two different kicks, are findings
   438 and 439; that on a wide board the askings leave the kicks `Cᵀ diag(K) C` and no other is
-  finding 440.
+  finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
+  finding 441.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
