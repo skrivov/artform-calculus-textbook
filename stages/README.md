@@ -190,6 +190,9 @@ against the ledger's text: the statements are proved, not approved.
 | EU1 (finding 462, T372(a)) | on every map with `C G = 0` the dimension of the harmonic fields, `rank G` and `rank C` add up to the number of lines | `harmonic_count` | `EulerCount.lean` |
 | EU2 (T372(b)) | on a board whose squares are joined `Cᵀ ψ = 0` exactly for `ψ` the same on every square, so `rank C + 1 = F`; where its corners are joined, `rank G + 1 = V` | `Board.transpose_ker_iff`, `Board.incidence_rank`, `Board.gauge_rank` | `EulerCount.lean` |
 | EU3, EU4 (T372(c), (d)) | so on a board whose squares and corners are joined the harmonic fields have the dimension `2 - χ`; on the torus, `2` | `Board.harmonic_euler`, `torus_harmonic_euler` | `EulerCount.lean` |
+| WN1, WN2 (finding 463, T373(a), (b)) | the window of `a` by `b` squares with open edges is a complex of squares whose maps close up; it is wide, so A10 and A11 with reach 1 leave `Cᵀ diag(K) C` | `windowComplex`, `window_incidence_mul_gauge`, `window_wide`, `window_kick_forced` | `OpenWindow.lean` |
+| WN3, WN4 (T373(c), (d)) | on the window `G φ = 0` only for constants and `Cᵀ ψ = 0` only for `ψ = 0`, so it has no harmonic field | `window_gauge_ker`, `window_transpose_ker`, `window_harmonic_finrank`, `window_no_harmonic` | `OpenWindow.lean` |
+| WN5 (T373(e)) | every field on the window is one gradient and one transverse field, each unique, and its charges sum to `0` | `window_hodge`, `window_divergence_sum` | `OpenWindow.lean` |
 
 ## Notes
 
@@ -228,7 +231,8 @@ against the ledger's text: the statements are proved, not approved.
   in every direction at long waves, finding 460; D17 read on the dominos of a wide board, which
   gives one rule for the far weights, finding 461; the count of the harmonic fields on every map
   with `C G = 0`, and `2 - χ` on every closed board whose squares and corners are joined, finding
-  462.
+  462; the book's window with open edges, where the law is forced and no field is harmonic,
+  finding 463.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
