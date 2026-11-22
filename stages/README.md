@@ -174,6 +174,8 @@ against the ledger's text: the statements are proved, not approved.
 | HM2 to HM4 (T365(b) to (d)) | on the torus a field with no divergence and no curl is uniform, one number on the lines of each direction, and every uniform field is one: the torus has two harmonic fields | `torus_harmonic_uniform`, `torus_uniform_harmonic`, `torus_harmonic_iff` | `TorusHarmonic.lean` |
 | HM5 (T365(e)) | the row field of `Holonomy.lean` is the uniform field of `a` and `0` | `rowField_uniform` | `TorusHarmonic.lean` |
 | HM6, HM7 (T365(f), (g)) | every field on the torus is `G φ + Cᵀ ψ` plus the uniform field of its two means, which are the only two numbers there; Pair keeps the means of `E` | `torus_hodge`, `torus_hodge_mean`, `torus_pair_mean` | `TorusHarmonic.lean` |
+| IS1, IS2 (finding 456, T366(a), (b)) | `θ² - θ⁴ / 12 ≤ 4 sin² (θ / 2) ≤ θ²`, so the level of every plane wave is the square of the length of its wave vector up to the fourth order, in every direction | `four_sin_sq_half_bounds`, `level_isotropic` | `Isotropy.lean` |
+| IS3, IS4 (T366(c), (d)) | on the torus of `n` by `n` squares the diagonal wave turns by `axisAngle √(2 κ λ) θ₁` per step, and as a function of the length of its wave vector its angle has the derivative `c` at `0`, as along an axis | `torus_diagonal_wave`, `diagonalAngle_hasDerivAt` | `Isotropy.lean` |
 
 ## Notes
 
@@ -204,7 +206,8 @@ against the ledger's text: the statements are proved, not approved.
   the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452;
   the torus as a wide board of one paint, where Pair's kick and drift are forced, is finding 453; its
   squares and its corners joined, one weight for each kick and Coulomb's problem on it, finding 454;
-  its two harmonic fields, the uniform ones, and the means of `E` that Pair keeps, finding 455.
+  its two harmonic fields, the uniform ones, and the means of `E` that Pair keeps, finding 455;
+  one speed of light along the axes and the diagonals, and a level of the fourth order, finding 456.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
