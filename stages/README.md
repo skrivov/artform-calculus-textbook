@@ -33,6 +33,7 @@ against the ledger's text: the statements are proved, not approved.
 | the reading | `realize`, `realizeVec`, `realizeState` | on a finite space, a table of stencils read as a table of numbers: at `(i, h), (j, h')` the number of `C i j` at `h h'⁻¹` |
 | a relabeling of cells | `relabel` | a table `P` with `Pᵀ P = 1`, a bijection of cells with a sign on each among them, applied to both parts of a state |
 | the Pair of one place | `pairOne`, `qOne`, `OrbitsBounded` | `e' = e + σ a`, `a' = a - ℓ e'`; its energy `σ a² + ℓ e² + σ ℓ a e`; every orbit keeps `a² + e²` below a bound |
+| a scaling | `scale` | the lines by `D'` and the dual lines by `D`, with `D D' = D' D = 1`: for a drift by sorts, `D` is its square root |
 
 ## The statements
 
@@ -83,6 +84,8 @@ against the ledger's text: the statements are proved, not approved.
 | WN1, WN2 (finding 425, T335(a), (b)) | completing the square: `4 Q⋆ = (2E + S A) ⬝ L (2E + S A) + 4 A ⬝ S A - S A ⬝ L (S A)`; so `Q⋆` is nowhere negative exactly when `L` is and `S A ⬝ L (S A) ≤ 4 A ⬝ S A` | `four_qstar`, `qstar_nonneg_iff` | `Window.lean` |
 | WN3 (T335(c)) | on a level `S v = s v`, with the drift `ℓ` on every cell, Pair is the Pair of one place | `pair_on_level` | `Window.lean` |
 | WN4 (T335(d)) | the Pair of one place keeps every orbit bounded exactly when `0 < ℓ σ < 4`, or `ℓ = σ = 0` | `bounded_iff_window` | `Window.lean` |
+| WS1, WS2 (finding 427, T337(a), (b)) | Pair with the drift `D D`, scaled, is Pair with the kick `D S D` and the drift 1; with `D` symmetric the scaling keeps the alternating pairing | `pair_scale`, `omega_scale` | `Scale.lean` |
+| WS3 (T337(c)) | on a level of the pair, `L S v = μ v`, Pair is the Pair of one place with `σ = 1` and `ℓ = μ` | `pair_on_pair_level` | `Scale.lean` |
 
 ## Notes
 
@@ -96,7 +99,8 @@ against the ledger's text: the statements are proved, not approved.
   two, and the wheel of two with one more act.
 - **Pair** is the law of light of the ledger's wave 39 (astra's): its laws are held there by
   scripts, and proved here over any commutative ring (finding 422 of the ledger). Its reading on
-  a finite board and its window of stability are findings 424 and 425.
+  a finite board and its window of stability are findings 424 and 425; its window with a drift by
+  sorts is finding 427.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a

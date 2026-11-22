@@ -8,3 +8,4 @@ import ArtformStages.Pair
 import ArtformStages.Realize
 import ArtformStages.Window
 import ArtformStages.Relabel
+import ArtformStages.Scale
