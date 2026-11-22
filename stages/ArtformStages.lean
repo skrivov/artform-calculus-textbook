@@ -5,3 +5,6 @@ import ArtformStages.KeepTrail
 import ArtformStages.Examples
 import ArtformStages.OneMark
 import ArtformStages.Pair
+import ArtformStages.Realize
+import ArtformStages.Window
+import ArtformStages.Relabel

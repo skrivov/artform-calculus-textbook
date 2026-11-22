@@ -30,6 +30,9 @@ against the ledger's text: the statements are proved, not approved.
 | the kick, the drift, Pair | `kick`, `drift`, `pair`, `unpair` | `E` gains `S A`; then `A` loses `L E`; Pair is the drift after the kick |
 | periodization | Mathlib's `MonoidAlgebra.mapDomainRingHom` | along a map of spaces, the sum of a filling's values over each fiber |
 | turning over | `turnOver`, `turned` | each law to its inverse; on a table, its transpose read with every stencil turned over |
+| the reading | `realize`, `realizeVec`, `realizeState` | on a finite space, a table of stencils read as a table of numbers: at `(i, h), (j, h')` the number of `C i j` at `h h'⁻¹` |
+| a relabeling of cells | `relabel` | a table `P` with `Pᵀ P = 1`, a bijection of cells with a sign on each among them, applied to both parts of a state |
+| the Pair of one place | `pairOne`, `qOne`, `OrbitsBounded` | `e' = e + σ a`, `a' = a - ℓ e'`; its energy `σ a² + ℓ e² + σ ℓ a e`; every orbit keeps `a² + e²` below a bound |
 
 ## The statements
 
@@ -74,6 +77,12 @@ against the ledger's text: the statements are proved, not approved.
 | PA3 (T332(c)) | with `S` and `L` symmetric, Pair keeps the staggered invariant `A ⬝ S A + E ⬝ L E + A ⬝ S (L E)` | `qstar_pair` | `Pair.lean` |
 | PA4 (T332(d)) | with `S = Cᵀ K C` and `C D = 0`, Pair passes the gauge and keeps the charge `Dᵀ E` | `pair_gauge`, `charge_pair` | `Pair.lean` |
 | PA5 (T332(e)) | Pair commutes with maps of rings; periodization is one, by sums over fibers, and commutes with turning over; so it sends Pair to Pair | `pair_map`, `coeff_periodize`, `periodize_antipode`, `periodize_pair` | `Pair.lean` |
+| RZ2 (finding 424, T334(a)) | on a finite space the reading takes products of stencils to products of tables and turning over to the transpose, and loses nothing | `coeff_mul_fintype`, `realize_mulVec`, `realize_mul`, `realize_turned`, `realizeVec_injective` | `Realize.lean` |
+| RZ3 (T334(b)) | the reading of Pair is the Pair of the readings; with periodization, the plane's Pair read on its closed quotient is the Pair of the board whose kick is `Cᵀ K C` | `realize_pair`, `realize_periodize_pair` | `Realize.lean` |
+| RS1 to RS3 (T334(c)) | Pair commutes with a relabeling of cells, which keeps the alternating pairing and the staggered energy | `pair_conj`, `omega_conj`, `qstar_conj` | `Relabel.lean` |
+| WN1, WN2 (finding 425, T335(a), (b)) | completing the square: `4 Q⋆ = (2E + S A) ⬝ L (2E + S A) + 4 A ⬝ S A - S A ⬝ L (S A)`; so `Q⋆` is nowhere negative exactly when `L` is and `S A ⬝ L (S A) ≤ 4 A ⬝ S A` | `four_qstar`, `qstar_nonneg_iff` | `Window.lean` |
+| WN3 (T335(c)) | on a level `S v = s v`, with the drift `ℓ` on every cell, Pair is the Pair of one place | `pair_on_level` | `Window.lean` |
+| WN4 (T335(d)) | the Pair of one place keeps every orbit bounded exactly when `0 < ℓ σ < 4`, or `ℓ = σ = 0` | `bounded_iff_window` | `Window.lean` |
 
 ## Notes
 
@@ -86,7 +95,9 @@ against the ledger's text: the statements are proved, not approved.
 - **Rules 5 and 7 are proved by example**: the six orders of three things over the wheel of
   two, and the wheel of two with one more act.
 - **Pair** is the law of light of the ledger's wave 39 (astra's): its laws are held there by
-  scripts, and proved here over any commutative ring (finding 422 of the ledger).
+  scripts, and proved here over any commutative ring (finding 422 of the ledger). Its reading on
+  a finite board and its window of stability are findings 424 and 425.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
-  (finding 421), and the realization of the periodized Pair on a finite board's cells.
+  (finding 421); and the comparison of a run's own cell tables with a read board, which is a
+  finite check of that run's data.
