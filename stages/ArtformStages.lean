@@ -44,3 +44,4 @@ import ArtformStages.SolidRule
 import ArtformStages.SolidWaves
 import ArtformStages.SolidModes
 import ArtformStages.SolidSpeed
+import ArtformStages.GroupSpeed

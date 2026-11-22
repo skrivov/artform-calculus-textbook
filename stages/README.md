@@ -202,6 +202,8 @@ against the ledger's text: the statements are proved, not approved.
 | SM3 to SM5 (T376(c) to (e)) | the harmonic fields, the gradients and the transverse fields form spaces of dimensions `3`, `n³ - 1` and `2 (n³ - 1)`; Pair keeps the three means of `E` | `cube_harmonic_finrank`, `cube_gradient_finrank`, `cube_transverse_finrank`, `cube_pair_mean` | `SolidModes.lean` |
 | VS1, VS2 (finding 467, T377(a), (b)) | in every direction `u` of a solid the level of the plane wave of wave vector `t u` lies between `t² - t⁴ / 12` and `t²`, and such a level gives an angle per step between `c t √(1 - t² / 12)` and `c t / √(1 - c² t² / 4)` | `solid_level_direction`, `angle_of_level_bounds` | `SolidSpeed.lean` |
 | VS3, VS4 (T377(c), (d)) | so the angle per step in every direction of a solid lies between those bounds, its ratio to `t` tends to `c`, and on the cubic torus every transverse plane wave turns by it | `solidAngle_bounds`, `solidAngle_speed`, `cube_plane_wave` | `SolidSpeed.lean` |
+| GS1 (finding 468, T378(a)) | the angle per step of a plane wave in `k` dimensions, `2 arcsin (c √S)`, has in each angle the derivative `c sin (θ_j / 2) cos (θ_j / 2) / (√S √(1 - c² S))`, the group velocity; in two and three dimensions it is the plane and the solid angle | `waveAngle_hasDerivAt`, `waveAngle_two`, `waveAngle_three` | `GroupSpeed.lean` |
+| GS2, GS3 (T378(b), (c)) | where `c² k ≤ 1` the group velocity has the size at most `c`; along an axis, for `0 < c < 1`, the group speed is below `c` at every shorter wave and `0` at `θ = π` | `groupVel_sq_le`, `axisAngle_hasDerivAt_at`, `axis_group_speed_lt`, `axis_group_speed_pi` | `GroupSpeed.lean` |
 
 ## Notes
 
@@ -244,7 +246,8 @@ against the ledger's text: the statements are proved, not approved.
   finding 463; one rule in the cubic torus, read on paints, which leaves one `κ` and one `λ`,
   finding 464; light in a solid, its stencil, its two polarizations and its dispersion, finding
   465; the three momenta of the cubic torus and the dimensions of its fields, finding 466; one speed
-  of light in every direction of a solid, finding 467.
+  of light in every direction of a solid, finding 467; the group speed, at most `c` where the
+  window holds, finding 468.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
