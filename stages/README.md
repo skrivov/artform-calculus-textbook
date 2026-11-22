@@ -184,6 +184,9 @@ against the ledger's text: the statements are proved, not approved.
 | MD3 to MD5 (T369(c) to (e)) | the gradients and the transverse fields of the torus each form a space of dimension `n m - 1`, the harmonic fields one of dimension `2`, together the `2 n m` lines | `torus_gradient_finrank`, `torus_transverse_finrank`, `torus_harmonic_finrank`, `torus_finrank_sum` | `TorusModes.lean` |
 | EV1, EV2 (finding 460, T370(a), (b)) | `y ≤ arcsin y ≤ y / √(1 - y²)`, so in every direction `u` the angle per step of the plane wave of wave vector `t u` lies between `c t √(1 - t² / 12)` and `c t / √(1 - c² t² / 4)` | `le_arcsin_self`, `arcsin_le_div_sqrt`, `planeAngle_bounds` | `SpeedEveryDirection.lean` |
 | EV3, EV4 (T370(c), (d)) | that angle divided by `t` tends to `c` as `t` tends to `0`, in every direction; and on the torus every plane wave turns by it per step | `planeAngle_speed`, `torus_plane_wave` | `SpeedEveryDirection.lean` |
+| DM1 (finding 461, T371(a)) | on a wide board, in every naming of a domino, six different corners, seven different lines and two different squares, whose gauge and incidence, read with the naming's signs, are two fixed tables | `Board.domino_corner_injective`, `Board.domino_line_injective`, `Board.domino_square_ne`, `Board.domino_gauge`, `Board.domino_incidence` | `DominoRule.lean` |
+| DM2, DM3 (T371(b), (c)) | every square at a line is a named square of its domino, and every side and corner of one is named; a kick that meets D17 meets one rule for the far weights | `Board.domino_reach`, `Board.d17_oneRuleFar` | `DominoRule.lean` |
+| DM4, DM5 (T371(d), (e)) | so A10, A11, reach 1 and D17 leave `Cᵀ diag(K) C` with `K` one number on each class, one `κ` where every corner has one paint and on the torus of sides at least 3; and `Cᵀ diag(κ) C` meets D17 | `Board.d17_classes`, `Board.d17_one_number`, `torus_d17`, `Board.kick_rowRead`, `Board.kick_meets_d17` | `DominoRule.lean` |
 
 ## Notes
 
@@ -219,8 +222,8 @@ against the ledger's text: the statements are proved, not approved.
   the two momenta of the torus, kept, and the means of `A` that they move uniformly, finding 457;
   the Coulomb gauge, which Pair keeps where there is no charge, finding 458; the dimensions of the
   three parts of a field on the torus, `n m - 1`, `n m - 1` and `2`, finding 459; one speed of light
-  in every direction at long waves, finding 460.
+  in every direction at long waves, finding 460; D17 read on the dominos of a wide board, which
+  gives one rule for the far weights, finding 461.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
-  walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
-  for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
-  with a read board, which is a finite check of that run's data.
+  walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
+  tables with a read board, which is a finite check of that run's data.

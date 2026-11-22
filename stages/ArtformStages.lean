@@ -37,3 +37,4 @@ import ArtformStages.TorusMomenta
 import ArtformStages.CoulombGauge
 import ArtformStages.TorusModes
 import ArtformStages.SpeedEveryDirection
+import ArtformStages.DominoRule
