@@ -147,6 +147,11 @@ against the ledger's text: the statements are proved, not approved.
 | DI3 (T357(c)) | Pair carries every level of `L S` at `4 sin² θ` as that wave | `level_wave` | `Dispersion.lean` |
 | DI4 (T357(d)) | `4 - 2 cos θ₁ - 2 cos θ₂ = 4 (sin² (θ₁/2) + sin² (θ₂/2))`, and the dispersion relation | `dispersion_identity`, `dispersion_relation` | `Dispersion.lean` |
 | DI5 (T357(e)) | on the torus with one `κ` and one `λ`, the transverse plane wave turns by `2 θ` per step, `4 sin² θ = λ κ (4 - 2 cos θ₁ - 2 cos θ₂)` | `torus_dispersion` | `Dispersion.lean` |
+| DL1 (finding 448, T358(a)) | a board's incidence and gauge over every commutative ring have `C G = 0`, and over the real numbers they are the board's own | `Board.incidenceR_mul_gaugeR`, `Board.incidenceR_real`, `Board.gaugeR_real` | `Dial.lean` |
+| DL2, DL3 (T358(b), (c)) | the book's tick, Pair over `ZMod N` with the kick `Cᵀ C` and the drift `1` (TE1 with `N = 8`), keeps Gauss's law and passes the gauge | `Board.bookTick_charge`, `Board.bookTick_gauge` | `Dial.lean` |
+| DL4, DL5 (T358(d), (e)) | it keeps `Ω` and `Q⋆` on the dial, is undone by `unpair`, and obeys the wave equation | `Board.bookTick_omega`, `Board.bookTick_qstar`, `Board.bookTick_unpair`, `Board.bookTick_wave` | `Dial.lean` |
+| DL6 (T358(f)) | with a current on the dial, the divergence of `E` falls by that of the current | `Board.bookTick_continuity` | `Dial.lean` |
+| DL7 (T358(g)) | on a finite board every light returns after some number of ticks | `Board.bookTick_returns` | `Dial.lean` |
 
 ## Notes
 
@@ -171,7 +176,8 @@ against the ledger's text: the statements are proved, not approved.
   finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
   and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
   444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
-  removes is finding 446; the dispersion of light on the torus is finding 447.
+  removes is finding 446; the dispersion of light on the torus is finding 447; the book's
+  tick on the dial of eight is finding 448.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
