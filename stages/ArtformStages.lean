@@ -10,3 +10,4 @@ import ArtformStages.Window
 import ArtformStages.Relabel
 import ArtformStages.Scale
 import ArtformStages.Dual
+import ArtformStages.Strict
