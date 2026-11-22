@@ -26,3 +26,4 @@ import ArtformStages.Holonomy
 import ArtformStages.Dispersion
 import ArtformStages.Dial
 import ArtformStages.OneRule
+import ArtformStages.Speed
