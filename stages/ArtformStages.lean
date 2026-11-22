@@ -51,3 +51,4 @@ import ArtformStages.KeepField
 import ArtformStages.FillingWaves
 import ArtformStages.InnerDirection
 import ArtformStages.KindOfNumber
+import ArtformStages.TheWalk
