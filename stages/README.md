@@ -86,6 +86,7 @@ against the ledger's text: the statements are proved, not approved.
 | WN4 (T335(d)) | the Pair of one place keeps every orbit bounded exactly when `0 < ℓ σ < 4`, or `ℓ = σ = 0` | `bounded_iff_window` | `Window.lean` |
 | WS1, WS2 (finding 427, T337(a), (b)) | Pair with the drift `D D`, scaled, is Pair with the kick `D S D` and the drift 1; with `D` symmetric the scaling keeps the alternating pairing | `pair_scale`, `omega_scale` | `Scale.lean` |
 | WS3 (T337(c)) | on a level of the pair, `L S v = μ v`, Pair is the Pair of one place with `σ = 1` and `ℓ = μ` | `pair_on_pair_level` | `Scale.lean` |
+| WD1 (finding 428, T338(a)) | for positive definite `A` and `D`, `D - Bᴴ A⁻¹ B` is positive semidefinite exactly when `A - B D⁻¹ Bᴴ` is: the window read on the lines is the window read on the squares | `window_dual` | `Dual.lean` |
 
 ## Notes
 
@@ -100,7 +101,7 @@ against the ledger's text: the statements are proved, not approved.
 - **Pair** is the law of light of the ledger's wave 39 (astra's): its laws are held there by
   scripts, and proved here over any commutative ring (finding 422 of the ledger). Its reading on
   a finite board and its window of stability are findings 424 and 425; its window with a drift by
-  sorts is finding 427.
+  sorts is finding 427, and that window read on the squares is finding 428.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a
