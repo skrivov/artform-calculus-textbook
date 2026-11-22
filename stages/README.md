@@ -193,6 +193,8 @@ against the ledger's text: the statements are proved, not approved.
 | WN1, WN2 (finding 463, T373(a), (b)) | the window of `a` by `b` squares with open edges is a complex of squares whose maps close up; it is wide, so A10 and A11 with reach 1 leave `Cᵀ diag(K) C` | `windowComplex`, `window_incidence_mul_gauge`, `window_wide`, `window_kick_forced` | `OpenWindow.lean` |
 | WN3, WN4 (T373(c), (d)) | on the window `G φ = 0` only for constants and `Cᵀ ψ = 0` only for `ψ = 0`, so it has no harmonic field | `window_gauge_ker`, `window_transpose_ker`, `window_harmonic_finrank`, `window_no_harmonic` | `OpenWindow.lean` |
 | WN5 (T373(e)) | every field on the window is one gradient and one transverse field, each unique, and its charges sum to `0` | `window_hodge`, `window_divergence_sum` | `OpenWindow.lean` |
+| OS1, OS2 (finding 464, T374(a), (b)) | on a wide complex the far weight of `Cᵀ diag(K) C` at a flag of `σ` is `K σ`, so `K` is unique; where every corner has one paint, one rule read on paints leaves one `κ`, and a drift that is one rule one `λ` | `SquareComplex.farWeightRead_kick`, `SquareComplex.kick_unique`, `SquareComplex.one_rule_one_number`, `SquareComplex.drift_one_number` | `SolidRule.lean` |
+| OS3, OS4 (T374(c), (d)) | every corner of the cubic torus has one paint, so for side `n ≥ 3` the askings and one rule leave `κ Cᵀ C` for exactly one `κ`, and one `λ` | `cube_paint_const`, `cube_kick_one_number`, `cube_drift_one_number` | `SolidRule.lean` |
 
 ## Notes
 
@@ -232,7 +234,8 @@ against the ledger's text: the statements are proved, not approved.
   gives one rule for the far weights, finding 461; the count of the harmonic fields on every map
   with `C G = 0`, and `2 - χ` on every closed board whose squares and corners are joined, finding
   462; the book's window with open edges, where the law is forced and no field is harmonic,
-  finding 463.
+  finding 463; one rule in the cubic torus, read on paints, which leaves one `κ` and one `λ`,
+  finding 464.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.

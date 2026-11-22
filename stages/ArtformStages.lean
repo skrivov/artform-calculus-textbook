@@ -40,3 +40,4 @@ import ArtformStages.SpeedEveryDirection
 import ArtformStages.DominoRule
 import ArtformStages.EulerCount
 import ArtformStages.OpenWindow
+import ArtformStages.SolidRule
