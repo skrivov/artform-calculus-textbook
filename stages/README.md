@@ -187,6 +187,9 @@ against the ledger's text: the statements are proved, not approved.
 | DM1 (finding 461, T371(a)) | on a wide board, in every naming of a domino, six different corners, seven different lines and two different squares, whose gauge and incidence, read with the naming's signs, are two fixed tables | `Board.domino_corner_injective`, `Board.domino_line_injective`, `Board.domino_square_ne`, `Board.domino_gauge`, `Board.domino_incidence` | `DominoRule.lean` |
 | DM2, DM3 (T371(b), (c)) | every square at a line is a named square of its domino, and every side and corner of one is named; a kick that meets D17 meets one rule for the far weights | `Board.domino_reach`, `Board.d17_oneRuleFar` | `DominoRule.lean` |
 | DM4, DM5 (T371(d), (e)) | so A10, A11, reach 1 and D17 leave `Cᵀ diag(K) C` with `K` one number on each class, one `κ` where every corner has one paint and on the torus of sides at least 3; and `Cᵀ diag(κ) C` meets D17 | `Board.d17_classes`, `Board.d17_one_number`, `torus_d17`, `Board.kick_rowRead`, `Board.kick_meets_d17` | `DominoRule.lean` |
+| EU1 (finding 462, T372(a)) | on every map with `C G = 0` the dimension of the harmonic fields, `rank G` and `rank C` add up to the number of lines | `harmonic_count` | `EulerCount.lean` |
+| EU2 (T372(b)) | on a board whose squares are joined `Cᵀ ψ = 0` exactly for `ψ` the same on every square, so `rank C + 1 = F`; where its corners are joined, `rank G + 1 = V` | `Board.transpose_ker_iff`, `Board.incidence_rank`, `Board.gauge_rank` | `EulerCount.lean` |
+| EU3, EU4 (T372(c), (d)) | so on a board whose squares and corners are joined the harmonic fields have the dimension `2 - χ`; on the torus, `2` | `Board.harmonic_euler`, `torus_harmonic_euler` | `EulerCount.lean` |
 
 ## Notes
 
@@ -223,7 +226,9 @@ against the ledger's text: the statements are proved, not approved.
   the Coulomb gauge, which Pair keeps where there is no charge, finding 458; the dimensions of the
   three parts of a field on the torus, `n m - 1`, `n m - 1` and `2`, finding 459; one speed of light
   in every direction at long waves, finding 460; D17 read on the dominos of a wide board, which
-  gives one rule for the far weights, finding 461.
+  gives one rule for the far weights, finding 461; the count of the harmonic fields on every map
+  with `C G = 0`, and `2 - χ` on every closed board whose squares and corners are joined, finding
+  462.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.

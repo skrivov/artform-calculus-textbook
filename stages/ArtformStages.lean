@@ -38,3 +38,4 @@ import ArtformStages.CoulombGauge
 import ArtformStages.TorusModes
 import ArtformStages.SpeedEveryDirection
 import ArtformStages.DominoRule
+import ArtformStages.EulerCount
