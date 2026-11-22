@@ -35,3 +35,4 @@ import ArtformStages.TorusHarmonic
 import ArtformStages.Isotropy
 import ArtformStages.TorusMomenta
 import ArtformStages.CoulombGauge
+import ArtformStages.TorusModes

@@ -180,6 +180,8 @@ against the ledger's text: the statements are proved, not approved.
 | MO3, MO4 (T367(c), (d)) | with one drift `λ` each step moves the means of `A` by `-λ` times the means of `E`, so after `k` steps by `-k λ` times them | `torus_pair_mean_A`, `torus_pair_iterate_mean_A` | `TorusMomenta.lean` |
 | CG1, CG2 (finding 458, T368(a), (b)) | wherever `C G = 0`, every potential has exactly one gauge-equivalent potential with no divergence | `coulomb_gauge_exists`, `coulomb_gauge_unique` | `CoulombGauge.lean` |
 | CG3, CG4 (T368(c), (d)) | with no charge, Pair with every kick `Cᵀ K C` and one drift keeps a potential with no divergence, step after step | `pair_keeps_coulomb_gauge`, `pair_iterate_keeps_coulomb_gauge` | `CoulombGauge.lean` |
+| MD1, MD2 (finding 459, T369(a), (b)) | on the torus `Cᵀ ψ = 0` exactly when `ψ` is constant, and `G φ = 0` exactly when `φ` is | `torus_transpose_ker`, `torus_gauge_ker` | `TorusModes.lean` |
+| MD3 to MD5 (T369(c) to (e)) | the gradients and the transverse fields of the torus each form a space of dimension `n m - 1`, the harmonic fields one of dimension `2`, together the `2 n m` lines | `torus_gradient_finrank`, `torus_transverse_finrank`, `torus_harmonic_finrank`, `torus_finrank_sum` | `TorusModes.lean` |
 
 ## Notes
 
@@ -213,7 +215,8 @@ against the ledger's text: the statements are proved, not approved.
   its two harmonic fields, the uniform ones, and the means of `E` that Pair keeps, finding 455;
   one speed of light along the axes and the diagonals, and a level of the fourth order, finding 456;
   the two momenta of the torus, kept, and the means of `A` that they move uniformly, finding 457;
-  the Coulomb gauge, which Pair keeps where there is no charge, finding 458.
+  the Coulomb gauge, which Pair keeps where there is no charge, finding 458; the dimensions of the
+  three parts of a field on the torus, `n m - 1`, `n m - 1` and `2`, finding 459.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
