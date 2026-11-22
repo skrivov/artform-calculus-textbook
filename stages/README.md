@@ -217,6 +217,11 @@ against the ledger's text: the statements are proved, not approved.
 | WV3 (C459) | each of the three kinds of table keeps the sum, over the fillings, of the squares of the sizes of a wave's numbers | `Stage.waveWrite_norm`, `Stage.waveRead_norm`, `Stage.waveKept_norm` | `FillingWaves.lean` |
 | WV4 (C459) | every linear map of the waves to themselves is a sum, with complex coefficients, of products of writes and readings | `Stage.span_write_read` | `FillingWaves.lean` |
 | WV5 (C459) | kept laws pass each other; writes and kept laws keep every part, with its numbers, and the reading of `ℓ` multiplies each kept law's number by the turn of that law's count on `ℓ`, to the power `-1` | `Stage.kept_comm`, `Stage.wavePart`, `Stage.write_part`, `Stage.kept_part`, `Stage.read_part` | `FillingWaves.lean` |
+| ID1 (finding 475, C462) | on the ring of `N ≥ 5` places, with `S` the shift, the table `a S⁻¹ + b + c S` of reach 1, the same at every place, keeps the sum of the squares of the sizes of every wave exactly when `‖a‖² + ‖b‖² + ‖c‖² = 1` and two of `a`, `b` and `c` are `0`: it shifts rigidly, or it stands and turns (Meyer's theorem) | `reachOne`, `scalar_reach_one_unitary_iff` | `InnerDirection.lean` |
+| ID2 (C462) | anticommuting involutions: two and three exist of size 2, and four of size 4; there are no two of any odd size, so none of size 1, and no four of size 2 | `AnticommutingInvolutions`, `pauli_anticommute`, `dirac_anticommute`, `no_anticommuting_odd`, `no_anticommuting_one`, `no_four_anticommuting_two` | `InnerDirection.lean` |
+| ID3 (C462) | there are complex 2 × 2 matrices `A`, `B` and `C`, the quarter, third and half turns of the cube, with `A⁴ = B³ = C² = A B C = -1`, such that `A σx A⁻¹ = σy`, and `B` moves `σx` to `σy` to `σz` to `σx` | `turnA`, `turnB`, `turnC`, `turn_relations`, `turnA_moves`, `turnB_moves` | `InnerDirection.lean` |
+| ID4 (C462) | no complex numbers `x`, `y` and `w` give `(x A)⁴ = (y B)³ = (w C)² = (x A)(y B)(w C) = 1`: the turns act on the half part only up to a sign that no rescaling removes | `spinor_no_rescaling` | `InnerDirection.lean` |
+| ID7 (C462) | in the stage of `m` rows that pass up to a kept sign, every family of anticommuting involutions of size `d` gives a map of the world into the invertible `d × d` matrices, `gᵢ ↦ γᵢ` and `z ↦ -1`; every such map that sends `z` to `-1` sends the `gᵢ` to anticommuting involutions | `rowsStage`, `halfPart_hom`, `halfPart_anticommute` | `InnerDirection.lean` |
 
 ## Notes
 
@@ -264,7 +269,8 @@ against the ledger's text: the statements are proved, not approved.
   finding 469, and in a solid, as `1/r²` in the mean, finding 470; the ends of a trail, which give
   Gauss's law on every stage and on every dial, and the torus as the map of two rows that pass,
   finding 471; waves on the fillings, with Weyl's relation, Gauss's law as the charge sectors and
-  the parts, finding 472.
+  the parts, finding 472; the inner direction that a charge's motion forces, the half part of rows
+  that pass up to a kept sign, on which the cube's turns act only up to a sign, finding 475.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
