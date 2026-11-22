@@ -16,3 +16,4 @@ import ArtformStages.Incidence
 import ArtformStages.Bounded
 import ArtformStages.Converse
 import ArtformStages.Classes
+import ArtformStages.Forced

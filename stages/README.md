@@ -104,6 +104,10 @@ against the ledger's text: the statements are proved, not approved.
 | BG3 (T348(c)) | with `S` positive semidefinite and `L = D D` for a symmetric `D` with an inverse `D'`, every orbit of Pair from `(A, S w)` is bounded exactly when `4 D' D' - S` is positive definite | `orbit_bounded_iff_window` | `Converse.lean` |
 | BG4 (T348(d)) | on a board with `κ > 0` and `λ > 0`, every orbit of Pair from `(A, S w)` is bounded exactly when `4 / λ` less `Cᵀ diag(κ) C` is positive definite | `Board.orbit_bounded_iff` | `Converse.lean` |
 | RC2 (finding 439, T349(b)) | where the image of `C` holds `e σ - e τ` for every two squares, on at least three squares, two different `K` give two different kicks `Cᵀ diag(K) C` | `kick_injective` | `Classes.lean` |
+| FL1 (finding 440, T350(a)) | on a wide board, a kick `M` of reach 1 with `M G = 0` (blind to a change at a corner) and `Gᵀ M = 0` (it keeps Gauss's law) is `Cᵀ diag(K) C` | `Board.kick_forced` | `Forced.lean` |
+| FL2 (T350(b)) | on every board, every `Cᵀ diag(K) C` has reach 1, `Cᵀ diag(K) C G = 0` and `Gᵀ Cᵀ diag(K) C = 0` | `Board.kick_meets` | `Forced.lean` |
+| FL3 (T350(c)) | on every board, a kick of reach 0 with `M G = 0` is `0` | `Board.reach_zero` | `Forced.lean` |
+| FL4 (T350(d)) | on a joined board the image of `C` holds `e σ - e τ`; so on a wide joined board of at least three squares each such kick is `Cᵀ diag(K) C` for exactly one `K` | `Board.joined_image`, `Board.kick_forced_unique` | `Forced.lean` |
 
 ## Notes
 
@@ -123,8 +127,9 @@ against the ledger's text: the statements are proved, not approved.
   itself, its gauge, the window on its lines and the torus are finding 434; the step from the
   window to bounded orbits, on many places and on every board, is finding 436; that the window
   is exact, and that two different weights on the squares give two different kicks, are findings
-  438 and 439.
-- **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
-  first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
-  (finding 421); and the comparison of a run's own cell tables with a read board, which is a
-  finite check of that run's data.
+  438 and 439; that on a wide board the askings leave the kicks `Cᵀ diag(K) C` and no other is
+  finding 440.
+- **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
+  walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
+  which one rule makes `K` one number on each class of squares; and the comparison of a run's
+  own cell tables with a read board, which is a finite check of that run's data.
