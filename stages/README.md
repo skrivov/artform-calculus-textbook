@@ -120,6 +120,13 @@ against the ledger's text: the statements are proved, not approved.
 | SO3 (T352(c)) | on the cubic torus `V C = 0`, so `V (C A) = 0`: no magnetic charge | `cube_boundary_mul_incidence`, `cube_div_curl` | `Solid.lean` |
 | SO4 (T352(d)) | where `V C = 0`, Faraday's step keeps `V B` for every `B` | `faraday_keeps_magnetic_charge` | `Solid.lean` |
 | SO5 (T352(e)) | on the cubic torus Gauss's law is kept exactly under continuity, and the divergence of every `E` sums to `0` | `cube_gauss_kept_iff`, `cube_divergence_sum` | `Solid.lean` |
+| LW1 (finding 443, T353(a)) | every orbit of Pair obeys the wave equation in steps: `A'' - A' = (A' - A) - L S A'`, `E'' - E' = (E' - E) - S L E'` | `pair_wave`, `pair_wave_E` | `Waves.lean` |
+| LW2 (T353(b)) | if `C Cᵀ ψ = μ ψ` then `Cᵀ diag(κ) C (Cᵀ ψ) = κ μ Cᵀ ψ` | `transverse_level` | `Waves.lean` |
+| LW3 (T353(c)) | on every board `C A` sums `A` round a square with the sides' signs, and `Cᵀ y` at a line is `y` at its square along less `y` at its square against | `Board.incidence_mulVec`, `Board.incidence_transpose_mulVec` | `Waves.lean` |
+| LW4 (T353(d)) | on the torus `C Cᵀ` is the five-point stencil | `torus_laplacian` | `Waves.lean` |
+| LW5 (T353(e)) | the plane wave `χ(p w₁) χ(q w₂)` is a level of the stencil at `4 - 2 cos θ₁ - 2 cos θ₂` | `stencil_plane_wave` | `Waves.lean` |
+| LW6 (T353(f)) | on the torus with one `κ`, the real part `ψ` of a plane wave gives `S (Cᵀ ψ) = κ (4 - 2 cos θ₁ - 2 cos θ₂) Cᵀ ψ` | `torus_transverse_wave` | `Waves.lean` |
+| LW7 (T353(g)) | with `μ = 2 - 2 cos ω`, `cos (k ω + φ)` obeys `a (k + 2) = (2 - μ) a (k + 1) - a k` | `cos_orbit` | `Waves.lean` |
 
 ## Notes
 
@@ -141,7 +148,8 @@ against the ledger's text: the statements are proved, not approved.
   is exact, and that two different weights on the squares give two different kicks, are findings
   438 and 439; that on a wide board the askings leave the kicks `Cᵀ diag(K) C` and no other is
   finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
-  finding 441; the cubic torus, its three maps and its magnetic charge are finding 442.
+  finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
+  and the plane waves of light on the torus are finding 443.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
