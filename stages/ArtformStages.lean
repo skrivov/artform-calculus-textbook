@@ -60,3 +60,4 @@ import ArtformStages.InnerDirectionReach
 import ArtformStages.StageNumber
 import ArtformStages.WeylKind
 import ArtformStages.EnergyTick
+import ArtformStages.OneSquare

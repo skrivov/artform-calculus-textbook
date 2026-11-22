@@ -259,6 +259,8 @@ against the ledger's text: the statements are proved, not approved.
 | ER2 (C470) | on every dial a phase that is `1` at `0` and is so like the classical kick at every count but the top is the signed kick: the likeness away from the wrap forces it | `natCast_ne_top`, `neg_natCast_ne_top`, `eq_signedPhase_of_realLike` | `EnergyTick.lean` |
 | ER3 (C470) | on an odd dial at an even whole weight the signed kick is the dial's own phase, the quantum kick of `QuantumLight.lean` on one cell | `signedPhase_eq_dialPhase_of_even` | `EnergyTick.lean` |
 | ER4 (C470) | the signed kick has size `1` at every count, and keeps the sum of the squares of a wave | `signedPhase_norm`, `signedPhase_sum_sq` | `EnergyTick.lean` |
+| SQ1 (finding 485, C471) | a filling of the square's four lines whose ends are `0` at its four corners has the same count on every line, and there are exactly `n` of them on the dial of `n` | `squareEnds`, `squareEnds_eq_zero_iff`, `squareLoops`, `card_square_neutral` | `OneSquare.lean` |
+| SQ2 (C471) | Pair on the square's mode at `κ = λ = 1/2`, `modeTick (1/2) (1/2) 4`, has trace `1 = 2 cos(π/3)`, third power `-1` and sixth power `1`: it turns by `π / 3` at every tick | `square_mode_trace`, `square_mode_pow_three`, `square_mode_pow_six` | `OneSquare.lean` |
 
 ## Notes
 
@@ -323,7 +325,9 @@ against the ledger's text: the statements are proved, not approved.
   the signed kick carries the move of one click to a Weyl operation exactly when its weight `k` is
   whole and `k n` even, and Pair with whole weights grows at the corner in two dimensions or more,
   finding 483; the energy likeness: the signed kick is like the classical kick read on the real
-  values at every count but the top, and that likeness forces it, finding 484.
+  values at every count but the top, and that likeness forces it, finding 484; one square: with no
+  charge its field is one count, the loop, and its mode turns by `π / 3` at `κ = λ = 1/2`, finding
+  485.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
