@@ -50,3 +50,4 @@ import ArtformStages.CoulombFallSolid
 import ArtformStages.KeepField
 import ArtformStages.FillingWaves
 import ArtformStages.InnerDirection
+import ArtformStages.KindOfNumber

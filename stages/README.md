@@ -222,6 +222,11 @@ against the ledger's text: the statements are proved, not approved.
 | ID3 (C462) | there are complex 2 × 2 matrices `A`, `B` and `C`, the quarter, third and half turns of the cube, with `A⁴ = B³ = C² = A B C = -1`, such that `A σx A⁻¹ = σy`, and `B` moves `σx` to `σy` to `σz` to `σx` | `turnA`, `turnB`, `turnC`, `turn_relations`, `turnA_moves`, `turnB_moves` | `InnerDirection.lean` |
 | ID4 (C462) | no complex numbers `x`, `y` and `w` give `(x A)⁴ = (y B)³ = (w C)² = (x A)(y B)(w C) = 1`: the turns act on the half part only up to a sign that no rescaling removes | `spinor_no_rescaling` | `InnerDirection.lean` |
 | ID7 (C462) | in the stage of `m` rows that pass up to a kept sign, every family of anticommuting involutions of size `d` gives a map of the world into the invertible `d × d` matrices, `gᵢ ↦ γᵢ` and `z ↦ -1`; every such map that sends `z` to `-1` sends the `gᵢ` to anticommuting involutions | `rowsStage`, `halfPart_hom`, `halfPart_anticommute` | `InnerDirection.lean` |
+| KN1 (finding 473, C460) | the waves of one line on the dial of `n` with numbers in a field `K`, functions from `ℤ/n` to `K`, have the write and the reading by a turn `χ`, an additive character; where `n` is not `0` in `K` and `χ` is faithful (`χ k = 1` only for `k = 0`), every `K`-linear map of them is a sum of products of the write and the reading | `lineWrite`, `lineRead`, `span_write_read_of_faithful` | `KindOfNumber.lean` |
+| KN2 (C460) | if `χ k = 1` for some `k ≠ 0`, the write made `k` times passes the write and the reading and is no multiple of `1`, so the products of the write and the reading do not make every table | `not_span_write_read_of_not_faithful` | `KindOfNumber.lean` |
+| KN3 (C460) | a faithful turn into `K` exists exactly when `K` has a primitive `n`-th root of unity | `exists_faithful_iff` | `KindOfNumber.lean` |
+| KN4 (C460) | for `n ≥ 3` every real turn of `ℤ/n` takes only the values `1` and `-1`, and none is faithful | `real_turn_not_faithful` | `KindOfNumber.lean` |
+| KN5 (C460) | the dial's standard turn is faithful, its values have size `1`, and its reading keeps the sum of the squares of the sizes | `stdAddChar_faithful`, `stdAddChar_norm`, `lineRead_stdAddChar_norm` | `KindOfNumber.lean` |
 
 ## Notes
 
@@ -270,7 +275,9 @@ against the ledger's text: the statements are proved, not approved.
   Gauss's law on every stage and on every dial, and the torus as the map of two rows that pass,
   finding 471; waves on the fillings, with Weyl's relation, Gauss's law as the charge sectors and
   the parts, finding 472; the inner direction that a charge's motion forces, the half part of rows
-  that pass up to a kept sign, on which the cube's turns act only up to a sign, finding 475.
+  that pass up to a kept sign, on which the cube's turns act only up to a sign, finding 475; the
+  kind of number, which a dial of 3 or more values forces to hold a turn that no real number is,
+  finding 473.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
