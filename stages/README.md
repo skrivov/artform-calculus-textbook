@@ -137,6 +137,11 @@ against the ledger's text: the statements are proved, not approved.
 | IN3 (T355(c)) | Faraday's law of induction: the flux of `C A` through `P` changes in a step by minus the circulation of `L E'` round its edge | `faraday_integral` | `Integral.lean` |
 | IN4 (T355(d)) | with `C G = 0`, the charge in `U` changes in a step by minus the flux of the current out of `U` | `continuity_integral` | `Integral.lean` |
 | IN5 (T355(e)) | where `V C = 0`, no flux of `C A` leaves a set of cubes | `magnetic_flux_out` | `Integral.lean` |
+| HO1 (finding 446, T356(a)) | on the torus the circulation of `A` round a row passes every gauge change | `row_circulation_gauge` | `Holonomy.lean` |
+| HO2, HO3 (T356(b), (c)) | the row field, `a` on every line of the direction `0`, has `C A = 0` and the circulation `n a` round every row | `row_field_curl`, `row_field_circulation` | `Holonomy.lean` |
+| HO4 (T356(d)) | for `a ≠ 0`, `rowField a + G g ≠ 0` for every `g`: no gauge change removes it | `row_field_not_gauge` | `Holonomy.lean` |
+| HO5 (T356(e)) | the row field has no divergence | `row_field_divergence` | `Holonomy.lean` |
+| HO6 (T356(f)) | Pair sends `(rowField a, rowField ε)` after `k` steps to `(rowField (a - k λ ε), rowField ε)` | `row_field_pair`, `row_field_pair_iterate` | `Holonomy.lean` |
 
 ## Notes
 
@@ -160,7 +165,8 @@ against the ledger's text: the statements are proved, not approved.
   finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
   finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
   and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
-  444; Maxwell's equations in integral form are finding 445.
+  444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
+  removes is finding 446.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
