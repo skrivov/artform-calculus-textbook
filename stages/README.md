@@ -182,6 +182,8 @@ against the ledger's text: the statements are proved, not approved.
 | CG3, CG4 (T368(c), (d)) | with no charge, Pair with every kick `Cᵀ K C` and one drift keeps a potential with no divergence, step after step | `pair_keeps_coulomb_gauge`, `pair_iterate_keeps_coulomb_gauge` | `CoulombGauge.lean` |
 | MD1, MD2 (finding 459, T369(a), (b)) | on the torus `Cᵀ ψ = 0` exactly when `ψ` is constant, and `G φ = 0` exactly when `φ` is | `torus_transpose_ker`, `torus_gauge_ker` | `TorusModes.lean` |
 | MD3 to MD5 (T369(c) to (e)) | the gradients and the transverse fields of the torus each form a space of dimension `n m - 1`, the harmonic fields one of dimension `2`, together the `2 n m` lines | `torus_gradient_finrank`, `torus_transverse_finrank`, `torus_harmonic_finrank`, `torus_finrank_sum` | `TorusModes.lean` |
+| EV1, EV2 (finding 460, T370(a), (b)) | `y ≤ arcsin y ≤ y / √(1 - y²)`, so in every direction `u` the angle per step of the plane wave of wave vector `t u` lies between `c t √(1 - t² / 12)` and `c t / √(1 - c² t² / 4)` | `le_arcsin_self`, `arcsin_le_div_sqrt`, `planeAngle_bounds` | `SpeedEveryDirection.lean` |
+| EV3, EV4 (T370(c), (d)) | that angle divided by `t` tends to `c` as `t` tends to `0`, in every direction; and on the torus every plane wave turns by it per step | `planeAngle_speed`, `torus_plane_wave` | `SpeedEveryDirection.lean` |
 
 ## Notes
 
@@ -216,7 +218,8 @@ against the ledger's text: the statements are proved, not approved.
   one speed of light along the axes and the diagonals, and a level of the fourth order, finding 456;
   the two momenta of the torus, kept, and the means of `A` that they move uniformly, finding 457;
   the Coulomb gauge, which Pair keeps where there is no charge, finding 458; the dimensions of the
-  three parts of a field on the torus, `n m - 1`, `n m - 1` and `2`, finding 459.
+  three parts of a field on the torus, `n m - 1`, `n m - 1` and `2`, finding 459; one speed of light
+  in every direction at long waves, finding 460.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables

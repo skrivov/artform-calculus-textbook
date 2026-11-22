@@ -36,3 +36,4 @@ import ArtformStages.Isotropy
 import ArtformStages.TorusMomenta
 import ArtformStages.CoulombGauge
 import ArtformStages.TorusModes
+import ArtformStages.SpeedEveryDirection
