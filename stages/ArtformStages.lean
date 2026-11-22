@@ -59,3 +59,4 @@ import ArtformStages.JointUniverse
 import ArtformStages.InnerDirectionReach
 import ArtformStages.StageNumber
 import ArtformStages.WeylKind
+import ArtformStages.EnergyTick

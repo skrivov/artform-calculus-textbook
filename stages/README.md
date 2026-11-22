@@ -255,6 +255,10 @@ against the ledger's text: the statements are proved, not approved.
 | WK3 (C469) | on one cell a phase nowhere `0` carries the move of one click to a multiple of a Weyl operation exactly when such `c` and `e` exist; so the signed kick of weight `1/2` is of no Weyl kind on any dial of at least `3`, nor that of weight `1` on an odd dial | `cellPhase`, `cellWeyl`, `cellPhase_carries_iff`, `signedPhase_half_not_carries`, `signedPhase_one_not_carries` | `WeylKind.lean` |
 | WK4 (C469) | on an odd dial the dial's own phase `χ(-half k b²)` of a whole weight `k` is the signed kick of weight `k` times `exp(π i k s(b))` | `dialPhase_eq_signedPhase` | `WeylKind.lean` |
 | WK5 (C469) | Pair on one mode is `modeTick κ l g`, of determinant `1` and trace `2 - κlg`; it multiplies a state other than `0` by a real number of size above `1` when `κl ≥ 1` and `g ≥ 8`, or `κl < 0` and `g > 0`; the corner's pull in `d` dimensions is `4d`; so with whole weights, `κl ≠ 0`, in two dimensions or more, the corner wave grows | `modeTick`, `pair_one_mode`, `modeTick_det`, `modeTick_trace`, `modeTick_grows`, `corner_pull`, `corner_grows` | `WeylKind.lean` |
+| ER1 (finding 484, C470) | at every count `b` but the top `n / 2` the signed kick of weight `κ` carries the move of one click to the move times the turn by the real number `κ s(b)` and `exp(π i κ / n)`: the classical kick read on the real values | `dialTop`, `RealLike`, `valMinAbs_add_one_of_ne_top`, `signedPhase_realLike` | `EnergyTick.lean` |
+| ER2 (C470) | on every dial a phase that is `1` at `0` and is so like the classical kick at every count but the top is the signed kick: the likeness away from the wrap forces it | `natCast_ne_top`, `neg_natCast_ne_top`, `eq_signedPhase_of_realLike` | `EnergyTick.lean` |
+| ER3 (C470) | on an odd dial at an even whole weight the signed kick is the dial's own phase, the quantum kick of `QuantumLight.lean` on one cell | `signedPhase_eq_dialPhase_of_even` | `EnergyTick.lean` |
+| ER4 (C470) | the signed kick has size `1` at every count, and keeps the sum of the squares of a wave | `signedPhase_norm`, `signedPhase_sum_sq` | `EnergyTick.lean` |
 
 ## Notes
 
@@ -318,7 +322,8 @@ against the ledger's text: the statements are proved, not approved.
   readings by a turn make every table exactly when the turn is faithful, finding 481; the Weyl kind:
   the signed kick carries the move of one click to a Weyl operation exactly when its weight `k` is
   whole and `k n` even, and Pair with whole weights grows at the corner in two dimensions or more,
-  finding 483.
+  finding 483; the energy likeness: the signed kick is like the classical kick read on the real
+  values at every count but the top, and that likeness forces it, finding 484.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
