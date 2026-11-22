@@ -18,3 +18,4 @@ import ArtformStages.Converse
 import ArtformStages.Classes
 import ArtformStages.Forced
 import ArtformStages.Maxwell
+import ArtformStages.Solid

@@ -115,6 +115,11 @@ against the ledger's text: the statements are proved, not approved.
 | MX5 (T351(e)) | with `S`, `L` symmetric, `Q⋆` after the step is `Q⋆` before less `J ⬝ L (E + E')` | `qstar_pairWith` | `Maxwell.lean` |
 | MX6 (T351(f)) | a state is still exactly when `Cᵀ K C A = J` and `C L E = 0`; its current has no divergence; with no current and every `κ > 0`, `C A = 0` | `pairWith_still_iff`, `still_current_divergence`, `still_field_zero` | `Maxwell.lean` |
 | MX7 (T351(g)) | on every board the divergence of every `E` sums to `0` over the corners | `Board.divergence_sum` | `Maxwell.lean` |
+| SO1 (finding 442, T352(a)) | on the cubic torus of side `n`, `(G g)(w, i) = g (w + e i) - g w`, `C A` at a face is `A` summed round it with the signs of its turn, `V B` at a cube is `B` summed out of it | `cubeGauge_mulVec`, `cubeIncidence_mulVec`, `cubeBoundary_mulVec` | `Solid.lean` |
+| SO2 (T352(b)) | on the cubic torus `C G = 0` | `cube_incidence_mul_gauge` | `Solid.lean` |
+| SO3 (T352(c)) | on the cubic torus `V C = 0`, so `V (C A) = 0`: no magnetic charge | `cube_boundary_mul_incidence`, `cube_div_curl` | `Solid.lean` |
+| SO4 (T352(d)) | where `V C = 0`, Faraday's step keeps `V B` for every `B` | `faraday_keeps_magnetic_charge` | `Solid.lean` |
+| SO5 (T352(e)) | on the cubic torus Gauss's law is kept exactly under continuity, and the divergence of every `E` sums to `0` | `cube_gauss_kept_iff`, `cube_divergence_sum` | `Solid.lean` |
 
 ## Notes
 
@@ -136,7 +141,7 @@ against the ledger's text: the statements are proved, not approved.
   is exact, and that two different weights on the squares give two different kicks, are findings
   438 and 439; that on a wide board the askings leave the kicks `Cᵀ diag(K) C` and no other is
   finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
-  finding 441.
+  finding 441; the cubic torus, its three maps and its magnetic charge are finding 442.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
