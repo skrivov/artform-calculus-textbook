@@ -20,3 +20,4 @@ import ArtformStages.Forced
 import ArtformStages.Maxwell
 import ArtformStages.Solid
 import ArtformStages.Waves
+import ArtformStages.Coulomb

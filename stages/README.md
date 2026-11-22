@@ -127,6 +127,11 @@ against the ledger's text: the statements are proved, not approved.
 | LW5 (T353(e)) | the plane wave `χ(p w₁) χ(q w₂)` is a level of the stencil at `4 - 2 cos θ₁ - 2 cos θ₂` | `stencil_plane_wave` | `Waves.lean` |
 | LW6 (T353(f)) | on the torus with one `κ`, the real part `ψ` of a plane wave gives `S (Cᵀ ψ) = κ (4 - 2 cos θ₁ - 2 cos θ₂) Cᵀ ψ` | `torus_transverse_wave` | `Waves.lean` |
 | LW7 (T353(g)) | with `μ = 2 - 2 cos ω`, `cos (k ω + φ)` obeys `a (k + 2) = (2 - μ) a (k + 1) - a k` | `cos_orbit` | `Waves.lean` |
+| CL1 (finding 444, T354(a)) | on every board `G φ` at a line is `φ` at its head less `φ` at its tail | `Board.gauge_mulVec` | `Coulomb.lean` |
+| CL2 (T354(b)) | on a board whose corners are joined, `G φ = 0` makes `φ` constant | `Board.gauge_const` | `Coulomb.lean` |
+| CL3 (T354(c)) | there, with every `λ > 0`, a charge `ρ` is `Gᵀ diag(1/λ) G φ` for some `φ` exactly when it sums to `0` | `Board.coulomb` | `Coulomb.lean` |
+| CL4 (T354(d)) | there the potential is unique up to a constant | `Board.coulomb_unique` | `Coulomb.lean` |
+| CL5 (T354(e)) | there a charge is the divergence of a still field, `C diag(λ) E = 0`, exactly when it sums to `0` | `Board.coulomb_field` | `Coulomb.lean` |
 
 ## Notes
 
@@ -149,7 +154,8 @@ against the ledger's text: the statements are proved, not approved.
   438 and 439; that on a wide board the askings leave the kicks `Cᵀ diag(K) C` and no other is
   finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
   finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
-  and the plane waves of light on the torus are finding 443.
+  and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
+  444.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
