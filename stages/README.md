@@ -26,6 +26,10 @@ against the ledger's text: the statements are proved, not approved.
 | a line, a chain | `α × S.World`, `Stage.Chain` | a whole number on every line of the map |
 | the trail | `Stage.trail` | what a walk leaves on the lines, forward less back |
 | a filling of one mark | `R[G]`, Mathlib's `MonoidAlgebra R G` | a number of the dial `R` at finitely many laws of the space `G`; a shift is `single g r` |
+| a state of light | `LightState R n` | `A` on the lines and `E` on the dual lines, numbers of a commutative ring `R` |
+| the kick, the drift, Pair | `kick`, `drift`, `pair`, `unpair` | `E` gains `S A`; then `A` loses `L E`; Pair is the drift after the kick |
+| periodization | Mathlib's `MonoidAlgebra.mapDomainRingHom` | along a map of spaces, the sum of a filling's values over each fiber |
+| turning over | `turnOver`, `turned` | each law to its inverse; on a table, its transpose read with every stencil turned over |
 
 ## The statements
 
@@ -65,6 +69,11 @@ against the ledger's text: the statements are proved, not approved.
 | only the shifts | on a space with two unique products, on a dial without zero divisors, two fillings whose product is one mark at rest have one place each | `eq_single_of_mul_eq_one` | `OneMark.lean` |
 | one mark has no law but the shifts | there a law of one mark that adds, is the same at every place and can be undone is a shift with one number | `law_of_one_mark_is_a_shift`, `Stage.law_of_one_mark_is_a_shift` | `OneMark.lean` |
 | the lattices | rows that pass, in any number, are such a space | `lattice_twoUniqueProds`, `lattice_law_of_one_mark_is_a_shift` | `OneMark.lean` |
+| PA1 (finding 422, T332(a)) | Pair is the drift after the kick, and unpair undoes it on both sides, for every `S` and `L` | `pair_eq_drift_kick`, `unpair_pair`, `pair_unpair` | `Pair.lean` |
+| PA2 (T332(b)) | with `S` and `L` symmetric, Pair keeps the alternating pairing | `omega_kick`, `omega_drift`, `omega_pair` | `Pair.lean` |
+| PA3 (T332(c)) | with `S` and `L` symmetric, Pair keeps the staggered invariant `A ⬝ S A + E ⬝ L E + A ⬝ S (L E)` | `qstar_pair` | `Pair.lean` |
+| PA4 (T332(d)) | with `S = Cᵀ K C` and `C D = 0`, Pair passes the gauge and keeps the charge `Dᵀ E` | `pair_gauge`, `charge_pair` | `Pair.lean` |
+| PA5 (T332(e)) | Pair commutes with maps of rings; periodization is one, by sums over fibers, and commutes with turning over; so it sends Pair to Pair | `pair_map`, `coeff_periodize`, `periodize_antipode`, `periodize_pair` | `Pair.lean` |
 
 ## Notes
 
@@ -76,5 +85,8 @@ against the ledger's text: the statements are proved, not approved.
   and Vershik).
 - **Rules 5 and 7 are proved by example**: the six orders of three things over the wheel of
   two, and the wheel of two with one more act.
+- **Pair** is the law of light of the ledger's wave 39 (astra's): its laws are held there by
+  scripts, and proved here over any commutative ring (finding 422 of the ledger).
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
-  first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; pair.
+  first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
+  (finding 421), and the realization of the periodized Pair on a finite board's cells.
