@@ -170,6 +170,10 @@ against the ledger's text: the statements are proved, not approved.
 | JN1, JN2 (finding 454, T364(a), (b)) | the squares of the torus are joined, and so are its corners | `torus_joined`, `torus_corners_joined` | `TorusJoined.lean` |
 | JN3, JN4 (T364(c), (d)) | for `n, m ≥ 3` a kick of reach 1 on the torus with `M G = 0` and `Gᵀ M = 0` is `Cᵀ diag(K) C` for exactly one `K`, and with one rule for the far weights for exactly one number `κ` | `torus_kick_unique`, `torus_kick_one_weight` | `TorusJoined.lean` |
 | JN5 (T364(e)) | on the torus, with every `λ > 0`, a charge is `M φ` exactly when it sums to `0`, the potential is unique up to a constant, and such a charge is the divergence of a still field | `torus_coulomb`, `torus_coulomb_unique`, `torus_coulomb_field` | `TorusJoined.lean` |
+| HM1 (finding 455, T365(a)) | on the torus, `Gᵀ h` at a corner is what its lines bring in less what they take out, and `C h` at a square is `h` round it | `torus_gaugeT_mulVec`, `torus_incidence_mulVec` | `TorusHarmonic.lean` |
+| HM2 to HM4 (T365(b) to (d)) | on the torus a field with no divergence and no curl is uniform, one number on the lines of each direction, and every uniform field is one: the torus has two harmonic fields | `torus_harmonic_uniform`, `torus_uniform_harmonic`, `torus_harmonic_iff` | `TorusHarmonic.lean` |
+| HM5 (T365(e)) | the row field of `Holonomy.lean` is the uniform field of `a` and `0` | `rowField_uniform` | `TorusHarmonic.lean` |
+| HM6, HM7 (T365(f), (g)) | every field on the torus is `G φ + Cᵀ ψ` plus the uniform field of its two means, which are the only two numbers there; Pair keeps the means of `E` | `torus_hodge`, `torus_hodge_mean`, `torus_pair_mean` | `TorusHarmonic.lean` |
 
 ## Notes
 
@@ -199,7 +203,8 @@ against the ledger's text: the statements are proved, not approved.
   the speed of light along an axis is finding 450; the three parts of a field are finding 451;
   the law of light forced on every wide complex of squares, and in the cubic torus, is finding 452;
   the torus as a wide board of one paint, where Pair's kick and drift are forced, is finding 453; its
-  squares and its corners joined, one weight for each kick and Coulomb's problem on it, finding 454.
+  squares and its corners joined, one weight for each kick and Coulomb's problem on it, finding 454;
+  its two harmonic fields, the uniform ones, and the means of `E` that Pair keeps, finding 455.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step from D17's one rule to one rule
   for the far weights (finding 449, on paper); and the comparison of a run's own cell tables
