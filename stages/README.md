@@ -206,6 +206,12 @@ against the ledger's text: the statements are proved, not approved.
 | GS2, GS3 (T378(b), (c)) | where `c² k ≤ 1` the group velocity has the size at most `c`; along an axis, for `0 < c < 1`, the group speed is below `c` at every shorter wave and `0` at `θ = π` | `groupVel_sq_le`, `axisAngle_hasDerivAt_at`, `axis_group_speed_lt`, `axis_group_speed_pi` | `GroupSpeed.lean` |
 | CP1 to CP3 (finding 469, T379(a) to (c)) | on the torus the divergence summed over a box of `s` by `s` corners is the flux out through the `4 s` lines of its ring; at distance `r` from a lone charge `q` the mean outward field on the ring is `q / (8 r + 4)`, and some line carries at least the mean | `torus_box_gauss`, `torus_ring_mean`, `torus_ring_strongest` | `CoulombFall.lean` |
 | CS1 to CS3 (finding 470, T380(a) to (c)) | on the cubic torus the divergence summed over a cube of `s³` corners is the flux out through the `6 s²` lines of its shell; at distance `r` from a lone charge `q` the mean outward field on the shell is `q / (6 (2 r + 1)²)`, and some line carries at least the mean | `cube_box_gauss`, `cube_shell_mean`, `cube_shell_strongest` | `CoulombFallSolid.lean` |
+| KP1 (finding 471, C458) | the ends of a chain, at each dot what its lines bring in less what they take out; the ends of the trail of a walk are one at its dot less one at rest (Lemma 1.1) | `Stage.head`, `Stage.ends`, `Stage.ends_apply`, `Stage.ends_trail` | `KeepField.lean` |
+| KP2, KP3 (C458) | the values of the ends of every chain add up to `0`; every assignment on the dots whose values add up to `0` is the ends of some chain | `Stage.ends_sum`, `Stage.exists_ends` | `KeepField.lean` |
+| KP4 (C458) | the chain with the count `k` on the line `(a, g)` and nothing elsewhere has the ends `k` at the head less `k` at the tail; so one act is a hop, the making of a pair or an unmaking | `Stage.ends_single`, `Stage.ends_write` | `KeepField.lean` |
+| KP5 (C458) | with finitely many acts and laws, on the dial of `n ≥ 1`, the ends of fillings form a map of additive groups; an assignment is the ends of some filling exactly when its values add up to `0` in `ℤ/n`, and then of exactly `n ^ r` fillings, `r = |acts| |laws| - |laws| + 1`; so `k` charges of one click stand alone exactly when `n` divides `k` | `Stage.endsDial`, `Stage.endsDial_mem_range_iff`, `Stage.card_endsDial_fiber`, `Stage.cast_fiber_exponent`, `Stage.charges_alone_iff` | `KeepField.lean` |
+| KP6 (C458) | for `n, m ≥ 2` the world of the stage of two rows that pass is `ℤ/n × ℤ/m`, by an isomorphism that sends the law of `a` to `(1, 0)` and that of `b` to `(0, 1)` | `twoRows`, `twoRowsWorld`, `twoRowsWorld_law_a`, `twoRowsWorld_law_b` | `KeepField.lean` |
+| KP7 (C458) | read through it, with `(a, g)` the line across at the corner of `g` and `(b, g)` the line up, the ends of every chain at every corner are minus the divergence of the field that the chain gives the torus's lines | `twoRowsField`, `twoRows_ends_eq_neg_divergence` | `KeepField.lean` |
 
 ## Notes
 
@@ -250,7 +256,9 @@ against the ledger's text: the statements are proved, not approved.
   465; the three momenta of the cubic torus and the dimensions of its fields, finding 466; one speed
   of light in every direction of a solid, finding 467; the group speed, at most `c` where the
   window holds, finding 468; the fall of Coulomb's field in the plane, as `1/r` in the mean,
-  finding 469, and in a solid, as `1/r²` in the mean, finding 470.
-- **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
+  finding 469, and in a solid, as `1/r²` in the mean, finding 470; the ends of a trail, which give
+  Gauss's law on every stage and on every dial, and the torus as the map of two rows that pass,
+  finding 471.
+- **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
