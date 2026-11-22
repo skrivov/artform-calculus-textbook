@@ -205,6 +205,7 @@ against the ledger's text: the statements are proved, not approved.
 | GS1 (finding 468, T378(a)) | the angle per step of a plane wave in `k` dimensions, `2 arcsin (c √S)`, has in each angle the derivative `c sin (θ_j / 2) cos (θ_j / 2) / (√S √(1 - c² S))`, the group velocity; in two and three dimensions it is the plane and the solid angle | `waveAngle_hasDerivAt`, `waveAngle_two`, `waveAngle_three` | `GroupSpeed.lean` |
 | GS2, GS3 (T378(b), (c)) | where `c² k ≤ 1` the group velocity has the size at most `c`; along an axis, for `0 < c < 1`, the group speed is below `c` at every shorter wave and `0` at `θ = π` | `groupVel_sq_le`, `axisAngle_hasDerivAt_at`, `axis_group_speed_lt`, `axis_group_speed_pi` | `GroupSpeed.lean` |
 | CP1 to CP3 (finding 469, T379(a) to (c)) | on the torus the divergence summed over a box of `s` by `s` corners is the flux out through the `4 s` lines of its ring; at distance `r` from a lone charge `q` the mean outward field on the ring is `q / (8 r + 4)`, and some line carries at least the mean | `torus_box_gauss`, `torus_ring_mean`, `torus_ring_strongest` | `CoulombFall.lean` |
+| CS1 to CS3 (finding 470, T380(a) to (c)) | on the cubic torus the divergence summed over a cube of `s³` corners is the flux out through the `6 s²` lines of its shell; at distance `r` from a lone charge `q` the mean outward field on the shell is `q / (6 (2 r + 1)²)`, and some line carries at least the mean | `cube_box_gauss`, `cube_shell_mean`, `cube_shell_strongest` | `CoulombFallSolid.lean` |
 
 ## Notes
 
@@ -249,7 +250,7 @@ against the ledger's text: the statements are proved, not approved.
   465; the three momenta of the cubic torus and the dimensions of its fields, finding 466; one speed
   of light in every direction of a solid, finding 467; the group speed, at most `c` where the
   window holds, finding 468; the fall of Coulomb's field in the plane, as `1/r` in the mean,
-  finding 469.
+  finding 469, and in a solid, as `1/r²` in the mean, finding 470.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.

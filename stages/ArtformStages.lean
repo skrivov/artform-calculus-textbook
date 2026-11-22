@@ -46,3 +46,4 @@ import ArtformStages.SolidModes
 import ArtformStages.SolidSpeed
 import ArtformStages.GroupSpeed
 import ArtformStages.CoulombFall
+import ArtformStages.CoulombFallSolid
