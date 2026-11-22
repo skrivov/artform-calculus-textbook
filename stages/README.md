@@ -142,6 +142,11 @@ against the ledger's text: the statements are proved, not approved.
 | HO4 (T356(d)) | for `a ≠ 0`, `rowField a + G g ≠ 0` for every `g`: no gauge change removes it | `row_field_not_gauge` | `Holonomy.lean` |
 | HO5 (T356(e)) | the row field has no divergence | `row_field_divergence` | `Holonomy.lean` |
 | HO6 (T356(f)) | Pair sends `(rowField a, rowField ε)` after `k` steps to `(rowField (a - k λ ε), rowField ε)` | `row_field_pair`, `row_field_pair_iterate` | `Holonomy.lean` |
+| DI1 (finding 447, T357(a)) | the Pair of one place with `μ = 4 sin² θ` sends `(2 sin θ, - sin θ)` after `k` steps to `(2 sin θ cos (2 k θ), sin ((2 k - 1) θ))` | `pairOne_wave` | `Dispersion.lean` |
+| DI2 (T357(b)) | every `μ` in `[0, 4]` is `4 sin² θ` | `exists_angle` | `Dispersion.lean` |
+| DI3 (T357(c)) | Pair carries every level of `L S` at `4 sin² θ` as that wave | `level_wave` | `Dispersion.lean` |
+| DI4 (T357(d)) | `4 - 2 cos θ₁ - 2 cos θ₂ = 4 (sin² (θ₁/2) + sin² (θ₂/2))`, and the dispersion relation | `dispersion_identity`, `dispersion_relation` | `Dispersion.lean` |
+| DI5 (T357(e)) | on the torus with one `κ` and one `λ`, the transverse plane wave turns by `2 θ` per step, `4 sin² θ = λ κ (4 - 2 cos θ₁ - 2 cos θ₂)` | `torus_dispersion` | `Dispersion.lean` |
 
 ## Notes
 
@@ -166,7 +171,7 @@ against the ledger's text: the statements are proved, not approved.
   finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
   and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
   444; Maxwell's equations in integral form are finding 445; a flat field on the torus that no gauge
-  removes is finding 446.
+  removes is finding 446; the dispersion of light on the torus is finding 447.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's

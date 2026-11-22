@@ -23,3 +23,4 @@ import ArtformStages.Waves
 import ArtformStages.Coulomb
 import ArtformStages.Integral
 import ArtformStages.Holonomy
+import ArtformStages.Dispersion
