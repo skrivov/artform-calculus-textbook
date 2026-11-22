@@ -21,3 +21,4 @@ import ArtformStages.Maxwell
 import ArtformStages.Solid
 import ArtformStages.Waves
 import ArtformStages.Coulomb
+import ArtformStages.Integral

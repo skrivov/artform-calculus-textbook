@@ -132,6 +132,11 @@ against the ledger's text: the statements are proved, not approved.
 | CL3 (T354(c)) | there, with every `λ > 0`, a charge `ρ` is `Gᵀ diag(1/λ) G φ` for some `φ` exactly when it sums to `0` | `Board.coulomb` | `Coulomb.lean` |
 | CL4 (T354(d)) | there the potential is unique up to a constant | `Board.coulomb_unique` | `Coulomb.lean` |
 | CL5 (T354(e)) | there a charge is the divergence of a still field, `C diag(λ) E = 0`, exactly when it sums to `0` | `Board.coulomb_field` | `Coulomb.lean` |
+| IN1 (finding 445, T355(a)) | Gauss's theorem: the divergence of `E` summed over a set `U` of corners is the flux of `E` out of `U`; on a board a line's outward sign is `[tail ∈ U] - [head ∈ U]` | `gauss_theorem`, `Board.outward_eq` | `Integral.lean` |
+| IN2 (T355(b)) | Stokes's theorem: `C A` summed over a set `P` of squares is the circulation of `A` round its edge; on a board the edge is `[square along ∈ P] - [square against ∈ P]`, and the whole board has none | `stokes_theorem`, `Board.edge_eq`, `Board.flux_total` | `Integral.lean` |
+| IN3 (T355(c)) | Faraday's law of induction: the flux of `C A` through `P` changes in a step by minus the circulation of `L E'` round its edge | `faraday_integral` | `Integral.lean` |
+| IN4 (T355(d)) | with `C G = 0`, the charge in `U` changes in a step by minus the flux of the current out of `U` | `continuity_integral` | `Integral.lean` |
+| IN5 (T355(e)) | where `V C = 0`, no flux of `C A` leaves a set of cubes | `magnetic_flux_out` | `Integral.lean` |
 
 ## Notes
 
@@ -155,7 +160,7 @@ against the ledger's text: the statements are proved, not approved.
   finding 440; Pair with a current, and Maxwell's equations for it on every map with `C G = 0`, are
   finding 441; the cubic torus, its three maps and its magnetic charge are finding 442; the wave equation of Pair
   and the plane waves of light on the torus are finding 443; Coulomb's problem on a board is finding
-  444.
+  444; Maxwell's equations in integral form are finding 445.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; the step of finding 421 (its T331(b)) by
   which one rule makes `K` one number on each class of squares; and the comparison of a run's
