@@ -268,6 +268,9 @@ against the ledger's text: the statements are proved, not approved.
 | GB3, GB4 (C473) | the Fourier transform carries the turn by `x` to the move by `-x`, so the kick `F⁻¹ (phase k) F` of a phase blind to gauge changes passes every turn by the ends and keeps every Gauss sector | `fourier_turn`, `phaseMul_comm_move`, `blindKick`, `blindKick_comm`, `blindKick_sector` | `GaugeBlindKick.lean` |
 | GB5 (C473) | where no gauge change has a flux, a phase that reads the potentials through their fluxes is blind to gauge changes, the energy kick of finding 484 on the faces among them | `fluxPhase_blind`, `fluxKick_sector`, `energyFluxPhase`, `energyKick_sector` | `GaugeBlindKick.lean` |
 | GB6 (C473) | Plancherel: the Fourier transform keeps the sum of the squares up to the number of configurations, so a kick of a phase of size `1` keeps it | `fourier_sum_sq`, `fourierInv_sum_sq`, `blindKick_sum_sq` | `GaugeBlindKick.lean` |
+| OS1 (finding 488, C474) | on a line the walk's levels obey `sin²(ε/2) = sin²(μ/2) + cos μ sin²(k/2)` and light's turns on the mode of pull `4 sin²(k/2)` obey `sin²(ω/2) = κl sin²(k/2)` | `cos_eq_one_sub_sin_sq_half`, `walk_level_iff_half`, `light_turn_iff_half` | `OneSpeed.lean` |
+| OS2 (C474) | at `μ = 0` and `κl = 1` the massless walk, the bare shift, and light have one dispersion, `ε = ω = k` on `[0, π]`; at `k = π` light is at its limit, where its table is not a swing | `coin_zero`, `walk_zero`, `one_speed_on_a_line`, `eq_of_sin_sq_half_eq`, `one_speed_on_a_line_eq`, `modeTick_at_limit` | `OneSpeed.lean` |
+| OS3 (C474) | the book's naive walk `S_y S_x C(μ)` on the plane has half its trace `cos μ cos k₁ cos k₂ + sin μ sin k₁ sin k₂`, is the line's walk along an axis and the bare shift there at `μ = 0`; light below Courant's limit, `κl ≤ 1/2`, turns by less than the wave number along an axis | `naiveBeta`, `planeShift`, `naiveCoin`, `naiveSymbol`, `planeShift_pauliZ`, `planeShift_pauliY`, `naiveCoin_eq`, `naiveSymbol_trace`, `cos_sq_add_sin_sq_complex`, `naiveSymbol_det`, `level_iff_of_det_one`, `IsNaiveLevel`, `naive_level_iff`, `naiveCoin_eq_coin`, `naiveSymbol_axis`, `naive_massless_axis`, `naive_massless_axes_level`, `axis_pull`, `light_slower`, `light_slower_than_naive_walk`, `planeAngle_axis_lt` | `OneSpeed.lean` |
 
 ## Notes
 
@@ -337,7 +340,9 @@ against the ledger's text: the statements are proved, not approved.
   485; small windows: the window of two squares has the two loops for its charge-free field, and its
   faces' table has the classical modes `ω² = 3` and `5`, finding 486; the joint universe with the
   kick that carries light: a kick of a phase blind to gauge changes keeps every Gauss sector of the
-  fillings and the sum of the squares, finding 487.
+  fillings and the sum of the squares, finding 487; one speed: the walk's dispersion beside light's,
+  one speed on a line at the magic step, and light below Courant's limit slower than the massless
+  naive walk along an axis, finding 488.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
