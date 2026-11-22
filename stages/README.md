@@ -248,6 +248,7 @@ against the ledger's text: the statements are proved, not approved.
 | JU2 (C465) | a kick (a sum of kept laws on the filling), a drift (a phase on the filling), a matter hop and its reverse each take waves on joint laws to waves on joint laws, and so does a gate; the phase of the quantum drift of `QuantumLight.lean` is such a drift | `JointWave`, `jointWaves`, `jointKept`, `jointKick`, `jointDrift`, `MatterHop`, `MatterHop.hop`, `MatterHop.hopReverse`, `kick_jointWave`, `drift_jointWave`, `MatterHop.hop_jointWave`, `MatterHop.hopReverse_jointWave`, `MatterHop.gate_jointWave`, `qdriftPhase`, `qdrift_jointWave` | `JointUniverse.lean` |
 | JU3 (C465) | a matter hop puts its charge `q` on its line, and changes the filling's ends and the occupation's charges both by `q` at the line's head and `-q` at its tail; between two dots with no charge it makes a pair | `MatterHop.hop_books`, `MatterHop.hop_makes_pair` | `JointUniverse.lean` |
 | JU4 (C465) | a drift whose phases have size `1`, a kept law and a gate keep the sum of the squares; on each pair the hop joins, the gate is the link gate `coin (± θ)` of `TheWalk.lean`; the gate of `-θ` undoes the gate of `θ`, the kept law of `-z` that of `z`, and the drift of the inverse phases that of the phases | `drift_norm`, `kept_norm`, `MatterHop.gate`, `MatterHop.gate_pair`, `MatterHop.gate_norm`, `MatterHop.gate_neg_gate`, `kept_neg_kept`, `drift_inv_drift`, `qdrift_norm` | `JointUniverse.lean` |
+| ID8 (finding 475, C462) | on the ring of `N ≥ 4 r + 1` places, with `S` the shift, the table `∑_{j=-r}^{r} a_j S^j` of reach `r`, the same at every place, keeps the sum of the squares of the sizes of every wave exactly when exactly one `a_j` is not `0` and that one has size `1`: it shifts rigidly by `j` places and turns (Meyer's theorem at every reach); at `r = 1` it is ID1 | `ringShiftBy`, `reachTable`, `scalar_reach_unitary_iff`, `reachOne_eq_reachTable`, `scalar_reach_one_of_reach` | `InnerDirectionReach.lean` |
 
 ## Notes
 
@@ -305,7 +306,9 @@ against the ledger's text: the statements are proved, not approved.
   which the quantum kick, drift and tick act as Pair does, with the tick forced up to a number and a
   Weyl operation, and the kick's phase forced to be quadratic, finding 474; only the square among
   the powers, as the link gate keeps it, finding 479; light and charges run together, a joint
-  universe in which Gauss's law cannot fail, finding 478.
+  universe in which Gauss's law cannot fail, finding 478; no motion without an inner direction at
+  every finite reach, Meyer's theorem for the tables of reach `r` on the ring of `N ≥ 4 r + 1`
+  places, finding 475 again.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
