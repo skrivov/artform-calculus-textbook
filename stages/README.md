@@ -89,6 +89,8 @@ against the ledger's text: the statements are proved, not approved.
 | WD1 (finding 428, T338(a)) | for positive definite `A` and `D`, `D - Bᴴ A⁻¹ B` is positive semidefinite exactly when `A - B D⁻¹ Bᴴ` is: the window read on the lines is the window read on the squares | `window_dual` | `Dual.lean` |
 | SD1 (finding 430, T340(a)) | the same with positive definite: the open window on the lines is the open window on the squares | `window_dual_strict` | `Strict.lean` |
 | SD2 (T340(b)) | a real symmetric table each of whose rows has its sizes summing to less than twice its diagonal entry is positive definite: the local test of the window | `posDef_of_rowsum` | `Strict.lean` |
+| BT1 (finding 432, T342(a)) | on a board, given by an incidence with entries `-1`, `0`, `1` and two squares at each line, `κ σ p σ < 2` at every square makes the table on the squares positive definite | `squareTable`, `roundDrift`, `board_local_sufficient` | `Board.lean` |
+| BT2 (T342(b)) | a positive definite table on the squares has `κ σ p σ < 4` at every square | `board_local_necessary` | `Board.lean` |
 
 ## Notes
 
@@ -103,8 +105,8 @@ against the ledger's text: the statements are proved, not approved.
 - **Pair** is the law of light of the ledger's wave 39 (astra's): its laws are held there by
   scripts, and proved here over any commutative ring (finding 422 of the ledger). Its reading on
   a finite board and its window of stability are findings 424 and 425; its window with a drift by
-  sorts is finding 427, that window read on the squares is finding 428, and its strict form and
-  local test are finding 430.
+  sorts is finding 427, that window read on the squares is finding 428, its strict form and local
+  test are finding 430, and the local tests on a board's incidence are finding 432.
 - **Not in the library:** the ends of a trail (Lemma 1.1); the count of closed trails by
   first walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; that pair's kick is forced
   (finding 421); and the comparison of a run's own cell tables with a read board, which is a
