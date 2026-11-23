@@ -276,6 +276,8 @@ against the ledger's text: the statements are proved, not approved.
 | MC3 (C476) | R4's drift turns each electric pattern by the product of the lines' signed kicks at its counts, and is the only table that does | `signedPhase_neg`, `cellsPhase_neg`, `energyDrift`, `energyDrift_pattern`, `eq_energyDrift_of_pattern` | `ManyCells.lean` |
 | MC4 (C476) | R4's kick reads the fluxes `C b`; R4's tick, the drift after the kick, keeps the sum of the squares | `energyKick`, `energyTick`, `cellsPhase_norm`, `energyTick_sum_sq` | `ManyCells.lean` |
 | MC5 (C476) | on an odd dial at even whole weights R4's tick is finding 474's tick of `Cᵀ K C` and `L` | `turn_sum`, `cellsPhase_eq_turn_of_even`, `dotProduct_faces`, `energyKick_eq_qkick`, `energyDrift_eq_qdrift`, `energyTick_eq_qtick` | `ManyCells.lean` |
+| PC1 (finding 492, C477) | the window of one cube: `C G = 0`; its faces' table `C Cᵀ` is `4` less the octahedron's table of touching faces; `C Cᵀ Q = Q diag(0, 4, 4, 4, 6, 6)` with `Qᵀ Q` diagonal and `det Q ≠ 0`, so its levels are `0` once, `4` three times and `6` twice | `oneCubeGauge`, `oneCubeIncidence`, `oneCube_incidence_mul_gauge`, `oneCubeTouch`, `oneCube_faces_table`, `oneCubeModes`, `oneCube_levels`, `oneCube_modes_orth`, `oneCube_modes_det` | `OneCube.lean` |
+| PC2 (C477) | R4's tick on the cube keeps the sum of the squares | `oneCubeTick`, `oneCubeTick_sum_sq` | `OneCube.lean` |
 
 ## Notes
 
@@ -350,7 +352,8 @@ against the ledger's text: the statements are proved, not approved.
   naive walk along an axis, finding 488; R4 on many cells: the likeness on every cell forces the
   product of the signed kicks, the drift turns each electric pattern by the lines' signed kicks, the
   tick keeps the sum of the squares, and at even whole weights it is finding 474's tick, finding
-  491.
+  491; one cube: its maps close, and its faces' table has the classical modes `4` three times and
+  `6` twice, finding 492.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
