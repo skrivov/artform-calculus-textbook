@@ -66,3 +66,4 @@ import ArtformStages.GaugeBlindKick
 import ArtformStages.OneSpeed
 import ArtformStages.ManyCells
 import ArtformStages.OneCube
+import ArtformStages.ChargesAtRest

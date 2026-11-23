@@ -278,6 +278,11 @@ against the ledger's text: the statements are proved, not approved.
 | MC5 (C476) | on an odd dial at even whole weights R4's tick is finding 474's tick of `Cᵀ K C` and `L` | `turn_sum`, `cellsPhase_eq_turn_of_even`, `dotProduct_faces`, `energyKick_eq_qkick`, `energyDrift_eq_qdrift`, `energyTick_eq_qtick` | `ManyCells.lean` |
 | PC1 (finding 492, C477) | the window of one cube: `C G = 0`; its faces' table `C Cᵀ` is `4` less the octahedron's table of touching faces; `C Cᵀ Q = Q diag(0, 4, 4, 4, 6, 6)` with `Qᵀ Q` diagonal and `det Q ≠ 0`, so its levels are `0` once, `4` three times and `6` twice | `oneCubeGauge`, `oneCubeIncidence`, `oneCube_incidence_mul_gauge`, `oneCubeTouch`, `oneCube_faces_table`, `oneCubeModes`, `oneCube_levels`, `oneCube_modes_orth`, `oneCube_modes_det` | `OneCube.lean` |
 | PC2 (C477) | R4's tick on the cube keeps the sum of the squares | `oneCubeTick`, `oneCubeTick_sum_sq` | `OneCube.lean` |
+| CR1 (finding 493, C478) | a field with the divergence of the Coulomb field of `φ` has the Coulomb field's energy plus the energy of their difference | `fieldEnergy`, `coulombField`, `weight_mul_coulombField`, `sum_step_mul`, `thomson_split` | `ChargesAtRest.lean` |
+| CR2, CR3 (C478) | the Coulomb field's energy is `φ ⬝ ρ`; with positive weights every field with the divergence `ρ` has at least that energy, and only the Coulomb field has it: Thomson's principle | `coulombField_energy`, `fieldEnergy_nonneg`, `fieldEnergy_eq_zero_iff`, `thomson_least`, `thomson_eq_iff` | `ChargesAtRest.lean` |
+| CR4 (C478) | for a pair of opposite clicks the least energy is `φ a - φ b`, and on a board whose corners are joined such a `φ` exists | `pair_least_energy`, `Board.pair_least` | `ChargesAtRest.lean` |
+| CR5 (C478) | with no field on the squares Pair keeps the Coulomb field and moves the potential by a change of gauge | `coulombField_still` | `ChargesAtRest.lean` |
+| CR6 (C478) | a field of whole counts with the divergence `ρ` has `Σ E² ≥ π ⬝ ρ` for every `π` that changes by at most one along each line | `whole_field_energy` | `ChargesAtRest.lean` |
 
 ## Notes
 
@@ -353,7 +358,9 @@ against the ledger's text: the statements are proved, not approved.
   product of the signed kicks, the drift turns each electric pattern by the lines' signed kicks, the
   tick keeps the sum of the squares, and at even whole weights it is finding 474's tick, finding
   491; one cube: its maps close, and its faces' table has the classical modes `4` three times and
-  `6` twice, finding 492.
+  `6` twice, finding 492; the energy of two charges at rest: Thomson's principle on every gauge
+  table, the least energy of a pair the potential's difference, the pair still under Pair, and a
+  field of whole counts at least the distance, finding 493.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
