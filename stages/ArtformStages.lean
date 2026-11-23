@@ -64,3 +64,4 @@ import ArtformStages.OneSquare
 import ArtformStages.SmallWindows
 import ArtformStages.GaugeBlindKick
 import ArtformStages.OneSpeed
+import ArtformStages.ManyCells

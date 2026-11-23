@@ -271,6 +271,11 @@ against the ledger's text: the statements are proved, not approved.
 | OS1 (finding 488, C474) | on a line the walk's levels obey `sin²(ε/2) = sin²(μ/2) + cos μ sin²(k/2)` and light's turns on the mode of pull `4 sin²(k/2)` obey `sin²(ω/2) = κl sin²(k/2)` | `cos_eq_one_sub_sin_sq_half`, `walk_level_iff_half`, `light_turn_iff_half` | `OneSpeed.lean` |
 | OS2 (C474) | at `μ = 0` and `κl = 1` the massless walk, the bare shift, and light have one dispersion, `ε = ω = k` on `[0, π]`; at `k = π` light is at its limit, where its table is not a swing | `coin_zero`, `walk_zero`, `one_speed_on_a_line`, `eq_of_sin_sq_half_eq`, `one_speed_on_a_line_eq`, `modeTick_at_limit` | `OneSpeed.lean` |
 | OS3 (C474) | the book's naive walk `S_y S_x C(μ)` on the plane has half its trace `cos μ cos k₁ cos k₂ + sin μ sin k₁ sin k₂`, is the line's walk along an axis and the bare shift there at `μ = 0`; light below Courant's limit, `κl ≤ 1/2`, turns by less than the wave number along an axis | `naiveBeta`, `planeShift`, `naiveCoin`, `naiveSymbol`, `planeShift_pauliZ`, `planeShift_pauliY`, `naiveCoin_eq`, `naiveSymbol_trace`, `cos_sq_add_sin_sq_complex`, `naiveSymbol_det`, `level_iff_of_det_one`, `IsNaiveLevel`, `naive_level_iff`, `naiveCoin_eq_coin`, `naiveSymbol_axis`, `naive_massless_axis`, `naive_massless_axes_level`, `axis_pull`, `light_slower`, `light_slower_than_naive_walk`, `planeAngle_axis_lt` | `OneSpeed.lean` |
+| MC1 (finding 491, C476) | on one cell a phase like the classical kick at every count but the top is its value at `0` times the signed kick | `eq_smul_signedPhase_of_realLike` | `ManyCells.lean` |
+| MC2 (C476) | on many cells a phase like the classical kick in the count of each cell, the others held, is its value at `0` times the product of the cells' signed kicks, and the product is so like | `cellsPhase`, `CellsLike`, `cellsPhase_update`, `cellsPhase_like`, `eq_cellsPhase_of_like`, `energyFluxPhase_eq_cellsPhase` | `ManyCells.lean` |
+| MC3 (C476) | R4's drift turns each electric pattern by the product of the lines' signed kicks at its counts, and is the only table that does | `signedPhase_neg`, `cellsPhase_neg`, `energyDrift`, `energyDrift_pattern`, `eq_energyDrift_of_pattern` | `ManyCells.lean` |
+| MC4 (C476) | R4's kick reads the fluxes `C b`; R4's tick, the drift after the kick, keeps the sum of the squares | `energyKick`, `energyTick`, `cellsPhase_norm`, `energyTick_sum_sq` | `ManyCells.lean` |
+| MC5 (C476) | on an odd dial at even whole weights R4's tick is finding 474's tick of `Cᵀ K C` and `L` | `turn_sum`, `cellsPhase_eq_turn_of_even`, `dotProduct_faces`, `energyKick_eq_qkick`, `energyDrift_eq_qdrift`, `energyTick_eq_qtick` | `ManyCells.lean` |
 
 ## Notes
 
@@ -342,7 +347,10 @@ against the ledger's text: the statements are proved, not approved.
   kick that carries light: a kick of a phase blind to gauge changes keeps every Gauss sector of the
   fillings and the sum of the squares, finding 487; one speed: the walk's dispersion beside light's,
   one speed on a line at the magic step, and light below Courant's limit slower than the massless
-  naive walk along an axis, finding 488.
+  naive walk along an axis, finding 488; R4 on many cells: the likeness on every cell forces the
+  product of the signed kicks, the drift turns each electric pattern by the lines' signed kicks, the
+  tick keeps the sum of the squares, and at even whole weights it is finding 474's tick, finding
+  491.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
