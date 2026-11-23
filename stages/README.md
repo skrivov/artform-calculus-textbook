@@ -283,6 +283,11 @@ against the ledger's text: the statements are proved, not approved.
 | CR4 (C478) | for a pair of opposite clicks the least energy is `φ a - φ b`, and on a board whose corners are joined such a `φ` exists | `pair_least_energy`, `Board.pair_least` | `ChargesAtRest.lean` |
 | CR5 (C478) | with no field on the squares Pair keeps the Coulomb field and moves the potential by a change of gauge | `coulombField_still` | `ChargesAtRest.lean` |
 | CR6 (C478) | a field of whole counts with the divergence `ρ` has `Σ E² ≥ π ⬝ ρ` for every `π` that changes by at most one along each line | `whole_field_energy` | `ChargesAtRest.lean` |
+| WW1 (finding 494, C479) | a quaternion `a + b i + c j + d k` read as the table `a - i (b σx + c σy + d σz)`: products to products, trace `2 a`, determinant `a² + b² + c² + d²` | `quatTable`, `quatTable_eq`, `quatTable_mul`, `quatTable_trace`, `quatTable_det`, `quatTable_det_of_unit` | `WilsonWalk.lean` |
+| WW2 (C479) | the book's Wilson layers, coin and word `(G_x G_y C)(G_y G_x C)`: each factor the table of a unit quaternion, the word of determinant `1` | `wilsonLayer`, `wilsonSymbol`, `wilsonLayer_pauliZ`, `wilsonLayer_pauliY`, `naiveCoin_quat`, `wilsonSymbol_det` | `WilsonWalk.lean` |
+| WW3 (C479) | half the word's trace is a polynomial `F(S, P)` in light's pull over four and in `P = sin²(k₁/2) sin²(k₂/2)`, with `F(0, 0) = cos (2 (ν - 2ϑ))` | `halfPull`, `halfProd`, `wilsonC00`, `wilsonC10`, `wilsonC01`, `wilsonC20`, `wilsonC11`, `wilsonC02`, `wilsonPoly`, `wilsonF`, `wilsonRaw`, `wilson_re`, `wilsonRaw_half`, `sin_sq_eq_half`, `wilsonSymbol_trace`, `wilsonF_zero` | `WilsonWalk.lean` |
+| WW4 (C479) | the levels obey `cos Ω = F(S, P)`, so the square's eight symmetries keep them | `IsWilsonLevel`, `wilson_level_iff`, `wilson_level_swap`, `wilson_level_neg` | `WilsonWalk.lean` |
+| WW5 (C479) | along every direction `u` and at every `t` half the trace is `F(0, 0) + F_S t² / 4` up to `K t⁴`, the same `F_S` and `K` in every direction: one speed | `wilsonK`, `abs_add_five`, `wilson_one_speed` | `WilsonWalk.lean` |
 
 ## Notes
 
@@ -360,7 +365,9 @@ against the ledger's text: the statements are proved, not approved.
   491; one cube: its maps close, and its faces' table has the classical modes `4` three times and
   `6` twice, finding 492; the energy of two charges at rest: Thomson's principle on every gauge
   table, the least energy of a pair the potential's difference, the pair still under Pair, and a
-  field of whole counts at least the distance, finding 493.
+  field of whole counts at least the distance, finding 493; the Wilson walk's speed in every
+  direction: half its trace is a polynomial in light's pull and in the product of the half-angle
+  squares, so its long waves have one speed in every direction, finding 494.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
