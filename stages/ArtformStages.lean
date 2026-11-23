@@ -68,3 +68,4 @@ import ArtformStages.ManyCells
 import ArtformStages.OneCube
 import ArtformStages.ChargesAtRest
 import ArtformStages.WilsonWalk
+import ArtformStages.WalkInSpace

@@ -288,6 +288,10 @@ against the ledger's text: the statements are proved, not approved.
 | WW3 (C479) | half the word's trace is a polynomial `F(S, P)` in light's pull over four and in `P = sin²(k₁/2) sin²(k₂/2)`, with `F(0, 0) = cos (2 (ν - 2ϑ))` | `halfPull`, `halfProd`, `wilsonC00`, `wilsonC10`, `wilsonC01`, `wilsonC20`, `wilsonC11`, `wilsonC02`, `wilsonPoly`, `wilsonF`, `wilsonRaw`, `wilson_re`, `wilsonRaw_half`, `sin_sq_eq_half`, `wilsonSymbol_trace`, `wilsonF_zero` | `WilsonWalk.lean` |
 | WW4 (C479) | the levels obey `cos Ω = F(S, P)`, so the square's eight symmetries keep them | `IsWilsonLevel`, `wilson_level_iff`, `wilson_level_swap`, `wilson_level_neg` | `WilsonWalk.lean` |
 | WW5 (C479) | along every direction `u` and at every `t` half the trace is `F(0, 0) + F_S t² / 4` up to `K t⁴`, the same `F_S` and `K` in every direction: one speed | `wilsonK`, `abs_add_five`, `wilson_one_speed` | `WilsonWalk.lean` |
+| WS1 (finding 495, C480) | the two-component walk in space `S_z S_y S_x` has determinant `1` and half its trace `cos k₁ cos k₂ cos k₃ - sin k₁ sin k₂ sin k₃` | `planeShift_quat_z`, `planeShift_quat_y`, `planeShift_quat_x`, `spaceSymbol`, `spaceSymbol_det`, `spaceSymbol_trace`, `IsSpaceLevel`, `space_level_iff` | `WalkInSpace.lean` |
+| WS2 (C480) | along every direction half that trace is `1 - t² / 2` up to `|t|³ + 13 t⁴ / 72`: one speed, `1`, in every direction | `abs_sub_le_add`, `three_sym_bounds`, `quartic_le_one`, `space_one_speed` | `WalkInSpace.lean` |
+| WS3 (C480) | the book's Wilson word in space at the massless point, along its middle axis half the trace `2 (cos² ϑ + sin² ϑ cos k)² - 1`, along the first and the third that plus `8 cos² ϑ sin⁴ ϑ sin² k` | `wilsonLayer_zero`, `naiveCoin_three`, `spaceMidWord`, `spaceEndWord`, `spaceEnd3Word`, `quat_re_mul_comm`, `spaceMid_re`, `spaceEnd_re`, `spaceEnd3_re`, `spaceMid_circle`, `quat_r_mul_ri`, `quat_ri_mul_r`, `spaceMid_trace`, `spaceEnd_trace`, `spaceEnd3_trace` | `WalkInSpace.lean` |
+| WS4 (C480) | along the middle axis light's dispersion with `c = sin ϑ`; along the first axis a smaller angle at every wave and every partial hop | `spaceMidWord_det`, `spaceEndWord_det`, `spaceMid_level_iff`, `spaceEnd_level_iff`, `spaceEnd_slower` | `WalkInSpace.lean` |
 
 ## Notes
 
@@ -367,7 +371,9 @@ against the ledger's text: the statements are proved, not approved.
   table, the least energy of a pair the potential's difference, the pair still under Pair, and a
   field of whole counts at least the distance, finding 493; the Wilson walk's speed in every
   direction: half its trace is a polynomial in light's pull and in the product of the half-angle
-  squares, so its long waves have one speed in every direction, finding 494.
+  squares, so its long waves have one speed in every direction, finding 494; a walk in space: the
+  two-component walk of the conditional shifts has one speed, 1, in every direction, and the book's
+  Wilson word in space is faster along its middle axis than along the others, finding 495.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
