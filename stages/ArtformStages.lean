@@ -70,3 +70,4 @@ import ArtformStages.ChargesAtRest
 import ArtformStages.WilsonWalk
 import ArtformStages.WalkInSpace
 import ArtformStages.DialCanvas
+import ArtformStages.SplitSquare

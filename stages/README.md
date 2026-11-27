@@ -296,6 +296,9 @@ against the ledger's text: the statements are proved, not approved.
 | DC2 (C999) | an act at a point is a line of the torus, forward or back, whose boundary is its end less its start; the trail of the laid commutator of the steps along `k + 1` and `k + 2` is the face across `k`, with the sign `+1`; an act's commutator with itself or its opposite leaves nothing; the six faces of a cube cancel | `lineOf`, `lineOf_boundary`, `torusChain`, `trail_comm`, `face_eq_trail`, `trail_same_axis`, `cube_faces_cancel` | `DialCanvas.lean` |
 | DC3 (C999) | refinement as multiplication by `d`, from the torus of side `n` to the torus of side `d n`: summing over the `d`, `d²` and `d³` pieces commutes with the gauge, the incidence and the boundary, and with the tick | `fineCorner`, `fineLines`, `fineFaces`, `fineCubes`, `refine_gauge`, `refine_incidence`, `refine_boundary`, `refine_tick` | `DialCanvas.lean` |
 | DC4 (C999) | the tick is a symmetry of the cell complex, with the signs `-1` on lines, `+1` on faces and `-1` on cubes; three ticks are `w ↦ -w` and six the identity | `tickLines`, `tickFaces`, `tickCubes`, `tick_gauge`, `tick_incidence`, `tick_boundary`, `cubeTick_three`, `cubeTick_six` | `DialCanvas.lean` |
+| SS1 (finding 1059, C1042) | the periodic board `ZMod n × ZMod m`, its lines, a square's circulation, the two triangles of a square cut along its diagonal, whose circulations sum to the square's, and a balanced lift: Pair's kick with one weight on each triangle sort is zero on every diagonal and the old unit-weight kick on every old line | `Line`, `circ`, `lower`, `upper`, `lower_add_upper`, `Balanced` | `SplitSquare.lean` |
+| SS2 (C1042) | the metatheory's wave 417: if every old potential has a balanced lift, over a finite additive group, the two weights are bijective and their inverses add to the identity; conversely right inverses that add give every potential a balanced lift, which is unique; one weight on both triangles never balances in a group of exponent two | `inverses_add`, `balanced_of_inverses`, `balanced_unique`, `equal_weights_fail` | `SplitSquare.lean` |
+| SS3 (C1042) | the two nontrivial scalars of the four-element field on `ZMod 2 × ZMod 2` balance every potential on the `2 × 2` board, wave 417's smallest solution | `omegaK`, `omegaJ`, `omega_laws` | `SplitSquare.lean` |
 
 ## Notes
 
@@ -380,7 +383,9 @@ against the ledger's text: the statements are proved, not approved.
   Wilson word in space is faster along its middle axis than along the others, finding 495; the
   derived canvas: the canvas that the six-dial builds is the cubic torus read modulo `n`, its acts
   are lines and its laid commutators faces, refinement by `d` and the dial's tick commute with the
-  torus's three maps, finding 1016.
+  torus's three maps, finding 1016; a split square: if every old potential lifts with zero kick on
+  each new diagonal and the old kick on every old line, the two triangle weights are bijective and
+  their inverses add to the old one, and conversely, finding 1059.
 - **Not in the library:** the count of closed trails by first
   walks (Lemma 2.3); Theorems C and D; T3, T5 and T6; and the comparison of a run's own cell
   tables with a read board, which is a finite check of that run's data.
